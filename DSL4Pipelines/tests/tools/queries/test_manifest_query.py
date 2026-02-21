@@ -3,7 +3,7 @@ from typing import List
 from DSL4Pipelines.src.metamodel.artefacts.ml_artefacts import Data
 from DSL4Pipelines.src.metamodel.artefacts.metrics import Metric
 
-from DSL4Pipelines.src.metamodel.pipelines.workflow import Step, Element, Pipeline
+from DSL4Pipelines.src.metamodel.pipelines.workflow import Step, Task, Pipeline
 
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 
@@ -21,8 +21,8 @@ step1 = Step(name="step1")
 step2 = Step(name="step2")
 step3 = Step(name="step3")
 step4 = Step(name="step4")
-task1 = Element(name="task1", steps=[step1, step2])
-task2 = Element(name="task2", steps=[step3, step4])
+task1 = Task(name="task1", steps=[step1, step2])
+task2 = Task(name="task2", steps=[step3, step4])
 pipeline = Pipeline(name="pipeline1", tasks=[task1, task2])
 rel_1_ds1_t1 = Relationship(
     name="relation1",

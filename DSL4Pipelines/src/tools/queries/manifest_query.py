@@ -9,7 +9,7 @@ from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.metamodel.artefacts.artefacts import Artefact
 from DSL4Pipelines.src.metamodel.artefacts.metrics import Metric
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
-from DSL4Pipelines.src.metamodel.pipelines.workflow import Element
+from DSL4Pipelines.src.metamodel.pipelines.workflow import Task
 from DSL4Pipelines.src.metamodel.core.structure import Element
 
 
@@ -39,13 +39,13 @@ class ManifestQuery:
             if (not kind or m.kind == kind) and (not category or m.category == category)
         ]
 
-    def get_input_relations(self, element: Element) -> list[Relationship]:
+    def get_input_relations(self, element: Task) -> list[Relationship]:
         """return a list of all relations of the manifest
         where the "to" element is the task specified in parameter"""
         relations = [r for r in self.manifest.relations if element in r.to_]
         return relations
 
-    def get_input_artefacts(self, element: Optional[Element] = None) -> list[Artefact]:
+    def get_input_artefacts(self, element: Optional[Task] = None) -> list[Artefact]:
         """return the list of all artefacts that are used as input by an element of the manifest, optionally filtered by this element.
         i.e. if a task is specified, return all artefacts that are used as input by this task (from) and to is the task specified in parameter.
         if no task is specified, return all artefacts that are used as input (from) but are never used as to.

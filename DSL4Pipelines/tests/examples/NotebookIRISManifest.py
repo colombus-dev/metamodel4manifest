@@ -12,7 +12,7 @@ from DSL4Pipelines.src.metamodel.artefacts.metrics import Metric
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.metamodel.pipelines.workflow import (
     Pipeline,
-    Element,
+    Task,
     Instruction,
     Step,
 )
@@ -128,8 +128,8 @@ def build_relations(manifest) -> list:
 
 
 # ----------------------------- Pipeline and Tasks ---------------------------
-def test_task_load_libraries() -> Element:
-    task_lib = Element(name="LibraryLoading")
+def test_task_load_libraries() -> Task:
+    task_lib = Task(name="LibraryLoading")
 
     step_libs = Step(name="Import Libraries")
     task_lib.steps.append(step_libs)
@@ -153,8 +153,8 @@ def test_task_load_libraries() -> Element:
     return task_lib
 
 
-def test_task_data_loading() -> Element:
-    task_data = Element(name="DataLoading")
+def test_task_data_loading() -> Task:
+    task_data = Task(name="DataLoading")
     step_load = Step(name="Load Dataset")
     task_data.steps.append(step_load)
 
@@ -181,8 +181,8 @@ def test_task_data_loading() -> Element:
 
 
 # Data Preprocessing
-def test_task_data_preprocessing() -> Element:
-    task_preparation = Element(name="DataPreparation")
+def test_task_data_preprocessing() -> Task:
+    task_preparation = Task(name="DataPreparation")
     step_prepare = Step(name="DataPreparation")
     task_preparation.steps.append(step_prepare)
     step_prepare.commands.append(Instruction(code="X = df.drop('species', axis=1)"))
@@ -190,8 +190,8 @@ def test_task_data_preprocessing() -> Element:
 
 
 # Model Training
-def test_task_model_training() -> Element:
-    task_train = Element(name="ModelTraining")
+def test_task_model_training() -> Task:
+    task_train = Task(name="ModelTraining")
     step_model = Step(name="Model Training")
     task_train.steps.append(step_model)
     step_model.commands.append(
@@ -205,8 +205,8 @@ def test_task_model_training() -> Element:
 
 
 # Evaluation
-def test_task_model_evaluation() -> Element:
-    task_eval = Element(name="ModelEvaluation")
+def test_task_model_evaluation() -> Task:
+    task_eval = Task(name="ModelEvaluation")
 
     step_eval = Step(name="Model Evaluation")
     task_eval.steps.append(step_eval)
@@ -464,7 +464,7 @@ def test_to_yaml_and_reverse_NBIris():
         f"Expected loaded element to be a dict, got {type(loaded_element)}"
     )
 
-    manifestBis = YAMLSerializer._from_yaml(Element, loaded_element)
+    manifestBis = YAMLSerializer._from_yaml(Task, loaded_element)
     assert manifestBis is not None, "Deserialization returned None"
     assert manifestBis.pipeline is not None, "Deserialized manifest has no pipeline"
     assert len(manifestBis.pipeline.tasks) == 5, (

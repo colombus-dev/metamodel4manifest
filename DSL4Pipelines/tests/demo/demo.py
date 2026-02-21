@@ -10,8 +10,8 @@ from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerialize
 
 from DSL4Pipelines.src.tools.transformations.toMermaid import MERMAIDSerializer
 
-PATH = "/Users/mireillefornarino/GIT/RECHERCHES/DescribeLLM/untitled/DSL4Pipelines/tests/examples/sources/"
-OUTPUT = "/Users/mireillefornarino/GIT/RECHERCHES/DescribeLLM/untitled/DSL4Pipelines/tests/examples/outputs/"
+PATH = "/Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/examples/sources/"
+OUTPUT = "/Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/examples/outputs/"
 
 
 def test_demo():
@@ -82,7 +82,7 @@ def step2Bis(manifest: Manifest):
 def step3_4():
     print("--------------------  Step 3: Read Manifest Yaml file after completion")
     manifest = YAMLSerializer.from_yaml_file(
-        "/Users/mireillefornarino/GIT/RECHERCHES/DescribeLLM/untitled/DSL4Pipelines/tests/examples/sources/nanoGPT_manifest2.yaml",
+        PATH + "nanoGPT_manifest2.yaml",
         Manifest,
     )
     print("Step 4: Run one rule on the manifest")
@@ -104,7 +104,7 @@ def step5():
     # Here you would run your rules on the manifest and generate a report
     # For example:
     manifest = YAMLSerializer.from_yaml_file(
-        "/Users/mireillefornarino/GIT/RECHERCHES/DescribeLLM/untitled/DSL4Pipelines/tests/examples/sources/nanoGPT_manifest2.yaml",
+        PATH + "nanoGPT_manifest2.yaml",
         Manifest,
     )
     engine = EvaluationEngine()
@@ -120,7 +120,7 @@ def step5Bis():
     # Here you would run your rules on the manifest and generate a report
     # For example:
     manifest = YAMLSerializer.from_yaml_file(
-        "/Users/mireillefornarino/GIT/RECHERCHES/DescribeLLM/untitled/DSL4Pipelines/tests/examples/sources/iris_manifest.yaml",
+        PATH + "iris_manifest.yaml",
         Manifest,
     )
     engine = EvaluationEngine()

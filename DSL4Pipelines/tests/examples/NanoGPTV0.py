@@ -7,7 +7,7 @@ from DSL4Pipelines.src.metamodel.catalogs.DatasetCatalog import DatasetCatalog
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType
 from DSL4Pipelines.src.metamodel.core.structure import Element
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
-from DSL4Pipelines.src.metamodel.pipelines.workflow import Pipeline, Element
+from DSL4Pipelines.src.metamodel.pipelines.workflow import Pipeline, Task
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.tools.toFile import save_in_file
 from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
@@ -168,19 +168,19 @@ def test_nanoGPT_training_config() -> SoftwareFile:
 # Construction des étapes du pipeline
 def test_nanoGPT_pipeline() -> Pipeline:
     pipeline = Pipeline("nanoGPT Pipeline")
-    taskDataCollection = Element(
+    taskDataCollection = Task(
         name="DataCollection", description="Collecting the training data for GPT2 model"
     )
     pipeline.tasks.append(taskDataCollection)
 
-    taskTokenizer = Element(
+    taskTokenizer = Task(
         name="Tokenizing",
         description="Tokenizing the training data using byte-level BPE tokenizer",
     )
     taskTokenizer.properties = {"family": "byte-bpe-tokenizer"}
     pipeline.tasks.append(taskTokenizer)
 
-    taskPretraining = Element(
+    taskPretraining = Task(
         name="PreTraining",
         description="Pre-training the GPT2 model using the tokenized data",
     )
@@ -301,7 +301,7 @@ def evaluate_artefact_yaml_serialization_deserialisation(artefact: Artefact):
         f"Expected loaded element to be a dict, got {type(loaded_element)}"
     )
 
-    object = YAMLSerializer._from_yaml(Element, loaded_element)
+    object = YAMLSerializer._from_yaml(Task, loaded_element)
     assert object is not None, "Deserialization returned None"
     type = artefact.__class__
     assert isinstance(object, type), (
@@ -329,7 +329,7 @@ def test_pipeline_yaml_serialization_deserialisation():
         f"Expected loaded element to be a dict, got {type(loaded_element)}"
     )
 
-    pipelineBis = YAMLSerializer._from_yaml(Element, loaded_element)
+    pipelineBis = YAMLSerializer._from_yaml(Task, loaded_element)
 
     assert pipelineBis is not None, "Deserialization returned None"
     assert pipelineBis.tasks is not None, "Deserialized pipeline has no tasks"
@@ -352,7 +352,7 @@ def test_to_yaml_and_reverse_nanoGPT():
         f"Expected loaded element to be a dict, got {type(loaded_element)}"
     )
 
-    manifestBis = YAMLSerializer._from_yaml(Element, loaded_element)
+    manifestBis = YAMLSerializer._from_yaml(Task, loaded_element)
     assert manifestBis is not None, "Deserialization returned None"
     assert manifestBis.pipeline is not None, "Deserialized manifest has no pipeline"
     assert len(manifestBis.pipeline.tasks) == 3, (

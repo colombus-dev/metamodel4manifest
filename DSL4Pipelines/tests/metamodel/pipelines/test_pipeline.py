@@ -1,4 +1,4 @@
-from DSL4Pipelines.src.metamodel.pipelines.workflow import Pipeline, Element
+from DSL4Pipelines.src.metamodel.pipelines.workflow import Pipeline, Task
 
 
 def test_pipeline():
@@ -12,7 +12,7 @@ def test_pipelineWithTasks() -> Pipeline:
     pipeline = Pipeline(
         uid="pipeline-01",
         name="Example Pipeline",
-        tasks=[Element(uid="task-01", name="Data Preprocessing")],
+        tasks=[Task(uid="task-01", name="Data Preprocessing")],
     )
     assert len(pipeline.tasks) == 1
     assert pipeline.tasks[0].uid == "task-01"

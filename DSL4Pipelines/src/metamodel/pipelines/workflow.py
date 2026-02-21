@@ -49,7 +49,7 @@ class Instruction(Command):
 
 
 @dataclass
-class Element(ActityNode):
+class Task(ActityNode):
     """Task represents a task within a workflow,
     which can contain ordered multiple steps."""
 
@@ -104,9 +104,9 @@ class Pipeline(Activity):
 
     type: str = "Pipeline"
     #    bom_ref: str
-    tasks: List[Element] = field(default_factory=list)
+    tasks: List[Task] = field(default_factory=list)
 
-    def find_task(self, **criteria) -> List[Element]:
+    def find_task(self, **criteria) -> List[Task]:
         """
         Loop through all tasks in the pipeline and check if they match the given criteria.
         The criteria are passed as keyword arguments, where the key is the name of the property to check, and the value is the expected value of that property.

@@ -24,6 +24,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import (
     Instruction,
     Pipeline,
     Command,
+    Task
 )
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.tools.toJson import to_json
@@ -44,6 +45,7 @@ class YAMLSerializer:
         "CreationInfo": CreationInfo,
         "Pipeline": Pipeline,
         "Command": Command,
+        "Task": Task,
         "Instruction": Instruction,
         "Relationship": Relationship,
         "ExternalReference": ExternalReference,

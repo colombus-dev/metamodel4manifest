@@ -14,11 +14,11 @@ Visualize__Step ..> Evaluation_Visualization__SoftwareFile  : GENERATES
 
 
 
-ModelTraining__Element ..> Trained_Decision_Tree_Model__MLModel  : GENERATES
+ModelTraining__Task ..> Trained_Decision_Tree_Model__MLModel  : GENERATES
 
 
 
-inst_4335563744__Step ..> Data_Visualization__SoftwareFile  : GENERATES
+inst_4382832288__Step ..> Data_Visualization__SoftwareFile  : GENERATES
 
 
 
@@ -67,7 +67,7 @@ class Evaluation_Visualization__SoftwareFile{
     software_file_kind : FILE
 }
 
-class inst_4335279440__ExternalReference{
+class inst_4382708816__ExternalReference{
     identifier : https://doi.org/10.1234/iris-m...
     type : ExternalReference
 }
@@ -83,7 +83,7 @@ class Trained_Decision_Tree_Model__MLModel{
     content_type : application/octet-stream
     software_download_location : https://example.com/downloads/...
 }
-Trained_Decision_Tree_Model__MLModel --> inst_4335279440__ExternalReference  : external_reference
+Trained_Decision_Tree_Model__MLModel --> inst_4382708816__ExternalReference  : external_reference
 
 class Data_Visualization__SoftwareFile{
     uid : 428673d0-e751-496e-961c-bb711c...
@@ -95,12 +95,12 @@ class Data_Visualization__SoftwareFile{
     content_type : image/png
 }
 
-class inst_4335309408__ExternalReference{
+class inst_4382755840__ExternalReference{
     identifier : https://doi.org/10.24432/C56P4...
     type : ExternalReference
 }
 
-class inst_4335571408__CreationInfo{
+class inst_4383196816__CreationInfo{
     created_by : R.A. Fisher
     type : CreationInfo
     created_on : 1936-01-01
@@ -125,10 +125,10 @@ class Iris_Flower_Dataset__Data{
     dataset_intended_use : Training and evaluation of cla...
     dataset_known_bias : Class balanced 50 samples per class
 }
-Iris_Flower_Dataset__Data --> inst_4335571408__CreationInfo  : creation_info
-Iris_Flower_Dataset__Data --> inst_4335309408__ExternalReference  : external_reference
+Iris_Flower_Dataset__Data --> inst_4383196816__CreationInfo  : creation_info
+Iris_Flower_Dataset__Data --> inst_4382755840__ExternalReference  : external_reference
 
-class inst_4335308320__ExternalReference{
+class inst_4382756112__ExternalReference{
     external_identifier_type : url
     identifier : nbpath
     type : ExternalReference
@@ -142,44 +142,44 @@ class notebook__SoftwareFile{
     content_type : text/x-ipynb+json
     languages : english, french, python
 }
-notebook__SoftwareFile --> inst_4335308320__ExternalReference  : external_reference
+notebook__SoftwareFile --> inst_4382756112__ExternalReference  : external_reference
 
-class inst_4335443056__Instruction{
+class inst_4382967120__Instruction{
     uid : a2765c50-afcc-41ea-bc9d-a868eb...
     type : Instruction
     shell : python
     code : plt.show&#40;&#41;
 }
 
-class inst_4335440336__Instruction{
+class inst_4382966800__Instruction{
     uid : c41bd7f4-abea-4ac1-81ba-708f14...
     type : Instruction
     shell : python
     code : plt.title&#40;&#39;Matrice de Confusio...
 }
 
-class inst_4335438736__Instruction{
+class inst_4382968240__Instruction{
     uid : 0744617e-72b4-4537-ac2f-b5bd61...
     type : Instruction
     shell : python
     code : plt.ylabel&#40;&#39;Valeur réelle&#39;&#41;
 }
 
-class inst_4335438576__Instruction{
+class inst_4382968080__Instruction{
     uid : c80c2536-c349-4313-981b-efac45...
     type : Instruction
     shell : python
     code : plt.xlabel&#40;&#39;Prédiction&#39;&#41;
 }
 
-class inst_4335438416__Instruction{
+class inst_4382967920__Instruction{
     uid : e9f5a1ba-b3cc-4993-a14f-b6a91b...
     type : Instruction
     shell : python
     code : plt.figure&#40;figsize=&#40;8, 6&#41;&#41;
 }
 
-class inst_4335438256__Instruction{
+class inst_4382969200__Instruction{
     uid : 348fb86f-c416-42cd-8fe5-3d50c5...
     type : Instruction
     shell : python
@@ -191,49 +191,49 @@ class Visualize__Step{
     type : Step
     name : Visualize
 }
-Visualize__Step --> inst_4335438256__Instruction  : commands
-Visualize__Step --> inst_4335438416__Instruction  : commands
-Visualize__Step --> inst_4335438576__Instruction  : commands
-Visualize__Step --> inst_4335438736__Instruction  : commands
-Visualize__Step --> inst_4335440336__Instruction  : commands
-Visualize__Step --> inst_4335443056__Instruction  : commands
+Visualize__Step --> inst_4382969200__Instruction  : commands
+Visualize__Step --> inst_4382967920__Instruction  : commands
+Visualize__Step --> inst_4382968080__Instruction  : commands
+Visualize__Step --> inst_4382968240__Instruction  : commands
+Visualize__Step --> inst_4382966800__Instruction  : commands
+Visualize__Step --> inst_4382967120__Instruction  : commands
 
-class inst_4335437936__Instruction{
+class inst_4382969040__Instruction{
     uid : 1526cd22-768b-432a-8584-a5de57...
     type : Instruction
     shell : python
     code : cm = confusion_matrix&#40;y_test, ...
 }
 
-class inst_4335438096__Instruction{
+class inst_4382968880__Instruction{
     uid : 4815fe21-d08b-4e2e-897a-9294ad...
     type : Instruction
     shell : python
     code : print&#40;classification_report&#40;y_...
 }
 
-class inst_4335439216__Instruction{
+class inst_4382968720__Instruction{
     uid : 594ae939-bc0e-4527-b556-a30d43...
     type : Instruction
     shell : python
     code : print&#40;&#39;\nRapport de classificat...
 }
 
-class inst_4335439056__Instruction{
+class inst_4382968560__Instruction{
     uid : c3cf6375-ad16-467d-a655-a02338...
     type : Instruction
     shell : python
     code : print&#40;f&#39;Accuracy du modèle : &#123;...
 }
 
-class inst_4335438896__Instruction{
+class inst_4382968400__Instruction{
     uid : 01faa222-eefd-4d0e-9474-17655d...
     type : Instruction
     shell : python
     code : accuracy = accuracy_score&#40;y_te...
 }
 
-class inst_4335440176__Instruction{
+class inst_4382969840__Instruction{
     uid : 01550a2a-b4d4-4579-af3c-cce31a...
     type : Instruction
     shell : python
@@ -245,22 +245,22 @@ class Model_Evaluation__Step{
     type : Step
     name : Model Evaluation
 }
-Model_Evaluation__Step --> inst_4335440176__Instruction  : commands
-Model_Evaluation__Step --> inst_4335438896__Instruction  : commands
-Model_Evaluation__Step --> inst_4335439056__Instruction  : commands
-Model_Evaluation__Step --> inst_4335439216__Instruction  : commands
-Model_Evaluation__Step --> inst_4335438096__Instruction  : commands
-Model_Evaluation__Step --> inst_4335437936__Instruction  : commands
+Model_Evaluation__Step --> inst_4382969840__Instruction  : commands
+Model_Evaluation__Step --> inst_4382968400__Instruction  : commands
+Model_Evaluation__Step --> inst_4382968560__Instruction  : commands
+Model_Evaluation__Step --> inst_4382968720__Instruction  : commands
+Model_Evaluation__Step --> inst_4382968880__Instruction  : commands
+Model_Evaluation__Step --> inst_4382969040__Instruction  : commands
 
-class ModelEvaluation__Element{
+class ModelEvaluation__Task{
     uid : cc7b2359-3820-4e35-9a3a-e5939f...
     type : Task
     name : ModelEvaluation
 }
-ModelEvaluation__Element --> Model_Evaluation__Step  : steps
-ModelEvaluation__Element --> Visualize__Step  : steps
+ModelEvaluation__Task --> Model_Evaluation__Step  : steps
+ModelEvaluation__Task --> Visualize__Step  : steps
 
-class inst_4335440016__Instruction{
+class inst_4382969680__Instruction{
     uid : 3eedf1d0-b9ec-4e0d-bc8e-f0370a...
     type : Instruction
     shell : python
@@ -272,9 +272,9 @@ class Fit_Model__Step{
     type : Step
     name : Fit Model
 }
-Fit_Model__Step --> inst_4335440016__Instruction  : commands
+Fit_Model__Step --> inst_4382969680__Instruction  : commands
 
-class inst_4335439696__Instruction{
+class inst_4382970800__Instruction{
     uid : 78bd6bfd-1f45-4caf-b1f5-32a07e...
     type : Instruction
     shell : python
@@ -286,17 +286,17 @@ class Model_Training__Step{
     type : Step
     name : Model Training
 }
-Model_Training__Step --> inst_4335439696__Instruction  : commands
+Model_Training__Step --> inst_4382970800__Instruction  : commands
 
-class ModelTraining__Element{
+class ModelTraining__Task{
     uid : 542eb684-16ea-478f-b664-ee5596...
     type : Task
     name : ModelTraining
 }
-ModelTraining__Element --> Model_Training__Step  : steps
-ModelTraining__Element --> Fit_Model__Step  : steps
+ModelTraining__Task --> Model_Training__Step  : steps
+ModelTraining__Task --> Fit_Model__Step  : steps
 
-class inst_4335439376__Instruction{
+class inst_4382970480__Instruction{
     uid : edc93767-1931-4d80-b028-0cfc5f...
     type : Instruction
     shell : python
@@ -308,83 +308,83 @@ class DataPreparation__Step{
     type : Step
     name : DataPreparation
 }
-DataPreparation__Step --> inst_4335439376__Instruction  : commands
+DataPreparation__Step --> inst_4382970480__Instruction  : commands
 
-class DataPreparation__Element{
+class DataPreparation__Task{
     uid : 0fb41a48-9a7a-4399-97cc-db1bf5...
     type : Task
     name : DataPreparation
 }
-DataPreparation__Element --> DataPreparation__Step  : steps
+DataPreparation__Task --> DataPreparation__Step  : steps
 
-class inst_4335440656__Instruction{
+class inst_4382970320__Instruction{
     uid : 884e6baa-e4a0-4244-b47e-67e7f3...
     type : Instruction
     shell : python
     code : plt.show&#40;&#41;
 }
 
-class inst_4335440496__Instruction{
+class inst_4382970160__Instruction{
     uid : 9bb252fe-df53-418f-aa8c-9f75e6...
     type : Instruction
     shell : python
     code : plt.title&#40;&#39;Distribution de la ...
 }
 
-class inst_4335441616__Instruction{
+class inst_4382971920__Instruction{
     uid : 563022bd-f5b5-49d4-bfe8-5f5df9...
     type : Instruction
     shell : python
     code : sns.histplot&#40;data=df, x=&#39;petal...
 }
 
-class inst_4335441456__Instruction{
+class inst_4382971760__Instruction{
     uid : c63beb07-486b-4e7e-9777-3f2b47...
     type : Instruction
     shell : python
     code : plt.figure&#40;figsize=&#40;8, 6&#41;&#41;
 }
 
-class inst_4335441296__Instruction{
+class inst_4382971600__Instruction{
     uid : 8f19622b-5cc0-4250-b531-ede68c...
     type : Instruction
     shell : python
     code : plt.show&#40;&#41;
 }
 
-class inst_4335441136__Instruction{
+class inst_4382971440__Instruction{
     uid : 61b2f097-c7f1-4e04-80ef-ae4bf6...
     type : Instruction
     shell : python
     code : sns.pairplot&#40;df, hue=&#39;species&#39;...
 }
 
-class inst_4335563744__Step{
+class inst_4382832288__Step{
     uid : Visualization
     type : Step
 }
-inst_4335563744__Step --> inst_4335441136__Instruction  : commands
-inst_4335563744__Step --> inst_4335441296__Instruction  : commands
-inst_4335563744__Step --> inst_4335441456__Instruction  : commands
-inst_4335563744__Step --> inst_4335441616__Instruction  : commands
-inst_4335563744__Step --> inst_4335440496__Instruction  : commands
-inst_4335563744__Step --> inst_4335440656__Instruction  : commands
+inst_4382832288__Step --> inst_4382971440__Instruction  : commands
+inst_4382832288__Step --> inst_4382971600__Instruction  : commands
+inst_4382832288__Step --> inst_4382971760__Instruction  : commands
+inst_4382832288__Step --> inst_4382971920__Instruction  : commands
+inst_4382832288__Step --> inst_4382970160__Instruction  : commands
+inst_4382832288__Step --> inst_4382970320__Instruction  : commands
 
-class inst_4335440976__Instruction{
+class inst_4382971280__Instruction{
     uid : 24d37bdc-fac1-449e-9c8c-d18f7a...
     type : Instruction
     shell : python
     code : print&#40;df.head&#40;&#41;&#41;
 }
 
-class inst_4335440816__Instruction{
+class inst_4382971120__Instruction{
     uid : a28686c8-f400-4ec5-a9b5-d5d93b...
     type : Instruction
     shell : python
     code : df = pd.DataFrame&#40;data=np.c_[i...
 }
 
-class inst_4335442576__Instruction{
+class inst_4382972880__Instruction{
     uid : 663f5153-d906-4439-9af8-f304d3...
     type : Instruction
     shell : python
@@ -396,61 +396,61 @@ class Load_Dataset__Step{
     type : Step
     name : Load Dataset
 }
-Load_Dataset__Step --> inst_4335442576__Instruction  : commands
-Load_Dataset__Step --> inst_4335440816__Instruction  : commands
-Load_Dataset__Step --> inst_4335440976__Instruction  : commands
+Load_Dataset__Step --> inst_4382972880__Instruction  : commands
+Load_Dataset__Step --> inst_4382971120__Instruction  : commands
+Load_Dataset__Step --> inst_4382971280__Instruction  : commands
 
-class DataLoading__Element{
+class DataLoading__Task{
     uid : 030b5e59-fa01-4afd-9982-3ecab9...
     type : Task
     name : DataLoading
 }
-DataLoading__Element --> Load_Dataset__Step  : steps
-DataLoading__Element --> inst_4335563744__Step  : steps
+DataLoading__Task --> Load_Dataset__Step  : steps
+DataLoading__Task --> inst_4382832288__Step  : steps
 
-class inst_4335442416__Instruction{
+class inst_4382972720__Instruction{
     uid : 2b0f0b7c-f3ac-477f-9743-70d4a2...
     type : Instruction
     shell : python
     code : :from sklearn.datasets import ...
 }
 
-class inst_4335442256__Instruction{
+class inst_4382970000__Instruction{
     uid : d7a60d29-0575-4cc6-9b71-e0f0db...
     type : Instruction
     shell : python
     code : from sklearn.metrics import ac...
 }
 
-class inst_4335442096__Instruction{
+class inst_4382972560__Instruction{
     uid : 497a985e-bf83-49fe-b195-95e98c...
     type : Instruction
     shell : python
     code : from sklearn.tree import Decis...
 }
 
-class inst_4335441936__Instruction{
+class inst_4382972400__Instruction{
     uid : 81cfcca9-7df0-45d2-b469-a58350...
     type : Instruction
     shell : python
     code : from sklearn.model_selection i...
 }
 
-class inst_4335442736__Instruction{
+class inst_4382972080__Instruction{
     uid : d5e5dee3-e7fa-474b-8743-fffe98...
     type : Instruction
     shell : python
     code : import seaborn as sns
 }
 
-class inst_4335441776__Instruction{
+class inst_4382972240__Instruction{
     uid : e042543c-bd74-46f3-acb4-8331a7...
     type : Instruction
     shell : python
     code : import matplotlib.pyplot as pl...
 }
 
-class inst_4335074544__Instruction{
+class inst_4382973040__Instruction{
     uid : 3df8ab31-f535-495d-89ac-65dbb5...
     type : Instruction
     shell : python
@@ -462,31 +462,31 @@ class Import_Libraries__Step{
     type : Step
     name : Import Libraries
 }
-Import_Libraries__Step --> inst_4335074544__Instruction  : commands
-Import_Libraries__Step --> inst_4335441776__Instruction  : commands
-Import_Libraries__Step --> inst_4335442736__Instruction  : commands
-Import_Libraries__Step --> inst_4335441936__Instruction  : commands
-Import_Libraries__Step --> inst_4335442096__Instruction  : commands
-Import_Libraries__Step --> inst_4335442256__Instruction  : commands
-Import_Libraries__Step --> inst_4335442416__Instruction  : commands
+Import_Libraries__Step --> inst_4382973040__Instruction  : commands
+Import_Libraries__Step --> inst_4382972240__Instruction  : commands
+Import_Libraries__Step --> inst_4382972080__Instruction  : commands
+Import_Libraries__Step --> inst_4382972400__Instruction  : commands
+Import_Libraries__Step --> inst_4382972560__Instruction  : commands
+Import_Libraries__Step --> inst_4382970000__Instruction  : commands
+Import_Libraries__Step --> inst_4382972720__Instruction  : commands
 
-class LibraryLoading__Element{
+class LibraryLoading__Task{
     uid : d23904e5-cde7-4f29-a6ed-7c4208...
     type : Task
     name : LibraryLoading
 }
-LibraryLoading__Element --> Import_Libraries__Step  : steps
+LibraryLoading__Task --> Import_Libraries__Step  : steps
 
 class Iris_Analysis_Pipeline__Pipeline{
     uid : IRIS Pipeline
     type : Pipeline
     name : Iris Analysis Pipeline
 }
-Iris_Analysis_Pipeline__Pipeline --> LibraryLoading__Element  : tasks
-Iris_Analysis_Pipeline__Pipeline --> DataLoading__Element  : tasks
-Iris_Analysis_Pipeline__Pipeline --> DataPreparation__Element  : tasks
-Iris_Analysis_Pipeline__Pipeline --> ModelTraining__Element  : tasks
-Iris_Analysis_Pipeline__Pipeline --> ModelEvaluation__Element  : tasks
+Iris_Analysis_Pipeline__Pipeline --> LibraryLoading__Task  : tasks
+Iris_Analysis_Pipeline__Pipeline --> DataLoading__Task  : tasks
+Iris_Analysis_Pipeline__Pipeline --> DataPreparation__Task  : tasks
+Iris_Analysis_Pipeline__Pipeline --> ModelTraining__Task  : tasks
+Iris_Analysis_Pipeline__Pipeline --> ModelEvaluation__Task  : tasks
 
 class Iris_Analysis_Pipeline_Manifest__Manifest{
     uid : Classification on IRIS
@@ -506,58 +506,58 @@ Iris_Analysis_Pipeline_Manifest__Manifest --> Confusion_Matrix_Visualization__So
 
 style Iris_Analysis_Pipeline_Manifest__Manifest fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
 style Iris_Analysis_Pipeline__Pipeline fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style LibraryLoading__Element fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style LibraryLoading__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style Import_Libraries__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335074544__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335441776__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335442736__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335441936__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335442096__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335442256__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335442416__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style DataLoading__Element fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4382973040__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382972240__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382972080__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382972400__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382972560__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382970000__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382972720__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style DataLoading__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style Load_Dataset__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335442576__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335440816__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335440976__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335563744__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335441136__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335441296__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335441456__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335441616__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335440496__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335440656__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style DataPreparation__Element fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4382972880__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382971120__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382971280__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382832288__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382971440__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382971600__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382971760__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382971920__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382970160__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382970320__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style DataPreparation__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style DataPreparation__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335439376__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style ModelTraining__Element fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4382970480__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style ModelTraining__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style Model_Training__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335439696__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382970800__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style Fit_Model__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335440016__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style ModelEvaluation__Element fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4382969680__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style ModelEvaluation__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style Model_Evaluation__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335440176__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335438896__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335439056__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335439216__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335438096__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335437936__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382969840__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382968400__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382968560__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382968720__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382968880__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382969040__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style Visualize__Step fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335438256__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335438416__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335438576__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335438736__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335440336__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style inst_4335443056__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382969200__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382967920__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382968080__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382968240__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382966800__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style inst_4382967120__Instruction fill:#e1f5fe,stroke:#01579b,stroke-width:2px
 style notebook__SoftwareFile fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
-style inst_4335308320__ExternalReference fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4382756112__ExternalReference fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
 style Iris_Flower_Dataset__Data fill:#e0fff3,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style inst_4335571408__CreationInfo fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
-style inst_4335309408__ExternalReference fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4383196816__CreationInfo fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4382755840__ExternalReference fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
 style Data_Visualization__SoftwareFile fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
 style Trained_Decision_Tree_Model__MLModel fill:#e0fff3,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style inst_4335279440__ExternalReference fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style inst_4382708816__ExternalReference fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
 style Evaluation_Visualization__SoftwareFile fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
 style Model_Accuracy__Metric fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
 style Confusion_Matrix__Metric fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5

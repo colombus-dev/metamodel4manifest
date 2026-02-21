@@ -10,7 +10,7 @@ from typing import Optional, List
 
 from DSL4Pipelines.src.metamodel.artefacts.artefacts import Artefact
 from DSL4Pipelines.src.metamodel.catalogs.MetricCatalog import MetricCatalog
-from DSL4Pipelines.src.metamodel.pipelines.workflow import Element
+from DSL4Pipelines.src.metamodel.pipelines.workflow import Task
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType
 from DSL4Pipelines.src.metamodel.artefacts.ml_artefacts import Data
@@ -97,7 +97,7 @@ def test_other():
         creation_info="now",
     )
     print("------------ 2. Creating a Task that uses both the code and the dataset")
-    benchmark_task = Element(uid="task-01", description="Benchmark de Précision Q1")
+    benchmark_task = Task(uid="task-01", description="Benchmark de Précision Q1")
     res_metric = Metric("spdx:metric-01", "Power Usage", "0.45", "kWh")
     relationships = [
         Relationship(

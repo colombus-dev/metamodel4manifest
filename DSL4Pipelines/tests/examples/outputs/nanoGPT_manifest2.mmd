@@ -7,39 +7,39 @@
 
 
 
-PreTraining__Element ..> vocabulary__Data  : CONTAINS
-PreTraining__Element ..> openWebText__Data  : CONTAINS
-PreTraining__Element ..> GPT2TrainingConfig__SoftwareFile  : CONTAINS
+PreTraining__Task ..> vocabulary__Data  : CONTAINS
+PreTraining__Task ..> openWebText__Data  : CONTAINS
+PreTraining__Task ..> GPT2TrainingConfig__SoftwareFile  : CONTAINS
 
 
 
 
 
-PreTraining__Element ..> nanoGPT_Model__MLModel  : CONTAINS
-PreTraining__Element ..> GPT2ModelWeights__SoftwareFile  : CONTAINS
+PreTraining__Task ..> nanoGPT_Model__MLModel  : CONTAINS
+PreTraining__Task ..> GPT2ModelWeights__SoftwareFile  : CONTAINS
 
 
 
-Tokenizing__Element ..> PreTraining__Element  : CONTAINS
+Tokenizing__Task ..> PreTraining__Task  : CONTAINS
 
 
 
 
 
-Tokenizing__Element ..> GPT2TokenizerCode__SoftwareFile  : CONTAINS
-Tokenizing__Element ..> openWebText__Data  : CONTAINS
+Tokenizing__Task ..> GPT2TokenizerCode__SoftwareFile  : CONTAINS
+Tokenizing__Task ..> openWebText__Data  : CONTAINS
 
 
 
-Tokenizing__Element ..> vocabulary__Data  : CONTAINS
+Tokenizing__Task ..> vocabulary__Data  : CONTAINS
 
 
 
-DataCollection__Element ..> Tokenizing__Element  : CONTAINS
+DataCollection__Task ..> Tokenizing__Task  : CONTAINS
 
 
 
-DataCollection__Element ..> openWebText__Data  : CONTAINS
+DataCollection__Task ..> openWebText__Data  : CONTAINS
 
 class GPT2TrainingConfig__SoftwareFile{
     uid : 22118bbb-3f9c-4327-b6af-68a945...
@@ -106,14 +106,14 @@ class nanoGPT_Model__MLModel{
     software_file_kind : FILE
 }
 
-class PreTraining__Element{
+class PreTraining__Task{
     uid : 52d36a9c-fbe6-47a3-8777-bd95f1...
     type : Task
     name : PreTraining
     description : Pre-training the GPT2 model us...
 }
 
-class Tokenizing__Element{
+class Tokenizing__Task{
     uid : a5cc4185-47fd-47c0-9d7f-94be61...
     type : Task
     name : Tokenizing
@@ -121,7 +121,7 @@ class Tokenizing__Element{
     properties : family: byte-bpe-tokenizer
 }
 
-class DataCollection__Element{
+class DataCollection__Task{
     uid : c9ef23f8-ea65-4849-a216-4b1a1a...
     type : Task
     name : DataCollection
@@ -133,9 +133,9 @@ class NanoGPT_Pipeline__Pipeline{
     type : Pipeline
     name : NanoGPT Pipeline
 }
-NanoGPT_Pipeline__Pipeline --> DataCollection__Element  : tasks
-NanoGPT_Pipeline__Pipeline --> Tokenizing__Element  : tasks
-NanoGPT_Pipeline__Pipeline --> PreTraining__Element  : tasks
+NanoGPT_Pipeline__Pipeline --> DataCollection__Task  : tasks
+NanoGPT_Pipeline__Pipeline --> Tokenizing__Task  : tasks
+NanoGPT_Pipeline__Pipeline --> PreTraining__Task  : tasks
 
 class NanoGPT_Manifest__Manifest{
     uid : nanoGPT manifest
@@ -150,14 +150,14 @@ NanoGPT_Manifest__Manifest --> GPT2TokenizerCode__SoftwareFile  : artefacts
 NanoGPT_Manifest__Manifest --> GPT2ModelWeights__SoftwareFile  : artefacts
 NanoGPT_Manifest__Manifest --> GPT2TrainingConfig__SoftwareFile  : artefacts
 
-style NanoGPT_Manifest__Manifest fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style NanoGPT_Manifest__Manifest fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
 style NanoGPT_Pipeline__Pipeline fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-style DataCollection__Element fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style Tokenizing__Element fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style PreTraining__Element fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style nanoGPT_Model__MLModel fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style openWebText__Data fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style vocabulary__Data fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style GPT2TokenizerCode__SoftwareFile fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style GPT2ModelWeights__SoftwareFile fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
-style GPT2TrainingConfig__SoftwareFile fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style DataCollection__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style Tokenizing__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style PreTraining__Task fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style nanoGPT_Model__MLModel fill:#e0fff3,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style openWebText__Data fill:#e0fff3,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style vocabulary__Data fill:#e0fff3,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style GPT2TokenizerCode__SoftwareFile fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style GPT2ModelWeights__SoftwareFile fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
+style GPT2TrainingConfig__SoftwareFile fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic
