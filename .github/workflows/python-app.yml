@@ -37,6 +37,6 @@ jobs:
     - name: Test with pytest
       run: |
         pwd
-        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        export PYTHONPATH=$PYTHONPATH:$(pwd):/DSL4Pipelines/src
         ls -la
         python -m pytest
