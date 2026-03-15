@@ -433,7 +433,7 @@ if __name__ == "__main__":
         creation_info=creInfo,
         name="Arthit Suriyawongkul",
     )
-    print(object_to_mermaid(pers, "archit"))
+    # print(object_to_mermaid(pers, "archit"))
 
     fichier = SoftwareFile(
         uid="https://spdx.org/spdxdocs/File10-model",
@@ -442,9 +442,9 @@ if __name__ == "__main__":
         software_file_kind="file",
         software_primary_purpose="model",
     )
-    print(object_to_mermaid(fichier))
+   # print(object_to_mermaid(fichier))
 
     relation = Relationship(
-        from_=pers, to_=[fichier], relationship_type=RelationshipType.EVALUATES
+        from_=pers, to_=[fichier], relationship_type=RelationshipType.USES
     )
-    print(object_to_mermaid_full(relation, "relation_pers_fichier"))
+    #print(object_to_mermaid_full(relation, "relation_pers_fichier"))

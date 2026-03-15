@@ -27,7 +27,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import (
     Task
 )
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
-from DSL4Pipelines.src.tools.toJson import to_json
+from tools.OLD.toJson import to_json
 from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import Taxonomy, Category
 
 

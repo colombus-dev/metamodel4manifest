@@ -20,6 +20,7 @@ def test_nanoGPT_manifest() -> Manifest:
     manifest_nanoGPT.pipeline = test_nanoGPT_pipeline()
     manifest_nanoGPT.artefacts = test_nanoGPT_artefacts()
     manifest_nanoGPT.relations = create_relations(manifest_nanoGPT)
+    assert manifest_nanoGPT.pipeline is not None, "Pipeline is not set in the manifest"
     return manifest_nanoGPT
 
 

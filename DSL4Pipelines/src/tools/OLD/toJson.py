@@ -6,7 +6,6 @@ from dataclasses import asdict
 from typing import List, Any
 
 from DSL4Pipelines.src.metamodel.artefacts.artefacts import Person, SoftwareFile
-from DSL4Pipelines.src.tools.transformations.toMermaid import object_to_mermaid
 
 
 def to_json(elements_list: List[Any]) -> str:
@@ -19,6 +18,7 @@ def to_json(elements_list: List[Any]) -> str:
 # =====================================================================
 # ---Test bloc and usage example---
 # =====================================================================
+
 if __name__ == "__main__":
     # 1. Preparing test objects
     creInfo = "_:creationinfo"
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     )
 
     # Exemple
-    print(object_to_mermaid(pers, "archit"))
+    # print(object_to_mermaid(pers, "archit"))
     fichier = SoftwareFile(
         uid="https://spdx.org/spdxdocs/File10-model",
         creation_info=creInfo,
@@ -58,13 +58,13 @@ if __name__ == "__main__":
 
     print("\n✅ Simple Tests passed successfully.")
 
-    manifest = get_ManisfestReduceTotaskTraining()
+    #manifest = test_build_manifestFromNBonIrisClassification()
     json_result = to_json([manifest])
     print(json_result)
 
     print("\n✅ Transformation To Json passed")
 
-    manifest = get_manifestFromNBonIrisClassification()
+    #manifest =test_build_manifestFromNBonIrisClassification()
     json_result = to_json([manifest])
     print("--- Manifest JSON ---")
     print(json_result)
