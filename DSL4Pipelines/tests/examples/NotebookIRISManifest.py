@@ -6,7 +6,6 @@ from DSL4Pipelines.src.metamodel.catalogs.MetricCatalog import MetricCatalog
 from DSL4Pipelines.src.metamodel.core.structure import (
     ExternalReference,
     CreationInfo,
-    Element,
 )
 from DSL4Pipelines.src.metamodel.artefacts.metrics import Metric
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
@@ -20,8 +19,9 @@ from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType, FileKind
 from DSL4Pipelines.src.tools.toFile import save_in_file
 from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
-from DSL4Pipelines.src.tools.transformations.toMermaid import MERMAIDSerializer
+#from OLD.toMermaid import MERMAIDSerializer
 from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import cripDM_Taxonomy
+from tools.transformations.toMermaid import MERMAIDSerializer
 
 
 def test_build_manifestFromNBonIrisClassification() -> Manifest:

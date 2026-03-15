@@ -1,11 +1,10 @@
-from typing import List, Annotated
+from typing import List
 
 from DSL4Pipelines.src.metamodel.artefacts.ml_artefacts import MLModel, Data
 from DSL4Pipelines.src.metamodel.artefacts.artefacts import SoftwareFile, Artefact
 from DSL4Pipelines.src.metamodel.catalogs.artefact_catalog import ArtefactCatalog
 from DSL4Pipelines.src.metamodel.catalogs.DatasetCatalog import DatasetCatalog
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType
-from DSL4Pipelines.src.metamodel.core.structure import Element
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.metamodel.pipelines.workflow import Pipeline, Task
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship

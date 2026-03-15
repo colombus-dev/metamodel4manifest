@@ -357,7 +357,7 @@ relations:
   from_: 34a76478-e007-4bb4-afd2-76cbd005da2e
   to_:
   - c3fdb9d3-6c0c-4282-80bf-13bc45743f3a
-  relationship_type: dependsOn
+  relationship_type: produces
 - uid: daa81a6b-5cd1-40be-9afa-5010b8b33b6e
   type: Relationship
   properties: {}
@@ -386,4 +386,4 @@ relations:
   to_:
   - fa16ea52-e966-4ec3-b5e0-5ce180f6114d
   - cf161cd7-0469-454f-b27d-64b0c5a49f8c
-  relationship_type: evaluates
+  relationship_type: uses
