@@ -2,19 +2,19 @@ from dataclasses import dataclass
 from typing import Callable, List, Any
 
 @dataclass
-class RuleMetadata:
+class Rule:
     name: str
     weight: float
     func: Callable  # La fonction de l'expert
 
 # C'est ici que toutes les règles seront "stockées" automatiquement
-RULE_REGISTRY: List[RuleMetadata] = []
+RULE_REGISTRY: List[Rule] = []
 
 def eval_rule(name: str, weight: float = 1.0) -> Callable[[Callable], Callable]:
     """Le décorateur qui enregistre les fonctions des experts."""
     def decorator(func: Callable):
         # On crée l'entrée dans le registre
-        metadata = RuleMetadata(name=name, weight=weight, func=func)
+        metadata = Rule(name=name, weight=weight, func=func)
         RULE_REGISTRY.append(metadata)
 
         # On renvoie la fonction originale sans la modifier
@@ -35,7 +35,7 @@ class EvaluationResult:
 
 @dataclass
 class RuleReport:
-    ruleMetadata: RuleMetadata
+    rule: Rule
     results: List[EvaluationResult]
     avg_score: float
     status: str
@@ -45,4 +45,4 @@ class RuleReport:
             if self.status == "Green" \
             else "🟠" if self.status == "Orange" else "🔴"
         details = "\n    ".join(str(r) for r in self.results)
-        return f"{icon} {self.ruleMetadata.name:<25} | Score: {self.avg_score:.2f} | \n Details:\n    {details} "
+        return f"{icon} {self.rule.name:<25} | Score: {self.avg_score:.2f} | \n Details:\n    {details} "

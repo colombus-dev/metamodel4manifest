@@ -1,0 +1,51 @@
+name: gpt2
+description: GPT2 Small
+url: https://huggingface.co/openai-community/gpt2
+tokenizer:
+  type: byte-bpe-tokenizer
+  n_vocab: 50257
+  reference_implementation: https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py
+  vocabulary: https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py
+  pre_tokenization: >
+    (?:[sdmt]|ll|ve|re)| ?\p{L}++| ?\p{N}++| ?[^\s\p{L}\p{N}]++|\s++$|\s+(?!\S)|\s
+  training: null
+
+architecture:
+  type: decoder
+  n_parameters: 124439808
+  n_active_parameters: 124439808
+  n_embedding_dimensions: 768
+  n_transformers: 12
+  positional_embedding:
+    type: learned
+    n_positions: 1024
+  transformer_attention:
+    type: multi-head-attention
+    n_heads: 12
+  transformer_ffn:
+    # 4*768
+    hidden_layer_size: 3072
+    hidden_layer_size_ratio: 4.0
+  training:
+    - name: pre-training
+      optimizer:
+        type: adamw
+        weight_Decay: 0.1
+        notes: Weight decay is not applied to bias and layer norm layers
+        beta1: 0.9
+        beta2: 0.95
+      code: null
+      corpus:
+        name: openwebtext
+        licence: none
+        description: >
+          a reconstructed "open" version of the GPT2 training corpus
+          based on the data published in the GPT2 technical report
+        location: https://huggingface.co/datasets/Skylion007/openwebtext
+        copyright_holder: >
+          Specifically, the authors who built this
+          dataset did so while explicitely acknowledging they did not
+          own copyright on the content they extracted this data from.
+        construction_method:
+          This corpus was constructed from the code located on
+          https://github.com/jcpeterson/openwebtext

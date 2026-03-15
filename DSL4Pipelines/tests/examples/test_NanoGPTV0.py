@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Annotated
 
 from DSL4Pipelines.src.metamodel.artefacts.ml_artefacts import MLModel, Data
 from DSL4Pipelines.src.metamodel.artefacts.artefacts import SoftwareFile, Artefact
@@ -11,6 +11,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import Pipeline, Task
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.tools.toFile import save_in_file
 from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
+from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import cripDM_Taxonomy
 from tools.transformations.toMermaid import MERMAIDSerializer
 
 
@@ -195,6 +196,7 @@ def test_nanoGPT_pipeline() -> Pipeline:
 
 def create_relations(manifest: Manifest) -> List[Relationship]:
     relations = []
+    # We first retrieve the artefacts and tasks from the manifest to use them in the relations
     vocabulary = manifest.find_artefacts(name="vocabulary")[0]
     assert vocabulary is not None, "Artefact 'vocabulary' not found in the manifest"
     openWebText = manifest.find_artefacts(name="openWebText")[0]
@@ -223,10 +225,21 @@ def create_relations(manifest: Manifest) -> List[Relationship]:
     taskPretraining = manifest.pipeline.find_task(name="PreTraining")[0]
     assert taskPretraining is not None, "Task 'PreTraining' not found in the pipeline"
 
+
+
+
+    #relations froms taskDataCollection
+    relation_Task_to_step1= Relationship(
+        from_=taskDataCollection,
+        to_=[cripDM_Taxonomy.get_category("step:data-acquisition"),cripDM_Taxonomy],
+        relationship_type=RelationshipType.ANNOTATED_BY
+    )
+    relations.append(relation_Task_to_step1)
+
     relation_DataCollection_to_Generates = Relationship(
         from_=taskDataCollection,
         to_=[openWebText],
-        relationship_type=RelationshipType.GENERATES,
+        relationship_type=RelationshipType.PRODUCES,
     )
     relations.append(relation_DataCollection_to_Generates)
     relation_DataCollection_to_NEXT = Relationship(
@@ -236,10 +249,20 @@ def create_relations(manifest: Manifest) -> List[Relationship]:
     )
     relations.append(relation_DataCollection_to_NEXT)
 
+
+    #relations from taskTokenizer
+    #relations to steps
+    relation_Task_to_step2= Relationship(
+        from_=taskTokenizer,
+        to_=[cripDM_Taxonomy.get_category("step:other"),cripDM_Taxonomy],
+        relationship_type=RelationshipType.ANNOTATED_BY
+    )
+    relations.append(relation_Task_to_step2)
+
     relation_Tokenizer_to_Generates = Relationship(
         from_=taskTokenizer,
         to_=[vocabulary],
-        relationship_type=RelationshipType.GENERATES,
+        relationship_type=RelationshipType.PRODUCES,
     )
     relations.append(relation_Tokenizer_to_Generates)
 
@@ -260,7 +283,7 @@ def create_relations(manifest: Manifest) -> List[Relationship]:
     relation_PreTraining_to_Generates = Relationship(
         from_=taskPretraining,
         to_=[gpt_model, model_weights],
-        relationship_type=RelationshipType.GENERATES,
+        relationship_type=RelationshipType.PRODUCES,
     )
     relations.append(relation_PreTraining_to_Generates)
 
@@ -361,8 +384,20 @@ def test_to_yaml_and_reverse_nanoGPT():
     assert len(manifestBis.artefacts) == 6, (
         f"Expected 6 artefacts, found {len(manifestBis.artefacts)}"
     )
-    assert len(manifestBis.relations) == 7, (
-        f"Expected 7 relations, found {len(manifestBis.relations)}"
+    assert len(manifestBis.relations) == 9, (
+        f"Expected 9 relations, found {len(manifestBis.relations)}"
+    )
+
+    annotated_relations = [
+        relation
+        for relation in manifestBis.relations
+        if relation.relationship_type == RelationshipType.ANNOTATED_BY
+    ]
+    assert len(annotated_relations) == 2, (
+        f"Expected 2 annotated_by relations, found {len(annotated_relations)}"
+    )
+    assert annotated_relations[0].to_[0].uid == "step:data-acquisition", (
+        f"Expected first annotated_by relation to target 'step:data-acquisition', found '{annotated_relations[0].to_[0].uid}'"
     )
     print("YAML serialization and deserialization test passed successfully!")
 

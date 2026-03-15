@@ -1,0 +1,32 @@
+@startuml classes_core
+set namespaceSeparator none
+class "CreationInfo" as CreationInfo {
+  created_by : List[str]
+  created_on : Optional[str]
+  spec_version : Optional[str]
+  type : str
+  uid : Optional[str]
+}
+class "Element" as Element {
+'  creation_info : Optional[CreationInfo]
+  description : Optional[str]
+  name : Optional[str]
+  type : Optional[str]
+  uid : str
+  get_value(name: str, default)
+  validate(errors: Optional[list]) -> bool
+}
+
+Element --> "0..1\n creationInfo" CreationInfo
+Element --> "0..*\n properties" Property
+
+class "Property" as Property {
+  name : str
+  value : Object
+}
+@enduml
+class "ExternalReference" as structure.ExternalReference {
+  external_identifier_type : Optional[str]
+  identifier : Optional[str]
+  type : str
+}

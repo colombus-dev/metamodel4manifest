@@ -1,0 +1,22 @@
+@startuml classes_relations
+set namespaceSeparator none
+class "Relationship" as relations.Relationship {
+  'from_
+  relationship_type
+  'to_ : List[Element]
+  type : str
+}
+
+ enum "RelationshipType" as vocabulary.RelationshipType {
+   USES
+   PRODUCES
+   NEXT
+   COMPOSED_OF
+   ANNOTATED_BY
+   OTHER
+ }
+relations.Relationship --|> core.Element
+relations.Relationship --> "1 \n from_" core.Element
+relations.Relationship --> "1..*\nto_\n{ordered} " core.Element
+relations.Relationship --> "1 \n relationship_type" vocabulary.RelationshipType
+@enduml

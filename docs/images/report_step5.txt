@@ -1,0 +1,14 @@
+🟢 Dataset and Model Presence | Score: 1.00 | 
+ Details:
+    ✅ Availability of dataset: Number of datasets: 2 (score: 1.00)
+    ✅ Availability of model: Number of ML models: 1 (score: 1.00) 
+🔴 French Readiness          | Score: 0.20 | 
+ Details:
+    ✅ Dataset contient du français: Langues trouvées: [['french', 'english', 'german', 'spanish'], []] (score: 0.40)
+    ❌ Performance sur benchmark FR: Aucun benchmark de performance en français trouvé (score: 0.00) 
+🔴 Pureté Linguistique Globale | Score: 0.12 | 
+ Details:
+    ❌ Pipeline Global: Analyse sur 2 datasets. (score: 0.12) 
+🔴 Ratio de Spécialisation   | Score: 0.25 | 
+ Details:
+    ❌ Cohérence Linguistique: 3 langues parasites détectées. (score: 0.25) 

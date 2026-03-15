@@ -1,0 +1,137 @@
+@startuml
+'set namespaceSeparator none
+left to right direction
+'package Core #lavender{
+'class Element
+'}
+
+package "ArtefactCatalog" #lightblue{
+ enum "ACCESS" as ACCESS {
+ }
+
+ }
+
+package SoftwareCatalog #lightgrey{
+  enum "FileKind" as FileKind {
+     FILE
+     DIRECTORY
+     }
+
+class LANGUAGES{
+        CODE = ["Python", "R", "C++", "Java"]
+        FORMATS = ["Yaml", "JSON", "Binary", "XML"]
+        NATURAL = ["French", "English", "Spanish", "German"]
+}
+}
+
+'package Artefacts #lightblue{
+
+class "Artefact" as Artefact {
+'  access : Optional[str]
+'  category : Optional[str]
+ ' license : Optional[str]
+'  type : str
+ ' validate(errors: Optional[list]) -> bool
+}
+'Artefact --|> Element
+'Artefact --> "0..1\n access" ACCESS
+'Artefact --> "0..1\n category" CATEGORIES
+
+
+class "SoftwareFile" as SoftwareFile {
+  content_type : Optional[mimetypes]
+  external_reference : Optional[ExternalReference]
+'  languages : List[str]
+  release_time : Optional[str]
+  software_copyright_text : Optional[str]
+  software_download_location : Optional[str]
+'  software_file_kind
+  software_primary_purpose : Optional[str]
+'  type : str
+  validate(errors: list) -> bool
+}
+
+SoftwareFile --|> Artefact
+SoftwareFile --> "0..1\n software_file_kind" FileKind
+'SoftwareFile --> "0..1\n externalReference" ExternalReference
+SoftwareFile --> "0..*\n languages" LANGUAGES
+
+'}
+
+package MLCatalog #lightgrey{
+
+ enum "ML_MODEL_TYPE" as ML_MODEL_TYPE {
+   ALL() : list
+   CNN
+   RNN
+   TRANSFORMER
+ }
+ }
+
+package ML_ARTEFACTS #lightgreen{
+
+class "Data" as Data {
+  data_formats : List[str]
+  data_types : List[str]
+'  dataset_availability : Optional[str]
+  dataset_has_sensitive_personal_information : Optional[str]
+  dataset_intended_use : Optional[str]
+  dataset_kinds : List[str]
+  dataset_known_bias : List[str]
+  dataset_size : Optional[int]
+'  type : str
+'  validate(errors: list) -> bool
+}
+Data --|> SoftwareFile
+Data --> "0..1 \n dataset_availability" ACCESS
+
+
+class "MLModel" as MLModel {
+'  ml_model_type : Optional[str]
+'  type : str
+'  validate(errors: list) -> bool
+}
+MLModel --|> SoftwareFile
+MLModel --> "0..1\n ml_model_type" ML_MODEL_TYPE
+}
+package Metrics{
+class "Metric" as Metric {
+  category : Optional[str]
+  kind : Optional[str]
+  slice : Optional[str]
+  type : str
+  unit : Optional[str]
+  value : Optional[str]
+  validate_with_catalog() -> bool
+}
+}
+Metric --|> Artefact
+
+@enduml
+package "ArtefactCatalog" #lightgrey{
+ enum "ACCESS" as ACCESS {
+   ALL() : list
+   DIRECT_DOWNLOAD
+   PRIVATE
+   PUBLIC
+   RESTRICTED
+ }
+
+
+ enum "CATEGORIES" as CATEGORIES {
+      ALL() : list
+      CODE
+      CONFIG
+      DATA
+      MODEL_WEIGHTS
+      PERFORMANCE
+      VOCABULARY
+    }
+ }
+
+
+class "Person" as Person {
+  external_identifier : List[ExternalReference]
+}
+Person --|> Artefact
+'Person --> "0..*\n externalIdentifier" ExternalReference

@@ -8,6 +8,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import (
     Pipeline,
     Step,
     Instruction,
+    Task,
 )
 from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
 from DSL4Pipelines.tests.examples.NotebookIRISManifest import (
@@ -16,6 +17,8 @@ from DSL4Pipelines.tests.examples.NotebookIRISManifest import (
 )
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType
+from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import cripDM_Taxonomy, Taxonomy
+from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import Category
 
 
 # --------- TESTS FOR YAMLSerializer.py : from an Objet to Yaml ---------
@@ -146,7 +149,7 @@ def test_toYaml_Element_with_relationships() -> str:
     )
     m.kind = MetricCatalog.FAIRNESS.EQUALIZED_ODDS
 
-    r = Relationship(from_=a, to_=[m], relationship_type=RelationshipType.TESTED_ON)
+    r = Relationship(from_=a, to_=[m], relationship_type=RelationshipType.PRODUCES)
     manifest = Manifest(
         name="Test Manifest", pipeline=None, artefacts=[a, m], relations=[r]
     )
@@ -157,7 +160,7 @@ def test_toYaml_Element_with_relationships() -> str:
     assert "name: Benchmark Dataset" in yaml_output
     assert "type: Artefact" in yaml_output
     assert "relations:" in yaml_output
-    assert "relationship_type: testedOn" in yaml_output
+    assert "relationship_type: produces" in yaml_output
     assert "from_: " + a.uid in yaml_output
     assert "- " + m.uid in yaml_output
     return yaml_output
@@ -173,6 +176,25 @@ def test_toYaml_Manifest() -> str:
     assert isinstance(yaml_output, str)
     assert "name: Iris Analysis Pipeline" in yaml_output
     assert "type: Manifest" in yaml_output
+    return yaml_output
+
+def test_toYaml_relation_to_taxonomy() -> str:
+    task1:Task = Task()
+    cat = cripDM_Taxonomy.get_category("step:data-preparation")
+    assert cat is not None, "The category 'step:data-preparation' should be present in the taxonomy."
+    relation : Relationship = Relationship(
+        from_=task1,
+        to_=[
+            cat,
+            cripDM_Taxonomy],
+        relationship_type=RelationshipType.ANNOTATED_BY)
+    yaml_output = YAMLSerializer.to_yaml(relation, True)
+    print(f"\n YAML Output:\n{yaml_output} : {type(yaml_output)}")
+    assert isinstance(yaml_output, str)
+    assert "relationship_type: annotatedBy" in yaml_output
+    assert "uid: " + task1.uid in yaml_output
+    assert "- uid: " + cat.uid in yaml_output
+    assert "- uid: " + cripDM_Taxonomy.uid in yaml_output
     return yaml_output
 
 
@@ -291,7 +313,7 @@ def test_load_yaml_on_Element_with_relationships():
     assert manifest.relations is not None
     assert len(manifest.relations) == 1
     r = manifest.relations[0]
-    assert r.relationship_type == "testedOn"
+    assert r.relationship_type == "produces"
     assert manifest.artefacts is not None
     assert len(manifest.artefacts) == 2
     # look for the artefac with name "TestMetric"
@@ -312,6 +334,33 @@ def test_load_yaml_on_Element_with_relationships():
     assert r.from_ == artefact
     assert r.to_[0] == metric_artefact
 
+def test_load_yaml_on_Element_with_relationships_to_taxonomy():
+    res = test_toYaml_relation_to_taxonomy()
+    print(f"-------------------- YAML String to Load:\n{res}\n: {type(res)}")
+
+    loaded_element: dict = YAMLSerializer.load_yaml_to_dict(res)
+    print(
+        f"-------------------- Loaded Element:\n{loaded_element})\n: {type(loaded_element)}"
+    )
+    assert isinstance(loaded_element, dict)
+
+    relation = YAMLSerializer._from_yaml(Relationship, loaded_element)
+    print(f"Reconstructed Element:\n{relation}\n: {type(relation)}")
+    assert isinstance(relation, Relationship)
+    assert relation.relationship_type == "annotatedBy"
+    assert relation.from_ is not None
+    assert relation.to_ is not None
+    assert len(relation.to_) == 2
+    to_cat = relation.to_
+    print (f"\n ---------- Targets of the relationship:\n{to_cat}\n: {type(to_cat)}")
+    cat = next((t for t in relation.to_ if isinstance(t, Category) ), None)
+    assert cat is not None, "The category 'Data Preparation' should be present in the relationship's targets."
+    assert cat.uid == "step:data-preparation", f"The category's UID should be 'step:data-preparation', but got '{cat.uid}'"
+    taxonomy = next((t for t in relation.to_ if isinstance(t, Taxonomy)), None)
+    assert taxonomy is not None, "The taxonomy 'CRISP-DM Taxonomy' should be present in the relationship's targets."
+    assert taxonomy.uid == "taxo:ml-lifecycle", f"The taxonomy's UID should be 'taxonomy:crispdm', but got '{taxonomy.uid}'"
+
+
 
 def test_load_yaml_on_Manifest():
     res = test_toYaml_Manifest()
@@ -326,6 +375,7 @@ def test_load_yaml_on_Manifest():
     elem = YAMLSerializer._from_yaml(Element, loaded_element)
     print(f"Reconstructed Element:\n{elem}\n: {type(elem)}")
     assert isinstance(elem, Manifest)
+
 
 
 # -------------------- test from_yaml_file --------------------

@@ -1,0 +1,94 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class MetricCatalog {
+  {static}find_category_for_metric(metric_name: str) -> str
+  {static}get_all_types() -> list
+  {static}get_all_types_map() -> dict[str, str]
+  {static}get_categories() -> list[str]
+  {static}get_subtypes_for_category(category_name: str) -> list[str]
+}
+note right of MetricCatalog::find_category_for_metric
+  Returns the category of a given metric name (e.g., "perf:accuracy" -> "PERFORMANCE").
+end note
+
+note right of MetricCatalog::get_all_types
+  Returns a list of all metric types (e.g., ["perf:accuracy", "fair:demographic_parity", ...]).
+end note
+
+
+note right of MetricCatalog::get_all_types_map
+  Returns a dictionary mapping metric types to their categories
+   (e.g., {"perf:accuracy": "PERFORMANCE", "fair:demographic_parity": "FAIRNESS", ...}).
+end note
+
+class PERFORMANCE {
+  {static} +ACCURACY : String = "perf:accuracy"
+  {static} +F1_SCORE : String = "perf:f1_score"
+  {static} +LATENCY : String = "perf:latency"
+  {static} +CONFUSION_MATRIX : String = "perf:confusion_matrix"
+}
+
+class FAIRNESS {
+  {static} +DEMOGRAPHIC_PARITY : String = "fair:demographic_parity"
+  {static} +EQUALIZED_ODDS : String = "fair:equalized_odds"
+}
+
+' Symbolise l'imbrication (Inner Classes)
+MetricCatalog +-- PERFORMANCE
+MetricCatalog +-- FAIRNESS
+
+class SUSTAINABILITY{
+  {static} +ENERGY_KWH = "env:energy_consumption"
+  {static} +CARBON_GCO2 = "env:carbon_footprint"
+}
+MetricCatalog +-- SUSTAINABILITY
+class ROBUSTNESS{
+  {static} +ADVERSARIAL_ACCURACY = "rob:adversarial_accuracy"
+  {static} +NOISE_SENSITIVITY = "rob:noise_sensitivity"
+}
+MetricCatalog +-- ROBUSTNESS
+
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+classes_metricCatalog
+set namespaceSeparator none
+class "FAIRNESS" as MetricCatalog.MetricCatalog.FAIRNESS {
+  DEMOGRAPHIC_PARITY : str
+  EQUALIZED_ODDS : str
+}
+class "MetricCatalog" as MetricCatalog.MetricCatalog {
+  find_category_for_metric(metric_name: str) -> str
+  get_all_types() -> list
+  get_all_types_map() -> dict[str, str]
+  get_categories() -> list[str]
+  get_subtypes_for_category(category_name: str) -> list[str]
+}
+class "PERFORMANCE" as MetricCatalog.MetricCatalog.PERFORMANCE {
+  ACCURACY : str
+  CONFUSION_MATRIX : str
+  F1_SCORE : str
+  LATENCY : str
+}
+class "ROBUSTNESS" as MetricCatalog.MetricCatalog.ROBUSTNESS {
+  ADVERSARIAL_ACCURACY : str
+  NOISE_SENSITIVITY : str
+}
+class "SUSTAINABILITY" as MetricCatalog.MetricCatalog.SUSTAINABILITY {
+  CARBON_GCO2 : str
+  ENERGY_KWH : str
+}
+@enduml

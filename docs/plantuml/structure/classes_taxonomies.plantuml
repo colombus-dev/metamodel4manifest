@@ -1,0 +1,13 @@
+@startuml classes_taxonomies
+set namespaceSeparator none
+class "Category" as taxonomy.Category {
+}
+class "Taxonomy" as taxonomy.Taxonomy {
+'  categories : dict[str, Category]
+  add_category(category: Category)
+  get_category(uid: str) -> Category | None
+}
+taxonomy.Category --|> "Core.Element "
+taxonomy.Taxonomy --|> "Core.Element "
+taxonomy.Taxonomy --> "0..*\n categories" taxonomy.Category
+@enduml

@@ -1,0 +1,23 @@
+@startuml classes_manifest
+set namespaceSeparator none
+'top to bottom direction
+'left to right direction
+
+class Manifest #B8E6FE {
+'  artefacts : List[Artefact]
+ ' pipeline : Optional[Pipeline]
+  'relations : List[Relationship]
+  'type : str
+  find_artefacts() -> List[Artefact]
+  get_metrics() -> List[Metric]
+}
+
+Manifest --|> Core.Element
+Manifest *--> "0..*\n artefacts" Artefact
+Manifest *--> "0..1\n pipeline" Pipeline
+Manifest *--> "0..*\n relations" Relationship
+
+class Artefact #lightblue
+class Pipeline #56C895
+class Relationship #F9B9FD
+@enduml

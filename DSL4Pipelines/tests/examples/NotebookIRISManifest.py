@@ -21,6 +21,7 @@ from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType, Fi
 from DSL4Pipelines.src.tools.toFile import save_in_file
 from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
 from DSL4Pipelines.src.tools.transformations.toMermaid import MERMAIDSerializer
+from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import cripDM_Taxonomy
 
 
 def test_build_manifestFromNBonIrisClassification() -> Manifest:
@@ -91,17 +92,31 @@ def build_relations(manifest) -> list:
     relation_task_to_model = Relationship(
         from_=manifest.pipeline.find_task(name="ModelTraining")[0],
         to_=manifest.find_artefacts(type="MLModel", name="Trained Decision Tree Model"),
-        relationship_type=RelationshipType.GENERATES,
+        relationship_type=RelationshipType.PRODUCES,
     )
     relations.append(relation_task_to_model)
+    #relations froms taskDataCollection
+    relation_Task_to_stepMT= Relationship(
+        from_=manifest.pipeline.find_task(name="ModelTraining")[0],
+        to_=[cripDM_Taxonomy.get_category("step:model-training"),cripDM_Taxonomy],
+        relationship_type=RelationshipType.ANNOTATED_BY
+    )
+    relations.append(relation_Task_to_stepMT)
+
     relation_step_to_visualisation = Relationship(
         from_=manifest.pipeline.find_task(name="ModelEvaluation")[0].find_steps(
             name="Visualize"
         )[0],
         to_=manifest.find_artefacts(name="Evaluation Visualization"),
-        relationship_type=RelationshipType.GENERATES,
+        relationship_type=RelationshipType.PRODUCES,
     )
     relations.append(relation_step_to_visualisation)
+    relation_Task_to_stepME= Relationship(
+        from_=manifest.pipeline.find_task(name="ModelEvaluation")[0],
+        to_=[cripDM_Taxonomy.get_category("step:model-evaluation"),cripDM_Taxonomy],
+        relationship_type=RelationshipType.ANNOTATED_BY
+    )
+    relations.append(relation_Task_to_stepME)
 
     step_model_evaluation = manifest.pipeline.find_task(name="ModelEvaluation")[
         0
@@ -111,12 +126,15 @@ def build_relations(manifest) -> list:
         type="Metric", name="Confusion Matrix"
     )[0]
     accuracy_metric = manifest.find_artefacts(type="Metric", name="Model Accuracy")[0]
+
+
     relation_step_to_metrics = Relationship(
         from_=step_model_evaluation,
         to_=[accuracy_metric, confusion_matrix_metric],
-        relationship_type=RelationshipType.EVALUATES,
+        relationship_type=RelationshipType.PRODUCES,
     )
     relations.append(relation_step_to_metrics)
+
 
     #  relation_step_to_confusionMatrix = \
     #      Relationship(
@@ -403,7 +421,7 @@ def create_relation_manifest_notebook(manifest, listArtefacts) -> Relationship:
         print("No notebook found in manifest artefacts")
         return None
     rel1 = Relationship(
-        from_=manifest, to_=listArtefacts, relationship_type=RelationshipType.SOURCE
+        from_=manifest, to_=listArtefacts, relationship_type=RelationshipType.USES
     )
     return rel1
 
@@ -420,7 +438,7 @@ def create_relation_stepLoad_irisDataset(
     relation = Relationship(
         from_=step_load,
         to_=iris_datasets,
-        relationship_type=RelationshipType.DEPENDS_ON,
+        relationship_type=RelationshipType.USES,
     )
     return relation
 
@@ -430,7 +448,7 @@ def create_relation_stepViz_visualisation(step_viz: Step, viz_file) -> Relations
         print("No visualization artefact found in manifest artefacts")
         return None
     return Relationship(
-        from_=step_viz, to_=viz_file, relationship_type=RelationshipType.GENERATES
+        from_=step_viz, to_=viz_file, relationship_type=RelationshipType.PRODUCES
     )
 
 
@@ -473,7 +491,61 @@ def test_to_yaml_and_reverse_NBIris():
     assert len(manifestBis.artefacts) == 8, (
         f"Expected 8 artefacts, found {len(manifestBis.artefacts)}"
     )
-    assert len(manifestBis.relations) == 6, (
+    assert len(manifestBis.relations) == 8, (
         f"Expected 6 relations, found {len(manifestBis.relations)}"
     )
     print("YAML serialization and deserialization test passed successfully!")
+
+
+# ONLY FOR TESTING PURPOSES, NOT A REAL TEST, JUST TO CHECK THE INTEGRATION OF ALL THE COMPONENTS TO BUILD THE MANIFEST AND EXPORT IT IN MERMAID SYNTAX FOR VISUALIZATION
+def test_extension_task_hub():
+    task_eval = test_task_model_evaluation()
+    test_iris_dataset_1 = test_build_artefact_iris_dataset()
+    test_iris_dataset_2 = test_build_artefact_iris_dataset()
+    accuracy_1 = test_build_artefact_metric_accuracy()
+    conf_matrix_1 = test_build_artefact_metric_confusion_matrix()
+    accuracy_2 = test_build_artefact_metric_accuracy()
+    conf_matrix_2 = test_build_artefact_metric_confusion_matrix()
+
+    task_eval_ds1 = Task(name="ModelEvaluation-DS1")
+    task_eval_ds2 = Task(name="ModelEvaluation-DS2")
+    rel_use_ds1 = Relationship(
+        from_=task_eval_ds1,
+        to_=[test_iris_dataset_1],
+        relationship_type=RelationshipType.USES,
+    )
+    rel_use_ds2 = Relationship(
+        from_=task_eval_ds2,
+        to_=[test_iris_dataset_2],
+        relationship_type=RelationshipType.USES,
+    )
+    rel_prod_metrics1 = Relationship(
+        from_=task_eval_ds1,
+        to_=[accuracy_1, conf_matrix_1],
+        relationship_type=RelationshipType.PRODUCES,
+    )
+    rel_prod_metrics2 = Relationship(
+        from_=task_eval_ds2,
+        to_=[accuracy_2, conf_matrix_2],
+        relationship_type=RelationshipType.PRODUCES,
+    )
+    rel_hub = Relationship(
+        from_=task_eval,
+        to_=[task_eval_ds1, task_eval_ds2],
+        relationship_type=RelationshipType.COMPOSED_OF,
+    )
+    output = YAMLSerializer.to_yaml(rel_hub)
+    print(output)
+
+    serializer = MERMAIDSerializer()
+    mermaid_output = serializer.object_to_mermaid_full(rel_hub )
+    save_in_file("./diagrams", "relation_composed.mmd", mermaid_output)
+
+
+
+
+
+
+
+
+# You can add more tests here to validate specific properties of the manifest, pipeline, tasks, artefacts, and rel

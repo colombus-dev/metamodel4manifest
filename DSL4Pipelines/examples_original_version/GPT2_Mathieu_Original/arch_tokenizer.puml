@@ -1,0 +1,24 @@
+@startuml
+skinparam theme plain
+skinparam componentStyle rectangle
+title Architecture de Tokenisation : GPT2
+
+package "Ressources Externes (YAML)" {
+  [Corpus Source] as cs << https://huggingface.co/datasets/Skylion007/openwebtext >>
+  [Vocabulaire BPE] as vb << https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe >>
+}
+
+package "Moteur d'Exécution" {
+  component [Byte-Pair Encoding] as engine
+  note right: Référence: https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py
+}
+
+database "Sortie" {
+  [Tokens] as out << 50257 entrées >>
+}
+
+cs ..> engine : Analyse
+vb --> engine : Mapping
+engine --> out : Encodage
+
+@enduml

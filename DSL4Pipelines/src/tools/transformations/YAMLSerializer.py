@@ -28,6 +28,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import (
 )
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.tools.toJson import to_json
+from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import Taxonomy, Category
 
 
 class YAMLSerializer:
@@ -49,6 +50,8 @@ class YAMLSerializer:
         "Instruction": Instruction,
         "Relationship": Relationship,
         "ExternalReference": ExternalReference,
+        "Category": Category,
+        "Taxonomy": Taxonomy
     }
 
     @staticmethod
@@ -222,6 +225,16 @@ class YAMLSerializer:
                 data=d,
                 config=config_local,
             ),
+            Taxonomy: lambda d: from_dict(
+                data_class=YAMLSerializer._get_real_class(d, Taxonomy),
+                data=d,
+                config=config_local,
+            ),
+            Category: lambda d: from_dict(
+                data_class=YAMLSerializer._get_real_class(d, Category),
+                data=d,
+                config=config_local,
+            ),
             FileKind: lambda d: FileKind(d) if isinstance(d, str) else d,
         }
         config_local.type_hooks.update(
@@ -303,7 +316,7 @@ class YAMLSerializer:
             # Connect the 'to_' (which is a list)
             if rel.to_:
                 rel.to_ = [
-                    full_map[item.uid] if item.uid in full_map else item
+                    full_map[item.uid] if hasattr(item, 'uid') and item.uid in full_map else item
                     for item in rel.to_
                 ]
 

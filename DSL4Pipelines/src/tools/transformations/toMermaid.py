@@ -19,6 +19,7 @@ class MERMAIDSerializer:
     STYLE_4_ARTEFACT = (
         "fill:#e0fff3,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5"
     )
+    STYLE_4_TAXONOMY = "fill:##ffe0fc,stroke:#ccc,stroke-width:1px,font-size:10pt"
     DIRECTION = "direction RL"
     ARTEFACTS = ["Artefact", "Data", "MLModel"]
     METRICS = [
@@ -33,6 +34,10 @@ class MERMAIDSerializer:
         "Instruction",
     ]  # List of class names that should be styled as processes in the Mermaid diagram
 
+    TAXONOMY = [
+        "Category",
+        "Taxonomy"
+    ]  # List of class names that should be styled as taxonomy elements in the Mermaid diagram
     # --- MÉTHODE D'INITIALISATION ---
     def __init__(self):
         # --- VARIABLE D'INSTANCE ---
@@ -121,9 +126,14 @@ class MERMAIDSerializer:
                         f"style {node_id} fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5"
                     )
                 else:
-                    self.stylelist.append(
-                        f"style {node_id} fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic"
-                    )
+                    if obj.__class__.__name__ in MERMAIDSerializer.TAXONOMY:
+                        self.stylelist.append(
+                            f"style {node_id} {MERMAIDSerializer.STYLE_4_TAXONOMY}"
+                        )
+                    else:
+                        self.stylelist.append(
+                            f"style {node_id} fill:#fafafa,stroke:#ccc,stroke-width:1px,font-size:10pt,font-style:italic"
+                        )
 
     def getMermaidId(self, name, obj, obj_id: int) -> str | None | Any:
         instance_name = name or getattr(obj, "name", None) or f"inst_{obj_id}"

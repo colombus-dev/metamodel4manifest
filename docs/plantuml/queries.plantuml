@@ -1,0 +1,83 @@
+@startuml classes_queries
+set namespaceSeparator none
+
+class "Rule" as Rule {
+    name : str
+    weight : float
+    func : Callable
+}
+Note right of Rule : func should take a ManifestQuery\n and return an iterator on EvaluationResult
+
+note top of Rule
+  **Definition & Registry:** Represents a specific
+  expert validation logic.
+
+  Rules are automatically registered via
+  the '@eval_rule' decorator, decoupling
+  the engine from the domain-specific
+  implementations.
+end note
+
+class "EvaluationEngine" as EvaluationEngine {
+  registered_rules() -> list
+  run_all(manifest) -> list[RuleReport]
+  run_rules(manifest: Manifest, rules) -> list[RuleReport]
+}
+
+
+EvaluationEngine --> "0..*\n registry"  Rule
+
+class "EvaluationResult" as EvaluationResult {
+  evidence : str
+  label : str
+  score : float
+  success : bool
+}
+note bottom of EvaluationResult
+  **Purpose:** Encapsulates the outcome
+  of a specific validation rule.
+
+  Contains both quantitative data (score)
+  and qualitative justification (evidence)
+  for traceability and reporting.
+end note
+
+
+class "ManifestQuery" as ManifestQuery {
+  get_artifacts(type) -> list[Artefact]
+  get_input_artefacts(element: Optional[Task]) -> list[Artefact]
+  {abstract}get_input_data(task)
+  get_input_relations(element: Task) -> list[Relationship]
+  get_metrics(kind, category) -> list[Metric]
+}
+note right of ManifestQuery
+  **Purpose:** Simplifies rule implementation and
+  model traversal.
+
+  Provides high-level "shortcuts" to retrieve
+  deeply nested elements (e.g., relationships
+  or metrics) without exposing the underlying
+  complexity of the Manifest structure.
+end note
+
+ManifestQuery --> "1\n manifest" Manifest
+
+
+class "RuleReport" as RuleReport {
+  avg_score : float
+  'results : List[EvaluationResult]
+  status : str
+}
+RuleReport --> "1\n rule" Rule
+RuleReport --> "0..*\n results" EvaluationResult
+
+note left of RuleReport
+  **Executive Summary:** Aggregates multiple 'EvaluationResult'
+  for a single rule.
+
+  Computes the consolidated 'status' (Color-coded)
+  and the weighted average score based on
+  the associated 'Rule'.
+end note
+
+@enduml

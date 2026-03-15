@@ -1,0 +1,40 @@
+@startuml
+skinparam shadowing false
+skinparam PackageBackgroundColor #F9F9F9
+title Architecture détaillée : gpt2
+left to right direction
+package "dataCollection" {
+  file "openWebText" as openWebText #lightgreen
+  note bottom of openWebText : https://huggingface.co/datasets/Skylion007/openwebtext
+}
+package "tokenization" {
+  component "Byte-BPE Engine" as tokenization_logic {
+    map Params_Tok {
+      impl => https://github.com/openai/tikt...
+    }
+  }
+}
+  file "vocabulary\n(Vocab: 50257)" as vocabulary #lightgreen
+tokenization_logic --> vocabulary
+openWebText --> tokenization_logic
+package "PreTraining & Architecture" {
+  component "GPT Decoder Stack" as preTraining_model {
+    map Model_Specs {
+      Params => 124439808
+      Layers => 12
+      Embed_Dim => 768
+      FFN_Hidden => 3072
+    }
+  }
+  component "Optimizer: adamw" as opt {
+    map Opt_Params {
+      weight_decay => 0.1
+      beta1 => 0.9
+    }
+  }
+}
+  file "model_weights" as model_weights #lightgreen
+preTraining_model --> model_weights
+vocabulary --> preTraining_model
+openWebText --> preTraining_model
+@enduml

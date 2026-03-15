@@ -1,0 +1,108 @@
+$defs:
+  # --- Vos définitions existantes (extraites pour la clarté) ---
+  Licence: { type: string, enum: [GPLv2, GPLv3, MIT, none] }
+
+  SourceCode:
+    type: [object, "null"]
+    properties:
+      name: { type: string }
+      location: { type: string, format: uri }
+      licence: { $ref: "#/$defs/Licence" }
+
+  TrainingCorpus:
+    type: object
+    properties:
+      name: { type: string }
+      location: { type: string, format: uri }
+      licence: { $ref: "#/$defs/Licence" }
+      construction_method: { type: string }
+
+  # --- Nouvelles définitions pour le Pipeline ---
+
+  DataArtifact:
+    type: object
+    required: [id, type]
+    properties:
+      id: { type: string, description: "Identifiant unique de l'artefact (ex: openWebText)" }
+      type: { type: string, enum: [corpus, vocabulary, model-weights] }
+      details:
+        oneOf:
+          - $ref: "#/$defs/TrainingCorpus"
+          - { type: object, properties: { n_tokens: { type: integer } } }
+
+  InputReference:
+    type: object
+    required: [refs]
+    properties:
+      refs: { type: string, description: "ID de l'artefact produit par une étape précédente" }
+
+  # --- Définition des Étapes ---
+
+  DataCollectionStep:
+    type: object
+    required: [type, outputs]
+    properties:
+      type: { const: dataCollection }
+      description: { type: string }
+      outputs:
+        type: array
+        items: { $ref: "#/$defs/DataArtifact" }
+
+  TokenizationStep:
+    type: object
+    required: [type, input_data, tokenizer, outputs]
+    properties:
+      type: { const: tokenization }
+      input_data:
+        type: array
+        items: { $ref: "#/$defs/InputReference" }
+      tokenizer:
+        # Ici on insère votre définition ByteBPETokenizer
+        type: object
+        properties:
+          type: { const: byte-bpe-tokenizer }
+          implementation: { type: string, format: uri }
+          n_vocab: { type: integer }
+      outputs:
+        type: array
+        items: { $ref: "#/$defs/DataArtifact" }
+
+  PreTrainingStep:
+    type: object
+    required: [type, input_data, model_config, outputs]
+    properties:
+      type: { const: preTraining }
+      input_data:
+        type: array
+        items: { $ref: "#/$defs/InputReference" }
+      training_config:
+        type: object
+        properties:
+          optimizer: { $ref: "#/$defs/AdamWOptimizer" } # Utilise votre AdamW
+      model_config:
+        # Ici on insère votre définition GPT2DecoderArchitecture
+        type: object
+        properties:
+          n_parameters: { type: integer }
+          n_transformers: { type: integer }
+          n_embedding_dimensions: { type: integer }
+      outputs:
+        type: array
+        items: { $ref: "#/$defs/DataArtifact" }
+
+# --- Racine du document ---
+type: object
+required: [name, pipeline]
+properties:
+  name: { type: string }
+  description: { type: string }
+  pipeline:
+    type: array
+    items:
+      type: object
+      properties:
+        step:
+          oneOf:
+            - $ref: "#/$defs/DataCollectionStep"
+            - $ref: "#/$defs/TokenizationStep"
+            - $ref: "#/$defs/PreTrainingStep"

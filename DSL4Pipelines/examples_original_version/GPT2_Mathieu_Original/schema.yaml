@@ -1,0 +1,306 @@
+$defs:
+  Licence:
+    type: string
+    enum: [GPLv2, GPLv3, MIT, none]
+
+  SourceCode:
+    description: a source code artefact
+    type: [object, "null"]
+    required: [name, location, licence]
+    additionalProperties: false
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      language:
+        description: main language used in this source code
+        type: string
+        enum: [python, rust, C++]
+      location:
+        type: string
+        format: uri
+      licence:
+        $ref: "#/$defs/Licence"
+
+  TrainingCorpus:
+    description: a training corpus
+    type: object
+    required: [name, location, licence, construction_method]
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      location:
+        type: string
+        format: uri
+      copyright_holder:
+        description: Name of copyright holder
+        type: string
+      licence:
+        $ref: "#/$defs/Licence"
+      construction_method:
+        description: >
+          A human-readable description of how this corpus was created.
+          Manually ? Collected automatically from the web ?
+          crowd-sourced from AMT ?
+
+  LearnedPositionalEmbedding:
+    type: object
+    required: [type, n_positions]
+    properties:
+      type:
+        type: string
+        enum: ['learned']
+      n_positions:
+        description: >
+          Number of positions for which we are going to learn a positional
+          embedding. This is going to be implicitely the maximum length of a
+          sequence that can be fed to the model. This is often named block_size,
+          seqlen, or context_length.
+        type: integer
+
+  ROPEPositionalEmbedding:
+    description: >
+      This is the original ROPE algorithm, as described in the original
+      RoFormer paper: https://arxiv.org/pdf/2104.09864
+    type: object
+    required: [type, n_positions]
+    properties:
+      type:
+        type: string
+        enum: ['rope']
+      theta:
+        type: number
+        description: >
+          The base frequency for ROPE. In the original implementation,
+          this is set to 10000.
+
+
+  PositionalEmbedding:
+    oneOf:
+      - $ref: '#/$defs/ROPEPositionalEmbedding'
+      - $ref: '#/$defs/LearnedPositionalEmbedding'
+
+  MultiHeadAttention:
+    description: >
+      MultiHeadAttention as described in https://arxiv.org/abs/1706.03762
+    type: object
+    properties:
+      type:
+        type: string
+        enum: ['multi-head-attention']
+      n_heads:
+        description: >
+          The number of heads. This parameter is often named `h` in papers.
+        type: integer
+
+  MultiQueryAttention:
+    description: >
+      MultiQueryAttention as described in https://arxiv.org/pdf/1911.02150
+    type: object
+    properties:
+      type:
+        type: string
+        enum: ['multi-query-attention']
+      n_heads:
+        description: >
+          The number of heads. This parameter is often named `h` in papers.
+        type: integer
+
+  GroupedQueryAttention:
+    description: >
+      Grouped Query Attention as described in https://arxiv.org/pdf/2305.13245
+    type: object
+    properties:
+      type:
+        type: string
+        enum: ['grouped-query-attention']
+      n_heads:
+        description: >
+          The number of heads. This parameter is often named `h` in papers.
+        type: integer
+      n_groups:
+        description: >
+          The number of heads. This parameter is often named `g` in papers.
+        type: integer
+
+  Attention:
+    oneOf:
+      - $ref: '#/$defs/MultiHeadAttention'
+      - $ref: '#/$defs/MultiQueryAttention'
+      - $ref: '#/$defs/GroupedQueryAttention'
+
+  FeedForwardNetwork:
+    description: A 2-layer FFN with output that matches input
+    type: object
+    properties:
+      hidden_layer_size:
+        description: Size of the hidden layer
+        type: integer
+      hidden_layer_size_ratio:
+        description: >
+          Size of the hidden layer divided by the size of the input.
+          Traditionally, 4.0
+        type: number
+
+  CosineDecayWithWarmupLearningSchedule:
+    type: object
+    properties:
+      type:
+        type: string
+        enum: ['cosine-decay-with-warmup']
+      warmup_tokens:
+        description: number of tokens when warmup is finished
+        type: integer
+      cosine_min_tokens:
+        description: number of tokens when cosine decay is finished
+        type: integer
+      warmup_min:
+        description: learning rate when warmup starts
+        type: number
+      warmum_max:
+        description: learning rate when warmup ends
+        type: number
+      cosine_min:
+        description: learning rate when cosine decay ends
+        type: number
+
+  LearningSchedule:
+    oneOf:
+      - $ref: "#/$defs/CosineDecayWithWarmupLearningSchedule"
+
+  AdamWOptimizer:
+    description: https://arxiv.org/abs/1711.05101
+    type: object
+    properties:
+      type:
+        type: string
+        enum: ['adamw']
+      learning_schedule:
+        $ref: "#/$defs/LearningSchedule"
+      weight_decay:
+        type: number
+      notes:
+        description: custom stuff that cannot be described easily otherwise.
+        type: string
+      beta1:
+        type: number
+      beta2:
+        type: number
+
+
+  Optimizer:
+    oneOf:
+      - $ref: "#/$defs/AdamWOptimizer"
+
+  ModelTraining:
+    type: object
+    properties:
+      name:
+        type: string
+      code:
+        $ref: "#/$defs/SourceCode"
+      corpus:
+        $ref: "#/$defs/TrainingCorpus"
+      optimizer:
+        $ref: "#/$defs/Optimizer"
+
+
+  GPT2DecoderArchitecture:
+    type: object
+    required: [n_parameters]
+    properties:
+      type:
+        type: string
+        enum: ["decoder"]
+      n_parameters:
+        description: Total number of weights in model.
+        type: integer
+      n_active_parameters:
+        description: >
+          Total number of active weights in model when processing a sequence.
+          Can be lower than n_parameters if MoE is used.
+          If unspecified, assumed to be equal to n_parameters.
+        type: integer
+      n_transformers:
+        description: >
+          The number of stacked transformers. 12 in GPT2.
+        type: integer
+      n_embedding_dimensions:
+        description: Number of token embedding dimensions
+        type: integer
+      positional_embedding:
+        $ref: '#/$defs/PositionalEmbedding'
+      transformer_attention:
+        $ref: '#/$defs/Attention'
+      transformer_ffn:
+        $ref: '#/$defs/FeedForwardNetwork'
+      training:
+        type: array
+        items:
+          $ref: "#/$defs/ModelTraining"
+
+  Architecture:
+    oneOf:
+      - $ref: "#/$defs/GPT2DecoderArchitecture"
+
+  TokenizerTraining:
+    type: [object, "null"]
+    required: [code, corpus]
+    properties:
+      code:
+        $ref: "#/$defs/SourceCode"
+      corpus:
+        $ref: "#/$defs/TrainingCorpus"
+
+  ByteBPETokenizer:
+    type: object
+    required: [type, n_vocab, reference_implementation, vocabulary, pre_tokenization, training]
+    additionalProperties: false
+    properties:
+      type:
+        type: string
+        enum: ["byte-bpe-tokenizer"]
+      n_vocab:
+        type: integer
+        description: Number of tokens in vocabulary
+      reference_implementation:
+        description: url to download a reference implementation
+        type: string
+        format: uri
+      vocabulary:
+        description: url to download the vocabulary.
+        type: string
+        format: uri
+      pre_tokenization:
+        type: string
+        description: >
+          A description of the pre-tokenization strategy.
+          In general, the list of regular expressions to generate pre-tokens
+      training:
+        $ref: '#/$defs/TokenizerTraining'
+
+  Tokenizer:
+    oneOf:
+      - $ref: "#/$defs/ByteBPETokenizer"
+
+  Model:
+    type: object
+    additionalProperties: false
+    required: [name, description, url, tokenizer]
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      url:
+        type: string
+        format: uri
+      architecture:
+        $ref: "#/$defs/Architecture"
+      tokenizer:
+        $ref: "#/$defs/Tokenizer"
+
+$ref: "#/$defs/Model"

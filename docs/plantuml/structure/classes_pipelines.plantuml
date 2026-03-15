@@ -1,0 +1,47 @@
+@startuml classes_pipelines
+set namespaceSeparator none
+class "UML.ActivityNode" as ActivityNode #lightgrey {
+}
+class "UML.Activity" as Activity #lightgrey {
+}
+
+
+class "Command" as Command #BBF451{
+  shell : Optional[str]
+  working_directory : Optional[str]
+}
+Command --|> ActivityNode
+Command --|> Core.Element
+
+class "Instruction" as Instruction #BBF451{
+  code : Optional[str]
+  type : str
+}
+Instruction --|> Command
+
+class "Pipeline" as Pipeline #56C895 {
+'  tasks : List[Task]
+'  type : str
+  find_task() -> List[Task]
+}
+Pipeline --|> Activity
+Pipeline --|> Core.Element
+"Pipeline" *--> "0..*\n tasks" Task
+
+class "Step" as Step #BBF451{
+'  commands : List[Command]
+'  type : str
+}
+Step --|> ActivityNode
+Step *--> "0..*\n commands" Command
+
+class "Task" as Task #BBF451{
+'  steps : List[Step]
+'  type : str
+  find_steps() -> List[Step]
+}
+Task --|> ActivityNode
+Task --|> Core.Element
+Task *--> "0..*\n steps" Step
+
+@enduml

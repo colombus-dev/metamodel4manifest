@@ -12,18 +12,18 @@ from DSL4Pipelines.src.metamodel.core.structure import Element
 
 
 @dataclass
-class ActityNode(Element):
+class ActityNode:
     """ActivityNode represents a node in the activity graph,
     which can be a Task, Step, or Command."""
 
 
 @dataclass
-class Activity(Element):
+class Activity:
     """Activity represents a collection of ActivityNodes"""
 
 
 @dataclass
-class Command(ActityNode):
+class Command(ActityNode,Element):
     """Command represents a command to be executed, including the command string,
     optional shell and working directory, associated properties, and an optional external reference.
     It's directly inspired by the Command class of CycloneDX.
@@ -49,7 +49,7 @@ class Instruction(Command):
 
 
 @dataclass
-class Task(ActityNode):
+class Task(ActityNode,Element):
     """Task represents a task within a workflow,
     which can contain ordered multiple steps."""
 
@@ -85,7 +85,7 @@ class Task(ActityNode):
 ## Je ne courcircuite pas le Modele de CycloneDX qui introduit un niveau en plus de nous...
 ## je choisis pour l'instant de rester dessus j'aurais un lien un à un entre STep et Task
 @dataclass
-class Step(ActityNode):
+class Step(ActityNode, Element):
     """Step represents a step in a task,
     which can contain multiple commands to be executed sequentially.
     Each step has a name and a list of commands associated with it."""
@@ -98,7 +98,7 @@ class Step(ActityNode):
 # As we only work on pipelines, we can consider that a workflow corresponds to a pipeline, and a task corresponds to a step in the pipeline.
 # Should be translated as a workflow ...
 @dataclass
-class Pipeline(Activity):
+class Pipeline(Activity,Element):
     """Pipeline represents a pipeline, which can contain multiple tasks.
     Each pipeline has a name and a list of tasks associated with it."""
 

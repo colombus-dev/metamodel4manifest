@@ -57,6 +57,7 @@ class Element:
         None  # Optionel for now, we will link it later with the actual CreationInfo object
     )
     # On accepte soit une liste de Property, soit un dictionnaire
+    #YamlValue est un type qui peut être une valeur simple (str, int, float, bool), une liste ou un dictionnaire, ou None.
     properties: Dict[str, YamlValue] = field(default_factory=dict)
 
     # @todo : forbid properties to have keys that are the same as actual attributes (uid, type, name, description, creation_info) to avoid confusion and conflicts in get_value method.
@@ -75,7 +76,7 @@ class Element:
             errors = []
         return True  # Placeholder for validation logic, to be implemented as needed
 
-    def get_value(self, name: str, default=None):
+    def get_value(self, name: str, default=None) :
         """Get the value of an attribute or property by name.
         This method first checks if the name corresponds to an actual attribute of the object (or a Python property),
         and if not found, it looks in the 'properties' field, which can be either a dictionary or a list of Property objects.

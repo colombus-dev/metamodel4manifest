@@ -16,27 +16,42 @@ hasDataFile,"Un script de prédiction utilise un fichier de poids (.bin, .pt)."
 
 # Some relationship types are not included in the SPDX standard but can be useful for our use case, so we can add them as needed.
 class RelationshipType(str, Enum):
-    CONTAINS = "contains"
-    TRAINED_ON = "trainedOn"
-    TESTED_ON = "testedOn"
-    HAS_DECLARED_LICENSE = "hasDeclaredLicense"
-    HAS_DATA_FILE = "hasDataFile"
-    HAS_DOCUMENTATION = "hasDocumentation"
-    DEPENDS_ON = "dependsOn"
-    EVALUATES = "evaluates"
-    EVALUATED_BY = "evaluated_by"
-    GENERATED_FROM = "generatedFrom"
-    GENERATED_BY = "generatedBy"
-    GENERATES = "generates"
-    USED_BY = "usedBy"
+    PRODUCES = "produces"  # to link a script to the artefact it produces (e.g., train.py produces model.bin, ...)
+   # EVALUATES = "evaluates" # to link a script to the artefacts and the metrics it evaluates e.g., from_ : a code  to_: a dataset, a model and a metric
+    ANNOTATED_BY = "annotatedBy" #to link a task or step to a category and taxonomy
+    USES = "uses" # to link a script to the artefacts it uses (e.g., predict.py uses model.bin, ...)
+    COMPOSED_OF = "composedOf" # to link an Element to its components (e.g., a pipeline composedOf steps, a step composedOf scripts and artefacts, ...)
+
+ #   CONTAINS = "contains"
+ #   TRAINED_ON = "trainedOn" #
+ #   TESTED_ON = "testedOn"
+ #   HAS_DECLARED_LICENSE = "hasDeclaredLicense"
+#    HAS_DATA_FILE = "hasDataFile"
+#    HAS_DOCUMENTATION = "hasDocumentation"
+   # DEPENDS_ON = "dependsOn"
+    # Pour l'évaluation de performance pure
+#    PERFORMANCE_EVALUATION = "evaluates_performance"
+    # Pour l'évaluation éthique/biais
+#    BIAS_ASSESSMENT = "assesses_bias"
+
+    # Pour la validation de pipeline
+#    INTEGRITY_CHECK = "checks_integrity"
+    #EVALUATED_BY = "evaluated_by" #
+    #GENERATED_FROM = "generatedFrom"
+#    GENERATED_BY = "generatedBy"
+#    GENERATES = "generates"
+#    USED_BY = "usedBy" # to link an artefact to the script that uses it (e.g., model.bin usedBy predict.py)
+
     # Mi
-    SOURCE = "fromSource"
+    #SOURCE = "hasForSource" # to link
     NEXT = "next"  # MI added for pipeline steps
     #    HAS_PREREQUISITE = auto()
     #    METAFILE_OF = auto()
     #    OPTIONAL_COMPONENT_OF = auto()
     #    OPTIONAL_DEPENDENCY_OF = auto()
     OTHER = "other"
+
+
 
 
 #    PACKAGE_OF = auto()

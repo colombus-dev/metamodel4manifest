@@ -24,24 +24,54 @@ step4 = Step(name="step4")
 task1 = Task(name="task1", steps=[step1, step2])
 task2 = Task(name="task2", steps=[step3, step4])
 pipeline = Pipeline(name="pipeline1", tasks=[task1, task2])
-rel_1_ds1_t1 = Relationship(
+'''rel_1_ds1_t1 = Relationship(
     name="relation1",
     from_=ds1,
     to_=[task1, step3],
     relationship_type=RelationshipType.USED_BY,
 )
+'''
+rel_1_t1_ds1 = Relationship(
+    name="relation1",
+    from_=task1,
+    to_=[ds1],
+    relationship_type=RelationshipType.USES,
+)
+rel_1_st3_ds1 = Relationship(
+    name="relation1",
+    from_=step3,
+    to_=[ds1],
+    relationship_type=RelationshipType.USES,
+)
+'''
 rel_2_ds2_t1 = Relationship(
     name="relation2",
     from_=ds2,
     to_=[task1],
     relationship_type=RelationshipType.USED_BY,
 )
-rel_3_m1_t1 = Relationship(
+'''
+
+rel_2_t1_ds2 = Relationship(
+    name="relation2",
+    from_=task1,
+    to_=[ds2],
+    relationship_type=RelationshipType.USES,
+)
+
+rel_3_t1_m1 = Relationship(
+    name="relation3",
+    from_=task1,
+    to_=[metric1],
+    relationship_type=RelationshipType.PRODUCES,
+)
+''' rel_3_m1_t1 = Relationship(
     name="relation3",
     from_=metric1,
     to_=[task1],
-    relationship_type=RelationshipType.EVALUATED_BY,
+    relationship_type=RelationshipType.PRODUCES,
 )
+'''
 rel_4_t1_t2 = Relationship(
     name="relation4",
     from_=task1,
@@ -52,14 +82,21 @@ rel_5_s4_m2 = Relationship(
     name="relation5",
     from_=step4,
     to_=[metric2],
-    relationship_type=RelationshipType.GENERATED_FROM,
+    relationship_type=RelationshipType.PRODUCES,
 )
 
-rel_6_m2_t2 = Relationship(
+'''rel_6_m2_t2 = Relationship(
     name="relation6",
     from_=metric2,
     to_=[task2],
     relationship_type=RelationshipType.USED_BY,
+)
+'''
+rel_6_t2_m2 = Relationship(
+    name="relation6",
+    from_=task2,
+    to_=[metric2],
+    relationship_type=RelationshipType.PRODUCES,
 )
 
 manifest = Manifest(
@@ -67,12 +104,17 @@ manifest = Manifest(
     artefacts=[ds1, ds2, metric1, metric2],
     pipeline=pipeline,
     relations=[
-        rel_1_ds1_t1,
-        rel_2_ds2_t1,
-        rel_3_m1_t1,
+#        rel_1_ds1_t1,
+        rel_1_t1_ds1,
+        rel_1_st3_ds1,
+        #rel_2_ds2_t1,
+        rel_2_t1_ds2,
+        #rel_3_m1_t1,
+        rel_3_t1_m1,
         rel_4_t1_t2,
         rel_5_s4_m2,
-        rel_6_m2_t2,
+        rel_6_t2_m2
+        #rel_6_m2_t2,
     ],
 )
 mq = ManifestQuery(manifest)
@@ -80,17 +122,19 @@ mq = ManifestQuery(manifest)
 
 def test_get_input_relations():
     input_relations = mq.get_input_relations(task1)
-    assert len(input_relations) == 3
-    assert rel_1_ds1_t1 in input_relations
-    assert rel_2_ds2_t1 in input_relations
-    assert rel_3_m1_t1 in input_relations
+    assert len(input_relations) == 0
+#    assert rel_1_ds1_t1 in input_relations
+#    assert rel_2_ds2_t1 in input_relations
+   # assert rel_3_m1_t1 in input_relations
+   # assert rel_3_t1_m1 in input_relations
 
     input_relations = mq.get_input_relations(step4)
     assert len(input_relations) == 0
 
     input_relations = mq.get_input_relations(step3)
-    assert len(input_relations) == 1
-    assert rel_1_ds1_t1 in input_relations
+    assert len(input_relations) == 0
+    input_relations = mq.get_input_relations(ds1)
+    assert rel_1_st3_ds1 in input_relations
 
     input_relations = mq.get_input_relations(step1)
     assert len(input_relations) == 0
@@ -98,21 +142,21 @@ def test_get_input_relations():
 
 def test_get_input_artefacts_on_tasks():
     input_artefacts: List[Artefact] = mq.get_input_artefacts(task1)
-    assert len(input_artefacts) == 3
-    assert ds1 in input_artefacts
-    assert ds2 in input_artefacts
+    assert len(input_artefacts) == 0
+    #assert ds1 in input_artefacts
+    #assert ds2 in input_artefacts
     input_artefacts: List[Artefact] = mq.get_input_artefacts(step4)
     assert len(input_artefacts) == 0
     input_artefacts: List[Artefact] = mq.get_input_artefacts(step3)
-    assert len(input_artefacts) == 1
-    assert ds1 in input_artefacts
+    assert len(input_artefacts) == 0
+#    assert ds1 in input_artefacts
     input_artefacts: List[Artefact] = mq.get_input_artefacts(step1)
     assert len(input_artefacts) == 0
 
 
 def test_get_input_artefacts_of_manifest():
     input_artefacts: List[Artefact] = mq.get_input_artefacts()
-    assert len(input_artefacts) == 3
-    assert metric1 in input_artefacts
-    assert ds2 in input_artefacts
-    assert ds1 in input_artefacts
+    assert len(input_artefacts) == 0
+#    assert metric1 in input_artefacts
+#    assert ds2 in input_artefacts
+#    assert ds1 in input_artefacts

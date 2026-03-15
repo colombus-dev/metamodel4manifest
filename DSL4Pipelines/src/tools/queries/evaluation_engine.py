@@ -42,7 +42,7 @@ class EvaluationEngine:
             )
 
             ruleReport = RuleReport(
-                ruleMetadata=rulemetadata,
+                rule=rulemetadata,
                 results=results,
                 avg_score=avg_score,
                 status=status,

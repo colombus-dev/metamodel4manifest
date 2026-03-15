@@ -350,7 +350,7 @@ relations:
   from_: Classification on IRIS
   to_:
   - 9b1c826a-072e-48f0-be2f-d385d96943c1
-  relationship_type: fromSource
+  relationship_type: uses
 - uid: 6356b8c7-f67c-485a-993a-9e63aef044d5
   type: Relationship
   properties: {}
@@ -364,21 +364,21 @@ relations:
   from_: Visualization
   to_:
   - 428673d0-e751-496e-961c-bb711cd3b66f
-  relationship_type: generates
+  relationship_type: produces
 - uid: 7ad26544-37ee-41d4-af1f-1c82a23cc591
   type: Relationship
   properties: {}
   from_: 542eb684-16ea-478f-b664-ee55964703e8
   to_:
   - 6433d235-4c9a-46f9-860d-eb8f5aaf2b2a
-  relationship_type: generates
+  relationship_type: produces
 - uid: 2bc1bcbb-dd01-40a1-ab4a-092edf0e11db
   type: Relationship
   properties: {}
   from_: 29d58bfe-1bf9-480a-8386-59594ded0b9f
   to_:
   - aa40443a-cdba-494e-9a2e-ba02f01604d0
-  relationship_type: generates
+  relationship_type: produces
 - uid: 6d0a3449-bb3b-4e0a-9c8c-63feff037215
   type: Relationship
   properties: {}

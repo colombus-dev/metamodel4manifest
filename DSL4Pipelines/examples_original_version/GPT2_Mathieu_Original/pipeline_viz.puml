@@ -1,0 +1,22 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam shadowing false
+hide empty description
+title Pipeline: gpt2
+left to right direction
+
+state "Datacollection" as dataCollection #lightblue
+' artifact "openWebText\n(corpus)" as openWebText #lightgreen
+dataCollection --> openWebText
+state "Tokenization" as tokenization #lightblue
+'artifact "vocabulary\n(vocabulary)" as vocabulary #lightgreen
+tokenization --> vocabulary
+state "Pretraining" as preTraining #lightblue
+' artifact "model_weights\n(model weights)" as model_weights #lightgreen
+preTraining --> model_weights
+
+' --- Connexions de données ---
+openWebText --> tokenization
+vocabulary --> preTraining
+openWebText --> preTraining
+@enduml

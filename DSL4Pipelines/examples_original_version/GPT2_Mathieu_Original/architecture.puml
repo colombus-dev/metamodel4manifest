@@ -1,0 +1,16 @@
+@startuml
+skinparam componentStyle rectangle
+title Architecture gpt2
+package "Tokenizer" {
+  [byte-bpe-tokenizer] as T1
+  note right of T1 : Vocab: 50257
+}
+package "Transformer Stack" {
+  node "12 Layers" {
+    [Attention: 12 Heads] as Attn
+    [FFN: 3072] as FFN
+    Attn -> FFN
+  }
+}
+T1 --> Attn : Embed Dim 768
+@enduml

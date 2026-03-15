@@ -10,7 +10,7 @@ and that the relationship type is valid according to the defined vocabulary.
 """
 
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Any
 
 from DSL4Pipelines.src.metamodel.core.structure import Element
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType
@@ -27,8 +27,8 @@ class Relationship(Element):
 
     # On donne une valeur par défaut (None ou chaîne vide)
     from_: Element = field(default="", metadata={"json_name": "from"})
-    to_: List[Element] = field(default_factory=list)
-    relationship_type: RelationshipType = RelationshipType.CONTAINS
+    to_: List[Element|str] = field(default_factory=list)
+    relationship_type: RelationshipType = RelationshipType.USES
     type: str = "Relationship"
 
     def __post_init__(self):

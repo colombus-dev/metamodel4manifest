@@ -1,0 +1,74 @@
+name: gpt2
+description: GPT2 Small
+url: https://huggingface.co/openai-community/gpt2
+pipeline:
+- step:
+      type: dataCollection
+      description: Collecting and preprocessing data for building vocabulary.
+      outputs:
+      - id: openWebText
+        type: corpus
+        access: Non public training corpus
+        replication:
+            licence: none
+            description: >
+                a reconstructed "open" version of the GPT2 training corpus
+                based on the data published in the GPT2 technical report
+            location: https://huggingface.co/datasets/Skylion007/openwebtext
+            copyright_holder: >
+              Specifically, the authors who built this
+              dataset did so while explicitely acknowledging they did not
+              own copyright on the content they extracted this data from.
+            construction_method:
+                This corpus was constructed from the code located on
+                https://github.com/jcpeterson/openwebtext
+
+- step:
+      type: tokenization
+      description: Creating tokens from the input data.
+      input_data:
+        - refs: openWebText
+      tokenizer:
+        type: byte-bpe-tokenizer
+        implementation: https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py
+        pre_tokenization: >
+          (?:[sdmt]|ll|ve|re)| ?\p{L}++| ?\p{N}++| ?[^\s\p{L}\p{N}]++|\s++$|\s+(?!\S)|\s
+        training: null
+      outputs:
+        - id: vocabulary
+          type: vocabulary
+          n_tokens: 50257
+          reference: https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe
+
+- step:
+      type: preTraining
+      description: Training the GPT2 model using collected data.
+      input_data:
+        - refs: vocabulary
+        - refs: openWebText
+      training_config:
+            optimizer:
+              type: adamw
+              weight_decay: 0.1
+              beta1: 0.9
+              beta2: 0.95
+              notes: "Weight decay is not applied to bias and layer norm layers"
+      model_config:
+        type: decoder
+        n_parameters: 124439808
+        n_active_parameters: 124439808
+        n_embedding_dimensions: 768
+        n_transformers: 12
+        positional_embedding:
+          type: learned
+          n_positions: 1024
+        transformer_attention:
+          type: multi-head-attention
+          n_heads: 12
+        transformer_ffn:
+          hidden_layer_size: 3072
+          hidden_layer_size_ratio: 4.0
+        implementation: null
+      outputs:
+        - id: model_weights
+          type: model weights

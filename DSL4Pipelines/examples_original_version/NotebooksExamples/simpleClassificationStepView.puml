@@ -1,0 +1,99 @@
+@startuml
+start
+group LibraryLoading 
+:import numpy as np;
+:import matplotlib.pyplot as plt;
+:import seaborn as sns;
+:from sklearn.model_selection import train_test_split;
+:from sklearn.tree import DecisionTreeClassifier;
+:from sklearn.metrics import accuracy_score, classification_report, confusion_matrix;
+:from sklearn.datasets import load_iris;
+end group
+group DataLoading 
+:iris = load_iris();
+note #LightPink
+ in
+====
+Artifacts: 
+	FatesMLProfile.impl.DataSetImpl@123f1134
+end note
+:df = pd.DataFrame(data=np.c_[iris['data'], iris['target']],;
+:print(df.head());
+:sns.pairplot(df, hue='species');
+note #LightGreen
+ visualization
+====
+Artifacts: 
+	Visualisation: Stream to stdout, Content Preview:    sepal length (cm)  sepal width (cm)  
+end note
+:plt.show();
+:plt.figure(figsize=(8, 6));
+:sns.histplot(data=df, x='petal_length', hue='species', multiple='stack');
+:plt.title('Distribution de la longueur des pétales');
+:plt.show();
+end group
+group DataPreprocessing 
+:X = df.drop('species', axis=1);
+note #LightGreen
+ visualization
+====
+Artifacts: 
+	Visualisation: Stream to stdout, Content Preview:    sepal length (cm)  sepal width (cm)  
+end note
+end group
+group ModelTraining 
+:model = DecisionTreeClassifier(random_state=42);
+note #LightCoral
+ modelType
+====
+Artifacts: 
+	Model Objective: Classification, Family: Decision Tree
+end note
+note #LightGreen
+ visualization
+====
+Artifacts: 
+	Visualisation: Image  , Content Preview: iVBORw0KGgoAAAANSUhEUgAABCsAAAPaCAYAAAC+
+end note
+note #LightGreen
+ visualization
+====
+Artifacts: 
+	Visualisation: Image  , Content Preview: iVBORw0KGgoAAAANSUhEUgAAAq4AAAIkCAYAAADf
+end note
+
+end group
+group ModelEvaluation 
+:predictions = model.predict(X_test);
+note #LightGreen
+ visualization
+====
+Artifacts: 
+	Visualisation: Result from excution , Content Preview: DecisionTreeClassifier(random_state=42)
+end note
+:accuracy = accuracy_score(y_test, predictions);
+note #LightGray
+ metrics
+====
+Artifacts: 
+	Metric: accuracy
+end note
+:print(f'Accuracy du modèle : {accuracy:.2f}');
+:print('\nRapport de classification :');
+:print(classification_report(y_test, predictions));
+:cm = confusion_matrix(y_test, predictions);
+note #LightGray
+ metrics
+====
+Artifacts: 
+	Metric: confusion_matrix
+end note
+:plt.figure(figsize=(8, 6));
+:plt.xlabel('Prédiction');
+:plt.ylabel('Valeur réelle');
+:plt.title('Matrice de Confusion');
+:plt.show();
+end group
+
+stop
+@enduml

@@ -1,0 +1,96 @@
+@startuml
+left to right direction
+
+skinparam note {
+    BackgroundColor #FEFECE
+    BorderColor #A80036
+}
+
+'-------------- Actors -------------
+"Data Scientist" as DS #lightyellow
+"ML Provider" as MLProvider
+note right of MLProvider : Publishes the consolidated \nresults of Data Scientist and ML engineer work.
+"ML Engineer" as Dev #lightgreen
+"Domain Expert" as DomainExpert #lightgreen
+
+DS <|-- MLProvider
+Dev <|-- MLProvider
+
+
+' ------------- Use Cases -------------
+'Préciser les requirements FATEs du ML
+rectangle "FATEs Justification System" as FS {
+    Collect as (Collect FATEs requirements) #lightgreen
+    GenJustModel as (Generate a Justification Model) #lightgreen
+    Verify as (Check FATEs properties) #lightgreen
+    GenJust as (Generate Justification) #lightgreen
+
+    CollectEvidence as (Collect evidence) #lightgreen
+    InstrumentCI as (Instrument the CI/CD pipeline to justify) #lightgreen
+}
+'note top of FS : Defines the framework for verifying FATES properties
+rectangle "PROFIL system" as PS{
+    CheckQuality as (Check Quality) #lightyellow
+    Register as (Register a ML description) #lightyellow
+    Extract as (Extract/filter ML descriptions) #lightyellow
+    Manage as (Manage ML descriptions) #lightyellow
+    Explore as (Explore the ML landscape) #lightyellow
+    Instrument as (Define new rules to check) #lightyellow
+    'GenDoc as (Generate Documentation)
+}
+note bottom of PS : Engine for \nlinting and static analysis
+
+
+
+
+
+
+'-------------- Relations -------------
+'domaine expert
+:DomainExpert: --> Collect
+:DomainExpert: --> GenJustModel
+GenJustModel <.. Collect :extends
+:DomainExpert: --> (Audit Justification)
+
+'ML developer
+:Dev: --> CollectEvidence
+:Dev: --> InstrumentCI
+':Dev: --> Verify
+InstrumentCI --> Verify:includes
+InstrumentCI --> GenJust:includes
+CheckQuality  <.. Verify:extends
+'note on link : FATEs verification specializes \ngeneric quality checks
+':Dev: --> GenJust
+
+'ML provider
+:MLProvider: --> Manage
+':MLProvider: --> GenDoc
+
+
+Manage<..Extract   :extends
+Manage<..Register   :extends
+
+ Manage <.. GenJust :extends
+
+'Verify <.. GenJust :extends
+
+'-------------- Data Scientist -------------
+DS --> Explore
+DS --> Instrument
+DS --> CheckQuality
+
+
+
+
+@enduml
+Dev --> (Filter LLMs by business criteria)
+DS --> (Filter LLMs Based on Model Construction Criteria )
+DS --> (Compare LLMs according to Construction Criteria)
+DS --> (Check some properties of LLMs)
+DS --> (Explore LLM Documentation)
+(Compare LLMs according to Construction Criteria) <.. (Visualize the LLM Construction Workflow):extends
+Admin --> (Enrich the LLM Metadata Schema )
+Admin --> (Configure Verification-Based LLM Criteria)
+DS --> (Compare LLM Construction Workflows)
+(Compare LLM Construction Workflows) <.. (Visualize the LLM Construction Workflow):extends
+

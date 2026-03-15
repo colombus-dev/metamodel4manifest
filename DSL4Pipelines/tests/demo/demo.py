@@ -58,9 +58,12 @@ def step2(manifest: Manifest):
     report: list[RuleReport] = engine.run_rules(manifest, rules)
     print("==> Generate report and save it to a file")
     print(report)
+    strToSav = ""
     for r in report:
         print(r)
-    save_in_file(OUTPUT, "report_step2.txt", str(report))
+        strToSav += str(r) + "\n"
+
+    save_in_file(OUTPUT, "report_step2.txt", strToSav)
 
 
 def step2Bis(manifest: Manifest):
@@ -74,9 +77,12 @@ def step2Bis(manifest: Manifest):
     report: list[RuleReport] = engine.run_rules(manifest, rules)
     print("==> Generate report and save it to a file")
     print(report)
+    strToSav = ""
     for r in report:
         print(r)
-    save_in_file(OUTPUT, "report_step2Bis.txt", str(report))
+        strToSav += str(r) + "\n"
+
+    save_in_file(OUTPUT, "report_step2Bis.txt", strToSav)
 
 
 def step3_4():
@@ -111,8 +117,13 @@ def step5():
     report: list[RuleReport] = engine.run_all(manifest)
     print("==> Generate report")
     print(report)
+    print("==> ----- Report details -----")
+    strToSav = ""
     for r in report:
         print(r)
+        strToSav += str(r) + "\n"
+
+    save_in_file(OUTPUT, "report_step5.txt", strToSav)
 
 
 def step5Bis():
@@ -127,8 +138,12 @@ def step5Bis():
     report: list[RuleReport] = engine.run_all(manifest)
     print("==> Generate report")
     print(report)
+    strToSav = ""
     for r in report:
         print(r)
+        strToSav += str(r) + "\n"
+
+    save_in_file(OUTPUT, "report_step5Bis.txt", strToSav)
 
 
 def step6():
