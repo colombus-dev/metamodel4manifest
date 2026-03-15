@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from DSL4Pipelines.src.metamodel.artefacts.artefacts import Artefact, SoftwareFile
 from DSL4Pipelines.src.metamodel.artefacts.metrics import Metric
 from DSL4Pipelines.src.metamodel.catalogs.MetricCatalog import MetricCatalog
@@ -380,8 +382,13 @@ def test_load_yaml_on_Manifest():
 
 # -------------------- test from_yaml_file --------------------
 def test_from_yaml_file_on_Manifest():
+    current_dir = Path(__file__).parent
+    print (f"Current directory: {current_dir}")
+    test_root = current_dir.parent.parent
+    yaml_path = test_root /"examples/sources/nanoGPT_manifest.yaml"
+    print (f"YAML file path: {yaml_path}")
     manifest = YAMLSerializer.from_yaml_file(
-        "/Users/mireillefornarino/GIT/RECHERCHES/DescribeLLM/untitled/DSL4Pipelines/tests/examples/sources/nanoGPT_manifest.yaml",
+        yaml_path,
         Manifest,
     )
     assert manifest is not None
