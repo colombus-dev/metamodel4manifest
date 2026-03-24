@@ -1,32 +1,37 @@
+from pathlib import Path
+
 from DSL4Pipelines.src.tools.from_aibom.aibom_translator import AIBOMTranslator
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.tools.toFile import save_in_file
 from DSL4Pipelines.src.tools.transformations.yamlSerializer import YAMLSerializer
 
-OUTPUT = "/Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/examples/outputs/aibom/"
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
+OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/examples/outputs/aibom/')
 
 def test_build_sofwareFile():
-    nom_fichier = '../../aiboms/0xJustin_Dungeons-and-Diffusion.json'
-    translator = AIBOMTranslator(nom_fichier)
+    print(f"\nBase directory: {BASE_DIR}")
+    nom_fichier = BASE_DIR/'aiboms/0xJustin_Dungeons-and-Diffusion.json'
+
+    translator = AIBOMTranslator(str(nom_fichier))
     file = translator.build_sofware_file_for_aibom()
     print(f"Fichier AIBOM transformé en artefact : {file}")
 
 def test_build_model():
-    nom_fichier = '../../aiboms/0xJustin_Dungeons-and-Diffusion.json'
-    translator = AIBOMTranslator(nom_fichier)
+    nom_fichier = BASE_DIR/'aiboms/0xJustin_Dungeons-and-Diffusion.json'
+    translator = AIBOMTranslator(str(nom_fichier))
     model = translator.build_model()
     print(f"Model Card  transformed into MLModel artifact : {model}")
 
 def test_transform_aibom_to_manifest():
-    nom_fichier = '../../aiboms/0xJustin_Dungeons-and-Diffusion.json'
-    check_transform_aibom(nom_fichier)
-    nom_fichier = '../../aiboms/1bitLLM_bitnet_b1_58-3B.json'
-    check_transform_aibom(nom_fichier)
-    nom_fichier= '../../aiboms/agentica-org_DeepScaleR-1.5B-Preview.json'
-    check_transform_aibom(nom_fichier)
-    nom_fichier= '../../aiboms/albert_albert-base-v2.json'
-    check_transform_aibom(nom_fichier)
+    nom_fichier = BASE_DIR/'aiboms/0xJustin_Dungeons-and-Diffusion.json'
+    translator = AIBOMTranslator(str(nom_fichier))
+    nom_fichier = BASE_DIR/'aiboms/1bitLLM_bitnet_b1_58-3B.json'
+    check_transform_aibom(str(nom_fichier))
+    nom_fichier= BASE_DIR/'aiboms/agentica-org_DeepScaleR-1.5B-Preview.json'
+    check_transform_aibom(str(nom_fichier))
+    nom_fichier= BASE_DIR/'aiboms/albert_albert-base-v2.json'
+    check_transform_aibom(str(nom_fichier))
 
 
 def check_transform_aibom(nom_fichier: str) -> Manifest:
@@ -41,8 +46,8 @@ def check_transform_aibom(nom_fichier: str) -> Manifest:
 
 
 def test_transform_complexe_aibom():
-    nom_fichier= '../../aiboms/agentica-org_DeepScaleR-1.5B-Preview.json'
-    manifest = check_transform_aibom(nom_fichier)
+    nom_fichier= BASE_DIR/'aiboms/agentica-org_DeepScaleR-1.5B-Preview.json'
+    manifest = check_transform_aibom(str(nom_fichier))
     artefacts = manifest.artefacts
     assert len(artefacts) == 8, f"Expected 8 artefacts, but got {len(artefacts)}"
     datasets = [a for a in artefacts if a.type == "Data"]
@@ -99,6 +104,7 @@ def test_transform_complexe_aibom():
 
 
 
+#@todo : add more tests on the content of the artefacts, and on the properties of the relations
 def test_transform_aibom_with_metrics():
     file_path= '../../aiboms/BAAI_bge-multilingual-gemma2.json'
 

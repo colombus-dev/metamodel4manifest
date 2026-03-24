@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from DSL4Pipelines.src.tools.from_aibom.aibom_translator import AIBOMTranslator
 from DSL4Pipelines.src.tools.queries.manifest_query import ManifestQuery
 from DSL4Pipelines.src.tools.queries.rules.rules import check_dataset_and_model_presence
@@ -10,8 +12,9 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-
-PATH_AIBOMS = '../../aiboms'
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
+OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/examples/outputs/aibom/')
+PATH_AIBOMS = str(BASE_DIR /'aiboms')
 
 def test_build_AIBOMManager():
     print_cwd()
