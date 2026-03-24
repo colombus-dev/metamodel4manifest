@@ -1,5 +1,3 @@
-from sitecustomize import library_site
-
 from DSL4Pipelines.src.tools.from_aibom.aibom_translator import AIBOMTranslator
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.tools.toFile import save_in_file

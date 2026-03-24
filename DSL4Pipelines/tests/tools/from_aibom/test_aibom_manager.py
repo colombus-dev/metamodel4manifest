@@ -1,6 +1,3 @@
-from pathlib import Path
-
-from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.tools.from_aibom.aibom_translator import AIBOMTranslator
 from DSL4Pipelines.src.tools.queries.manifest_query import ManifestQuery
 from DSL4Pipelines.src.tools.queries.rules.rules import check_dataset_and_model_presence
