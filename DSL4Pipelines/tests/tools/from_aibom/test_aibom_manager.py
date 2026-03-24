@@ -14,7 +14,7 @@ logger.setLevel(logging.INFO)
 PATH_AIBOMS = '../../aiboms'
 
 def test_build_AIBOMManager():
-    #print_cwd()
+    print_cwd()
     path = PATH_AIBOMS
     manager = AIBOMManager(path)
     assert len(manager.aibom_files) == 312, f"Expected 4 AIBOM files, but got {len(manager.aibom_files)}"
@@ -22,7 +22,7 @@ def test_build_AIBOMManager():
     print("✅ AIBOM Manager built successfully with the expected number of AIBOM files and manifests.")
 
 def test_save_AIBOMManager():
-    #print_cwd()
+    print_cwd()
     path = PATH_AIBOMS
     manager = AIBOMManager(path)
     output_path = 'aibom_manifests_yaml/'
