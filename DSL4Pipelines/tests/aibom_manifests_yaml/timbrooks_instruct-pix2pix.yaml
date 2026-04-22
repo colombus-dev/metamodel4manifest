@@ -1,0 +1,74 @@
+uid: 9725aaa1-89ce-47b2-93b4-bd59d36992a3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/timbrooks_instruct-pix2pix.json
+  type: SoftwareFile
+  name: timbrooks_instruct-pix2pix.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:36dea6a6-03f1-49ed-a88d-c0287e75168e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/timbrooks_instruct-pix2pix.json
+    type: ExternalReference
+  languages: []
+- uid: 6fa1bd28-d663-467a-845d-9610a8a55844
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 72ee4b41-865b-4e96-843c-383285e77924
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:50.269486+00:00'
+    bom-ref: timbrooks/instruct-pix2pix-292b980f-d73c-5cf1-b3e0-54884c7b069b
+    name: timbrooks/instruct-pix2pix
+    authors:
+    - name: timbrooks
+    tags:
+    - diffusers
+    - safetensors
+    - image-to-image
+    - license:mit
+    - diffusers:StableDiffusionInstructPix2PixPipeline
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/timbrooks/instruct-pix2pix
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-image
+relations:
+- uid: 111ffda1-cf41-4dea-a52b-f6b55a127f12
+  type: Relationship
+  properties: {}
+  from_: 9725aaa1-89ce-47b2-93b4-bd59d36992a3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/timbrooks_instruct-pix2pix.json
+  relationship_type: annotatedBy
+- uid: 01d514a5-9d35-4ea9-a904-a66bcebd4727
+  type: Relationship
+  properties: {}
+  from_: 72ee4b41-865b-4e96-843c-383285e77924
+  to_:
+  - 6fa1bd28-d663-467a-845d-9610a8a55844
+  relationship_type: uses
+- uid: a8e6377e-3686-44cb-b5f7-3ffbe75424e5
+  type: Relationship
+  properties: {}
+  from_: 9725aaa1-89ce-47b2-93b4-bd59d36992a3
+  to_:
+  - 72ee4b41-865b-4e96-843c-383285e77924
+  relationship_type: produces

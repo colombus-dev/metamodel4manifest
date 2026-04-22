@@ -1,0 +1,76 @@
+uid: 26885bd4-1f51-4ab7-aeb5-749cab31ff54
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/XLabs-AI_flux-controlnet-collections.json
+  type: SoftwareFile
+  name: XLabs-AI_flux-controlnet-collections.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8b8be79c-a2e8-4749-be33-39bdbff4636e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/XLabs-AI_flux-controlnet-collections.json
+    type: ExternalReference
+  languages: []
+- uid: 743b3dcb-a4d1-430c-a4d4-1cd906ad2e7c
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b2267bf3-6689-45bb-bf99-dd7740fd5a58
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:06.759247+00:00'
+    bom-ref: XLabs-AI/flux-controlnet-collections-d210e12d-31f8-517b-968c-6f19ad37dc33
+    name: XLabs-AI/flux-controlnet-collections
+    authors:
+    - name: XLabs-AI
+    tags:
+    - diffusers
+    - Stable Diffusion
+    - image-generation
+    - Flux
+    - text-to-image
+    - en
+    - license:other
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+    url: https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/XLabs-AI/flux-controlnet-collections
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: fefb2175-0692-47d8-9970-3edf8afd11d9
+  type: Relationship
+  properties: {}
+  from_: 26885bd4-1f51-4ab7-aeb5-749cab31ff54
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/XLabs-AI_flux-controlnet-collections.json
+  relationship_type: annotatedBy
+- uid: 6abbf140-f219-4665-8cb2-072b29978129
+  type: Relationship
+  properties: {}
+  from_: b2267bf3-6689-45bb-bf99-dd7740fd5a58
+  to_:
+  - 743b3dcb-a4d1-430c-a4d4-1cd906ad2e7c
+  relationship_type: uses
+- uid: ab713791-d827-48e2-afac-c14bd2c186da
+  type: Relationship
+  properties: {}
+  from_: 26885bd4-1f51-4ab7-aeb5-749cab31ff54
+  to_:
+  - b2267bf3-6689-45bb-bf99-dd7740fd5a58
+  relationship_type: produces

@@ -1,0 +1,80 @@
+uid: 1fae8aad-89a8-4c55-9d84-ed6a9544683f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Sao10K_Fimbulvetr-11B-v2.json
+  type: SoftwareFile
+  name: Sao10K_Fimbulvetr-11B-v2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:b57b2daf-af3b-46e0-b27f-4e0947c103a8
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Sao10K_Fimbulvetr-11B-v2.json
+    type: ExternalReference
+  languages: []
+- uid: 77961a1e-a52a-4350-b72d-6d61b9f056af
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4c99cc04-d24e-4324-8f3b-5941b99543d0
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:44.517017+00:00'
+    bom-ref: Sao10K/Fimbulvetr-11B-v2-bf6eabf3-8be8-525e-ab40-679c2f4b90c1
+    name: Sao10K/Fimbulvetr-11B-v2
+    authors:
+    - name: Sao10K
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - en
+    - license:cc-by-nc-4.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Sao10K/Fimbulvetr-11B-v2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 5ac9617d-81a8-43ef-b608-4d04b93a9064
+  type: Relationship
+  properties: {}
+  from_: 1fae8aad-89a8-4c55-9d84-ed6a9544683f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Sao10K_Fimbulvetr-11B-v2.json
+  relationship_type: annotatedBy
+- uid: e0fbc67a-48b1-4c89-9865-2f6820888199
+  type: Relationship
+  properties: {}
+  from_: 4c99cc04-d24e-4324-8f3b-5941b99543d0
+  to_:
+  - 77961a1e-a52a-4350-b72d-6d61b9f056af
+  relationship_type: uses
+- uid: 9b215f2d-9288-4174-8c85-a25957a0e694
+  type: Relationship
+  properties: {}
+  from_: 1fae8aad-89a8-4c55-9d84-ed6a9544683f
+  to_:
+  - 4c99cc04-d24e-4324-8f3b-5941b99543d0
+  relationship_type: produces

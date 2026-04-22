@@ -1,0 +1,78 @@
+uid: d3e1c0c7-fa47-4010-8c65-0f60596c45b9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xverse_XVERSE-13B.json
+  type: SoftwareFile
+  name: xverse_XVERSE-13B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:33f7911b-0d2f-4517-b8d9-5fd965358f09
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xverse_XVERSE-13B.json
+    type: ExternalReference
+  languages: []
+- uid: 0b8f37fa-4a4e-4987-bc09-403458b90152
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 770869c1-292e-4a88-bfbd-28cfe52b67c3
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:46.989338+00:00'
+    bom-ref: xverse/XVERSE-13B-b514602f-cbda-50d2-bdba-5704eb7fd9e1
+    name: xverse/XVERSE-13B
+    authors:
+    - name: xverse
+    architectureFamily: xverse
+    modelArchitecture: XverseForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - xverse
+    - text-generation
+    - custom_code
+    - license:apache-2.0
+    - autotrain_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/xverse/XVERSE-13B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 61ecf896-cde9-43fa-b618-1a645202554e
+  type: Relationship
+  properties: {}
+  from_: d3e1c0c7-fa47-4010-8c65-0f60596c45b9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xverse_XVERSE-13B.json
+  relationship_type: annotatedBy
+- uid: c3e629d9-cee2-45e0-89f6-49323fe1983e
+  type: Relationship
+  properties: {}
+  from_: 770869c1-292e-4a88-bfbd-28cfe52b67c3
+  to_:
+  - 0b8f37fa-4a4e-4987-bc09-403458b90152
+  relationship_type: uses
+- uid: 4c7b4b3e-1ad4-4b16-8214-e57abd64c805
+  type: Relationship
+  properties: {}
+  from_: d3e1c0c7-fa47-4010-8c65-0f60596c45b9
+  to_:
+  - 770869c1-292e-4a88-bfbd-28cfe52b67c3
+  relationship_type: produces

@@ -1,0 +1,105 @@
+uid: bb6d4ea5-d460-4954-85f3-5215bbdc895d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen1.5-14B-Chat.json
+  type: SoftwareFile
+  name: Qwen_Qwen1.5-14B-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e8dc6954-4052-42cb-9809-025127f3ef89
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen1.5-14B-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: 8ae0e9b3-2a81-4096-b8ca-b764b9333bc0
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ef12de2b-0e8c-47fe-99ca-9f336a895869
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:48.383078+00:00'
+    bom-ref: Qwen/Qwen1.5-14B-Chat-4c4f7498-26d8-534c-aa9d-28094f592acd
+    name: Qwen/Qwen1.5-14B-Chat
+    authors:
+    - name: Qwen
+    architectureFamily: qwen2
+    modelArchitecture: Qwen2ForCausalLM
+    description: '## Introduction
+
+
+      Qwen1.5 is the beta version of Qwen2, a transformer-based decoder-only language model pretrained on a large amount of data. In comparison with the previous released Qwen, the improvements include:
+
+
+      * 8 model sizes, including 0.5B, 1.8B, 4B, 7B, 14B, 32B and 72B dense models, and an MoE model of 14B with 2.7B activated;
+
+      * Significant performance improvement in human preference for chat models;
+
+      * Multilingual support of both base and chat models;
+
+      * Stable support of 32K context length for models of all sizes
+
+      * No need of `trust_remote_code`.
+
+
+      For more details, please refer to our [blog post](https://qwenlm.github.io/blog/qwen1.5/) and [GitHub repo](https://github.com/QwenLM/Qwen1.5).
+
+      <br>
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - qwen2
+    - text-generation
+    - chat
+    - conversational
+    - en
+    - arxiv:2309.16609
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: tongyi-qianwen
+    url: https://huggingface.co/Qwen/Qwen1.5-14B-Chat/blob/main/LICENSE
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Qwen/Qwen1.5-14B-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1a0d3c1a-7d15-4249-9a70-aff92d287ec3
+  type: Relationship
+  properties: {}
+  from_: bb6d4ea5-d460-4954-85f3-5215bbdc895d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen1.5-14B-Chat.json
+  relationship_type: annotatedBy
+- uid: 9363cbbf-a0b0-4e2c-bdde-6f1c27fac886
+  type: Relationship
+  properties: {}
+  from_: ef12de2b-0e8c-47fe-99ca-9f336a895869
+  to_:
+  - 8ae0e9b3-2a81-4096-b8ca-b764b9333bc0
+  relationship_type: uses
+- uid: 3dbe19bb-e5c4-4a7c-bc07-7980285d78ad
+  type: Relationship
+  properties: {}
+  from_: bb6d4ea5-d460-4954-85f3-5215bbdc895d
+  to_:
+  - ef12de2b-0e8c-47fe-99ca-9f336a895869
+  relationship_type: produces

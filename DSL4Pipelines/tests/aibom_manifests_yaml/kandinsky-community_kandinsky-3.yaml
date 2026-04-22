@@ -1,0 +1,74 @@
+uid: fd9ade59-2d43-45d7-8cd0-21571095a597
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/kandinsky-community_kandinsky-3.json
+  type: SoftwareFile
+  name: kandinsky-community_kandinsky-3.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c25517db-d983-41b9-a277-0a6ee1ada249
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/kandinsky-community_kandinsky-3.json
+    type: ExternalReference
+  languages: []
+- uid: 1e18b96e-71e1-4348-8966-93e7f43e8379
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 1ff8abe4-55d8-4df0-a6ac-42069cddc84c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:51.681504+00:00'
+    bom-ref: kandinsky-community/kandinsky-3-4cf02339-0300-5e6d-8680-9e5b3bd6fee5
+    name: kandinsky-community/kandinsky-3
+    authors:
+    - name: kandinsky-community
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - license:apache-2.0
+    - diffusers:Kandinsky3Pipeline
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/kandinsky-community/kandinsky-3
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 9be45814-6da7-4bf5-a204-6a0fef7375e6
+  type: Relationship
+  properties: {}
+  from_: fd9ade59-2d43-45d7-8cd0-21571095a597
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/kandinsky-community_kandinsky-3.json
+  relationship_type: annotatedBy
+- uid: 08918730-f833-4a4f-8499-0a8c2269b0e2
+  type: Relationship
+  properties: {}
+  from_: 1ff8abe4-55d8-4df0-a6ac-42069cddc84c
+  to_:
+  - 1e18b96e-71e1-4348-8966-93e7f43e8379
+  relationship_type: uses
+- uid: b79ab8a1-fd01-4ce8-87d3-86ae697a3e83
+  type: Relationship
+  properties: {}
+  from_: fd9ade59-2d43-45d7-8cd0-21571095a597
+  to_:
+  - 1ff8abe4-55d8-4df0-a6ac-42069cddc84c
+  relationship_type: produces

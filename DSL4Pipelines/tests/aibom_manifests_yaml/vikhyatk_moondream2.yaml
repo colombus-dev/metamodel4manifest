@@ -1,0 +1,82 @@
+uid: 9f5ec27e-a359-418b-88f7-eba308ebf44d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/vikhyatk_moondream2.json
+  type: SoftwareFile
+  name: vikhyatk_moondream2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:bb0d2442-1adb-4b2a-9c91-37bc8eaf1aee
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/vikhyatk_moondream2.json
+    type: ExternalReference
+  languages: []
+- uid: 0bbd6bc0-9a7c-4ddb-a2e9-2d003d8f84a8
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2de10dd4-a2c1-4643-9773-e8ad49fcfcde
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:11.169347+00:00'
+    bom-ref: vikhyatk/moondream2-cba90de0-deee-55a7-b3d9-c640af31b070
+    name: vikhyatk/moondream2
+    authors:
+    - name: vikhyatk
+    architectureFamily: moondream1
+    modelArchitecture: HfMoondream
+    tags:
+    - transformers
+    - safetensors
+    - gguf
+    - moondream1
+    - text-generation
+    - image-text-to-text
+    - custom_code
+    - doi:10.57967/hf/3219
+    - license:apache-2.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/vikhyatk/moondream2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: 79d3d4cd-ffcd-4746-a6fb-22d69a48fa45
+  type: Relationship
+  properties: {}
+  from_: 9f5ec27e-a359-418b-88f7-eba308ebf44d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/vikhyatk_moondream2.json
+  relationship_type: annotatedBy
+- uid: 4fdef278-195b-405b-8e47-3481cb7e0ee1
+  type: Relationship
+  properties: {}
+  from_: 2de10dd4-a2c1-4643-9773-e8ad49fcfcde
+  to_:
+  - 0bbd6bc0-9a7c-4ddb-a2e9-2d003d8f84a8
+  relationship_type: uses
+- uid: ac022252-676b-4728-88ae-1fc2d5601cf2
+  type: Relationship
+  properties: {}
+  from_: 9f5ec27e-a359-418b-88f7-eba308ebf44d
+  to_:
+  - 2de10dd4-a2c1-4643-9773-e8ad49fcfcde
+  relationship_type: produces

@@ -1,0 +1,84 @@
+uid: e5061cf5-625a-4efb-a80e-7cc047268c26
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-cascade.json
+  type: SoftwareFile
+  name: stabilityai_stable-cascade.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:31fb95c8-93b5-49c9-8a48-beca014bd772
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-cascade.json
+    type: ExternalReference
+  languages: []
+- uid: dce4e2f1-a59c-4ef6-b2f0-7386fa01fd00
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 96bf5478-9abd-4b3d-9cbf-6d5d543caa05
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:01.989782+00:00'
+    bom-ref: stabilityai/stable-cascade-626d8da8-7271-5b63-9441-231ed99c8a75
+    name: stabilityai/stable-cascade
+    authors:
+    - name: stabilityai
+    description: '## Model Details
+
+      '
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - license:other
+    - diffusers:StableCascadeDecoderPipeline
+    - region:us
+  license:
+    name: stable-cascade-nc-community
+    url: LICENSE
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stabilityai/stable-cascade
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: e3c9fee2-01c3-435d-8bcd-3b671c9f9d43
+  type: Relationship
+  properties: {}
+  from_: e5061cf5-625a-4efb-a80e-7cc047268c26
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-cascade.json
+  relationship_type: annotatedBy
+- uid: a8622d58-8b01-4989-87a6-8073a1196939
+  type: Relationship
+  properties: {}
+  from_: 96bf5478-9abd-4b3d-9cbf-6d5d543caa05
+  to_:
+  - dce4e2f1-a59c-4ef6-b2f0-7386fa01fd00
+  relationship_type: uses
+- uid: a9aaef4d-d122-45ca-8c77-f56b6a0dcce8
+  type: Relationship
+  properties: {}
+  from_: e5061cf5-625a-4efb-a80e-7cc047268c26
+  to_:
+  - 96bf5478-9abd-4b3d-9cbf-6d5d543caa05
+  relationship_type: produces

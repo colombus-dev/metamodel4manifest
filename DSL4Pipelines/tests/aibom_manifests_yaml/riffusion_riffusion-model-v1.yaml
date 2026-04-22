@@ -1,0 +1,111 @@
+uid: 52018aa2-4717-4539-a51a-ca26cdf0111f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/riffusion_riffusion-model-v1.json
+  type: SoftwareFile
+  name: riffusion_riffusion-model-v1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a14f5aec-c964-4480-beec-4871ffc8127d
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/riffusion_riffusion-model-v1.json
+    type: ExternalReference
+  languages: []
+- uid: c383e2b2-4cd2-4b4c-b74e-42303051f9ef
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: dc9abd3c-5996-470f-8d6a-7cecb5314f0c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:24.203755+00:00'
+    bom-ref: riffusion/riffusion-model-v1-4e094e07-367e-5079-bf73-9b0db8579131
+    name: riffusion/riffusion-model-v1
+    authors:
+    - name: riffusion
+    description: '### Model Details
+
+      - **Developed by:** Seth Forsgren, Hayk Martiros
+
+      - **Model type:** Diffusion-based text-to-image generation model
+
+      - **Language(s):** English
+
+      - **License:** [The CreativeML OpenRAIL M license](https://huggingface.co/spaces/CompVis/stable-diffusion-license) is an [Open RAIL M license](https://www.licenses.ai/blog/2022/8/18/naming-convention-of-responsible-ai-licenses), adapted from the work that [BigScience](https://bigscience.huggingface.co/) and [the RAIL Initiative](https://www.licenses.ai/) are jointly carrying in the area of responsible AI licensing. See also [the article about the BLOOM Open RAIL license](https://bigscience.huggingface.co/blog/the-bigscience-rail-license) on which our license is based.
+
+      - **Model Description:** This is a model that can be used to generate and modify images based on text prompts. It is a [Latent Diffusion Model](https://arxiv.org/abs/2112.10752) that uses a fixed, pretrained text encoder ([CLIP ViT-L/14](https://arxiv.org/abs/2103.00020)) as suggested in the [Imagen paper](https://arxiv.org/abs/2205.11487).
+
+      '
+    tags:
+    - diffusers
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-audio
+    - arxiv:2112.10752
+    - arxiv:2103.00020
+    - arxiv:2205.11487
+    - arxiv:2210.08402
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/riffusion/riffusion-model-v1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-audio
+  consideration:
+    use_cases: '### Direct Use
+
+      The model is intended for research purposes only. Possible research areas and
+
+      tasks include
+
+
+      - Generation of artworks, audio, and use in creative processes.
+
+      - Applications in educational or creative tools.
+
+      - Research on generative models.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 8714abed-d98a-48a4-b8e9-3b9d2b23d98c
+  type: Relationship
+  properties: {}
+  from_: 52018aa2-4717-4539-a51a-ca26cdf0111f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/riffusion_riffusion-model-v1.json
+  relationship_type: annotatedBy
+- uid: 48111ed5-be6b-427c-802a-0e0e666e013d
+  type: Relationship
+  properties: {}
+  from_: dc9abd3c-5996-470f-8d6a-7cecb5314f0c
+  to_:
+  - c383e2b2-4cd2-4b4c-b74e-42303051f9ef
+  relationship_type: uses
+- uid: ad08d7bc-2cf0-4a0e-b90a-5d644c12700a
+  type: Relationship
+  properties: {}
+  from_: 52018aa2-4717-4539-a51a-ca26cdf0111f
+  to_:
+  - dc9abd3c-5996-470f-8d6a-7cecb5314f0c
+  relationship_type: produces

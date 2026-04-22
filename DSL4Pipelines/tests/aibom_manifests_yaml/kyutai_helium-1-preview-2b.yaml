@@ -1,0 +1,97 @@
+uid: e7fe1460-0ff9-446b-863d-f38c75289b37
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/kyutai_helium-1-preview-2b.json
+  type: SoftwareFile
+  name: kyutai_helium-1-preview-2b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:97f2ed99-db4e-49a4-9501-f5f7d5b2785c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/kyutai_helium-1-preview-2b.json
+    type: ExternalReference
+  languages: []
+- uid: 4a61ccb7-406d-43eb-a616-36d49c1a5128
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: eb639082-b1c1-42ba-90ac-9672f35661ff
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:57.864154+00:00'
+    bom-ref: kyutai/helium-1-preview-2b-3314ba58-3b38-5963-86ad-584eb4353099
+    name: kyutai/helium-1-preview-2b
+    authors:
+    - name: kyutai
+    architectureFamily: helium
+    modelArchitecture: HeliumForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - helium
+    - text-generation
+    - en
+    - fr
+    - de
+    - it
+    - pt
+    - es
+    - license:cc-by-4.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: CC-BY-4.0
+    url: https://spdx.org/licenses/CC-BY-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/kyutai/helium-1-preview-2b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+
+      <!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: db45e9e1-12e3-4fa2-b7b4-e204479ccfcb
+  type: Relationship
+  properties: {}
+  from_: e7fe1460-0ff9-446b-863d-f38c75289b37
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/kyutai_helium-1-preview-2b.json
+  relationship_type: annotatedBy
+- uid: 7ea2ed0f-7e57-4c92-846f-126d5b79603c
+  type: Relationship
+  properties: {}
+  from_: eb639082-b1c1-42ba-90ac-9672f35661ff
+  to_:
+  - 4a61ccb7-406d-43eb-a616-36d49c1a5128
+  relationship_type: uses
+- uid: 105fdef4-76b5-4ffe-958b-af44d15cc902
+  type: Relationship
+  properties: {}
+  from_: e7fe1460-0ff9-446b-863d-f38c75289b37
+  to_:
+  - eb639082-b1c1-42ba-90ac-9672f35661ff
+  relationship_type: produces

@@ -1,0 +1,131 @@
+uid: 6f011a3d-a98c-4550-993e-4f749187b965
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dalle-mini_dalle-mega.json
+  type: SoftwareFile
+  name: dalle-mini_dalle-mega.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9c7cfb6d-c70d-42a6-8211-68e6ce515fce
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dalle-mini_dalle-mega.json
+    type: ExternalReference
+  languages: []
+- uid: 0c618e00-c457-4167-8819-a4180ec1a26d
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8c0955f4-8ff2-4ddc-ab0e-0d9a5447962b
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:25.719822+00:00'
+    bom-ref: dalle-mini/dalle-mega-bf663cc5-18ab-5a87-8bf4-1516bb7818c3
+    name: dalle-mini/dalle-mega
+    authors:
+    - name: dalle-mini
+    architectureFamily: dallebart
+    modelArchitecture: eBart
+    description: '## Model Details
+
+
+      * **Developed by:** Boris Dayma, Suraj Patil, Pedro Cuenca, Khalid Saifullah, Tanishq Abraham, Phúc Lê, Luke, Luke Melas, Ritobrata Ghosh
+
+      * **Model type:** Transformer-based text-to-image generation model
+
+      * **Language(s):** English
+
+      * **License:** Apache 2.0
+
+      * **Model Description:** This is a model that can be used to generate images based on text prompts. As the model developers wrote in the [project report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy) about DALL·E mini, “OpenAI had the first impressive model for generating images with [DALL·E](https://openai.com/blog/dall-e/). DALL·E mini is an attempt at reproducing those results with an open-source model.”
+
+      * **Resources for more information:**
+
+      - See OpenAI’s website for more information about [DALL·E](https://openai.com/blog/dall-e/), including the [DALL·E model card](https://github.com/openai/DALL-E/blob/master/model_card.md).
+
+      - See the DALL·E Mini [project report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini-Generate-images-from-any-text-prompt--VmlldzoyMDE4NDAy) for more information from the model’s developers about DALL·E Mini.
+
+      - To learn more about DALL·E Mega, see the DALL·E Mega [training journal](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mega-Training--VmlldzoxODMxMDI2#training-parameters).
+
+
+      * **Cite as:**
+
+      ```bib text
+
+      @misc{Dayma_DALL·E_Mini_2021,
+
+      author = {Dayma, Boris and Patil, Suraj and Cuenca, Pedro and Saifullah, Khalid and Abraham, Tanishq and Lê Khắc, Phúc and Melas, Luke and Ghosh, Ritobrata},
+
+      doi = {10.5281/zenodo.5146400},
+
+      month = {7},
+
+      title = {DALL·E Mini},
+
+      url = {https://github.com/borisdayma/dalle-mini},
+
+      year = {2021}
+
+      }
+
+      ```
+
+      '
+    tags:
+    - transformers
+    - jax
+    - dallebart
+    - text-to-image
+    - en
+    - arxiv:1910.09700
+    - license:apache-2.0
+    - co2_eq_emissions
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/dalle-mini/dalle-mega
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: b2b48f00-1b30-432f-8603-386aa30caa3c
+  type: Relationship
+  properties: {}
+  from_: 6f011a3d-a98c-4550-993e-4f749187b965
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dalle-mini_dalle-mega.json
+  relationship_type: annotatedBy
+- uid: f3bcdcb0-9caf-40bd-8ca3-69fb74da7af3
+  type: Relationship
+  properties: {}
+  from_: 8c0955f4-8ff2-4ddc-ab0e-0d9a5447962b
+  to_:
+  - 0c618e00-c457-4167-8819-a4180ec1a26d
+  relationship_type: uses
+- uid: 384b89e2-c3ce-4698-b321-0443b2986b2a
+  type: Relationship
+  properties: {}
+  from_: 6f011a3d-a98c-4550-993e-4f749187b965
+  to_:
+  - 8c0955f4-8ff2-4ddc-ab0e-0d9a5447962b
+  relationship_type: produces

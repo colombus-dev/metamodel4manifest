@@ -1,0 +1,141 @@
+uid: e5d9ba2a-72b0-49f2-95c2-aed63e3108e6
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stablecode-completion-alpha-3b.json
+  type: SoftwareFile
+  name: stabilityai_stablecode-completion-alpha-3b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:268c5e55-310e-4e70-abb4-bf9992093c54
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stablecode-completion-alpha-3b.json
+    type: ExternalReference
+  languages: []
+- uid: 4e3a1c14-29b6-4489-8932-28d656ff1aa4
+  type: Data
+  properties:
+    bom-ref: bigcode/starcoderdata-abfd2d2a-390d-56b4-ad9c-c532362d5827
+    name: bigcode/starcoderdata
+    content_url: https://huggingface.co/datasets/bigcode/starcoderdata
+    task_categories: text-generation
+    size_categories: unknown
+    annotations_creators: ''
+    language_creators: crowdsourced, expert-generated
+    pretty_name: The-Stack
+    source_datasets: ''
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/starcoderdata-abfd2d2a-390d-56b4-ad9c-c532362d5827
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 6875cd4e-8a76-4ae4-819f-95f19aee6c58
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a7c3c6fb-b2a9-4081-89a8-e040c7a52b10
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:57.944661+00:00'
+    bom-ref: stabilityai/stablecode-completion-alpha-3b-002936e2-8f05-5b3f-8df5-f52f327e1e14
+    name: stabilityai/stablecode-completion-alpha-3b
+    authors:
+    - name: stabilityai
+    architectureFamily: gpt_neox
+    modelArchitecture: GPTNeoXForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: openai_humaneval'
+        type: pass@1
+        value: 0.2018
+      - slice: 'dataset: openai_humaneval'
+        type: pass@10
+        value: 0.3375
+    description: '## Model Description
+
+
+      `StableCode-Completion-Alpha-3B` is a 3 billion parameter decoder-only code completion model pre-trained on diverse set of programming languages that were the top used languages based on the 2023 stackoverflow developer survey.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - gpt_neox
+    - text-generation
+    - causal-lm
+    - code
+    - dataset:bigcode/starcoderdata
+    - arxiv:2104.09864
+    - arxiv:1910.02054
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stabilityai/stablecode-completion-alpha-3b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '### Intended Use
+
+
+      StableCode-Completion-Alpha-3B independently generates new code completions, but we recommend that you use StableCode-Completion-Alpha-3B together with the tool developed by BigCode and HuggingFace [(huggingface/huggingface-vscode: Code completion VSCode extension for OSS models (github.com))](https://github.com/huggingface/huggingface-vscode), to identify and, if necessary, attribute any outputs that match training code.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: fa9ee2f0-f867-4e03-8346-90aa44f1ff18
+  type: Relationship
+  properties: {}
+  from_: e5d9ba2a-72b0-49f2-95c2-aed63e3108e6
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stablecode-completion-alpha-3b.json
+  relationship_type: annotatedBy
+- uid: 91421c91-0e18-4b44-b38d-075bd5c2212c
+  type: Relationship
+  properties: {}
+  from_: a7c3c6fb-b2a9-4081-89a8-e040c7a52b10
+  to_:
+  - 4e3a1c14-29b6-4489-8932-28d656ff1aa4
+  relationship_type: uses
+- uid: 7947d0fa-aeb0-44c7-bf8a-2298122cb2b2
+  type: Relationship
+  properties: {}
+  from_: a7c3c6fb-b2a9-4081-89a8-e040c7a52b10
+  to_:
+  - 6875cd4e-8a76-4ae4-819f-95f19aee6c58
+  relationship_type: uses
+- uid: 7402c2ad-2d51-4b27-8ea4-c86977d34336
+  type: Relationship
+  properties: {}
+  from_: e5d9ba2a-72b0-49f2-95c2-aed63e3108e6
+  to_:
+  - a7c3c6fb-b2a9-4081-89a8-e040c7a52b10
+  relationship_type: produces

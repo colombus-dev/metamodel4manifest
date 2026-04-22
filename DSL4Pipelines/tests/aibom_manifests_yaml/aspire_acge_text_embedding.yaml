@@ -1,0 +1,1183 @@
+uid: 2a1f5e4f-1dfd-4e2e-a845-1b0ba9c9ca4c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aspire_acge_text_embedding.json
+  type: SoftwareFile
+  name: aspire_acge_text_embedding.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c7e1dbd8-69f7-4a7c-b850-9867db216617
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aspire_acge_text_embedding.json
+    type: ExternalReference
+  languages: []
+- uid: ebd28b0b-b433-49c4-97ad-c80fb67f2ddd
+  type: SoftwareFile
+  name: sentence-transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e6ec090b-68ec-4a23-aeaa-da2fedf5b812
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:49.101375+00:00'
+    bom-ref: aspire/acge_text_embedding-a514ff13-2b74-54c3-a5ea-a9492e118fd6
+    name: aspire/acge_text_embedding
+    authors:
+    - name: aspire
+    architectureFamily: bert
+    modelArchitecture: BertModel
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: C-MTEB/AFQMC, split: validation, config: default'
+        type: cos_sim_pearson
+        value: 54.03434872650919
+      - slice: 'dataset: C-MTEB/AFQMC, split: validation, config: default'
+        type: cos_sim_spearman
+        value: 58.80730796688325
+      - slice: 'dataset: C-MTEB/AFQMC, split: validation, config: default'
+        type: euclidean_pearson
+        value: 57.47231387497989
+      - slice: 'dataset: C-MTEB/AFQMC, split: validation, config: default'
+        type: euclidean_spearman
+        value: 58.80775026351807
+      - slice: 'dataset: C-MTEB/AFQMC, split: validation, config: default'
+        type: manhattan_pearson
+        value: 57.46332720141574
+      - slice: 'dataset: C-MTEB/AFQMC, split: validation, config: default'
+        type: manhattan_spearman
+        value: 58.80196022940078
+      - slice: 'dataset: C-MTEB/ATEC, split: test, config: default'
+        type: cos_sim_pearson
+        value: 53.52621290548175
+      - slice: 'dataset: C-MTEB/ATEC, split: test, config: default'
+        type: cos_sim_spearman
+        value: 57.945227768312144
+      - slice: 'dataset: C-MTEB/ATEC, split: test, config: default'
+        type: euclidean_pearson
+        value: 61.17041394151802
+      - slice: 'dataset: C-MTEB/ATEC, split: test, config: default'
+        type: euclidean_spearman
+        value: 57.94553287835657
+      - slice: 'dataset: C-MTEB/ATEC, split: test, config: default'
+        type: manhattan_pearson
+        value: 61.168327500057885
+      - slice: 'dataset: C-MTEB/ATEC, split: test, config: default'
+        type: manhattan_spearman
+        value: 57.94477516925043
+      - slice: 'dataset: mteb/amazon_reviews_multi, split: test, config: zh'
+        type: accuracy
+        value: 48.538000000000004
+      - slice: 'dataset: mteb/amazon_reviews_multi, split: test, config: zh'
+        type: f1
+        value: 46.59920995594044
+      - slice: 'dataset: C-MTEB/BQ, split: test, config: default'
+        type: cos_sim_pearson
+        value: 68.27529991817154
+      - slice: 'dataset: C-MTEB/BQ, split: test, config: default'
+        type: cos_sim_spearman
+        value: 70.37095914176643
+      - slice: 'dataset: C-MTEB/BQ, split: test, config: default'
+        type: euclidean_pearson
+        value: 69.42690712802727
+      - slice: 'dataset: C-MTEB/BQ, split: test, config: default'
+        type: euclidean_spearman
+        value: 70.37017971889912
+      - slice: 'dataset: C-MTEB/BQ, split: test, config: default'
+        type: manhattan_pearson
+        value: 69.40264877917839
+      - slice: 'dataset: C-MTEB/BQ, split: test, config: default'
+        type: manhattan_spearman
+        value: 70.34786744049524
+      - slice: 'dataset: C-MTEB/CLSClusteringP2P, split: test, config: default'
+        type: v_measure
+        value: 47.08027536192709
+      - slice: 'dataset: C-MTEB/CLSClusteringS2S, split: test, config: default'
+        type: v_measure
+        value: 44.0526024940363
+      - slice: 'dataset: C-MTEB/CMedQAv1-reranking, split: test, config: default'
+        type: map
+        value: 88.65974993133156
+      - slice: 'dataset: C-MTEB/CMedQAv1-reranking, split: test, config: default'
+        type: mrr
+        value: 90.64761904761905
+      - slice: 'dataset: C-MTEB/CMedQAv2-reranking, split: test, config: default'
+        type: map
+        value: 88.90396838907245
+      - slice: 'dataset: C-MTEB/CMedQAv2-reranking, split: test, config: default'
+        type: mrr
+        value: 90.90932539682541
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: map_at_1
+        value: 26.875
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: map_at_10
+        value: 39.995999999999995
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: map_at_100
+        value: 41.899
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 42
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: map_at_3
+        value: 35.414
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: map_at_5
+        value: 38.019
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 40.635
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 48.827
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 49.805
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 49.845
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 46.145
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 47.693999999999996
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 40.635
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 46.78
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 53.986999999999995
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 55.684
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 41.018
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 43.559
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 40.635
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 10.427999999999999
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 1.625
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.184
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 23.139000000000003
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 17.004
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 26.875
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 57.887
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 87.408
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 98.721
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 40.812
+      - slice: 'dataset: C-MTEB/CmedqaRetrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 48.397
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: cos_sim_accuracy
+        value: 83.43956704750451
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: cos_sim_ap
+        value: 90.49172854352659
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: cos_sim_f1
+        value: 84.28475486903963
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: cos_sim_precision
+        value: 80.84603822203135
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: cos_sim_recall
+        value: 88.02899228431144
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: dot_accuracy
+        value: 83.43956704750451
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: dot_ap
+        value: 90.46317132695233
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: dot_f1
+        value: 84.28794294628929
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: dot_precision
+        value: 80.51948051948052
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: dot_recall
+        value: 88.4264671498714
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: euclidean_accuracy
+        value: 83.43956704750451
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: euclidean_ap
+        value: 90.49171785256486
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: euclidean_f1
+        value: 84.28235820561584
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: euclidean_precision
+        value: 80.8022308022308
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: euclidean_recall
+        value: 88.07575403320084
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: manhattan_accuracy
+        value: 83.55983162958509
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: manhattan_ap
+        value: 90.48046779812815
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: manhattan_f1
+        value: 84.45354259069714
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: manhattan_precision
+        value: 82.21877767936226
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: manhattan_recall
+        value: 86.81318681318682
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: max_accuracy
+        value: 83.55983162958509
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: max_ap
+        value: 90.49172854352659
+      - slice: 'dataset: C-MTEB/CMNLI, split: validation, config: default'
+        type: max_f1
+        value: 84.45354259069714
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: map_at_1
+        value: 68.54599999999999
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: map_at_10
+        value: 77.62400000000001
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: map_at_100
+        value: 77.886
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 77.89
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: map_at_3
+        value: 75.966
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: map_at_5
+        value: 76.995
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 68.915
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 77.703
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 77.958
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 77.962
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 76.08
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 77.118
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 68.809
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 81.563
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 82.758
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 82.864
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 78.29
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 80.113
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 68.809
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 9.463000000000001
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 1.001
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.101
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 28.486
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 18.019
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 68.54599999999999
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 93.625
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 99.05199999999999
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 99.895
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 84.879
+      - slice: 'dataset: C-MTEB/CovidRetrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 89.252
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: map_at_1
+        value: 25.653
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: map_at_10
+        value: 79.105
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: map_at_100
+        value: 81.902
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 81.947
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: map_at_3
+        value: 54.54599999999999
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: map_at_5
+        value: 69.226
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 89.35
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 92.69
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 92.77
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 92.774
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 92.425
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 92.575
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 89.35
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 86.55199999999999
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 89.35300000000001
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 89.782
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 85.392
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 84.5
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 89.35
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 41.589999999999996
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 4.781
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.488
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 76.683
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 65.06
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 25.653
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 87.64999999999999
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 96.858
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 99.13300000000001
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 56.869
+      - slice: 'dataset: C-MTEB/DuRetrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 74.024
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: map_at_1
+        value: 52.1
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: map_at_10
+        value: 62.629999999999995
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: map_at_100
+        value: 63.117000000000004
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 63.134
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: map_at_3
+        value: 60.267
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: map_at_5
+        value: 61.777
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 52.1
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 62.629999999999995
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 63.117000000000004
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 63.134
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 60.267
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 61.777
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 52.1
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 67.596
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 69.95
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 70.33500000000001
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 62.82600000000001
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 65.546
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 52.1
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 8.309999999999999
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 0.941
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.097
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 23.400000000000002
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 15.36
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 52.1
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 83.1
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 94.1
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 97
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 70.19999999999999
+      - slice: 'dataset: C-MTEB/EcomRetrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 76.8
+      - slice: 'dataset: C-MTEB/IFlyTek-classification, split: validation, config: default'
+        type: accuracy
+        value: 51.773759138130046
+      - slice: 'dataset: C-MTEB/IFlyTek-classification, split: validation, config: default'
+        type: f1
+        value: 40.341407912920054
+      - slice: 'dataset: C-MTEB/JDReview-classification, split: test, config: default'
+        type: accuracy
+        value: 86.69793621013133
+      - slice: 'dataset: C-MTEB/JDReview-classification, split: test, config: default'
+        type: ap
+        value: 55.46718958939327
+      - slice: 'dataset: C-MTEB/JDReview-classification, split: test, config: default'
+        type: f1
+        value: 81.48228915952436
+      - slice: 'dataset: C-MTEB/LCQMC, split: test, config: default'
+        type: cos_sim_pearson
+        value: 71.1397780205448
+      - slice: 'dataset: C-MTEB/LCQMC, split: test, config: default'
+        type: cos_sim_spearman
+        value: 78.17368193033309
+      - slice: 'dataset: C-MTEB/LCQMC, split: test, config: default'
+        type: euclidean_pearson
+        value: 77.4849177602368
+      - slice: 'dataset: C-MTEB/LCQMC, split: test, config: default'
+        type: euclidean_spearman
+        value: 78.17369079663212
+      - slice: 'dataset: C-MTEB/LCQMC, split: test, config: default'
+        type: manhattan_pearson
+        value: 77.47344305182406
+      - slice: 'dataset: C-MTEB/LCQMC, split: test, config: default'
+        type: manhattan_spearman
+        value: 78.16454335155387
+      - slice: 'dataset: C-MTEB/Mmarco-reranking, split: dev, config: default'
+        type: map
+        value: 27.76160559006673
+      - slice: 'dataset: C-MTEB/Mmarco-reranking, split: dev, config: default'
+        type: mrr
+        value: 28.02420634920635
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: map_at_1
+        value: 65.661
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: map_at_10
+        value: 74.752
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: map_at_100
+        value: 75.091
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 75.104
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: map_at_3
+        value: 72.997
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: map_at_5
+        value: 74.119
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 67.923
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 75.376
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 75.673
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 75.685
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 73.856
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 74.82799999999999
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 67.923
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 78.424
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 79.95100000000001
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 80.265
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 75.101
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 76.992
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 67.923
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 9.474
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 1.023
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.105
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 28.319
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 17.986
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 65.661
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 89.09899999999999
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 96.023
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 98.455
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 80.314
+      - slice: 'dataset: C-MTEB/MMarcoRetrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 84.81
+      - slice: 'dataset: mteb/amazon_massive_intent, split: test, config: zh-CN'
+        type: accuracy
+        value: 75.86751849361131
+      - slice: 'dataset: mteb/amazon_massive_intent, split: test, config: zh-CN'
+        type: f1
+        value: 73.04918450508
+      - slice: 'dataset: mteb/amazon_massive_scenario, split: test, config: zh-CN'
+        type: accuracy
+        value: 78.4364492266308
+      - slice: 'dataset: mteb/amazon_massive_scenario, split: test, config: zh-CN'
+        type: f1
+        value: 78.120686034844
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: map_at_1
+        value: 55.00000000000001
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: map_at_10
+        value: 61.06399999999999
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: map_at_100
+        value: 61.622
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 61.663000000000004
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: map_at_3
+        value: 59.583
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: map_at_5
+        value: 60.373
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 55.2
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 61.168
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 61.726000000000006
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 61.767
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 59.683
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 60.492999999999995
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 55.00000000000001
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 64.098
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 67.05
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 68.262
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 61.00600000000001
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 62.439
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 55.00000000000001
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 7.37
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 0.881
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.098
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 21.7
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 13.719999999999999
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 55.00000000000001
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 73.7
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 88.1
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 97.8
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 65.10000000000001
+      - slice: 'dataset: C-MTEB/MedicalRetrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 68.60000000000001
+      - slice: 'dataset: C-MTEB/MultilingualSentiment-classification, split: validation, config: default'
+        type: accuracy
+        value: 77.52666666666667
+      - slice: 'dataset: C-MTEB/MultilingualSentiment-classification, split: validation, config: default'
+        type: f1
+        value: 77.49784731367215
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: cos_sim_accuracy
+        value: 81.10449377368705
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: cos_sim_ap
+        value: 85.17742765935606
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: cos_sim_f1
+        value: 83.00094966761633
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: cos_sim_precision
+        value: 75.40983606557377
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: cos_sim_recall
+        value: 92.29144667370645
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: dot_accuracy
+        value: 81.10449377368705
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: dot_ap
+        value: 85.17143850809614
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: dot_f1
+        value: 83.01707779886148
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: dot_precision
+        value: 75.36606373815677
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: dot_recall
+        value: 92.39704329461456
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: euclidean_accuracy
+        value: 81.10449377368705
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: euclidean_ap
+        value: 85.17856775343333
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: euclidean_f1
+        value: 83.00094966761633
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: euclidean_precision
+        value: 75.40983606557377
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: euclidean_recall
+        value: 92.29144667370645
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: manhattan_accuracy
+        value: 81.05035192203573
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: manhattan_ap
+        value: 85.14464459395809
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: manhattan_f1
+        value: 82.96155671570953
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: manhattan_precision
+        value: 75.3448275862069
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: manhattan_recall
+        value: 92.29144667370645
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: max_accuracy
+        value: 81.10449377368705
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: max_ap
+        value: 85.17856775343333
+      - slice: 'dataset: C-MTEB/OCNLI, split: validation, config: default'
+        type: max_f1
+        value: 83.01707779886148
+      - slice: 'dataset: C-MTEB/OnlineShopping-classification, split: test, config: default'
+        type: accuracy
+        value: 93.71000000000001
+      - slice: 'dataset: C-MTEB/OnlineShopping-classification, split: test, config: default'
+        type: ap
+        value: 91.83202232349356
+      - slice: 'dataset: C-MTEB/OnlineShopping-classification, split: test, config: default'
+        type: f1
+        value: 93.69900560334331
+      - slice: 'dataset: C-MTEB/PAWSX, split: test, config: default'
+        type: cos_sim_pearson
+        value: 39.175047651512415
+      - slice: 'dataset: C-MTEB/PAWSX, split: test, config: default'
+        type: cos_sim_spearman
+        value: 45.51434675777896
+      - slice: 'dataset: C-MTEB/PAWSX, split: test, config: default'
+        type: euclidean_pearson
+        value: 44.864110004132286
+      - slice: 'dataset: C-MTEB/PAWSX, split: test, config: default'
+        type: euclidean_spearman
+        value: 45.516433048896076
+      - slice: 'dataset: C-MTEB/PAWSX, split: test, config: default'
+        type: manhattan_pearson
+        value: 44.87153627706517
+      - slice: 'dataset: C-MTEB/PAWSX, split: test, config: default'
+        type: manhattan_spearman
+        value: 45.52862617925012
+      - slice: 'dataset: C-MTEB/QBQTC, split: test, config: default'
+        type: cos_sim_pearson
+        value: 34.249579701429084
+      - slice: 'dataset: C-MTEB/QBQTC, split: test, config: default'
+        type: cos_sim_spearman
+        value: 37.30903127368978
+      - slice: 'dataset: C-MTEB/QBQTC, split: test, config: default'
+        type: euclidean_pearson
+        value: 35.129438425253355
+      - slice: 'dataset: C-MTEB/QBQTC, split: test, config: default'
+        type: euclidean_spearman
+        value: 37.308544018709085
+      - slice: 'dataset: C-MTEB/QBQTC, split: test, config: default'
+        type: manhattan_pearson
+        value: 35.08936153503652
+      - slice: 'dataset: C-MTEB/QBQTC, split: test, config: default'
+        type: manhattan_spearman
+        value: 37.25582901077839
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: zh'
+        type: cos_sim_pearson
+        value: 61.29309637460004
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: zh'
+        type: cos_sim_spearman
+        value: 65.85136090376717
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: zh'
+        type: euclidean_pearson
+        value: 64.04783990953557
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: zh'
+        type: euclidean_spearman
+        value: 65.85036859610366
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: zh'
+        type: manhattan_pearson
+        value: 63.995852552712186
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: zh'
+        type: manhattan_spearman
+        value: 65.86508416749417
+      - slice: 'dataset: C-MTEB/STSB, split: test, config: default'
+        type: cos_sim_pearson
+        value: 81.5595940455587
+      - slice: 'dataset: C-MTEB/STSB, split: test, config: default'
+        type: cos_sim_spearman
+        value: 82.72654634579749
+      - slice: 'dataset: C-MTEB/STSB, split: test, config: default'
+        type: euclidean_pearson
+        value: 82.4892721061365
+      - slice: 'dataset: C-MTEB/STSB, split: test, config: default'
+        type: euclidean_spearman
+        value: 82.72678504228253
+      - slice: 'dataset: C-MTEB/STSB, split: test, config: default'
+        type: manhattan_pearson
+        value: 82.4770861422454
+      - slice: 'dataset: C-MTEB/STSB, split: test, config: default'
+        type: manhattan_spearman
+        value: 82.71137469783162
+      - slice: 'dataset: C-MTEB/T2Reranking, split: dev, config: default'
+        type: map
+        value: 66.6159547610527
+      - slice: 'dataset: C-MTEB/T2Reranking, split: dev, config: default'
+        type: mrr
+        value: 76.35739406347057
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: map_at_1
+        value: 27.878999999999998
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: map_at_10
+        value: 77.517
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: map_at_100
+        value: 81.139
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 81.204
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: map_at_3
+        value: 54.728
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: map_at_5
+        value: 67.128
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 90.509
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 92.964
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 93.045
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 93.048
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 92.551
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 92.81099999999999
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 90.509
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 85.075
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 88.656
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 89.25699999999999
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 86.58200000000001
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 85.138
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 90.509
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 42.05
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 5.013999999999999
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.516
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 75.551
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 63.239999999999995
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 27.878999999999998
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 83.941
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 95.568
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 98.55000000000001
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 56.374
+      - slice: 'dataset: C-MTEB/T2Retrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 70.435
+      - slice: 'dataset: C-MTEB/TNews-classification, split: validation, config: default'
+        type: accuracy
+        value: 53.687
+      - slice: 'dataset: C-MTEB/TNews-classification, split: validation, config: default'
+        type: f1
+        value: 51.86911933364655
+      - slice: 'dataset: C-MTEB/ThuNewsClusteringP2P, split: test, config: default'
+        type: v_measure
+        value: 74.65887489872564
+      - slice: 'dataset: C-MTEB/ThuNewsClusteringS2S, split: test, config: default'
+        type: v_measure
+        value: 69.00410995984436
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: map_at_1
+        value: 59.4
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: map_at_10
+        value: 69.214
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: map_at_100
+        value: 69.72699999999999
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: map_at_1000
+        value: 69.743
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: map_at_3
+        value: 67.717
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: map_at_5
+        value: 68.782
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: mrr_at_1
+        value: 59.4
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: mrr_at_10
+        value: 69.214
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: mrr_at_100
+        value: 69.72699999999999
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: mrr_at_1000
+        value: 69.743
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: mrr_at_3
+        value: 67.717
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: mrr_at_5
+        value: 68.782
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: ndcg_at_1
+        value: 59.4
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: ndcg_at_10
+        value: 73.32300000000001
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: ndcg_at_100
+        value: 75.591
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 75.98700000000001
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: ndcg_at_3
+        value: 70.339
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: ndcg_at_5
+        value: 72.246
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: precision_at_1
+        value: 59.4
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: precision_at_10
+        value: 8.59
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: precision_at_100
+        value: 0.96
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.099
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: precision_at_3
+        value: 25.967000000000002
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: precision_at_5
+        value: 16.5
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: recall_at_1
+        value: 59.4
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: recall_at_10
+        value: 85.9
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: recall_at_100
+        value: 96
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: recall_at_1000
+        value: 99.1
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: recall_at_3
+        value: 77.9
+      - slice: 'dataset: C-MTEB/VideoRetrieval, split: dev, config: default'
+        type: recall_at_5
+        value: 82.5
+      - slice: 'dataset: C-MTEB/waimai-classification, split: test, config: default'
+        type: accuracy
+        value: 88.53
+      - slice: 'dataset: C-MTEB/waimai-classification, split: test, config: default'
+        type: ap
+        value: 73.56216166534062
+      - slice: 'dataset: C-MTEB/waimai-classification, split: test, config: default'
+        type: f1
+        value: 87.06093694294485
+    tags:
+    - sentence-transformers
+    - pytorch
+    - safetensors
+    - bert
+    - mteb
+    - feature-extraction
+    - sentence-similarity
+    - arxiv:2205.13147
+    - model-index
+    - autotrain_compatible
+    - text-embeddings-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/aspire/acge_text_embedding
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: sentence-similarity
+relations:
+- uid: 11d3c3d2-ecf9-49c7-8d00-02c291e5a7fe
+  type: Relationship
+  properties: {}
+  from_: 2a1f5e4f-1dfd-4e2e-a845-1b0ba9c9ca4c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aspire_acge_text_embedding.json
+  relationship_type: annotatedBy
+- uid: ee76742e-bd30-431d-8c15-73709363d3c2
+  type: Relationship
+  properties: {}
+  from_: e6ec090b-68ec-4a23-aeaa-da2fedf5b812
+  to_:
+  - ebd28b0b-b433-49c4-97ad-c80fb67f2ddd
+  relationship_type: uses
+- uid: 95112195-c5a0-43fb-a16e-eab4aa1e4600
+  type: Relationship
+  properties: {}
+  from_: 2a1f5e4f-1dfd-4e2e-a845-1b0ba9c9ca4c
+  to_:
+  - e6ec090b-68ec-4a23-aeaa-da2fedf5b812
+  relationship_type: produces

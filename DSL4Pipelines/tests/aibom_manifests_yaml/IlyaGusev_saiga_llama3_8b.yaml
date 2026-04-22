@@ -1,0 +1,107 @@
+uid: 4abf1d0a-cf23-440a-aec2-378a8c544ed3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/IlyaGusev_saiga_llama3_8b.json
+  type: SoftwareFile
+  name: IlyaGusev_saiga_llama3_8b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:41e298ed-34c6-4ab1-80e7-c1c5d2ad0594
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/IlyaGusev_saiga_llama3_8b.json
+    type: ExternalReference
+  languages: []
+- uid: 593a86cb-5b9c-45da-ba59-b145306e5322
+  type: Data
+  properties:
+    bom-ref: IlyaGusev/saiga_scored-72f57be8-e186-5dd7-8ebb-47de1d605e32
+    name: IlyaGusev/saiga_scored
+    content_url: https://huggingface.co/datasets/IlyaGusev/saiga_scored
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: IlyaGusev/saiga_scored-72f57be8-e186-5dd7-8ebb-47de1d605e32
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: a057d8ec-c3ba-4d2f-9333-ba34e6da0943
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: fcf614bd-f2b6-4e4c-9b78-89866df916b4
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:09.630867+00:00'
+    bom-ref: IlyaGusev/saiga_llama3_8b-0cb6bc2f-dc9c-584c-8dbb-68f82fae76ff
+    name: IlyaGusev/saiga_llama3_8b
+    authors:
+    - name: IlyaGusev
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - ru
+    - dataset:IlyaGusev/saiga_scored
+    - doi:10.57967/hf/2368
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+    url: https://llama.meta.com/llama3/license/
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/IlyaGusev/saiga_llama3_8b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: d02b4e7e-4109-4fdc-b64a-6e100b80328c
+  type: Relationship
+  properties: {}
+  from_: 4abf1d0a-cf23-440a-aec2-378a8c544ed3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/IlyaGusev_saiga_llama3_8b.json
+  relationship_type: annotatedBy
+- uid: 659dee30-0d6c-4c8d-8fbc-97c7a90bb71d
+  type: Relationship
+  properties: {}
+  from_: fcf614bd-f2b6-4e4c-9b78-89866df916b4
+  to_:
+  - 593a86cb-5b9c-45da-ba59-b145306e5322
+  relationship_type: uses
+- uid: c2334fd4-d3e0-4a81-88b9-45a147c9a99b
+  type: Relationship
+  properties: {}
+  from_: fcf614bd-f2b6-4e4c-9b78-89866df916b4
+  to_:
+  - a057d8ec-c3ba-4d2f-9333-ba34e6da0943
+  relationship_type: uses
+- uid: a1f5fe48-18c8-4370-9a36-2b0d15e62f13
+  type: Relationship
+  properties: {}
+  from_: 4abf1d0a-cf23-440a-aec2-378a8c544ed3
+  to_:
+  - fcf614bd-f2b6-4e4c-9b78-89866df916b4
+  relationship_type: produces

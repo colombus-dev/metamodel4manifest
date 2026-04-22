@@ -1,0 +1,120 @@
+uid: 010ac754-abd2-47d1-b53a-8e2df1c71f29
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-timeseries-ttm-r1.json
+  type: SoftwareFile
+  name: ibm-granite_granite-timeseries-ttm-r1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f8fb36a0-0f87-450d-8a75-95cde1616944
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-timeseries-ttm-r1.json
+    type: ExternalReference
+  languages: []
+- uid: 82450aa1-9aff-45d1-9161-054bf36e55e2
+  type: SoftwareFile
+  name: granite-tsfm
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f04ea43f-c425-44db-a077-4244b0eb0f59
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:09.981110+00:00'
+    bom-ref: ibm-granite/granite-timeseries-ttm-r1-c11d1baa-919c-53d7-bb4e-e5702ff8e5b7
+    name: ibm-granite/granite-timeseries-ttm-r1
+    authors:
+    - name: ibm-granite
+    architectureFamily: tinytimemixer
+    modelArchitecture: TinyTimeMixerForPrediction
+    description: '## Model Description
+
+
+      TTM falls under the category of “focused pre-trained models”, wherein each pre-trained TTM is tailored for a particular forecasting
+
+      setting (governed by the context length and forecast length). Instead of building one massive model supporting all forecasting settings,
+
+      we opt for the approach of constructing smaller pre-trained models, each focusing on a specific forecasting setting, thereby
+
+      yielding more accurate results. Furthermore, this approach ensures that our models remain extremely small and exceptionally fast,
+
+      facilitating easy deployment without demanding a ton of resources.
+
+
+      Hence, in this model card, we plan to release several pre-trained
+
+      TTMs that can cater to many common forecasting settings in practice. Additionally, we have released our source code along with
+
+      our pretraining scripts that users can utilize to pretrain models on their own. Pretraining TTMs is very easy and fast, taking
+
+      only 3-6 hours using 6 A100 GPUs, as opposed to several days or weeks in traditional approaches.
+
+
+      Each pre-trained model will be released in a different branch name in this model card. Kindly access the required model using our
+
+      getting started [notebook](https://github.com/IBM/tsfm/blob/main/notebooks/hfdemo/ttm_getting_started.ipynb) mentioning the branch name.
+
+
+      '
+    tags:
+    - granite-tsfm
+    - safetensors
+    - tinytimemixer
+    - time series
+    - forecasting
+    - pretrained models
+    - foundation models
+    - time series foundation models
+    - time-series
+    - time-series-forecasting
+    - arxiv:2401.03955
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ibm-granite/granite-timeseries-ttm-r1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: time-series-forecasting
+  consideration:
+    use_cases: '## Uses
+
+
+      ```'
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 5fe77e7c-7132-43f0-abe7-2b4748a74269
+  type: Relationship
+  properties: {}
+  from_: 010ac754-abd2-47d1-b53a-8e2df1c71f29
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-timeseries-ttm-r1.json
+  relationship_type: annotatedBy
+- uid: 1403c5ad-c722-412b-9127-f004927009c8
+  type: Relationship
+  properties: {}
+  from_: f04ea43f-c425-44db-a077-4244b0eb0f59
+  to_:
+  - 82450aa1-9aff-45d1-9161-054bf36e55e2
+  relationship_type: uses
+- uid: 002de1f6-8b55-4165-a895-08e26edda621
+  type: Relationship
+  properties: {}
+  from_: 010ac754-abd2-47d1-b53a-8e2df1c71f29
+  to_:
+  - f04ea43f-c425-44db-a077-4244b0eb0f59
+  relationship_type: produces

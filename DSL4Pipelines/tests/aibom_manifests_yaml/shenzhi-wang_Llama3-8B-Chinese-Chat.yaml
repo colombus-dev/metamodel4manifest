@@ -1,0 +1,120 @@
+uid: 7d8a04fd-646b-4d74-87b3-fa0a51d0a8fc
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/shenzhi-wang_Llama3-8B-Chinese-Chat.json
+  type: SoftwareFile
+  name: shenzhi-wang_Llama3-8B-Chinese-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:26dfe02e-bc7b-4215-8821-466c6156ee36
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/shenzhi-wang_Llama3-8B-Chinese-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: 06300c63-c469-4bf3-b258-856e2fed64dc
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d4cd324a-de0f-4acf-8e2b-ad44859cb064
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3-8B-Instruct
+    type: ExternalReference
+  languages: []
+- uid: 8cbbe121-01f9-4ddc-ba40-506942b9b001
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:19.203739+00:00'
+    bom-ref: shenzhi-wang/Llama3-8B-Chinese-Chat-7071ca73-b8a7-55a7-88a3-57f2e07a1dc3
+    name: shenzhi-wang/Llama3-8B-Chinese-Chat
+    authors:
+    - name: shenzhi-wang
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '# Model Summary
+
+
+      Llama3-8B-Chinese-Chat is an instruction-tuned language model for Chinese & English users with various abilities such as roleplaying & tool-using built upon the Meta-Llama-3-8B-Instruct model.
+
+
+      Developers: [Shenzhi Wang](https://shenzhi-wang.netlify.app)\*, [Yaowei Zheng](https://github.com/hiyouga)\*, Guoyin Wang (in.ai), Shiji Song, Gao Huang. (\*: Equal Contribution)
+
+
+      - License: [Llama-3 License](https://llama.meta.com/llama3/license/)
+
+      - Base Model: Meta-Llama-3-8B-Instruct
+
+      - Model Size: 8.03B
+
+      - Context length: 8K
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - llama-factory
+    - orpo
+    - conversational
+    - en
+    - zh
+    - base_model:meta-llama/Meta-Llama-3-8B-Instruct
+    - base_model:finetune:meta-llama/Meta-Llama-3-8B-Instruct
+    - doi:10.57967/hf/2316
+    - license:llama3
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 7e11c25c-6442-4aef-9727-2c77c1902b60
+  type: Relationship
+  properties: {}
+  from_: 7d8a04fd-646b-4d74-87b3-fa0a51d0a8fc
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/shenzhi-wang_Llama3-8B-Chinese-Chat.json
+  relationship_type: annotatedBy
+- uid: 85e21cce-cb9e-49b4-ab6f-a96c527c4955
+  type: Relationship
+  properties: {}
+  from_: 8cbbe121-01f9-4ddc-ba40-506942b9b001
+  to_:
+  - 06300c63-c469-4bf3-b258-856e2fed64dc
+  relationship_type: uses
+- uid: 8cbcc631-9e83-4fe7-95c3-aedc99920709
+  type: Relationship
+  properties: {}
+  from_: 8cbbe121-01f9-4ddc-ba40-506942b9b001
+  to_:
+  - d4cd324a-de0f-4acf-8e2b-ad44859cb064
+  relationship_type: derivedFrom
+- uid: 5f8e49c6-8f4d-4e3f-ba5a-6124e8f28033
+  type: Relationship
+  properties: {}
+  from_: 7d8a04fd-646b-4d74-87b3-fa0a51d0a8fc
+  to_:
+  - 8cbbe121-01f9-4ddc-ba40-506942b9b001
+  relationship_type: produces

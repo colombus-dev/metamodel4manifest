@@ -1,0 +1,129 @@
+uid: 098ad699-5e42-4c28-9d6f-86799f54a7c7
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/eachadea_vicuna-13b-1.1.json
+  type: SoftwareFile
+  name: eachadea_vicuna-13b-1.1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ed00d003-e7a4-4699-94ad-e99ecf8999aa
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/eachadea_vicuna-13b-1.1.json
+    type: ExternalReference
+  languages: []
+- uid: 30a8b1a3-ac5f-41dc-9f0e-87672c4d3040
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c20d0a7f-cf90-487d-a0cf-273d009d1ee5
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:40.233176+00:00'
+    bom-ref: eachadea/vicuna-13b-1.1-9dbf8618-290b-5627-873c-bff0fd0f22b1
+    name: eachadea/vicuna-13b-1.1
+    authors:
+    - name: eachadea
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model details
+
+
+      **Model type:**
+
+      Vicuna is an open-source chatbot trained by fine-tuning LLaMA on user-shared conversations collected from ShareGPT.
+
+      It is an auto-regressive language model, based on the transformer architecture.
+
+
+      **Model date:**
+
+      Vicuna was trained between March 2023 and April 2023.
+
+
+      **Organizations developing the model:**
+
+      The Vicuna team with members from UC Berkeley, CMU, Stanford, and UC San Diego.
+
+
+      **Paper or resources for more information:**
+
+      https://vicuna.lmsys.org/
+
+
+      **License:**
+
+      Apache License 2.0
+
+
+      **Where to send questions or comments about the model:**
+
+      https://github.com/lm-sys/FastChat/issues
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/eachadea/vicuna-13b-1.1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended use
+
+      **Primary intended uses:**
+
+      The primary use of Vicuna is research on large language models and chatbots.
+
+
+      **Primary intended users:**
+
+      The primary intended users of the model are researchers and hobbyists in natural language processing, machine learning, and artificial intelligence.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 4ee283f4-9009-4507-b7f5-d6f04f0480f4
+  type: Relationship
+  properties: {}
+  from_: 098ad699-5e42-4c28-9d6f-86799f54a7c7
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/eachadea_vicuna-13b-1.1.json
+  relationship_type: annotatedBy
+- uid: 42ef8069-3c29-4463-bff7-3cd8bec212f3
+  type: Relationship
+  properties: {}
+  from_: c20d0a7f-cf90-487d-a0cf-273d009d1ee5
+  to_:
+  - 30a8b1a3-ac5f-41dc-9f0e-87672c4d3040
+  relationship_type: uses
+- uid: 0933c24d-70fb-4464-a24a-6b51e27adbfe
+  type: Relationship
+  properties: {}
+  from_: 098ad699-5e42-4c28-9d6f-86799f54a7c7
+  to_:
+  - c20d0a7f-cf90-487d-a0cf-273d009d1ee5
+  relationship_type: produces

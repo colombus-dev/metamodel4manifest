@@ -1,0 +1,381 @@
+uid: 9c7eb092-eee6-4b81-bb65-2677dec9a20b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_Dolphin3.0-Llama3.1-8B.json
+  type: SoftwareFile
+  name: cognitivecomputations_Dolphin3.0-Llama3.1-8B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fd9a1e56-2714-4f3a-a4e5-6c064316ec71
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_Dolphin3.0-Llama3.1-8B.json
+    type: ExternalReference
+  languages: []
+- uid: 2c5dae6a-fbda-4fe6-99a3-643b9133e0d2
+  type: Data
+  properties:
+    bom-ref: OpenCoder-LLM/opc-sft-stage1-f0572249-17d5-5847-8e5a-72583934eca0
+    name: OpenCoder-LLM/opc-sft-stage1
+    content_url: https://huggingface.co/datasets/OpenCoder-LLM/opc-sft-stage1
+    configs: 'Name of the dataset subset: realuser_instruct {"split": "train", "path": "data/realuser_instruct-*"}'
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: OpenCoder-LLM/opc-sft-stage1-f0572249-17d5-5847-8e5a-72583934eca0
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 3234b48f-d969-434c-9ed4-bd600db1f208
+  type: Data
+  properties:
+    bom-ref: OpenCoder-LLM/opc-sft-stage2-d7e9795c-e343-5ebc-b785-9718e7d737e8
+    name: OpenCoder-LLM/opc-sft-stage2
+    content_url: https://huggingface.co/datasets/OpenCoder-LLM/opc-sft-stage2
+    configs: 'Name of the dataset subset: package_instruct {"split": "train", "path": "package_instruct/train-*"}'
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: OpenCoder-LLM/opc-sft-stage2-d7e9795c-e343-5ebc-b785-9718e7d737e8
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: abf3582b-2592-45fd-957d-00493b46842d
+  type: Data
+  properties:
+    bom-ref: microsoft/orca-agentinstruct-1M-v1-bbc92138-5aa0-5737-8ce6-93043b04b4dd
+    name: microsoft/orca-agentinstruct-1M-v1
+    content_url: https://huggingface.co/datasets/microsoft/orca-agentinstruct-1M-v1
+    task_categories: question-answering
+    size_categories: 1M<n<10M
+    configs: 'Name of the dataset subset: default {"split": "creative_content", "path": "data/creative_content-*"}, {"split": "text_modification", "path": "data/text_modification-*"}, {"split": "struct2text_flow", "path": "data/struct2text_flow-*"}, {"split": "rc", "path": "data/rc-*"}, {"split": "rag", "path": "data/rag-*"}, {"split": "text_extraction", "path": "data/text_extraction-*"}, {"split": "mcq", "path": "data/mcq-*"}, {"split": "follow_up", "path": "data/follow_up-*"}, {"split": "analytical_reasoning", "path": "data/analytical_reasoning-*"}, {"split": "fermi", "path": "data/fermi-*"}, {"split": "fs_cot_flow", "path": "data/fs_cot_flow-*"}, {"split": "code_", "path": "data/code_-*"}, {"split": "brain_teaser", "path": "data/brain_teaser-*"}, {"split": "text_classification", "path": "data/text_classification-*"}, {"split": "open_domain_qa", "path": "data/open_domain_qa-*"}'
+    license: cdla-permissive-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: microsoft/orca-agentinstruct-1M-v1-bbc92138-5aa0-5737-8ce6-93043b04b4dd
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 0abf4e28-7929-412c-b171-0e2409a069f2
+  type: Data
+  properties:
+    bom-ref: microsoft/orca-math-word-problems-200k-611afa9f-b6db-5b9f-9a51-598e4ce79d0e
+    name: microsoft/orca-math-word-problems-200k
+    content_url: https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k
+    task_categories: question-answering
+    size_categories: 100K<n<1M
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: microsoft/orca-math-word-problems-200k-611afa9f-b6db-5b9f-9a51-598e4ce79d0e
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 7af0b8ba-14b5-4eb8-b080-84a4a81a9f0d
+  type: Data
+  properties:
+    bom-ref: NousResearch/hermes-function-calling-v1-a6d53a4d-e191-5d88-867f-4472e0bdc9f6
+    name: NousResearch/hermes-function-calling-v1
+    content_url: https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1
+    task_categories: text-generation, question-answering, feature-extraction
+    configs: 'Name of the dataset subset: json_mode_singleturn "j", "s", "o", "n", "-", "m", "o", "d", "e", "-", "s", "i", "n", "g", "l", "e", "t", "u", "r", "n", ".", "j", "s", "o", "n"'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: NousResearch/hermes-function-calling-v1-a6d53a4d-e191-5d88-867f-4472e0bdc9f6
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 746462cf-68b9-4e7d-8da6-fc15b8d08160
+  type: Data
+  properties:
+    bom-ref: AI-MO/NuminaMath-CoT-3aa976f5-9ca4-5435-8542-1a123856aafb
+    name: AI-MO/NuminaMath-CoT
+    content_url: https://huggingface.co/datasets/AI-MO/NuminaMath-CoT
+    task_categories: text-generation
+    pretty_name: NuminaMath CoT
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}, {"split": "test", "path": "data/test-*"}'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: AI-MO/NuminaMath-CoT-3aa976f5-9ca4-5435-8542-1a123856aafb
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: e27bcf42-4b03-40a6-a2b0-2287b1f0f016
+  type: Data
+  properties:
+    bom-ref: AI-MO/NuminaMath-TIR-7930ec33-be02-5b4c-9fd0-00effafbc6ce
+    name: AI-MO/NuminaMath-TIR
+    content_url: https://huggingface.co/datasets/AI-MO/NuminaMath-TIR
+    task_categories: text-generation
+    pretty_name: NuminaMath TIR
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}, {"split": "test", "path": "data/test-*"}'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: AI-MO/NuminaMath-TIR-7930ec33-be02-5b4c-9fd0-00effafbc6ce
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 5836796e-9ebd-45a2-9025-08ca2e51a16a
+  type: Data
+  properties:
+    bom-ref: allenai/tulu-3-sft-mixture-4f86da52-fbf0-52de-9b77-716bafb7e098
+    name: allenai/tulu-3-sft-mixture
+    content_url: https://huggingface.co/datasets/allenai/tulu-3-sft-mixture
+    task_categories: other
+    size_categories: 100K<n<1M
+    annotations_creators: crowdsourced, expert-generated, machine-generated
+    source_datasets: allenai/coconot, ai2-adapt-dev/flan_v2_converted, HuggingFaceH4/no_robots, OpenAssistant/oasst1, allenai/tulu-3-personas-math, allenai/tulu-3-sft-personas-math-grade, allenai/tulu-3-sft-personas-code, allenai/tulu-3-personas-algebra, allenai/tulu-3-sft-personas-instruction-following, AI-MO/NuminaMath-TIR, allenai/wildguardmix, allenai/wildjailbreak, allenai/tulu-3-hard-coded, CohereForAI/aya_dataset, allenai/WildChat-1M, LipengCS/Table-GPT, allenai/SciRIFF, theblackcat102/evol-codealpaca-v1
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: allenai/tulu-3-sft-mixture-4f86da52-fbf0-52de-9b77-716bafb7e098
+    type: ExternalReference
+  languages:
+  - amh, arb, ary, ars, acq, arz, apc, ben, ceb, dan, deu, ell, eng, eus, fil, fin, fra, gle, guj, hat, hau, hin, hun, ibo, ind, ita, jav, jpn, kan, kir, kor, kur, lit, mal, mar, mlg, msa, mya, nep, nld, nso, nya, pan, pes, pol, por, pus, rus, sin, sna, snd, som, spa, sqi, srp, sun, swa, swe, tam, tel, tha, tur, ukr, urd, vie, wol, xho, yor, zho, zul
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: e965cc45-f214-4d1c-b559-af9601e0de33
+  type: Data
+  properties:
+    bom-ref: cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1
+    name: cognitivecomputations/dolphin-coder
+    content_url: https://huggingface.co/datasets/cognitivecomputations/dolphin-coder
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 258bf87a-1fbe-44a8-943e-f8c87d2fb5c6
+  type: Data
+  properties:
+    bom-ref: HuggingFaceTB/smoltalk-0cc0e162-0f38-50bd-b5b0-169bcd97515b
+    name: HuggingFaceTB/smoltalk
+    content_url: https://huggingface.co/datasets/HuggingFaceTB/smoltalk
+    size_categories: 1M<n<10M
+    pretty_name: SmolTalk
+    configs: 'Name of the dataset subset: systemchats-30k {"split": "train", "path": "data/systemchats-30k/train-*"}, {"split": "test", "path": "data/systemchats-30k/test-*"}'
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: HuggingFaceTB/smoltalk-0cc0e162-0f38-50bd-b5b0-169bcd97515b
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 8560299c-0bbb-43cc-b142-01f37279e34d
+  type: Data
+  properties:
+    bom-ref: cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7
+    name: cognitivecomputations/samantha-data
+    content_url: https://huggingface.co/datasets/cognitivecomputations/samantha-data
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 1f077271-2334-4f14-8ff3-14b3f3522173
+  type: Data
+  properties:
+    bom-ref: m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053
+    name: m-a-p/CodeFeedback-Filtered-Instruction
+    content_url: https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction
+    task_categories: question-answering
+    size_categories: 10K<n<100K
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 128ba8e2-a9cc-4b24-ac47-b0f4e8834ffb
+  type: Data
+  properties:
+    bom-ref: m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f
+    name: m-a-p/Code-Feedback
+    content_url: https://huggingface.co/datasets/m-a-p/Code-Feedback
+    task_categories: question-answering
+    size_categories: 10K<n<100K
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 9255fe8c-6285-424a-90b0-975136a91c1e
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Llama-3.1-8B
+    type: ExternalReference
+  languages: []
+- uid: b26fd84e-a050-4afc-b8de-c05b5f54e1da
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:04.799707+00:00'
+    bom-ref: cognitivecomputations/Dolphin3.0-Llama3.1-8B-58cbd637-5b9a-5d29-a126-ae1817a90e1e
+    name: cognitivecomputations/Dolphin3.0-Llama3.1-8B
+    authors:
+    - name: cognitivecomputations
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - safetensors
+    - llama
+    - en
+    - dataset:OpenCoder-LLM/opc-sft-stage1
+    - dataset:OpenCoder-LLM/opc-sft-stage2
+    - dataset:microsoft/orca-agentinstruct-1M-v1
+    - dataset:microsoft/orca-math-word-problems-200k
+    - dataset:NousResearch/hermes-function-calling-v1
+    - dataset:AI-MO/NuminaMath-CoT
+    - dataset:AI-MO/NuminaMath-TIR
+    - dataset:allenai/tulu-3-sft-mixture
+    - dataset:cognitivecomputations/dolphin-coder
+    - dataset:HuggingFaceTB/smoltalk
+    - dataset:cognitivecomputations/samantha-data
+    - dataset:m-a-p/CodeFeedback-Filtered-Instruction
+    - dataset:m-a-p/Code-Feedback
+    - base_model:meta-llama/Llama-3.1-8B
+    - base_model:finetune:meta-llama/Llama-3.1-8B
+    - license:llama3.1
+    - region:us
+  license:
+    name: llama3.1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 8b527d33-cbdf-4f5d-9290-01540a945f29
+  type: Relationship
+  properties: {}
+  from_: 9c7eb092-eee6-4b81-bb65-2677dec9a20b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_Dolphin3.0-Llama3.1-8B.json
+  relationship_type: annotatedBy
+- uid: 642ae41a-6f82-4984-874e-f7d531cfc020
+  type: Relationship
+  properties: {}
+  from_: b26fd84e-a050-4afc-b8de-c05b5f54e1da
+  to_:
+  - 2c5dae6a-fbda-4fe6-99a3-643b9133e0d2
+  - 3234b48f-d969-434c-9ed4-bd600db1f208
+  - abf3582b-2592-45fd-957d-00493b46842d
+  - 0abf4e28-7929-412c-b171-0e2409a069f2
+  - 7af0b8ba-14b5-4eb8-b080-84a4a81a9f0d
+  - 746462cf-68b9-4e7d-8da6-fc15b8d08160
+  - e27bcf42-4b03-40a6-a2b0-2287b1f0f016
+  - 5836796e-9ebd-45a2-9025-08ca2e51a16a
+  - e965cc45-f214-4d1c-b559-af9601e0de33
+  - 258bf87a-1fbe-44a8-943e-f8c87d2fb5c6
+  - 8560299c-0bbb-43cc-b142-01f37279e34d
+  - 1f077271-2334-4f14-8ff3-14b3f3522173
+  - 128ba8e2-a9cc-4b24-ac47-b0f4e8834ffb
+  relationship_type: uses
+- uid: f86554f0-09c6-470b-b023-998c6eda03be
+  type: Relationship
+  properties: {}
+  from_: b26fd84e-a050-4afc-b8de-c05b5f54e1da
+  to_:
+  - 9255fe8c-6285-424a-90b0-975136a91c1e
+  relationship_type: derivedFrom
+- uid: 813d7543-6b79-49f6-bc1c-21745161f660
+  type: Relationship
+  properties: {}
+  from_: 9c7eb092-eee6-4b81-bb65-2677dec9a20b
+  to_:
+  - b26fd84e-a050-4afc-b8de-c05b5f54e1da
+  relationship_type: produces

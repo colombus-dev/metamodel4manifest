@@ -1,0 +1,124 @@
+uid: 699d839a-3a74-43e3-b5ee-0261cd4f70c7
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_GRIN-MoE.json
+  type: SoftwareFile
+  name: microsoft_GRIN-MoE.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:94af8b2c-588b-4060-b07a-ac0256f68786
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_GRIN-MoE.json
+    type: ExternalReference
+  languages: []
+- uid: 23eab3d0-f92c-4d8a-9602-4c3b5afea7ef
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: aac82521-f5db-4632-a49e-43b4b81f6a91
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:17.532088+00:00'
+    bom-ref: microsoft/GRIN-MoE-2b5a5ce3-2aa9-51b9-a7bb-363938d5cd49
+    name: microsoft/GRIN-MoE
+    authors:
+    - name: microsoft
+    architectureFamily: grinmoe
+    modelArchitecture: GRIN-MoE
+    description: '### Model
+
+      |                     |     |
+
+      |---------------------|-----|
+
+      | Developer           | Microsoft |
+
+      | Architecture        | GRIN MoE has 16x3.8B parameters with **6.6B active parameters** when using 2 experts. The model is a mixture-of-expert decoder-only Transformer model using the tokenizer with vocabulary size of 32,064. |
+
+      | Inputs              | Text. It is best suited for prompts using chat format. |
+
+      | Context length      | 4K tokens |
+
+      | GPUs                | 512 H100-80G |
+
+      | Training time       | 18 days |
+
+      | Training data       | 4.0T tokens |
+
+      | Outputs             | Generated text in response to the input |
+
+      | Dates               | Trained between April and June 2024 |
+
+      | Status              | This is a static model trained on an offline dataset with cutoff date October 2023 for publicly available data. Future versions of the tuned models may be released as we improve models. |
+
+      | Supported languages | English |
+
+      | Release date        | Sep 2024 |
+
+      | License             | MIT |
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - grinmoe
+    - nlp
+    - code
+    - text-generation
+    - conversational
+    - custom_code
+    - en
+    - arxiv:2409.12136
+    - arxiv:2404.14219
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/GRIN-MoE
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 4bc17a9a-4913-4438-9599-cc061d755d16
+  type: Relationship
+  properties: {}
+  from_: 699d839a-3a74-43e3-b5ee-0261cd4f70c7
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_GRIN-MoE.json
+  relationship_type: annotatedBy
+- uid: bd161b83-669c-4768-8379-d7a2123e18ec
+  type: Relationship
+  properties: {}
+  from_: aac82521-f5db-4632-a49e-43b4b81f6a91
+  to_:
+  - 23eab3d0-f92c-4d8a-9602-4c3b5afea7ef
+  relationship_type: uses
+- uid: 553992cf-0b32-4a6f-a6f4-1a494f488119
+  type: Relationship
+  properties: {}
+  from_: 699d839a-3a74-43e3-b5ee-0261cd4f70c7
+  to_:
+  - aac82521-f5db-4632-a49e-43b4b81f6a91
+  relationship_type: produces

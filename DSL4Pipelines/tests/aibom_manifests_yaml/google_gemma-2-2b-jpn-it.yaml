@@ -1,0 +1,98 @@
+uid: 2ade3fe2-c8ae-4eff-ae0e-b6cc1ded691c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_gemma-2-2b-jpn-it.json
+  type: SoftwareFile
+  name: google_gemma-2-2b-jpn-it.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:b61073e1-c12d-4c45-b4ec-aba73c534de8
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_gemma-2-2b-jpn-it.json
+    type: ExternalReference
+  languages: []
+- uid: 44b722b9-a048-4782-b54c-9c806ecff006
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 95992a32-df39-479c-b125-d91cb1ee30d0
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: google/gemma-2-2b-it
+    type: ExternalReference
+  languages: []
+- uid: cc828c3a-6285-47a1-a5fb-7c410c853835
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:28.007523+00:00'
+    bom-ref: google/gemma-2-2b-jpn-it-735759e3-61de-569f-8f2b-36865445de87
+    name: google/gemma-2-2b-jpn-it
+    authors:
+    - name: google
+    architectureFamily: gemma2
+    modelArchitecture: Gemma2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - gemma2
+    - text-generation
+    - conversational
+    - ja
+    - base_model:google/gemma-2-2b-it
+    - base_model:finetune:google/gemma-2-2b-it
+    - license:gemma
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: gemma
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google/gemma-2-2b-jpn-it
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1582f053-553f-462f-a0c2-0ab262a56271
+  type: Relationship
+  properties: {}
+  from_: 2ade3fe2-c8ae-4eff-ae0e-b6cc1ded691c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_gemma-2-2b-jpn-it.json
+  relationship_type: annotatedBy
+- uid: b176f8a1-50a4-478c-bd72-b8777b137a37
+  type: Relationship
+  properties: {}
+  from_: cc828c3a-6285-47a1-a5fb-7c410c853835
+  to_:
+  - 44b722b9-a048-4782-b54c-9c806ecff006
+  relationship_type: uses
+- uid: 81247b29-c36c-4324-b6fc-d84d59fb55d0
+  type: Relationship
+  properties: {}
+  from_: cc828c3a-6285-47a1-a5fb-7c410c853835
+  to_:
+  - 95992a32-df39-479c-b125-d91cb1ee30d0
+  relationship_type: derivedFrom
+- uid: a03013e1-211b-4db8-a49e-2e180c716874
+  type: Relationship
+  properties: {}
+  from_: 2ade3fe2-c8ae-4eff-ae0e-b6cc1ded691c
+  to_:
+  - cc828c3a-6285-47a1-a5fb-7c410c853835
+  relationship_type: produces

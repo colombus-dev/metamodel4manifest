@@ -1,0 +1,131 @@
+uid: 3ccf0a1b-9a5c-4505-b951-16676c8b175e
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/uer_gpt2-chinese-cluecorpussmall.json
+  type: SoftwareFile
+  name: uer_gpt2-chinese-cluecorpussmall.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3ceed5e5-3007-4fdc-a381-e86b833f2b8f
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/uer_gpt2-chinese-cluecorpussmall.json
+    type: ExternalReference
+  languages: []
+- uid: 374e4854-07fb-4285-b9b8-391868604a49
+  type: Data
+  properties:
+    bom-ref: CLUECorpusSmall-80811f90-1d7c-56d2-a254-c999cd741d2c
+    name: CLUECorpusSmall
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: CLUECorpusSmall-80811f90-1d7c-56d2-a254-c999cd741d2c
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: bf02d59c-31c7-48f6-9c30-025bf917ff26
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 54f05f22-3c1b-4982-b379-571261722d0e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:33.523353+00:00'
+    bom-ref: uer/gpt2-chinese-cluecorpussmall-38537956-c9dc-5bc5-9641-8151c05225e3
+    name: uer/gpt2-chinese-cluecorpussmall
+    authors:
+    - name: uer
+    architectureFamily: gpt2
+    modelArchitecture: GPT2LMHeadModel
+    description: '## Model description
+
+
+      The set of GPT2 models, except for GPT2-xlarge model, are pre-trained by [UER-py](https://github.com/dbiir/UER-py/), which is introduced in [this paper](https://arxiv.org/abs/1909.05658). The GPT2-xlarge model is pre-trained by [TencentPretrain](https://github.com/Tencent/TencentPretrain) introduced in [this paper](https://arxiv.org/abs/2212.06385), which inherits UER-py to support models with parameters above one billion, and extends it to a multimodal pre-training framework. Besides, the other models could also be pre-trained by TencentPretrain.
+
+
+      The model is used to generate Chinese texts. You can download the set of Chinese GPT2 models either from the [UER-py Modelzoo page](https://github.com/dbiir/UER-py/wiki/Modelzoo), or via HuggingFace from the links below:
+
+
+      |                   |              Link              |
+
+      | ----------------- | :----------------------------: |
+
+      | **GPT2-distil** | [**L=6/H=768**][distil] |
+
+      | **GPT2**  | [**L=12/H=768**][base] |
+
+      | **GPT2-medium**  | [**L=24/H=1024**][medium] |
+
+      | **GPT2-large**  | [**L=36/H=1280**][large] |
+
+      | **GPT2-xlarge**  | [**L=48/H=1600**][xlarge] |
+
+
+      Note that the 6-layer model is called GPT2-distil model because it follows the configuration of [distilgpt2](https://huggingface.co/distilgpt2), and the pre-training does not involve the supervision of larger models.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - gpt2
+    - text-generation
+    - zh
+    - dataset:CLUECorpusSmall
+    - arxiv:1909.05658
+    - arxiv:2212.06385
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/uer/gpt2-chinese-cluecorpussmall
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 421df7af-dae2-46b7-8038-4ffb3e5020e8
+  type: Relationship
+  properties: {}
+  from_: 3ccf0a1b-9a5c-4505-b951-16676c8b175e
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/uer_gpt2-chinese-cluecorpussmall.json
+  relationship_type: annotatedBy
+- uid: bf8ad8a1-e42f-415d-9d15-ff50932687a6
+  type: Relationship
+  properties: {}
+  from_: 54f05f22-3c1b-4982-b379-571261722d0e
+  to_:
+  - 374e4854-07fb-4285-b9b8-391868604a49
+  relationship_type: uses
+- uid: f625a61f-b697-4a20-98bc-5a7be80bb535
+  type: Relationship
+  properties: {}
+  from_: 54f05f22-3c1b-4982-b379-571261722d0e
+  to_:
+  - bf02d59c-31c7-48f6-9c30-025bf917ff26
+  relationship_type: uses
+- uid: 41cb8739-d4e2-43a0-b190-93ac0e9d457d
+  type: Relationship
+  properties: {}
+  from_: 3ccf0a1b-9a5c-4505-b951-16676c8b175e
+  to_:
+  - 54f05f22-3c1b-4982-b379-571261722d0e
+  relationship_type: produces

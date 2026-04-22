@@ -1,0 +1,111 @@
+uid: 4acd8912-c828-4c3b-9d6f-4769dc597462
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fnlp_moss-moon-003-sft.json
+  type: SoftwareFile
+  name: fnlp_moss-moon-003-sft.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ddafc0f1-f0b2-4a33-ae2f-d07f222855ba
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fnlp_moss-moon-003-sft.json
+    type: ExternalReference
+  languages: []
+- uid: 947d1a6a-8539-47ec-b465-a20cc2344558
+  type: Data
+  properties:
+    bom-ref: fnlp/moss-002-sft-data-4c2b4911-0a12-5bd0-a67b-642849c3e071
+    name: fnlp/moss-002-sft-data
+    content_url: https://huggingface.co/datasets/fnlp/moss-002-sft-data
+    task_categories: conversational, text-generation
+    size_categories: 1M<n<10M
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: fnlp/moss-002-sft-data-4c2b4911-0a12-5bd0-a67b-642849c3e071
+    type: ExternalReference
+  languages:
+  - en, zh
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: edf20c88-f4d8-45d9-9117-bedb9a497375
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b6b615a3-fd9e-4093-ab86-df1a3d8ad9b0
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:54.883141+00:00'
+    bom-ref: fnlp/moss-moon-003-sft-8813d1e8-7d69-5dd5-9e8f-5477c85798f1
+    name: fnlp/moss-moon-003-sft
+    authors:
+    - name: fnlp
+    architectureFamily: moss
+    modelArchitecture: MossForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - moss
+    - text-generation
+    - llm
+    - custom_code
+    - en
+    - zh
+    - dataset:fnlp/moss-002-sft-data
+    - arxiv:2203.13474
+    - license:agpl-3.0
+    - autotrain_compatible
+    - region:us
+  license:
+    id: AGPL-3.0
+    url: https://spdx.org/licenses/AGPL-3.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/fnlp/moss-moon-003-sft
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: c4be72ec-300c-4beb-9b27-d09fbfa62859
+  type: Relationship
+  properties: {}
+  from_: 4acd8912-c828-4c3b-9d6f-4769dc597462
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fnlp_moss-moon-003-sft.json
+  relationship_type: annotatedBy
+- uid: e47607fc-85e6-49c6-a7de-0d98b70e68f9
+  type: Relationship
+  properties: {}
+  from_: b6b615a3-fd9e-4093-ab86-df1a3d8ad9b0
+  to_:
+  - 947d1a6a-8539-47ec-b465-a20cc2344558
+  relationship_type: uses
+- uid: 3e4251db-4ef3-4f15-ad29-07d40c468a08
+  type: Relationship
+  properties: {}
+  from_: b6b615a3-fd9e-4093-ab86-df1a3d8ad9b0
+  to_:
+  - edf20c88-f4d8-45d9-9117-bedb9a497375
+  relationship_type: uses
+- uid: 6d7ae336-6241-4739-9b6d-cd34360926ce
+  type: Relationship
+  properties: {}
+  from_: 4acd8912-c828-4c3b-9d6f-4769dc597462
+  to_:
+  - b6b615a3-fd9e-4093-ab86-df1a3d8ad9b0
+  relationship_type: produces

@@ -1,0 +1,80 @@
+uid: a8c0d764-e52c-4efa-af68-6fb5bad16b51
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/taide_TAIDE-LX-7B-Chat.json
+  type: SoftwareFile
+  name: taide_TAIDE-LX-7B-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:78bf795c-9e4e-4196-a949-5bfdb621245b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/taide_TAIDE-LX-7B-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: f652fb3d-9052-410d-83d9-fb61ebf9b31b
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 92926450-a08d-4987-a63c-26ac67b002c5
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:14.103490+00:00'
+    bom-ref: taide/TAIDE-LX-7B-Chat-1ed8812b-3a5a-5fe6-920d-964ab1b42980
+    name: taide/TAIDE-LX-7B-Chat
+    authors:
+    - name: taide
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: taide-l-models-community-license-agreement
+    url: https://drive.google.com/file/d/1FcUZjbUH6jr4xoCyAronN_slLgcdhEUd/view
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/taide/TAIDE-LX-7B-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: da341279-f7a1-45e7-b5a4-345357c81d49
+  type: Relationship
+  properties: {}
+  from_: a8c0d764-e52c-4efa-af68-6fb5bad16b51
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/taide_TAIDE-LX-7B-Chat.json
+  relationship_type: annotatedBy
+- uid: 746a846a-c843-4d5b-982b-247022fd791f
+  type: Relationship
+  properties: {}
+  from_: 92926450-a08d-4987-a63c-26ac67b002c5
+  to_:
+  - f652fb3d-9052-410d-83d9-fb61ebf9b31b
+  relationship_type: uses
+- uid: 6b6fc703-d744-4470-9a18-b0e1f72d5ae9
+  type: Relationship
+  properties: {}
+  from_: a8c0d764-e52c-4efa-af68-6fb5bad16b51
+  to_:
+  - 92926450-a08d-4987-a63c-26ac67b002c5
+  relationship_type: produces

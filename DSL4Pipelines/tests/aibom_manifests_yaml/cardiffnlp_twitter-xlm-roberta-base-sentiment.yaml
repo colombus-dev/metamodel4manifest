@@ -1,0 +1,77 @@
+uid: 8e104c8f-05ec-473f-81a4-fb0931147a35
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cardiffnlp_twitter-xlm-roberta-base-sentiment.json
+  type: SoftwareFile
+  name: cardiffnlp_twitter-xlm-roberta-base-sentiment.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:540149ef-178e-4b0f-9a8e-e770c4e3fa37
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cardiffnlp_twitter-xlm-roberta-base-sentiment.json
+    type: ExternalReference
+  languages: []
+- uid: 506ffefd-7f5e-461a-b5e3-0c095077ea3c
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 1fb7acea-01df-4cad-93b9-2f992f91dddc
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:59.343591+00:00'
+    bom-ref: cardiffnlp/twitter-xlm-roberta-base-sentiment-ce7ba208-1513-5742-aef2-cccb4fd5d785
+    name: cardiffnlp/twitter-xlm-roberta-base-sentiment
+    authors:
+    - name: cardiffnlp
+    architectureFamily: xlm-roberta
+    modelArchitecture: XLMRobertaForSequenceClassification
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - xlm-roberta
+    - text-classification
+    - multilingual
+    - arxiv:2104.12250
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/cardiffnlp/twitter-xlm-roberta-base-sentiment
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-classification
+relations:
+- uid: 947eccb2-c52b-4760-8a12-3663346d29ad
+  type: Relationship
+  properties: {}
+  from_: 8e104c8f-05ec-473f-81a4-fb0931147a35
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cardiffnlp_twitter-xlm-roberta-base-sentiment.json
+  relationship_type: annotatedBy
+- uid: f46aae6d-8329-45db-ae77-0abd3cbd5dd4
+  type: Relationship
+  properties: {}
+  from_: 1fb7acea-01df-4cad-93b9-2f992f91dddc
+  to_:
+  - 506ffefd-7f5e-461a-b5e3-0c095077ea3c
+  relationship_type: uses
+- uid: 01c2f0d1-9341-449b-8b4c-f07b01ecf3bf
+  type: Relationship
+  properties: {}
+  from_: 8e104c8f-05ec-473f-81a4-fb0931147a35
+  to_:
+  - 1fb7acea-01df-4cad-93b9-2f992f91dddc
+  relationship_type: produces

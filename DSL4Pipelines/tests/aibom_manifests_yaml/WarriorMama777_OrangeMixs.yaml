@@ -1,0 +1,128 @@
+uid: 96975bf7-566a-4d4e-900f-ccc015dece22
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WarriorMama777_OrangeMixs.json
+  type: SoftwareFile
+  name: WarriorMama777_OrangeMixs.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2b0b65e6-4831-4b39-8733-514bd082ebda
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WarriorMama777_OrangeMixs.json
+    type: ExternalReference
+  languages: []
+- uid: cad38b52-028d-403d-93ac-64e2db5887ff
+  type: Data
+  properties:
+    bom-ref: Nerfgun3/bad_prompt-7d8f7d28-72d3-563d-80d6-5d31d3a022c2
+    name: Nerfgun3/bad_prompt
+    content_url: https://huggingface.co/datasets/Nerfgun3/bad_prompt
+    license: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Nerfgun3/bad_prompt-7d8f7d28-72d3-563d-80d6-5d31d3a022c2
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 034c2cf0-5bdf-4588-abc0-4af121cee13d
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 329c3a82-032b-49af-a465-61cac1e99063
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:07.996069+00:00'
+    bom-ref: WarriorMama777/OrangeMixs-d3aae189-c034-596b-95f5-092816510b58
+    name: WarriorMama777/OrangeMixs
+    authors:
+    - name: WarriorMama777
+    description: '### About
+
+
+      Features: high-quality, realistic textured illustrations can be generated.
+
+      There are two major changes from AOM2.
+
+
+      1: Models for NSFW such as _nsfw and _hard have been improved: the models after nsfw in AOM2 generated creepy realistic faces, muscles and ribs when using Hires.fix, even though they were animated characters. These have all been improved in AOM3.
+
+
+      e.g.: explanatory diagram by MEME : [GO TO MEME ZONE↓](#MEME_realface)
+
+
+      2: sfw/nsfw merged into one model. Originally, nsfw models were separated because adding NSFW content (models like NAI and gape) would change the face and cause the aforementioned problems. Now that those have been improved, the models can be packed into one.
+
+      In addition, thanks to excellent extensions such as [ModelToolkit](https://github.com/arenatemp/stable-diffusion-webui-model-toolkit
+
+      ), the model file size could be reduced (1.98 GB per model).
+
+
+
+      ![](https://github.com/WarriorMama777/imgup/raw/main/img/AOM3/AOM3_G_Full_2_comp002.webp "")
+
+
+      '
+    tags:
+    - diffusers
+    - stable-diffusion
+    - text-to-image
+    - dataset:Nerfgun3/bad_prompt
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/WarriorMama777/OrangeMixs
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 0c2882d8-056b-4337-b2d0-e6d7d1e83fb0
+  type: Relationship
+  properties: {}
+  from_: 96975bf7-566a-4d4e-900f-ccc015dece22
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WarriorMama777_OrangeMixs.json
+  relationship_type: annotatedBy
+- uid: 50253140-d6a6-4ef9-9720-5ddb9e8aa951
+  type: Relationship
+  properties: {}
+  from_: 329c3a82-032b-49af-a465-61cac1e99063
+  to_:
+  - cad38b52-028d-403d-93ac-64e2db5887ff
+  relationship_type: uses
+- uid: ff471d19-e4a6-4385-9d7b-4fe661302ec9
+  type: Relationship
+  properties: {}
+  from_: 329c3a82-032b-49af-a465-61cac1e99063
+  to_:
+  - 034c2cf0-5bdf-4588-abc0-4af121cee13d
+  relationship_type: uses
+- uid: 32a008e2-8313-423d-97d6-5061a540a8c6
+  type: Relationship
+  properties: {}
+  from_: 96975bf7-566a-4d4e-900f-ccc015dece22
+  to_:
+  - 329c3a82-032b-49af-a465-61cac1e99063
+  relationship_type: produces

@@ -1,0 +1,97 @@
+uid: d846cb7f-fe81-488a-aa57-b0a7ca19f57a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ValueFX9507_Tifa-DeepsexV2-7b-MGRPO-GGUF-Q4.json
+  type: SoftwareFile
+  name: ValueFX9507_Tifa-DeepsexV2-7b-MGRPO-GGUF-Q4.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:85c48c12-4259-47bd-8c91-1983951109b3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ValueFX9507_Tifa-DeepsexV2-7b-MGRPO-GGUF-Q4.json
+    type: ExternalReference
+  languages: []
+- uid: 0d7abfe8-7739-43bc-8411-eab4224b669b
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ef2c12e2-2489-44c2-afc0-df00759e0195
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: qwen/qwen7b
+    type: ExternalReference
+  languages: []
+- uid: e58b3aea-0826-48f3-a53c-4a487179d556
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:18.041588+00:00'
+    bom-ref: ValueFX9507/Tifa-DeepsexV2-7b-MGRPO-GGUF-Q4-5b8c6e4e-5921-5048-a478-af49a8eca0d1
+    name: ValueFX9507/Tifa-DeepsexV2-7b-MGRPO-GGUF-Q4
+    authors:
+    - name: ValueFX9507
+    tags:
+    - transformers
+    - gguf
+    - incremental-pretraining
+    - sft
+    - reinforcement-learning
+    - roleplay
+    - cot
+    - zh
+    - en
+    - license:apache-2.0
+    - endpoints_compatible
+    - region:us
+    - conversational
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ValueFX9507/Tifa-DeepsexV2-7b-MGRPO-GGUF-Q4
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: reinforcement-learning
+relations:
+- uid: 1df852a1-2ec6-4594-b522-e1c837964028
+  type: Relationship
+  properties: {}
+  from_: d846cb7f-fe81-488a-aa57-b0a7ca19f57a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ValueFX9507_Tifa-DeepsexV2-7b-MGRPO-GGUF-Q4.json
+  relationship_type: annotatedBy
+- uid: 527d3dda-d2f2-4348-a424-4b39078e9bc6
+  type: Relationship
+  properties: {}
+  from_: e58b3aea-0826-48f3-a53c-4a487179d556
+  to_:
+  - 0d7abfe8-7739-43bc-8411-eab4224b669b
+  relationship_type: uses
+- uid: f3d80240-39b3-45b3-808b-49af0134475b
+  type: Relationship
+  properties: {}
+  from_: e58b3aea-0826-48f3-a53c-4a487179d556
+  to_:
+  - ef2c12e2-2489-44c2-afc0-df00759e0195
+  relationship_type: derivedFrom
+- uid: e8f76941-6282-48b2-a7e7-10ddb88b441b
+  type: Relationship
+  properties: {}
+  from_: d846cb7f-fe81-488a-aa57-b0a7ca19f57a
+  to_:
+  - e58b3aea-0826-48f3-a53c-4a487179d556
+  relationship_type: produces

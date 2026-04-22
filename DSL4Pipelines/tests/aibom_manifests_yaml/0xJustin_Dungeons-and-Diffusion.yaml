@@ -1,0 +1,75 @@
+uid: 11c917fa-d567-4580-af24-27e89f7d1290
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/0xJustin_Dungeons-and-Diffusion.json
+  type: SoftwareFile
+  name: 0xJustin_Dungeons-and-Diffusion.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8c4f2ebf-a6db-461e-a31e-1efe2d95db99
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/0xJustin_Dungeons-and-Diffusion.json
+    type: ExternalReference
+  languages: []
+- uid: d0dc59e2-1222-43ef-887d-d1dfe04a962d
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 73f6c26b-6cb8-4fe2-8647-410237a6cf95
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:14.033142+00:00'
+    bom-ref: 0xJustin/Dungeons-and-Diffusion-94a42afb-ddca-5d9e-82e3-45cd0f6736f3
+    name: 0xJustin/Dungeons-and-Diffusion
+    authors:
+    - name: 0xJustin
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/0xJustin/Dungeons-and-Diffusion
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 868066d0-5b98-4e7a-9b89-2b09c0915445
+  type: Relationship
+  properties: {}
+  from_: 11c917fa-d567-4580-af24-27e89f7d1290
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/0xJustin_Dungeons-and-Diffusion.json
+  relationship_type: annotatedBy
+- uid: 62291fae-d7a4-42c6-ba3f-e4ce81dc54d6
+  type: Relationship
+  properties: {}
+  from_: 73f6c26b-6cb8-4fe2-8647-410237a6cf95
+  to_:
+  - d0dc59e2-1222-43ef-887d-d1dfe04a962d
+  relationship_type: uses
+- uid: 5138f305-64b0-402e-9add-46de3512d273
+  type: Relationship
+  properties: {}
+  from_: 11c917fa-d567-4580-af24-27e89f7d1290
+  to_:
+  - 73f6c26b-6cb8-4fe2-8647-410237a6cf95
+  relationship_type: produces

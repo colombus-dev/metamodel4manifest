@@ -1,0 +1,132 @@
+uid: cb63a46e-6ae4-4d99-b6f6-853c705c9dcb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Yarn-Mistral-7B-128k-GGUF.json
+  type: SoftwareFile
+  name: TheBloke_Yarn-Mistral-7B-128k-GGUF.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:eb58da1a-cac4-48b1-83d8-ca01b6b46f46
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Yarn-Mistral-7B-128k-GGUF.json
+    type: ExternalReference
+  languages: []
+- uid: 8574a259-4cb0-437f-ba3a-49fcab102d68
+  type: Data
+  properties:
+    bom-ref: emozilla/yarn-train-tokenized-16k-mistral-00d89cbb-db37-51e1-809b-9bb695d581b6
+    name: emozilla/yarn-train-tokenized-16k-mistral
+    content_url: https://huggingface.co/datasets/emozilla/yarn-train-tokenized-16k-mistral
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: emozilla/yarn-train-tokenized-16k-mistral-00d89cbb-db37-51e1-809b-9bb695d581b6
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f2b90184-a672-44da-ad78-3b0d331d1ffb
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f2e8738c-5a9b-4e91-a672-6cce033d156f
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: NousResearch/Yarn-Mistral-7b-128k
+    type: ExternalReference
+  languages: []
+- uid: bb34f15a-520b-40c9-a8be-a2657237a761
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:11.253975+00:00'
+    bom-ref: TheBloke/Yarn-Mistral-7B-128k-GGUF-18d9f9ef-db63-593b-92e9-0f46a5dd29cc
+    name: TheBloke/Yarn-Mistral-7B-128k-GGUF
+    authors:
+    - name: TheBloke
+    architectureFamily: mistral
+    description: '## Description
+
+
+      This repo contains GGUF format model files for [NousResearch''s Yarn Mistral 7B 128K](https://huggingface.co/NousResearch/Yarn-Mistral-7b-128k).
+
+
+      These files were quantised using hardware kindly provided by [Massed Compute](https://massedcompute.com/).
+
+
+      <!-- description end -->
+
+      <!-- README_GGUF.md-about-gguf start -->'
+    tags:
+    - transformers
+    - gguf
+    - mistral
+    - en
+    - dataset:emozilla/yarn-train-tokenized-16k-mistral
+    - arxiv:2309.00071
+    - base_model:NousResearch/Yarn-Mistral-7b-128k
+    - base_model:quantized:NousResearch/Yarn-Mistral-7b-128k
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/TheBloke/Yarn-Mistral-7B-128k-GGUF
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 2298cabb-9767-4116-80e9-2598c9e43048
+  type: Relationship
+  properties: {}
+  from_: cb63a46e-6ae4-4d99-b6f6-853c705c9dcb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Yarn-Mistral-7B-128k-GGUF.json
+  relationship_type: annotatedBy
+- uid: ff9de441-b5f1-4c8d-ad4e-a0fc84907692
+  type: Relationship
+  properties: {}
+  from_: bb34f15a-520b-40c9-a8be-a2657237a761
+  to_:
+  - 8574a259-4cb0-437f-ba3a-49fcab102d68
+  relationship_type: uses
+- uid: beb4d7eb-95be-41d0-b2c5-3ff904b5d26c
+  type: Relationship
+  properties: {}
+  from_: bb34f15a-520b-40c9-a8be-a2657237a761
+  to_:
+  - f2b90184-a672-44da-ad78-3b0d331d1ffb
+  relationship_type: uses
+- uid: c0533476-5757-4a1b-8f7a-7a67b1344f47
+  type: Relationship
+  properties: {}
+  from_: bb34f15a-520b-40c9-a8be-a2657237a761
+  to_:
+  - f2e8738c-5a9b-4e91-a672-6cce033d156f
+  relationship_type: derivedFrom
+- uid: 14934046-6173-4b9d-b62c-0d7d8bd0bdea
+  type: Relationship
+  properties: {}
+  from_: cb63a46e-6ae4-4d99-b6f6-853c705c9dcb
+  to_:
+  - bb34f15a-520b-40c9-a8be-a2657237a761
+  relationship_type: produces

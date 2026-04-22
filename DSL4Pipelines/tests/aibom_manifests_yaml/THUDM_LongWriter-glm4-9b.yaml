@@ -1,0 +1,109 @@
+uid: efe554b9-1bce-4e49-9a04-c14befceae2f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_LongWriter-glm4-9b.json
+  type: SoftwareFile
+  name: THUDM_LongWriter-glm4-9b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f0659341-b8b3-48e0-a8d3-80ebf0409e04
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_LongWriter-glm4-9b.json
+    type: ExternalReference
+  languages: []
+- uid: e622a4e4-4e2e-4bd7-8ee3-03500c6c2eb7
+  type: Data
+  properties:
+    bom-ref: THUDM/LongWriter-6k-7d931ac6-2c13-5e69-86c6-24ec53bf402a
+    name: THUDM/LongWriter-6k
+    content_url: https://huggingface.co/datasets/THUDM/LongWriter-6k
+    task_categories: text-generation
+    size_categories: 1K<n<10K
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: THUDM/LongWriter-6k-7d931ac6-2c13-5e69-86c6-24ec53bf402a
+    type: ExternalReference
+  languages:
+  - en, zh
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: bcc87df1-1024-4741-b920-c2047c614de0
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 368a76f1-f95f-40c1-86bf-ab1041f54457
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:15.774028+00:00'
+    bom-ref: THUDM/LongWriter-glm4-9b-a24bf550-4be9-554d-8894-a10767ad4c22
+    name: THUDM/LongWriter-glm4-9b
+    authors:
+    - name: THUDM
+    architectureFamily: chatglm
+    modelArchitecture: ChatGLMForConditionalGeneration
+    tags:
+    - transformers
+    - safetensors
+    - chatglm
+    - feature-extraction
+    - Long Context
+    - llama
+    - text-generation
+    - conversational
+    - custom_code
+    - en
+    - zh
+    - dataset:THUDM/LongWriter-6k
+    - arxiv:2408.07055
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/THUDM/LongWriter-glm4-9b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: e6c96cbd-d4e0-49a7-92c4-0ac84d40a5ff
+  type: Relationship
+  properties: {}
+  from_: efe554b9-1bce-4e49-9a04-c14befceae2f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_LongWriter-glm4-9b.json
+  relationship_type: annotatedBy
+- uid: 8e2ae5b3-8bd0-41bc-90da-8e0898d95450
+  type: Relationship
+  properties: {}
+  from_: 368a76f1-f95f-40c1-86bf-ab1041f54457
+  to_:
+  - e622a4e4-4e2e-4bd7-8ee3-03500c6c2eb7
+  relationship_type: uses
+- uid: 42c43375-4bed-474c-8107-d435c533feec
+  type: Relationship
+  properties: {}
+  from_: 368a76f1-f95f-40c1-86bf-ab1041f54457
+  to_:
+  - bcc87df1-1024-4741-b920-c2047c614de0
+  relationship_type: uses
+- uid: 11054a13-0bfb-49b6-8acf-9d78a1a15f70
+  type: Relationship
+  properties: {}
+  from_: efe554b9-1bce-4e49-9a04-c14befceae2f
+  to_:
+  - 368a76f1-f95f-40c1-86bf-ab1041f54457
+  relationship_type: produces

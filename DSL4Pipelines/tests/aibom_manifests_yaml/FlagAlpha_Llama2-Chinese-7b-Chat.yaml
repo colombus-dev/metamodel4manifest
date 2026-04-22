@@ -1,0 +1,82 @@
+uid: d24330a8-13cd-4b31-88ea-1bb4a7b657b0
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/FlagAlpha_Llama2-Chinese-7b-Chat.json
+  type: SoftwareFile
+  name: FlagAlpha_Llama2-Chinese-7b-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:723b9bc0-8c1d-4015-a79e-0b5c04da28a0
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/FlagAlpha_Llama2-Chinese-7b-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: 7c251918-11bb-4a17-b2b2-7f480ade8d18
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c2afb9d4-4320-4f58-81e2-9fe944458f86
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:36.168625+00:00'
+    bom-ref: FlagAlpha/Llama2-Chinese-7b-Chat-0d793936-712e-5ad5-a1d7-cc03f965376e
+    name: FlagAlpha/Llama2-Chinese-7b-Chat
+    authors:
+    - name: FlagAlpha
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - question-answering
+    - zh
+    - en
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/FlagAlpha/Llama2-Chinese-7b-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: question-answering
+relations:
+- uid: e83702db-5698-445d-a134-5c4e3184161f
+  type: Relationship
+  properties: {}
+  from_: d24330a8-13cd-4b31-88ea-1bb4a7b657b0
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/FlagAlpha_Llama2-Chinese-7b-Chat.json
+  relationship_type: annotatedBy
+- uid: 9a84b03d-0af1-4bfe-a57e-7a22e5ade838
+  type: Relationship
+  properties: {}
+  from_: c2afb9d4-4320-4f58-81e2-9fe944458f86
+  to_:
+  - 7c251918-11bb-4a17-b2b2-7f480ade8d18
+  relationship_type: uses
+- uid: 6f7bffe9-fb34-4a73-b8c7-c82927ded924
+  type: Relationship
+  properties: {}
+  from_: d24330a8-13cd-4b31-88ea-1bb4a7b657b0
+  to_:
+  - c2afb9d4-4320-4f58-81e2-9fe944458f86
+  relationship_type: produces

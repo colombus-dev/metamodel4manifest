@@ -1,0 +1,200 @@
+uid: 2ac52f37-94b3-41b9-a55e-dc0520e92325
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starcoder2-15b-instruct-v0.1.json
+  type: SoftwareFile
+  name: bigcode_starcoder2-15b-instruct-v0.1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:556916f3-4dd9-4fbc-9814-3845fc0996a0
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starcoder2-15b-instruct-v0.1.json
+    type: ExternalReference
+  languages: []
+- uid: e154bbae-d5fd-4457-a7d8-ebfcbb431607
+  type: Data
+  properties:
+    bom-ref: bigcode/self-oss-instruct-sc2-exec-filter-50k-87afcdf4-328e-5009-ba04-8150239e25f2
+    name: bigcode/self-oss-instruct-sc2-exec-filter-50k
+    content_url: https://huggingface.co/datasets/bigcode/self-oss-instruct-sc2-exec-filter-50k
+    pretty_name: StarCoder2-15b Self-Alignment Dataset (50K)
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/self-oss-instruct-sc2-exec-filter-50k-87afcdf4-328e-5009-ba04-8150239e25f2
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: e06525fa-d300-43db-be47-9a525c364b97
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 507fdd27-0782-4e57-8617-f4e4b5379e32
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: bigcode/starcoder2-15b
+    type: ExternalReference
+  languages: []
+- uid: 3d828708-0669-48a8-8bec-87fc43bb6752
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:35.264992+00:00'
+    bom-ref: bigcode/starcoder2-15b-instruct-v0.1-e7aea605-679e-5203-beb5-6bb2732ebe54
+    name: bigcode/starcoder2-15b-instruct-v0.1
+    authors:
+    - name: bigcode
+    architectureFamily: starcoder2
+    modelArchitecture: Starcoder2ForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: livecodebench-codegeneration'
+        type: pass@1
+        value: 20.4
+      - slice: 'dataset: livecodebench-selfrepair'
+        type: pass@1
+        value: 20.9
+      - slice: 'dataset: livecodebench-testoutputprediction'
+        type: pass@1
+        value: 29.8
+      - slice: 'dataset: livecodebench-codeexecution'
+        type: pass@1
+        value: 28.1
+      - slice: 'dataset: humaneval'
+        type: pass@1
+        value: 72.6
+      - slice: 'dataset: humanevalplus'
+        type: pass@1
+        value: 63.4
+      - slice: 'dataset: mbpp'
+        type: pass@1
+        value: 75.2
+      - slice: 'dataset: mbppplus'
+        type: pass@1
+        value: 61.2
+      - slice: 'dataset: ds-1000'
+        type: pass@1
+        value: 40.6
+    description: '## Model Summary
+
+
+      We introduce StarCoder2-15B-Instruct-v0.1, the very first entirely self-aligned code Large Language Model (LLM) trained with a fully permissive and transparent pipeline. Our open-source pipeline uses StarCoder2-15B to generate thousands of instruction-response pairs, which are then used to fine-tune StarCoder-15B itself without any human annotations or distilled data from huge and proprietary LLMs.
+
+
+      - **Model:** [bigcode/starcoder2-15b-instruct-v0.1](https://huggingface.co/bigcode/starcoder2-instruct-15b-v0.1)
+
+      - **Code:** [bigcode-project/starcoder2-self-align](https://github.com/bigcode-project/starcoder2-self-align)
+
+      - **Dataset:** [bigcode/self-oss-instruct-sc2-exec-filter-50k](https://huggingface.co/datasets/bigcode/self-oss-instruct-sc2-exec-filter-50k/)
+
+      - **Authors:**
+
+      [Yuxiang Wei](https://yuxiang.cs.illinois.edu),
+
+      [Federico Cassano](https://federico.codes/),
+
+      [Jiawei Liu](https://jw-liu.xyz),
+
+      [Yifeng Ding](https://yifeng-ding.com),
+
+      [Naman Jain](https://naman-ntc.github.io),
+
+      [Harm de Vries](https://www.harmdevries.com),
+
+      [Leandro von Werra](https://twitter.com/lvwerra),
+
+      [Arjun Guha](https://www.khoury.northeastern.edu/home/arjunguha/main/home/),
+
+      [Lingming Zhang](https://lingming.cs.illinois.edu).
+
+
+      ![self-alignment pipeline](https://huggingface.co/datasets/bigcode/starcoder2-instruct-assets/resolve/main/method.png)
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - starcoder2
+    - text-generation
+    - code
+    - conversational
+    - dataset:bigcode/self-oss-instruct-sc2-exec-filter-50k
+    - arxiv:2410.24198
+    - base_model:bigcode/starcoder2-15b
+    - base_model:finetune:bigcode/starcoder2-15b
+    - license:bigcode-openrail-m
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: bigcode-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Use
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 9db1b810-a574-4e53-beb7-d0335e584a89
+  type: Relationship
+  properties: {}
+  from_: 2ac52f37-94b3-41b9-a55e-dc0520e92325
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starcoder2-15b-instruct-v0.1.json
+  relationship_type: annotatedBy
+- uid: bf906908-76ed-4d2e-ad1b-c490893be354
+  type: Relationship
+  properties: {}
+  from_: 3d828708-0669-48a8-8bec-87fc43bb6752
+  to_:
+  - e154bbae-d5fd-4457-a7d8-ebfcbb431607
+  relationship_type: uses
+- uid: 1dc39b8a-6782-4c99-89d2-33caa883860f
+  type: Relationship
+  properties: {}
+  from_: 3d828708-0669-48a8-8bec-87fc43bb6752
+  to_:
+  - e06525fa-d300-43db-be47-9a525c364b97
+  relationship_type: uses
+- uid: 2503ff49-90a1-49e8-87e0-ad9e6f734a0b
+  type: Relationship
+  properties: {}
+  from_: 3d828708-0669-48a8-8bec-87fc43bb6752
+  to_:
+  - 507fdd27-0782-4e57-8617-f4e4b5379e32
+  relationship_type: derivedFrom
+- uid: fbb95f99-40e4-402a-a1ea-e519d242509c
+  type: Relationship
+  properties: {}
+  from_: 2ac52f37-94b3-41b9-a55e-dc0520e92325
+  to_:
+  - 3d828708-0669-48a8-8bec-87fc43bb6752
+  relationship_type: produces

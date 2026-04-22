@@ -1,0 +1,141 @@
+uid: b786fc83-74a5-4212-90cc-8bf10ba6d9f7
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Llama-2-7b-chat-hf.json
+  type: SoftwareFile
+  name: NousResearch_Llama-2-7b-chat-hf.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a06143d0-92ba-433f-9320-489e4ea38052
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Llama-2-7b-chat-hf.json
+    type: ExternalReference
+  languages: []
+- uid: 34654ea7-2345-45fb-adeb-2995560fa319
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ae5d787f-cfcf-4b4f-b904-a1396d8c6c1e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:00.150352+00:00'
+    bom-ref: NousResearch/Llama-2-7b-chat-hf-22906706-5f93-5a90-a890-7cfe947eb5a1
+    name: NousResearch/Llama-2-7b-chat-hf
+    authors:
+    - name: NousResearch
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Details
+
+      *Note: Use of this model is governed by the Meta license. In order to download the model weights and tokenizer, please visit the [website](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) and accept our License before requesting access here.*
+
+
+      Meta developed and publicly released the Llama 2 family of large language models (LLMs), a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 70 billion parameters. Our fine-tuned LLMs, called Llama-2-Chat, are optimized for dialogue use cases. Llama-2-Chat models outperform open-source chat models on most benchmarks we tested, and in our human evaluations for helpfulness and safety, are on par with some popular closed-source models like ChatGPT and PaLM.
+
+
+      **Model Developers** Meta
+
+
+      **Variations** Llama 2 comes in a range of parameter sizes — 7B, 13B, and 70B — as well as pretrained and fine-tuned variations.
+
+
+      **Input** Models input text only.
+
+
+      **Output** Models generate text only.
+
+
+      **Model Architecture** Llama 2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align to human preferences for helpfulness and safety.
+
+
+
+      ||Training Data|Params|Content Length|GQA|Tokens|LR|
+
+      |---|---|---|---|---|---|---|
+
+      |Llama 2|*A new mix of publicly available online data*|7B|4k|&#10007;|2.0T|3.0 x 10<sup>-4</sup>|
+
+      |Llama 2|*A new mix of publicly available online data*|13B|4k|&#10007;|2.0T|3.0 x 10<sup>-4</sup>|
+
+      |Llama 2|*A new mix of publicly available online data*|70B|4k|&#10004;|2.0T|1.5 x 10<sup>-4</sup>|
+
+
+      *Llama 2 family of models.* Token counts refer to pretraining data only. All models are trained with a global batch-size of 4M tokens. Bigger models -  70B -- use Grouped-Query Attention (GQA) for improved inference scalability.
+
+
+      **Model Dates** Llama 2 was trained between January 2023 and July 2023.
+
+
+      **Status** This is a static model trained on an offline dataset. Future versions of the tuned models will be released as we improve model safety with community feedback.
+
+
+      **License** A custom commercial license is available at: [https://ai.meta.com/resources/models-and-libraries/llama-downloads/](https://ai.meta.com/resources/models-and-libraries/llama-downloads/)
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - llama
+    - text-generation
+    - facebook
+    - meta
+    - llama-2
+    - en
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NousResearch/Llama-2-7b-chat-hf
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+      **Intended Use Cases** Llama 2 is intended for commercial and research use in English. Tuned models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks.
+
+
+      To get the expected features and performance for the chat versions, a specific formatting needs to be followed, including the `INST` and `<<SYS>>` tags, `BOS` and `EOS` tokens, and the whitespaces and breaklines in between (we recommend calling `strip()` on inputs to avoid double-spaces). See our reference code in github for details: [`chat_completion`](https://github.com/facebookresearch/llama/blob/main/llama/generation.py#L212).
+
+
+      **Out-of-scope Uses** Use in any manner that violates applicable laws or regulations (including trade compliance laws).Use in languages other than English. Use in any other way that is prohibited by the Acceptable Use Policy and Licensing Agreement for Llama 2.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: cccef8ca-ef9a-491d-b719-bc39c732172a
+  type: Relationship
+  properties: {}
+  from_: b786fc83-74a5-4212-90cc-8bf10ba6d9f7
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Llama-2-7b-chat-hf.json
+  relationship_type: annotatedBy
+- uid: 37d1936b-2b50-479d-a472-2c68ecce12a9
+  type: Relationship
+  properties: {}
+  from_: ae5d787f-cfcf-4b4f-b904-a1396d8c6c1e
+  to_:
+  - 34654ea7-2345-45fb-adeb-2995560fa319
+  relationship_type: uses
+- uid: be5330c9-5ab9-4fc8-b9f2-5f62a889c3ff
+  type: Relationship
+  properties: {}
+  from_: b786fc83-74a5-4212-90cc-8bf10ba6d9f7
+  to_:
+  - ae5d787f-cfcf-4b4f-b904-a1396d8c6c1e
+  relationship_type: produces

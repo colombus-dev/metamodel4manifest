@@ -1,0 +1,77 @@
+uid: 8202fb97-4fc3-452b-bc3c-9c0462a85cc6
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SimianLuo_LCM_Dreamshaper_v7.json
+  type: SoftwareFile
+  name: SimianLuo_LCM_Dreamshaper_v7.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c8a150ac-abef-440f-a6e5-9edcb5e13119
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SimianLuo_LCM_Dreamshaper_v7.json
+    type: ExternalReference
+  languages: []
+- uid: e7a64c52-a689-4a4d-bb80-f67299d49954
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 94823e49-cdd9-4b1a-8081-f80dca35e1d0
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:42.043506+00:00'
+    bom-ref: SimianLuo/LCM_Dreamshaper_v7-365b7770-f40f-5cc6-8bac-ffeb206f9041
+    name: SimianLuo/LCM_Dreamshaper_v7
+    authors:
+    - name: SimianLuo
+    tags:
+    - diffusers
+    - onnx
+    - safetensors
+    - text-to-image
+    - en
+    - arxiv:2310.04378
+    - license:mit
+    - diffusers:LatentConsistencyModelPipeline
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/SimianLuo/LCM_Dreamshaper_v7
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 8ecc3f34-315e-4892-b569-bd0c1367a03f
+  type: Relationship
+  properties: {}
+  from_: 8202fb97-4fc3-452b-bc3c-9c0462a85cc6
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SimianLuo_LCM_Dreamshaper_v7.json
+  relationship_type: annotatedBy
+- uid: 7c454e40-31da-4db8-92ff-183dbc3dcfb3
+  type: Relationship
+  properties: {}
+  from_: 94823e49-cdd9-4b1a-8081-f80dca35e1d0
+  to_:
+  - e7a64c52-a689-4a4d-bb80-f67299d49954
+  relationship_type: uses
+- uid: d48c9be0-adec-4deb-920d-5fd788fca0f5
+  type: Relationship
+  properties: {}
+  from_: 8202fb97-4fc3-452b-bc3c-9c0462a85cc6
+  to_:
+  - 94823e49-cdd9-4b1a-8081-f80dca35e1d0
+  relationship_type: produces

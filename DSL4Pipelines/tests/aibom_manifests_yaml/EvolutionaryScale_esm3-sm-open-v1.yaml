@@ -1,0 +1,72 @@
+uid: e56dc356-4ef3-4803-8438-9147155aef51
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EvolutionaryScale_esm3-sm-open-v1.json
+  type: SoftwareFile
+  name: EvolutionaryScale_esm3-sm-open-v1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:871fe8e9-baa5-456f-b552-c7b7da36c110
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EvolutionaryScale_esm3-sm-open-v1.json
+    type: ExternalReference
+  languages: []
+- uid: dc5396e6-80e3-44d2-a6d1-e49fec6551b8
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f89dcfea-08ac-4374-bed5-c319d32efd5a
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:55.995339+00:00'
+    bom-ref: EvolutionaryScale/esm3-sm-open-v1-59914449-bf59-59f5-a141-759584fe85f4
+    name: EvolutionaryScale/esm3-sm-open-v1
+    authors:
+    - name: EvolutionaryScale
+    tags:
+    - transformers
+    - biology
+    - esm
+    - protein
+    - en
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/EvolutionaryScale/esm3-sm-open-v1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 0da95f03-f258-49eb-b9b6-161881ee9d1b
+  type: Relationship
+  properties: {}
+  from_: e56dc356-4ef3-4803-8438-9147155aef51
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EvolutionaryScale_esm3-sm-open-v1.json
+  relationship_type: annotatedBy
+- uid: 9e1ff9b6-a1df-43a7-9434-c2013b2100be
+  type: Relationship
+  properties: {}
+  from_: f89dcfea-08ac-4374-bed5-c319d32efd5a
+  to_:
+  - dc5396e6-80e3-44d2-a6d1-e49fec6551b8
+  relationship_type: uses
+- uid: 8b653e84-9a4a-43bd-9316-c2c902fedddd
+  type: Relationship
+  properties: {}
+  from_: e56dc356-4ef3-4803-8438-9147155aef51
+  to_:
+  - f89dcfea-08ac-4374-bed5-c319d32efd5a
+  relationship_type: produces

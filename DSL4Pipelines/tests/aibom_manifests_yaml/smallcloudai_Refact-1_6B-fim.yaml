@@ -1,0 +1,322 @@
+uid: c3e9ea7a-e121-472e-9236-33eaedbc7b63
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/smallcloudai_Refact-1_6B-fim.json
+  type: SoftwareFile
+  name: smallcloudai_Refact-1_6B-fim.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:eca1af19-a02f-4176-9e5b-1d5d54cd40bf
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/smallcloudai_Refact-1_6B-fim.json
+    type: ExternalReference
+  languages: []
+- uid: b03ce085-898a-4622-88c3-35f1d2422213
+  type: Data
+  properties:
+    bom-ref: bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd
+    name: bigcode/the-stack-dedup
+    content_url: https://huggingface.co/datasets/bigcode/the-stack-dedup
+    task_categories: text-generation
+    task_ids: ''
+    size_categories: unknown
+    annotations_creators: ''
+    language_creators: crowdsourced, expert-generated
+    pretty_name: The-Stack
+    source_datasets: ''
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c09d557f-ebe7-4b83-98a8-f9ddb1ccb0e6
+  type: Data
+  properties:
+    bom-ref: rombodawg/2XUNCENSORED_MegaCodeTraining188k-739f6327-7af1-5c61-bbc5-ded88b6babdf
+    name: rombodawg/2XUNCENSORED_MegaCodeTraining188k
+    content_url: https://huggingface.co/datasets/rombodawg/2XUNCENSORED_MegaCodeTraining188k
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: rombodawg/2XUNCENSORED_MegaCodeTraining188k-739f6327-7af1-5c61-bbc5-ded88b6babdf
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 75a2bcb6-b1c2-4487-8888-b9efc14f1abe
+  type: Data
+  properties:
+    bom-ref: bigcode/commitpackft-7dd931ed-c49b-58fe-b83e-9e9d6c32ee7b
+    name: bigcode/commitpackft
+    content_url: https://huggingface.co/datasets/bigcode/commitpackft
+    pretty_name: CommitPackFT
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/commitpackft-7dd931ed-c49b-58fe-b83e-9e9d6c32ee7b
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c3851ce4-f2ad-46e0-9073-a443318af7fb
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e812179b-d898-46a9-aa35-227b0b77733e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:57.159127+00:00'
+    bom-ref: smallcloudai/Refact-1_6B-fim-5f8a6e1a-78b6-523d-a2fe-34322c9fbc29
+    name: smallcloudai/Refact-1_6B-fim
+    authors:
+    - name: smallcloudai
+    architectureFamily: gpt_refact
+    modelArchitecture: GPTRefactForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: openai_humaneval'
+        type: pass@1
+        value: 32
+      - slice: 'dataset: openai_humaneval'
+        type: pass@1
+        value: 31.5
+      - slice: 'dataset: openai_humaneval'
+        type: pass@10
+        value: 53
+      - slice: 'dataset: openai_humaneval'
+        type: pass@100
+        value: 76.9
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 35.8
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 31.6
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 29.1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 26.3
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 18.38
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 12.28
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 15.12
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 13.17
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 2.8
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 26.92
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 26.85
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 30.76
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 25.94
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 8.44
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 26.46
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 17.86
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 20.94
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 18.78
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: -1
+      - slice: 'dataset: mbpp'
+        type: pass@1
+        value: 31.15
+      - slice: 'dataset: ds1000'
+        type: pass@1
+        value: 10.1
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 21.61
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 13.91
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 9.5
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 53.57
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 21.58
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 13.75
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 26.88
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 15.26
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 23.04
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 12.1
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 29.6
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 13.77
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 12.68
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 4.29
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 19.54
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 18.33
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 5.7
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 17.68
+      - slice: 'dataset: nuprl/MultiPL-E'
+        type: pass@1
+        value: 25
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - gpt_refact
+    - text-generation
+    - code
+    - custom_code
+    - en
+    - dataset:bigcode/the-stack-dedup
+    - dataset:rombodawg/2XUNCENSORED_MegaCodeTraining188k
+    - dataset:bigcode/commitpackft
+    - arxiv:2108.12409
+    - arxiv:1607.06450
+    - arxiv:1910.07467
+    - arxiv:1911.02150
+    - license:bigscience-openrail-m
+    - model-index
+    - autotrain_compatible
+    - region:us
+  license:
+    name: bigscience-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/smallcloudai/Refact-1_6B-fim
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: bd5f1169-a216-44d6-b4a7-6a5394e9e7a0
+  type: Relationship
+  properties: {}
+  from_: c3e9ea7a-e121-472e-9236-33eaedbc7b63
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/smallcloudai_Refact-1_6B-fim.json
+  relationship_type: annotatedBy
+- uid: 2f42c5f4-47be-426d-b463-14cfe88f4d37
+  type: Relationship
+  properties: {}
+  from_: e812179b-d898-46a9-aa35-227b0b77733e
+  to_:
+  - b03ce085-898a-4622-88c3-35f1d2422213
+  - c09d557f-ebe7-4b83-98a8-f9ddb1ccb0e6
+  - 75a2bcb6-b1c2-4487-8888-b9efc14f1abe
+  relationship_type: uses
+- uid: 33533f2f-01f1-4ef2-889d-94338daffb7d
+  type: Relationship
+  properties: {}
+  from_: e812179b-d898-46a9-aa35-227b0b77733e
+  to_:
+  - c3851ce4-f2ad-46e0-9073-a443318af7fb
+  relationship_type: uses
+- uid: 95905aac-2b97-43ac-b366-3e7020b6b75c
+  type: Relationship
+  properties: {}
+  from_: c3e9ea7a-e121-472e-9236-33eaedbc7b63
+  to_:
+  - e812179b-d898-46a9-aa35-227b0b77733e
+  relationship_type: produces

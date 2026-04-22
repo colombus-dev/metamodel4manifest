@@ -1,0 +1,209 @@
+uid: 9ba56ce6-e034-4708-8853-cd454db60e99
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pyannote_speaker-diarization.json
+  type: SoftwareFile
+  name: pyannote_speaker-diarization.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e02f1cdf-929f-43fa-b9fc-361ffa4f1fce
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pyannote_speaker-diarization.json
+    type: ExternalReference
+  languages: []
+- uid: 3e542353-0dac-48f4-882b-b63983ed82b2
+  type: Data
+  properties:
+    bom-ref: ami-aca54d4c-9500-5cde-b425-f6b62fed2e10
+    name: ami
+    content_url: https://huggingface.co/datasets/ami
+    task_categories: automatic-speech-recognition
+    task_ids: ''
+    size_categories: 100K<n<1M
+    annotations_creators: expert-generated
+    language_creators: crowdsourced, expert-generated
+    pretty_name: AMI Corpus
+    source_datasets: original
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ami-aca54d4c-9500-5cde-b425-f6b62fed2e10
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 9292c28d-625f-4123-b1d1-849d732e59a4
+  type: Data
+  properties:
+    bom-ref: dihard-8c37b70b-ffae-5d52-b5b5-8ca85c13c672
+    name: dihard
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: dihard-8c37b70b-ffae-5d52-b5b5-8ca85c13c672
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 360e4367-8d5a-4f48-b03e-7a1909a2be2e
+  type: Data
+  properties:
+    bom-ref: voxconverse-9397b454-2494-5a28-96c2-501af49661e9
+    name: voxconverse
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: voxconverse-9397b454-2494-5a28-96c2-501af49661e9
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ffd91c14-494d-4c53-8e58-b23c55722104
+  type: Data
+  properties:
+    bom-ref: aishell-f0739e3d-f6ae-501b-a6cd-d8a17b5f0eb8
+    name: aishell
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: aishell-f0739e3d-f6ae-501b-a6cd-d8a17b5f0eb8
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 27da21d5-7230-4256-a1e4-4a2807d2ef95
+  type: Data
+  properties:
+    bom-ref: repere-46fb4e12-be22-55b9-906d-d22b3ece3981
+    name: repere
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: repere-46fb4e12-be22-55b9-906d-d22b3ece3981
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: db0439da-0247-4a20-b28b-520cf541bf9d
+  type: Data
+  properties:
+    bom-ref: voxceleb-9a76933d-07f5-5789-ad60-681177a7daf4
+    name: voxceleb
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: voxceleb-9a76933d-07f5-5789-ad60-681177a7daf4
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 9a4f26fd-78f4-4a6d-a36f-09d32359b52f
+  type: SoftwareFile
+  name: pyannote-audio
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a6b62c5b-431a-4e91-8c17-5330fe24968c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:19.914786+00:00'
+    bom-ref: pyannote/speaker-diarization-0071200b-d45c-58e5-93a0-ede28ec5b8d1
+    name: pyannote/speaker-diarization
+    authors:
+    - name: pyannote
+    tags:
+    - pyannote-audio
+    - pyannote
+    - pyannote-audio-pipeline
+    - audio
+    - voice
+    - speech
+    - speaker
+    - speaker-diarization
+    - speaker-change-detection
+    - voice-activity-detection
+    - overlapped-speech-detection
+    - automatic-speech-recognition
+    - dataset:ami
+    - dataset:dihard
+    - dataset:voxconverse
+    - dataset:aishell
+    - dataset:repere
+    - dataset:voxceleb
+    - arxiv:2012.01477
+    - arxiv:2110.07058
+    - arxiv:2005.08072
+    - license:mit
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/pyannote/speaker-diarization
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: automatic-speech-recognition
+relations:
+- uid: 49b1a941-432f-45bf-b7f3-b0b7bac31f83
+  type: Relationship
+  properties: {}
+  from_: 9ba56ce6-e034-4708-8853-cd454db60e99
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pyannote_speaker-diarization.json
+  relationship_type: annotatedBy
+- uid: e4585f83-94c7-4903-9997-573ae2d2f398
+  type: Relationship
+  properties: {}
+  from_: a6b62c5b-431a-4e91-8c17-5330fe24968c
+  to_:
+  - 3e542353-0dac-48f4-882b-b63983ed82b2
+  - 9292c28d-625f-4123-b1d1-849d732e59a4
+  - 360e4367-8d5a-4f48-b03e-7a1909a2be2e
+  - ffd91c14-494d-4c53-8e58-b23c55722104
+  - 27da21d5-7230-4256-a1e4-4a2807d2ef95
+  - db0439da-0247-4a20-b28b-520cf541bf9d
+  relationship_type: uses
+- uid: 2786ef16-71f4-41e1-a429-e27f4cd75ad3
+  type: Relationship
+  properties: {}
+  from_: a6b62c5b-431a-4e91-8c17-5330fe24968c
+  to_:
+  - 9a4f26fd-78f4-4a6d-a36f-09d32359b52f
+  relationship_type: uses
+- uid: 223e35c7-f16c-42e2-9f4e-edbd8d20a707
+  type: Relationship
+  properties: {}
+  from_: 9ba56ce6-e034-4708-8853-cd454db60e99
+  to_:
+  - a6b62c5b-431a-4e91-8c17-5330fe24968c
+  relationship_type: produces

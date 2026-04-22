@@ -1,0 +1,75 @@
+uid: dd612f13-f85c-4804-8f26-fc47ce009f95
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nicky007_stable-diffusion-logo-fine-tuned.json
+  type: SoftwareFile
+  name: nicky007_stable-diffusion-logo-fine-tuned.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c92594b9-b114-4357-94b6-6a4f9a45df6f
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nicky007_stable-diffusion-logo-fine-tuned.json
+    type: ExternalReference
+  languages: []
+- uid: 9d62ff38-f5dc-4289-8a86-0dadc807eb73
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c2d4cd98-cc88-4bd7-aa84-170dc52498cb
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:55.208344+00:00'
+    bom-ref: nicky007/stable-diffusion-logo-fine-tuned-a14ad9c9-302a-5502-ba24-b8f27971569e
+    name: nicky007/stable-diffusion-logo-fine-tuned
+    authors:
+    - name: nicky007
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/nicky007/stable-diffusion-logo-fine-tuned
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 5b03cfab-ae3a-4959-a58e-3db54045278f
+  type: Relationship
+  properties: {}
+  from_: dd612f13-f85c-4804-8f26-fc47ce009f95
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nicky007_stable-diffusion-logo-fine-tuned.json
+  relationship_type: annotatedBy
+- uid: 904305b4-c5ff-47fd-8ac7-7878db3397b6
+  type: Relationship
+  properties: {}
+  from_: c2d4cd98-cc88-4bd7-aa84-170dc52498cb
+  to_:
+  - 9d62ff38-f5dc-4289-8a86-0dadc807eb73
+  relationship_type: uses
+- uid: bbcbdf6b-1fd2-4fa5-843e-04203c401382
+  type: Relationship
+  properties: {}
+  from_: dd612f13-f85c-4804-8f26-fc47ce009f95
+  to_:
+  - c2d4cd98-cc88-4bd7-aa84-170dc52498cb
+  relationship_type: produces

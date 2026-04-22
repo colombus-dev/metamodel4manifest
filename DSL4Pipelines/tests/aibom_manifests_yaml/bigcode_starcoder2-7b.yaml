@@ -1,0 +1,162 @@
+uid: 470fabe6-ac43-4609-aef9-272368e8997b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starcoder2-7b.json
+  type: SoftwareFile
+  name: bigcode_starcoder2-7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:28c18b37-66ba-49e8-9181-8a045f64fcb1
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starcoder2-7b.json
+    type: ExternalReference
+  languages: []
+- uid: 8e896dc8-a3ca-4d63-9411-75b54a0849e1
+  type: Data
+  properties:
+    bom-ref: bigcode/the-stack-v2-train-9c0129b0-bfe0-570a-b9d4-6fb644660cda
+    name: bigcode/the-stack-v2-train
+    content_url: https://huggingface.co/datasets/bigcode/the-stack-v2-train
+    task_categories: text-generation
+    task_ids: ''
+    size_categories: unknown
+    annotations_creators: ''
+    language_creators: crowdsourced, expert-generated
+    pretty_name: The-Stack-v2
+    source_datasets: ''
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/the-stack-v2-train-9c0129b0-bfe0-570a-b9d4-6fb644660cda
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 6b10c38b-85cb-40ee-9ce9-bddf3668b15a
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4326239c-09c1-406f-b722-b61b6f651245
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:29.961807+00:00'
+    bom-ref: bigcode/starcoder2-7b-70759812-f898-5474-b42a-5324804c990b
+    name: bigcode/starcoder2-7b
+    authors:
+    - name: bigcode
+    architectureFamily: starcoder2
+    modelArchitecture: Starcoder2ForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: cruxeval-i'
+        type: pass@1
+        value: 34.6
+      - slice: 'dataset: ds-1000'
+        type: pass@1
+        value: 27.8
+      - slice: 'dataset: gsm8k-pal'
+        type: accuracy
+        value: 40.4
+      - slice: 'dataset: humanevalplus'
+        type: pass@1
+        value: 29.9
+      - slice: 'dataset: humaneval'
+        type: pass@1
+        value: 35.4
+      - slice: 'dataset: repobench-v1.1'
+        type: edit-smiliarity
+        value: 72.07
+    description: '## Model Summary
+
+
+      StarCoder2-7B model is a 7B parameter model trained on 17 programming languages from [The Stack v2](https://huggingface.co/datasets/bigcode/the-stack-v2-train), with opt-out requests excluded. The model uses [Grouped Query Attention](https://arxiv.org/abs/2305.13245), [a context window of 16,384 tokens](https://arxiv.org/abs/2205.14135) with [a sliding window attention of 4,096 tokens](https://arxiv.org/abs/2004.05150v2),  and was trained using the [Fill-in-the-Middle objective](https://arxiv.org/abs/2207.14255) on 3.5+ trillion tokens.
+
+
+      - **Project Website:** [bigcode-project.org](https://www.bigcode-project.org)
+
+      - **Paper:** [Link](https://huggingface.co/papers/2402.19173)
+
+      - **Point of Contact:** [contact@bigcode-project.org](mailto:contact@bigcode-project.org)
+
+      - **Languages:** 17 Programming languages
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - starcoder2
+    - text-generation
+    - code
+    - dataset:bigcode/the-stack-v2-train
+    - arxiv:2305.13245
+    - arxiv:2205.14135
+    - arxiv:2004.05150
+    - arxiv:2207.14255
+    - arxiv:2402.19173
+    - license:bigcode-openrail-m
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: bigcode-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/bigcode/starcoder2-7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Use
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 9d1ffb73-d1dd-444a-825b-d9baec95af74
+  type: Relationship
+  properties: {}
+  from_: 470fabe6-ac43-4609-aef9-272368e8997b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starcoder2-7b.json
+  relationship_type: annotatedBy
+- uid: fc8b50e4-0970-46c4-8166-4b459516720e
+  type: Relationship
+  properties: {}
+  from_: 4326239c-09c1-406f-b722-b61b6f651245
+  to_:
+  - 8e896dc8-a3ca-4d63-9411-75b54a0849e1
+  relationship_type: uses
+- uid: 8bfaef29-285b-4e67-85a2-982e4d6e8430
+  type: Relationship
+  properties: {}
+  from_: 4326239c-09c1-406f-b722-b61b6f651245
+  to_:
+  - 6b10c38b-85cb-40ee-9ce9-bddf3668b15a
+  relationship_type: uses
+- uid: 0986ab96-2266-450c-8c59-ae9e49e71e4e
+  type: Relationship
+  properties: {}
+  from_: 470fabe6-ac43-4609-aef9-272368e8997b
+  to_:
+  - 4326239c-09c1-406f-b722-b61b6f651245
+  relationship_type: produces

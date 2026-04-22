@@ -1,0 +1,93 @@
+uid: 64e0bfaa-c344-4038-bfa7-9cd0f453d70b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sambanovasystems_BLOOMChat-176B-v1.json
+  type: SoftwareFile
+  name: sambanovasystems_BLOOMChat-176B-v1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:703373e3-56dd-4cc7-9346-f723ab8d164b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sambanovasystems_BLOOMChat-176B-v1.json
+    type: ExternalReference
+  languages: []
+- uid: 1eb6ef25-f78c-4234-8960-693025938c0b
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 73dc6ff4-e95d-45dc-ac84-041f5b15def3
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:52.662806+00:00'
+    bom-ref: sambanovasystems/BLOOMChat-176B-v1-57db1302-fc40-5114-91b5-eec339b12762
+    name: sambanovasystems/BLOOMChat-176B-v1
+    authors:
+    - name: sambanovasystems
+    architectureFamily: bloom
+    modelArchitecture: BloomForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - bloom
+    - text-generation
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/sambanovasystems/BLOOMChat-176B-v1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+      <details>
+
+      <summary>Click to expand</summary>
+
+      <!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 56e51489-8bb7-44f1-87e7-302e68437fd8
+  type: Relationship
+  properties: {}
+  from_: 64e0bfaa-c344-4038-bfa7-9cd0f453d70b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sambanovasystems_BLOOMChat-176B-v1.json
+  relationship_type: annotatedBy
+- uid: 15fcb556-4904-486b-b6ad-73182af9ba71
+  type: Relationship
+  properties: {}
+  from_: 73dc6ff4-e95d-45dc-ac84-041f5b15def3
+  to_:
+  - 1eb6ef25-f78c-4234-8960-693025938c0b
+  relationship_type: uses
+- uid: 0ca8efb9-67ae-48ca-9be2-2b87dc0b0582
+  type: Relationship
+  properties: {}
+  from_: 64e0bfaa-c344-4038-bfa7-9cd0f453d70b
+  to_:
+  - 73dc6ff4-e95d-45dc-ac84-041f5b15def3
+  relationship_type: produces

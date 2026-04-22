@@ -1,0 +1,84 @@
+uid: d0dbcd0e-c652-4d5a-a063-0f2f1e75dcc4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ZhengPeng7_BiRefNet.json
+  type: SoftwareFile
+  name: ZhengPeng7_BiRefNet.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3df72f6b-173b-46e7-8624-c39f7127d895
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ZhengPeng7_BiRefNet.json
+    type: ExternalReference
+  languages: []
+- uid: 6c456cba-8101-46ed-a57a-f2ea35921892
+  type: SoftwareFile
+  name: birefnet
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: cea98452-7e73-4362-92e1-4cdb9ecbd4d5
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:15.605662+00:00'
+    bom-ref: ZhengPeng7/BiRefNet-05dc6fed-03ac-5f75-9464-9630d630c21a
+    name: ZhengPeng7/BiRefNet
+    authors:
+    - name: ZhengPeng7
+    modelArchitecture: BiRefNet
+    tags:
+    - birefnet
+    - safetensors
+    - background-removal
+    - mask-generation
+    - Dichotomous Image Segmentation
+    - Camouflaged Object Detection
+    - Salient Object Detection
+    - pytorch_model_hub_mixin
+    - model_hub_mixin
+    - image-segmentation
+    - custom_code
+    - arxiv:2401.03407
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ZhengPeng7/BiRefNet
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-segmentation
+relations:
+- uid: 5a55a70c-6cc7-4186-b4f0-b3b03eae9842
+  type: Relationship
+  properties: {}
+  from_: d0dbcd0e-c652-4d5a-a063-0f2f1e75dcc4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ZhengPeng7_BiRefNet.json
+  relationship_type: annotatedBy
+- uid: 8a698a0b-d75c-4251-8d0a-00f0b3dcc265
+  type: Relationship
+  properties: {}
+  from_: cea98452-7e73-4362-92e1-4cdb9ecbd4d5
+  to_:
+  - 6c456cba-8101-46ed-a57a-f2ea35921892
+  relationship_type: uses
+- uid: 2d935853-b5cc-432a-b145-e77c16a98977
+  type: Relationship
+  properties: {}
+  from_: d0dbcd0e-c652-4d5a-a063-0f2f1e75dcc4
+  to_:
+  - cea98452-7e73-4362-92e1-4cdb9ecbd4d5
+  relationship_type: produces

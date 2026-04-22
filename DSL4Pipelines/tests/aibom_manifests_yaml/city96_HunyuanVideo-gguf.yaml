@@ -1,0 +1,90 @@
+uid: 8136cd80-a413-43d3-bad4-72c386e30bcf
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/city96_HunyuanVideo-gguf.json
+  type: SoftwareFile
+  name: city96_HunyuanVideo-gguf.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f23dd521-3ad8-4107-b77a-3c9b5531d690
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/city96_HunyuanVideo-gguf.json
+    type: ExternalReference
+  languages: []
+- uid: cc353406-309d-4e30-8ed4-177bb0a9c69d
+  type: SoftwareFile
+  name: gguf
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 5f37a7d6-7631-4d5e-ad6a-9eec5794c0b1
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: tencent/HunyuanVideo
+    type: ExternalReference
+  languages: []
+- uid: 6679429f-c51b-4a5b-bde8-82086ae9cacf
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:05.877266+00:00'
+    bom-ref: city96/HunyuanVideo-gguf-9a5915d3-7f16-51a0-af43-a59967694cf3
+    name: city96/HunyuanVideo-gguf
+    authors:
+    - name: city96
+    tags:
+    - gguf
+    - text-to-video
+    - base_model:tencent/HunyuanVideo
+    - base_model:quantized:tencent/HunyuanVideo
+    - license:other
+    - region:us
+  license:
+    name: tencent-hunyuan-community
+    url: LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/city96/HunyuanVideo-gguf
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-video
+relations:
+- uid: 21c2b8cf-8a23-4181-a3e1-7fdd7ce097c1
+  type: Relationship
+  properties: {}
+  from_: 8136cd80-a413-43d3-bad4-72c386e30bcf
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/city96_HunyuanVideo-gguf.json
+  relationship_type: annotatedBy
+- uid: 6e56e985-c177-43b9-9219-f7779ef28f9a
+  type: Relationship
+  properties: {}
+  from_: 6679429f-c51b-4a5b-bde8-82086ae9cacf
+  to_:
+  - cc353406-309d-4e30-8ed4-177bb0a9c69d
+  relationship_type: uses
+- uid: 3203cd22-1690-4482-996b-c118541c4c12
+  type: Relationship
+  properties: {}
+  from_: 6679429f-c51b-4a5b-bde8-82086ae9cacf
+  to_:
+  - 5f37a7d6-7631-4d5e-ad6a-9eec5794c0b1
+  relationship_type: derivedFrom
+- uid: 16055ac3-dfac-4e81-8bc3-484f764c1717
+  type: Relationship
+  properties: {}
+  from_: 8136cd80-a413-43d3-bad4-72c386e30bcf
+  to_:
+  - 6679429f-c51b-4a5b-bde8-82086ae9cacf
+  relationship_type: produces

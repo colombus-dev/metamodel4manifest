@@ -1,0 +1,112 @@
+uid: 7f93951c-7d9d-4b76-9829-aa0b79ee38d6
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/snorkelai_Snorkel-Mistral-PairRM-DPO.json
+  type: SoftwareFile
+  name: snorkelai_Snorkel-Mistral-PairRM-DPO.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:186b3938-e5f9-4211-9d3d-386dc79e2178
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/snorkelai_Snorkel-Mistral-PairRM-DPO.json
+    type: ExternalReference
+  languages: []
+- uid: 9a33c600-37bb-4fe8-abcd-c55d5db670db
+  type: Data
+  properties:
+    bom-ref: snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset-dd6f83d6-06bd-5b0d-bde9-4420a29f05ef
+    name: snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset
+    content_url: https://huggingface.co/datasets/snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset
+    task_categories: text-generation
+    configs: 'Name of the dataset subset: default {"split": "train_iteration_1", "path": "data/train_iteration_1-*"}, {"split": "test_iteration_1", "path": "data/test_iteration_1-*"}, {"split": "train_iteration_2", "path": "data/train_iteration_2-*"}, {"split": "test_iteration_2", "path": "data/test_iteration_2-*"}, {"split": "train_iteration_3", "path": "data/train_iteration_3-*"}, {"split": "test_iteration_3", "path": "data/test_iteration_3-*"}'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset-dd6f83d6-06bd-5b0d-bde9-4420a29f05ef
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 874de5a7-60b2-44d2-8d3c-44770ba8c7a9
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 935cf34f-d84a-4021-8d25-bcde2349e918
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:33.835743+00:00'
+    bom-ref: snorkelai/Snorkel-Mistral-PairRM-DPO-403dd6ad-2bf4-56e2-9567-4e1ca7c2a0d7
+    name: snorkelai/Snorkel-Mistral-PairRM-DPO
+    authors:
+    - name: snorkelai
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - mistral
+    - text-generation
+    - conversational
+    - dataset:snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset
+    - arxiv:2305.18290
+    - arxiv:2306.02561
+    - arxiv:2401.10020
+    - arxiv:2312.11456
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/snorkelai/Snorkel-Mistral-PairRM-DPO
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 109805e6-01e1-45d9-a838-45bd355fb485
+  type: Relationship
+  properties: {}
+  from_: 7f93951c-7d9d-4b76-9829-aa0b79ee38d6
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/snorkelai_Snorkel-Mistral-PairRM-DPO.json
+  relationship_type: annotatedBy
+- uid: 03f804ea-6784-4a69-a8b6-cdc2e1f4b115
+  type: Relationship
+  properties: {}
+  from_: 935cf34f-d84a-4021-8d25-bcde2349e918
+  to_:
+  - 9a33c600-37bb-4fe8-abcd-c55d5db670db
+  relationship_type: uses
+- uid: deb77cb1-0a74-44e0-84ef-5dc66b8cdbf6
+  type: Relationship
+  properties: {}
+  from_: 935cf34f-d84a-4021-8d25-bcde2349e918
+  to_:
+  - 874de5a7-60b2-44d2-8d3c-44770ba8c7a9
+  relationship_type: uses
+- uid: 30a991b5-e241-4672-85dd-9f42355d2c7f
+  type: Relationship
+  properties: {}
+  from_: 7f93951c-7d9d-4b76-9829-aa0b79ee38d6
+  to_:
+  - 935cf34f-d84a-4021-8d25-bcde2349e918
+  relationship_type: produces

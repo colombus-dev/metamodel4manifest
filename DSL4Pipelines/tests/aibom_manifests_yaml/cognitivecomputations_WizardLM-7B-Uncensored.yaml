@@ -1,0 +1,80 @@
+uid: d268d14f-a85a-41a2-9ed9-64960f682f6c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_WizardLM-7B-Uncensored.json
+  type: SoftwareFile
+  name: cognitivecomputations_WizardLM-7B-Uncensored.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a94157f9-c720-456a-b8d8-bc488de3a510
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_WizardLM-7B-Uncensored.json
+    type: ExternalReference
+  languages: []
+- uid: c1e5868e-1b0d-4122-bb25-108e968aa381
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6a6c552c-ecb3-4e01-b5d4-a18b7e68e70e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:36.394107+00:00'
+    bom-ref: cognitivecomputations/WizardLM-7B-Uncensored-59129d96-d782-5b5f-b636-b8f8e7e8d5b8
+    name: cognitivecomputations/WizardLM-7B-Uncensored
+    authors:
+    - name: cognitivecomputations
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - uncensored
+    - dataset:ehartford/WizardLM_alpaca_evol_instruct_70k_unfiltered
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/cognitivecomputations/WizardLM-7B-Uncensored
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: beba5388-bfb8-4e50-8a21-48e4f744014e
+  type: Relationship
+  properties: {}
+  from_: d268d14f-a85a-41a2-9ed9-64960f682f6c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_WizardLM-7B-Uncensored.json
+  relationship_type: annotatedBy
+- uid: a868c4bf-0854-458a-b776-3453704909b4
+  type: Relationship
+  properties: {}
+  from_: 6a6c552c-ecb3-4e01-b5d4-a18b7e68e70e
+  to_:
+  - c1e5868e-1b0d-4122-bb25-108e968aa381
+  relationship_type: uses
+- uid: a57ec1f3-c9b6-4634-8298-61dd28f2e426
+  type: Relationship
+  properties: {}
+  from_: d268d14f-a85a-41a2-9ed9-64960f682f6c
+  to_:
+  - 6a6c552c-ecb3-4e01-b5d4-a18b7e68e70e
+  relationship_type: produces

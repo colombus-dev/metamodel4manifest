@@ -1,0 +1,177 @@
+uid: b99f5717-66f1-4e13-ad52-f94efa66db30
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_seamless-m4t-v2-large.json
+  type: SoftwareFile
+  name: facebook_seamless-m4t-v2-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:333d60cf-53cb-4ff7-8314-dd08c0d4fcc8
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_seamless-m4t-v2-large.json
+    type: ExternalReference
+  languages: []
+- uid: 42ac037f-a9ea-4b9f-82ad-193871af6820
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a3736c79-32e4-491d-a284-5f65c2678694
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:11.041361+00:00'
+    bom-ref: facebook/seamless-m4t-v2-large-c0bfbda3-b44e-5d0a-bf88-18179d750cf6
+    name: facebook/seamless-m4t-v2-large
+    authors:
+    - name: facebook
+    architectureFamily: seamless_m4t_v2
+    modelArchitecture: SeamlessM4Tv2Model
+    tags:
+    - transformers
+    - safetensors
+    - seamless_m4t_v2
+    - feature-extraction
+    - audio-to-audio
+    - text-to-speech
+    - seamless_communication
+    - automatic-speech-recognition
+    - af
+    - am
+    - ar
+    - as
+    - az
+    - be
+    - bn
+    - bs
+    - bg
+    - ca
+    - cs
+    - zh
+    - cy
+    - da
+    - de
+    - el
+    - en
+    - et
+    - fi
+    - fr
+    - or
+    - om
+    - ga
+    - gl
+    - gu
+    - ha
+    - he
+    - hi
+    - hr
+    - hu
+    - hy
+    - ig
+    - id
+    - is
+    - it
+    - jv
+    - ja
+    - kn
+    - ka
+    - kk
+    - mn
+    - km
+    - ky
+    - ko
+    - lo
+    - ln
+    - lt
+    - lb
+    - lg
+    - lv
+    - ml
+    - mr
+    - mk
+    - mt
+    - mi
+    - my
+    - nl
+    - nb
+    - ne
+    - ny
+    - oc
+    - pa
+    - ps
+    - fa
+    - pl
+    - pt
+    - ro
+    - ru
+    - sk
+    - sl
+    - sn
+    - sd
+    - so
+    - es
+    - sr
+    - sv
+    - sw
+    - ta
+    - te
+    - tg
+    - tl
+    - th
+    - tr
+    - uk
+    - ur
+    - uz
+    - vi
+    - wo
+    - xh
+    - yo
+    - ms
+    - zu
+    - ary
+    - arz
+    - yue
+    - kea
+    - arxiv:2312.05187
+    - license:cc-by-nc-4.0
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/facebook/seamless-m4t-v2-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: automatic-speech-recognition
+relations:
+- uid: 953c70ad-538d-4cdb-9163-becbb608e1ab
+  type: Relationship
+  properties: {}
+  from_: b99f5717-66f1-4e13-ad52-f94efa66db30
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_seamless-m4t-v2-large.json
+  relationship_type: annotatedBy
+- uid: 5658db27-9764-4f57-a3d7-2b5265f054a0
+  type: Relationship
+  properties: {}
+  from_: a3736c79-32e4-491d-a284-5f65c2678694
+  to_:
+  - 42ac037f-a9ea-4b9f-82ad-193871af6820
+  relationship_type: uses
+- uid: 9a44456d-f52f-4caf-bb5f-d7a80a8724f0
+  type: Relationship
+  properties: {}
+  from_: b99f5717-66f1-4e13-ad52-f94efa66db30
+  to_:
+  - a3736c79-32e4-491d-a284-5f65c2678694
+  relationship_type: produces

@@ -1,0 +1,186 @@
+uid: 261dd5dc-52af-4e27-8925-9513a385d326
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fblgit_una-cybertron-7b-v2-bf16.json
+  type: SoftwareFile
+  name: fblgit_una-cybertron-7b-v2-bf16.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fb135b86-b2a3-4702-879b-5abbcd303df1
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fblgit_una-cybertron-7b-v2-bf16.json
+    type: ExternalReference
+  languages: []
+- uid: d5b550e2-1ae2-49e8-b9ad-5ad44a3e8315
+  type: Data
+  properties:
+    bom-ref: fblgit/tree-of-knowledge-cccd8665-0437-5663-a809-9a09e5c4d126
+    name: fblgit/tree-of-knowledge
+    content_url: https://huggingface.co/datasets/fblgit/tree-of-knowledge
+    license: lgpl-3.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: fblgit/tree-of-knowledge-cccd8665-0437-5663-a809-9a09e5c4d126
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 9a05d65d-c1cd-4004-83cc-faf80fc2c4af
+  type: Data
+  properties:
+    bom-ref: Open-Orca/SlimOrca-Dedup-82e0871b-2ebd-5ce6-afb5-69ec2f86ce36
+    name: Open-Orca/SlimOrca-Dedup
+    content_url: https://huggingface.co/datasets/Open-Orca/SlimOrca-Dedup
+    task_categories: text-classification, question-answering, text-generation
+    size_categories: 100K<n<1M
+    pretty_name: SlimOrca Dedup
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Open-Orca/SlimOrca-Dedup-82e0871b-2ebd-5ce6-afb5-69ec2f86ce36
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 9823e3a7-2c01-43e4-94d2-efb95f7e4f32
+  type: Data
+  properties:
+    bom-ref: allenai/ultrafeedback_binarized_cleaned-9c5e42aa-af11-5e8f-a596-9c890d9cb120
+    name: allenai/ultrafeedback_binarized_cleaned
+    content_url: https://huggingface.co/datasets/allenai/ultrafeedback_binarized_cleaned
+    configs: 'Name of the dataset subset: default {"split": "train_sft", "path": "data/train_sft-*"}, {"split": "test_sft", "path": "data/test_sft-*"}, {"split": "train_gen", "path": "data/train_gen-*"}, {"split": "test_gen", "path": "data/test_gen-*"}, {"split": "train_prefs", "path": "data/train_prefs-*"}, {"split": "test_prefs", "path": "data/test_prefs-*"}'
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: allenai/ultrafeedback_binarized_cleaned-9c5e42aa-af11-5e8f-a596-9c890d9cb120
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 17c00692-2fff-463d-aa35-9c0c3fc03d4e
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 46e25434-91c6-4e8f-811a-3342d69beac1
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:37.453250+00:00'
+    bom-ref: fblgit/una-cybertron-7b-v2-bf16-73779040-fde0-5243-bd08-0e842adb8d84
+    name: fblgit/una-cybertron-7b-v2-bf16
+    authors:
+    - name: fblgit
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: ai2_arc, split: test, config: ARC-Challenge'
+        type: acc_norm
+        value: 68.26
+      - slice: 'dataset: hellaswag, split: validation'
+        type: acc_norm
+        value: 85.85
+      - slice: 'dataset: cais/mmlu, split: test, config: all'
+        type: acc
+        value: 63.23
+      - slice: 'dataset: truthful_qa, split: validation, config: multiple_choice'
+        type: mc2
+        value: 64.63
+      - slice: 'dataset: winogrande, split: validation, config: winogrande_xl'
+        type: acc
+        value: 80.98
+      - slice: 'dataset: gsm8k, split: test, config: main'
+        type: acc
+        value: 55.04
+    description: '## Model Details
+
+
+      Adiestrated with UNA: Uniform Neural Alignment technique (paper going out soon).
+
+      * What is **NOT** UNA? Its not a merged layers model. Is not SLERP or SLURP or similar.
+
+      * What **is** UNA? A formula & A technique to *TAME* models
+
+      * When will be released the code and paper? When have time, contribute and it''ll be faster.
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - mistral
+    - text-generation
+    - juanako
+    - UNA
+    - cybertron
+    - fbl
+    - dataset:fblgit/tree-of-knowledge
+    - dataset:Open-Orca/SlimOrca-Dedup
+    - dataset:allenai/ultrafeedback_binarized_cleaned
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/fblgit/una-cybertron-7b-v2-bf16
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 137e7034-5034-4f28-8457-dcfb3275f967
+  type: Relationship
+  properties: {}
+  from_: 261dd5dc-52af-4e27-8925-9513a385d326
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fblgit_una-cybertron-7b-v2-bf16.json
+  relationship_type: annotatedBy
+- uid: 69721918-e1c7-48f8-83fc-b51f1655fe9c
+  type: Relationship
+  properties: {}
+  from_: 46e25434-91c6-4e8f-811a-3342d69beac1
+  to_:
+  - d5b550e2-1ae2-49e8-b9ad-5ad44a3e8315
+  - 9a05d65d-c1cd-4004-83cc-faf80fc2c4af
+  - 9823e3a7-2c01-43e4-94d2-efb95f7e4f32
+  relationship_type: uses
+- uid: 2cbb1cc2-4319-4272-a428-b06022d46208
+  type: Relationship
+  properties: {}
+  from_: 46e25434-91c6-4e8f-811a-3342d69beac1
+  to_:
+  - 17c00692-2fff-463d-aa35-9c0c3fc03d4e
+  relationship_type: uses
+- uid: b90883e8-672f-45f6-8927-4e68f03875f5
+  type: Relationship
+  properties: {}
+  from_: 261dd5dc-52af-4e27-8925-9513a385d326
+  to_:
+  - 46e25434-91c6-4e8f-811a-3342d69beac1
+  relationship_type: produces

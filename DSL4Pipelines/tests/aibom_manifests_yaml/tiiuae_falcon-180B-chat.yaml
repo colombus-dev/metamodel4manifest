@@ -1,0 +1,117 @@
+uid: 8cc512f8-7477-418e-b4ea-708c5a663321
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tiiuae_falcon-180B-chat.json
+  type: SoftwareFile
+  name: tiiuae_falcon-180B-chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:1d16f7dc-bada-4a14-8e69-fe319978c8a0
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tiiuae_falcon-180B-chat.json
+    type: ExternalReference
+  languages: []
+- uid: 8791e0fa-794d-47d5-a1be-729497f067e3
+  type: Data
+  properties:
+    bom-ref: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    name: tiiuae/falcon-refinedweb
+    content_url: https://huggingface.co/datasets/tiiuae/falcon-refinedweb
+    task_categories: text-generation
+    size_categories: 100B<n<1T
+    pretty_name: Falcon RefinedWeb
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 29a96576-2d6f-4e2a-95e8-57ee459fda9d
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 08d8da47-4a34-44ea-a7ae-41bf10a4c1d6
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:59.292521+00:00'
+    bom-ref: tiiuae/falcon-180B-chat-317f9001-e3fb-5d6e-ab9e-6f9ccda2a408
+    name: tiiuae/falcon-180B-chat
+    authors:
+    - name: tiiuae
+    architectureFamily: falcon
+    modelArchitecture: FalconForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - falcon
+    - text-generation
+    - conversational
+    - en
+    - de
+    - es
+    - fr
+    - dataset:tiiuae/falcon-refinedweb
+    - arxiv:1911.02150
+    - arxiv:2005.14165
+    - arxiv:2104.09864
+    - arxiv:2205.14135
+    - arxiv:2306.01116
+    - license:unknown
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    name: unknown
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/tiiuae/falcon-180B-chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 747d8d12-0f25-468d-ba23-27c662fda75e
+  type: Relationship
+  properties: {}
+  from_: 8cc512f8-7477-418e-b4ea-708c5a663321
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tiiuae_falcon-180B-chat.json
+  relationship_type: annotatedBy
+- uid: 0e518efb-55e6-466f-9748-e1d768002b0e
+  type: Relationship
+  properties: {}
+  from_: 08d8da47-4a34-44ea-a7ae-41bf10a4c1d6
+  to_:
+  - 8791e0fa-794d-47d5-a1be-729497f067e3
+  relationship_type: uses
+- uid: fb864d07-d19c-42d4-80a7-74b7d48aa7a3
+  type: Relationship
+  properties: {}
+  from_: 08d8da47-4a34-44ea-a7ae-41bf10a4c1d6
+  to_:
+  - 29a96576-2d6f-4e2a-95e8-57ee459fda9d
+  relationship_type: uses
+- uid: d81e71c2-a0f4-4cf2-94fa-088bec9de38b
+  type: Relationship
+  properties: {}
+  from_: 8cc512f8-7477-418e-b4ea-708c5a663321
+  to_:
+  - 08d8da47-4a34-44ea-a7ae-41bf10a4c1d6
+  relationship_type: produces

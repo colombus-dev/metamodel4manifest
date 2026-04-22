@@ -40,10 +40,10 @@ def test_rules_on_iris_nb():
     manifestQuery = ManifestQuery(manifest)
     # On exécute la fonction de l'expert
     res: Iterator[EvaluationResult] = check_dataset_and_model_presence(manifestQuery)
-    print("Results for 'Dataset and Model Presence' rule:")
+    print("\n Results for 'Dataset and Model Presence' rule:")
     results_list = list(res)
     assert len(results_list) == 2
-    for r in res:
+    for r in results_list:
         print(
             f"  {r.label}: {'✅' if r.success else '❌'} (Score: {r.score}) - Evidence: {r.evidence}"
         )

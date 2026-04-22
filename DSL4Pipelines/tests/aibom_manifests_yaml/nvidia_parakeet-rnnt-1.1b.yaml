@@ -1,0 +1,404 @@
+uid: 5eb50b1d-d222-453b-9a92-753351ef2625
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_parakeet-rnnt-1.1b.json
+  type: SoftwareFile
+  name: nvidia_parakeet-rnnt-1.1b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9a482c58-eb54-4eea-b865-29f362c1237b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_parakeet-rnnt-1.1b.json
+    type: ExternalReference
+  languages: []
+- uid: b6ea630a-bc4f-46c8-9657-cab312b11531
+  type: Data
+  properties:
+    bom-ref: librispeech_asr-7baf0ed9-b50c-5f93-8c23-49a2b8749c19
+    name: librispeech_asr
+    content_url: https://huggingface.co/datasets/librispeech_asr
+    task_categories: automatic-speech-recognition, audio-classification
+    task_ids: speaker-identification
+    size_categories: 100K<n<1M
+    annotations_creators: expert-generated
+    language_creators: crowdsourced, expert-generated
+    pretty_name: LibriSpeech
+    source_datasets: original
+    paperswithcode_id: librispeech-1
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: librispeech_asr-7baf0ed9-b50c-5f93-8c23-49a2b8749c19
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 4a83cccc-d597-4d0b-9511-1cdc0f4bb6ca
+  type: Data
+  properties:
+    bom-ref: fisher_corpus-a0c6e2c1-e876-5c66-89b2-cb93697b2a1c
+    name: fisher_corpus
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: fisher_corpus-a0c6e2c1-e876-5c66-89b2-cb93697b2a1c
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 3c5799b9-d139-4a6c-b2d8-6977cc4eb6d7
+  type: Data
+  properties:
+    bom-ref: Switchboard-1-b54b0d1d-3005-514e-9668-98d3c19f793f
+    name: Switchboard-1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Switchboard-1-b54b0d1d-3005-514e-9668-98d3c19f793f
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 00e5a609-4021-4c47-a2db-8dbd3d45181c
+  type: Data
+  properties:
+    bom-ref: WSJ-0-095442e6-ea65-5f6d-b360-432c7a2f501d
+    name: WSJ-0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: WSJ-0-095442e6-ea65-5f6d-b360-432c7a2f501d
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 48fc1383-4294-4dca-ac7a-68bb3b765ecf
+  type: Data
+  properties:
+    bom-ref: WSJ-1-0ef003e6-350d-50bb-9df7-9491b0c9b0b3
+    name: WSJ-1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: WSJ-1-0ef003e6-350d-50bb-9df7-9491b0c9b0b3
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 833e662d-5c21-4250-92aa-c1fef4d27031
+  type: Data
+  properties:
+    bom-ref: National-Singapore-Corpus-Part-1-1fbb2914-35aa-5126-9a84-a8b77169254c
+    name: National-Singapore-Corpus-Part-1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: National-Singapore-Corpus-Part-1-1fbb2914-35aa-5126-9a84-a8b77169254c
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 0e6e714b-e229-4368-8120-8a622baa963e
+  type: Data
+  properties:
+    bom-ref: National-Singapore-Corpus-Part-6-4f83cf7f-3026-5a77-ae37-28a73d4abc24
+    name: National-Singapore-Corpus-Part-6
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: National-Singapore-Corpus-Part-6-4f83cf7f-3026-5a77-ae37-28a73d4abc24
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 165a398b-3640-44e9-9c28-c4af0936d284
+  type: Data
+  properties:
+    bom-ref: vctk-d80444bd-bcc6-5c25-8570-061bb96dae38
+    name: vctk
+    content_url: https://huggingface.co/datasets/vctk
+    task_categories: automatic-speech-recognition, text-to-speech, text-to-audio
+    task_ids: ''
+    size_categories: 10K<n<100K
+    annotations_creators: expert-generated
+    language_creators: crowdsourced
+    pretty_name: VCTK
+    source_datasets: original
+    paperswithcode_id: vctk
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: vctk-d80444bd-bcc6-5c25-8570-061bb96dae38
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 13b42612-7cd9-4039-a5c4-90993e1dc777
+  type: Data
+  properties:
+    bom-ref: voxpopuli-15fb6343-a710-54f9-842b-3a1b43d6a630
+    name: voxpopuli
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: voxpopuli-15fb6343-a710-54f9-842b-3a1b43d6a630
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c95dd71a-4311-45da-89b3-0a79ec665604
+  type: Data
+  properties:
+    bom-ref: europarl-7e07ffed-425e-5e05-8847-08a1899f0ac1
+    name: europarl
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: europarl-7e07ffed-425e-5e05-8847-08a1899f0ac1
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: e89fb496-25d8-42c2-aa6c-c2513bf45345
+  type: Data
+  properties:
+    bom-ref: multilingual_librispeech-f260ef31-1d5d-54fe-8e61-88c397c0b7ce
+    name: multilingual_librispeech
+    content_url: https://huggingface.co/datasets/multilingual_librispeech
+    task_categories: automatic-speech-recognition, audio-classification
+    task_ids: speaker-identification
+    size_categories: 100K<n<1M
+    annotations_creators: expert-generated
+    language_creators: crowdsourced, expert-generated
+    pretty_name: MultiLingual LibriSpeech
+    source_datasets: original
+    paperswithcode_id: librispeech-1
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: multilingual_librispeech-f260ef31-1d5d-54fe-8e61-88c397c0b7ce
+    type: ExternalReference
+  languages:
+  - de, es, fr, it, nl, pl, pt
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f985343f-58f6-42e2-8ee7-30fd671bcbeb
+  type: Data
+  properties:
+    bom-ref: mozilla-foundation/common_voice_8_0-a994a71f-f9f5-5f65-a3fa-51a56293cd8e
+    name: mozilla-foundation/common_voice_8_0
+    content_url: https://huggingface.co/datasets/mozilla-foundation/common_voice_8_0
+    task_categories: automatic-speech-recognition
+    annotations_creators: crowdsourced
+    language_creators: crowdsourced
+    pretty_name: Common Voice Corpus 8.0
+    source_datasets: extended|common_voice
+    paperswithcode_id: common-voice
+    license: cc0-1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: mozilla-foundation/common_voice_8_0-a994a71f-f9f5-5f65-a3fa-51a56293cd8e
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: aa390544-b91c-4deb-8d3b-1eb11445a8b2
+  type: Data
+  properties:
+    bom-ref: MLCommons/peoples_speech-f88dc766-1de0-51c6-865d-16930ec19be6
+    name: MLCommons/peoples_speech
+    content_url: https://huggingface.co/datasets/MLCommons/peoples_speech
+    task_categories: automatic-speech-recognition
+    task_ids: ''
+    size_categories: 1T<n
+    annotations_creators: crowdsourced, machine-generated
+    language_creators: crowdsourced, machine-generated
+    pretty_name: People's Speech
+    source_datasets: original
+    configs: 'Name of the dataset subset: validation {"split": "validation", "path": "validation/validation-*"}'
+    license: cc-by-2.0, cc-by-2.5, cc-by-3.0, cc-by-4.0, cc-by-sa-3.0, cc-by-sa-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: MLCommons/peoples_speech-f88dc766-1de0-51c6-865d-16930ec19be6
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: dd9f7672-46a3-494e-89dc-74c16c257774
+  type: SoftwareFile
+  name: nemo
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a1b52a01-4254-450e-a045-f5876267986e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:07.152970+00:00'
+    bom-ref: nvidia/parakeet-rnnt-1.1b-4c037b12-8d43-5122-9100-6783c71afee2
+    name: nvidia/parakeet-rnnt-1.1b
+    authors:
+    - name: nvidia
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: edinburghcstr/ami, split: test, config: ihm'
+        type: wer
+        value: 17.1
+      - slice: 'dataset: revdotcom/earnings22, split: test'
+        type: wer
+        value: 14.11
+      - slice: 'dataset: speechcolab/gigaspeech, split: test'
+        type: wer
+        value: 9.96
+      - slice: 'dataset: librispeech_asr, split: test, config: other'
+        type: wer
+        value: 1.46
+      - slice: 'dataset: librispeech_asr, split: test, config: other'
+        type: wer
+        value: 2.47
+      - slice: 'dataset: kensho/spgispeech, split: test, config: test'
+        type: wer
+        value: 3.11
+      - slice: 'dataset: LIUM/tedlium, split: test, config: release1'
+        type: wer
+        value: 3.92
+      - slice: 'dataset: facebook/voxpopuli, split: test, config: en'
+        type: wer
+        value: 5.39
+      - slice: 'dataset: mozilla-foundation/common_voice_9_0, split: test, config: en'
+        type: wer
+        value: 5.79
+    tags:
+    - nemo
+    - automatic-speech-recognition
+    - speech
+    - audio
+    - Transducer
+    - FastConformer
+    - Conformer
+    - pytorch
+    - NeMo
+    - hf-asr-leaderboard
+    - en
+    - dataset:librispeech_asr
+    - dataset:fisher_corpus
+    - dataset:Switchboard-1
+    - dataset:WSJ-0
+    - dataset:WSJ-1
+    - dataset:National-Singapore-Corpus-Part-1
+    - dataset:National-Singapore-Corpus-Part-6
+    - dataset:vctk
+    - dataset:voxpopuli
+    - dataset:europarl
+    - dataset:multilingual_librispeech
+    - dataset:mozilla-foundation/common_voice_8_0
+    - dataset:MLCommons/peoples_speech
+    - arxiv:2305.05084
+    - license:cc-by-4.0
+    - model-index
+    - region:us
+  license:
+    id: CC-BY-4.0
+    url: https://spdx.org/licenses/CC-BY-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/nvidia/parakeet-rnnt-1.1b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: automatic-speech-recognition
+relations:
+- uid: d28e617a-6d8b-485e-86db-5aa70b005411
+  type: Relationship
+  properties: {}
+  from_: 5eb50b1d-d222-453b-9a92-753351ef2625
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_parakeet-rnnt-1.1b.json
+  relationship_type: annotatedBy
+- uid: 37384263-5c3b-462b-a75a-166e763f3082
+  type: Relationship
+  properties: {}
+  from_: a1b52a01-4254-450e-a045-f5876267986e
+  to_:
+  - b6ea630a-bc4f-46c8-9657-cab312b11531
+  - 4a83cccc-d597-4d0b-9511-1cdc0f4bb6ca
+  - 3c5799b9-d139-4a6c-b2d8-6977cc4eb6d7
+  - 00e5a609-4021-4c47-a2db-8dbd3d45181c
+  - 48fc1383-4294-4dca-ac7a-68bb3b765ecf
+  - 833e662d-5c21-4250-92aa-c1fef4d27031
+  - 0e6e714b-e229-4368-8120-8a622baa963e
+  - 165a398b-3640-44e9-9c28-c4af0936d284
+  - 13b42612-7cd9-4039-a5c4-90993e1dc777
+  - c95dd71a-4311-45da-89b3-0a79ec665604
+  - e89fb496-25d8-42c2-aa6c-c2513bf45345
+  - f985343f-58f6-42e2-8ee7-30fd671bcbeb
+  - aa390544-b91c-4deb-8d3b-1eb11445a8b2
+  relationship_type: uses
+- uid: 19aabe95-d89b-4c23-a530-5483e702e839
+  type: Relationship
+  properties: {}
+  from_: a1b52a01-4254-450e-a045-f5876267986e
+  to_:
+  - dd9f7672-46a3-494e-89dc-74c16c257774
+  relationship_type: uses
+- uid: 2bc2fb3d-0d27-414f-9f50-505ad0ea0210
+  type: Relationship
+  properties: {}
+  from_: 5eb50b1d-d222-453b-9a92-753351ef2625
+  to_:
+  - a1b52a01-4254-450e-a045-f5876267986e
+  relationship_type: produces

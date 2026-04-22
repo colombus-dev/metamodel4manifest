@@ -1,0 +1,82 @@
+uid: fc3c0cc3-8863-40f9-b817-fa5ba63367cb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2.5-1210.json
+  type: SoftwareFile
+  name: deepseek-ai_DeepSeek-V2.5-1210.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:27ce379e-cf07-4bef-befd-09a947d00891
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2.5-1210.json
+    type: ExternalReference
+  languages: []
+- uid: 791effb7-d4c4-43d0-86bb-937ef4e2f7bf
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 28d42754-1953-49d6-a6fc-9b8e4ac90117
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:56.937297+00:00'
+    bom-ref: deepseek-ai/DeepSeek-V2.5-1210-02aeda9c-ac5b-5535-906b-70d7c9649f73
+    name: deepseek-ai/DeepSeek-V2.5-1210
+    authors:
+    - name: deepseek-ai
+    architectureFamily: deepseek_v2
+    modelArchitecture: DeepseekV2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - deepseek_v2
+    - text-generation
+    - conversational
+    - custom_code
+    - arxiv:2405.04434
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: deepseek
+    url: https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/deepseek-ai/DeepSeek-V2.5-1210
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: d13462af-75d5-4045-ad68-88fab0b1d4e1
+  type: Relationship
+  properties: {}
+  from_: fc3c0cc3-8863-40f9-b817-fa5ba63367cb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2.5-1210.json
+  relationship_type: annotatedBy
+- uid: b23782af-1553-4480-8d51-6f3c579c747a
+  type: Relationship
+  properties: {}
+  from_: 28d42754-1953-49d6-a6fc-9b8e4ac90117
+  to_:
+  - 791effb7-d4c4-43d0-86bb-937ef4e2f7bf
+  relationship_type: uses
+- uid: a0c1bbc3-dc90-4087-b8b8-46b51f5bd2d9
+  type: Relationship
+  properties: {}
+  from_: fc3c0cc3-8863-40f9-b817-fa5ba63367cb
+  to_:
+  - 28d42754-1953-49d6-a6fc-9b8e4ac90117
+  relationship_type: produces

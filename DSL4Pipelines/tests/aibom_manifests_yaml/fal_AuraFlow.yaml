@@ -1,0 +1,74 @@
+uid: ddf73c68-2cf9-4974-83c8-d2be128b342d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fal_AuraFlow.json
+  type: SoftwareFile
+  name: fal_AuraFlow.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:411a5bec-b786-4709-867c-6caea2998009
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fal_AuraFlow.json
+    type: ExternalReference
+  languages: []
+- uid: 09ec06f1-b9eb-4155-861e-e5a450b428dc
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 5b45afe3-91b0-4346-9373-4f46f06f93fb
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:09.496771+00:00'
+    bom-ref: fal/AuraFlow-79fad9fd-fd29-5406-abd3-a2e48186154f
+    name: fal/AuraFlow
+    authors:
+    - name: fal
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - license:apache-2.0
+    - diffusers:AuraFlowPipeline
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/fal/AuraFlow
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: b68bb006-1e1a-4fe0-9104-aa56b2972509
+  type: Relationship
+  properties: {}
+  from_: ddf73c68-2cf9-4974-83c8-d2be128b342d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fal_AuraFlow.json
+  relationship_type: annotatedBy
+- uid: b59948ef-fe45-4c06-9dff-ff2ecb9039cc
+  type: Relationship
+  properties: {}
+  from_: 5b45afe3-91b0-4346-9373-4f46f06f93fb
+  to_:
+  - 09ec06f1-b9eb-4155-861e-e5a450b428dc
+  relationship_type: uses
+- uid: d5678e7f-a80d-44a6-8e81-cc3b41395af5
+  type: Relationship
+  properties: {}
+  from_: ddf73c68-2cf9-4974-83c8-d2be128b342d
+  to_:
+  - 5b45afe3-91b0-4346-9373-4f46f06f93fb
+  relationship_type: produces

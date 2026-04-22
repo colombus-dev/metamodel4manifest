@@ -1,0 +1,109 @@
+uid: e883188a-0418-42be-b261-0b0b64a9afa5
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_multi-qa-MiniLM-L6-cos-v1.json
+  type: SoftwareFile
+  name: sentence-transformers_multi-qa-MiniLM-L6-cos-v1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e84f85a3-c34d-4f46-8a39-c2d1c4d07e9b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_multi-qa-MiniLM-L6-cos-v1.json
+    type: ExternalReference
+  languages: []
+- uid: 312413d8-7207-4c72-8864-aa998274bb1b
+  type: SoftwareFile
+  name: sentence-transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ce9bb12d-ed35-4534-9594-41d07cdf9ad2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:29.424759+00:00'
+    bom-ref: sentence-transformers/multi-qa-MiniLM-L6-cos-v1-fbfff685-f4c6-54df-98f0-b9222b4e017b
+    name: sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+    authors:
+    - name: sentence-transformers
+    architectureFamily: bert
+    modelArchitecture: BertModel
+    tags:
+    - sentence-transformers
+    - pytorch
+    - tf
+    - onnx
+    - safetensors
+    - openvino
+    - bert
+    - feature-extraction
+    - sentence-similarity
+    - transformers
+    - en
+    - dataset:flax-sentence-embeddings/stackexchange_xml
+    - dataset:ms_marco
+    - dataset:gooaq
+    - dataset:yahoo_answers_topics
+    - dataset:search_qa
+    - dataset:eli5
+    - dataset:natural_questions
+    - dataset:trivia_qa
+    - dataset:embedding-data/QQP
+    - dataset:embedding-data/PAQ_pairs
+    - dataset:embedding-data/Amazon-QA
+    - dataset:embedding-data/WikiAnswers
+    - autotrain_compatible
+    - text-embeddings-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: sentence-similarity
+  consideration:
+    use_cases: '## Intended uses
+
+
+      Our model is intented to be used for semantic search: It encodes queries / questions and text paragraphs in a dense vector space. It finds relevant documents for the given passages.
+
+
+      Note that there is a limit of 512 word pieces: Text longer than that will be truncated. Further note that the model was just trained on input text up to 250 word pieces. It might not work well for longer text.
+
+
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: d07b5f37-9657-4b5c-822e-6e690893162b
+  type: Relationship
+  properties: {}
+  from_: e883188a-0418-42be-b261-0b0b64a9afa5
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_multi-qa-MiniLM-L6-cos-v1.json
+  relationship_type: annotatedBy
+- uid: f1547cd7-0b6a-45c8-aee3-57162252dc4c
+  type: Relationship
+  properties: {}
+  from_: ce9bb12d-ed35-4534-9594-41d07cdf9ad2
+  to_:
+  - 312413d8-7207-4c72-8864-aa998274bb1b
+  relationship_type: uses
+- uid: 94eb1475-465e-4208-bb8d-cc3366389007
+  type: Relationship
+  properties: {}
+  from_: e883188a-0418-42be-b261-0b0b64a9afa5
+  to_:
+  - ce9bb12d-ed35-4534-9594-41d07cdf9ad2
+  relationship_type: produces

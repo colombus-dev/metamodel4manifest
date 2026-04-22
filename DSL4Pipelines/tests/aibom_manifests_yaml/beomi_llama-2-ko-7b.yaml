@@ -1,0 +1,149 @@
+uid: 373a7693-83d8-4808-b62d-448906ed5a85
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/beomi_llama-2-ko-7b.json
+  type: SoftwareFile
+  name: beomi_llama-2-ko-7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d6ecbc9d-8549-4309-b3cf-b57ec1eafd7c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/beomi_llama-2-ko-7b.json
+    type: ExternalReference
+  languages: []
+- uid: a53f3c2d-2309-4dea-891d-75ac917e06fc
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ac000b8d-2a84-416c-881c-89e5be21de33
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:56.233296+00:00'
+    bom-ref: beomi/llama-2-ko-7b-a25e4137-63ca-5112-a0c7-600999e064b6
+    name: beomi/llama-2-ko-7b
+    authors:
+    - name: beomi
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Details
+
+
+      **Model Developers** Junbum Lee (Beomi)
+
+
+      **Variations** Llama-2-Ko will come in a range of parameter sizes — 7B, 13B, and 70B — as well as pretrained and fine-tuned variations.
+
+
+      **Input** Models input text only.
+
+
+      **Output** Models generate text only.
+
+
+      **Model Architecture**
+
+
+      Llama-2-Ko is an auto-regressive language model that uses an optimized transformer architecture based on Llama-2.
+
+
+      ||Training Data|Params|Content Length|GQA|Tokens|LR|
+
+      |---|---|---|---|---|---|---|
+
+      |Llama 2|*A new mix of Korean online data*|7B|4k|&#10007;|>40B*|1e<sup>-5</sup>|
+
+      *Plan to train upto 200B tokens
+
+
+      **Vocab Expansion**
+
+
+      | Model Name | Vocabulary Size | Description |
+
+      | --- | --- | --- |
+
+      | Original Llama-2 | 32000 | Sentencepiece BPE |
+
+      | **Expanded Llama-2-Ko** | 46336 | Sentencepiece BPE. Added Korean vocab and merges |
+
+
+      **Tokenizing "안녕하세요, 오늘은 날씨가 좋네요."**
+
+
+      | Model | Tokens |
+
+      | --- | --- |
+
+      | Llama-2 | `[''▁'', ''안'', ''<0xEB>'', ''<0x85>'', ''<0x95>'', ''하'', ''세'', ''요'', '','', ''▁'', ''오'', ''<0xEB>'', ''<0x8A>'', ''<0x98>'', ''은'', ''▁'', ''<0xEB>'', ''<0x82>'', ''<0xA0>'', ''씨'', ''가'', ''▁'', ''<0xEC>'', ''<0xA2>'', ''<0x8B>'', ''<0xEB>'', ''<0x84>'', ''<0xA4>'', ''요'']` |
+
+      | Llama-2-Ko | `[''▁안녕'', ''하세요'', '','', ''▁오늘은'', ''▁날'', ''씨가'', ''▁좋네요'']` |
+
+
+      **Tokenizing "Llama 2: Open Foundation and Fine-Tuned Chat Models"**
+
+
+      | Model | Tokens |
+
+      | --- | --- |
+
+      | Llama-2 | `[''▁L'', ''l'', ''ama'', ''▁'', ''2'', '':'', ''▁Open'', ''▁Foundation'', ''▁and'', ''▁Fine'', ''-'', ''T'', ''un'', ''ed'', ''▁Ch'', ''at'', ''▁Mod'', ''els'']` |
+
+      | Llama-2-Ko | `[''▁L'', ''l'', ''ama'', ''▁'', ''2'', '':'', ''▁Open'', ''▁Foundation'', ''▁and'', ''▁Fine'', ''-'', ''T'', ''un'', ''ed'', ''▁Ch'', ''at'', ''▁Mod'', ''els'']` |
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - llama
+    - text-generation
+    - facebook
+    - meta
+    - llama-2
+    - kollama
+    - llama-2-ko
+    - en
+    - ko
+    - doi:10.57967/hf/1098
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/beomi/llama-2-ko-7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1ac2a724-741d-4d82-a099-1f0197e1ce88
+  type: Relationship
+  properties: {}
+  from_: 373a7693-83d8-4808-b62d-448906ed5a85
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/beomi_llama-2-ko-7b.json
+  relationship_type: annotatedBy
+- uid: 7dd94314-f19f-47e8-b2c4-fa997c28b987
+  type: Relationship
+  properties: {}
+  from_: ac000b8d-2a84-416c-881c-89e5be21de33
+  to_:
+  - a53f3c2d-2309-4dea-891d-75ac917e06fc
+  relationship_type: uses
+- uid: c379e348-e4ea-435a-80a9-cd5fadd36a0e
+  type: Relationship
+  properties: {}
+  from_: 373a7693-83d8-4808-b62d-448906ed5a85
+  to_:
+  - ac000b8d-2a84-416c-881c-89e5be21de33
+  relationship_type: produces

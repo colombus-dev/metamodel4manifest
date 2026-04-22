@@ -1,0 +1,76 @@
+uid: d3abfba1-2fb1-48a2-841e-aa4018656c05
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SweetLuna_Kenshi.json
+  type: SoftwareFile
+  name: SweetLuna_Kenshi.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ff0d66a1-3bfa-40c0-bcbe-3f737c2251cf
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SweetLuna_Kenshi.json
+    type: ExternalReference
+  languages: []
+- uid: 0701c512-f63e-4dfc-a9ed-adea7d786045
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 9f780ca8-a13d-4847-a952-b83520475407
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:22.078738+00:00'
+    bom-ref: SweetLuna/Kenshi-84084e34-2245-5146-af36-229221c8eea9
+    name: SweetLuna/Kenshi
+    authors:
+    - name: SweetLuna
+    tags:
+    - diffusers
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-image
+    - art
+    - artistic
+    - en
+    - license:creativeml-openrail-m
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/SweetLuna/Kenshi
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: e43e373f-a137-413f-a786-23eef2569ac4
+  type: Relationship
+  properties: {}
+  from_: d3abfba1-2fb1-48a2-841e-aa4018656c05
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SweetLuna_Kenshi.json
+  relationship_type: annotatedBy
+- uid: f1009888-5a80-44ae-9144-7c27b7028a95
+  type: Relationship
+  properties: {}
+  from_: 9f780ca8-a13d-4847-a952-b83520475407
+  to_:
+  - 0701c512-f63e-4dfc-a9ed-adea7d786045
+  relationship_type: uses
+- uid: 8ff4ba2e-7f7a-47a1-8021-87ef67b3dd93
+  type: Relationship
+  properties: {}
+  from_: d3abfba1-2fb1-48a2-841e-aa4018656c05
+  to_:
+  - 9f780ca8-a13d-4847-a952-b83520475407
+  relationship_type: produces

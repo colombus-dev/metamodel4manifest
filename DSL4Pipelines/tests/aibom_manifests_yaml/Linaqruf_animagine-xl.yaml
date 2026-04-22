@@ -1,0 +1,125 @@
+uid: 2fc38e0f-d8f8-4bcc-acf7-be97c09adb1c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Linaqruf_animagine-xl.json
+  type: SoftwareFile
+  name: Linaqruf_animagine-xl.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9d92a576-8821-4c39-956c-4ca782d46114
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Linaqruf_animagine-xl.json
+    type: ExternalReference
+  languages: []
+- uid: f26e97c8-4b7c-4fc0-b2be-11d62d1aa67d
+  type: Data
+  properties:
+    bom-ref: Linaqruf/animagine-datasets-e98cab67-e8c7-545c-b50f-d60e1c2a16cd
+    name: Linaqruf/animagine-datasets
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Linaqruf/animagine-datasets-e98cab67-e8c7-545c-b50f-d60e1c2a16cd
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 2401e9a9-8be3-49ab-ac2f-3b939bd34865
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: bf6ed949-3683-4182-9b73-6e71030a888c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:38.500038+00:00'
+    bom-ref: Linaqruf/animagine-xl-38991cc3-f25f-5b07-822f-4c8fe4a4f327
+    name: Linaqruf/animagine-xl
+    authors:
+    - name: Linaqruf
+    description: '## Overview
+
+
+      **Animagine XL** is a high-resolution, latent text-to-image diffusion model. The model has been fine-tuned using a learning rate of `4e-7` over 27000 global steps with a batch size of 16 on a curated dataset of superior-quality anime-style images. This model is derived from Stable Diffusion XL 1.0.
+
+
+      - Use it with the [`Stable Diffusion Webui`](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+
+      - Use it with 🧨 [`diffusers`](https://huggingface.co/docs/diffusers/index)
+
+      - Use it with the [`ComfyUI`](https://github.com/comfyanonymous/ComfyUI) **(recommended)**
+
+
+      Like other anime-style Stable Diffusion models, it also supports Danbooru tags to generate images.
+
+
+      e.g. _**face focus, cute, masterpiece, best quality, 1girl, green hair, sweater, looking at viewer, upper body, beanie, outdoors, night, turtleneck**_
+
+
+      <hr>
+
+      '
+    tags:
+    - diffusers
+    - safetensors
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - stable-diffusion-xl
+    - text-to-image
+    - en
+    - dataset:Linaqruf/animagine-datasets
+    - license:openrail++
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionXLPipeline
+    - region:us
+  license:
+    name: openrail++
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Linaqruf/animagine-xl
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 77822980-02c3-48fe-b50b-40c3d927b9c1
+  type: Relationship
+  properties: {}
+  from_: 2fc38e0f-d8f8-4bcc-acf7-be97c09adb1c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Linaqruf_animagine-xl.json
+  relationship_type: annotatedBy
+- uid: b7a13c67-d47d-4345-8a6c-d0b77b151690
+  type: Relationship
+  properties: {}
+  from_: bf6ed949-3683-4182-9b73-6e71030a888c
+  to_:
+  - f26e97c8-4b7c-4fc0-b2be-11d62d1aa67d
+  relationship_type: uses
+- uid: 88972f8f-25f5-4758-a688-6d963300756e
+  type: Relationship
+  properties: {}
+  from_: bf6ed949-3683-4182-9b73-6e71030a888c
+  to_:
+  - 2401e9a9-8be3-49ab-ac2f-3b939bd34865
+  relationship_type: uses
+- uid: 1ee722db-9dab-41ef-a782-328a60e98ddc
+  type: Relationship
+  properties: {}
+  from_: 2fc38e0f-d8f8-4bcc-acf7-be97c09adb1c
+  to_:
+  - bf6ed949-3683-4182-9b73-6e71030a888c
+  relationship_type: produces

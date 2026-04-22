@@ -1,0 +1,78 @@
+uid: bfe6d00c-19d3-443b-9446-e157eb9f1970
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/wavymulder_portraitplus.json
+  type: SoftwareFile
+  name: wavymulder_portraitplus.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:5549c89f-afc2-455f-a367-92e1ef6c1c12
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/wavymulder_portraitplus.json
+    type: ExternalReference
+  languages: []
+- uid: 6be1f94e-06b9-463c-b7c5-f56c08053b51
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b11beda5-8c34-496f-b733-7e9eed8d2a35
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:54.339418+00:00'
+    bom-ref: wavymulder/portraitplus-4835736f-97da-5c08-af5d-265c2a2a1fc7
+    name: wavymulder/portraitplus
+    authors:
+    - name: wavymulder
+    tags:
+    - diffusers
+    - safetensors
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-image
+    - en
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/wavymulder/portraitplus
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: c90d7dd4-eb62-48bc-ad48-88d192d4f8bc
+  type: Relationship
+  properties: {}
+  from_: bfe6d00c-19d3-443b-9446-e157eb9f1970
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/wavymulder_portraitplus.json
+  relationship_type: annotatedBy
+- uid: 17c16a6f-92fa-441d-9b87-898e2d9b847e
+  type: Relationship
+  properties: {}
+  from_: b11beda5-8c34-496f-b733-7e9eed8d2a35
+  to_:
+  - 6be1f94e-06b9-463c-b7c5-f56c08053b51
+  relationship_type: uses
+- uid: 76e22270-9f70-46f3-8fb0-ec29125d54d9
+  type: Relationship
+  properties: {}
+  from_: bfe6d00c-19d3-443b-9446-e157eb9f1970
+  to_:
+  - b11beda5-8c34-496f-b733-7e9eed8d2a35
+  relationship_type: produces

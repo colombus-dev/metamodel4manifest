@@ -1,0 +1,127 @@
+uid: e1af6f4b-e944-4133-a88f-1b255ed56e9c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Llama-2-70B-Chat-GPTQ.json
+  type: SoftwareFile
+  name: TheBloke_Llama-2-70B-Chat-GPTQ.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2e6d761f-0c7a-4f4b-b293-d9ab02e3230c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Llama-2-70B-Chat-GPTQ.json
+    type: ExternalReference
+  languages: []
+- uid: eee68764-0a3d-46e0-b195-0f724f11d7c1
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 83137568-259a-45d5-a401-8742c696f2de
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Llama-2-70b-chat-hf
+    type: ExternalReference
+  languages: []
+- uid: cdcc5e7c-9248-4877-ba9a-e61ea6629b10
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:58.610236+00:00'
+    bom-ref: TheBloke/Llama-2-70B-Chat-GPTQ-3af6fc3c-cfe3-5811-8df0-6a1db9a43a8a
+    name: TheBloke/Llama-2-70B-Chat-GPTQ
+    authors:
+    - name: TheBloke
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Description
+
+
+      This repo contains GPTQ model files for [Meta Llama 2''s Llama 2 70B Chat](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf).
+
+
+      Multiple GPTQ parameter permutations are provided; see Provided Files below for details of the options provided, their parameters, and the software used to create them.
+
+
+      <!-- description end -->
+
+      <!-- repositories-available start -->'
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - facebook
+    - meta
+    - pytorch
+    - llama-2
+    - en
+    - arxiv:2307.09288
+    - base_model:meta-llama/Llama-2-70b-chat-hf
+    - base_model:quantized:meta-llama/Llama-2-70b-chat-hf
+    - license:llama2
+    - autotrain_compatible
+    - text-generation-inference
+    - 4-bit
+    - gptq
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/TheBloke/Llama-2-70B-Chat-GPTQ
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+      **Intended Use Cases** Llama 2 is intended for commercial and research use in English. Tuned models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks.
+
+
+      **Out-of-scope Uses** Use in any manner that violates applicable laws or regulations (including trade compliance laws).Use in languages other than English. Use in any other way that is prohibited by the Acceptable Use Policy and Licensing Agreement for Llama 2.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 52c32c70-6a14-4b60-9fac-aa42a83ed1dd
+  type: Relationship
+  properties: {}
+  from_: e1af6f4b-e944-4133-a88f-1b255ed56e9c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Llama-2-70B-Chat-GPTQ.json
+  relationship_type: annotatedBy
+- uid: cfd5baa6-f6d7-4e98-a616-3ad5a24eb530
+  type: Relationship
+  properties: {}
+  from_: cdcc5e7c-9248-4877-ba9a-e61ea6629b10
+  to_:
+  - eee68764-0a3d-46e0-b195-0f724f11d7c1
+  relationship_type: uses
+- uid: aa553fbf-dab3-4e52-b9bd-9ff3130ce52d
+  type: Relationship
+  properties: {}
+  from_: cdcc5e7c-9248-4877-ba9a-e61ea6629b10
+  to_:
+  - 83137568-259a-45d5-a401-8742c696f2de
+  relationship_type: derivedFrom
+- uid: e86f06ce-44ef-402c-8625-153dd9a43173
+  type: Relationship
+  properties: {}
+  from_: e1af6f4b-e944-4133-a88f-1b255ed56e9c
+  to_:
+  - cdcc5e7c-9248-4877-ba9a-e61ea6629b10
+  relationship_type: produces

@@ -1,0 +1,154 @@
+uid: 0fa52673-8126-4e93-8a9e-9ad141c93067
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_Phi-3-medium-128k-instruct.json
+  type: SoftwareFile
+  name: microsoft_Phi-3-medium-128k-instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:858c8710-cdea-464a-82de-e2e7a1f25b2c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_Phi-3-medium-128k-instruct.json
+    type: ExternalReference
+  languages: []
+- uid: b97d81cf-f181-4477-9e9e-b32e3ef78b62
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 84c0b89f-d7f3-4690-9eb5-ea787aaf59de
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:17.703534+00:00'
+    bom-ref: microsoft/Phi-3-medium-128k-instruct-6f3e17b5-b600-567e-a4de-9fbd991c3b9a
+    name: microsoft/Phi-3-medium-128k-instruct
+    authors:
+    - name: microsoft
+    architectureFamily: phi3
+    modelArchitecture: Phi3ForCausalLM
+    description: '## Model Summary
+
+
+      The Phi-3-Medium-128K-Instruct is a 14B parameters, lightweight, state-of-the-art open model trained with the Phi-3 datasets that includes both synthetic data and the filtered publicly available websites data with a focus on high-quality and reasoning dense properties.
+
+      The model belongs to the Phi-3 family with the Medium version in two variants [4k](https://huggingface.co/microsoft/Phi-3-medium-4k-instruct) and [128K](https://huggingface.co/microsoft/Phi-3-medium-128k-instruct) which is the context length (in tokens) that it can support.
+
+
+      The model has underwent a post-training process that incorporates both supervised fine-tuning and direct preference optimization for the instruction following and safety measures.
+
+      When assessed against benchmarks testing common sense, language understanding, math, code, long context and logical reasoning, Phi-3-Medium-128K-Instruct showcased a robust and state-of-the-art performance among models of the same-size and next-size-up.
+
+
+      Resources and Technical Documentation:
+
+
+      + [Phi-3 Microsoft Blog](https://aka.ms/Phi-3Build2024)
+
+      + [Phi-3 Technical Report](https://aka.ms/phi3-tech-report)
+
+      + [Phi-3 on Azure AI Studio](https://aka.ms/phi3-azure-ai)
+
+      + [Phi-3 Cookbook](https://github.com/microsoft/Phi-3CookBook)
+
+
+      |         | Short Context | Long Context |
+
+      | ------- | ------------- | ------------ |
+
+      | Mini    | 4K [[HF]](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct) ; [[ONNX]](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx) ; [[GGUF]](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-gguf) | 128K [[HF]](https://huggingface.co/microsoft/Phi-3-mini-128k-instruct) ; [[ONNX]](https://huggingface.co/microsoft/Phi-3-mini-128k-instruct-onnx)|
+
+      | Small   | 8K [[HF]](https://huggingface.co/microsoft/Phi-3-small-8k-instruct) ; [[ONNX]](https://huggingface.co/microsoft/Phi-3-small-8k-instruct-onnx-cuda) | 128K [[HF]](https://huggingface.co/microsoft/Phi-3-small-128k-instruct) ; [[ONNX]](https://huggingface.co/microsoft/Phi-3-small-128k-instruct-onnx-cuda)|
+
+      | Medium  | 4K [[HF]](https://huggingface.co/microsoft/Phi-3-medium-4k-instruct) ; [[ONNX]](https://huggingface.co/microsoft/Phi-3-medium-4k-instruct-onnx-cuda) | 128K [[HF]](https://huggingface.co/microsoft/Phi-3-medium-128k-instruct) ; [[ONNX]](https://huggingface.co/microsoft/Phi-3-medium-128k-instruct-onnx-cuda)|
+
+      | Vision  |  | 128K [[HF]](https://huggingface.co/microsoft/Phi-3-vision-128k-instruct) ; [[ONNX]](https://huggingface.co/microsoft/Phi-3-vision-128k-instruct-onnx-cuda)|
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - phi3
+    - text-generation
+    - nlp
+    - code
+    - conversational
+    - custom_code
+    - multilingual
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/Phi-3-medium-128k-instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Uses
+
+
+      **Primary use cases**
+
+
+      The model is intended for broad commercial and research use in English. The model provides uses for general purpose AI systems and applications which require :
+
+
+      1) Memory/compute constrained environments
+
+      2) Latency bound scenarios
+
+      3) Strong reasoning (especially code, math and logic)
+
+
+      Our model is designed to accelerate research on language and multimodal models, for use as a building block for generative AI powered features.
+
+
+      **Use case considerations**
+
+
+      Our models are not specifically designed or evaluated for all downstream purposes. Developers should consider common limitations of language models as they select use cases, and evaluate and mitigate for accuracy, safety, and fariness before using within a specific downstream use case, particularly for high risk scenarios. Developers should be aware of and adhere to applicable laws or regulations (including privacy, trade compliance laws, etc.) that are relevant to their use case.
+
+
+      Nothing contained in this Model Card should be interpreted as or deemed a restriction or modification to the license the model is released under.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 4653db03-8560-48cf-a327-fe4e0f85f84c
+  type: Relationship
+  properties: {}
+  from_: 0fa52673-8126-4e93-8a9e-9ad141c93067
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_Phi-3-medium-128k-instruct.json
+  relationship_type: annotatedBy
+- uid: 0fe7464b-1e74-40fb-8ddf-a28e876921ad
+  type: Relationship
+  properties: {}
+  from_: 84c0b89f-d7f3-4690-9eb5-ea787aaf59de
+  to_:
+  - b97d81cf-f181-4477-9e9e-b32e3ef78b62
+  relationship_type: uses
+- uid: aa283bd1-2e95-4824-a74b-01d2d2c32957
+  type: Relationship
+  properties: {}
+  from_: 0fa52673-8126-4e93-8a9e-9ad141c93067
+  to_:
+  - 84c0b89f-d7f3-4690-9eb5-ea787aaf59de
+  relationship_type: produces

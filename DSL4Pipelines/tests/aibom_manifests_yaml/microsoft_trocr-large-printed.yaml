@@ -1,0 +1,96 @@
+uid: 54d43d61-0ef7-49d3-869e-b3047cead07e
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_trocr-large-printed.json
+  type: SoftwareFile
+  name: microsoft_trocr-large-printed.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c56c0de3-38e5-40ac-b8e4-a5d5d7fcb11f
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_trocr-large-printed.json
+    type: ExternalReference
+  languages: []
+- uid: 7edfaf6c-6420-4ae4-b125-d2578181d9f4
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2131fc2a-75ba-4a9a-8875-8f4ad4ed2cff
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:35.324573+00:00'
+    bom-ref: microsoft/trocr-large-printed-a3a84b84-be1d-5153-a8fc-3aec7d4d5f00
+    name: microsoft/trocr-large-printed
+    authors:
+    - name: microsoft
+    architectureFamily: vision-encoder-decoder
+    modelArchitecture: VisionEncoderDecoderModel
+    description: '## Model description
+
+
+      The TrOCR model is an encoder-decoder model, consisting of an image Transformer as encoder, and a text Transformer as decoder. The image encoder was initialized from the weights of BEiT, while the text decoder was initialized from the weights of RoBERTa.
+
+
+      Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Next, the Transformer text decoder autoregressively generates tokens.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - vision-encoder-decoder
+    - image-text-to-text
+    - trocr
+    - image-to-text
+    - arxiv:2109.10282
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/trocr-large-printed
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-text
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      You can use the raw model for optical character recognition (OCR) on single text-line images. See the [model hub](https://huggingface.co/models?search=microsoft/trocr) to look for fine-tuned versions on a task that interests you.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 64e55630-d1e1-4fee-99f4-550a1f1cb8dd
+  type: Relationship
+  properties: {}
+  from_: 54d43d61-0ef7-49d3-869e-b3047cead07e
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_trocr-large-printed.json
+  relationship_type: annotatedBy
+- uid: 6206c627-e9b0-4a2b-967e-335e146a2728
+  type: Relationship
+  properties: {}
+  from_: 2131fc2a-75ba-4a9a-8875-8f4ad4ed2cff
+  to_:
+  - 7edfaf6c-6420-4ae4-b125-d2578181d9f4
+  relationship_type: uses
+- uid: 85707fef-53b0-4ab8-8134-a7f76d5dcbf1
+  type: Relationship
+  properties: {}
+  from_: 54d43d61-0ef7-49d3-869e-b3047cead07e
+  to_:
+  - 2131fc2a-75ba-4a9a-8875-8f4ad4ed2cff
+  relationship_type: produces

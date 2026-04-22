@@ -1,0 +1,152 @@
+uid: 720d9e70-731e-49f9-955a-dba304500dc3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/DiscoResearch_DiscoLM-mixtral-8x7b-v2.json
+  type: SoftwareFile
+  name: DiscoResearch_DiscoLM-mixtral-8x7b-v2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:4638d5d0-70ce-404f-8bc0-2ddf7c912070
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/DiscoResearch_DiscoLM-mixtral-8x7b-v2.json
+    type: ExternalReference
+  languages: []
+- uid: ff81b5b8-ec8d-4016-8ad6-f285a45dbce8
+  type: Data
+  properties:
+    bom-ref: migtissera/Synthia-v1.3-870679a5-11e4-5a5a-9021-0c574622ecb4
+    name: migtissera/Synthia-v1.3
+    content_url: https://huggingface.co/datasets/migtissera/Synthia-v1.3
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: migtissera/Synthia-v1.3-870679a5-11e4-5a5a-9021-0c574622ecb4
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 29e89409-16bc-4439-8f96-4c2e38eff821
+  type: Data
+  properties:
+    bom-ref: meta-math/MetaMathQA-c6cf810a-8b06-5552-a876-53681c5fe9a1
+    name: meta-math/MetaMathQA
+    content_url: https://huggingface.co/datasets/meta-math/MetaMathQA
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: meta-math/MetaMathQA-c6cf810a-8b06-5552-a876-53681c5fe9a1
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ad6877f3-9592-40fd-863b-a644776cc988
+  type: Data
+  properties:
+    bom-ref: LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b
+    name: LDJnr/Capybara
+    content_url: https://huggingface.co/datasets/LDJnr/Capybara
+    task_categories: conversational, question-answering, text-generation
+    size_categories: 10K<n<100K
+    pretty_name: LessWrong-Amplify-Instruct
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 271521d6-fded-4dff-a5ec-1d21d4930d17
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 5aefc64f-defb-4286-aa5a-b523b406f802
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:45.960701+00:00'
+    bom-ref: DiscoResearch/DiscoLM-mixtral-8x7b-v2-2888b6ff-e6f5-5178-9bca-1903e5027f69
+    name: DiscoResearch/DiscoLM-mixtral-8x7b-v2
+    authors:
+    - name: DiscoResearch
+    architectureFamily: mistral
+    modelArchitecture: MixtralForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - mistral
+    - text-generation
+    - conversational
+    - custom_code
+    - en
+    - dataset:migtissera/Synthia-v1.3
+    - dataset:meta-math/MetaMathQA
+    - dataset:LDJnr/Capybara
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/DiscoResearch/DiscoLM-mixtral-8x7b-v2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: c56a4a25-8c82-4535-8644-9d34495b62cb
+  type: Relationship
+  properties: {}
+  from_: 720d9e70-731e-49f9-955a-dba304500dc3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/DiscoResearch_DiscoLM-mixtral-8x7b-v2.json
+  relationship_type: annotatedBy
+- uid: bdc7de22-51ba-4502-8501-92d52c0831ad
+  type: Relationship
+  properties: {}
+  from_: 5aefc64f-defb-4286-aa5a-b523b406f802
+  to_:
+  - ff81b5b8-ec8d-4016-8ad6-f285a45dbce8
+  - 29e89409-16bc-4439-8f96-4c2e38eff821
+  - ad6877f3-9592-40fd-863b-a644776cc988
+  relationship_type: uses
+- uid: c76f75b1-a47a-4f40-a2ef-70846b321673
+  type: Relationship
+  properties: {}
+  from_: 5aefc64f-defb-4286-aa5a-b523b406f802
+  to_:
+  - 271521d6-fded-4dff-a5ec-1d21d4930d17
+  relationship_type: uses
+- uid: 909ba01b-774c-4446-ab38-2742a5ec831f
+  type: Relationship
+  properties: {}
+  from_: 720d9e70-731e-49f9-955a-dba304500dc3
+  to_:
+  - 5aefc64f-defb-4286-aa5a-b523b406f802
+  relationship_type: produces

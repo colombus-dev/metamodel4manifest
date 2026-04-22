@@ -1,0 +1,114 @@
+uid: 48807ca2-6c4f-4ac9-b3b5-092f8a3fc2b3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_CodeLlama-7B-Instruct-GGUF.json
+  type: SoftwareFile
+  name: TheBloke_CodeLlama-7B-Instruct-GGUF.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:43328c8a-877d-45da-b710-709973d0b9eb
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_CodeLlama-7B-Instruct-GGUF.json
+    type: ExternalReference
+  languages: []
+- uid: fa311c02-346d-4d6c-ac0f-11e41dc96b5e
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: fa884b1a-f89d-45c5-9eba-f5e4b7f5071a
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: codellama/CodeLlama-7b-instruct-hf
+    type: ExternalReference
+  languages: []
+- uid: 1597ad4c-b221-45e8-a9de-fdee0f302556
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:16.140105+00:00'
+    bom-ref: TheBloke/CodeLlama-7B-Instruct-GGUF-caf2acc1-716f-5bec-ba37-6ea9ad0b2422
+    name: TheBloke/CodeLlama-7B-Instruct-GGUF
+    authors:
+    - name: TheBloke
+    architectureFamily: llama
+    description: '## Description
+
+
+      This repo contains GGUF format model files for [Meta''s CodeLlama 7B Instruct](https://huggingface.co/codellama/CodeLlama-7b-instruct-hf).
+
+
+      <!-- description end -->
+
+      <!-- README_GGUF.md-about-gguf start -->'
+    tags:
+    - transformers
+    - gguf
+    - llama
+    - llama-2
+    - text-generation
+    - code
+    - arxiv:2308.12950
+    - license:llama2
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+      **Intended Use Cases** Code Llama and its variants is intended for commercial and research use in English and relevant programming languages. The base model Code Llama can be adapted for a variety of code synthesis and understanding tasks, Code Llama - Python is designed specifically to handle the Python programming language, and Code Llama - Instruct is intended to be safer to use for code assistant and generation applications.
+
+
+      **Out-of-Scope Uses** Use in any manner that violates applicable laws or regulations (including trade compliance laws). Use in languages other than English. Use in any other way that is prohibited by the Acceptable Use Policy and Licensing Agreement for Code Llama and its variants.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: e947ed96-3fc7-4afe-b973-9d692e3baa2c
+  type: Relationship
+  properties: {}
+  from_: 48807ca2-6c4f-4ac9-b3b5-092f8a3fc2b3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_CodeLlama-7B-Instruct-GGUF.json
+  relationship_type: annotatedBy
+- uid: 00853568-72d6-4b7c-801f-f46ccfb48ea2
+  type: Relationship
+  properties: {}
+  from_: 1597ad4c-b221-45e8-a9de-fdee0f302556
+  to_:
+  - fa311c02-346d-4d6c-ac0f-11e41dc96b5e
+  relationship_type: uses
+- uid: fb8bfa1d-77d3-4abd-b588-4c0bf22d9ea2
+  type: Relationship
+  properties: {}
+  from_: 1597ad4c-b221-45e8-a9de-fdee0f302556
+  to_:
+  - fa884b1a-f89d-45c5-9eba-f5e4b7f5071a
+  relationship_type: derivedFrom
+- uid: e41ab1f4-ca19-4e1c-bcdf-046e4d8358fc
+  type: Relationship
+  properties: {}
+  from_: 48807ca2-6c4f-4ac9-b3b5-092f8a3fc2b3
+  to_:
+  - 1597ad4c-b221-45e8-a9de-fdee0f302556
+  relationship_type: produces

@@ -1,0 +1,86 @@
+uid: 892747c2-f7fd-41d2-8899-00d2a332f4ac
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_BiomedCLIP-PubMedBERT_256-vit_base_patch16_224.json
+  type: SoftwareFile
+  name: microsoft_BiomedCLIP-PubMedBERT_256-vit_base_patch16_224.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:502ef703-8656-42bd-bb96-43a6f8e27fea
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_BiomedCLIP-PubMedBERT_256-vit_base_patch16_224.json
+    type: ExternalReference
+  languages: []
+- uid: 833c2060-3216-438b-a02b-1a4f5ff7ff4a
+  type: SoftwareFile
+  name: open_clip
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 066b3529-21d9-41c3-bc2e-9ea49a0b9169
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:02.867551+00:00'
+    bom-ref: microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224-7e6a4fa2-5358-54b1-b587-35a5c3814cd3
+    name: microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+    authors:
+    - name: microsoft
+    tags:
+    - open_clip
+    - clip
+    - biology
+    - medical
+    - zero-shot-image-classification
+    - en
+    - license:mit
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: zero-shot-image-classification
+  consideration:
+    use_cases: '### Intended Use
+
+
+      This model is intended to be used solely for (I) future research on visual-language processing and (II) reproducibility of the experimental results reported in the reference paper.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 165e6213-2507-4986-8e5a-bd4743b276f4
+  type: Relationship
+  properties: {}
+  from_: 892747c2-f7fd-41d2-8899-00d2a332f4ac
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_BiomedCLIP-PubMedBERT_256-vit_base_patch16_224.json
+  relationship_type: annotatedBy
+- uid: be5b9d89-1fa3-4680-863e-fda4dd9972e1
+  type: Relationship
+  properties: {}
+  from_: 066b3529-21d9-41c3-bc2e-9ea49a0b9169
+  to_:
+  - 833c2060-3216-438b-a02b-1a4f5ff7ff4a
+  relationship_type: uses
+- uid: 3f1d7348-431b-4704-a9ae-f7d5b5be8e6c
+  type: Relationship
+  properties: {}
+  from_: 892747c2-f7fd-41d2-8899-00d2a332f4ac
+  to_:
+  - 066b3529-21d9-41c3-bc2e-9ea49a0b9169
+  relationship_type: produces

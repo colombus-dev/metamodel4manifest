@@ -1,0 +1,120 @@
+uid: 4b410c06-fbb5-4723-a920-947d0da12dea
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/latentcat_control_v1p_sd15_brightness.json
+  type: SoftwareFile
+  name: latentcat_control_v1p_sd15_brightness.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f361358e-7a44-4a65-a164-8097b9ea79a4
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/latentcat_control_v1p_sd15_brightness.json
+    type: ExternalReference
+  languages: []
+- uid: 69744037-7524-41d8-86a1-bfafd0f82175
+  type: Data
+  properties:
+    bom-ref: ioclab/grayscale_image_aesthetic_3M-692f98de-fcf5-5fdf-9ff0-8bcfc6315f4e
+    name: ioclab/grayscale_image_aesthetic_3M
+    content_url: https://huggingface.co/datasets/ioclab/grayscale_image_aesthetic_3M
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ioclab/grayscale_image_aesthetic_3M-692f98de-fcf5-5fdf-9ff0-8bcfc6315f4e
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ebbad7ad-1723-4373-972d-b23bb652a207
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2ee2e0f4-498e-42de-a298-0d2f8cb9576f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:18.547856+00:00'
+    bom-ref: latentcat/control_v1p_sd15_brightness-f8f0a68b-e99c-54b0-a79e-2074c7c10ff3
+    name: latentcat/control_v1p_sd15_brightness
+    authors:
+    - name: latentcat
+    description: '## Model Details
+
+
+      - **Developed by:** [@ciaochaos](https://github.com/ciaochaos)
+
+      - **Shared by [optional]:** [More Information Needed]
+
+      - **Model type:** Stable Diffusion ControlNet model for [web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
+
+      - **License:** [The CreativeML OpenRAIL M license](https://huggingface.co/spaces/CompVis/stable-diffusion-license) is an [Open RAIL M license](https://www.licenses.ai/blog/2022/8/18/naming-convention-of-responsible-ai-licenses), adapted from the work that [BigScience](https://bigscience.huggingface.co/) and [the RAIL Initiative](https://www.licenses.ai/) are jointly carrying in the area of responsible AI licensing. See also [the article about the BLOOM Open RAIL license](https://bigscience.huggingface.co/blog/the-bigscience-rail-license) on which our license is based.
+
+
+      '
+    tags:
+    - diffusers
+    - safetensors
+    - image-to-image
+    - controlnet
+    - en
+    - dataset:ioclab/grayscale_image_aesthetic_3M
+    - license:creativeml-openrail-m
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/latentcat/control_v1p_sd15_brightness
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-image
+  consideration:
+    use_cases: '## Uses
+
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 312b8085-4769-4a63-8b0f-631f8cc151b8
+  type: Relationship
+  properties: {}
+  from_: 4b410c06-fbb5-4723-a920-947d0da12dea
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/latentcat_control_v1p_sd15_brightness.json
+  relationship_type: annotatedBy
+- uid: b4001953-1489-45d4-a230-59be70b1121f
+  type: Relationship
+  properties: {}
+  from_: 2ee2e0f4-498e-42de-a298-0d2f8cb9576f
+  to_:
+  - 69744037-7524-41d8-86a1-bfafd0f82175
+  relationship_type: uses
+- uid: 374f4550-f09a-4a0c-bfcb-adb3dda20334
+  type: Relationship
+  properties: {}
+  from_: 2ee2e0f4-498e-42de-a298-0d2f8cb9576f
+  to_:
+  - ebbad7ad-1723-4373-972d-b23bb652a207
+  relationship_type: uses
+- uid: 145cb76d-1e51-4a48-b430-d89d4eac45d8
+  type: Relationship
+  properties: {}
+  from_: 4b410c06-fbb5-4723-a920-947d0da12dea
+  to_:
+  - 2ee2e0f4-498e-42de-a298-0d2f8cb9576f
+  relationship_type: produces

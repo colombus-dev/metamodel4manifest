@@ -1,0 +1,97 @@
+uid: fd6e8130-17d7-4f89-b776-76a867ee2537
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mattshumer_Reflection-Llama-3.1-70B.json
+  type: SoftwareFile
+  name: mattshumer_Reflection-Llama-3.1-70B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cea34d09-695e-4c53-95dd-ed39a753d698
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mattshumer_Reflection-Llama-3.1-70B.json
+    type: ExternalReference
+  languages: []
+- uid: f51e587b-af8b-4da5-aae3-c9fd80e35066
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 18a75982-071c-4d9e-bb52-21b230dc6725
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3.1-70B-Instruct
+    type: ExternalReference
+  languages: []
+- uid: fd2fee0b-0e60-4a94-8af1-0e8f382b3c10
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:08.790636+00:00'
+    bom-ref: mattshumer/Reflection-Llama-3.1-70B-e3fa0014-5a31-585f-906c-63abf7979278
+    name: mattshumer/Reflection-Llama-3.1-70B
+    authors:
+    - name: mattshumer
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - base_model:meta-llama/Llama-3.1-70B-Instruct
+    - base_model:finetune:meta-llama/Llama-3.1-70B-Instruct
+    - license:llama3.1
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3.1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mattshumer/Reflection-Llama-3.1-70B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 911015b2-00d7-4fc0-9f50-1b1f2648ef8c
+  type: Relationship
+  properties: {}
+  from_: fd6e8130-17d7-4f89-b776-76a867ee2537
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mattshumer_Reflection-Llama-3.1-70B.json
+  relationship_type: annotatedBy
+- uid: 78b18489-aa6b-4f50-975e-a8d4cd661ea2
+  type: Relationship
+  properties: {}
+  from_: fd2fee0b-0e60-4a94-8af1-0e8f382b3c10
+  to_:
+  - f51e587b-af8b-4da5-aae3-c9fd80e35066
+  relationship_type: uses
+- uid: 528c7f43-3864-4c09-90f0-f5cd8db58df7
+  type: Relationship
+  properties: {}
+  from_: fd2fee0b-0e60-4a94-8af1-0e8f382b3c10
+  to_:
+  - 18a75982-071c-4d9e-bb52-21b230dc6725
+  relationship_type: derivedFrom
+- uid: 5a51efc2-8a36-4913-8c2c-5fc0bc7cb982
+  type: Relationship
+  properties: {}
+  from_: fd6e8130-17d7-4f89-b776-76a867ee2537
+  to_:
+  - fd2fee0b-0e60-4a94-8af1-0e8f382b3c10
+  relationship_type: produces

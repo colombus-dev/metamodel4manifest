@@ -1,0 +1,77 @@
+uid: 0b8e8cc8-b48c-4f8e-a9cf-1a20fe06dd51
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Linaqruf_anything-v3.0.json
+  type: SoftwareFile
+  name: Linaqruf_anything-v3.0.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:87ad83c3-f7da-444e-908a-7185a9383682
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Linaqruf_anything-v3.0.json
+    type: ExternalReference
+  languages: []
+- uid: 06650f98-8454-40fc-af35-820d12d213b0
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 342e4e7b-c9ed-4d51-bf27-40bdc94ca2f8
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:44.703324+00:00'
+    bom-ref: Linaqruf/anything-v3.0-ea30b06b-15f1-59c5-9b41-78f1a2ba3156
+    name: Linaqruf/anything-v3.0
+    authors:
+    - name: Linaqruf
+    tags:
+    - diffusers
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-image
+    - en
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Linaqruf/anything-v3.0
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 8eb55abc-26a3-4e63-a5eb-efdeb95d397b
+  type: Relationship
+  properties: {}
+  from_: 0b8e8cc8-b48c-4f8e-a9cf-1a20fe06dd51
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Linaqruf_anything-v3.0.json
+  relationship_type: annotatedBy
+- uid: b16ba568-c7e2-4da8-a7df-fbcfbc04ccff
+  type: Relationship
+  properties: {}
+  from_: 342e4e7b-c9ed-4d51-bf27-40bdc94ca2f8
+  to_:
+  - 06650f98-8454-40fc-af35-820d12d213b0
+  relationship_type: uses
+- uid: 71f8fe7a-35bf-4538-8cd7-6358a4440f3f
+  type: Relationship
+  properties: {}
+  from_: 0b8e8cc8-b48c-4f8e-a9cf-1a20fe06dd51
+  to_:
+  - 342e4e7b-c9ed-4d51-bf27-40bdc94ca2f8
+  relationship_type: produces

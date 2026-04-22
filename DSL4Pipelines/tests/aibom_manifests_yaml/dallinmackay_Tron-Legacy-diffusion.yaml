@@ -1,0 +1,75 @@
+uid: 59867748-9c57-4ce5-9d90-b6be99499725
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dallinmackay_Tron-Legacy-diffusion.json
+  type: SoftwareFile
+  name: dallinmackay_Tron-Legacy-diffusion.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:bd321ba1-ee4c-4b1f-8def-47f8607b9aaa
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dallinmackay_Tron-Legacy-diffusion.json
+    type: ExternalReference
+  languages: []
+- uid: 3f4f05de-aac1-49a6-bd65-5226f9a17db3
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 1c5a26a8-fbb1-4557-9f39-160e339e8833
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:15.177668+00:00'
+    bom-ref: dallinmackay/Tron-Legacy-diffusion-8198e55c-53d0-5587-be57-223151d5d465
+    name: dallinmackay/Tron-Legacy-diffusion
+    authors:
+    - name: dallinmackay
+    tags:
+    - diffusers
+    - stable-diffusion
+    - text-to-image
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/dallinmackay/Tron-Legacy-diffusion
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 9aef91e1-fe02-4b17-a61b-a702c0546122
+  type: Relationship
+  properties: {}
+  from_: 59867748-9c57-4ce5-9d90-b6be99499725
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dallinmackay_Tron-Legacy-diffusion.json
+  relationship_type: annotatedBy
+- uid: 891a4d94-159f-42cd-bc5d-bc3e7f74a3fe
+  type: Relationship
+  properties: {}
+  from_: 1c5a26a8-fbb1-4557-9f39-160e339e8833
+  to_:
+  - 3f4f05de-aac1-49a6-bd65-5226f9a17db3
+  relationship_type: uses
+- uid: 8653b4d9-0130-4f4e-b04a-5c446f78d589
+  type: Relationship
+  properties: {}
+  from_: 59867748-9c57-4ce5-9d90-b6be99499725
+  to_:
+  - 1c5a26a8-fbb1-4557-9f39-160e339e8833
+  relationship_type: produces

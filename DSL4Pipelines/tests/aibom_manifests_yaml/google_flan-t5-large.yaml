@@ -1,0 +1,168 @@
+uid: 3a02f9bd-c9ca-44a7-be91-951bd5821768
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_flan-t5-large.json
+  type: SoftwareFile
+  name: google_flan-t5-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:177e22c4-ec29-43f7-97a1-56d076b3f185
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_flan-t5-large.json
+    type: ExternalReference
+  languages: []
+- uid: 77a6eb80-73a2-4b7b-94b7-0fa28f974ef2
+  type: Data
+  properties:
+    bom-ref: svakulenk0/qrecc-75d4d811-c4b4-5d84-99b7-572b4eaa601b
+    name: svakulenk0/qrecc
+    content_url: https://huggingface.co/datasets/svakulenk0/qrecc
+    task_categories: question-answering
+    task_ids: open-domain-qa
+    language_creators: expert-generated, found
+    pretty_name: QReCC
+    source_datasets: extended|natural_questions, extended|quac
+    license: cc-by-3.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: svakulenk0/qrecc-75d4d811-c4b4-5d84-99b7-572b4eaa601b
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 1df87fea-c4e6-4e65-819a-c3632c3008dc
+  type: Data
+  properties:
+    bom-ref: taskmaster2-6a0b1d8b-d00b-5825-825c-ab5801864e0f
+    name: taskmaster2
+    content_url: https://huggingface.co/datasets/taskmaster2
+    task_categories: text-generation, fill-mask
+    task_ids: dialogue-modeling
+    size_categories: 1K<n<10K
+    annotations_creators: crowdsourced
+    language_creators: crowdsourced
+    pretty_name: Taskmaster-2
+    source_datasets: original
+    paperswithcode_id: taskmaster-2
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: taskmaster2-6a0b1d8b-d00b-5825-825c-ab5801864e0f
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 3a44a8bd-7759-42c4-83c7-27d4e7c47aa6
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e2717364-569b-4d76-89b6-478659259e12
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:47.629897+00:00'
+    bom-ref: google/flan-t5-large-414f681a-6c60-5617-be08-2462712a6cee
+    name: google/flan-t5-large
+    authors:
+    - name: google
+    architectureFamily: t5
+    modelArchitecture: T5ForConditionalGeneration
+    description: '# Model Details
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - safetensors
+    - t5
+    - text2text-generation
+    - en
+    - fr
+    - ro
+    - de
+    - multilingual
+    - dataset:svakulenk0/qrecc
+    - dataset:taskmaster2
+    - dataset:djaym7/wiki_dialog
+    - dataset:deepmind/code_contests
+    - dataset:lambada
+    - dataset:gsm8k
+    - dataset:aqua_rat
+    - dataset:esnli
+    - dataset:quasc
+    - dataset:qed
+    - arxiv:2210.11416
+    - arxiv:1910.09700
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google/flan-t5-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text2text-generation
+  consideration:
+    use_cases: '# Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: ec5c239a-1de4-4843-994e-2e310788c754
+  type: Relationship
+  properties: {}
+  from_: 3a02f9bd-c9ca-44a7-be91-951bd5821768
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_flan-t5-large.json
+  relationship_type: annotatedBy
+- uid: 8f3a2090-d917-4180-b1a8-784d9b501e7c
+  type: Relationship
+  properties: {}
+  from_: e2717364-569b-4d76-89b6-478659259e12
+  to_:
+  - 77a6eb80-73a2-4b7b-94b7-0fa28f974ef2
+  - 1df87fea-c4e6-4e65-819a-c3632c3008dc
+  relationship_type: uses
+- uid: ba67b7dd-61a0-4faf-aa2c-591a67030b92
+  type: Relationship
+  properties: {}
+  from_: e2717364-569b-4d76-89b6-478659259e12
+  to_:
+  - 3a44a8bd-7759-42c4-83c7-27d4e7c47aa6
+  relationship_type: uses
+- uid: dc153e21-a13a-4106-a7df-318f5d33c717
+  type: Relationship
+  properties: {}
+  from_: 3a02f9bd-c9ca-44a7-be91-951bd5821768
+  to_:
+  - e2717364-569b-4d76-89b6-478659259e12
+  relationship_type: produces

@@ -1,0 +1,91 @@
+uid: 0ebc6882-5dcc-424f-9313-3cb09dd71180
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/notstoic_pygmalion-13b-4bit-128g.json
+  type: SoftwareFile
+  name: notstoic_pygmalion-13b-4bit-128g.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:b852a887-5291-4e5a-9cd4-9825183f5c61
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/notstoic_pygmalion-13b-4bit-128g.json
+    type: ExternalReference
+  languages: []
+- uid: 200f4516-3b71-404b-b86c-483389a19489
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7703a839-2a2b-4d59-8fd1-3315f5fa7e97
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:09.654625+00:00'
+    bom-ref: notstoic/pygmalion-13b-4bit-128g-8addd1d5-7447-5e9f-80b3-daf2add63f33
+    name: notstoic/pygmalion-13b-4bit-128g
+    authors:
+    - name: notstoic
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model description
+
+      **Warning: THIS model is NOT suitable for use by minors. The model will output X-rated content.**
+
+
+      Quantized from the decoded pygmalion-13b xor format.
+
+      **https://huggingface.co/PygmalionAI/pygmalion-13b**
+
+
+      In safetensor format.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - en
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/notstoic/pygmalion-13b-4bit-128g
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: ac4dcacd-66f6-4584-bd05-56dd182283e9
+  type: Relationship
+  properties: {}
+  from_: 0ebc6882-5dcc-424f-9313-3cb09dd71180
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/notstoic_pygmalion-13b-4bit-128g.json
+  relationship_type: annotatedBy
+- uid: d8cb0d25-877b-42c5-88d9-169aad916aa4
+  type: Relationship
+  properties: {}
+  from_: 7703a839-2a2b-4d59-8fd1-3315f5fa7e97
+  to_:
+  - 200f4516-3b71-404b-b86c-483389a19489
+  relationship_type: uses
+- uid: d60fac91-a772-4e63-ae9e-868b70966c48
+  type: Relationship
+  properties: {}
+  from_: 0ebc6882-5dcc-424f-9313-3cb09dd71180
+  to_:
+  - 7703a839-2a2b-4d59-8fd1-3315f5fa7e97
+  relationship_type: produces

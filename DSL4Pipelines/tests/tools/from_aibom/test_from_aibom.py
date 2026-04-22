@@ -4,7 +4,14 @@ from DSL4Pipelines.src.tools.from_aibom.aibom_translator import AIBOMTranslator
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.tools.toFile import save_in_file
 from DSL4Pipelines.src.tools.transformations.yamlSerializer import YAMLSerializer
-
+from DSL4Pipelines.src.tools.queries.evaluation_engine import EvaluationEngine
+from DSL4Pipelines.src.tools.queries.rules.rules import (
+    check_dataset_and_model_presence,
+    check_french_support,
+    rule_global_french_purity,
+    rule_global_english_purity,
+    check_english_support,
+)
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
 OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/examples/outputs/aibom/')
@@ -106,7 +113,34 @@ def test_transform_complexe_aibom():
 
 #@todo : add more tests on the content of the artefacts, and on the properties of the relations
 def test_transform_aibom_with_metrics():
-    file_path= '../../aiboms/BAAI_bge-multilingual-gemma2.json'
+    file_path= BASE_DIR/'aiboms/BAAI_bge-multilingual-gemma2.json'
+
+#@todo : add more tests on the content of the artefacts, and on the properties of the relations
+def test_transform_aibom_with_consideration():
+  file_path= BASE_DIR/'aiboms/baichuan-inc_Baichuan-7B.json'
+  #tester yaml car ajout d'un type....
+  manifest = check_transform_aibom(str(file_path))
+  #get the mlmodel and check that it contains the consideration
+  mlmodels = [a for a in manifest.artefacts if a.type == "MLModel"]
+  assert len(mlmodels) == 1, f"Expected 1 MLModel, but got {len(mlmodels)}"
+  mlmodel = mlmodels[0]
+  assert mlmodel.consideration is not None, "Expected the MLModel to have a consideration, but it is None"
+  consideration = mlmodel.consideration
+  output = YAMLSerializer.to_yaml(manifest, True)
+  print(f"Manifest with consideration serialized in yaml format : {output}")
+
+
+def test_transform_aibom_with_dataset():
+    file_path= BASE_DIR/'aiboms/baichuan-bigcode_starcoder2-7b.json'
+
+def test_aibom_with_multi_languages():
+    file_path= BASE_DIR/'aiboms/CarperAI_stable-vicuna-13b-delta.json'
+    manifest = check_transform_aibom(str(file_path))
+    rules = [check_dataset_and_model_presence, check_english_support, rule_global_english_purity]
+    engine = EvaluationEngine()
+    report = engine.run_rules(manifest, rules)
+    for r in report:
+        print(r)
 
 
 

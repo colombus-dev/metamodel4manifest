@@ -1,0 +1,206 @@
+uid: 64bbae94-63c6-4ea1-a614-95fda1564790
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/FacebookAI_xlm-roberta-large.json
+  type: SoftwareFile
+  name: FacebookAI_xlm-roberta-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:5e4507d1-6663-4fd0-9ea0-eb37fbe9bec3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/FacebookAI_xlm-roberta-large.json
+    type: ExternalReference
+  languages: []
+- uid: 83ac8203-2d72-487f-9b79-10f6e4f2a0b2
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c33597c6-ba81-438a-9675-b62ff2c19431
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:39.509887+00:00'
+    bom-ref: FacebookAI/xlm-roberta-large-1b7363d2-fdc1-546b-a5a5-891b4668ab54
+    name: FacebookAI/xlm-roberta-large
+    authors:
+    - name: FacebookAI
+    architectureFamily: xlm-roberta
+    modelArchitecture: XLMRobertaForMaskedLM
+    description: '## Model description
+
+
+      XLM-RoBERTa is a multilingual version of RoBERTa. It is pre-trained on 2.5TB of filtered CommonCrawl data containing 100 languages.
+
+
+      RoBERTa is a transformers model pretrained on a large corpus in a self-supervised fashion. This means it was pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots of publicly available data) with an automatic process to generate inputs and labels from those texts.
+
+
+      More precisely, it was pretrained with the Masked language modeling (MLM) objective. Taking a sentence, the model randomly masks 15% of the words in the input then run the entire masked sentence through the model and has to predict the masked words. This is different from traditional recurrent neural networks (RNNs) that usually see the words one after the other, or from autoregressive models like GPT which internally mask the future tokens. It allows the model to learn a bidirectional representation of the sentence.
+
+
+      This way, the model learns an inner representation of 100 languages that can then be used to extract features useful for downstream tasks: if you have a dataset of labeled sentences for instance, you can train a standard classifier using the features produced by the XLM-RoBERTa model as inputs.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - onnx
+    - safetensors
+    - xlm-roberta
+    - fill-mask
+    - exbert
+    - multilingual
+    - af
+    - am
+    - ar
+    - as
+    - az
+    - be
+    - bg
+    - bn
+    - br
+    - bs
+    - ca
+    - cs
+    - cy
+    - da
+    - de
+    - el
+    - en
+    - eo
+    - es
+    - et
+    - eu
+    - fa
+    - fi
+    - fr
+    - fy
+    - ga
+    - gd
+    - gl
+    - gu
+    - ha
+    - he
+    - hi
+    - hr
+    - hu
+    - hy
+    - id
+    - is
+    - it
+    - ja
+    - jv
+    - ka
+    - kk
+    - km
+    - kn
+    - ko
+    - ku
+    - ky
+    - la
+    - lo
+    - lt
+    - lv
+    - mg
+    - mk
+    - ml
+    - mn
+    - mr
+    - ms
+    - my
+    - ne
+    - nl
+    - 'no'
+    - om
+    - or
+    - pa
+    - pl
+    - ps
+    - pt
+    - ro
+    - ru
+    - sa
+    - sd
+    - si
+    - sk
+    - sl
+    - so
+    - sq
+    - sr
+    - su
+    - sv
+    - sw
+    - ta
+    - te
+    - th
+    - tl
+    - tr
+    - ug
+    - uk
+    - ur
+    - uz
+    - vi
+    - xh
+    - yi
+    - zh
+    - arxiv:1911.02116
+    - license:mit
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/FacebookAI/xlm-roberta-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: fill-mask
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      You can use the raw model for masked language modeling, but it''s mostly intended to be fine-tuned on a downstream task. See the [model hub](https://huggingface.co/models?search=xlm-roberta) to look for fine-tuned versions on a task that interests you.
+
+
+      Note that this model is primarily aimed at being fine-tuned on tasks that use the whole sentence (potentially masked) to make decisions, such as sequence classification, token classification or question answering. For tasks such as text generation, you should look at models like GPT2.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: a48b4fdf-ca0d-4f3c-8b8e-094739b0fa75
+  type: Relationship
+  properties: {}
+  from_: 64bbae94-63c6-4ea1-a614-95fda1564790
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/FacebookAI_xlm-roberta-large.json
+  relationship_type: annotatedBy
+- uid: fa81c139-599f-490d-a0b0-d20340a65a2c
+  type: Relationship
+  properties: {}
+  from_: c33597c6-ba81-438a-9675-b62ff2c19431
+  to_:
+  - 83ac8203-2d72-487f-9b79-10f6e4f2a0b2
+  relationship_type: uses
+- uid: 8b70a2c1-6e8c-4af1-8b17-4e75e5942d9f
+  type: Relationship
+  properties: {}
+  from_: 64bbae94-63c6-4ea1-a614-95fda1564790
+  to_:
+  - c33597c6-ba81-438a-9675-b62ff2c19431
+  relationship_type: produces

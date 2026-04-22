@@ -1,0 +1,166 @@
+uid: 67acfd6f-2901-4ee1-bd5a-8bc6d666de54
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EleutherAI_gpt-j-6b.json
+  type: SoftwareFile
+  name: EleutherAI_gpt-j-6b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:7d63810c-e95c-4d43-b54f-17654521e04b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EleutherAI_gpt-j-6b.json
+    type: ExternalReference
+  languages: []
+- uid: d4272545-6f77-4680-bfa2-87d02ae46afa
+  type: Data
+  properties:
+    bom-ref: EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787
+    name: EleutherAI/pile
+    content_url: https://huggingface.co/datasets/EleutherAI/pile
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: 100B<n<1T
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: the Pile
+    source_datasets: original
+    paperswithcode_id: the-pile
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: bac217cd-b89b-4296-94e1-95bb3a2b9469
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: db9ae584-3df3-4c46-974d-8dcba4f82688
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:36.925771+00:00'
+    bom-ref: EleutherAI/gpt-j-6b-e71ab312-4354-5872-b70c-7f86d34400a2
+    name: EleutherAI/gpt-j-6b
+    authors:
+    - name: EleutherAI
+    architectureFamily: gptj
+    modelArchitecture: GPTJForCausalLM
+    description: '## Model Description
+
+
+      GPT-J 6B is a transformer model trained using Ben Wang''s [Mesh Transformer JAX](https://github.com/kingoflolz/mesh-transformer-jax/). "GPT-J" refers to the class of model, while "6B" represents the number of trainable parameters.
+
+
+      <figure>
+
+
+      | Hyperparameter       | Value      |
+
+      |----------------------|------------|
+
+      | \\(n_{parameters}\\) | 6053381344 |
+
+      | \\(n_{layers}\\)     | 28&ast;    |
+
+      | \\(d_{model}\\)      | 4096       |
+
+      | \\(d_{ff}\\)         | 16384      |
+
+      | \\(n_{heads}\\)      | 16         |
+
+      | \\(d_{head}\\)       | 256        |
+
+      | \\(n_{ctx}\\)        | 2048       |
+
+      | \\(n_{vocab}\\)      | 50257/50400&dagger; (same tokenizer as GPT-2/3)  |
+
+      | Positional Encoding  | [Rotary Position Embedding (RoPE)](https://arxiv.org/abs/2104.09864) |
+
+      | RoPE Dimensions      | [64](https://github.com/kingoflolz/mesh-transformer-jax/blob/f2aa66e0925de6593dcbb70e72399b97b4130482/mesh_transformer/layers.py#L223) |
+
+      <figcaption><p><strong>&ast;</strong> Each layer consists of one feedforward block and one self attention block.</p>
+
+      <p><strong>&dagger;</strong> Although the embedding matrix has a size of 50400, only 50257 entries are used by the GPT-2 tokenizer.</p></figcaption></figure>
+
+
+      The model consists of 28 layers with a model dimension of 4096, and a feedforward dimension of 16384. The model
+
+      dimension is split into 16 heads, each with a dimension of 256. Rotary Position Embedding (RoPE) is applied to 64
+
+      dimensions of each head. The model is trained with a tokenization vocabulary of 50257, using the same set of BPEs as
+
+      GPT-2/GPT-3.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - gptj
+    - text-generation
+    - causal-lm
+    - en
+    - dataset:EleutherAI/pile
+    - arxiv:2104.09864
+    - arxiv:2101.00027
+    - license:apache-2.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/EleutherAI/gpt-j-6b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 8c937c9a-c6dd-436c-b66b-bea12a5a8ee6
+  type: Relationship
+  properties: {}
+  from_: 67acfd6f-2901-4ee1-bd5a-8bc6d666de54
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EleutherAI_gpt-j-6b.json
+  relationship_type: annotatedBy
+- uid: a300acc9-4080-4d56-b417-a76903d8171e
+  type: Relationship
+  properties: {}
+  from_: db9ae584-3df3-4c46-974d-8dcba4f82688
+  to_:
+  - d4272545-6f77-4680-bfa2-87d02ae46afa
+  relationship_type: uses
+- uid: ddff141a-0e65-49be-9d4a-5d0db070ad3b
+  type: Relationship
+  properties: {}
+  from_: db9ae584-3df3-4c46-974d-8dcba4f82688
+  to_:
+  - bac217cd-b89b-4296-94e1-95bb3a2b9469
+  relationship_type: uses
+- uid: d62c4ac9-4870-442a-9fff-41373e0f4633
+  type: Relationship
+  properties: {}
+  from_: 67acfd6f-2901-4ee1-bd5a-8bc6d666de54
+  to_:
+  - db9ae584-3df3-4c46-974d-8dcba4f82688
+  relationship_type: produces

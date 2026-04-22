@@ -1,0 +1,99 @@
+uid: e9c2f2dd-643a-4ae2-a571-70661e439b81
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Bllossom_llama-3.2-Korean-Bllossom-3B.json
+  type: SoftwareFile
+  name: Bllossom_llama-3.2-Korean-Bllossom-3B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:713abca3-b968-4078-966b-a962437eea80
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Bllossom_llama-3.2-Korean-Bllossom-3B.json
+    type: ExternalReference
+  languages: []
+- uid: eaff50fe-2ac1-4311-a8dd-3d5164a9cb85
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 43cd74ba-31df-445c-9996-4250f05e718e
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3.2-3B
+    type: ExternalReference
+  languages: []
+- uid: fa5659b7-c13a-4b34-845e-b185b91f5f9f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:51.550349+00:00'
+    bom-ref: Bllossom/llama-3.2-Korean-Bllossom-3B-1face753-d759-513c-b283-594687978102
+    name: Bllossom/llama-3.2-Korean-Bllossom-3B
+    authors:
+    - name: Bllossom
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - en
+    - ko
+    - arxiv:2403.10882
+    - arxiv:2403.11399
+    - license:llama3.2
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3.2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Bllossom/llama-3.2-Korean-Bllossom-3B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 36c24356-39d0-4657-9aac-dfc5530a6910
+  type: Relationship
+  properties: {}
+  from_: e9c2f2dd-643a-4ae2-a571-70661e439b81
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Bllossom_llama-3.2-Korean-Bllossom-3B.json
+  relationship_type: annotatedBy
+- uid: 09f6e49b-6435-4347-adcb-f0dac0a7c864
+  type: Relationship
+  properties: {}
+  from_: fa5659b7-c13a-4b34-845e-b185b91f5f9f
+  to_:
+  - eaff50fe-2ac1-4311-a8dd-3d5164a9cb85
+  relationship_type: uses
+- uid: a4d9e919-a45e-4f3d-bd30-4d151bdafd60
+  type: Relationship
+  properties: {}
+  from_: fa5659b7-c13a-4b34-845e-b185b91f5f9f
+  to_:
+  - 43cd74ba-31df-445c-9996-4250f05e718e
+  relationship_type: derivedFrom
+- uid: c90170e4-70c5-4d45-a6f1-cc34d4346702
+  type: Relationship
+  properties: {}
+  from_: e9c2f2dd-643a-4ae2-a571-70661e439b81
+  to_:
+  - fa5659b7-c13a-4b34-845e-b185b91f5f9f
+  relationship_type: produces

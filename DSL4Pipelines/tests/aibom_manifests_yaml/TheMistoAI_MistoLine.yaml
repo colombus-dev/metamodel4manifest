@@ -1,0 +1,77 @@
+uid: 8b8157f6-a0ae-4380-b82d-d4744aae2b89
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheMistoAI_MistoLine.json
+  type: SoftwareFile
+  name: TheMistoAI_MistoLine.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9fa16da3-85e7-4e90-a31b-f84dcfa77fab
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheMistoAI_MistoLine.json
+    type: ExternalReference
+  languages: []
+- uid: ccfbe732-ef1f-455c-bbbb-ecfdcbae34d4
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2a6fd258-5805-427f-af03-74f27e349884
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:23.710954+00:00'
+    bom-ref: TheMistoAI/MistoLine-bb2dbe86-b995-515c-bb22-d90001c28da0
+    name: TheMistoAI/MistoLine
+    authors:
+    - name: TheMistoAI
+    tags:
+    - diffusers
+    - art
+    - stable diffusion
+    - ControlNet
+    - SDXL
+    - Diffusion-XL
+    - text-to-image
+    - arxiv:2302.05543
+    - license:openrail++
+    - region:us
+  license:
+    name: openrail++
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/TheMistoAI/MistoLine
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 7565e0b2-d2ae-4480-91e3-1d67ea6810ea
+  type: Relationship
+  properties: {}
+  from_: 8b8157f6-a0ae-4380-b82d-d4744aae2b89
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheMistoAI_MistoLine.json
+  relationship_type: annotatedBy
+- uid: 9b4f37eb-dc07-489a-9cdb-8f31c6228288
+  type: Relationship
+  properties: {}
+  from_: 2a6fd258-5805-427f-af03-74f27e349884
+  to_:
+  - ccfbe732-ef1f-455c-bbbb-ecfdcbae34d4
+  relationship_type: uses
+- uid: 1143cc74-c2ce-4faf-a669-6214925c5378
+  type: Relationship
+  properties: {}
+  from_: 8b8157f6-a0ae-4380-b82d-d4744aae2b89
+  to_:
+  - 2a6fd258-5805-427f-af03-74f27e349884
+  relationship_type: produces

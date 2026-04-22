@@ -1,0 +1,110 @@
+uid: 893b7423-65cc-43f5-8fa6-cb1972a1f099
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-research_merlinite-7b.json
+  type: SoftwareFile
+  name: ibm-research_merlinite-7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8dd42125-44e7-4d3f-99b7-fdfdcd7d1dd5
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-research_merlinite-7b.json
+    type: ExternalReference
+  languages: []
+- uid: 4b8e29e5-9a80-4f7d-9992-1bba09f4bc36
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ddcf725d-1a6e-4d0b-996b-ea51cbf9fd90
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: mistralai/Mistral-7B-v0.1
+    type: ExternalReference
+  languages: []
+- uid: 54533e3e-4e1c-40c4-a04e-ffb3eca6aa34
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:35.743240+00:00'
+    bom-ref: ibm-research/merlinite-7b-70c91339-5929-50c5-b525-5f668700ac4a
+    name: ibm-research/merlinite-7b
+    authors:
+    - name: ibm-research
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    description: '### Overview
+
+
+      ![Screenshot 2024-02-22 at 11.26.13 AM.png](Model%20Card%20for%20Merlinite%207b%2028cc0b72cf574a4a828140d3539ede4a/Screenshot_2024-02-22_at_11.26.13_AM.png)
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - mistral
+    - text-generation
+    - merlinite
+    - ibm
+    - lab
+    - labrador
+    - labradorite
+    - en
+    - arxiv:2403.01081
+    - base_model:mistralai/Mistral-7B-v0.1
+    - base_model:finetune:mistralai/Mistral-7B-v0.1
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ibm-research/merlinite-7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: c56f41d7-db5d-4f77-bff0-a13af0c7b2b7
+  type: Relationship
+  properties: {}
+  from_: 893b7423-65cc-43f5-8fa6-cb1972a1f099
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-research_merlinite-7b.json
+  relationship_type: annotatedBy
+- uid: bcdda7d6-6118-4754-a733-21290312c915
+  type: Relationship
+  properties: {}
+  from_: 54533e3e-4e1c-40c4-a04e-ffb3eca6aa34
+  to_:
+  - 4b8e29e5-9a80-4f7d-9992-1bba09f4bc36
+  relationship_type: uses
+- uid: 3632e15a-802a-49a6-8f39-b94cf457241a
+  type: Relationship
+  properties: {}
+  from_: 54533e3e-4e1c-40c4-a04e-ffb3eca6aa34
+  to_:
+  - ddcf725d-1a6e-4d0b-996b-ea51cbf9fd90
+  relationship_type: derivedFrom
+- uid: 9337523c-49dc-41d5-befa-7c07b9ae950d
+  type: Relationship
+  properties: {}
+  from_: 893b7423-65cc-43f5-8fa6-cb1972a1f099
+  to_:
+  - 54533e3e-4e1c-40c4-a04e-ffb3eca6aa34
+  relationship_type: produces

@@ -1,0 +1,81 @@
+uid: 0c53a1ba-c242-459c-82a2-e615ddff2b62
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_blip-image-captioning-base.json
+  type: SoftwareFile
+  name: Salesforce_blip-image-captioning-base.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:05000d1b-4566-4da3-8fd5-2750cdfb273c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_blip-image-captioning-base.json
+    type: ExternalReference
+  languages: []
+- uid: 42d92444-050c-4e5c-80d8-c294f31c22ff
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: fcf15ab0-07fe-475a-ab45-8e14ff433718
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:40.526504+00:00'
+    bom-ref: Salesforce/blip-image-captioning-base-43524df9-bf3c-5f32-9881-be2dfd4a6218
+    name: Salesforce/blip-image-captioning-base
+    authors:
+    - name: Salesforce
+    architectureFamily: blip
+    modelArchitecture: BlipForConditionalGeneration
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - blip
+    - image-text-to-text
+    - image-captioning
+    - image-to-text
+    - arxiv:2201.12086
+    - license:bsd-3-clause
+    - endpoints_compatible
+    - region:us
+  license:
+    id: BSD-3-Clause
+    url: https://spdx.org/licenses/BSD-3-Clause.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Salesforce/blip-image-captioning-base
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-text
+relations:
+- uid: a8d21d86-9e3f-485e-ad7b-a9ffd1ac46b2
+  type: Relationship
+  properties: {}
+  from_: 0c53a1ba-c242-459c-82a2-e615ddff2b62
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_blip-image-captioning-base.json
+  relationship_type: annotatedBy
+- uid: 54e08193-b76d-4684-8900-8460655b0e28
+  type: Relationship
+  properties: {}
+  from_: fcf15ab0-07fe-475a-ab45-8e14ff433718
+  to_:
+  - 42d92444-050c-4e5c-80d8-c294f31c22ff
+  relationship_type: uses
+- uid: d1093aea-784c-4a11-b99f-bb6a9374030d
+  type: Relationship
+  properties: {}
+  from_: 0c53a1ba-c242-459c-82a2-e615ddff2b62
+  to_:
+  - fcf15ab0-07fe-475a-ab45-8e14ff433718
+  relationship_type: produces

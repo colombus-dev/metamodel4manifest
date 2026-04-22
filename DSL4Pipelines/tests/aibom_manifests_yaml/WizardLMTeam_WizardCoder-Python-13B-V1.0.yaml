@@ -1,0 +1,88 @@
+uid: 2da63c20-9eba-4f32-af05-a7aec9750c36
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WizardLMTeam_WizardCoder-Python-13B-V1.0.json
+  type: SoftwareFile
+  name: WizardLMTeam_WizardCoder-Python-13B-V1.0.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:95961208-b1eb-41b7-bfd6-4b7ad3bdcfc8
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WizardLMTeam_WizardCoder-Python-13B-V1.0.json
+    type: ExternalReference
+  languages: []
+- uid: 5e4a41cd-de48-4960-9ccf-df8670d76890
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a853d51b-ca70-4763-9fa7-01e4530cec85
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:42.687200+00:00'
+    bom-ref: WizardLMTeam/WizardCoder-Python-13B-V1.0-7eb00057-8cdc-54ef-889a-281b2b735676
+    name: WizardLMTeam/WizardCoder-Python-13B-V1.0
+    authors:
+    - name: WizardLMTeam
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: openai_humaneval'
+        type: pass@1
+        value: 0.64
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - code
+    - arxiv:2304.12244
+    - arxiv:2306.08568
+    - arxiv:2308.09583
+    - license:llama2
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/WizardLMTeam/WizardCoder-Python-13B-V1.0
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: f86195f3-cd6a-4d28-a97c-e623e35fde9f
+  type: Relationship
+  properties: {}
+  from_: 2da63c20-9eba-4f32-af05-a7aec9750c36
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WizardLMTeam_WizardCoder-Python-13B-V1.0.json
+  relationship_type: annotatedBy
+- uid: 199895c2-de30-4439-8341-f1d1063c8472
+  type: Relationship
+  properties: {}
+  from_: a853d51b-ca70-4763-9fa7-01e4530cec85
+  to_:
+  - 5e4a41cd-de48-4960-9ccf-df8670d76890
+  relationship_type: uses
+- uid: 091f5917-5078-41a6-b0e6-b52ebe367993
+  type: Relationship
+  properties: {}
+  from_: 2da63c20-9eba-4f32-af05-a7aec9750c36
+  to_:
+  - a853d51b-ca70-4763-9fa7-01e4530cec85
+  relationship_type: produces

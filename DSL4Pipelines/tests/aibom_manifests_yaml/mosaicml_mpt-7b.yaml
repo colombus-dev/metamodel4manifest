@@ -1,0 +1,256 @@
+uid: f171a103-586c-43a8-b830-c9123b258094
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mosaicml_mpt-7b.json
+  type: SoftwareFile
+  name: mosaicml_mpt-7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f057301a-05b0-42e0-9ff9-e6681f2ce4ee
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mosaicml_mpt-7b.json
+    type: ExternalReference
+  languages: []
+- uid: 4514755c-bf05-4285-b5c7-9cd0c2a43283
+  type: Data
+  properties:
+    bom-ref: mc4-3aafa06e-ba99-523a-8109-8b1111f0da44
+    name: mc4
+    content_url: https://huggingface.co/datasets/mc4
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: n<1K, 1K<n<10K, 10K<n<100K, 100K<n<1M, 1M<n<10M, 10M<n<100M, 100M<n<1B, 1B<n<10B
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: mC4
+    source_datasets: original
+    paperswithcode_id: mc4
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: mc4-3aafa06e-ba99-523a-8109-8b1111f0da44
+    type: ExternalReference
+  languages:
+  - af, am, ar, az, be, bg, bn, ca, ceb, co, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fil, fr, fy, ga, gd, gl, gu, ha, haw, he, hi, hmn, ht, hu, hy, id, ig, is, it, iw, ja, jv, ka, kk, km, kn, ko, ku, ky, la, lb, lo, lt, lv, mg, mi, mk, ml, mn, mr, ms, mt, my, ne, nl, no, ny, pa, pl, ps, pt, ro, ru, sd, si, sk, sl, sm, sn, so, sq, sr, st, su, sv, sw, ta, te, tg, th, tr, uk, und, ur, uz, vi, xh, yi, yo, zh, zu
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: b245fe08-1820-416e-892f-f0cd1899c95b
+  type: Data
+  properties:
+    bom-ref: c4-ef5b2a2e-47f7-597c-aefe-d9dc7589f721
+    name: c4
+    content_url: https://huggingface.co/datasets/c4
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: 100M<n<1B
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: C4
+    source_datasets: original
+    paperswithcode_id: c4
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: c4-ef5b2a2e-47f7-597c-aefe-d9dc7589f721
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 6d9c045b-acf9-4b62-a399-56e5d83828ff
+  type: Data
+  properties:
+    bom-ref: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    name: togethercomputer/RedPajama-Data-1T
+    content_url: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T
+    task_categories: text-generation
+    pretty_name: Red Pajama 1T
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 0d2f4cbb-b85b-4f5c-ad2e-71f571af2300
+  type: Data
+  properties:
+    bom-ref: bigcode/the-stack-407e7b13-27c4-5929-bccd-52a13a854a28
+    name: bigcode/the-stack
+    content_url: https://huggingface.co/datasets/bigcode/the-stack
+    task_categories: text-generation
+    task_ids: ''
+    size_categories: unknown
+    annotations_creators: ''
+    language_creators: crowdsourced, expert-generated
+    pretty_name: The-Stack
+    source_datasets: ''
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/the-stack-407e7b13-27c4-5929-bccd-52a13a854a28
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 66b2b831-9f1c-4044-97ac-86be1433659a
+  type: Data
+  properties:
+    bom-ref: allenai/s2orc-9f147a24-d534-5a4a-a6d5-16fbc1f01d50
+    name: allenai/s2orc
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: allenai/s2orc-9f147a24-d534-5a4a-a6d5-16fbc1f01d50
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f63e2d47-0f5e-4cda-9b5f-b2afa01f8b9a
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e28d7305-1ced-432b-9fce-3311e09b1b25
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:26.785065+00:00'
+    bom-ref: mosaicml/mpt-7b-07bfd9d8-576a-56b7-9900-850789617508
+    name: mosaicml/mpt-7b
+    authors:
+    - name: mosaicml
+    architectureFamily: mpt
+    modelArchitecture: MPTForCausalLM
+    description: '## Model Description
+
+
+      The architecture is a modification of a standard decoder-only transformer.
+
+
+      The model has been modified from a standard transformer in the following ways:
+
+      * It uses [FlashAttention](https://arxiv.org/pdf/2205.14135.pdf)
+
+      * It uses [ALiBi (Attention with Linear Biases)](https://arxiv.org/abs/2108.12409) and does not use positional embeddings
+
+      * It does not use biases
+
+
+
+      | Hyperparameter | Value |
+
+      |----------------|-------|
+
+      |n_parameters | 6.7B |
+
+      |n_layers | 32 |
+
+      | n_heads | 32 |
+
+      | d_model | 4096 |
+
+      | vocab size | 50432 |
+
+      | sequence length | 2048 |
+
+
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - mpt
+    - text-generation
+    - Composer
+    - MosaicML
+    - llm-foundry
+    - StreamingDatasets
+    - custom_code
+    - dataset:mc4
+    - dataset:c4
+    - dataset:togethercomputer/RedPajama-Data-1T
+    - dataset:bigcode/the-stack
+    - dataset:allenai/s2orc
+    - arxiv:2108.12409
+    - arxiv:2302.13971
+    - arxiv:2205.14135
+    - arxiv:2010.04245
+    - arxiv:1909.08053
+    - arxiv:2302.06675
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mosaicml/mpt-7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 27c0c448-53fc-46c2-b83a-11d133b64b08
+  type: Relationship
+  properties: {}
+  from_: f171a103-586c-43a8-b830-c9123b258094
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mosaicml_mpt-7b.json
+  relationship_type: annotatedBy
+- uid: 5ecbf0d3-af4d-4160-b7ee-6361bd1786d7
+  type: Relationship
+  properties: {}
+  from_: e28d7305-1ced-432b-9fce-3311e09b1b25
+  to_:
+  - 4514755c-bf05-4285-b5c7-9cd0c2a43283
+  - b245fe08-1820-416e-892f-f0cd1899c95b
+  - 6d9c045b-acf9-4b62-a399-56e5d83828ff
+  - 0d2f4cbb-b85b-4f5c-ad2e-71f571af2300
+  - 66b2b831-9f1c-4044-97ac-86be1433659a
+  relationship_type: uses
+- uid: 3e84dd44-d05e-4827-874c-533a75f558f5
+  type: Relationship
+  properties: {}
+  from_: e28d7305-1ced-432b-9fce-3311e09b1b25
+  to_:
+  - f63e2d47-0f5e-4cda-9b5f-b2afa01f8b9a
+  relationship_type: uses
+- uid: 890b15a3-c0b9-4779-b78c-17344954616f
+  type: Relationship
+  properties: {}
+  from_: f171a103-586c-43a8-b830-c9123b258094
+  to_:
+  - e28d7305-1ced-432b-9fce-3311e09b1b25
+  relationship_type: produces

@@ -1,0 +1,126 @@
+uid: 6b0b7f30-e387-4e14-b986-96233bde52a8
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_falcon-40b-instruct-GPTQ.json
+  type: SoftwareFile
+  name: TheBloke_falcon-40b-instruct-GPTQ.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:eeed6caa-738e-455c-9ba8-b50799e9cf99
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_falcon-40b-instruct-GPTQ.json
+    type: ExternalReference
+  languages: []
+- uid: 2ef8e5d3-cebf-480a-8262-25c60682416c
+  type: Data
+  properties:
+    bom-ref: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    name: tiiuae/falcon-refinedweb
+    content_url: https://huggingface.co/datasets/tiiuae/falcon-refinedweb
+    task_categories: text-generation
+    size_categories: 100B<n<1T
+    pretty_name: Falcon RefinedWeb
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: d0b724f8-35e1-49df-bb51-0958384765df
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 498a0898-2cfb-4b64-9c7f-1a1b637224ee
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:46.051175+00:00'
+    bom-ref: TheBloke/falcon-40b-instruct-GPTQ-91ce4588-e788-56ff-aaeb-e3b9f4f805c4
+    name: TheBloke/falcon-40b-instruct-GPTQ
+    authors:
+    - name: TheBloke
+    architectureFamily: RefinedWeb
+    modelArchitecture: RWForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - RefinedWeb
+    - text-generation
+    - custom_code
+    - en
+    - dataset:tiiuae/falcon-refinedweb
+    - arxiv:2205.14135
+    - arxiv:1911.02150
+    - arxiv:2005.14165
+    - arxiv:2104.09864
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - 4-bit
+    - gptq
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/TheBloke/falcon-40b-instruct-GPTQ
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 89e0c531-7be9-4065-83b8-d0d78d091822
+  type: Relationship
+  properties: {}
+  from_: 6b0b7f30-e387-4e14-b986-96233bde52a8
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_falcon-40b-instruct-GPTQ.json
+  relationship_type: annotatedBy
+- uid: 2e8a7472-a119-46be-914f-50ec5b1591a5
+  type: Relationship
+  properties: {}
+  from_: 498a0898-2cfb-4b64-9c7f-1a1b637224ee
+  to_:
+  - 2ef8e5d3-cebf-480a-8262-25c60682416c
+  relationship_type: uses
+- uid: 75038c27-666c-4b43-86f0-4296363dad24
+  type: Relationship
+  properties: {}
+  from_: 498a0898-2cfb-4b64-9c7f-1a1b637224ee
+  to_:
+  - d0b724f8-35e1-49df-bb51-0958384765df
+  relationship_type: uses
+- uid: ade6c618-87d8-4efa-825c-f0addfc9134e
+  type: Relationship
+  properties: {}
+  from_: 6b0b7f30-e387-4e14-b986-96233bde52a8
+  to_:
+  - 498a0898-2cfb-4b64-9c7f-1a1b637224ee
+  relationship_type: produces

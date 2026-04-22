@@ -1,0 +1,82 @@
+uid: 92a40f3e-0780-4511-b3c4-0a84b25ed6a5
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ai-forever_ruGPT-3.5-13B.json
+  type: SoftwareFile
+  name: ai-forever_ruGPT-3.5-13B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:08e39cf8-98a0-4a59-ac45-a33266e19d9b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ai-forever_ruGPT-3.5-13B.json
+    type: ExternalReference
+  languages: []
+- uid: 97de640f-77b2-4382-bed8-d7484bde443d
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7f577095-9ec5-4020-a54f-8bb23402ca24
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:25.257180+00:00'
+    bom-ref: ai-forever/ruGPT-3.5-13B-87084a62-0f76-5e20-8333-a8ab40bb52fe
+    name: ai-forever/ruGPT-3.5-13B
+    authors:
+    - name: ai-forever
+    architectureFamily: gpt2
+    modelArchitecture: GPT2LMHeadModel
+    tags:
+    - transformers
+    - pytorch
+    - gpt2
+    - text-generation
+    - gpt3
+    - en
+    - ru
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ai-forever/ruGPT-3.5-13B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 8787f358-114e-4325-8a82-f5b4fb1964b0
+  type: Relationship
+  properties: {}
+  from_: 92a40f3e-0780-4511-b3c4-0a84b25ed6a5
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ai-forever_ruGPT-3.5-13B.json
+  relationship_type: annotatedBy
+- uid: 2742ba66-1486-45b0-abc4-1e2993a6ac2b
+  type: Relationship
+  properties: {}
+  from_: 7f577095-9ec5-4020-a54f-8bb23402ca24
+  to_:
+  - 97de640f-77b2-4382-bed8-d7484bde443d
+  relationship_type: uses
+- uid: efac8f62-7a23-4146-a681-cc0514cf3715
+  type: Relationship
+  properties: {}
+  from_: 92a40f3e-0780-4511-b3c4-0a84b25ed6a5
+  to_:
+  - 7f577095-9ec5-4020-a54f-8bb23402ca24
+  relationship_type: produces

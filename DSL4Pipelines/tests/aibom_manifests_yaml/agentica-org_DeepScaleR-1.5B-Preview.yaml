@@ -1,0 +1,199 @@
+uid: fbcd0ad4-dba3-4bff-90c3-310e1dbd6ea7
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/agentica-org_DeepScaleR-1.5B-Preview.json
+  type: SoftwareFile
+  name: agentica-org_DeepScaleR-1.5B-Preview.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:75e5e837-6524-4721-8df5-774ba4f21d1b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/agentica-org_DeepScaleR-1.5B-Preview.json
+    type: ExternalReference
+  languages: []
+- uid: 96f3e92f-6715-40a3-ab48-319a51377e01
+  type: Data
+  properties:
+    bom-ref: AI-MO/NuminaMath-CoT-3aa976f5-9ca4-5435-8542-1a123856aafb
+    name: AI-MO/NuminaMath-CoT
+    content_url: https://huggingface.co/datasets/AI-MO/NuminaMath-CoT
+    task_categories: text-generation
+    pretty_name: NuminaMath CoT
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}, {"split": "test", "path": "data/test-*"}'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: AI-MO/NuminaMath-CoT-3aa976f5-9ca4-5435-8542-1a123856aafb
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 91683f6b-eb2b-4796-9f1f-f4992f90241d
+  type: Data
+  properties:
+    bom-ref: KbsdJames/Omni-MATH-24d91bb9-d80a-5212-956f-c22e3eed3035
+    name: KbsdJames/Omni-MATH
+    content_url: https://huggingface.co/datasets/KbsdJames/Omni-MATH
+    size_categories: 1K<n<10K
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: KbsdJames/Omni-MATH-24d91bb9-d80a-5212-956f-c22e3eed3035
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c2f10c80-f5d6-41dd-9789-cf582ab8b9d8
+  type: Data
+  properties:
+    bom-ref: RUC-AIBOX/STILL-3-Preview-RL-Data-d0d72858-d61d-5edf-93a3-9f4b7b58a2a4
+    name: RUC-AIBOX/STILL-3-Preview-RL-Data
+    content_url: https://huggingface.co/datasets/RUC-AIBOX/STILL-3-Preview-RL-Data
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: RUC-AIBOX/STILL-3-Preview-RL-Data-d0d72858-d61d-5edf-93a3-9f4b7b58a2a4
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: a3a3cd88-876b-455d-a864-f85a79e561fc
+  type: Data
+  properties:
+    bom-ref: hendrycks/competition_math-d972b95b-b33a-5e86-8d48-38fc8c929884
+    name: hendrycks/competition_math
+    content_url: https://huggingface.co/datasets/hendrycks/competition_math
+    task_categories: text2text-generation
+    task_ids: ''
+    size_categories: 10K<n<100K
+    annotations_creators: expert-generated
+    language_creators: expert-generated
+    pretty_name: Mathematics Aptitude Test of Heuristics (MATH)
+    source_datasets: original
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: hendrycks/competition_math-d972b95b-b33a-5e86-8d48-38fc8c929884
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 69ea4d7e-aefb-4b19-b573-52606ea4e428
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ef84fdc3-34b0-44a7-a879-7f323bb98205
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+    type: ExternalReference
+  languages: []
+- uid: 676c2430-fb57-4347-89be-782a0a442112
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:20.039109+00:00'
+    bom-ref: agentica-org/DeepScaleR-1.5B-Preview-7f6420d1-8471-59ed-bc37-7c26e1e9c09a
+    name: agentica-org/DeepScaleR-1.5B-Preview
+    authors:
+    - name: agentica-org
+    architectureFamily: qwen2
+    modelArchitecture: Qwen2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - qwen2
+    - text-generation
+    - en
+    - dataset:AI-MO/NuminaMath-CoT
+    - dataset:KbsdJames/Omni-MATH
+    - dataset:RUC-AIBOX/STILL-3-Preview-RL-Data
+    - dataset:hendrycks/competition_math
+    - base_model:deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+    - base_model:finetune:deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/agentica-org/DeepScaleR-1.5B-Preview
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: b0dbb770-53da-41ee-bc07-f6bfb343473c
+  type: Relationship
+  properties: {}
+  from_: fbcd0ad4-dba3-4bff-90c3-310e1dbd6ea7
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/agentica-org_DeepScaleR-1.5B-Preview.json
+  relationship_type: annotatedBy
+- uid: c6454cab-279f-4966-916c-aed403b48d60
+  type: Relationship
+  properties: {}
+  from_: 676c2430-fb57-4347-89be-782a0a442112
+  to_:
+  - 96f3e92f-6715-40a3-ab48-319a51377e01
+  - 91683f6b-eb2b-4796-9f1f-f4992f90241d
+  - c2f10c80-f5d6-41dd-9789-cf582ab8b9d8
+  - a3a3cd88-876b-455d-a864-f85a79e561fc
+  relationship_type: uses
+- uid: 67218341-249b-4fce-abfc-3b985f5607fa
+  type: Relationship
+  properties: {}
+  from_: 676c2430-fb57-4347-89be-782a0a442112
+  to_:
+  - 69ea4d7e-aefb-4b19-b573-52606ea4e428
+  relationship_type: uses
+- uid: c3255777-ddab-43b6-a01a-7afc25b74d1f
+  type: Relationship
+  properties: {}
+  from_: 676c2430-fb57-4347-89be-782a0a442112
+  to_:
+  - ef84fdc3-34b0-44a7-a879-7f323bb98205
+  relationship_type: derivedFrom
+- uid: 6ff54f88-4c48-4c54-afcd-1cd11abe362f
+  type: Relationship
+  properties: {}
+  from_: fbcd0ad4-dba3-4bff-90c3-310e1dbd6ea7
+  to_:
+  - 676c2430-fb57-4347-89be-782a0a442112
+  relationship_type: produces

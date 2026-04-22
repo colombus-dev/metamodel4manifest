@@ -1,0 +1,82 @@
+uid: 4afa254b-77b3-4a95-92c5-e611c352c564
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext.json
+  type: SoftwareFile
+  name: microsoft_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:33d03aac-4065-451e-82be-daf8d3d8a06b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext.json
+    type: ExternalReference
+  languages: []
+- uid: a6b275ca-db56-468e-8c18-176274b87326
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7af55af4-7609-4e03-a0b8-2c5133f63413
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:06.481706+00:00'
+    bom-ref: microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext-567c8993-636b-53bd-9cdf-b09c2892bca4
+    name: microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext
+    authors:
+    - name: microsoft
+    architectureFamily: bert
+    modelArchitecture: BertForMaskedLM
+    tags:
+    - transformers
+    - pytorch
+    - jax
+    - bert
+    - fill-mask
+    - exbert
+    - en
+    - arxiv:2007.15779
+    - license:mit
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: fill-mask
+relations:
+- uid: 1adccf11-c997-4a38-b08e-ec778a699176
+  type: Relationship
+  properties: {}
+  from_: 4afa254b-77b3-4a95-92c5-e611c352c564
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext.json
+  relationship_type: annotatedBy
+- uid: 2b402552-6e5d-4567-b7c6-302c0e39e379
+  type: Relationship
+  properties: {}
+  from_: 7af55af4-7609-4e03-a0b8-2c5133f63413
+  to_:
+  - a6b275ca-db56-468e-8c18-176274b87326
+  relationship_type: uses
+- uid: 925b6ced-aaa5-41cd-b7a2-92d5c21f16e4
+  type: Relationship
+  properties: {}
+  from_: 4afa254b-77b3-4a95-92c5-e611c352c564
+  to_:
+  - 7af55af4-7609-4e03-a0b8-2c5133f63413
+  relationship_type: produces

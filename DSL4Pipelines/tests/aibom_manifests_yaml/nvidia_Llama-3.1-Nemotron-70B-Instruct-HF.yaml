@@ -1,0 +1,134 @@
+uid: 2d0d9049-5e58-4959-a4a2-68197fdb6ead
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Llama-3.1-Nemotron-70B-Instruct-HF.json
+  type: SoftwareFile
+  name: nvidia_Llama-3.1-Nemotron-70B-Instruct-HF.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:162fbd5e-8dfc-44b0-af2e-34993a286025
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Llama-3.1-Nemotron-70B-Instruct-HF.json
+    type: ExternalReference
+  languages: []
+- uid: 7070964d-7979-458e-a0e5-8df1ee4bdfde
+  type: Data
+  properties:
+    bom-ref: nvidia/HelpSteer2-d2736dd2-fbdf-52ea-bfec-384e68dcad8d
+    name: nvidia/HelpSteer2
+    content_url: https://huggingface.co/datasets/nvidia/HelpSteer2
+    size_categories: 10K<n<100K
+    pretty_name: HelpSteer2
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: nvidia/HelpSteer2-d2736dd2-fbdf-52ea-bfec-384e68dcad8d
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 283a82cc-d4f6-47ed-8191-c6cc0ec8b254
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 145df593-e3fb-49f5-b90e-6980d5480f5e
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Llama-3.1-70B-Instruct
+    type: ExternalReference
+  languages: []
+- uid: 67f01609-2464-4727-be14-821c363a94a6
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:16.775591+00:00'
+    bom-ref: nvidia/Llama-3.1-Nemotron-70B-Instruct-HF-722385b1-5f41-5429-bb73-e249e4f32b4f
+    name: nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
+    authors:
+    - name: nvidia
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '# Model Overview
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - nvidia
+    - llama3.1
+    - conversational
+    - en
+    - dataset:nvidia/HelpSteer2
+    - arxiv:2410.01257
+    - arxiv:2405.01481
+    - arxiv:2406.08673
+    - base_model:meta-llama/Llama-3.1-70B-Instruct
+    - base_model:finetune:meta-llama/Llama-3.1-70B-Instruct
+    - license:llama3.1
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    name: llama3.1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 2a21655e-8bfe-4d04-b75d-cd06f21147ae
+  type: Relationship
+  properties: {}
+  from_: 2d0d9049-5e58-4959-a4a2-68197fdb6ead
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Llama-3.1-Nemotron-70B-Instruct-HF.json
+  relationship_type: annotatedBy
+- uid: 65d0d4ea-7ca8-4e3d-b1c6-da5aa8ef7be9
+  type: Relationship
+  properties: {}
+  from_: 67f01609-2464-4727-be14-821c363a94a6
+  to_:
+  - 7070964d-7979-458e-a0e5-8df1ee4bdfde
+  relationship_type: uses
+- uid: c40fed9c-7449-4634-b509-798d678c2e4c
+  type: Relationship
+  properties: {}
+  from_: 67f01609-2464-4727-be14-821c363a94a6
+  to_:
+  - 283a82cc-d4f6-47ed-8191-c6cc0ec8b254
+  relationship_type: uses
+- uid: 65588a02-373d-4719-aa5c-dee196b2e3e1
+  type: Relationship
+  properties: {}
+  from_: 67f01609-2464-4727-be14-821c363a94a6
+  to_:
+  - 145df593-e3fb-49f5-b90e-6980d5480f5e
+  relationship_type: derivedFrom
+- uid: e392d967-946f-49c7-8b3d-83e506143591
+  type: Relationship
+  properties: {}
+  from_: 2d0d9049-5e58-4959-a4a2-68197fdb6ead
+  to_:
+  - 67f01609-2464-4727-be14-821c363a94a6
+  relationship_type: produces

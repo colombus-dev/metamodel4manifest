@@ -1,0 +1,100 @@
+uid: a4f1fc82-7c96-4ff6-8deb-1f80d4682eab
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/naver-clova-ix_donut-base.json
+  type: SoftwareFile
+  name: naver-clova-ix_donut-base.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ec0e7477-2500-4f33-bc6c-962efa57a701
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/naver-clova-ix_donut-base.json
+    type: ExternalReference
+  languages: []
+- uid: 1365ef23-8d54-4eed-a3d4-b609553f2a73
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4fbc271d-07ec-4791-8c3d-44fceb55a170
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:12.289708+00:00'
+    bom-ref: naver-clova-ix/donut-base-a6b3fe07-5441-5a55-95a8-330ac13b707a
+    name: naver-clova-ix/donut-base
+    authors:
+    - name: naver-clova-ix
+    architectureFamily: vision-encoder-decoder
+    modelArchitecture: VisionEncoderDecoderModel
+    description: '## Model description
+
+
+      Donut consists of a vision encoder (Swin Transformer) and a text decoder (BART). Given an image, the encoder first encodes the image into a tensor of embeddings (of shape batch_size, seq_len, hidden_size), after which the decoder autoregressively generates text, conditioned on the encoding of the encoder.
+
+
+      ![model image](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/donut_architecture.jpg)
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - vision-encoder-decoder
+    - image-text-to-text
+    - donut
+    - image-to-text
+    - vision
+    - arxiv:2111.15664
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/naver-clova-ix/donut-base
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-text
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      This model is meant to be fine-tuned on a downstream task, like document image classification or document parsing. See the [model hub](https://huggingface.co/models?search=donut) to look for fine-tuned versions on a task that interests you.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 88884dec-4c86-491e-ac61-d6483c96dbb0
+  type: Relationship
+  properties: {}
+  from_: a4f1fc82-7c96-4ff6-8deb-1f80d4682eab
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/naver-clova-ix_donut-base.json
+  relationship_type: annotatedBy
+- uid: 98588866-eae0-477a-85ee-0f81b56fab3b
+  type: Relationship
+  properties: {}
+  from_: 4fbc271d-07ec-4791-8c3d-44fceb55a170
+  to_:
+  - 1365ef23-8d54-4eed-a3d4-b609553f2a73
+  relationship_type: uses
+- uid: 29e84729-c3df-4616-a473-646292159b0c
+  type: Relationship
+  properties: {}
+  from_: a4f1fc82-7c96-4ff6-8deb-1f80d4682eab
+  to_:
+  - 4fbc271d-07ec-4791-8c3d-44fceb55a170
+  relationship_type: produces

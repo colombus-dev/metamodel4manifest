@@ -1,0 +1,99 @@
+uid: 155166f6-da63-4dd8-b710-09f61fefe5e4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/UnfilteredAI_NSFW-gen-v2.json
+  type: SoftwareFile
+  name: UnfilteredAI_NSFW-gen-v2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:66f2ded6-d7c0-4e63-beca-6a4c80ae0f6c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/UnfilteredAI_NSFW-gen-v2.json
+    type: ExternalReference
+  languages: []
+- uid: 11bff777-2580-4aa6-924e-ac76aba47bc3
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 350466ca-55e3-4224-9673-e5f7f34df61f
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: OEvortex/PixelGen
+    type: ExternalReference
+  languages: []
+- uid: f9638f6a-5299-4438-a87c-b0831688894d
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:06.078787+00:00'
+    bom-ref: UnfilteredAI/NSFW-gen-v2-3008400a-3bb3-5529-9ef1-68e8d819ae2f
+    name: UnfilteredAI/NSFW-gen-v2
+    authors:
+    - name: UnfilteredAI
+    tags:
+    - diffusers
+    - safetensors
+    - UnfilteredAI
+    - 3d
+    - text-to-image
+    - not-for-all-audiences
+    - en
+    - pt
+    - th
+    - base_model:OEvortex/PixelGen
+    - base_model:finetune:OEvortex/PixelGen
+    - license:other
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionXLPipeline
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/UnfilteredAI/NSFW-gen-v2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: ac7e6b84-d3d4-4780-93a2-a282a5cf8ad4
+  type: Relationship
+  properties: {}
+  from_: 155166f6-da63-4dd8-b710-09f61fefe5e4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/UnfilteredAI_NSFW-gen-v2.json
+  relationship_type: annotatedBy
+- uid: 17132123-edd1-4f69-9fa0-7ae20f726c30
+  type: Relationship
+  properties: {}
+  from_: f9638f6a-5299-4438-a87c-b0831688894d
+  to_:
+  - 11bff777-2580-4aa6-924e-ac76aba47bc3
+  relationship_type: uses
+- uid: 5d185d04-7a51-4279-90df-e9b68f00845c
+  type: Relationship
+  properties: {}
+  from_: f9638f6a-5299-4438-a87c-b0831688894d
+  to_:
+  - 350466ca-55e3-4224-9673-e5f7f34df61f
+  relationship_type: derivedFrom
+- uid: bc35abb0-6215-4bc0-a7af-93177159ba5a
+  type: Relationship
+  properties: {}
+  from_: 155166f6-da63-4dd8-b710-09f61fefe5e4
+  to_:
+  - f9638f6a-5299-4438-a87c-b0831688894d
+  relationship_type: produces

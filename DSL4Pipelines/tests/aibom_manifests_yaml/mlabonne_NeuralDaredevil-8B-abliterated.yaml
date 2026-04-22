@@ -1,0 +1,131 @@
+uid: 933ddd97-82f4-4de1-bbba-580bc8da3405
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mlabonne_NeuralDaredevil-8B-abliterated.json
+  type: SoftwareFile
+  name: mlabonne_NeuralDaredevil-8B-abliterated.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:df93fb4f-3a63-4dd0-91c9-54598f5bcfd3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mlabonne_NeuralDaredevil-8B-abliterated.json
+    type: ExternalReference
+  languages: []
+- uid: 70000219-9d2b-4cc0-8f6b-e52d47795c44
+  type: Data
+  properties:
+    bom-ref: mlabonne/orpo-dpo-mix-40k-898bbffe-f59a-53fe-a5b7-846dc484fbab
+    name: mlabonne/orpo-dpo-mix-40k
+    content_url: https://huggingface.co/datasets/mlabonne/orpo-dpo-mix-40k
+    task_categories: text-generation
+    pretty_name: ORPO-DPO-mix-40k
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: mlabonne/orpo-dpo-mix-40k-898bbffe-f59a-53fe-a5b7-846dc484fbab
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 00a9eadf-4045-4a6a-b3c5-476f771e44f2
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 81e5dedc-9b23-490b-8392-d82bf89980e6
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:39.663399+00:00'
+    bom-ref: mlabonne/NeuralDaredevil-8B-abliterated-137a94eb-5b88-59d1-88c3-66d6367d780d
+    name: mlabonne/NeuralDaredevil-8B-abliterated
+    authors:
+    - name: mlabonne
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: ai2_arc, split: test, config: ARC-Challenge'
+        type: acc_norm
+        value: 69.28
+      - slice: 'dataset: hellaswag, split: validation'
+        type: acc_norm
+        value: 85.05
+      - slice: 'dataset: cais/mmlu, split: test, config: all'
+        type: acc
+        value: 69.1
+      - slice: 'dataset: truthful_qa, split: validation, config: multiple_choice'
+        type: mc2
+        value: 60
+      - slice: 'dataset: winogrande, split: validation, config: winogrande_xl'
+        type: acc
+        value: 78.69
+      - slice: 'dataset: gsm8k, split: test, config: main'
+        type: acc
+        value: 71.8
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - dpo
+    - conversational
+    - dataset:mlabonne/orpo-dpo-mix-40k
+    - license:llama3
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mlabonne/NeuralDaredevil-8B-abliterated
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: ded40d2e-6608-4ccc-9751-3dde4bd792d3
+  type: Relationship
+  properties: {}
+  from_: 933ddd97-82f4-4de1-bbba-580bc8da3405
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mlabonne_NeuralDaredevil-8B-abliterated.json
+  relationship_type: annotatedBy
+- uid: 12ecf3db-bb04-414d-af3c-25df5010580e
+  type: Relationship
+  properties: {}
+  from_: 81e5dedc-9b23-490b-8392-d82bf89980e6
+  to_:
+  - 70000219-9d2b-4cc0-8f6b-e52d47795c44
+  relationship_type: uses
+- uid: e7d31d20-7822-421c-b6cc-dab56995360b
+  type: Relationship
+  properties: {}
+  from_: 81e5dedc-9b23-490b-8392-d82bf89980e6
+  to_:
+  - 00a9eadf-4045-4a6a-b3c5-476f771e44f2
+  relationship_type: uses
+- uid: 9be7bc21-4a59-4f23-90c3-1c7dd48eb320
+  type: Relationship
+  properties: {}
+  from_: 933ddd97-82f4-4de1-bbba-580bc8da3405
+  to_:
+  - 81e5dedc-9b23-490b-8392-d82bf89980e6
+  relationship_type: produces

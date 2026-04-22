@@ -1,0 +1,120 @@
+uid: 91a8b678-48c2-46c9-8f50-825633c55137
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HuggingFaceTB_SmolLM2-1.7B-Instruct.json
+  type: SoftwareFile
+  name: HuggingFaceTB_SmolLM2-1.7B-Instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:372f28d3-6b46-4f56-9ad1-8a19efc3bd6b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HuggingFaceTB_SmolLM2-1.7B-Instruct.json
+    type: ExternalReference
+  languages: []
+- uid: ebad9473-3725-4673-b126-58a42c98e75c
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 55867aeb-b594-4c93-8586-4dfa93632971
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: HuggingFaceTB/SmolLM2-1.7B
+    type: ExternalReference
+  languages: []
+- uid: 6b2a35ea-51ed-45f5-8f0a-fb66e7d7c867
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:35.019950+00:00'
+    bom-ref: HuggingFaceTB/SmolLM2-1.7B-Instruct-017775d4-0839-5a1b-84ac-939ae66177f9
+    name: HuggingFaceTB/SmolLM2-1.7B-Instruct
+    authors:
+    - name: HuggingFaceTB
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Summary
+
+
+      SmolLM2 is a family of compact language models available in three size: 135M, 360M, and 1.7B parameters. They are capable of solving a wide range of tasks while being lightweight enough to run on-device. More details in our paper: https://arxiv.org/abs/2502.02737v1
+
+
+      The 1.7B variant demonstrates significant advances over its predecessor SmolLM1-1.7B, particularly in instruction following, knowledge, reasoning, and mathematics. It was trained on 11 trillion tokens using a diverse dataset combination: FineWeb-Edu, DCLM, The Stack, along with new mathematics and coding datasets that we curated and will release soon. We developed the instruct version through supervised fine-tuning (SFT) using a combination of public datasets and our own curated datasets. We then applied Direct Preference Optimization (DPO) using [UltraFeedback](https://huggingface.co/datasets/HuggingFaceH4/ultrafeedback_binarized).
+
+
+      The instruct model additionally supports tasks such as text rewriting, summarization and function calling thanks to datasets developed by [Argilla](https://huggingface.co/argilla) such as [Synth-APIGen-v0.1](https://huggingface.co/datasets/argilla/Synth-APIGen-v0.1).
+
+      You can find the SFT dataset here: https://huggingface.co/datasets/HuggingFaceTB/smoltalk.
+
+
+      For more details refer to: https://github.com/huggingface/smollm. You will find pre-training, post-training, evaluation and local inference code.
+
+      '
+    tags:
+    - transformers
+    - tensorboard
+    - onnx
+    - safetensors
+    - llama
+    - text-generation
+    - transformers.js
+    - conversational
+    - en
+    - arxiv:2502.02737
+    - base_model:HuggingFaceTB/SmolLM2-1.7B
+    - base_model:quantized:HuggingFaceTB/SmolLM2-1.7B
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: adc4a62b-3e81-438f-961e-f8e31e247334
+  type: Relationship
+  properties: {}
+  from_: 91a8b678-48c2-46c9-8f50-825633c55137
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HuggingFaceTB_SmolLM2-1.7B-Instruct.json
+  relationship_type: annotatedBy
+- uid: 456555b2-7be1-4564-9f0c-be6110fcecf6
+  type: Relationship
+  properties: {}
+  from_: 6b2a35ea-51ed-45f5-8f0a-fb66e7d7c867
+  to_:
+  - ebad9473-3725-4673-b126-58a42c98e75c
+  relationship_type: uses
+- uid: 435b8b09-ca29-485c-b166-31f7f8538418
+  type: Relationship
+  properties: {}
+  from_: 6b2a35ea-51ed-45f5-8f0a-fb66e7d7c867
+  to_:
+  - 55867aeb-b594-4c93-8586-4dfa93632971
+  relationship_type: derivedFrom
+- uid: 3862cd5e-661d-4d5a-8ef3-e3481bd1c3a5
+  type: Relationship
+  properties: {}
+  from_: 91a8b678-48c2-46c9-8f50-825633c55137
+  to_:
+  - 6b2a35ea-51ed-45f5-8f0a-fb66e7d7c867
+  relationship_type: produces

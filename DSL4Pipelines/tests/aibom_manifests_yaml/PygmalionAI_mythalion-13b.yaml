@@ -1,0 +1,161 @@
+uid: 8440c13b-466b-4980-a3f4-1906b63e0e87
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/PygmalionAI_mythalion-13b.json
+  type: SoftwareFile
+  name: PygmalionAI_mythalion-13b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a4f0da38-0e16-4d72-a150-4465ca9d0705
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/PygmalionAI_mythalion-13b.json
+    type: ExternalReference
+  languages: []
+- uid: a4d9ec32-72a0-4c94-b8c7-753d783f9a7c
+  type: Data
+  properties:
+    bom-ref: PygmalionAI/PIPPA-05f9b810-edb8-53eb-b26c-8a5e12145ef0
+    name: PygmalionAI/PIPPA
+    content_url: https://huggingface.co/datasets/PygmalionAI/PIPPA
+    task_categories: conversational
+    size_categories: 10K<n<100K
+    pretty_name: PIPPA - Personal Interaction Pairs Between People and AI
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: PygmalionAI/PIPPA-05f9b810-edb8-53eb-b26c-8a5e12145ef0
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: a371af22-0e4f-4b47-b6e4-87ae32d19fce
+  type: Data
+  properties:
+    bom-ref: Open-Orca/OpenOrca-bd2dde5e-b85b-5436-a786-d44f16da11b9
+    name: Open-Orca/OpenOrca
+    content_url: https://huggingface.co/datasets/Open-Orca/OpenOrca
+    task_categories: conversational, text-classification, token-classification, table-question-answering, question-answering, zero-shot-classification, summarization, feature-extraction, text-generation, text2text-generation
+    size_categories: 10M<n<100M
+    pretty_name: OpenOrca
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Open-Orca/OpenOrca-bd2dde5e-b85b-5436-a786-d44f16da11b9
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 709713a8-eac8-4d63-abd2-60dcc057adce
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b00a6cab-3d3c-4589-aea2-96c041972842
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:52.246619+00:00'
+    bom-ref: PygmalionAI/mythalion-13b-cf5bfdd8-ac15-52ff-9d8c-29229d382d2b
+    name: PygmalionAI/mythalion-13b
+    authors:
+    - name: PygmalionAI
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Details
+
+
+      The long-awaited release of our new models based on Llama-2 is finally here. This model was created in
+
+      collaboration with [Gryphe](https://huggingface.co/Gryphe), a mixture of our [Pygmalion-2 13B](https://huggingface.co/PygmalionAI/pygmalion-2-13b)
+
+      and Gryphe''s [Mythomax L2 13B](https://huggingface.co/Gryphe/MythoMax-L2-13b).
+
+
+      Finer details of the merge are available in [our blogpost](https://pygmalionai.github.io/blog/posts/introducing_pygmalion_2/#mythalion-13b).
+
+      According to our testers, this model seems to outperform MythoMax in RP/Chat. **Please make sure you follow the recommended
+
+      generation settings for SillyTavern [here](https://pygmalionai.github.io/blog/posts/introducing_pygmalion_2/#sillytavern) for
+
+      the best results!**
+
+
+      This model is freely available for both commercial and non-commercial use, as per the Llama-2 license.
+
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - llama
+    - text-generation
+    - text generation
+    - instruct
+    - en
+    - dataset:PygmalionAI/PIPPA
+    - dataset:Open-Orca/OpenOrca
+    - dataset:Norquinal/claude_multiround_chat_30k
+    - dataset:jondurbin/airoboros-gpt4-1.4.1
+    - dataset:databricks/databricks-dolly-15k
+    - license:llama2
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/PygmalionAI/mythalion-13b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: dc92fef0-a768-4fe2-ba84-d92755679019
+  type: Relationship
+  properties: {}
+  from_: 8440c13b-466b-4980-a3f4-1906b63e0e87
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/PygmalionAI_mythalion-13b.json
+  relationship_type: annotatedBy
+- uid: 58852274-eb50-4d03-baf1-7fc1893c8e13
+  type: Relationship
+  properties: {}
+  from_: b00a6cab-3d3c-4589-aea2-96c041972842
+  to_:
+  - a4d9ec32-72a0-4c94-b8c7-753d783f9a7c
+  - a371af22-0e4f-4b47-b6e4-87ae32d19fce
+  relationship_type: uses
+- uid: 08876308-6bea-45bb-b20d-c0cbe631d014
+  type: Relationship
+  properties: {}
+  from_: b00a6cab-3d3c-4589-aea2-96c041972842
+  to_:
+  - 709713a8-eac8-4d63-abd2-60dcc057adce
+  relationship_type: uses
+- uid: a92ae90d-1a5f-4f83-b3cd-8ce99f692de2
+  type: Relationship
+  properties: {}
+  from_: 8440c13b-466b-4980-a3f4-1906b63e0e87
+  to_:
+  - b00a6cab-3d3c-4589-aea2-96c041972842
+  relationship_type: produces

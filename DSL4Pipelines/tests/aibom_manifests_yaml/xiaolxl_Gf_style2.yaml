@@ -1,0 +1,78 @@
+uid: 8f1897ed-0ac8-4fa2-b212-72f94d49538a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xiaolxl_Gf_style2.json
+  type: SoftwareFile
+  name: xiaolxl_Gf_style2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9630b52f-0e35-4b69-a63f-2865b3f9d02e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xiaolxl_Gf_style2.json
+    type: ExternalReference
+  languages: []
+- uid: 159cc2b0-e40e-4e10-becc-0335162a78e4
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8ae24259-1633-450d-bce2-6877c6083961
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:01.682303+00:00'
+    bom-ref: xiaolxl/Gf_style2-af9d6f7c-fc91-5ce3-9996-0c5ee7b1fd76
+    name: xiaolxl/Gf_style2
+    authors:
+    - name: xiaolxl
+    tags:
+    - diffusers
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-image
+    - en
+    - license:cc-by-nc-sa-4.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    id: CC-BY-NC-SA-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-SA-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/xiaolxl/Gf_style2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 03bbaba8-385f-4885-b74a-c06552b33883
+  type: Relationship
+  properties: {}
+  from_: 8f1897ed-0ac8-4fa2-b212-72f94d49538a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xiaolxl_Gf_style2.json
+  relationship_type: annotatedBy
+- uid: 02514c60-01e9-4840-9012-1fc419036af8
+  type: Relationship
+  properties: {}
+  from_: 8ae24259-1633-450d-bce2-6877c6083961
+  to_:
+  - 159cc2b0-e40e-4e10-becc-0335162a78e4
+  relationship_type: uses
+- uid: c4f486c5-acf7-4bf0-bd4b-691eb699985c
+  type: Relationship
+  properties: {}
+  from_: 8f1897ed-0ac8-4fa2-b212-72f94d49538a
+  to_:
+  - 8ae24259-1633-450d-bce2-6877c6083961
+  relationship_type: produces

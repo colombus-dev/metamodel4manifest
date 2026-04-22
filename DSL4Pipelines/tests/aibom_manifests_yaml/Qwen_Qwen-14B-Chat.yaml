@@ -1,0 +1,81 @@
+uid: 74bc7652-4393-4065-a4a6-246a40deb991
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen-14B-Chat.json
+  type: SoftwareFile
+  name: Qwen_Qwen-14B-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cdfa2cc1-a3f4-4336-853b-60f90184bb4a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen-14B-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: 01e61677-f798-47aa-908a-dd21cb1305de
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0c0db8c3-1f04-4ed7-a720-48889e560f7c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:50.160997+00:00'
+    bom-ref: Qwen/Qwen-14B-Chat-d058ff14-786f-57d3-9d39-73effacb340a
+    name: Qwen/Qwen-14B-Chat
+    authors:
+    - name: Qwen
+    architectureFamily: qwen
+    modelArchitecture: QWenLMHeadModel
+    tags:
+    - transformers
+    - safetensors
+    - qwen
+    - text-generation
+    - custom_code
+    - zh
+    - en
+    - arxiv:2309.16609
+    - arxiv:2305.08322
+    - arxiv:2009.03300
+    - arxiv:2305.05280
+    - arxiv:2210.03629
+    - autotrain_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Qwen/Qwen-14B-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: f74fb214-baf5-48b0-973b-f96596d15342
+  type: Relationship
+  properties: {}
+  from_: 74bc7652-4393-4065-a4a6-246a40deb991
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen-14B-Chat.json
+  relationship_type: annotatedBy
+- uid: 62a1e985-8a49-4ed4-9cc9-d523519d4315
+  type: Relationship
+  properties: {}
+  from_: 0c0db8c3-1f04-4ed7-a720-48889e560f7c
+  to_:
+  - 01e61677-f798-47aa-908a-dd21cb1305de
+  relationship_type: uses
+- uid: 6f7e6691-d56d-4f92-a752-4cbccb80c82a
+  type: Relationship
+  properties: {}
+  from_: 74bc7652-4393-4065-a4a6-246a40deb991
+  to_:
+  - 0c0db8c3-1f04-4ed7-a720-48889e560f7c
+  relationship_type: produces

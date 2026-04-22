@@ -1,0 +1,146 @@
+uid: 013d24e2-0b1c-43d5-b680-be76c0421175
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloom-1b7.json
+  type: SoftwareFile
+  name: bigscience_bloom-1b7.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:dcda0ab8-22ba-4357-baac-c53df3ff573c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloom-1b7.json
+    type: ExternalReference
+  languages: []
+- uid: 7c79cea4-fa78-46d1-8c3d-0fb0a4b0b877
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0380069f-6262-4c39-98a7-4d3208c6ebe0
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:54.573344+00:00'
+    bom-ref: bigscience/bloom-1b7-ef301568-4a84-5352-a6de-47c5bfdeb1da
+    name: bigscience/bloom-1b7
+    authors:
+    - name: bigscience
+    architectureFamily: bloom
+    modelArchitecture: BloomForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - jax
+    - safetensors
+    - bloom
+    - text-generation
+    - ak
+    - ar
+    - as
+    - bm
+    - bn
+    - ca
+    - code
+    - en
+    - es
+    - eu
+    - fon
+    - fr
+    - gu
+    - hi
+    - id
+    - ig
+    - ki
+    - kn
+    - lg
+    - ln
+    - ml
+    - mr
+    - ne
+    - nso
+    - ny
+    - or
+    - pa
+    - pt
+    - rn
+    - rw
+    - sn
+    - st
+    - sw
+    - ta
+    - te
+    - tn
+    - ts
+    - tum
+    - tw
+    - ur
+    - vi
+    - wo
+    - xh
+    - yo
+    - zh
+    - zhs
+    - zht
+    - zu
+    - arxiv:1909.08053
+    - arxiv:2110.02861
+    - arxiv:2108.12409
+    - license:bigscience-bloom-rail-1.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: bigscience-bloom-rail-1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/bigscience/bloom-1b7
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+
+      *This section addresses questions around how the model is intended to be used, discusses the foreseeable users of the model (including those affected by the model), and describes uses that are considered out of scope or misuse of the model.
+
+      It provides information for anyone considering using the model or who is affected by the model.*
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 3672f103-f233-4e19-8ab9-e4bf78626aa0
+  type: Relationship
+  properties: {}
+  from_: 013d24e2-0b1c-43d5-b680-be76c0421175
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloom-1b7.json
+  relationship_type: annotatedBy
+- uid: cbaf99d4-fc00-46df-ba16-9b4fb8ff8b63
+  type: Relationship
+  properties: {}
+  from_: 0380069f-6262-4c39-98a7-4d3208c6ebe0
+  to_:
+  - 7c79cea4-fa78-46d1-8c3d-0fb0a4b0b877
+  relationship_type: uses
+- uid: aab8d8ba-1f53-4953-9107-cf18535944b4
+  type: Relationship
+  properties: {}
+  from_: 013d24e2-0b1c-43d5-b680-be76c0421175
+  to_:
+  - 0380069f-6262-4c39-98a7-4d3208c6ebe0
+  relationship_type: produces

@@ -1,0 +1,79 @@
+uid: 62aa575a-5687-4968-9cce-42d774b7e958
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_codegeex2-6b.json
+  type: SoftwareFile
+  name: THUDM_codegeex2-6b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:df1ba669-785d-4f90-8218-671926fb779f
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_codegeex2-6b.json
+    type: ExternalReference
+  languages: []
+- uid: ffb3bfac-deaf-49ee-a07e-3625b2be4753
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8bafac5c-890d-4baf-bf78-cfe083fe9f7c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:31.178217+00:00'
+    bom-ref: THUDM/codegeex2-6b-c6d36fb6-4b21-54d5-9e9f-682501709383
+    name: THUDM/codegeex2-6b
+    authors:
+    - name: THUDM
+    architectureFamily: chatglm
+    modelArchitecture: ChatGLMModel
+    tags:
+    - transformers
+    - pytorch
+    - chatglm
+    - codegeex
+    - glm
+    - thudm
+    - custom_code
+    - zh
+    - en
+    - arxiv:2303.17568
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/THUDM/codegeex2-6b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 98eb87fa-38ca-4bf3-a6fe-3b14a7d00a00
+  type: Relationship
+  properties: {}
+  from_: 62aa575a-5687-4968-9cce-42d774b7e958
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_codegeex2-6b.json
+  relationship_type: annotatedBy
+- uid: 68f2f38a-acbb-4491-98ad-00e426702506
+  type: Relationship
+  properties: {}
+  from_: 8bafac5c-890d-4baf-bf78-cfe083fe9f7c
+  to_:
+  - ffb3bfac-deaf-49ee-a07e-3625b2be4753
+  relationship_type: uses
+- uid: 174e8965-3d8a-4775-921e-5952ac40ebbc
+  type: Relationship
+  properties: {}
+  from_: 62aa575a-5687-4968-9cce-42d774b7e958
+  to_:
+  - 8bafac5c-890d-4baf-bf78-cfe083fe9f7c
+  relationship_type: produces

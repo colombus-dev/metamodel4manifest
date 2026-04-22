@@ -1,0 +1,98 @@
+uid: 1290af97-3855-4a24-953b-37ab461365d6
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Shakker-Labs_FLUX.1-dev-ControlNet-Union-Pro.json
+  type: SoftwareFile
+  name: Shakker-Labs_FLUX.1-dev-ControlNet-Union-Pro.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ea9d526f-76ba-4151-9e64-3c2010f668c6
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Shakker-Labs_FLUX.1-dev-ControlNet-Union-Pro.json
+    type: ExternalReference
+  languages: []
+- uid: 0f20a849-74cb-4926-95de-db432618cd2a
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c4a5cb3c-7e71-455d-9a44-6a3a3d27ed76
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: 6a96e1e0-82e6-45f1-a54e-23293fd1ae49
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:49.999581+00:00'
+    bom-ref: Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro-965cb9b8-45ce-5cd4-9557-388e0a62ab71
+    name: Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro
+    authors:
+    - name: Shakker-Labs
+    tags:
+    - diffusers
+    - safetensors
+    - Text-to-Image
+    - ControlNet
+    - Diffusers
+    - Flux.1-dev
+    - image-generation
+    - Stable Diffusion
+    - text-to-image
+    - en
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:finetune:black-forest-labs/FLUX.1-dev
+    - license:other
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+    url: https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: cbee5613-43d7-4a1e-a2d4-7dc26fec8cf3
+  type: Relationship
+  properties: {}
+  from_: 1290af97-3855-4a24-953b-37ab461365d6
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Shakker-Labs_FLUX.1-dev-ControlNet-Union-Pro.json
+  relationship_type: annotatedBy
+- uid: f324521f-3ebb-47be-b2f3-e172cd2488f6
+  type: Relationship
+  properties: {}
+  from_: 6a96e1e0-82e6-45f1-a54e-23293fd1ae49
+  to_:
+  - 0f20a849-74cb-4926-95de-db432618cd2a
+  relationship_type: uses
+- uid: 96ff5a80-f035-4ded-b548-cda0f00bdf6d
+  type: Relationship
+  properties: {}
+  from_: 6a96e1e0-82e6-45f1-a54e-23293fd1ae49
+  to_:
+  - c4a5cb3c-7e71-455d-9a44-6a3a3d27ed76
+  relationship_type: derivedFrom
+- uid: 2d6ef7d2-d92c-4857-b29a-f2b2cde69aee
+  type: Relationship
+  properties: {}
+  from_: 1290af97-3855-4a24-953b-37ab461365d6
+  to_:
+  - 6a96e1e0-82e6-45f1-a54e-23293fd1ae49
+  relationship_type: produces

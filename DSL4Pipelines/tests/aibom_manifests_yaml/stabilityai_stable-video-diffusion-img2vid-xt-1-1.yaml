@@ -1,0 +1,74 @@
+uid: 60496c66-1aaf-4814-b413-84b057997eb9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-video-diffusion-img2vid-xt-1-1.json
+  type: SoftwareFile
+  name: stabilityai_stable-video-diffusion-img2vid-xt-1-1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8eb72400-1f8c-467b-a730-4c0512eb727b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-video-diffusion-img2vid-xt-1-1.json
+    type: ExternalReference
+  languages: []
+- uid: dc6f0104-29de-48fe-b6fe-24bb46dfe9d8
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b6e1c9d7-e307-479a-99c0-f40c465d61f2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:27.447486+00:00'
+    bom-ref: stabilityai/stable-video-diffusion-img2vid-xt-1-1-4e29a09d-0dc8-5665-b3d1-a7054b61fd33
+    name: stabilityai/stable-video-diffusion-img2vid-xt-1-1
+    authors:
+    - name: stabilityai
+    tags:
+    - diffusers
+    - safetensors
+    - image-to-video
+    - license:other
+    - diffusers:StableVideoDiffusionPipeline
+    - region:us
+  license:
+    name: stable-video-diffusion-1-1-community
+    url: LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-video
+relations:
+- uid: ac0fbe02-1eea-4206-81a5-edaf83b7c415
+  type: Relationship
+  properties: {}
+  from_: 60496c66-1aaf-4814-b413-84b057997eb9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-video-diffusion-img2vid-xt-1-1.json
+  relationship_type: annotatedBy
+- uid: f2b2c5fc-cf31-400b-975c-70d7d99f6605
+  type: Relationship
+  properties: {}
+  from_: b6e1c9d7-e307-479a-99c0-f40c465d61f2
+  to_:
+  - dc6f0104-29de-48fe-b6fe-24bb46dfe9d8
+  relationship_type: uses
+- uid: afdce6e1-d23f-482d-a5d3-4a265cf3b9f5
+  type: Relationship
+  properties: {}
+  from_: 60496c66-1aaf-4814-b413-84b057997eb9
+  to_:
+  - b6e1c9d7-e307-479a-99c0-f40c465d61f2
+  relationship_type: produces

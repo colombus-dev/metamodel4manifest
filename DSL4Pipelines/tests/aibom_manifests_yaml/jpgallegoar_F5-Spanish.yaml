@@ -1,0 +1,95 @@
+uid: ac3b0ed2-3d10-4b76-8b4e-520d11548a4f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jpgallegoar_F5-Spanish.json
+  type: SoftwareFile
+  name: jpgallegoar_F5-Spanish.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:39575968-f91f-4ee0-92ba-6a0dbe9a7178
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jpgallegoar_F5-Spanish.json
+    type: ExternalReference
+  languages: []
+- uid: bed694c6-2c71-4d18-9a96-9d845e78c828
+  type: SoftwareFile
+  name: f5-tts
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 66192283-d729-46b4-9eba-e968cfd64cf0
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: SWivid/F5-TTS
+    type: ExternalReference
+  languages: []
+- uid: 1206b0cb-ae14-44d5-acec-f7f6045cb1d7
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:53.682743+00:00'
+    bom-ref: jpgallegoar/F5-Spanish-9f8e26fc-351d-5071-a80a-6b215ce08b91
+    name: jpgallegoar/F5-Spanish
+    authors:
+    - name: jpgallegoar
+    description: '## Overview
+
+      The F5-TTS model is finetuned specifically for Spanish language speech synthesis. This project aims to deliver high-quality, regionally diverse speech synthesis capabilities for Spanish speakers.
+
+      '
+    tags:
+    - f5-tts
+    - es
+    - base_model:SWivid/F5-TTS
+    - base_model:finetune:SWivid/F5-TTS
+    - license:cc-by-nc-4.0
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/jpgallegoar/F5-Spanish
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: fb4fee58-0a9f-4087-9345-d37b5c95d5a1
+  type: Relationship
+  properties: {}
+  from_: ac3b0ed2-3d10-4b76-8b4e-520d11548a4f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jpgallegoar_F5-Spanish.json
+  relationship_type: annotatedBy
+- uid: 6e118df0-de13-44a2-b8fd-633186ba04aa
+  type: Relationship
+  properties: {}
+  from_: 1206b0cb-ae14-44d5-acec-f7f6045cb1d7
+  to_:
+  - bed694c6-2c71-4d18-9a96-9d845e78c828
+  relationship_type: uses
+- uid: 201c804b-0dcd-48cb-94a2-08607fbc3ff3
+  type: Relationship
+  properties: {}
+  from_: 1206b0cb-ae14-44d5-acec-f7f6045cb1d7
+  to_:
+  - 66192283-d729-46b4-9eba-e968cfd64cf0
+  relationship_type: derivedFrom
+- uid: 0c08c4c6-d723-4b62-8d95-5d87f36a6afe
+  type: Relationship
+  properties: {}
+  from_: ac3b0ed2-3d10-4b76-8b4e-520d11548a4f
+  to_:
+  - 1206b0cb-ae14-44d5-acec-f7f6045cb1d7
+  relationship_type: produces

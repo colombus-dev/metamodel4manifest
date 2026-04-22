@@ -1,0 +1,79 @@
+uid: 92182992-5b8e-4657-b03a-558358d97caa
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/MahmoodLab_UNI.json
+  type: SoftwareFile
+  name: MahmoodLab_UNI.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:7bf2a2ff-f257-4976-bda7-a738ea3d6c18
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/MahmoodLab_UNI.json
+    type: ExternalReference
+  languages: []
+- uid: f4ca54a5-20fa-481f-9393-171d05a6c163
+  type: SoftwareFile
+  name: timm
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 3fa4ac8f-3b42-493e-843b-5c743c81c602
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:50.109851+00:00'
+    bom-ref: MahmoodLab/UNI-e389804a-cb6d-54fb-aa17-7b67314ba1e8
+    name: MahmoodLab/UNI
+    authors:
+    - name: MahmoodLab
+    tags:
+    - timm
+    - pytorch
+    - histology
+    - pathology
+    - vision
+    - self-supervised
+    - vit
+    - image-feature-extraction
+    - en
+    - license:cc-by-nc-nd-4.0
+    - region:us
+  license:
+    id: CC-BY-NC-ND-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-ND-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/MahmoodLab/UNI
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-feature-extraction
+relations:
+- uid: f8904443-0ff5-45eb-9b9e-1dddb8faa4f7
+  type: Relationship
+  properties: {}
+  from_: 92182992-5b8e-4657-b03a-558358d97caa
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/MahmoodLab_UNI.json
+  relationship_type: annotatedBy
+- uid: c5dd1dd0-c941-4772-b350-a2021c9c7d4d
+  type: Relationship
+  properties: {}
+  from_: 3fa4ac8f-3b42-493e-843b-5c743c81c602
+  to_:
+  - f4ca54a5-20fa-481f-9393-171d05a6c163
+  relationship_type: uses
+- uid: bafb9389-6dbc-4b0d-be9f-ebbc4a1646fc
+  type: Relationship
+  properties: {}
+  from_: 92182992-5b8e-4657-b03a-558358d97caa
+  to_:
+  - 3fa4ac8f-3b42-493e-843b-5c743c81c602
+  relationship_type: produces

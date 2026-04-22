@@ -1,0 +1,86 @@
+uid: 5f3c5a34-3b93-4e39-98cb-b5675665e46b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Almawave_Velvet-14B.json
+  type: SoftwareFile
+  name: Almawave_Velvet-14B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:85ca16ae-829f-4a95-aac2-74f98cfa1cf5
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Almawave_Velvet-14B.json
+    type: ExternalReference
+  languages: []
+- uid: 76c7ada2-6e12-44f8-893d-8cf4f928722c
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4c5438e6-360c-4473-8b65-fc09e1a0c300
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:00.723258+00:00'
+    bom-ref: Almawave/Velvet-14B-b672c5c3-cd3d-585a-8eb7-efbadd7e1e44
+    name: Almawave/Velvet-14B
+    authors:
+    - name: Almawave
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - mistral
+    - text-generation
+    - vllm
+    - conversational
+    - en
+    - fr
+    - de
+    - es
+    - it
+    - pt
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Almawave/Velvet-14B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 06977f64-152a-496e-af6e-ad9abdb7891e
+  type: Relationship
+  properties: {}
+  from_: 5f3c5a34-3b93-4e39-98cb-b5675665e46b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Almawave_Velvet-14B.json
+  relationship_type: annotatedBy
+- uid: 6d011add-3c8f-4dd6-a9d4-441f1af76746
+  type: Relationship
+  properties: {}
+  from_: 4c5438e6-360c-4473-8b65-fc09e1a0c300
+  to_:
+  - 76c7ada2-6e12-44f8-893d-8cf4f928722c
+  relationship_type: uses
+- uid: 041f2c78-4da5-4e6d-a956-478e47005e48
+  type: Relationship
+  properties: {}
+  from_: 5f3c5a34-3b93-4e39-98cb-b5675665e46b
+  to_:
+  - 4c5438e6-360c-4473-8b65-fc09e1a0c300
+  relationship_type: produces

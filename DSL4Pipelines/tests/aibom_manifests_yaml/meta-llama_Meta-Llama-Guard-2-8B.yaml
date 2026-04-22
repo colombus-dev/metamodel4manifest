@@ -1,0 +1,86 @@
+uid: ab2ae5d0-bbd2-4c0e-a8e7-111439148071
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/meta-llama_Meta-Llama-Guard-2-8B.json
+  type: SoftwareFile
+  name: meta-llama_Meta-Llama-Guard-2-8B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ec9b167b-32fc-4884-b752-7758e8f87b0b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/meta-llama_Meta-Llama-Guard-2-8B.json
+    type: ExternalReference
+  languages: []
+- uid: 90d1f1c7-232e-47fb-9afb-aa6eda35fe4b
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6dcc8170-be1b-4109-a837-712f1256a1f8
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:17.143255+00:00'
+    bom-ref: meta-llama/Meta-Llama-Guard-2-8B-199a7074-664f-5d6d-b0b3-2e9d5b074e5b
+    name: meta-llama/Meta-Llama-Guard-2-8B
+    authors:
+    - name: meta-llama
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - facebook
+    - meta
+    - pytorch
+    - llama-3
+    - conversational
+    - en
+    - arxiv:2312.06674
+    - arxiv:2403.13031
+    - license:llama3
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/meta-llama/Meta-Llama-Guard-2-8B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 23a28ec1-617e-4400-b52d-c3440038946b
+  type: Relationship
+  properties: {}
+  from_: ab2ae5d0-bbd2-4c0e-a8e7-111439148071
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/meta-llama_Meta-Llama-Guard-2-8B.json
+  relationship_type: annotatedBy
+- uid: af9e00ef-d23a-4c24-9d1e-83ae4b46f3fc
+  type: Relationship
+  properties: {}
+  from_: 6dcc8170-be1b-4109-a837-712f1256a1f8
+  to_:
+  - 90d1f1c7-232e-47fb-9afb-aa6eda35fe4b
+  relationship_type: uses
+- uid: 251b5211-b5cf-4f40-81bd-b534ce717032
+  type: Relationship
+  properties: {}
+  from_: ab2ae5d0-bbd2-4c0e-a8e7-111439148071
+  to_:
+  - 6dcc8170-be1b-4109-a837-712f1256a1f8
+  relationship_type: produces

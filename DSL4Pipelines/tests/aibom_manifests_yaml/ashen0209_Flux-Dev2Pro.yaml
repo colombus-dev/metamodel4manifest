@@ -1,0 +1,69 @@
+uid: 58bcd0b4-0eed-49a1-88a9-6b75a2ed7411
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ashen0209_Flux-Dev2Pro.json
+  type: SoftwareFile
+  name: ashen0209_Flux-Dev2Pro.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e46b4040-cb71-41a8-9dd6-690c09ac5353
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ashen0209_Flux-Dev2Pro.json
+    type: ExternalReference
+  languages: []
+- uid: d8e458a0-2d4f-410e-861a-bd6a6db9e4c5
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 92b15cf9-81f0-4ee2-84fb-8959de2f2890
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:57.174051+00:00'
+    bom-ref: ashen0209/Flux-Dev2Pro-d442011f-60fb-5fb6-8d4f-348283370a63
+    name: ashen0209/Flux-Dev2Pro
+    authors:
+    - name: ashen0209
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ashen0209/Flux-Dev2Pro
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 5b21ec0b-cdd9-4054-8bcd-428d0aba6ab7
+  type: Relationship
+  properties: {}
+  from_: 58bcd0b4-0eed-49a1-88a9-6b75a2ed7411
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ashen0209_Flux-Dev2Pro.json
+  relationship_type: annotatedBy
+- uid: a142fae4-31fe-4f9b-b7ca-119fc8cd8a51
+  type: Relationship
+  properties: {}
+  from_: 92b15cf9-81f0-4ee2-84fb-8959de2f2890
+  to_:
+  - d8e458a0-2d4f-410e-861a-bd6a6db9e4c5
+  relationship_type: uses
+- uid: b77b3618-f440-4d99-9a9f-0c562cbcf462
+  type: Relationship
+  properties: {}
+  from_: 58bcd0b4-0eed-49a1-88a9-6b75a2ed7411
+  to_:
+  - 92b15cf9-81f0-4ee2-84fb-8959de2f2890
+  relationship_type: produces

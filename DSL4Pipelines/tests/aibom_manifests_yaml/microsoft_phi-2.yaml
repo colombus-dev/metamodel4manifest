@@ -1,0 +1,101 @@
+uid: df028934-a08f-4e1f-a5d0-4e74d416855e
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_phi-2.json
+  type: SoftwareFile
+  name: microsoft_phi-2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0f310cd3-bfb1-4aad-a139-c215f167269b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_phi-2.json
+    type: ExternalReference
+  languages: []
+- uid: b2e16a2c-5087-4304-8467-4d5a457be6c8
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0c4587f5-c2d8-4226-8d5a-0ebaa11ab987
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:54.690935+00:00'
+    bom-ref: microsoft/phi-2-9bee2601-5d2c-5801-aeef-fe735efa3d12
+    name: microsoft/phi-2
+    authors:
+    - name: microsoft
+    architectureFamily: phi
+    modelArchitecture: PhiForCausalLM
+    description: '## Model Summary
+
+
+      Phi-2 is a Transformer with **2.7 billion** parameters. It was trained using the same data sources as [Phi-1.5](https://huggingface.co/microsoft/phi-1.5), augmented with a new data source that consists of various NLP synthetic texts and filtered websites (for safety and educational value). When assessed against benchmarks testing common sense, language understanding, and logical reasoning, Phi-2 showcased a nearly state-of-the-art performance among models with less than 13 billion parameters.
+
+
+      Our model hasn''t been fine-tuned through reinforcement learning from human feedback. The intention behind crafting this open-source model is to provide the research community with a non-restricted small model to explore vital safety challenges, such as reducing toxicity, understanding societal biases, enhancing controllability, and more.
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - phi
+    - text-generation
+    - nlp
+    - code
+    - en
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/phi-2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Uses
+
+
+      Given the nature of the training data, the Phi-2 model is best suited for prompts using the QA format, the chat format, and the code format.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 8e96ca76-533d-47be-be57-3693aaef2cf8
+  type: Relationship
+  properties: {}
+  from_: df028934-a08f-4e1f-a5d0-4e74d416855e
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_phi-2.json
+  relationship_type: annotatedBy
+- uid: 711f13f7-07c5-4334-8939-b366dd6be18c
+  type: Relationship
+  properties: {}
+  from_: 0c4587f5-c2d8-4226-8d5a-0ebaa11ab987
+  to_:
+  - b2e16a2c-5087-4304-8467-4d5a457be6c8
+  relationship_type: uses
+- uid: e5c8d741-c754-444b-8cec-8695180f948f
+  type: Relationship
+  properties: {}
+  from_: df028934-a08f-4e1f-a5d0-4e74d416855e
+  to_:
+  - 0c4587f5-c2d8-4226-8d5a-0ebaa11ab987
+  relationship_type: produces

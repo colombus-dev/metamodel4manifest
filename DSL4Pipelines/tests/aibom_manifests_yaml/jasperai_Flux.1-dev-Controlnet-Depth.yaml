@@ -1,0 +1,92 @@
+uid: 39dba0e3-3c1d-4001-89d9-cd7e2c733908
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jasperai_Flux.1-dev-Controlnet-Depth.json
+  type: SoftwareFile
+  name: jasperai_Flux.1-dev-Controlnet-Depth.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:593ab3cf-5377-42f8-8e05-2345b9194341
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jasperai_Flux.1-dev-Controlnet-Depth.json
+    type: ExternalReference
+  languages: []
+- uid: a5acb760-244a-44ab-a53f-fb0970365d14
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8c48001c-a17d-469d-afd1-6ca692fa67da
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: 49dc3abc-072e-41b1-b12c-cdcd630803af
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:52.259111+00:00'
+    bom-ref: jasperai/Flux.1-dev-Controlnet-Depth-31af6411-439a-5c66-b86f-08ed6b8d885f
+    name: jasperai/Flux.1-dev-Controlnet-Depth
+    authors:
+    - name: jasperai
+    tags:
+    - diffusers
+    - safetensors
+    - ControlNet
+    - image-to-image
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:finetune:black-forest-labs/FLUX.1-dev
+    - license:other
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+    url: https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Depth
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-image
+relations:
+- uid: 0c8d48a7-8d1d-4540-b97a-8480e5f6d3a8
+  type: Relationship
+  properties: {}
+  from_: 39dba0e3-3c1d-4001-89d9-cd7e2c733908
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jasperai_Flux.1-dev-Controlnet-Depth.json
+  relationship_type: annotatedBy
+- uid: dc387754-4c50-4c3b-a3bd-8c3292a2f43c
+  type: Relationship
+  properties: {}
+  from_: 49dc3abc-072e-41b1-b12c-cdcd630803af
+  to_:
+  - a5acb760-244a-44ab-a53f-fb0970365d14
+  relationship_type: uses
+- uid: 2feb029e-8307-47dd-8e3d-7d09ac5df465
+  type: Relationship
+  properties: {}
+  from_: 49dc3abc-072e-41b1-b12c-cdcd630803af
+  to_:
+  - 8c48001c-a17d-469d-afd1-6ca692fa67da
+  relationship_type: derivedFrom
+- uid: 7aecdfa6-9ff0-495a-bf9c-65aab73931fa
+  type: Relationship
+  properties: {}
+  from_: 39dba0e3-3c1d-4001-89d9-cd7e2c733908
+  to_:
+  - 49dc3abc-072e-41b1-b12c-cdcd630803af
+  relationship_type: produces

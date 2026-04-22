@@ -1,0 +1,155 @@
+uid: 69691bf6-b5c9-4e1f-9feb-77062b9618d9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/philschmid_bart-large-cnn-samsum.json
+  type: SoftwareFile
+  name: philschmid_bart-large-cnn-samsum.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fa4bd8f5-81cf-42e4-a187-4c4dae00f5af
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/philschmid_bart-large-cnn-samsum.json
+    type: ExternalReference
+  languages: []
+- uid: 64d478cf-6c6d-4b2e-8087-bf4e1ddc0b7e
+  type: Data
+  properties:
+    bom-ref: samsum-69c85562-fa55-5e58-a162-4637867bf8e7
+    name: samsum
+    content_url: https://huggingface.co/datasets/samsum
+    task_categories: summarization
+    task_ids: ''
+    size_categories: 10K<n<100K
+    annotations_creators: expert-generated
+    language_creators: expert-generated
+    pretty_name: SAMSum Corpus
+    source_datasets: original
+    paperswithcode_id: samsum-corpus
+    license: cc-by-nc-nd-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: samsum-69c85562-fa55-5e58-a162-4637867bf8e7
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 50afa075-888f-4c23-9da5-d2d448f08c4f
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 155c313f-928b-45c4-82c9-16eab08bb98d
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:08.479646+00:00'
+    bom-ref: philschmid/bart-large-cnn-samsum-b8f0ea10-7504-55a1-9b71-5adb0179d680
+    name: philschmid/bart-large-cnn-samsum
+    authors:
+    - name: philschmid
+    architectureFamily: bart
+    modelArchitecture: BartForConditionalGeneration
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: samsum'
+        type: rogue-1
+        value: 42.621
+      - slice: 'dataset: samsum'
+        type: rogue-2
+        value: 21.9825
+      - slice: 'dataset: samsum'
+        type: rogue-l
+        value: 33.034
+      - slice: 'dataset: samsum'
+        type: rogue-1
+        value: 41.3174
+      - slice: 'dataset: samsum'
+        type: rogue-2
+        value: 20.8716
+      - slice: 'dataset: samsum'
+        type: rogue-l
+        value: 32.1337
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 41.3282
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 20.8755
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 32.1353
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 38.401
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: loss
+        value: 1.4297215938568115
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: gen_len
+        value: 60.0757
+    tags:
+    - transformers
+    - pytorch
+    - bart
+    - text2text-generation
+    - sagemaker
+    - summarization
+    - en
+    - dataset:samsum
+    - license:mit
+    - model-index
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/philschmid/bart-large-cnn-samsum
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: summarization
+relations:
+- uid: 28c39574-6225-415c-a0ad-135a326c1525
+  type: Relationship
+  properties: {}
+  from_: 69691bf6-b5c9-4e1f-9feb-77062b9618d9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/philschmid_bart-large-cnn-samsum.json
+  relationship_type: annotatedBy
+- uid: d3a6442f-8457-4ae9-b263-0d1987fec628
+  type: Relationship
+  properties: {}
+  from_: 155c313f-928b-45c4-82c9-16eab08bb98d
+  to_:
+  - 64d478cf-6c6d-4b2e-8087-bf4e1ddc0b7e
+  relationship_type: uses
+- uid: 7af55a24-f591-4fc9-a797-ce751c9a01dd
+  type: Relationship
+  properties: {}
+  from_: 155c313f-928b-45c4-82c9-16eab08bb98d
+  to_:
+  - 50afa075-888f-4c23-9da5-d2d448f08c4f
+  relationship_type: uses
+- uid: af9166f2-a0cf-426a-b666-5d3477f846ae
+  type: Relationship
+  properties: {}
+  from_: 69691bf6-b5c9-4e1f-9feb-77062b9618d9
+  to_:
+  - 155c313f-928b-45c4-82c9-16eab08bb98d
+  relationship_type: produces

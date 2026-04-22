@@ -1,0 +1,74 @@
+uid: c9cbee75-3e4e-4a2c-826a-5b2c4ff32947
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/myshell-ai_MeloTTS-English.json
+  type: SoftwareFile
+  name: myshell-ai_MeloTTS-English.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:14263826-c419-4762-9d07-aed44af9884e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/myshell-ai_MeloTTS-English.json
+    type: ExternalReference
+  languages: []
+- uid: e6818b1a-6dd7-4992-a1a0-e2f2820f12a5
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 1542634f-286c-4fce-855f-04fe823e6738
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:26.270815+00:00'
+    bom-ref: myshell-ai/MeloTTS-English-7561818f-5de6-5f3d-841b-dc5092f2e6d7
+    name: myshell-ai/MeloTTS-English
+    authors:
+    - name: myshell-ai
+    tags:
+    - transformers
+    - text-to-speech
+    - ko
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/myshell-ai/MeloTTS-English
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-speech
+relations:
+- uid: f3d6287b-0c75-441e-a65a-e4fbc080be46
+  type: Relationship
+  properties: {}
+  from_: c9cbee75-3e4e-4a2c-826a-5b2c4ff32947
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/myshell-ai_MeloTTS-English.json
+  relationship_type: annotatedBy
+- uid: 856192ee-68df-4b83-8684-37e94db9619c
+  type: Relationship
+  properties: {}
+  from_: 1542634f-286c-4fce-855f-04fe823e6738
+  to_:
+  - e6818b1a-6dd7-4992-a1a0-e2f2820f12a5
+  relationship_type: uses
+- uid: 14586ff2-228e-4148-bef0-c2a8276c4865
+  type: Relationship
+  properties: {}
+  from_: c9cbee75-3e4e-4a2c-826a-5b2c4ff32947
+  to_:
+  - 1542634f-286c-4fce-855f-04fe823e6738
+  relationship_type: produces

@@ -1,0 +1,147 @@
+uid: 46fa82a3-f9b4-41af-a1c0-2abb7bcd51c4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Nous-Hermes-2-Mixtral-8x7B-DPO.json
+  type: SoftwareFile
+  name: NousResearch_Nous-Hermes-2-Mixtral-8x7B-DPO.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:5ea8d4ff-d700-4fba-ac39-8ae7e8d626ca
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Nous-Hermes-2-Mixtral-8x7B-DPO.json
+    type: ExternalReference
+  languages: []
+- uid: d1517203-3cde-4a78-923c-37f613e2b69c
+  type: Data
+  properties:
+    bom-ref: teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c
+    name: teknium/OpenHermes-2.5
+    content_url: https://huggingface.co/datasets/teknium/OpenHermes-2.5
+    pretty_name: OpenHermes 2.5
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c
+    type: ExternalReference
+  languages:
+  - eng
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f57e0bde-e273-4045-bab9-6e6f2f1cded3
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 16f0cab4-92d3-4dfa-8923-23dbc5807305
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: mistralai/Mixtral-8x7B-v0.1
+    type: ExternalReference
+  languages: []
+- uid: cdfa5112-3f07-4422-bc4c-08ebc2b9665f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:15.518150+00:00'
+    bom-ref: NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO-e5a1697e-d0fa-560f-86e5-15a64ae3dfe2
+    name: NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO
+    authors:
+    - name: NousResearch
+    architectureFamily: mixtral
+    modelArchitecture: MixtralForCausalLM
+    description: '## Model description
+
+
+      Nous Hermes 2 Mixtral 8x7B DPO is the new flagship Nous Research model trained over the [Mixtral 8x7B MoE LLM](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1).
+
+
+      The model was trained on over 1,000,000 entries of primarily GPT-4 generated data, as well as other high quality data from open datasets across the AI landscape, achieving state of the art performance on a variety of tasks.
+
+
+      This is the SFT + DPO version of Mixtral Hermes 2, we have also released an SFT only version, for people to find which works best for them, which can be found here: https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - mixtral
+    - text-generation
+    - Mixtral
+    - instruct
+    - finetune
+    - chatml
+    - DPO
+    - RLHF
+    - gpt4
+    - synthetic data
+    - distillation
+    - conversational
+    - en
+    - dataset:teknium/OpenHermes-2.5
+    - base_model:mistralai/Mixtral-8x7B-v0.1
+    - base_model:finetune:mistralai/Mixtral-8x7B-v0.1
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 356e6c6a-e98e-415b-8575-c776382d9754
+  type: Relationship
+  properties: {}
+  from_: 46fa82a3-f9b4-41af-a1c0-2abb7bcd51c4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Nous-Hermes-2-Mixtral-8x7B-DPO.json
+  relationship_type: annotatedBy
+- uid: 8be5efdb-31e0-45e4-8835-d718f0b1edf3
+  type: Relationship
+  properties: {}
+  from_: cdfa5112-3f07-4422-bc4c-08ebc2b9665f
+  to_:
+  - d1517203-3cde-4a78-923c-37f613e2b69c
+  relationship_type: uses
+- uid: 47c84c90-fc64-4d6c-af4a-adf16ba57e34
+  type: Relationship
+  properties: {}
+  from_: cdfa5112-3f07-4422-bc4c-08ebc2b9665f
+  to_:
+  - f57e0bde-e273-4045-bab9-6e6f2f1cded3
+  relationship_type: uses
+- uid: 7c251e68-793d-431e-a16f-cf3d68b52dfa
+  type: Relationship
+  properties: {}
+  from_: cdfa5112-3f07-4422-bc4c-08ebc2b9665f
+  to_:
+  - 16f0cab4-92d3-4dfa-8923-23dbc5807305
+  relationship_type: derivedFrom
+- uid: 91db1807-3cd8-4ec2-8882-9496232e366b
+  type: Relationship
+  properties: {}
+  from_: 46fa82a3-f9b4-41af-a1c0-2abb7bcd51c4
+  to_:
+  - cdfa5112-3f07-4422-bc4c-08ebc2b9665f
+  relationship_type: produces

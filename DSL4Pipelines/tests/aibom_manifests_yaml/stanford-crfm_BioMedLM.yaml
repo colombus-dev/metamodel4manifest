@@ -1,0 +1,129 @@
+uid: 50271793-26fb-4c49-92e1-1b344643cbb9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stanford-crfm_BioMedLM.json
+  type: SoftwareFile
+  name: stanford-crfm_BioMedLM.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:72cdecee-f8ac-4a77-b006-f4595e584f31
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stanford-crfm_BioMedLM.json
+    type: ExternalReference
+  languages: []
+- uid: 9e0c3408-cb69-4625-9233-6f22eed93f34
+  type: Data
+  properties:
+    bom-ref: pubmed-59ba6daf-eef7-5c8f-add5-93f728e7db0f
+    name: pubmed
+    content_url: https://huggingface.co/datasets/pubmed
+    task_categories: text-generation, fill-mask, text-classification
+    task_ids: language-modeling, masked-language-modeling, text-scoring, topic-classification
+    size_categories: 10M<n<100M
+    annotations_creators: crowdsourced
+    language_creators: crowdsourced
+    pretty_name: PubMed
+    source_datasets: original
+    paperswithcode_id: pubmed
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: pubmed-59ba6daf-eef7-5c8f-add5-93f728e7db0f
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 7e5abf6b-1dd0-4cde-8ed9-f9866ae95010
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 52880478-1022-417c-9031-46d3689276c2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:23.917184+00:00'
+    bom-ref: stanford-crfm/BioMedLM-a4d237fc-ac63-5552-b98b-1b8982ffa241
+    name: stanford-crfm/BioMedLM
+    authors:
+    - name: stanford-crfm
+    architectureFamily: gpt2
+    modelArchitecture: GPT2LMHeadModel
+    description: '# Model Details
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - gpt2
+    - text-generation
+    - dataset:pubmed
+    - arxiv:2403.18421
+    - license:bigscience-bloom-rail-1.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: bigscience-bloom-rail-1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stanford-crfm/BioMedLM
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '# Uses
+
+
+      This model is licensed under the terms of [BigScience Open RAIL-M license](https://huggingface.co/spaces/bigscience/license) used for [BLOOM](https://huggingface.co/bigscience/bloom-1b1). Please note that, among other restrictions, this license forbids use of the model (or derivatives thereof)
+
+      "To provide medical advice and medical results interpretation." If you are concerned that your use case would follow under the "letter" of this restriction, but not the "spirit," you can contact us to discuss.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 3e763d2c-9c8a-4150-af33-8691a2afffa6
+  type: Relationship
+  properties: {}
+  from_: 50271793-26fb-4c49-92e1-1b344643cbb9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stanford-crfm_BioMedLM.json
+  relationship_type: annotatedBy
+- uid: de9441a8-67a1-4738-94a9-94ca8bb0375a
+  type: Relationship
+  properties: {}
+  from_: 52880478-1022-417c-9031-46d3689276c2
+  to_:
+  - 9e0c3408-cb69-4625-9233-6f22eed93f34
+  relationship_type: uses
+- uid: 886295a9-08a8-4a4e-8c5e-a1857830a870
+  type: Relationship
+  properties: {}
+  from_: 52880478-1022-417c-9031-46d3689276c2
+  to_:
+  - 7e5abf6b-1dd0-4cde-8ed9-f9866ae95010
+  relationship_type: uses
+- uid: 842b2097-4f91-4dbe-9552-702629525054
+  type: Relationship
+  properties: {}
+  from_: 50271793-26fb-4c49-92e1-1b344643cbb9
+  to_:
+  - 52880478-1022-417c-9031-46d3689276c2
+  relationship_type: produces

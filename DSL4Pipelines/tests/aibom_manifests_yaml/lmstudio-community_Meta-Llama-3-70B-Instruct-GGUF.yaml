@@ -1,0 +1,80 @@
+uid: 15f57ad6-328a-44a4-994e-0f14b1b1fcfc
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/lmstudio-community_Meta-Llama-3-70B-Instruct-GGUF.json
+  type: SoftwareFile
+  name: lmstudio-community_Meta-Llama-3-70B-Instruct-GGUF.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0aa098be-8864-4374-bcb6-8818c7232a03
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/lmstudio-community_Meta-Llama-3-70B-Instruct-GGUF.json
+    type: ExternalReference
+  languages: []
+- uid: 75bd5f07-c9f8-411c-90b2-19fbd03a91ae
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3-70B-Instruct
+    type: ExternalReference
+  languages: []
+- uid: 86a492ab-65de-46f7-9c62-2c1e8ec73046
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:23.150161+00:00'
+    bom-ref: lmstudio-community/Meta-Llama-3-70B-Instruct-GGUF-0a64e273-26d9-5ea3-9dee-caf2e65ab2e4
+    name: lmstudio-community/Meta-Llama-3-70B-Instruct-GGUF
+    authors:
+    - name: lmstudio-community
+    tags:
+    - gguf
+    - facebook
+    - meta
+    - pytorch
+    - llama
+    - llama-3
+    - text-generation
+    - en
+    - base_model:meta-llama/Meta-Llama-3-70B-Instruct
+    - base_model:quantized:meta-llama/Meta-Llama-3-70B-Instruct
+    - endpoints_compatible
+    - region:us
+    - conversational
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/lmstudio-community/Meta-Llama-3-70B-Instruct-GGUF
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 0df000a3-4290-4b02-a9d1-61f8964642a1
+  type: Relationship
+  properties: {}
+  from_: 15f57ad6-328a-44a4-994e-0f14b1b1fcfc
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/lmstudio-community_Meta-Llama-3-70B-Instruct-GGUF.json
+  relationship_type: annotatedBy
+- uid: bfcbc8ab-f11c-4b51-8706-3250f0f989f7
+  type: Relationship
+  properties: {}
+  from_: 86a492ab-65de-46f7-9c62-2c1e8ec73046
+  to_:
+  - 75bd5f07-c9f8-411c-90b2-19fbd03a91ae
+  relationship_type: derivedFrom
+- uid: 41fc9077-81dc-4680-a5a7-481e021db700
+  type: Relationship
+  properties: {}
+  from_: 15f57ad6-328a-44a4-994e-0f14b1b1fcfc
+  to_:
+  - 86a492ab-65de-46f7-9c62-2c1e8ec73046
+  relationship_type: produces

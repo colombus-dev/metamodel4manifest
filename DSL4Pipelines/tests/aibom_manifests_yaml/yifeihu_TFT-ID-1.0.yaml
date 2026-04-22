@@ -1,0 +1,134 @@
+uid: a66a082e-e577-475c-9e16-f15958ceb0d8
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/yifeihu_TFT-ID-1.0.json
+  type: SoftwareFile
+  name: yifeihu_TFT-ID-1.0.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9db4606a-09a9-4360-b0fc-7cb59ae2a9ff
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/yifeihu_TFT-ID-1.0.json
+    type: ExternalReference
+  languages: []
+- uid: b069e121-2c68-470f-a3e0-28bcfd570cb2
+  type: Data
+  properties:
+    bom-ref: yifeihu/TFT-ID-1.0-coco-47dbb736-97f2-55ad-9e21-fa09b7e8ca7e
+    name: yifeihu/TFT-ID-1.0-coco
+    content_url: https://huggingface.co/datasets/yifeihu/TFT-ID-1.0-coco
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: yifeihu/TFT-ID-1.0-coco-47dbb736-97f2-55ad-9e21-fa09b7e8ca7e
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 685d066c-353e-440a-802f-e86b43525b00
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 50b4ec52-6086-4e08-9dd0-16a4b9741877
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:08.850940+00:00'
+    bom-ref: yifeihu/TFT-ID-1.0-6337023f-302f-514b-8946-ab98eb3d633d
+    name: yifeihu/TFT-ID-1.0
+    authors:
+    - name: yifeihu
+    architectureFamily: florence2
+    modelArchitecture: Florence2ForConditionalGeneration
+    description: '## Model Summary
+
+
+      TFT-ID (Table/Figure/Text IDentifier) is an object detection model finetuned to extract tables, figures, and text sections in academic papers created by [Yifei Hu](https://x.com/hu_yifei).
+
+
+      ![image/png](https://huggingface.co/yifeihu/TFT-ID-1.0/resolve/main/TFT-ID.png)
+
+
+      TFT-ID is finetuned from [microsoft/Florence-2](https://huggingface.co/microsoft/Florence-2-large) checkpoints.
+
+
+      - The model was finetuned with papers from Hugging Face Daily Papers. All 36,000+ bounding boxes are manually annotated and checked by [Yifei Hu](https://x.com/hu_yifei).
+
+      - TFT-ID model takes an image of a single paper page as the input, and return bounding boxes for all tables, figures, and text sections in the given page.
+
+      - The text sections contain clean text content perfect for downstream OCR workflows. I recommend using **TB-OCR-preview-0.1** [[HF]](https://huggingface.co/yifeihu/TB-OCR-preview-0.1) as the OCR model to convert the text sections into clean markdown and math latex output.
+
+
+      Object Detection results format:
+
+      {''\<OD>'': {''bboxes'': [[x1, y1, x2, y2], ...],
+
+      ''labels'': [''label1'', ''label2'', ...]} }
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - florence2
+    - text-generation
+    - vision
+    - ocr
+    - segmentation
+    - image-text-to-text
+    - custom_code
+    - dataset:yifeihu/TFT-ID-1.0-coco
+    - license:mit
+    - autotrain_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/yifeihu/TFT-ID-1.0
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: c6fd967b-2819-48ce-8e2e-13e435b77bf1
+  type: Relationship
+  properties: {}
+  from_: a66a082e-e577-475c-9e16-f15958ceb0d8
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/yifeihu_TFT-ID-1.0.json
+  relationship_type: annotatedBy
+- uid: ada96523-cb45-4ce5-92f7-51ec6c639859
+  type: Relationship
+  properties: {}
+  from_: 50b4ec52-6086-4e08-9dd0-16a4b9741877
+  to_:
+  - b069e121-2c68-470f-a3e0-28bcfd570cb2
+  relationship_type: uses
+- uid: 37dabe8f-056a-4e5e-8242-f0cb4bbc1e75
+  type: Relationship
+  properties: {}
+  from_: 50b4ec52-6086-4e08-9dd0-16a4b9741877
+  to_:
+  - 685d066c-353e-440a-802f-e86b43525b00
+  relationship_type: uses
+- uid: d3e398c9-c27e-4183-b20a-b942c561d878
+  type: Relationship
+  properties: {}
+  from_: a66a082e-e577-475c-9e16-f15958ceb0d8
+  to_:
+  - 50b4ec52-6086-4e08-9dd0-16a4b9741877
+  relationship_type: produces

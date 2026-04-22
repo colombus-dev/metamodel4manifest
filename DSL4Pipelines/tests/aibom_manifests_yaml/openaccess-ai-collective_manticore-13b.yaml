@@ -1,0 +1,131 @@
+uid: eed0215a-0d23-4499-a1fa-bfd743ebf6d9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openaccess-ai-collective_manticore-13b.json
+  type: SoftwareFile
+  name: openaccess-ai-collective_manticore-13b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:1deb139f-d465-4577-95bb-269a2a352e76
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openaccess-ai-collective_manticore-13b.json
+    type: ExternalReference
+  languages: []
+- uid: b5fdf05f-08fa-48d2-a222-27ecc0582299
+  type: Data
+  properties:
+    bom-ref: anon8231489123/ShareGPT_Vicuna_unfiltered-50bbfdfa-b393-52c7-9fe1-11cdda9c7bfd
+    name: anon8231489123/ShareGPT_Vicuna_unfiltered
+    content_url: https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: anon8231489123/ShareGPT_Vicuna_unfiltered-50bbfdfa-b393-52c7-9fe1-11cdda9c7bfd
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 6df2d2d9-c396-4239-95e2-5d78d7494a2c
+  type: Data
+  properties:
+    bom-ref: ehartford/wizard_vicuna_70k_unfiltered-e4405ed6-d180-5d90-906a-c3b0f6cb3237
+    name: ehartford/wizard_vicuna_70k_unfiltered
+    content_url: https://huggingface.co/datasets/ehartford/wizard_vicuna_70k_unfiltered
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ehartford/wizard_vicuna_70k_unfiltered-e4405ed6-d180-5d90-906a-c3b0f6cb3237
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 38e75d70-7543-4a45-a2b5-48610bf961d6
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a17d8154-b959-404d-9808-a15647d9eb8f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:21.622748+00:00'
+    bom-ref: openaccess-ai-collective/manticore-13b-48da892f-f4e0-505a-9196-286fa4bdb27e
+    name: openaccess-ai-collective/manticore-13b
+    authors:
+    - name: openaccess-ai-collective
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - en
+    - dataset:anon8231489123/ShareGPT_Vicuna_unfiltered
+    - dataset:ehartford/wizard_vicuna_70k_unfiltered
+    - dataset:ehartford/WizardLM_alpaca_evol_instruct_70k_unfiltered
+    - dataset:QingyiSi/Alpaca-CoT
+    - dataset:teknium/GPT4-LLM-Cleaned
+    - dataset:teknium/GPTeacher-General-Instruct
+    - dataset:metaeval/ScienceQA_text_only
+    - dataset:hellaswag
+    - dataset:tasksource/mmlu
+    - dataset:openai/summarize_from_feedback
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openaccess-ai-collective/manticore-13b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 41e003f7-3bb6-4808-af1c-e8d1d86f7a11
+  type: Relationship
+  properties: {}
+  from_: eed0215a-0d23-4499-a1fa-bfd743ebf6d9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openaccess-ai-collective_manticore-13b.json
+  relationship_type: annotatedBy
+- uid: 24a9a95b-9beb-45fc-9464-17b7d9c1a8b7
+  type: Relationship
+  properties: {}
+  from_: a17d8154-b959-404d-9808-a15647d9eb8f
+  to_:
+  - b5fdf05f-08fa-48d2-a222-27ecc0582299
+  - 6df2d2d9-c396-4239-95e2-5d78d7494a2c
+  relationship_type: uses
+- uid: 259ec7b4-f748-4c0d-b1a0-4b4927ff93c5
+  type: Relationship
+  properties: {}
+  from_: a17d8154-b959-404d-9808-a15647d9eb8f
+  to_:
+  - 38e75d70-7543-4a45-a2b5-48610bf961d6
+  relationship_type: uses
+- uid: a88a45e5-68e9-41e2-afc2-a40461a154d1
+  type: Relationship
+  properties: {}
+  from_: eed0215a-0d23-4499-a1fa-bfd743ebf6d9
+  to_:
+  - a17d8154-b959-404d-9808-a15647d9eb8f
+  relationship_type: produces

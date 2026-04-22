@@ -1,0 +1,123 @@
+uid: 7bf3008e-c4e8-4542-934c-81e8cc21eded
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai-community_gpt2-xl.json
+  type: SoftwareFile
+  name: openai-community_gpt2-xl.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:4ed16e06-68f4-4452-abbd-7b5ba975bbf4
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai-community_gpt2-xl.json
+    type: ExternalReference
+  languages: []
+- uid: 11259671-0132-4613-b426-9b4aab4266d4
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ae9b76ae-2296-4902-96ba-74245fb39bff
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:32.485573+00:00'
+    bom-ref: openai-community/gpt2-xl-797abf7c-5321-5bf3-b8f8-23e57da5423a
+    name: openai-community/gpt2-xl
+    authors:
+    - name: openai-community
+    architectureFamily: gpt2
+    modelArchitecture: GPT2LMHeadModel
+    description: '## Model Details
+
+
+      **Model Description:** GPT-2 XL is the **1.5B parameter** version of GPT-2, a transformer-based language model created and released by OpenAI. The model is a pretrained model on English language using a causal language modeling (CLM) objective.
+
+
+      - **Developed by:** OpenAI, see [associated research paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) and [GitHub repo](https://github.com/openai/gpt-2) for model developers.
+
+      - **Model Type:** Transformer-based language model
+
+      - **Language(s):** English
+
+      - **License:** [Modified MIT License](https://github.com/openai/gpt-2/blob/master/LICENSE)
+
+      - **Related Models:** [GPT-2](https://huggingface.co/gpt2), [GPT-Medium](https://huggingface.co/gpt2-medium) and [GPT-Large](https://huggingface.co/gpt2-large)
+
+      - **Resources for more information:**
+
+      - [Research Paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
+
+      - [OpenAI Blog Post](https://openai.com/blog/better-language-models/)
+
+      - [GitHub Repo](https://github.com/openai/gpt-2)
+
+      - [OpenAI Model Card for GPT-2](https://github.com/openai/gpt-2/blob/master/model_card.md)
+
+      - [OpenAI GPT-2 1.5B Release Blog Post](https://openai.com/blog/gpt-2-1-5b-release/)
+
+      - Test the full generation capabilities here: https://transformer.huggingface.co/doc/gpt2-large
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - rust
+    - safetensors
+    - gpt2
+    - text-generation
+    - en
+    - arxiv:1910.09700
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openai-community/gpt2-xl
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 7fecdc2f-8a74-4ba5-8593-2b33ed1a0aab
+  type: Relationship
+  properties: {}
+  from_: 7bf3008e-c4e8-4542-934c-81e8cc21eded
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai-community_gpt2-xl.json
+  relationship_type: annotatedBy
+- uid: fe39fa3b-0640-4d17-a6a8-bc08f5abd756
+  type: Relationship
+  properties: {}
+  from_: ae9b76ae-2296-4902-96ba-74245fb39bff
+  to_:
+  - 11259671-0132-4613-b426-9b4aab4266d4
+  relationship_type: uses
+- uid: 4af97e20-d464-417e-89b0-14ade0a9c6f9
+  type: Relationship
+  properties: {}
+  from_: 7bf3008e-c4e8-4542-934c-81e8cc21eded
+  to_:
+  - ae9b76ae-2296-4902-96ba-74245fb39bff
+  relationship_type: produces

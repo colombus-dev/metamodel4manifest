@@ -1,0 +1,122 @@
+uid: 8db2a455-954d-4806-8a7a-c7ee25b82b71
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2.5-7B.json
+  type: SoftwareFile
+  name: Qwen_Qwen2.5-7B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0ae7bcfe-8eb3-4af6-927d-d4306adc2b4a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2.5-7B.json
+    type: ExternalReference
+  languages: []
+- uid: 34a1c2a2-1805-4c2d-b1d8-e4fe31e13b62
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4d4afb81-8b5a-4ddb-a0ea-129b6da5b456
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:46.575181+00:00'
+    bom-ref: Qwen/Qwen2.5-7B-9d37a52b-f98f-571c-95a2-52de50be085c
+    name: Qwen/Qwen2.5-7B
+    authors:
+    - name: Qwen
+    architectureFamily: qwen2
+    modelArchitecture: Qwen2ForCausalLM
+    description: '## Introduction
+
+
+      Qwen2.5 is the latest series of Qwen large language models. For Qwen2.5, we release a number of base language models and instruction-tuned language models ranging from 0.5 to 72 billion parameters. Qwen2.5 brings the following improvements upon Qwen2:
+
+
+      - Significantly **more knowledge** and has greatly improved capabilities in **coding** and **mathematics**, thanks to our specialized expert models in these domains.
+
+      - Significant improvements in **instruction following**, **generating long texts** (over 8K tokens), **understanding structured data** (e.g, tables), and **generating structured outputs** especially JSON. **More resilient to the diversity of system prompts**, enhancing role-play implementation and condition-setting for chatbots.
+
+      - **Long-context Support** up to 128K tokens and can generate up to 8K tokens.
+
+      - **Multilingual support** for over 29 languages, including Chinese, English, French, Spanish, Portuguese, German, Italian, Russian, Japanese, Korean, Vietnamese, Thai, Arabic, and more.
+
+
+      **This repo contains the base 7B Qwen2.5 model**, which has the following features:
+
+      - Type: Causal Language Models
+
+      - Training Stage: Pretraining
+
+      - Architecture: transformers with RoPE, SwiGLU, RMSNorm, and Attention QKV bias
+
+      - Number of Parameters: 7.61B
+
+      - Number of Paramaters (Non-Embedding): 6.53B
+
+      - Number of Layers: 28
+
+      - Number of Attention Heads (GQA): 28 for Q and 4 for KV
+
+      - Context Length: 131,072 tokens
+
+
+      **We do not recommend using base language models for conversations.** Instead, you can apply post-training, e.g., SFT, RLHF, continued pretraining, etc., on this model.
+
+
+      For more details, please refer to our [blog](https://qwenlm.github.io/blog/qwen2.5/), [GitHub](https://github.com/QwenLM/Qwen2.5), and [Documentation](https://qwen.readthedocs.io/en/latest/).
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - qwen2
+    - text-generation
+    - conversational
+    - en
+    - arxiv:2407.10671
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Qwen/Qwen2.5-7B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: f77eda9e-41ca-4346-83da-3568ad8752e3
+  type: Relationship
+  properties: {}
+  from_: 8db2a455-954d-4806-8a7a-c7ee25b82b71
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2.5-7B.json
+  relationship_type: annotatedBy
+- uid: 5bf316d4-03d0-4876-aece-c37031b683e1
+  type: Relationship
+  properties: {}
+  from_: 4d4afb81-8b5a-4ddb-a0ea-129b6da5b456
+  to_:
+  - 34a1c2a2-1805-4c2d-b1d8-e4fe31e13b62
+  relationship_type: uses
+- uid: 6c509a95-a0de-439a-9211-47f26eb2dcad
+  type: Relationship
+  properties: {}
+  from_: 8db2a455-954d-4806-8a7a-c7ee25b82b71
+  to_:
+  - 4d4afb81-8b5a-4ddb-a0ea-129b6da5b456
+  relationship_type: produces

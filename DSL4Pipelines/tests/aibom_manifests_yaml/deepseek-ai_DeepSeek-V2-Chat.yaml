@@ -1,0 +1,83 @@
+uid: a1c956e6-7f3b-469e-8434-d0db66f385d3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2-Chat.json
+  type: SoftwareFile
+  name: deepseek-ai_DeepSeek-V2-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:1607b9c3-10bd-47cd-bb16-79e2e0154b35
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: 1612d121-1d8d-4eeb-bec1-4af2dfee4ce1
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: af3afbbe-c9c8-43b9-a029-334442b6d713
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:48.683447+00:00'
+    bom-ref: deepseek-ai/DeepSeek-V2-Chat-c2c830ab-510b-5b2b-b8d9-a1931ad93e08
+    name: deepseek-ai/DeepSeek-V2-Chat
+    authors:
+    - name: deepseek-ai
+    architectureFamily: deepseek_v2
+    modelArchitecture: DeepseekV2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - deepseek_v2
+    - text-generation
+    - conversational
+    - custom_code
+    - arxiv:2405.04434
+    - arxiv:2311.18743
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: deepseek
+    url: https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: c5fcd7da-d8e0-418d-8848-0cdbdeaf5cc0
+  type: Relationship
+  properties: {}
+  from_: a1c956e6-7f3b-469e-8434-d0db66f385d3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2-Chat.json
+  relationship_type: annotatedBy
+- uid: 1adf8508-e80b-46f7-86ee-10243f4d0c15
+  type: Relationship
+  properties: {}
+  from_: af3afbbe-c9c8-43b9-a029-334442b6d713
+  to_:
+  - 1612d121-1d8d-4eeb-bec1-4af2dfee4ce1
+  relationship_type: uses
+- uid: 8bb121e3-1455-4916-a177-83897c891089
+  type: Relationship
+  properties: {}
+  from_: a1c956e6-7f3b-469e-8434-d0db66f385d3
+  to_:
+  - af3afbbe-c9c8-43b9-a029-334442b6d713
+  relationship_type: produces

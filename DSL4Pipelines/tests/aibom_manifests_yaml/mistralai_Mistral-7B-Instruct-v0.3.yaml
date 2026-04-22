@@ -1,0 +1,98 @@
+uid: acb2704c-0819-4c10-b28d-12e37aa98610
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistralai_Mistral-7B-Instruct-v0.3.json
+  type: SoftwareFile
+  name: mistralai_Mistral-7B-Instruct-v0.3.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9edc2a7b-86c5-468a-953a-71456be26e5e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistralai_Mistral-7B-Instruct-v0.3.json
+    type: ExternalReference
+  languages: []
+- uid: 00645145-2806-45b1-81d1-813ff4a1e42d
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2178428f-3407-47ea-b646-e7b158a3f8b8
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: mistralai/Mistral-7B-v0.3
+    type: ExternalReference
+  languages: []
+- uid: 48fed32f-986c-41d9-bd3e-7aed4c4a7595
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:04.382991+00:00'
+    bom-ref: mistralai/Mistral-7B-Instruct-v0.3-c80100a3-074e-5dc4-90bc-6c426b04a7bf
+    name: mistralai/Mistral-7B-Instruct-v0.3
+    authors:
+    - name: mistralai
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - mistral
+    - text-generation
+    - conversational
+    - base_model:mistralai/Mistral-7B-v0.3
+    - base_model:finetune:mistralai/Mistral-7B-v0.3
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: cf5c0b59-c572-469e-a062-dccc8d14dd96
+  type: Relationship
+  properties: {}
+  from_: acb2704c-0819-4c10-b28d-12e37aa98610
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistralai_Mistral-7B-Instruct-v0.3.json
+  relationship_type: annotatedBy
+- uid: 48ab4141-9b8c-4020-af86-9da409e4352a
+  type: Relationship
+  properties: {}
+  from_: 48fed32f-986c-41d9-bd3e-7aed4c4a7595
+  to_:
+  - 00645145-2806-45b1-81d1-813ff4a1e42d
+  relationship_type: uses
+- uid: 6f062dac-3e2f-452f-a8c5-268dcebc173c
+  type: Relationship
+  properties: {}
+  from_: 48fed32f-986c-41d9-bd3e-7aed4c4a7595
+  to_:
+  - 2178428f-3407-47ea-b646-e7b158a3f8b8
+  relationship_type: derivedFrom
+- uid: fd284eea-23c0-4fca-9a08-be4f9442ede2
+  type: Relationship
+  properties: {}
+  from_: acb2704c-0819-4c10-b28d-12e37aa98610
+  to_:
+  - 48fed32f-986c-41d9-bd3e-7aed4c4a7595
+  relationship_type: produces

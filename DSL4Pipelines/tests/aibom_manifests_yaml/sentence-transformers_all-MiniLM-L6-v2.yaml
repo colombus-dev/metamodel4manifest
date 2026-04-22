@@ -1,0 +1,152 @@
+uid: 1c4c222b-f4a3-4dde-b937-86df8f72ef7d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_all-MiniLM-L6-v2.json
+  type: SoftwareFile
+  name: sentence-transformers_all-MiniLM-L6-v2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0a7bcbb7-e75c-4157-a3a2-73302e018689
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_all-MiniLM-L6-v2.json
+    type: ExternalReference
+  languages: []
+- uid: e4e0bdff-d0bf-47aa-b97e-f7bdf19613a6
+  type: Data
+  properties:
+    bom-ref: s2orc-65a8fab1-76ce-5ee8-8f9f-ba89f6ce0d0a
+    name: s2orc
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: s2orc-65a8fab1-76ce-5ee8-8f9f-ba89f6ce0d0a
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 0c9cce7b-4dbd-4e24-bf8b-f835c65506f9
+  type: SoftwareFile
+  name: sentence-transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e4eb4e4c-c389-42c3-8eac-227b0cc6369e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:57.951037+00:00'
+    bom-ref: sentence-transformers/all-MiniLM-L6-v2-cb279e3b-49dd-5fdb-897e-ddee2b388c61
+    name: sentence-transformers/all-MiniLM-L6-v2
+    authors:
+    - name: sentence-transformers
+    architectureFamily: bert
+    modelArchitecture: BertModel
+    tags:
+    - sentence-transformers
+    - pytorch
+    - tf
+    - rust
+    - onnx
+    - safetensors
+    - openvino
+    - bert
+    - feature-extraction
+    - sentence-similarity
+    - transformers
+    - en
+    - dataset:s2orc
+    - dataset:flax-sentence-embeddings/stackexchange_xml
+    - dataset:ms_marco
+    - dataset:gooaq
+    - dataset:yahoo_answers_topics
+    - dataset:code_search_net
+    - dataset:search_qa
+    - dataset:eli5
+    - dataset:snli
+    - dataset:multi_nli
+    - dataset:wikihow
+    - dataset:natural_questions
+    - dataset:trivia_qa
+    - dataset:embedding-data/sentence-compression
+    - dataset:embedding-data/flickr30k-captions
+    - dataset:embedding-data/altlex
+    - dataset:embedding-data/simple-wiki
+    - dataset:embedding-data/QQP
+    - dataset:embedding-data/SPECTER
+    - dataset:embedding-data/PAQ_pairs
+    - dataset:embedding-data/WikiAnswers
+    - arxiv:1904.06472
+    - arxiv:2102.07033
+    - arxiv:2104.08727
+    - arxiv:1704.05179
+    - arxiv:1810.09305
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-embeddings-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: sentence-similarity
+  consideration:
+    use_cases: '## Intended uses
+
+
+      Our model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures
+
+      the semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.
+
+
+      By default, input text longer than 256 word pieces is truncated.
+
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 8921a8cc-d223-4941-88ae-343d55599db3
+  type: Relationship
+  properties: {}
+  from_: 1c4c222b-f4a3-4dde-b937-86df8f72ef7d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_all-MiniLM-L6-v2.json
+  relationship_type: annotatedBy
+- uid: 01d48bee-cf41-4552-a6cb-69231cf7691a
+  type: Relationship
+  properties: {}
+  from_: e4eb4e4c-c389-42c3-8eac-227b0cc6369e
+  to_:
+  - e4e0bdff-d0bf-47aa-b97e-f7bdf19613a6
+  relationship_type: uses
+- uid: 97bfc519-0835-4b97-8664-d7926a4ddf42
+  type: Relationship
+  properties: {}
+  from_: e4eb4e4c-c389-42c3-8eac-227b0cc6369e
+  to_:
+  - 0c9cce7b-4dbd-4e24-bf8b-f835c65506f9
+  relationship_type: uses
+- uid: 2618ebae-7ee1-4693-a4b2-329eae56d0ce
+  type: Relationship
+  properties: {}
+  from_: 1c4c222b-f4a3-4dde-b937-86df8f72ef7d
+  to_:
+  - e4eb4e4c-c389-42c3-8eac-227b0cc6369e
+  relationship_type: produces

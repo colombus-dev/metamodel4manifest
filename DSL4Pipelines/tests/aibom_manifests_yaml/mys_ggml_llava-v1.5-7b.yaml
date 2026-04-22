@@ -1,0 +1,58 @@
+uid: 34bbdf12-4a5c-4c01-b482-3d42be2d261e
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mys_ggml_llava-v1.5-7b.json
+  type: SoftwareFile
+  name: mys_ggml_llava-v1.5-7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:073d1aca-8f66-4793-a706-94b0dd14e166
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mys_ggml_llava-v1.5-7b.json
+    type: ExternalReference
+  languages: []
+- uid: fdfd801f-7a4d-4a04-8eaf-095bf5757809
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:31.854327+00:00'
+    bom-ref: mys/ggml_llava-v1.5-7b-47c2134a-768d-563e-ac58-621f5b13f05c
+    name: mys/ggml_llava-v1.5-7b
+    authors:
+    - name: mys
+    tags:
+    - gguf
+    - llava
+    - lmm
+    - ggml
+    - llama.cpp
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mys/ggml_llava-v1.5-7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 8000afee-7347-4de1-af64-2082940b61bf
+  type: Relationship
+  properties: {}
+  from_: 34bbdf12-4a5c-4c01-b482-3d42be2d261e
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mys_ggml_llava-v1.5-7b.json
+  relationship_type: annotatedBy
+- uid: e3d986d9-682b-4a60-b3be-d66cfeee4297
+  type: Relationship
+  properties: {}
+  from_: 34bbdf12-4a5c-4c01-b482-3d42be2d261e
+  to_:
+  - fdfd801f-7a4d-4a04-8eaf-095bf5757809
+  relationship_type: produces

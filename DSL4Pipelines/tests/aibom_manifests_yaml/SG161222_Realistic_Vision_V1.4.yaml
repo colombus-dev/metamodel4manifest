@@ -1,0 +1,75 @@
+uid: 3b15ed1e-9bd7-43aa-b348-48aca9ccd2a3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SG161222_Realistic_Vision_V1.4.json
+  type: SoftwareFile
+  name: SG161222_Realistic_Vision_V1.4.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:60e17a39-d29d-4ed1-a41c-819f08153a10
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SG161222_Realistic_Vision_V1.4.json
+    type: ExternalReference
+  languages: []
+- uid: c6102622-a4c6-4abd-9c5c-91316632d715
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7696990e-d16d-4774-aa8a-7233659ee31c
+  type: MLModel
+  properties:
+    timestamp: '2025-04-23T08:40:22.281413+00:00'
+    bom-ref: SG161222/Realistic_Vision_V1.4-27bea2f2-9ab0-583c-a322-a19cadd3c92a
+    name: SG161222/Realistic_Vision_V1.4
+    authors:
+    - name: SG161222
+    tags:
+    - diffusers
+    - stable-diffusion
+    - text-to-image
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/SG161222/Realistic_Vision_V1.4
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 60a179c2-9d1a-49fa-a7d1-2015ce4dd7f0
+  type: Relationship
+  properties: {}
+  from_: 3b15ed1e-9bd7-43aa-b348-48aca9ccd2a3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SG161222_Realistic_Vision_V1.4.json
+  relationship_type: annotatedBy
+- uid: 8aea3c79-0362-4f3f-bcde-be545d2344de
+  type: Relationship
+  properties: {}
+  from_: 7696990e-d16d-4774-aa8a-7233659ee31c
+  to_:
+  - c6102622-a4c6-4abd-9c5c-91316632d715
+  relationship_type: uses
+- uid: cb257522-6a36-4c58-881a-07e7027bcf52
+  type: Relationship
+  properties: {}
+  from_: 3b15ed1e-9bd7-43aa-b348-48aca9ccd2a3
+  to_:
+  - 7696990e-d16d-4774-aa8a-7233659ee31c
+  relationship_type: produces

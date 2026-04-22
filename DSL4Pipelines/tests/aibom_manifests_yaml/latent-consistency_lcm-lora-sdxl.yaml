@@ -1,0 +1,91 @@
+uid: 02d9e318-05eb-4103-86b5-6e276a6e6842
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/latent-consistency_lcm-lora-sdxl.json
+  type: SoftwareFile
+  name: latent-consistency_lcm-lora-sdxl.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:82ed6dbf-7f1e-4bfc-9be1-c6ee36b0e232
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/latent-consistency_lcm-lora-sdxl.json
+    type: ExternalReference
+  languages: []
+- uid: da4e2a6d-b95a-43c6-ad00-c82f02683286
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: eee7869d-ea66-45b9-9b10-c17bee6da5c8
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: stabilityai/stable-diffusion-xl-base-1.0
+    type: ExternalReference
+  languages: []
+- uid: 691ad8b1-9672-45e8-b131-92b670e2ce77
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:26.393519+00:00'
+    bom-ref: latent-consistency/lcm-lora-sdxl-cdcfc3f2-5488-574c-a2f1-7eaee609d6a2
+    name: latent-consistency/lcm-lora-sdxl
+    authors:
+    - name: latent-consistency
+    tags:
+    - diffusers
+    - lora
+    - text-to-image
+    - arxiv:2311.05556
+    - base_model:stabilityai/stable-diffusion-xl-base-1.0
+    - base_model:adapter:stabilityai/stable-diffusion-xl-base-1.0
+    - license:openrail++
+    - region:us
+  license:
+    name: openrail++
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/latent-consistency/lcm-lora-sdxl
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: ebed55bc-6585-42ad-bc4d-4eee4c59aaa5
+  type: Relationship
+  properties: {}
+  from_: 02d9e318-05eb-4103-86b5-6e276a6e6842
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/latent-consistency_lcm-lora-sdxl.json
+  relationship_type: annotatedBy
+- uid: 718e21b8-6074-49a6-b5a2-195d38132122
+  type: Relationship
+  properties: {}
+  from_: 691ad8b1-9672-45e8-b131-92b670e2ce77
+  to_:
+  - da4e2a6d-b95a-43c6-ad00-c82f02683286
+  relationship_type: uses
+- uid: c5d51c6b-445d-4daa-8018-c637ba9d6cf6
+  type: Relationship
+  properties: {}
+  from_: 691ad8b1-9672-45e8-b131-92b670e2ce77
+  to_:
+  - eee7869d-ea66-45b9-9b10-c17bee6da5c8
+  relationship_type: derivedFrom
+- uid: 8a19701d-5acb-4ec2-9891-77e0583532e1
+  type: Relationship
+  properties: {}
+  from_: 02d9e318-05eb-4103-86b5-6e276a6e6842
+  to_:
+  - 691ad8b1-9672-45e8-b131-92b670e2ce77
+  relationship_type: produces

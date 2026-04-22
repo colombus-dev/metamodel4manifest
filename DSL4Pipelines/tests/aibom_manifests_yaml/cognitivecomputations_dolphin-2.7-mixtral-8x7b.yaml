@@ -1,0 +1,241 @@
+uid: 44069348-b5eb-40f0-a188-f54084a583c4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_dolphin-2.7-mixtral-8x7b.json
+  type: SoftwareFile
+  name: cognitivecomputations_dolphin-2.7-mixtral-8x7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:29a36b23-91f2-4ca0-b8d1-304230ff1214
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_dolphin-2.7-mixtral-8x7b.json
+    type: ExternalReference
+  languages: []
+- uid: df2a2f2d-fb91-405e-afae-a0f8877bcaf5
+  type: Data
+  properties:
+    bom-ref: cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9
+    name: cognitivecomputations/dolphin
+    content_url: https://huggingface.co/datasets/cognitivecomputations/dolphin
+    task_categories: text-generation
+    configs: 'Name of the dataset subset: flan5m-alpaca-uncensored "f", "l", "a", "n", "5", "m", "-", "a", "l", "p", "a", "c", "a", "-", "u", "n", "c", "e", "n", "s", "o", "r", "e", "d", ".", "j", "s", "o", "n", "l"'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: dd915c7c-f746-4342-9b97-c0118073b546
+  type: Data
+  properties:
+    bom-ref: jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4
+    name: jondurbin/airoboros-2.2.1
+    content_url: https://huggingface.co/datasets/jondurbin/airoboros-2.2.1
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 7b9e841e-a236-41f8-ab7d-4aeddb8813ac
+  type: Data
+  properties:
+    bom-ref: cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1
+    name: cognitivecomputations/dolphin-coder
+    content_url: https://huggingface.co/datasets/cognitivecomputations/dolphin-coder
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 0e8e9804-56e5-4c5a-97fa-11261a0d8afb
+  type: Data
+  properties:
+    bom-ref: teknium/openhermes-0c64d8d5-8457-599d-87f8-d4e3875cbd3d
+    name: teknium/openhermes
+    content_url: https://huggingface.co/datasets/teknium/openhermes
+    task_categories: text-generation
+    pretty_name: OpenHermes-v1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: teknium/openhermes-0c64d8d5-8457-599d-87f8-d4e3875cbd3d
+    type: ExternalReference
+  languages:
+  - eng
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 22196ca0-ad64-48d4-94a9-27abae84d3bf
+  type: Data
+  properties:
+    bom-ref: ise-uiuc/Magicoder-OSS-Instruct-75K-5e69362e-a5cb-55b3-b09e-25d5567b8c28
+    name: ise-uiuc/Magicoder-OSS-Instruct-75K
+    content_url: https://huggingface.co/datasets/ise-uiuc/Magicoder-OSS-Instruct-75K
+    task_categories: text-generation, conversational
+    size_categories: 10K<n<100K
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ise-uiuc/Magicoder-OSS-Instruct-75K-5e69362e-a5cb-55b3-b09e-25d5567b8c28
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: d03bb432-fc7a-49fe-a120-1b8b4e3a0c7f
+  type: Data
+  properties:
+    bom-ref: ise-uiuc/Magicoder-Evol-Instruct-110K-015f56b9-f906-5fab-99ec-a279a098da41
+    name: ise-uiuc/Magicoder-Evol-Instruct-110K
+    content_url: https://huggingface.co/datasets/ise-uiuc/Magicoder-Evol-Instruct-110K
+    task_categories: text-generation, conversational
+    size_categories: 100K<n<1M
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ise-uiuc/Magicoder-Evol-Instruct-110K-015f56b9-f906-5fab-99ec-a279a098da41
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 0c6b2a96-0e41-4498-8669-fe28e3c00beb
+  type: Data
+  properties:
+    bom-ref: LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b
+    name: LDJnr/Capybara
+    content_url: https://huggingface.co/datasets/LDJnr/Capybara
+    task_categories: conversational, question-answering, text-generation
+    size_categories: 10K<n<100K
+    pretty_name: LessWrong-Amplify-Instruct
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 418657a4-6bf5-44e2-84ef-9979256baf40
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d7f6786d-dd3b-4391-8dee-f7c3f2ded2ab
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:25.198304+00:00'
+    bom-ref: cognitivecomputations/dolphin-2.7-mixtral-8x7b-c9753fe8-4c0b-5dd1-b5c2-23ea4ce49b6e
+    name: cognitivecomputations/dolphin-2.7-mixtral-8x7b
+    authors:
+    - name: cognitivecomputations
+    architectureFamily: mixtral
+    modelArchitecture: MixtralForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - mixtral
+    - text-generation
+    - conversational
+    - en
+    - dataset:cognitivecomputations/dolphin
+    - dataset:jondurbin/airoboros-2.2.1
+    - dataset:cognitivecomputations/dolphin-coder
+    - dataset:teknium/openhermes
+    - dataset:ise-uiuc/Magicoder-OSS-Instruct-75K
+    - dataset:ise-uiuc/Magicoder-Evol-Instruct-110K
+    - dataset:LDJnr/Capybara
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/cognitivecomputations/dolphin-2.7-mixtral-8x7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 5e3cb091-c995-4777-9a8c-380c18742ac5
+  type: Relationship
+  properties: {}
+  from_: 44069348-b5eb-40f0-a188-f54084a583c4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_dolphin-2.7-mixtral-8x7b.json
+  relationship_type: annotatedBy
+- uid: a8c2d07d-07c6-4790-a019-5162a8eb40e8
+  type: Relationship
+  properties: {}
+  from_: d7f6786d-dd3b-4391-8dee-f7c3f2ded2ab
+  to_:
+  - df2a2f2d-fb91-405e-afae-a0f8877bcaf5
+  - dd915c7c-f746-4342-9b97-c0118073b546
+  - 7b9e841e-a236-41f8-ab7d-4aeddb8813ac
+  - 0e8e9804-56e5-4c5a-97fa-11261a0d8afb
+  - 22196ca0-ad64-48d4-94a9-27abae84d3bf
+  - d03bb432-fc7a-49fe-a120-1b8b4e3a0c7f
+  - 0c6b2a96-0e41-4498-8669-fe28e3c00beb
+  relationship_type: uses
+- uid: 6d9876d9-c87a-4c5e-96cd-e8697bdd79e1
+  type: Relationship
+  properties: {}
+  from_: d7f6786d-dd3b-4391-8dee-f7c3f2ded2ab
+  to_:
+  - 418657a4-6bf5-44e2-84ef-9979256baf40
+  relationship_type: uses
+- uid: 7a0c68a9-6e39-4e7e-a7f1-e33af4beea67
+  type: Relationship
+  properties: {}
+  from_: 44069348-b5eb-40f0-a188-f54084a583c4
+  to_:
+  - d7f6786d-dd3b-4391-8dee-f7c3f2ded2ab
+  relationship_type: produces

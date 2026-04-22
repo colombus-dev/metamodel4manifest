@@ -1,0 +1,113 @@
+uid: ca3ce876-7d64-482f-a6b9-95def110862a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HuggingFaceTB_cosmo-1b.json
+  type: SoftwareFile
+  name: HuggingFaceTB_cosmo-1b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d2d12bd3-deb5-4428-9931-3bf6ea7aae10
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HuggingFaceTB_cosmo-1b.json
+    type: ExternalReference
+  languages: []
+- uid: bf169138-d5a9-4de4-94c1-42a809b3f485
+  type: Data
+  properties:
+    bom-ref: HuggingFaceTB/cosmopedia-eaa52c56-2a38-5af1-a072-510ea8ee58be
+    name: HuggingFaceTB/cosmopedia
+    content_url: https://huggingface.co/datasets/HuggingFaceTB/cosmopedia
+    configs: 'Name of the dataset subset: wikihow {"split": "train", "path": "data/wikihow/train-*"}'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: HuggingFaceTB/cosmopedia-eaa52c56-2a38-5af1-a072-510ea8ee58be
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ce0f1222-93dc-4c33-8fc3-63cfb034c2fd
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ad5796eb-4862-41b5-9d73-3629cf8bd53c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:51.460477+00:00'
+    bom-ref: HuggingFaceTB/cosmo-1b-3ae0d358-fdbe-5afc-845f-95d5e33a1462
+    name: HuggingFaceTB/cosmo-1b
+    authors:
+    - name: HuggingFaceTB
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '# Model Summary
+
+      This is a 1.8B model trained on [Cosmopedia](https://huggingface.co/datasets/HuggingFaceTB/cosmopedia) synthetic dataset.
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - en
+    - dataset:HuggingFaceTB/cosmopedia
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/HuggingFaceTB/cosmo-1b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: a317651e-90f3-42fb-808d-3909446e2775
+  type: Relationship
+  properties: {}
+  from_: ca3ce876-7d64-482f-a6b9-95def110862a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HuggingFaceTB_cosmo-1b.json
+  relationship_type: annotatedBy
+- uid: 6ba2592a-1555-4fc1-b74a-25dedbb5ec06
+  type: Relationship
+  properties: {}
+  from_: ad5796eb-4862-41b5-9d73-3629cf8bd53c
+  to_:
+  - bf169138-d5a9-4de4-94c1-42a809b3f485
+  relationship_type: uses
+- uid: a702cf25-0a36-4820-b340-6f51db638e20
+  type: Relationship
+  properties: {}
+  from_: ad5796eb-4862-41b5-9d73-3629cf8bd53c
+  to_:
+  - ce0f1222-93dc-4c33-8fc3-63cfb034c2fd
+  relationship_type: uses
+- uid: c87aac28-f037-46cf-b910-2b1e9ea178d3
+  type: Relationship
+  properties: {}
+  from_: ca3ce876-7d64-482f-a6b9-95def110862a
+  to_:
+  - ad5796eb-4862-41b5-9d73-3629cf8bd53c
+  relationship_type: produces

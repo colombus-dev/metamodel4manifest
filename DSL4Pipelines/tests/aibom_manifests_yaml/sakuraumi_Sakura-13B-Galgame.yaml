@@ -1,0 +1,82 @@
+uid: 5f10d6d8-65b4-4c48-ba9f-3da58a642ac4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sakuraumi_Sakura-13B-Galgame.json
+  type: SoftwareFile
+  name: sakuraumi_Sakura-13B-Galgame.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f657fad6-3934-4acc-a54e-12ab755d37f6
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sakuraumi_Sakura-13B-Galgame.json
+    type: ExternalReference
+  languages: []
+- uid: 54d4b4bf-26c4-417d-8cbd-19d1e3f733b2
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 76a2d78c-5360-4ef1-9e4d-1c31254ffd63
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:16.809232+00:00'
+    bom-ref: sakuraumi/Sakura-13B-Galgame-ae983613-5307-5374-ba43-e668e91955d2
+    name: sakuraumi/Sakura-13B-Galgame
+    authors:
+    - name: sakuraumi
+    architectureFamily: baichuan
+    modelArchitecture: BaichuanForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - baichuan
+    - text-generation
+    - custom_code
+    - zh
+    - ja
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/sakuraumi/Sakura-13B-Galgame
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 81429151-27a2-4407-8c16-53bb0111306a
+  type: Relationship
+  properties: {}
+  from_: 5f10d6d8-65b4-4c48-ba9f-3da58a642ac4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sakuraumi_Sakura-13B-Galgame.json
+  relationship_type: annotatedBy
+- uid: cfeefc91-150e-48cf-9acb-9bc58b514267
+  type: Relationship
+  properties: {}
+  from_: 76a2d78c-5360-4ef1-9e4d-1c31254ffd63
+  to_:
+  - 54d4b4bf-26c4-417d-8cbd-19d1e3f733b2
+  relationship_type: uses
+- uid: 4c9ec218-1f1d-4ffe-a35c-0efbc07f5b68
+  type: Relationship
+  properties: {}
+  from_: 5f10d6d8-65b4-4c48-ba9f-3da58a642ac4
+  to_:
+  - 76a2d78c-5360-4ef1-9e4d-1c31254ffd63
+  relationship_type: produces

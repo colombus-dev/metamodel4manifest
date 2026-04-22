@@ -1,0 +1,133 @@
+uid: ade59ef5-b9ab-453e-884f-c4e5bc0f8c79
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_vit-base-patch16-224-in21k.json
+  type: SoftwareFile
+  name: google_vit-base-patch16-224-in21k.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fcc11634-a1c4-4785-b8c9-570b18aa1c88
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_vit-base-patch16-224-in21k.json
+    type: ExternalReference
+  languages: []
+- uid: 63d22e8f-c3f2-4443-8c00-f7e446ac97a8
+  type: Data
+  properties:
+    bom-ref: imagenet-21k-d8f16612-e236-557b-b990-c0751c5a1af9
+    name: imagenet-21k
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: imagenet-21k-d8f16612-e236-557b-b990-c0751c5a1af9
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: e9ae7a94-6009-43d0-8a72-25180979aaba
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 3d0fa0a7-7623-4df9-b5ee-1ace782c1a5a
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:04.665192+00:00'
+    bom-ref: google/vit-base-patch16-224-in21k-258a23b6-31a6-54ab-9fcf-ecfcbe2b3fec
+    name: google/vit-base-patch16-224-in21k
+    authors:
+    - name: google
+    architectureFamily: vit
+    modelArchitecture: ViTModel
+    description: '## Model description
+
+
+      The Vision Transformer (ViT) is a transformer encoder model (BERT-like) pretrained on a large collection of images in a supervised fashion, namely ImageNet-21k, at a resolution of 224x224 pixels.
+
+
+      Images are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds a [CLS] token to the beginning of a sequence to use it for classification tasks. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder.
+
+
+      Note that this model does not provide any fine-tuned heads, as these were zero''d by Google researchers. However, the model does include the pre-trained pooler, which can be used for downstream tasks (such as image classification).
+
+
+      By pre-training the model, it learns an inner representation of images that can then be used to extract features useful for downstream tasks: if you have a dataset of labeled images for instance, you can train a standard classifier by placing a linear layer on top of the pre-trained encoder. One typically places a linear layer on top of the [CLS] token, as the last hidden state of this token can be seen as a representation of an entire image.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - safetensors
+    - vit
+    - image-feature-extraction
+    - vision
+    - dataset:imagenet-21k
+    - arxiv:2010.11929
+    - arxiv:2006.03677
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google/vit-base-patch16-224-in21k
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-feature-extraction
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      You can use the raw model for image classification. See the [model hub](https://huggingface.co/models?search=google/vit) to look for
+
+      fine-tuned versions on a task that interests you.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: e808af06-4b5d-4d44-b1cc-f1eb4b5e5870
+  type: Relationship
+  properties: {}
+  from_: ade59ef5-b9ab-453e-884f-c4e5bc0f8c79
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_vit-base-patch16-224-in21k.json
+  relationship_type: annotatedBy
+- uid: 7706c656-1970-46b9-b3c6-0c709c2085f5
+  type: Relationship
+  properties: {}
+  from_: 3d0fa0a7-7623-4df9-b5ee-1ace782c1a5a
+  to_:
+  - 63d22e8f-c3f2-4443-8c00-f7e446ac97a8
+  relationship_type: uses
+- uid: 0fb45133-f987-443c-9dee-74059a356ba7
+  type: Relationship
+  properties: {}
+  from_: 3d0fa0a7-7623-4df9-b5ee-1ace782c1a5a
+  to_:
+  - e9ae7a94-6009-43d0-8a72-25180979aaba
+  relationship_type: uses
+- uid: e4a73ad9-014f-443c-8afd-756d592d39d0
+  type: Relationship
+  properties: {}
+  from_: ade59ef5-b9ab-453e-884f-c4e5bc0f8c79
+  to_:
+  - 3d0fa0a7-7623-4df9-b5ee-1ace782c1a5a
+  relationship_type: produces

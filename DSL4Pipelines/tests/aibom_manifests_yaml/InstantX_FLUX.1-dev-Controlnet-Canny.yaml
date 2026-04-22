@@ -1,0 +1,94 @@
+uid: 806acdcf-bc9c-462d-a45b-5c384369c294
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/InstantX_FLUX.1-dev-Controlnet-Canny.json
+  type: SoftwareFile
+  name: InstantX_FLUX.1-dev-Controlnet-Canny.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f359720c-de76-44c6-a0b6-4ae37c21d4ed
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/InstantX_FLUX.1-dev-Controlnet-Canny.json
+    type: ExternalReference
+  languages: []
+- uid: af92e0ef-8f38-4f79-a2b1-117748058ded
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 980ed160-bca7-49cc-96a4-fcdc307a7d27
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: 2daf7898-a852-4d18-9304-d67284f501b3
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:53.650596+00:00'
+    bom-ref: InstantX/FLUX.1-dev-Controlnet-Canny-bdfb84ff-a904-57d0-ae83-5b0d5076280b
+    name: InstantX/FLUX.1-dev-Controlnet-Canny
+    authors:
+    - name: InstantX
+    tags:
+    - diffusers
+    - safetensors
+    - Text-to-Image
+    - ControlNet
+    - Diffusers
+    - Stable Diffusion
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:finetune:black-forest-labs/FLUX.1-dev
+    - license:other
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+    url: https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Canny
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: e64de587-d4ba-4f0c-9ba5-ddde2f6cb380
+  type: Relationship
+  properties: {}
+  from_: 806acdcf-bc9c-462d-a45b-5c384369c294
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/InstantX_FLUX.1-dev-Controlnet-Canny.json
+  relationship_type: annotatedBy
+- uid: 6e15315e-0dc4-462c-a514-e52518a84f2b
+  type: Relationship
+  properties: {}
+  from_: 2daf7898-a852-4d18-9304-d67284f501b3
+  to_:
+  - af92e0ef-8f38-4f79-a2b1-117748058ded
+  relationship_type: uses
+- uid: 9f73f540-2fd6-45be-a905-1d2c05d57003
+  type: Relationship
+  properties: {}
+  from_: 2daf7898-a852-4d18-9304-d67284f501b3
+  to_:
+  - 980ed160-bca7-49cc-96a4-fcdc307a7d27
+  relationship_type: derivedFrom
+- uid: f1731457-ebf6-4931-8cfd-de40ec326bef
+  type: Relationship
+  properties: {}
+  from_: 806acdcf-bc9c-462d-a45b-5c384369c294
+  to_:
+  - 2daf7898-a852-4d18-9304-d67284f501b3
+  relationship_type: produces

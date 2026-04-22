@@ -1,0 +1,81 @@
+uid: ced6e5a7-1023-49a6-8f27-8678e556b249
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/IDEA-CCNL_Ziya-LLaMA-13B-v1.json
+  type: SoftwareFile
+  name: IDEA-CCNL_Ziya-LLaMA-13B-v1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:7bb6291e-03a9-4321-8da7-f9d6446956cd
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/IDEA-CCNL_Ziya-LLaMA-13B-v1.json
+    type: ExternalReference
+  languages: []
+- uid: 44b13a05-c597-4b1e-b2b7-f2a18c22ccdb
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6f9d4466-a3db-49a0-84fb-2b4f7fa976c4
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:07.168645+00:00'
+    bom-ref: IDEA-CCNL/Ziya-LLaMA-13B-v1-b26c81df-dc10-5a01-96cb-5a28ee76f8b9
+    name: IDEA-CCNL/Ziya-LLaMA-13B-v1
+    authors:
+    - name: IDEA-CCNL
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - en
+    - zh
+    - arxiv:2210.08590
+    - license:gpl-3.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: GPL-3.0
+    url: https://spdx.org/licenses/GPL-3.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-13B-v1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: e4404c6b-08e4-487b-b179-bd87d0a30c6b
+  type: Relationship
+  properties: {}
+  from_: ced6e5a7-1023-49a6-8f27-8678e556b249
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/IDEA-CCNL_Ziya-LLaMA-13B-v1.json
+  relationship_type: annotatedBy
+- uid: 63514402-5624-4fea-90c2-4a4c47625474
+  type: Relationship
+  properties: {}
+  from_: 6f9d4466-a3db-49a0-84fb-2b4f7fa976c4
+  to_:
+  - 44b13a05-c597-4b1e-b2b7-f2a18c22ccdb
+  relationship_type: uses
+- uid: 6be3613a-a230-48f0-b4e6-4227b79f2865
+  type: Relationship
+  properties: {}
+  from_: ced6e5a7-1023-49a6-8f27-8678e556b249
+  to_:
+  - 6f9d4466-a3db-49a0-84fb-2b4f7fa976c4
+  relationship_type: produces

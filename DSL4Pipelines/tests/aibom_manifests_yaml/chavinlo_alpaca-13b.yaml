@@ -1,0 +1,75 @@
+uid: a8968f5a-ffca-425f-9631-a6c0976a37fc
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/chavinlo_alpaca-13b.json
+  type: SoftwareFile
+  name: chavinlo_alpaca-13b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cc362bf5-27ba-4185-883f-5abe0e67404a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/chavinlo_alpaca-13b.json
+    type: ExternalReference
+  languages: []
+- uid: d7005d77-ce7f-4647-a9f2-d1a1f1162094
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6b9653e0-60e9-47cb-abe2-569b52febab0
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:01.725454+00:00'
+    bom-ref: chavinlo/alpaca-13b-c28ebf44-34f8-5b00-9e13-797d062e251e
+    name: chavinlo/alpaca-13b
+    authors:
+    - name: chavinlo
+    architectureFamily: llama
+    modelArchitecture: LLaMAForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/chavinlo/alpaca-13b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: d7dba838-17a0-4e70-931e-f392850f14fd
+  type: Relationship
+  properties: {}
+  from_: a8968f5a-ffca-425f-9631-a6c0976a37fc
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/chavinlo_alpaca-13b.json
+  relationship_type: annotatedBy
+- uid: 93da6496-5b69-4921-accc-b33e93a1be0d
+  type: Relationship
+  properties: {}
+  from_: 6b9653e0-60e9-47cb-abe2-569b52febab0
+  to_:
+  - d7005d77-ce7f-4647-a9f2-d1a1f1162094
+  relationship_type: uses
+- uid: cc91498c-0d25-4c93-a040-950977246db9
+  type: Relationship
+  properties: {}
+  from_: a8968f5a-ffca-425f-9631-a6c0976a37fc
+  to_:
+  - 6b9653e0-60e9-47cb-abe2-569b52febab0
+  relationship_type: produces

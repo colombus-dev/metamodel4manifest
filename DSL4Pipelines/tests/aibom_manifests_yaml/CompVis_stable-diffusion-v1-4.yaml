@@ -1,0 +1,123 @@
+uid: acce80d9-03bf-4961-94c5-713def3e5da2
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CompVis_stable-diffusion-v1-4.json
+  type: SoftwareFile
+  name: CompVis_stable-diffusion-v1-4.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3589b842-8e2e-4f21-83f8-b538bf471cad
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CompVis_stable-diffusion-v1-4.json
+    type: ExternalReference
+  languages: []
+- uid: 9890a6f2-5e44-4723-85ea-16da3426eb39
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a4f096f9-45c9-4187-9ce0-b7b739cf5879
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:14.981882+00:00'
+    bom-ref: CompVis/stable-diffusion-v1-4-5bb89cc0-aa26-5725-8ffb-f0dc7603ff1a
+    name: CompVis/stable-diffusion-v1-4
+    authors:
+    - name: CompVis
+    description: '## Model Details
+
+      - **Developed by:** Robin Rombach, Patrick Esser
+
+      - **Model type:** Diffusion-based text-to-image generation model
+
+      - **Language(s):** English
+
+      - **License:** [The CreativeML OpenRAIL M license](https://huggingface.co/spaces/CompVis/stable-diffusion-license) is an [Open RAIL M license](https://www.licenses.ai/blog/2022/8/18/naming-convention-of-responsible-ai-licenses), adapted from the work that [BigScience](https://bigscience.huggingface.co/) and [the RAIL Initiative](https://www.licenses.ai/) are jointly carrying in the area of responsible AI licensing. See also [the article about the BLOOM Open RAIL license](https://bigscience.huggingface.co/blog/the-bigscience-rail-license) on which our license is based.
+
+      - **Model Description:** This is a model that can be used to generate and modify images based on text prompts. It is a [Latent Diffusion Model](https://arxiv.org/abs/2112.10752) that uses a fixed, pretrained text encoder ([CLIP ViT-L/14](https://arxiv.org/abs/2103.00020)) as suggested in the [Imagen paper](https://arxiv.org/abs/2205.11487).
+
+      - **Resources for more information:** [GitHub Repository](https://github.com/CompVis/stable-diffusion), [Paper](https://arxiv.org/abs/2112.10752).
+
+      - **Cite as:**
+
+
+      @InProceedings{Rombach_2022_CVPR,
+
+      author    = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj\"orn},
+
+      title     = {High-Resolution Image Synthesis With Latent Diffusion Models},
+
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+
+      month     = {June},
+
+      year      = {2022},
+
+      pages     = {10684-10695}
+
+      }
+
+      '
+    tags:
+    - diffusers
+    - safetensors
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-image
+    - arxiv:2207.12598
+    - arxiv:2112.10752
+    - arxiv:2103.00020
+    - arxiv:2205.11487
+    - arxiv:1910.09700
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/CompVis/stable-diffusion-v1-4
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+  consideration:
+    use_cases: '# Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 43281bd2-3e5b-40a2-9f7a-e95748e699d4
+  type: Relationship
+  properties: {}
+  from_: acce80d9-03bf-4961-94c5-713def3e5da2
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CompVis_stable-diffusion-v1-4.json
+  relationship_type: annotatedBy
+- uid: 82b4a4cc-1a79-431b-b5d1-6e1a2b6242d0
+  type: Relationship
+  properties: {}
+  from_: a4f096f9-45c9-4187-9ce0-b7b739cf5879
+  to_:
+  - 9890a6f2-5e44-4723-85ea-16da3426eb39
+  relationship_type: uses
+- uid: ecfd5b5c-2384-45f1-82bc-78ee5b5072f8
+  type: Relationship
+  properties: {}
+  from_: acce80d9-03bf-4961-94c5-713def3e5da2
+  to_:
+  - a4f096f9-45c9-4187-9ce0-b7b739cf5879
+  relationship_type: produces

@@ -1,0 +1,81 @@
+uid: 76874b54-dae1-472d-8f55-2345b491e492
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CalderaAI_30B-Lazarus.json
+  type: SoftwareFile
+  name: CalderaAI_30B-Lazarus.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:51a6e528-bf0c-4a2e-87ff-a97c2d3f1b4c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CalderaAI_30B-Lazarus.json
+    type: ExternalReference
+  languages: []
+- uid: 11c3749f-5888-4b31-9233-52a1a0127ed9
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: cc48e966-1e4c-44a7-80c5-a0436a7fb484
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:32.576996+00:00'
+    bom-ref: CalderaAI/30B-Lazarus-91118210-dbb7-5f9e-b9c0-040d7d55b803
+    name: CalderaAI/30B-Lazarus
+    authors:
+    - name: CalderaAI
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - alpaca
+    - cot
+    - vicuna
+    - uncensored
+    - merge
+    - mix
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/CalderaAI/30B-Lazarus
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1745ec06-d1f2-45d7-8e76-44f8c3293b6a
+  type: Relationship
+  properties: {}
+  from_: 76874b54-dae1-472d-8f55-2345b491e492
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CalderaAI_30B-Lazarus.json
+  relationship_type: annotatedBy
+- uid: 037ebe8e-a759-459d-95dc-960ca149335c
+  type: Relationship
+  properties: {}
+  from_: cc48e966-1e4c-44a7-80c5-a0436a7fb484
+  to_:
+  - 11c3749f-5888-4b31-9233-52a1a0127ed9
+  relationship_type: uses
+- uid: 6076ee15-db8a-4b18-b39b-81df251aa96f
+  type: Relationship
+  properties: {}
+  from_: 76874b54-dae1-472d-8f55-2345b491e492
+  to_:
+  - cc48e966-1e4c-44a7-80c5-a0436a7fb484
+  relationship_type: produces

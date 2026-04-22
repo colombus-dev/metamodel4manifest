@@ -1,0 +1,138 @@
+uid: 022587af-acce-4f05-984f-a3818c074a0d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2.5-3B-Instruct.json
+  type: SoftwareFile
+  name: Qwen_Qwen2.5-3B-Instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:30d4017f-1ab7-42a6-b844-6e720795b2ff
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2.5-3B-Instruct.json
+    type: ExternalReference
+  languages: []
+- uid: 3cbddad4-fbbe-4adb-9705-568f045f2fbb
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0c24a5e7-6b60-41d0-8f0e-6883d5da988d
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: Qwen/Qwen2.5-3B
+    type: ExternalReference
+  languages: []
+- uid: bfb564b1-87a4-414d-baa8-ba9a1a121b55
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:35.238210+00:00'
+    bom-ref: Qwen/Qwen2.5-3B-Instruct-9e7eb871-9d9f-58d2-9da6-2f0ef8de7526
+    name: Qwen/Qwen2.5-3B-Instruct
+    authors:
+    - name: Qwen
+    architectureFamily: qwen2
+    modelArchitecture: Qwen2ForCausalLM
+    description: '## Introduction
+
+
+      Qwen2.5 is the latest series of Qwen large language models. For Qwen2.5, we release a number of base language models and instruction-tuned language models ranging from 0.5 to 72 billion parameters. Qwen2.5 brings the following improvements upon Qwen2:
+
+
+      - Significantly **more knowledge** and has greatly improved capabilities in **coding** and **mathematics**, thanks to our specialized expert models in these domains.
+
+      - Significant improvements in **instruction following**, **generating long texts** (over 8K tokens), **understanding structured data** (e.g, tables), and **generating structured outputs** especially JSON. **More resilient to the diversity of system prompts**, enhancing role-play implementation and condition-setting for chatbots.
+
+      - **Long-context Support** up to 128K tokens and can generate up to 8K tokens.
+
+      - **Multilingual support** for over 29 languages, including Chinese, English, French, Spanish, Portuguese, German, Italian, Russian, Japanese, Korean, Vietnamese, Thai, Arabic, and more.
+
+
+      **This repo contains the instruction-tuned 3B Qwen2.5 model**, which has the following features:
+
+      - Type: Causal Language Models
+
+      - Training Stage: Pretraining & Post-training
+
+      - Architecture: transformers with RoPE, SwiGLU, RMSNorm, Attention QKV bias and tied word embeddings
+
+      - Number of Parameters: 3.09B
+
+      - Number of Paramaters (Non-Embedding): 2.77B
+
+      - Number of Layers: 36
+
+      - Number of Attention Heads (GQA): 16 for Q and 2 for KV
+
+      - Context Length: Full 32,768 tokens and generation 8192 tokens
+
+
+      For more details, please refer to our [blog](https://qwenlm.github.io/blog/qwen2.5/), [GitHub](https://github.com/QwenLM/Qwen2.5), and [Documentation](https://qwen.readthedocs.io/en/latest/).
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - qwen2
+    - text-generation
+    - chat
+    - conversational
+    - en
+    - arxiv:2407.10671
+    - base_model:Qwen/Qwen2.5-3B
+    - base_model:finetune:Qwen/Qwen2.5-3B
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: qwen-research
+    url: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/main/LICENSE
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 586e8864-d638-48b6-8f47-8ec807623dd2
+  type: Relationship
+  properties: {}
+  from_: 022587af-acce-4f05-984f-a3818c074a0d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2.5-3B-Instruct.json
+  relationship_type: annotatedBy
+- uid: 5f1c0b25-a170-43be-b7bf-1f5d2045510b
+  type: Relationship
+  properties: {}
+  from_: bfb564b1-87a4-414d-baa8-ba9a1a121b55
+  to_:
+  - 3cbddad4-fbbe-4adb-9705-568f045f2fbb
+  relationship_type: uses
+- uid: 3a12931a-54ee-493d-b5c3-1e883f7afe6e
+  type: Relationship
+  properties: {}
+  from_: bfb564b1-87a4-414d-baa8-ba9a1a121b55
+  to_:
+  - 0c24a5e7-6b60-41d0-8f0e-6883d5da988d
+  relationship_type: derivedFrom
+- uid: 35331217-e5f1-4d81-a6ae-d8782708832d
+  type: Relationship
+  properties: {}
+  from_: 022587af-acce-4f05-984f-a3818c074a0d
+  to_:
+  - bfb564b1-87a4-414d-baa8-ba9a1a121b55
+  relationship_type: produces

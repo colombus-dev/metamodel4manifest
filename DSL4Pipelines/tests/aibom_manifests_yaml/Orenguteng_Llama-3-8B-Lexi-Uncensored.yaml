@@ -1,0 +1,104 @@
+uid: e450ea9b-3a3c-4dba-9f56-2223083e3b3d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Orenguteng_Llama-3-8B-Lexi-Uncensored.json
+  type: SoftwareFile
+  name: Orenguteng_Llama-3-8B-Lexi-Uncensored.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a3b51f93-6671-4254-a788-a7df3af213fd
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Orenguteng_Llama-3-8B-Lexi-Uncensored.json
+    type: ExternalReference
+  languages: []
+- uid: d1c2556c-51fb-4ade-96b4-bbacd92121bb
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8be1838c-ae3e-4f02-8844-aab8a71c1c7e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:59.338194+00:00'
+    bom-ref: Orenguteng/Llama-3-8B-Lexi-Uncensored-4b423ec2-492f-50b3-85ef-7871f763036e
+    name: Orenguteng/Llama-3-8B-Lexi-Uncensored
+    authors:
+    - name: Orenguteng
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: ai2_arc, split: test, config: ARC-Challenge'
+        type: acc_norm
+        value: 59.56
+      - slice: 'dataset: hellaswag, split: validation'
+        type: acc_norm
+        value: 77.88
+      - slice: 'dataset: cais/mmlu, split: test, config: all'
+        type: acc
+        value: 67.68
+      - slice: 'dataset: truthful_qa, split: validation, config: multiple_choice'
+        type: mc2
+        value: 47.72
+      - slice: 'dataset: winogrande, split: validation, config: winogrande_xl'
+        type: acc
+        value: 75.85
+      - slice: 'dataset: gsm8k, split: test, config: main'
+        type: acc
+        value: 68.39
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - uncensored
+    - llama3
+    - instruct
+    - open
+    - conversational
+    - license:llama3
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Orenguteng/Llama-3-8B-Lexi-Uncensored
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 57472604-372b-4bc7-9568-53dad0fedd70
+  type: Relationship
+  properties: {}
+  from_: e450ea9b-3a3c-4dba-9f56-2223083e3b3d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Orenguteng_Llama-3-8B-Lexi-Uncensored.json
+  relationship_type: annotatedBy
+- uid: 9bd0d89d-0f67-4130-b880-c4afb95e978f
+  type: Relationship
+  properties: {}
+  from_: 8be1838c-ae3e-4f02-8844-aab8a71c1c7e
+  to_:
+  - d1c2556c-51fb-4ade-96b4-bbacd92121bb
+  relationship_type: uses
+- uid: 378d9069-27a5-4894-9ecb-c932d8b061de
+  type: Relationship
+  properties: {}
+  from_: e450ea9b-3a3c-4dba-9f56-2223083e3b3d
+  to_:
+  - 8be1838c-ae3e-4f02-8844-aab8a71c1c7e
+  relationship_type: produces

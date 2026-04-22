@@ -1,0 +1,78 @@
+uid: 96e6df8e-710d-4e65-a350-94a16d65d153
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_chameleon-7b.json
+  type: SoftwareFile
+  name: facebook_chameleon-7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:befbc4fa-c3c0-4daa-8698-00581eb125f7
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_chameleon-7b.json
+    type: ExternalReference
+  languages: []
+- uid: 4bdb155a-3d29-4104-bc37-a46707272606
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0905b0be-78a8-4087-9d5a-f5c0ca29f038
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:34.694064+00:00'
+    bom-ref: facebook/chameleon-7b-89f6d9bd-7ff0-5b4e-82b0-29c599907811
+    name: facebook/chameleon-7b
+    authors:
+    - name: facebook
+    architectureFamily: chameleon
+    modelArchitecture: ChameleonForConditionalGeneration
+    tags:
+    - transformers
+    - safetensors
+    - chameleon
+    - image-text-to-text
+    - arxiv:2405.09818
+    - license:other
+    - endpoints_compatible
+    - region:us
+  license:
+    name: chameleon-research-license
+    url: https://ai.meta.com/resources/models-and-libraries/chameleon-license/
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/facebook/chameleon-7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: 784c8375-1d2a-4a16-92bb-e8652151e079
+  type: Relationship
+  properties: {}
+  from_: 96e6df8e-710d-4e65-a350-94a16d65d153
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_chameleon-7b.json
+  relationship_type: annotatedBy
+- uid: 407713d3-273f-4ba8-952c-aaa1b1697fdd
+  type: Relationship
+  properties: {}
+  from_: 0905b0be-78a8-4087-9d5a-f5c0ca29f038
+  to_:
+  - 4bdb155a-3d29-4104-bc37-a46707272606
+  relationship_type: uses
+- uid: 0d0b24e8-3a14-4fe5-a5d9-85ca90a9a087
+  type: Relationship
+  properties: {}
+  from_: 96e6df8e-710d-4e65-a350-94a16d65d153
+  to_:
+  - 0905b0be-78a8-4087-9d5a-f5c0ca29f038
+  relationship_type: produces

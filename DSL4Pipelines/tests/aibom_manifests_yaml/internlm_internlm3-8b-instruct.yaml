@@ -1,0 +1,79 @@
+uid: 56ab1270-6051-47d3-a3d7-c69b40d9c40f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/internlm_internlm3-8b-instruct.json
+  type: SoftwareFile
+  name: internlm_internlm3-8b-instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:907a7e98-506e-413a-828b-98648d0b97ad
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/internlm_internlm3-8b-instruct.json
+    type: ExternalReference
+  languages: []
+- uid: df400977-5df7-46cd-a20d-bfdb7c60461b
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:12.503073+00:00'
+    bom-ref: internlm/internlm3-8b-instruct-8ea70c2a-68be-527e-a51b-764317501e63
+    name: internlm/internlm3-8b-instruct
+    authors:
+    - name: internlm
+    architectureFamily: internlm3
+    modelArchitecture: InternLM3ForCausalLM
+    description: '## Introduction
+
+
+      InternLM3 has open-sourced an 8-billion parameter instruction model, InternLM3-8B-Instruct, designed for general-purpose usage and advanced reasoning. This model has the following characteristics:
+
+
+      - **Enhanced performance at reduced cost**:
+
+      State-of-the-art performance on reasoning and knowledge-intensive tasks surpass models like Llama3.1-8B and Qwen2.5-7B. Remarkably, InternLM3 is trained on only 4 trillion high-quality tokens, saving more than 75% of the training cost compared to other LLMs of similar scale.
+
+      - **Deep thinking capability**:
+
+      InternLM3 supports both the deep thinking mode for solving complicated reasoning tasks via the long chain-of-thought and the normal response mode for fluent user interactions.
+
+      '
+    tags:
+    - safetensors
+    - internlm3
+    - text-generation
+    - conversational
+    - custom_code
+    - arxiv:2403.17297
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/internlm/internlm3-8b-instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: d7c5ba10-7cc5-448b-8cd1-a870821ff8c9
+  type: Relationship
+  properties: {}
+  from_: 56ab1270-6051-47d3-a3d7-c69b40d9c40f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/internlm_internlm3-8b-instruct.json
+  relationship_type: annotatedBy
+- uid: 66cf81a5-0491-4ea7-bed9-4dff196f1877
+  type: Relationship
+  properties: {}
+  from_: 56ab1270-6051-47d3-a3d7-c69b40d9c40f
+  to_:
+  - df400977-5df7-46cd-a20d-bfdb7c60461b
+  relationship_type: produces

@@ -1,0 +1,100 @@
+uid: f041985b-ec09-4b66-9bd0-252dc4612c7a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HF1BitLLM_Llama3-8B-1.58-100B-tokens.json
+  type: SoftwareFile
+  name: HF1BitLLM_Llama3-8B-1.58-100B-tokens.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:1acb6501-0cbc-469a-83d7-3c0dceba3b8a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HF1BitLLM_Llama3-8B-1.58-100B-tokens.json
+    type: ExternalReference
+  languages: []
+- uid: 65cafdf7-a76f-48a1-9836-1313e625e1a1
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8df53ae7-cfd9-4d10-b0d0-9e51d88d3fc6
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3-8B-Instruct
+    type: ExternalReference
+  languages: []
+- uid: f4db33d9-2211-4796-bd32-7fb92c119151
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:42.413674+00:00'
+    bom-ref: HF1BitLLM/Llama3-8B-1.58-100B-tokens-dd4d5a51-cb44-5a4b-9205-a0f19b7e4e0c
+    name: HF1BitLLM/Llama3-8B-1.58-100B-tokens
+    authors:
+    - name: HF1BitLLM
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - arxiv:2402.17764
+    - base_model:meta-llama/Meta-Llama-3-8B-Instruct
+    - base_model:quantized:meta-llama/Meta-Llama-3-8B-Instruct
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - 8-bit
+    - bitnet
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/HF1BitLLM/Llama3-8B-1.58-100B-tokens
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 090e6fdf-ff4a-496e-8777-db279af4a37d
+  type: Relationship
+  properties: {}
+  from_: f041985b-ec09-4b66-9bd0-252dc4612c7a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/HF1BitLLM_Llama3-8B-1.58-100B-tokens.json
+  relationship_type: annotatedBy
+- uid: cdaf82ba-e323-4a06-9e98-4b1bf9d2dfdf
+  type: Relationship
+  properties: {}
+  from_: f4db33d9-2211-4796-bd32-7fb92c119151
+  to_:
+  - 65cafdf7-a76f-48a1-9836-1313e625e1a1
+  relationship_type: uses
+- uid: e3d4ff91-99f4-4cac-9032-c4651758817e
+  type: Relationship
+  properties: {}
+  from_: f4db33d9-2211-4796-bd32-7fb92c119151
+  to_:
+  - 8df53ae7-cfd9-4d10-b0d0-9e51d88d3fc6
+  relationship_type: derivedFrom
+- uid: 49f805e8-25e2-4c7c-9d72-b9562e22c752
+  type: Relationship
+  properties: {}
+  from_: f041985b-ec09-4b66-9bd0-252dc4612c7a
+  to_:
+  - f4db33d9-2211-4796-bd32-7fb92c119151
+  relationship_type: produces

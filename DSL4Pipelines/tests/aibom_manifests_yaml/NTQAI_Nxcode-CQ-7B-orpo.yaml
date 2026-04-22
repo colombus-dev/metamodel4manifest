@@ -1,0 +1,88 @@
+uid: 425efd88-d50c-4773-9240-d910f994cfc5
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NTQAI_Nxcode-CQ-7B-orpo.json
+  type: SoftwareFile
+  name: NTQAI_Nxcode-CQ-7B-orpo.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:45f34b2a-f811-4bc5-a88f-1217c0b0cc3b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NTQAI_Nxcode-CQ-7B-orpo.json
+    type: ExternalReference
+  languages: []
+- uid: 8e9fb5c5-812e-4ef7-aca0-971d5124e134
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: aae94e86-03ee-459f-a17b-a503885ce996
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:47.503272+00:00'
+    bom-ref: NTQAI/Nxcode-CQ-7B-orpo-dec76506-a1db-5510-bc5f-48091c986307
+    name: NTQAI/Nxcode-CQ-7B-orpo
+    authors:
+    - name: NTQAI
+    architectureFamily: qwen2
+    modelArchitecture: Qwen2ForCausalLM
+    description: '## Introduction
+
+
+      Nxcode-CQ-7B-orpo is an [Monolithic Preference Optimization without Reference Model](https://arxiv.org/abs/2403.07691) fine-tune of Qwen/CodeQwen1.5-7B on 100k samples of high-quality ranking data.
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - qwen2
+    - text-generation
+    - code
+    - conversational
+    - arxiv:2403.07691
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: tongyi-qianwen-research
+    url: https://huggingface.co/Qwen/CodeQwen1.5-7B/blob/main/LICENSE
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NTQAI/Nxcode-CQ-7B-orpo
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: a261458e-5c63-4fa6-8f33-ac7077eed59e
+  type: Relationship
+  properties: {}
+  from_: 425efd88-d50c-4773-9240-d910f994cfc5
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NTQAI_Nxcode-CQ-7B-orpo.json
+  relationship_type: annotatedBy
+- uid: 28e5f756-78d3-4d1a-bbaf-375ae1f6a3c4
+  type: Relationship
+  properties: {}
+  from_: aae94e86-03ee-459f-a17b-a503885ce996
+  to_:
+  - 8e9fb5c5-812e-4ef7-aca0-971d5124e134
+  relationship_type: uses
+- uid: 03905cce-8bc4-4c68-a158-6affd8f2fc25
+  type: Relationship
+  properties: {}
+  from_: 425efd88-d50c-4773-9240-d910f994cfc5
+  to_:
+  - aae94e86-03ee-459f-a17b-a503885ce996
+  relationship_type: produces

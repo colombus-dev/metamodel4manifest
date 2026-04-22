@@ -1,0 +1,183 @@
+uid: 4155efb4-1437-4e47-bc8c-9360c19984f0
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Obsidian-3B-V0.5.json
+  type: SoftwareFile
+  name: NousResearch_Obsidian-3B-V0.5.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fe049387-6862-454c-9fc9-9bb69f44b851
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Obsidian-3B-V0.5.json
+    type: ExternalReference
+  languages: []
+- uid: 5c89ffc8-a4aa-4448-a927-f5c501e3c064
+  type: Data
+  properties:
+    bom-ref: LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b
+    name: LDJnr/Capybara
+    content_url: https://huggingface.co/datasets/LDJnr/Capybara
+    task_categories: conversational, question-answering, text-generation
+    size_categories: 10K<n<100K
+    pretty_name: LessWrong-Amplify-Instruct
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 82ac27cd-a2ac-44b8-9f72-af62e651329e
+  type: Data
+  properties:
+    bom-ref: LDJnr/LessWrong-Amplify-Instruct-fd396583-6aa0-5026-9748-4409738f0812
+    name: LDJnr/LessWrong-Amplify-Instruct
+    content_url: https://huggingface.co/datasets/LDJnr/LessWrong-Amplify-Instruct
+    task_categories: conversational, question-answering, text-generation
+    size_categories: n<1K
+    pretty_name: LessWrong-Amplify-Instruct
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LDJnr/LessWrong-Amplify-Instruct-fd396583-6aa0-5026-9748-4409738f0812
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: a04cc729-cf8b-4b45-8bc2-d8a556eacdfc
+  type: Data
+  properties:
+    bom-ref: LDJnr/Pure-Dove-e5138f01-f77d-5510-9285-df11d660b143
+    name: LDJnr/Pure-Dove
+    content_url: https://huggingface.co/datasets/LDJnr/Pure-Dove
+    task_categories: conversational, question-answering, text-generation
+    size_categories: 1K<n<10K
+    pretty_name: Pure-Dove
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LDJnr/Pure-Dove-e5138f01-f77d-5510-9285-df11d660b143
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 48510a88-3ca6-4115-a90d-d03550542e98
+  type: Data
+  properties:
+    bom-ref: LDJnr/Verified-Camel-6c954918-6150-534c-952b-ea2cff17c0b2
+    name: LDJnr/Verified-Camel
+    content_url: https://huggingface.co/datasets/LDJnr/Verified-Camel
+    task_categories: conversational, question-answering, text-generation
+    size_categories: n<1K
+    pretty_name: Verified-Camel
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LDJnr/Verified-Camel-6c954918-6150-534c-952b-ea2cff17c0b2
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 7beeb079-45c3-4c27-9006-84b3bcc82415
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0fe0ab77-540f-4b8d-8794-f122ff8d061b
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:28.947778+00:00'
+    bom-ref: NousResearch/Obsidian-3B-V0.5-ab81c8c8-a433-5c89-b055-21ba93582523
+    name: NousResearch/Obsidian-3B-V0.5
+    authors:
+    - name: NousResearch
+    architectureFamily: llava_stablelm_epoch
+    modelArchitecture: LlavaStableLMEpochForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llava_stablelm_epoch
+    - text-generation
+    - Multimodal
+    - StableLM
+    - en
+    - dataset:LDJnr/Capybara
+    - dataset:LDJnr/LessWrong-Amplify-Instruct
+    - dataset:LDJnr/Pure-Dove
+    - dataset:LDJnr/Verified-Camel
+    - license:cc-by-sa-4.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: CC-BY-SA-4.0
+    url: https://spdx.org/licenses/CC-BY-SA-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NousResearch/Obsidian-3B-V0.5
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 091f3d47-4d74-4021-84f8-d44669102681
+  type: Relationship
+  properties: {}
+  from_: 4155efb4-1437-4e47-bc8c-9360c19984f0
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Obsidian-3B-V0.5.json
+  relationship_type: annotatedBy
+- uid: 90af80d5-d0be-4f26-83de-a95b00281428
+  type: Relationship
+  properties: {}
+  from_: 0fe0ab77-540f-4b8d-8794-f122ff8d061b
+  to_:
+  - 5c89ffc8-a4aa-4448-a927-f5c501e3c064
+  - 82ac27cd-a2ac-44b8-9f72-af62e651329e
+  - a04cc729-cf8b-4b45-8bc2-d8a556eacdfc
+  - 48510a88-3ca6-4115-a90d-d03550542e98
+  relationship_type: uses
+- uid: b2b7faad-8b5c-4c0b-9282-ae3f006e6017
+  type: Relationship
+  properties: {}
+  from_: 0fe0ab77-540f-4b8d-8794-f122ff8d061b
+  to_:
+  - 7beeb079-45c3-4c27-9006-84b3bcc82415
+  relationship_type: uses
+- uid: 56669b1d-5210-455a-969f-83c3596f9049
+  type: Relationship
+  properties: {}
+  from_: 4155efb4-1437-4e47-bc8c-9360c19984f0
+  to_:
+  - 0fe0ab77-540f-4b8d-8794-f122ff8d061b
+  relationship_type: produces

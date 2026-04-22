@@ -1,0 +1,167 @@
+uid: cfbdf58e-9359-42f8-a04e-db9be0eab588
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_tapas-base-finetuned-wtq.json
+  type: SoftwareFile
+  name: google_tapas-base-finetuned-wtq.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:5fe04782-0559-4dad-820d-5d7f507a20a3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_tapas-base-finetuned-wtq.json
+    type: ExternalReference
+  languages: []
+- uid: dbd36593-3886-4139-ba72-72173c44a687
+  type: Data
+  properties:
+    bom-ref: wikitablequestions-dcc0a492-252c-59ce-b067-124984edea81
+    name: wikitablequestions
+    content_url: https://huggingface.co/datasets/wikitablequestions
+    task_categories: question-answering
+    task_ids: ''
+    size_categories: 10K<n<100K
+    annotations_creators: crowdsourced
+    language_creators: found
+    pretty_name: WikiTableQuestions
+    source_datasets: original
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: wikitablequestions-dcc0a492-252c-59ce-b067-124984edea81
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 1c03451c-05fa-4b0b-9cfc-d852737efadf
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 32810c9d-7c95-4ef9-b741-e0a422bebac7
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:43.786959+00:00'
+    bom-ref: google/tapas-base-finetuned-wtq-3058d511-7ff4-5870-954b-9de45d984516
+    name: google/tapas-base-finetuned-wtq
+    authors:
+    - name: google
+    architectureFamily: tapas
+    modelArchitecture: TapasForQuestionAnswering
+    description: '## Model description
+
+
+      TAPAS is a BERT-like transformers model pretrained on a large corpus of English data from Wikipedia in a self-supervised fashion.
+
+      This means it was pretrained on the raw tables and associated texts only, with no humans labelling them in any way (which is why it
+
+      can use lots of publicly available data) with an automatic process to generate inputs and labels from those texts. More precisely, it
+
+      was pretrained with two objectives:
+
+
+      - Masked language modeling (MLM): taking a (flattened) table and associated context, the model randomly masks 15% of the words in
+
+      the input, then runs the entire (partially masked) sequence through the model. The model then has to predict the masked words.
+
+      This is different from traditional recurrent neural networks (RNNs) that usually see the words one after the other,
+
+      or from autoregressive models like GPT which internally mask the future tokens. It allows the model to learn a bidirectional
+
+      representation of a table and associated text.
+
+      - Intermediate pre-training: to encourage numerical reasoning on tables, the authors additionally pre-trained the model by creating
+
+      a balanced dataset of millions of syntactically created training examples. Here, the model must predict (classify) whether a sentence
+
+      is supported or refuted by the contents of a table. The training examples are created based on synthetic as well as counterfactual statements.
+
+
+      This way, the model learns an inner representation of the English language used in tables and associated texts, which can then be used
+
+      to extract features useful for downstream tasks such as answering questions about a table, or determining whether a sentence is entailed
+
+      or refuted by the contents of a table. Fine-tuning is done by adding a cell selection head and aggregation head on top of the pre-trained model, and then jointly train these randomly initialized classification heads with the base model on SQa, WikiSQL and finally WTQ.
+
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - tapas
+    - table-question-answering
+    - en
+    - dataset:wikitablequestions
+    - arxiv:2004.02349
+    - arxiv:2010.00571
+    - arxiv:1508.00305
+    - license:apache-2.0
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google/tapas-base-finetuned-wtq
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: table-question-answering
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      You can use this model for answering questions related to a table.
+
+
+      For code examples, we refer to the documentation of TAPAS on the HuggingFace website.
+
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: bed6f94f-d6ac-4f37-b5ab-08e2a44fcb6d
+  type: Relationship
+  properties: {}
+  from_: cfbdf58e-9359-42f8-a04e-db9be0eab588
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_tapas-base-finetuned-wtq.json
+  relationship_type: annotatedBy
+- uid: 02ae4449-0dbf-441a-8e86-bc2277b6680e
+  type: Relationship
+  properties: {}
+  from_: 32810c9d-7c95-4ef9-b741-e0a422bebac7
+  to_:
+  - dbd36593-3886-4139-ba72-72173c44a687
+  relationship_type: uses
+- uid: d396bf17-a24f-4e4b-a9ae-457014ed8953
+  type: Relationship
+  properties: {}
+  from_: 32810c9d-7c95-4ef9-b741-e0a422bebac7
+  to_:
+  - 1c03451c-05fa-4b0b-9cfc-d852737efadf
+  relationship_type: uses
+- uid: a2b3df03-61d4-42bf-8019-773cd5dab378
+  type: Relationship
+  properties: {}
+  from_: cfbdf58e-9359-42f8-a04e-db9be0eab588
+  to_:
+  - 32810c9d-7c95-4ef9-b741-e0a422bebac7
+  relationship_type: produces

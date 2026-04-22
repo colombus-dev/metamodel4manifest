@@ -1,0 +1,104 @@
+uid: b1a15ff7-4068-4ce8-b2f2-796c79862d83
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aleksa-codes_flux-ghibsky-illustration.json
+  type: SoftwareFile
+  name: aleksa-codes_flux-ghibsky-illustration.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:acc68bed-f322-47b1-9410-69a2016b969c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aleksa-codes_flux-ghibsky-illustration.json
+    type: ExternalReference
+  languages: []
+- uid: 963e5aea-b6c2-4b56-84ee-7a913bc39046
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: db93c593-eaf5-4626-b464-329708d9c2f6
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: f0fbad53-3c22-439e-8aa0-d848bf1e7d40
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:41.125657+00:00'
+    bom-ref: aleksa-codes/flux-ghibsky-illustration-bbad7231-b470-5740-b3aa-708aadf14cd0
+    name: aleksa-codes/flux-ghibsky-illustration
+    authors:
+    - name: aleksa-codes
+    description: '## Model Description
+
+
+      The Flux Ghibsky Illustration model generates landscapes that blend serene, surreal skies with intricate, Ghibli-inspired details. This fusion of styles creates enchanting scenes that capture the essence of both Ghibli''s whimsical charm and Makoto Shinkai''s atmospheric beauty. Perfect for creating dreamy visuals. You can also run the model on Replicate. Feedback is welcome!
+
+
+      [Replicate Model Page](https://replicate.com/aleksa-codes/flux-ghibsky-illustration)
+
+      '
+    tags:
+    - diffusers
+    - text-to-image
+    - lora
+    - template:sd-lora
+    - image-generation
+    - flux
+    - replicate
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:adapter:black-forest-labs/FLUX.1-dev
+    - license:other
+    - region:us
+  license:
+    name: flux-dev-license
+    url: https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/aleksa-codes/flux-ghibsky-illustration
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: cb54627f-29b1-4b76-be45-aaf2381d6155
+  type: Relationship
+  properties: {}
+  from_: b1a15ff7-4068-4ce8-b2f2-796c79862d83
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aleksa-codes_flux-ghibsky-illustration.json
+  relationship_type: annotatedBy
+- uid: adce40b5-444f-48b6-9dc5-e937bb332310
+  type: Relationship
+  properties: {}
+  from_: f0fbad53-3c22-439e-8aa0-d848bf1e7d40
+  to_:
+  - 963e5aea-b6c2-4b56-84ee-7a913bc39046
+  relationship_type: uses
+- uid: ed552ab2-e930-4018-a48a-0f182cc337b8
+  type: Relationship
+  properties: {}
+  from_: f0fbad53-3c22-439e-8aa0-d848bf1e7d40
+  to_:
+  - db93c593-eaf5-4626-b464-329708d9c2f6
+  relationship_type: derivedFrom
+- uid: f7e1a91c-03f2-4c50-85d0-c80bf574eb33
+  type: Relationship
+  properties: {}
+  from_: b1a15ff7-4068-4ce8-b2f2-796c79862d83
+  to_:
+  - f0fbad53-3c22-439e-8aa0-d848bf1e7d40
+  relationship_type: produces

@@ -1,0 +1,171 @@
+uid: f56e17f1-9abc-4d48-b719-6d2de7f2312f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-3.0-8b-instruct.json
+  type: SoftwareFile
+  name: ibm-granite_granite-3.0-8b-instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:b40a55dd-b93a-4fff-b46a-3671778710ab
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-3.0-8b-instruct.json
+    type: ExternalReference
+  languages: []
+- uid: 00a071f2-31d0-4413-8525-a0f816e24e3c
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b1f55f1d-ef69-47ec-bc3a-730850ba9539
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: ibm-granite/granite-3.0-8b-base
+    type: ExternalReference
+  languages: []
+- uid: 6d2b6cd3-2849-43fb-bb11-c5e25ab73937
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:52.738992+00:00'
+    bom-ref: ibm-granite/granite-3.0-8b-instruct-add7152e-58a9-5d8f-81bf-e75e8934dd79
+    name: ibm-granite/granite-3.0-8b-instruct
+    authors:
+    - name: ibm-granite
+    architectureFamily: granite
+    modelArchitecture: GraniteForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: instruction-following'
+        type: pass@1
+        value: 52.27
+      - slice: 'dataset: instruction-following'
+        type: pass@1
+        value: 8.22
+      - slice: 'dataset: human-exams'
+        type: pass@1
+        value: 40.52
+      - slice: 'dataset: human-exams'
+        type: pass@1
+        value: 65.82
+      - slice: 'dataset: human-exams'
+        type: pass@1
+        value: 34.45
+      - slice: 'dataset: commonsense'
+        type: pass@1
+        value: 46.6
+      - slice: 'dataset: commonsense'
+        type: pass@1
+        value: 71.21
+      - slice: 'dataset: commonsense'
+        type: pass@1
+        value: 82.61
+      - slice: 'dataset: commonsense'
+        type: pass@1
+        value: 77.51
+      - slice: 'dataset: commonsense'
+        type: pass@1
+        value: 60.32
+      - slice: 'dataset: reading-comprehension'
+        type: pass@1
+        value: 88.65
+      - slice: 'dataset: reading-comprehension'
+        type: pass@1
+        value: 21.58
+      - slice: 'dataset: reasoning'
+        type: pass@1
+        value: 64.16
+      - slice: 'dataset: reasoning'
+        type: pass@1
+        value: 33.81
+      - slice: 'dataset: reasoning'
+        type: pass@1
+        value: 51.55
+      - slice: 'dataset: code'
+        type: pass@1
+        value: 64.63
+      - slice: 'dataset: code'
+        type: pass@1
+        value: 57.16
+      - slice: 'dataset: code'
+        type: pass@1
+        value: 65.85
+      - slice: 'dataset: code'
+        type: pass@1
+        value: 49.6
+      - slice: 'dataset: math'
+        type: pass@1
+        value: 68.99
+      - slice: 'dataset: math'
+        type: pass@1
+        value: 30.94
+      - slice: 'dataset: multilingual'
+        type: pass@1
+        value: 64.94
+      - slice: 'dataset: multilingual'
+        type: pass@1
+        value: 48.2
+    tags:
+    - transformers
+    - safetensors
+    - granite
+    - text-generation
+    - language
+    - granite-3.0
+    - conversational
+    - arxiv:0000.00000
+    - base_model:ibm-granite/granite-3.0-8b-base
+    - base_model:finetune:ibm-granite/granite-3.0-8b-base
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ibm-granite/granite-3.0-8b-instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 35c27aa1-3c96-4ec6-9b27-3bd0b409a3a4
+  type: Relationship
+  properties: {}
+  from_: f56e17f1-9abc-4d48-b719-6d2de7f2312f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-3.0-8b-instruct.json
+  relationship_type: annotatedBy
+- uid: 88b9f02c-d659-496d-90d3-47734f386e54
+  type: Relationship
+  properties: {}
+  from_: 6d2b6cd3-2849-43fb-bb11-c5e25ab73937
+  to_:
+  - 00a071f2-31d0-4413-8525-a0f816e24e3c
+  relationship_type: uses
+- uid: 207021be-7ff5-4b44-a4c5-70bea5187304
+  type: Relationship
+  properties: {}
+  from_: 6d2b6cd3-2849-43fb-bb11-c5e25ab73937
+  to_:
+  - b1f55f1d-ef69-47ec-bc3a-730850ba9539
+  relationship_type: derivedFrom
+- uid: bba35154-1169-4b01-8f16-3a123903f001
+  type: Relationship
+  properties: {}
+  from_: f56e17f1-9abc-4d48-b719-6d2de7f2312f
+  to_:
+  - 6d2b6cd3-2849-43fb-bb11-c5e25ab73937
+  relationship_type: produces

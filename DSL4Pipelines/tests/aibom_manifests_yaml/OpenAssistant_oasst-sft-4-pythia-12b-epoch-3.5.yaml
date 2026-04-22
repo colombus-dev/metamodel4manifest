@@ -1,0 +1,101 @@
+uid: 970a3a00-84f6-4c10-9717-7070830ab0a8
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OpenAssistant_oasst-sft-4-pythia-12b-epoch-3.5.json
+  type: SoftwareFile
+  name: OpenAssistant_oasst-sft-4-pythia-12b-epoch-3.5.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:baebd05e-39dd-4559-b8a3-8a447f16469d
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OpenAssistant_oasst-sft-4-pythia-12b-epoch-3.5.json
+    type: ExternalReference
+  languages: []
+- uid: 796021b0-6894-4649-9765-d7cfe3b3c358
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: fc635cb3-abcf-4bee-80c6-5e1a943e9e2b
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:58.110774+00:00'
+    bom-ref: OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5-188b6e80-3375-562f-af20-f35cd0ef3e2a
+    name: OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5
+    authors:
+    - name: OpenAssistant
+    architectureFamily: gpt_neox
+    modelArchitecture: GPTNeoXForCausalLM
+    description: '## Model Details
+
+
+      - **Developed by:** [Open-Assistant Contributors](https://open-assistant.io/)
+
+      - **Model type:** Transformer-based Language Model
+
+      - **Language:** English
+
+      - **Finetuned from:** [EleutherAI / pythia-12b-deduped](https://huggingface.co/EleutherAI/pythia-12b-deduped)
+
+      - **Code:** [Open-Assistant/model/model_training](https://github.com/LAION-AI/Open-Assistant/tree/main/model/model_training)
+
+      - **Demo:** [Continuations for 250 random prompts](https://open-assistant.github.io/oasst-model-eval/?f=https%3A%2F%2Fraw.githubusercontent.com%2FOpen-Assistant%2Foasst-model-eval%2Fmain%2Fsampling_reports%2Foasst-sft%2F2023-04-03_andreaskoepf_oasst-sft-4-pythia-12b-epoch-3_5_sampling_noprefix_lottery.json%0Ahttps%3A%2F%2Fraw.githubusercontent.com%2FOpen-Assistant%2Foasst-model-eval%2Fmain%2Fsampling_reports%2Fchat-gpt%2F2023-04-11_gpt-3.5-turbo_lottery.json)
+
+      - **License:** Apache 2.0
+
+      - **Contact:** [Open-Assistant Discord](https://ykilcher.com/open-assistant-discord)
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - gpt_neox
+    - text-generation
+    - sft
+    - en
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 7cf62651-e9d0-4eeb-b17d-5fe774b441fe
+  type: Relationship
+  properties: {}
+  from_: 970a3a00-84f6-4c10-9717-7070830ab0a8
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OpenAssistant_oasst-sft-4-pythia-12b-epoch-3.5.json
+  relationship_type: annotatedBy
+- uid: 4bff0154-2111-4662-ac9b-4ae9747d2a89
+  type: Relationship
+  properties: {}
+  from_: fc635cb3-abcf-4bee-80c6-5e1a943e9e2b
+  to_:
+  - 796021b0-6894-4649-9765-d7cfe3b3c358
+  relationship_type: uses
+- uid: 3e4f7f88-d6b5-4248-af88-922a7a4083b5
+  type: Relationship
+  properties: {}
+  from_: 970a3a00-84f6-4c10-9717-7070830ab0a8
+  to_:
+  - fc635cb3-abcf-4bee-80c6-5e1a943e9e2b
+  relationship_type: produces

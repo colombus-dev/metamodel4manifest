@@ -1,0 +1,86 @@
+uid: b3f34dcb-659c-4ed6-adba-70c253407869
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-fast-3d.json
+  type: SoftwareFile
+  name: stabilityai_stable-fast-3d.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e0cea810-bbfa-4db8-aeaf-419e49fefb22
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-fast-3d.json
+    type: ExternalReference
+  languages: []
+- uid: 63674004-25cf-4494-93c1-29a0378d0c10
+  type: Data
+  properties:
+    bom-ref: allenai/objaverse-4cc2611b-4fbe-56c7-b009-9ca67ac52e46
+    name: allenai/objaverse
+    content_url: https://huggingface.co/datasets/allenai/objaverse
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: allenai/objaverse-4cc2611b-4fbe-56c7-b009-9ca67ac52e46
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: fdbaaf19-b489-4131-900a-40ed73615568
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:19.898338+00:00'
+    bom-ref: stabilityai/stable-fast-3d-2c7f8123-3801-503e-acfd-439252e78997
+    name: stabilityai/stable-fast-3d
+    authors:
+    - name: stabilityai
+    tags:
+    - safetensors
+    - image-to-3d
+    - dataset:allenai/objaverse
+    - arxiv:2408.00653
+    - license:other
+    - region:us
+  license:
+    name: stabilityai-ai-community
+    url: LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stabilityai/stable-fast-3d
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-3d
+relations:
+- uid: ef9127af-47f5-42eb-8900-470793afd5b7
+  type: Relationship
+  properties: {}
+  from_: b3f34dcb-659c-4ed6-adba-70c253407869
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-fast-3d.json
+  relationship_type: annotatedBy
+- uid: 87d59503-ccb3-4318-aaa5-c7cf16adadb4
+  type: Relationship
+  properties: {}
+  from_: fdbaaf19-b489-4131-900a-40ed73615568
+  to_:
+  - 63674004-25cf-4494-93c1-29a0378d0c10
+  relationship_type: uses
+- uid: 4865f796-3b51-4342-a41a-fe0d2f3514a6
+  type: Relationship
+  properties: {}
+  from_: b3f34dcb-659c-4ed6-adba-70c253407869
+  to_:
+  - fdbaaf19-b489-4131-900a-40ed73615568
+  relationship_type: produces

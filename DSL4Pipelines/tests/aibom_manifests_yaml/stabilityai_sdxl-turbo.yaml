@@ -1,0 +1,86 @@
+uid: 2a23dc12-fc2e-4212-9c3d-8eddbd202244
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_sdxl-turbo.json
+  type: SoftwareFile
+  name: stabilityai_sdxl-turbo.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:5cfadfed-7d9c-4c85-a70f-1e3d72c0b3d5
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_sdxl-turbo.json
+    type: ExternalReference
+  languages: []
+- uid: 6aeccccf-1e9e-452d-98d8-c406036d410d
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 768adb6c-54ea-4ddd-b490-526d621a994c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:28.605130+00:00'
+    bom-ref: stabilityai/sdxl-turbo-6dc8b14b-a1ef-5387-92b0-c7104c918ea8
+    name: stabilityai/sdxl-turbo
+    authors:
+    - name: stabilityai
+    description: '## Model Details
+
+      '
+    tags:
+    - diffusers
+    - onnx
+    - safetensors
+    - text-to-image
+    - license:other
+    - autotrain_compatible
+    - diffusers:StableDiffusionXLPipeline
+    - region:us
+  license:
+    name: sai-nc-community
+    url: https://huggingface.co/stabilityai/sdxl-turbo/blob/main/LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stabilityai/sdxl-turbo
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 50b7137e-a649-4919-ac38-8f15d645c768
+  type: Relationship
+  properties: {}
+  from_: 2a23dc12-fc2e-4212-9c3d-8eddbd202244
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_sdxl-turbo.json
+  relationship_type: annotatedBy
+- uid: 9f4163f1-3d31-4790-b954-e7ecc279ea82
+  type: Relationship
+  properties: {}
+  from_: 768adb6c-54ea-4ddd-b490-526d621a994c
+  to_:
+  - 6aeccccf-1e9e-452d-98d8-c406036d410d
+  relationship_type: uses
+- uid: 3b34fe6d-e8e1-4f4a-bb81-5b5595ac26ae
+  type: Relationship
+  properties: {}
+  from_: 2a23dc12-fc2e-4212-9c3d-8eddbd202244
+  to_:
+  - 768adb6c-54ea-4ddd-b490-526d621a994c
+  relationship_type: produces

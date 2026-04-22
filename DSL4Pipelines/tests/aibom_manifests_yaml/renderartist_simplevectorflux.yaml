@@ -1,0 +1,104 @@
+uid: d6c6d51c-ca0c-4cf5-b8a0-ed5f0f517642
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/renderartist_simplevectorflux.json
+  type: SoftwareFile
+  name: renderartist_simplevectorflux.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d569661c-b99d-48c6-8166-75e3bec97235
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/renderartist_simplevectorflux.json
+    type: ExternalReference
+  languages: []
+- uid: cfd781d6-5d69-41c2-bf5a-0adae380bc6a
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4a09b252-2c5e-44dc-88e7-1ab6400a5eba
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: f294d3ec-d447-406f-b92c-003ee1b4e729
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:17.560858+00:00'
+    bom-ref: renderartist/simplevectorflux-e0c6eafc-2c9a-5ad1-8516-a7bf90b41353
+    name: renderartist/simplevectorflux
+    authors:
+    - name: renderartist
+    description: '## Model description
+
+
+      Simple Vector Flux was trained on a curated dataset of ~50 synthetic images in classic vector style, 17 epochs, 2 repeats, ~1700 steps.
+
+
+      This is a work in progress and it can be a little temperamental, the captioning was done using Joy Caption Batch with the trigger &quot;v3ct0r&quot; and &quot;vector&quot; in the prefix of the captions.
+
+
+      You have to work a little bit to get desired results and sometimes there is bleeding&#x2F;blending of subjects but overall the style is present and the results can be really good. This LoRA takes a couple of tries adjusting your prompt and adding tokens to match the style.
+
+      '
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - lora
+    - template:sd-lora
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:adapter:black-forest-labs/FLUX.1-dev
+    - license:creativeml-openrail-m
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/renderartist/simplevectorflux
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 3118b979-dd9f-472d-888b-dc5379a1a84d
+  type: Relationship
+  properties: {}
+  from_: d6c6d51c-ca0c-4cf5-b8a0-ed5f0f517642
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/renderartist_simplevectorflux.json
+  relationship_type: annotatedBy
+- uid: cab2b886-76e8-4764-8982-1ec7686a896e
+  type: Relationship
+  properties: {}
+  from_: f294d3ec-d447-406f-b92c-003ee1b4e729
+  to_:
+  - cfd781d6-5d69-41c2-bf5a-0adae380bc6a
+  relationship_type: uses
+- uid: 79f03875-82ed-41f4-a7d3-01ba474bebe8
+  type: Relationship
+  properties: {}
+  from_: f294d3ec-d447-406f-b92c-003ee1b4e729
+  to_:
+  - 4a09b252-2c5e-44dc-88e7-1ab6400a5eba
+  relationship_type: derivedFrom
+- uid: 25f9d45e-0ca1-4677-892b-983ce7ff358e
+  type: Relationship
+  properties: {}
+  from_: d6c6d51c-ca0c-4cf5-b8a0-ed5f0f517642
+  to_:
+  - f294d3ec-d447-406f-b92c-003ee1b4e729
+  relationship_type: produces

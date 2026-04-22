@@ -1,0 +1,123 @@
+uid: 777ee440-3b3e-4dc1-a0c8-9c12e18a29cb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Groq_Llama-3-Groq-70B-Tool-Use.json
+  type: SoftwareFile
+  name: Groq_Llama-3-Groq-70B-Tool-Use.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:80c8acf5-4e2c-4a4c-8c0b-146fea885943
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Groq_Llama-3-Groq-70B-Tool-Use.json
+    type: ExternalReference
+  languages: []
+- uid: af01d529-a653-4c07-a27e-e1136a2f3345
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2b57b462-5f3c-4add-8f99-056e451ec503
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3-70B
+    type: ExternalReference
+  languages: []
+- uid: 5a84e45c-8beb-4a4e-8dc8-ce2698d85ae5
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:49.538498+00:00'
+    bom-ref: Groq/Llama-3-Groq-70B-Tool-Use-9c21b450-4006-5155-abfc-40517fd40844
+    name: Groq/Llama-3-Groq-70B-Tool-Use
+    authors:
+    - name: Groq
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Details
+
+
+      - **Model Type:** Causal language model fine-tuned for tool use
+
+      - **Language(s):** English
+
+      - **License:** Meta Llama 3 Community License
+
+      - **Model Architecture:** Optimized transformer
+
+      - **Training Approach:** Full fine-tuning and Direct Preference Optimization (DPO) on Llama 3 70B base model
+
+      - **Input:** Text
+
+      - **Output:** Text, with enhanced capabilities for tool use and function calling
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - facebook
+    - meta
+    - pytorch
+    - llama-3
+    - groq
+    - tool-use
+    - function-calling
+    - conversational
+    - en
+    - base_model:meta-llama/Meta-Llama-3-70B
+    - base_model:finetune:meta-llama/Meta-Llama-3-70B
+    - license:llama3
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Groq/Llama-3-Groq-70B-Tool-Use
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1917afeb-cc57-471b-a43d-541f6a9f2e5f
+  type: Relationship
+  properties: {}
+  from_: 777ee440-3b3e-4dc1-a0c8-9c12e18a29cb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Groq_Llama-3-Groq-70B-Tool-Use.json
+  relationship_type: annotatedBy
+- uid: 1d03fa5d-647a-44f9-9218-3acc728d5b55
+  type: Relationship
+  properties: {}
+  from_: 5a84e45c-8beb-4a4e-8dc8-ce2698d85ae5
+  to_:
+  - af01d529-a653-4c07-a27e-e1136a2f3345
+  relationship_type: uses
+- uid: 98a7babf-1b4a-4206-b0ab-c4424b981baa
+  type: Relationship
+  properties: {}
+  from_: 5a84e45c-8beb-4a4e-8dc8-ce2698d85ae5
+  to_:
+  - 2b57b462-5f3c-4add-8f99-056e451ec503
+  relationship_type: derivedFrom
+- uid: 992ea7ce-9e85-4c4e-a0ec-632463a687ea
+  type: Relationship
+  properties: {}
+  from_: 777ee440-3b3e-4dc1-a0c8-9c12e18a29cb
+  to_:
+  - 5a84e45c-8beb-4a4e-8dc8-ce2698d85ae5
+  relationship_type: produces

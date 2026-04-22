@@ -1,0 +1,79 @@
+uid: d0a1867b-4f33-44ef-8555-c277455f40fb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_deepseek-moe-16b-base.json
+  type: SoftwareFile
+  name: deepseek-ai_deepseek-moe-16b-base.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a5cc6796-a175-4137-8eaf-048dc2210bb0
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_deepseek-moe-16b-base.json
+    type: ExternalReference
+  languages: []
+- uid: 8e659b29-cd27-49d9-a413-cfc0a3450365
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 119eea36-0dd7-4d36-9283-3fd71864ef9c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:31.658287+00:00'
+    bom-ref: deepseek-ai/deepseek-moe-16b-base-8e020545-ea61-54be-8c70-7dfafe0eb612
+    name: deepseek-ai/deepseek-moe-16b-base
+    authors:
+    - name: deepseek-ai
+    architectureFamily: deepseek
+    modelArchitecture: DeepseekForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - deepseek
+    - text-generation
+    - custom_code
+    - arxiv:2401.06066
+    - license:other
+    - autotrain_compatible
+    - region:us
+  license:
+    name: deepseek
+    url: https://github.com/deepseek-ai/DeepSeek-MoE/blob/main/LICENSE-MODEL
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/deepseek-ai/deepseek-moe-16b-base
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 48ba4247-d770-4bed-aebc-906d2e509d4c
+  type: Relationship
+  properties: {}
+  from_: d0a1867b-4f33-44ef-8555-c277455f40fb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_deepseek-moe-16b-base.json
+  relationship_type: annotatedBy
+- uid: a28d3cfa-5e64-4704-b3bd-4604f6d5654e
+  type: Relationship
+  properties: {}
+  from_: 119eea36-0dd7-4d36-9283-3fd71864ef9c
+  to_:
+  - 8e659b29-cd27-49d9-a413-cfc0a3450365
+  relationship_type: uses
+- uid: af551377-22c3-4536-a713-a14abf5048a0
+  type: Relationship
+  properties: {}
+  from_: d0a1867b-4f33-44ef-8555-c277455f40fb
+  to_:
+  - 119eea36-0dd7-4d36-9283-3fd71864ef9c
+  relationship_type: produces

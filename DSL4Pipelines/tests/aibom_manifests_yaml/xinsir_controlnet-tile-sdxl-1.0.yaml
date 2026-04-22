@@ -1,0 +1,73 @@
+uid: 69ffd5d8-cd6e-4385-841b-99e7ca9a3842
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xinsir_controlnet-tile-sdxl-1.0.json
+  type: SoftwareFile
+  name: xinsir_controlnet-tile-sdxl-1.0.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:64d76bbb-b255-42b4-95d4-40d0e933aad2
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xinsir_controlnet-tile-sdxl-1.0.json
+    type: ExternalReference
+  languages: []
+- uid: 0f81a91c-6c04-46d6-8333-b3efcc68016a
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2adc198a-73fc-47e8-a815-8a858309b285
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:03.162427+00:00'
+    bom-ref: xinsir/controlnet-tile-sdxl-1.0-f8845e01-788e-5c8f-8385-b9ccdec01666
+    name: xinsir/controlnet-tile-sdxl-1.0
+    authors:
+    - name: xinsir
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: d1cccca0-809b-4775-860d-1e4e9624de61
+  type: Relationship
+  properties: {}
+  from_: 69ffd5d8-cd6e-4385-841b-99e7ca9a3842
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xinsir_controlnet-tile-sdxl-1.0.json
+  relationship_type: annotatedBy
+- uid: 4b8b3790-dfff-4487-9f1e-03f67482e152
+  type: Relationship
+  properties: {}
+  from_: 2adc198a-73fc-47e8-a815-8a858309b285
+  to_:
+  - 0f81a91c-6c04-46d6-8333-b3efcc68016a
+  relationship_type: uses
+- uid: 4a5cf51c-e594-4749-a040-a9d89abbd232
+  type: Relationship
+  properties: {}
+  from_: 69ffd5d8-cd6e-4385-841b-99e7ca9a3842
+  to_:
+  - 2adc198a-73fc-47e8-a815-8a858309b285
+  relationship_type: produces

@@ -1,0 +1,73 @@
+uid: 1c421eb6-8c4e-4e90-ae21-55b9cbc99936
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ai21labs_AI21-Jamba-1.5-Large.json
+  type: SoftwareFile
+  name: ai21labs_AI21-Jamba-1.5-Large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f375325a-489d-4c54-9777-95973595c43b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ai21labs_AI21-Jamba-1.5-Large.json
+    type: ExternalReference
+  languages: []
+- uid: 0a97f2e4-c25f-47a8-a60c-71c7214f9dc7
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:53.300837+00:00'
+    bom-ref: ai21labs/AI21-Jamba-1.5-Large-7d631f3d-9d8a-59cb-b1f9-e6d3811b7f80
+    name: ai21labs/AI21-Jamba-1.5-Large
+    authors:
+    - name: ai21labs
+    architectureFamily: jamba
+    modelArchitecture: JambaForCausalLM
+    tags:
+    - safetensors
+    - jamba
+    - mamba
+    - moe
+    - text-generation
+    - conversational
+    - en
+    - fr
+    - de
+    - nl
+    - es
+    - pt
+    - it
+    - ar
+    - he
+    - license:other
+    - region:us
+  license:
+    name: jamba-open-model-license
+    url: https://www.ai21.com/licenses/jamba-open-model-license
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ai21labs/AI21-Jamba-1.5-Large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 58ba2afc-ed34-46c9-abbb-132c37b75e56
+  type: Relationship
+  properties: {}
+  from_: 1c421eb6-8c4e-4e90-ae21-55b9cbc99936
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ai21labs_AI21-Jamba-1.5-Large.json
+  relationship_type: annotatedBy
+- uid: de03bead-88dd-43cc-95fd-68c64180e3d5
+  type: Relationship
+  properties: {}
+  from_: 1c421eb6-8c4e-4e90-ae21-55b9cbc99936
+  to_:
+  - 0a97f2e4-c25f-47a8-a60c-71c7214f9dc7
+  relationship_type: produces

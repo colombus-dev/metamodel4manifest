@@ -1,0 +1,78 @@
+uid: 8cc1aa24-2cf3-4993-99c1-3a95ce824139
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tencent_Hunyuan3D-1.json
+  type: SoftwareFile
+  name: tencent_Hunyuan3D-1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e736c082-61d7-40ea-8b76-5193c976f837
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tencent_Hunyuan3D-1.json
+    type: ExternalReference
+  languages: []
+- uid: 7d18ae44-f2f8-480d-891f-bc55d54cded0
+  type: SoftwareFile
+  name: hunyuan3d-1.0
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 5fa1b22d-fdff-4903-b0f6-450e5ea07afb
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:41.805791+00:00'
+    bom-ref: tencent/Hunyuan3D-1-efc9f722-930c-5ee6-abbe-944829507f06
+    name: tencent/Hunyuan3D-1
+    authors:
+    - name: tencent
+    tags:
+    - hunyuan3d-1.0
+    - diffusers
+    - safetensors
+    - image-to-3d
+    - text-to-3d
+    - en
+    - zh
+    - arxiv:2411.02293
+    - license:other
+    - region:us
+  license:
+    name: tencent-hunyuan-community
+    url: https://huggingface.co/tencent/Hunyuan3D-1/blob/main/LICENSE.txt
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/tencent/Hunyuan3D-1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-3d
+relations:
+- uid: 410ee5b3-38be-4705-ac38-25906afd9a4d
+  type: Relationship
+  properties: {}
+  from_: 8cc1aa24-2cf3-4993-99c1-3a95ce824139
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tencent_Hunyuan3D-1.json
+  relationship_type: annotatedBy
+- uid: 20ff78ef-3ce2-476c-ac3a-4464271374d0
+  type: Relationship
+  properties: {}
+  from_: 5fa1b22d-fdff-4903-b0f6-450e5ea07afb
+  to_:
+  - 7d18ae44-f2f8-480d-891f-bc55d54cded0
+  relationship_type: uses
+- uid: 5bd05c04-1e40-4e83-93de-d59641753d75
+  type: Relationship
+  properties: {}
+  from_: 8cc1aa24-2cf3-4993-99c1-3a95ce824139
+  to_:
+  - 5fa1b22d-fdff-4903-b0f6-450e5ea07afb
+  relationship_type: produces

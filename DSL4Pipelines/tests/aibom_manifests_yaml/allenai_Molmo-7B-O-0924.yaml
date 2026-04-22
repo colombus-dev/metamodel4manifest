@@ -1,0 +1,103 @@
+uid: c2429190-cfe6-43d6-9e46-25d64882b217
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/allenai_Molmo-7B-O-0924.json
+  type: SoftwareFile
+  name: allenai_Molmo-7B-O-0924.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3bba18e5-999d-4b3a-bdd4-3843c81eada9
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/allenai_Molmo-7B-O-0924.json
+    type: ExternalReference
+  languages: []
+- uid: c5ee3be0-9fb9-48ba-bded-f80fbfd42413
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f8a70203-0c3a-44c3-b85f-f0c79f7c654f
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: openai/clip-vit-large-patch14-336, allenai/OLMo-7B-1124
+    type: ExternalReference
+  languages: []
+- uid: 14c9f6c6-c989-4d8a-a847-71666668da4f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:54.864678+00:00'
+    bom-ref: allenai/Molmo-7B-O-0924-8ca62b21-56ac-5984-ab31-a55a8ca079b0
+    name: allenai/Molmo-7B-O-0924
+    authors:
+    - name: allenai
+    architectureFamily: molmo
+    modelArchitecture: MolmoForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - molmo
+    - text-generation
+    - multimodal
+    - olmo
+    - pixmo
+    - image-text-to-text
+    - conversational
+    - custom_code
+    - en
+    - arxiv:2409.17146
+    - base_model:openai/clip-vit-large-patch14-336
+    - base_model:finetune:openai/clip-vit-large-patch14-336
+    - license:apache-2.0
+    - autotrain_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/allenai/Molmo-7B-O-0924
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: 72285c82-0c97-4ca2-beac-5a167487ade9
+  type: Relationship
+  properties: {}
+  from_: c2429190-cfe6-43d6-9e46-25d64882b217
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/allenai_Molmo-7B-O-0924.json
+  relationship_type: annotatedBy
+- uid: 787a7eae-938d-4c45-884e-acf56a224261
+  type: Relationship
+  properties: {}
+  from_: 14c9f6c6-c989-4d8a-a847-71666668da4f
+  to_:
+  - c5ee3be0-9fb9-48ba-bded-f80fbfd42413
+  relationship_type: uses
+- uid: 7f39b3f4-a0d0-4ac9-be09-f0c33a6d1a42
+  type: Relationship
+  properties: {}
+  from_: 14c9f6c6-c989-4d8a-a847-71666668da4f
+  to_:
+  - f8a70203-0c3a-44c3-b85f-f0c79f7c654f
+  relationship_type: derivedFrom
+- uid: c8b3f1ec-bc54-40b6-84af-71d13438429e
+  type: Relationship
+  properties: {}
+  from_: c2429190-cfe6-43d6-9e46-25d64882b217
+  to_:
+  - 14c9f6c6-c989-4d8a-a847-71666668da4f
+  relationship_type: produces

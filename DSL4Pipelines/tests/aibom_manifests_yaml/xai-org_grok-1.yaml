@@ -1,0 +1,73 @@
+uid: 6dc0f667-058c-40cb-87de-0fd98f50f115
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xai-org_grok-1.json
+  type: SoftwareFile
+  name: xai-org_grok-1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2ae7afad-803b-4a49-bc5c-91480a735f86
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xai-org_grok-1.json
+    type: ExternalReference
+  languages: []
+- uid: 8d80ccb5-c46c-4829-87a9-ced96da90159
+  type: SoftwareFile
+  name: grok
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 5bd6c5e5-e5dd-4206-afe0-75bdff1d6a62
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:45.978034+00:00'
+    bom-ref: xai-org/grok-1-86e2cda8-3667-51a5-9b51-bfc0fcbcf7ef
+    name: xai-org/grok-1
+    authors:
+    - name: xai-org
+    tags:
+    - grok
+    - grok-1
+    - text-generation
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/xai-org/grok-1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 0da44167-0992-4793-8032-b5068a2fe2a3
+  type: Relationship
+  properties: {}
+  from_: 6dc0f667-058c-40cb-87de-0fd98f50f115
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/xai-org_grok-1.json
+  relationship_type: annotatedBy
+- uid: 1ea4e467-f5c6-48cb-af11-bc89b46969df
+  type: Relationship
+  properties: {}
+  from_: 5bd6c5e5-e5dd-4206-afe0-75bdff1d6a62
+  to_:
+  - 8d80ccb5-c46c-4829-87a9-ced96da90159
+  relationship_type: uses
+- uid: b5956c04-2419-4119-a77d-538c86888e91
+  type: Relationship
+  properties: {}
+  from_: 6dc0f667-058c-40cb-87de-0fd98f50f115
+  to_:
+  - 5bd6c5e5-e5dd-4206-afe0-75bdff1d6a62
+  relationship_type: produces

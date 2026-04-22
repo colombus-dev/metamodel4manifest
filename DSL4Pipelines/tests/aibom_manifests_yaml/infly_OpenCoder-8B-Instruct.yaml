@@ -1,0 +1,149 @@
+uid: fd834075-322e-45de-8c68-92b79cc77888
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/infly_OpenCoder-8B-Instruct.json
+  type: SoftwareFile
+  name: infly_OpenCoder-8B-Instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9d70512e-7ba0-428c-96fd-7a4c4daa5069
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/infly_OpenCoder-8B-Instruct.json
+    type: ExternalReference
+  languages: []
+- uid: 71bb4bb5-8448-41fa-9f6b-2377780e952f
+  type: Data
+  properties:
+    bom-ref: OpenCoder-LLM/opencoder-sft-stage1-372d7af3-6153-5091-b5cd-39c612c74e03
+    name: OpenCoder-LLM/opencoder-sft-stage1
+    content_url: https://huggingface.co/datasets/OpenCoder-LLM/opencoder-sft-stage1
+    configs: 'Name of the dataset subset: realuser_instruct {"split": "train", "path": "data/realuser_instruct-*"}'
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: OpenCoder-LLM/opencoder-sft-stage1-372d7af3-6153-5091-b5cd-39c612c74e03
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 96fb2bd6-3c4e-400e-8bfb-4e992033ab1d
+  type: Data
+  properties:
+    bom-ref: OpenCoder-LLM/opencoder-sft-stage2-ea53b7ac-b98d-5eef-a195-834ce3ec5a49
+    name: OpenCoder-LLM/opencoder-sft-stage2
+    content_url: https://huggingface.co/datasets/OpenCoder-LLM/opencoder-sft-stage2
+    configs: 'Name of the dataset subset: package_instruct {"split": "train", "path": "package_instruct/train-*"}'
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: OpenCoder-LLM/opencoder-sft-stage2-ea53b7ac-b98d-5eef-a195-834ce3ec5a49
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 46c50ce4-159d-4654-b7da-030ce27799a8
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b9709cad-973f-4aae-a6ec-fe4629c1fb89
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: infly/OpenCoder-8B-Base
+    type: ExternalReference
+  languages: []
+- uid: 029659de-4450-4341-9d2c-992c1e9a3877
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:13.160269+00:00'
+    bom-ref: infly/OpenCoder-8B-Instruct-d195bd27-df6f-5de8-8ab3-9f475c6cc49c
+    name: infly/OpenCoder-8B-Instruct
+    authors:
+    - name: infly
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - en
+    - zh
+    - dataset:OpenCoder-LLM/opencoder-sft-stage1
+    - dataset:OpenCoder-LLM/opencoder-sft-stage2
+    - arxiv:2411.04905
+    - base_model:infly/OpenCoder-8B-Base
+    - base_model:finetune:infly/OpenCoder-8B-Base
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: inf
+    url: https://huggingface.co/infly/OpenCoder-8B-Instruct/blob/main/LICENSE
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/infly/OpenCoder-8B-Instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: a24c8d83-461d-437e-bf50-5f588df36060
+  type: Relationship
+  properties: {}
+  from_: fd834075-322e-45de-8c68-92b79cc77888
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/infly_OpenCoder-8B-Instruct.json
+  relationship_type: annotatedBy
+- uid: 6cb05633-0088-4e50-a20e-ae1d193d909e
+  type: Relationship
+  properties: {}
+  from_: 029659de-4450-4341-9d2c-992c1e9a3877
+  to_:
+  - 71bb4bb5-8448-41fa-9f6b-2377780e952f
+  - 96fb2bd6-3c4e-400e-8bfb-4e992033ab1d
+  relationship_type: uses
+- uid: 88b5a6a2-23bd-4c57-b445-971aeaeaeb2e
+  type: Relationship
+  properties: {}
+  from_: 029659de-4450-4341-9d2c-992c1e9a3877
+  to_:
+  - 46c50ce4-159d-4654-b7da-030ce27799a8
+  relationship_type: uses
+- uid: 2a69320e-768b-4fc7-896e-ff3c8a63a7bc
+  type: Relationship
+  properties: {}
+  from_: 029659de-4450-4341-9d2c-992c1e9a3877
+  to_:
+  - b9709cad-973f-4aae-a6ec-fe4629c1fb89
+  relationship_type: derivedFrom
+- uid: e28dde8f-c646-408e-aa9b-7f5fc4f090c1
+  type: Relationship
+  properties: {}
+  from_: fd834075-322e-45de-8c68-92b79cc77888
+  to_:
+  - 029659de-4450-4341-9d2c-992c1e9a3877
+  relationship_type: produces

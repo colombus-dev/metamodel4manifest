@@ -1,0 +1,101 @@
+uid: 9a171e42-7d84-423d-9de0-5ed09207a60b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/MLP-KTLim_llama-3-Korean-Bllossom-8B.json
+  type: SoftwareFile
+  name: MLP-KTLim_llama-3-Korean-Bllossom-8B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8fa3c990-d71a-40d2-a1cc-356a2efa3edd
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/MLP-KTLim_llama-3-Korean-Bllossom-8B.json
+    type: ExternalReference
+  languages: []
+- uid: 6c8ae736-4891-4c22-b0d4-f1d9794804b4
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 59a392ba-d9d8-460d-a62e-9ddb0b55993c
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3-8B
+    type: ExternalReference
+  languages: []
+- uid: 270a8131-9262-4e1f-a3de-ace83a578a9e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:49.159889+00:00'
+    bom-ref: MLP-KTLim/llama-3-Korean-Bllossom-8B-6a893220-6f0f-58d8-9eb2-230fc348944d
+    name: MLP-KTLim/llama-3-Korean-Bllossom-8B
+    authors:
+    - name: MLP-KTLim
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - en
+    - ko
+    - arxiv:2403.10882
+    - arxiv:2403.11399
+    - base_model:meta-llama/Meta-Llama-3-8B
+    - base_model:finetune:meta-llama/Meta-Llama-3-8B
+    - license:llama3
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/MLP-KTLim/llama-3-Korean-Bllossom-8B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 90ce80bc-fe95-4206-b64f-8ae9e47d1dde
+  type: Relationship
+  properties: {}
+  from_: 9a171e42-7d84-423d-9de0-5ed09207a60b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/MLP-KTLim_llama-3-Korean-Bllossom-8B.json
+  relationship_type: annotatedBy
+- uid: 4b6e438d-0922-4387-8393-3d283b107114
+  type: Relationship
+  properties: {}
+  from_: 270a8131-9262-4e1f-a3de-ace83a578a9e
+  to_:
+  - 6c8ae736-4891-4c22-b0d4-f1d9794804b4
+  relationship_type: uses
+- uid: 55ae347c-98ef-426b-90bf-eec2e93bece2
+  type: Relationship
+  properties: {}
+  from_: 270a8131-9262-4e1f-a3de-ace83a578a9e
+  to_:
+  - 59a392ba-d9d8-460d-a62e-9ddb0b55993c
+  relationship_type: derivedFrom
+- uid: cb0a05c3-7cf5-4678-a926-3fbd030f0d42
+  type: Relationship
+  properties: {}
+  from_: 9a171e42-7d84-423d-9de0-5ed09207a60b
+  to_:
+  - 270a8131-9262-4e1f-a3de-ace83a578a9e
+  relationship_type: produces

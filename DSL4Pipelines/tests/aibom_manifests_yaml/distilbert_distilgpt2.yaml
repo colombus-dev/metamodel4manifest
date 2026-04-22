@@ -1,0 +1,155 @@
+uid: 2c4ec055-a508-47c4-a73d-8e24a3613409
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/distilbert_distilgpt2.json
+  type: SoftwareFile
+  name: distilbert_distilgpt2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:7e5826bc-d90c-46a1-b937-e452c97cb0b1
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/distilbert_distilgpt2.json
+    type: ExternalReference
+  languages: []
+- uid: 72c891b5-cb43-4bb8-b2a0-28264581d46f
+  type: Data
+  properties:
+    bom-ref: openwebtext-ad1782f5-9e72-551b-9f03-d7c6272f8de9
+    name: openwebtext
+    content_url: https://huggingface.co/datasets/openwebtext
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: 1M<n<10M
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: OpenWebText
+    source_datasets: original
+    paperswithcode_id: openwebtext
+    license: cc0-1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: openwebtext-ad1782f5-9e72-551b-9f03-d7c6272f8de9
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 6f249287-72e9-4115-8833-73b7e34684c5
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 1039a8a5-4500-4e2c-a33b-68cbde1c508f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:06.305526+00:00'
+    bom-ref: distilbert/distilgpt2-63c18166-d500-5061-aef5-8d801c5571bd
+    name: distilbert/distilgpt2
+    authors:
+    - name: distilbert
+    architectureFamily: gpt2
+    modelArchitecture: GPT2LMHeadModel
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: wikitext'
+        type: perplexity
+        value: 21.1
+    description: '## Model Details
+
+
+      - **Developed by:** Hugging Face
+
+      - **Model type:** Transformer-based Language Model
+
+      - **Language:** English
+
+      - **License:** Apache 2.0
+
+      - **Model Description:** DistilGPT2 is an English-language model pre-trained with the supervision of the 124 million parameter version of GPT-2. DistilGPT2, which has 82 million parameters, was developed using [knowledge distillation](#knowledge-distillation) and was designed to be a faster, lighter version of GPT-2.
+
+      - **Resources for more information:** See [this repository](https://github.com/huggingface/transformers/tree/main/examples/research_projects/distillation) for more about Distil\* (a class of compressed models including Distilled-GPT2), [Sanh et al. (2019)](https://arxiv.org/abs/1910.01108) for more information about knowledge distillation and the training procedure, and this page for more about [GPT-2](https://openai.com/blog/better-language-models/).
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - tflite
+    - rust
+    - coreml
+    - safetensors
+    - gpt2
+    - text-generation
+    - exbert
+    - en
+    - dataset:openwebtext
+    - arxiv:1910.01108
+    - arxiv:2201.08542
+    - arxiv:2203.12574
+    - arxiv:1910.09700
+    - arxiv:1503.02531
+    - license:apache-2.0
+    - model-index
+    - co2_eq_emissions
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/distilbert/distilgpt2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: []
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: afbd3bde-c336-4152-a14c-9d68d41e476b
+  type: Relationship
+  properties: {}
+  from_: 2c4ec055-a508-47c4-a73d-8e24a3613409
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/distilbert_distilgpt2.json
+  relationship_type: annotatedBy
+- uid: 6ddf1065-5b3a-49cf-9637-4b836af259b1
+  type: Relationship
+  properties: {}
+  from_: 1039a8a5-4500-4e2c-a33b-68cbde1c508f
+  to_:
+  - 72c891b5-cb43-4bb8-b2a0-28264581d46f
+  relationship_type: uses
+- uid: 8da2297c-521f-461d-93d8-c6b438fb6924
+  type: Relationship
+  properties: {}
+  from_: 1039a8a5-4500-4e2c-a33b-68cbde1c508f
+  to_:
+  - 6f249287-72e9-4115-8833-73b7e34684c5
+  relationship_type: uses
+- uid: e18415f9-1a30-44d0-9fc3-1b25e72fcc71
+  type: Relationship
+  properties: {}
+  from_: 2c4ec055-a508-47c4-a73d-8e24a3613409
+  to_:
+  - 1039a8a5-4500-4e2c-a33b-68cbde1c508f
+  relationship_type: produces

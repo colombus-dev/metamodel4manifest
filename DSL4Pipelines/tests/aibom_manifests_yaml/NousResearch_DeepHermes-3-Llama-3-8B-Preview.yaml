@@ -1,0 +1,131 @@
+uid: b8202f4d-b769-4663-9736-ffe73be676d6
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_DeepHermes-3-Llama-3-8B-Preview.json
+  type: SoftwareFile
+  name: NousResearch_DeepHermes-3-Llama-3-8B-Preview.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:81c6c8c7-46d6-4d96-8787-16a7d7c549c8
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_DeepHermes-3-Llama-3-8B-Preview.json
+    type: ExternalReference
+  languages: []
+- uid: 712409bc-97e3-41f7-b50c-7faffae1f08d
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f019a841-abf3-417b-b157-354b244ee975
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3.1-8B
+    type: ExternalReference
+  languages: []
+- uid: a9249386-3d82-4083-a07f-f4b88558951c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:02.966669+00:00'
+    bom-ref: NousResearch/DeepHermes-3-Llama-3-8B-Preview-95242d82-0cf6-5ccf-8c5a-9c0a48372e14
+    name: NousResearch/DeepHermes-3-Llama-3-8B-Preview
+    authors:
+    - name: NousResearch
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Description
+
+
+      DeepHermes 3 Preview is the latest version of our flagship Hermes series of LLMs by Nous Research, and one of the first models in the world to unify Reasoning (long chains of thought that improve answer accuracy) and normal LLM response modes into one model. We have also improved LLM annotation, judgement, and function calling.
+
+
+      DeepHermes 3 Preview is one of the first LLM models to unify both "intuitive", traditional mode responses and **long chain of thought reasoning** responses into a single model, toggled by a system prompt.
+
+
+      Hermes 3, the predecessor of DeepHermes 3, is a generalist language model with many improvements over Hermes 2, including advanced agentic capabilities, much better roleplaying, reasoning, multi-turn conversation, long context coherence, and improvements across the board.
+
+
+      The ethos of the Hermes series of models is focused on aligning LLMs to the user, with powerful steering capabilities and control given to the end user.
+
+
+      *This is a preview Hermes with early reasoning capabilities, distilled from R1 across a variety of tasks that benefit from reasoning and objectivity. Some quirks may be discovered! Please let us know any interesting findings or issues you discover!*
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - Llama-3
+    - instruct
+    - finetune
+    - chatml
+    - gpt4
+    - synthetic data
+    - distillation
+    - function calling
+    - json mode
+    - axolotl
+    - roleplaying
+    - chat
+    - reasoning
+    - r1
+    - vllm
+    - conversational
+    - en
+    - base_model:meta-llama/Llama-3.1-8B
+    - base_model:finetune:meta-llama/Llama-3.1-8B
+    - license:llama3
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-8B-Preview
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 29b2186c-99a2-4126-83f9-749ed5e79602
+  type: Relationship
+  properties: {}
+  from_: b8202f4d-b769-4663-9736-ffe73be676d6
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_DeepHermes-3-Llama-3-8B-Preview.json
+  relationship_type: annotatedBy
+- uid: 819d0f05-9989-4079-a50b-8e01d4cfff8e
+  type: Relationship
+  properties: {}
+  from_: a9249386-3d82-4083-a07f-f4b88558951c
+  to_:
+  - 712409bc-97e3-41f7-b50c-7faffae1f08d
+  relationship_type: uses
+- uid: af33135f-1425-4fae-895e-c08dfd74a0ac
+  type: Relationship
+  properties: {}
+  from_: a9249386-3d82-4083-a07f-f4b88558951c
+  to_:
+  - f019a841-abf3-417b-b157-354b244ee975
+  relationship_type: derivedFrom
+- uid: 0783fc20-fcd3-4cb7-a5b7-fef7e142f614
+  type: Relationship
+  properties: {}
+  from_: b8202f4d-b769-4663-9736-ffe73be676d6
+  to_:
+  - a9249386-3d82-4083-a07f-f4b88558951c
+  relationship_type: produces

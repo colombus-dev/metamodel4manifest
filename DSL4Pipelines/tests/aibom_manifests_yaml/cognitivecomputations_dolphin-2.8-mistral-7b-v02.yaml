@@ -1,0 +1,278 @@
+uid: 5bb8fe72-7655-4470-9c4f-bce75903dab0
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_dolphin-2.8-mistral-7b-v02.json
+  type: SoftwareFile
+  name: cognitivecomputations_dolphin-2.8-mistral-7b-v02.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:27777884-c433-4ac8-9f08-2178b9b5fce9
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_dolphin-2.8-mistral-7b-v02.json
+    type: ExternalReference
+  languages: []
+- uid: 008a3ad0-1ce0-4fe5-965d-6c1e9a7a7921
+  type: Data
+  properties:
+    bom-ref: cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9
+    name: cognitivecomputations/dolphin
+    content_url: https://huggingface.co/datasets/cognitivecomputations/dolphin
+    task_categories: text-generation
+    configs: 'Name of the dataset subset: flan5m-alpaca-uncensored "f", "l", "a", "n", "5", "m", "-", "a", "l", "p", "a", "c", "a", "-", "u", "n", "c", "e", "n", "s", "o", "r", "e", "d", ".", "j", "s", "o", "n", "l"'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: d1df96b3-6ae8-4ef4-8c47-c841769dc55c
+  type: Data
+  properties:
+    bom-ref: cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1
+    name: cognitivecomputations/dolphin-coder
+    content_url: https://huggingface.co/datasets/cognitivecomputations/dolphin-coder
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ecc1d897-d41f-41cd-ac07-19a340f19b21
+  type: Data
+  properties:
+    bom-ref: cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7
+    name: cognitivecomputations/samantha-data
+    content_url: https://huggingface.co/datasets/cognitivecomputations/samantha-data
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 75df9aca-8d6f-4438-9299-df8c1fa8c8b7
+  type: Data
+  properties:
+    bom-ref: jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4
+    name: jondurbin/airoboros-2.2.1
+    content_url: https://huggingface.co/datasets/jondurbin/airoboros-2.2.1
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: bc2252b5-54fb-49b5-a1b2-599f36c63cc4
+  type: Data
+  properties:
+    bom-ref: teknium/openhermes-2.5-c02f849c-bd0b-5c85-b857-cf49a96bc5ce
+    name: teknium/openhermes-2.5
+    content_url: https://huggingface.co/datasets/teknium/openhermes-2.5
+    pretty_name: OpenHermes 2.5
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: teknium/openhermes-2.5-c02f849c-bd0b-5c85-b857-cf49a96bc5ce
+    type: ExternalReference
+  languages:
+  - eng
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 99b42dca-f9bf-40ba-ad0a-0e6c32106aa9
+  type: Data
+  properties:
+    bom-ref: m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f
+    name: m-a-p/Code-Feedback
+    content_url: https://huggingface.co/datasets/m-a-p/Code-Feedback
+    task_categories: question-answering
+    size_categories: 10K<n<100K
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 8eb6e6eb-0466-4e29-8c7b-3bd45b6c1a4d
+  type: Data
+  properties:
+    bom-ref: m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053
+    name: m-a-p/CodeFeedback-Filtered-Instruction
+    content_url: https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction
+    task_categories: question-answering
+    size_categories: 10K<n<100K
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: d5227079-f60d-4a48-a495-23accfc602e1
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b757a38b-c015-4d91-a8e1-6d158ce16bdf
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: alpindale/Mistral-7B-v0.2-hf
+    type: ExternalReference
+  languages: []
+- uid: b2f05b62-df49-41bd-a4e7-4504dab31657
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:53.612220+00:00'
+    bom-ref: cognitivecomputations/dolphin-2.8-mistral-7b-v02-4ca68add-3476-5836-b208-8e5b88a7cf9e
+    name: cognitivecomputations/dolphin-2.8-mistral-7b-v02
+    authors:
+    - name: cognitivecomputations
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: openai_humaneval'
+        type: pass@1
+        value: 0.469
+    description: '## Model description
+
+
+      More information needed
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - mistral
+    - text-generation
+    - conversational
+    - en
+    - dataset:cognitivecomputations/dolphin
+    - dataset:cognitivecomputations/dolphin-coder
+    - dataset:cognitivecomputations/samantha-data
+    - dataset:jondurbin/airoboros-2.2.1
+    - dataset:teknium/openhermes-2.5
+    - dataset:m-a-p/Code-Feedback
+    - dataset:m-a-p/CodeFeedback-Filtered-Instruction
+    - base_model:mistral-community/Mistral-7B-v0.2
+    - base_model:finetune:mistral-community/Mistral-7B-v0.2
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/cognitivecomputations/dolphin-2.8-mistral-7b-v02
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      More information needed
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 99f6b6b4-3513-4e16-bdd0-bd80d4d5e738
+  type: Relationship
+  properties: {}
+  from_: 5bb8fe72-7655-4470-9c4f-bce75903dab0
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_dolphin-2.8-mistral-7b-v02.json
+  relationship_type: annotatedBy
+- uid: 4d96534d-00ca-4d3d-b76f-2058954c8af5
+  type: Relationship
+  properties: {}
+  from_: b2f05b62-df49-41bd-a4e7-4504dab31657
+  to_:
+  - 008a3ad0-1ce0-4fe5-965d-6c1e9a7a7921
+  - d1df96b3-6ae8-4ef4-8c47-c841769dc55c
+  - ecc1d897-d41f-41cd-ac07-19a340f19b21
+  - 75df9aca-8d6f-4438-9299-df8c1fa8c8b7
+  - bc2252b5-54fb-49b5-a1b2-599f36c63cc4
+  - 99b42dca-f9bf-40ba-ad0a-0e6c32106aa9
+  - 8eb6e6eb-0466-4e29-8c7b-3bd45b6c1a4d
+  relationship_type: uses
+- uid: 8901355f-ac55-4c6d-a912-32b199079b5a
+  type: Relationship
+  properties: {}
+  from_: b2f05b62-df49-41bd-a4e7-4504dab31657
+  to_:
+  - d5227079-f60d-4a48-a495-23accfc602e1
+  relationship_type: uses
+- uid: f0e00fb1-b8a9-498b-b68f-c156b58647db
+  type: Relationship
+  properties: {}
+  from_: b2f05b62-df49-41bd-a4e7-4504dab31657
+  to_:
+  - b757a38b-c015-4d91-a8e1-6d158ce16bdf
+  relationship_type: derivedFrom
+- uid: 0ae4b697-3bfa-49d5-ba0f-a131b147cbd4
+  type: Relationship
+  properties: {}
+  from_: 5bb8fe72-7655-4470-9c4f-bce75903dab0
+  to_:
+  - b2f05b62-df49-41bd-a4e7-4504dab31657
+  relationship_type: produces

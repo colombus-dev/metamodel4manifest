@@ -1,0 +1,107 @@
+uid: 0c793f7f-0d0c-4897-a863-a84dff960c03
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2-VL-7B-Instruct.json
+  type: SoftwareFile
+  name: Qwen_Qwen2-VL-7B-Instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:6a4a4b4b-7eb1-412b-bd53-1b2c76bb8536
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2-VL-7B-Instruct.json
+    type: ExternalReference
+  languages: []
+- uid: 4b1f2cfc-d521-4e4e-8280-2a27d37cb0ad
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8c8d99c9-e281-4615-b0a2-1fc84c98e766
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: Qwen/Qwen2-VL-7B
+    type: ExternalReference
+  languages: []
+- uid: 40e10341-e8cb-4ada-9a5a-b8e955e0aa6d
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:48.556736+00:00'
+    bom-ref: Qwen/Qwen2-VL-7B-Instruct-634d9070-7551-5032-aef7-b42e051a6b08
+    name: Qwen/Qwen2-VL-7B-Instruct
+    authors:
+    - name: Qwen
+    architectureFamily: qwen2_vl
+    modelArchitecture: Qwen2VLForConditionalGeneration
+    description: '## Introduction
+
+
+      We''re excited to unveil **Qwen2-VL**, the latest iteration of our Qwen-VL model, representing nearly a year of innovation.
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - qwen2_vl
+    - image-text-to-text
+    - multimodal
+    - conversational
+    - en
+    - arxiv:2409.12191
+    - arxiv:2308.12966
+    - base_model:Qwen/Qwen2-VL-7B
+    - base_model:finetune:Qwen/Qwen2-VL-7B
+    - license:apache-2.0
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: 2cfc6322-12d8-4377-a72e-e47c308c5bd3
+  type: Relationship
+  properties: {}
+  from_: 0c793f7f-0d0c-4897-a863-a84dff960c03
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2-VL-7B-Instruct.json
+  relationship_type: annotatedBy
+- uid: d5cb06ac-719a-4b4e-9920-238f15f31bc1
+  type: Relationship
+  properties: {}
+  from_: 40e10341-e8cb-4ada-9a5a-b8e955e0aa6d
+  to_:
+  - 4b1f2cfc-d521-4e4e-8280-2a27d37cb0ad
+  relationship_type: uses
+- uid: 6a66233e-7370-4b6d-bf30-c49cf58c3aea
+  type: Relationship
+  properties: {}
+  from_: 40e10341-e8cb-4ada-9a5a-b8e955e0aa6d
+  to_:
+  - 8c8d99c9-e281-4615-b0a2-1fc84c98e766
+  relationship_type: derivedFrom
+- uid: 3f4c3c36-fafa-491d-a6fd-393f00303acb
+  type: Relationship
+  properties: {}
+  from_: 0c793f7f-0d0c-4897-a863-a84dff960c03
+  to_:
+  - 40e10341-e8cb-4ada-9a5a-b8e955e0aa6d
+  relationship_type: produces

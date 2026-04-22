@@ -1,0 +1,82 @@
+uid: 44b26f48-2245-46a7-8d7c-9eeb629c9f3f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_chatglm2-6b-32k.json
+  type: SoftwareFile
+  name: THUDM_chatglm2-6b-32k.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:4d919c43-9daa-41bd-8c1c-ae1d597e340e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_chatglm2-6b-32k.json
+    type: ExternalReference
+  languages: []
+- uid: e4b46f6a-811b-41b6-83ee-c83754a1a1c4
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 18adb451-4ba7-4d87-9bc6-d208f4aa01ee
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:53.465200+00:00'
+    bom-ref: THUDM/chatglm2-6b-32k-aa87516a-83f2-56e6-ba28-b6f8c3b620c0
+    name: THUDM/chatglm2-6b-32k
+    authors:
+    - name: THUDM
+    architectureFamily: chatglm
+    modelArchitecture: ChatGLMModel
+    tags:
+    - transformers
+    - pytorch
+    - chatglm
+    - glm
+    - thudm
+    - custom_code
+    - zh
+    - en
+    - arxiv:2103.10360
+    - arxiv:2210.02414
+    - arxiv:2306.15595
+    - arxiv:1911.02150
+    - arxiv:2406.12793
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/THUDM/chatglm2-6b-32k
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 239c7793-a2bf-43d0-8183-118d1c3d229e
+  type: Relationship
+  properties: {}
+  from_: 44b26f48-2245-46a7-8d7c-9eeb629c9f3f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/THUDM_chatglm2-6b-32k.json
+  relationship_type: annotatedBy
+- uid: fb9a87be-e28c-4ac5-8aa0-5724b991743d
+  type: Relationship
+  properties: {}
+  from_: 18adb451-4ba7-4d87-9bc6-d208f4aa01ee
+  to_:
+  - e4b46f6a-811b-41b6-83ee-c83754a1a1c4
+  relationship_type: uses
+- uid: e92a311e-9665-46c3-b6dc-3d26902f30b6
+  type: Relationship
+  properties: {}
+  from_: 44b26f48-2245-46a7-8d7c-9eeb629c9f3f
+  to_:
+  - 18adb451-4ba7-4d87-9bc6-d208f4aa01ee
+  relationship_type: produces

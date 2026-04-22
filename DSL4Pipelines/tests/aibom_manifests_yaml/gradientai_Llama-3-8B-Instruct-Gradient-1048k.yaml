@@ -1,0 +1,230 @@
+uid: b3fa3dac-e42e-4240-a2cf-4a535f75d2af
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/gradientai_Llama-3-8B-Instruct-Gradient-1048k.json
+  type: SoftwareFile
+  name: gradientai_Llama-3-8B-Instruct-Gradient-1048k.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cc0094d6-5bf7-4f23-9e7a-a695d7af5078
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/gradientai_Llama-3-8B-Instruct-Gradient-1048k.json
+    type: ExternalReference
+  languages: []
+- uid: ae802bc7-97de-4834-8ac7-6fee8134ea9e
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 9a0f5962-4bbe-40b3-a334-e4e6c1ef6a47
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:21.095182+00:00'
+    bom-ref: gradientai/Llama-3-8B-Instruct-Gradient-1048k-ce7bebd4-fc76-5bae-9fb3-f4598217aae2
+    name: gradientai/Llama-3-8B-Instruct-Gradient-1048k
+    authors:
+    - name: gradientai
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Details
+
+
+      Meta developed and released the Meta Llama 3 family of large language models (LLMs), a collection of pretrained and instruction tuned generative text models in 8 and 70B sizes. The Llama 3 instruction tuned models are optimized for dialogue use cases and outperform many of the available open source chat models on common industry benchmarks. Further, in developing these models, we took great care to optimize helpfulness and safety.
+
+
+      **Model developers** Meta
+
+
+      **Variations** Llama 3 comes in two sizes — 8B and 70B parameters — in pre-trained and instruction tuned variants.
+
+
+      **Input** Models input text only.
+
+
+      **Output** Models generate text and code only.
+
+
+      **Model Architecture** Llama 3 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety.
+
+
+
+      <table>
+
+      <tr>
+
+      <td>
+
+      </td>
+
+      <td><strong>Training Data</strong>
+
+      </td>
+
+      <td><strong>Params</strong>
+
+      </td>
+
+      <td><strong>Context length</strong>
+
+      </td>
+
+      <td><strong>GQA</strong>
+
+      </td>
+
+      <td><strong>Token count</strong>
+
+      </td>
+
+      <td><strong>Knowledge cutoff</strong>
+
+      </td>
+
+      </tr>
+
+      <tr>
+
+      <td rowspan="2" >Llama 3
+
+      </td>
+
+      <td rowspan="2" >A new mix of publicly available online data.
+
+      </td>
+
+      <td>8B
+
+      </td>
+
+      <td>8k
+
+      </td>
+
+      <td>Yes
+
+      </td>
+
+      <td rowspan="2" >15T+
+
+      </td>
+
+      <td>March, 2023
+
+      </td>
+
+      </tr>
+
+      <tr>
+
+      <td>70B
+
+      </td>
+
+      <td>8k
+
+      </td>
+
+      <td>Yes
+
+      </td>
+
+      <td>December, 2023
+
+      </td>
+
+      </tr>
+
+      </table>
+
+
+
+      **Llama 3 family of models**. Token counts refer to pretraining data only. Both the 8 and 70B versions use Grouped-Query Attention (GQA) for improved inference scalability.
+
+
+      **Model Release Date** April 18, 2024.
+
+
+      **Status** This is a static model trained on an offline dataset. Future versions of the tuned models will be released as we improve model safety with community feedback.
+
+
+      **License** A custom commercial license is available at: [https://llama.meta.com/llama3/license](https://llama.meta.com/llama3/license)
+
+
+      Where to send questions or comments about the model Instructions on how to provide feedback or comments on the model can be found in the model [README](https://github.com/meta-llama/llama3). For more technical information about generation parameters and recipes for how to use Llama 3 in applications, please go [here](https://github.com/meta-llama/llama-recipes).
+
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - meta
+    - llama-3
+    - conversational
+    - en
+    - arxiv:2309.00071
+    - arxiv:2402.08268
+    - arxiv:2305.14233
+    - doi:10.57967/hf/3372
+    - license:llama3
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/gradientai/Llama-3-8B-Instruct-Gradient-1048k
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+
+      **Intended Use Cases** Llama 3 is intended for commercial and research use in English. Instruction tuned models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks.
+
+
+      **Out-of-scope** Use in any manner that violates applicable laws or regulations (including trade compliance laws). Use in any other way that is prohibited by the Acceptable Use Policy and Llama 3 Community License. Use in languages other than English**.
+
+
+      **Note: Developers may fine-tune Llama 3 models for languages beyond English provided they comply with the Llama 3 Community License and the Acceptable Use Policy.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: b5101c17-dda8-4bf5-8ce5-9c797571ad1a
+  type: Relationship
+  properties: {}
+  from_: b3fa3dac-e42e-4240-a2cf-4a535f75d2af
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/gradientai_Llama-3-8B-Instruct-Gradient-1048k.json
+  relationship_type: annotatedBy
+- uid: a2d82f1a-7838-4fed-a55d-72d2bba46dfa
+  type: Relationship
+  properties: {}
+  from_: 9a0f5962-4bbe-40b3-a334-e4e6c1ef6a47
+  to_:
+  - ae802bc7-97de-4834-8ac7-6fee8134ea9e
+  relationship_type: uses
+- uid: f6114aa4-7cbd-4331-88dc-68091694f8c1
+  type: Relationship
+  properties: {}
+  from_: b3fa3dac-e42e-4240-a2cf-4a535f75d2af
+  to_:
+  - 9a0f5962-4bbe-40b3-a334-e4e6c1ef6a47
+  relationship_type: produces

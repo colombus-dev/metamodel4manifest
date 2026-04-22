@@ -1,0 +1,93 @@
+uid: e7576d89-af8a-40c6-a065-eac31a79b219
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dranger003_c4ai-command-r-plus-iMat.GGUF.json
+  type: SoftwareFile
+  name: dranger003_c4ai-command-r-plus-iMat.GGUF.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:bef3b41c-0b34-44ba-9af7-82a6d555debe
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dranger003_c4ai-command-r-plus-iMat.GGUF.json
+    type: ExternalReference
+  languages: []
+- uid: 98737232-7cf1-4c71-b802-2deb7f6cc00e
+  type: SoftwareFile
+  name: gguf
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0adc16bf-06a3-4946-b88b-533415fd98d6
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: CohereForAI/c4ai-command-r-plus
+    type: ExternalReference
+  languages: []
+- uid: 68947e03-933c-4847-8b62-351c47c9cd19
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:22.083687+00:00'
+    bom-ref: dranger003/c4ai-command-r-plus-iMat.GGUF-6f75abec-2f4b-5d53-b139-5e65d10db92c
+    name: dranger003/c4ai-command-r-plus-iMat.GGUF
+    authors:
+    - name: dranger003
+    tags:
+    - gguf
+    - text-generation
+    - base_model:CohereForAI/c4ai-command-r-plus
+    - base_model:quantized:CohereForAI/c4ai-command-r-plus
+    - license:cc-by-nc-4.0
+    - endpoints_compatible
+    - region:us
+    - imatrix
+    - conversational
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/dranger003/c4ai-command-r-plus-iMat.GGUF
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 9ac7244b-2b5c-40a2-abac-31e6b1565bd4
+  type: Relationship
+  properties: {}
+  from_: e7576d89-af8a-40c6-a065-eac31a79b219
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dranger003_c4ai-command-r-plus-iMat.GGUF.json
+  relationship_type: annotatedBy
+- uid: 3d7d6788-ea39-441d-b60a-3b81cd40628b
+  type: Relationship
+  properties: {}
+  from_: 68947e03-933c-4847-8b62-351c47c9cd19
+  to_:
+  - 98737232-7cf1-4c71-b802-2deb7f6cc00e
+  relationship_type: uses
+- uid: 73287aec-1c05-41b7-93d6-7b5ae3ac03e4
+  type: Relationship
+  properties: {}
+  from_: 68947e03-933c-4847-8b62-351c47c9cd19
+  to_:
+  - 0adc16bf-06a3-4946-b88b-533415fd98d6
+  relationship_type: derivedFrom
+- uid: c2e24db2-50f9-4644-8818-179a680ead3c
+  type: Relationship
+  properties: {}
+  from_: e7576d89-af8a-40c6-a065-eac31a79b219
+  to_:
+  - 68947e03-933c-4847-8b62-351c47c9cd19
+  relationship_type: produces

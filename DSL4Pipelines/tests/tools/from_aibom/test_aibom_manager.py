@@ -10,7 +10,7 @@ from tools.transformations.yamlSerializer import YAMLSerializer
 import logging
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.setLevel(logging.DEBUG)
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
 OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/examples/outputs/aibom/')
@@ -58,7 +58,7 @@ def test_filter_manifests_by_rule_llama():
         return False
     results = manager.filter_manifests_by_rule(rule)
     assert len(results) == 48, f"Expected 55 manifests that validate the rule, but got {len(results)}"
-    logger.debug(f"Manifests that validate the rule : {len(results)}")
+    logger.info(f"Manifests that validate the rule : {len(results)}")
     #print(f"First result: {results[0]}")
     for manifest in results:
         ml_models = [a for a in manifest.artefacts if a.type == "MLModel"]
@@ -91,8 +91,8 @@ def test_filter_manifests_by_rule_gpt():
                 return True
         return False
     results = manager.filter_manifests_by_rule(rule)
-    #assert len(results) == 8, f"Expected 8 manifests that validate the rule, but got {len(results)}"
-    logger.debug(f"Manifests that validate the rule : {len(results)}")
+    assert len(results) == 17, f"Expected 8 manifests that validate the rule, but got {len(results)}"
+    logger.info(f"Manifests that validate the rule : {len(results)}")
     #print(f"First result: {results[0]}")
     for manifest in results:
         ml_models = [a for a in manifest.artefacts if a.type == "MLModel"]

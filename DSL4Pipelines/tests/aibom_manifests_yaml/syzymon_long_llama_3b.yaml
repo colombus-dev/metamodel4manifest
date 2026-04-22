@@ -1,0 +1,141 @@
+uid: b0efc46f-912e-4599-aa5f-016d94d5c464
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/syzymon_long_llama_3b.json
+  type: SoftwareFile
+  name: syzymon_long_llama_3b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:42e5c9df-67e2-4e81-a8ae-088644a8469c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/syzymon_long_llama_3b.json
+    type: ExternalReference
+  languages: []
+- uid: 0d4755d9-6b33-48ca-8430-08666e458d1e
+  type: Data
+  properties:
+    bom-ref: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    name: togethercomputer/RedPajama-Data-1T
+    content_url: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T
+    task_categories: text-generation
+    pretty_name: Red Pajama 1T
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ab034b74-e367-4631-9d67-952724d63282
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 37ee9ed4-4688-48ff-8a4b-97057728a93b
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:22.609364+00:00'
+    bom-ref: syzymon/long_llama_3b-acbc70fc-f970-56f3-89bb-fd04f531042e
+    name: syzymon/long_llama_3b
+    authors:
+    - name: syzymon
+    architectureFamily: longllama
+    modelArchitecture: LongLlamaForCausalLM
+    description: '## Overview
+
+      [Focused Transformer: Contrastive Training for Context Scaling](https://arxiv.org/abs/2307.03170) (FoT) presents a simple method for endowing language models with the ability to handle context consisting possibly of millions of tokens while training on significantly shorter input. FoT permits a subset of attention layers to access a memory cache of (key, value) pairs to extend the context length. The distinctive aspect of FoT is its training procedure, drawing from contrastive learning. Specifically, we deliberately expose the memory attention layers to both relevant and irrelevant keys (like negative samples from unrelated documents). This strategy incentivizes the model to differentiate keys connected with semantically diverse values, thereby enhancing their structure. This, in turn, makes it possible to extrapolate the effective context length much beyond what is seen in training.
+
+
+
+      **LongLLaMA** is an [OpenLLaMA](https://github.com/openlm-research/open_llama) model finetuned with the FoT method,
+
+      with three layers used for context extension. **Crucially, LongLLama is able to extrapolate much beyond the context length seen in training: 8k. E.g., in the key retrieval task, it can handle inputs of length 256k**.
+
+
+      <center>
+
+
+      |  | [LongLLaMA-3B](https://huggingface.co/syzymon/long_llama_3b) | LongLLaMA-7B<br />*(coming soon)*|  LongLLaMA-13B<br />*(coming soon)*|
+
+      |----------------|----------|-----------|-----------|
+
+      | Source model         | [OpenLLaMA-3B](https://huggingface.co/openlm-research/open_llama_3b_easylm)      | -        | - |
+
+      | Source model tokens     | 1T      | -       | - |
+
+      | Fine-tuning tokens  | 10B     | -     | -|
+
+      | Memory layers         |  6, 12, 18        |  -        | -|
+
+
+      </center>
+
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - longllama
+    - text-generation
+    - text-generation-inference
+    - custom_code
+    - dataset:togethercomputer/RedPajama-Data-1T
+    - arxiv:2307.03170
+    - arxiv:2305.16300
+    - license:apache-2.0
+    - autotrain_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/syzymon/long_llama_3b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: b0bbd0c3-65a0-4cc8-884d-afebc3ccbeec
+  type: Relationship
+  properties: {}
+  from_: b0efc46f-912e-4599-aa5f-016d94d5c464
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/syzymon_long_llama_3b.json
+  relationship_type: annotatedBy
+- uid: 4770a4d8-16e2-4a0f-ae4c-df04ad547c61
+  type: Relationship
+  properties: {}
+  from_: 37ee9ed4-4688-48ff-8a4b-97057728a93b
+  to_:
+  - 0d4755d9-6b33-48ca-8430-08666e458d1e
+  relationship_type: uses
+- uid: 999c7019-1ec2-4c1a-8e60-c54b7cf38282
+  type: Relationship
+  properties: {}
+  from_: 37ee9ed4-4688-48ff-8a4b-97057728a93b
+  to_:
+  - ab034b74-e367-4631-9d67-952724d63282
+  relationship_type: uses
+- uid: 812d419e-af56-4a13-9bd5-4fffdbdf92cc
+  type: Relationship
+  properties: {}
+  from_: b0efc46f-912e-4599-aa5f-016d94d5c464
+  to_:
+  - 37ee9ed4-4688-48ff-8a4b-97057728a93b
+  relationship_type: produces

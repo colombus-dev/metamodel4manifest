@@ -1,0 +1,68 @@
+uid: 7899d946-0802-4ba8-82ef-432631ed7f5b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/InstantX_SD3-Controlnet-Canny.json
+  type: SoftwareFile
+  name: InstantX_SD3-Controlnet-Canny.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:5c2fff6d-91bc-4e0e-af17-2c0b3bec3915
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/InstantX_SD3-Controlnet-Canny.json
+    type: ExternalReference
+  languages: []
+- uid: 02d634d8-6210-4a04-9561-ac8cc62e27fb
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8872cd0a-8321-43e1-ad18-2a974c0da2a9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:52.521940+00:00'
+    bom-ref: InstantX/SD3-Controlnet-Canny-2a4d84f8-48ca-52c8-b12f-2654cf59edc6
+    name: InstantX/SD3-Controlnet-Canny
+    authors:
+    - name: InstantX
+    tags:
+    - diffusers
+    - safetensors
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/InstantX/SD3-Controlnet-Canny
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 849059c8-748c-4585-beb9-a46047d6e35a
+  type: Relationship
+  properties: {}
+  from_: 7899d946-0802-4ba8-82ef-432631ed7f5b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/InstantX_SD3-Controlnet-Canny.json
+  relationship_type: annotatedBy
+- uid: 4bcd9a28-0e66-4480-9c18-8318ce9c4fc7
+  type: Relationship
+  properties: {}
+  from_: 8872cd0a-8321-43e1-ad18-2a974c0da2a9
+  to_:
+  - 02d634d8-6210-4a04-9561-ac8cc62e27fb
+  relationship_type: uses
+- uid: 55171db1-379c-49a2-9b0d-3e75ca204a7c
+  type: Relationship
+  properties: {}
+  from_: 7899d946-0802-4ba8-82ef-432631ed7f5b
+  to_:
+  - 8872cd0a-8321-43e1-ad18-2a974c0da2a9
+  relationship_type: produces

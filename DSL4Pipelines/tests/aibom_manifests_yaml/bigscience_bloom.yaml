@@ -1,0 +1,167 @@
+uid: b5a322b3-5b52-4ab0-ac23-59a8036c22bd
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloom.json
+  type: SoftwareFile
+  name: bigscience_bloom.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2a072faa-7320-4850-bffe-ca27ab872433
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloom.json
+    type: ExternalReference
+  languages: []
+- uid: 7da50890-c7da-410a-87c9-87afd10d597f
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 5bf08bfe-95d9-48a6-a900-876f5dafba5c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:05.582143+00:00'
+    bom-ref: bigscience/bloom-f0c0da3f-4821-5ba4-bff0-7b16870f8d24
+    name: bigscience/bloom
+    authors:
+    - name: bigscience
+    architectureFamily: bloom
+    modelArchitecture: BloomForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: openai_humaneval'
+        type: pass@1
+        value: 0.15542682926829265
+      - slice: 'dataset: openai_humaneval'
+        type: pass@10
+        value: 0.3278356276947017
+      - slice: 'dataset: openai_humaneval'
+        type: pass@100
+        value: 0.5719815685597749
+    description: '# Model Details
+
+
+      BLOOM is an autoregressive Large Language Model (LLM), trained to continue text from a prompt on vast amounts of text data using industrial-scale computational resources. As such, it is able to output coherent text in 46 languages and 13 programming languages that is hardly distinguishable from text written by humans. BLOOM can also be instructed to perform text tasks it hasn''t been explicitly trained for, by casting them as text generation tasks.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tensorboard
+    - safetensors
+    - bloom
+    - text-generation
+    - ak
+    - ar
+    - as
+    - bm
+    - bn
+    - ca
+    - code
+    - en
+    - es
+    - eu
+    - fon
+    - fr
+    - gu
+    - hi
+    - id
+    - ig
+    - ki
+    - kn
+    - lg
+    - ln
+    - ml
+    - mr
+    - ne
+    - nso
+    - ny
+    - or
+    - pa
+    - pt
+    - rn
+    - rw
+    - sn
+    - st
+    - sw
+    - ta
+    - te
+    - tn
+    - ts
+    - tum
+    - tw
+    - ur
+    - vi
+    - wo
+    - xh
+    - yo
+    - zh
+    - zu
+    - arxiv:2211.05100
+    - arxiv:1909.08053
+    - arxiv:2110.02861
+    - arxiv:2108.12409
+    - doi:10.57967/hf/0003
+    - license:bigscience-bloom-rail-1.0
+    - model-index
+    - co2_eq_emissions
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: bigscience-bloom-rail-1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/bigscience/bloom
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '# Uses
+
+
+      *This section addresses questions around how the model is intended to be used, discusses the foreseeable users of the model (including those affected by the model), and describes uses that are considered out of scope or misuse of the model.*
+
+      *It is useful for anyone considering using the model or who is affected by the model.*
+
+
+      <details>
+
+      <summary>Click to expand</summary>
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 3f5ae9a6-58b0-43e2-b556-4a0efcdec009
+  type: Relationship
+  properties: {}
+  from_: b5a322b3-5b52-4ab0-ac23-59a8036c22bd
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloom.json
+  relationship_type: annotatedBy
+- uid: 2478bfb5-3d91-4ad3-8189-bfa31bc1eec9
+  type: Relationship
+  properties: {}
+  from_: 5bf08bfe-95d9-48a6-a900-876f5dafba5c
+  to_:
+  - 7da50890-c7da-410a-87c9-87afd10d597f
+  relationship_type: uses
+- uid: cc7699bd-a4fd-446b-bd3c-a9d6dd43857e
+  type: Relationship
+  properties: {}
+  from_: b5a322b3-5b52-4ab0-ac23-59a8036c22bd
+  to_:
+  - 5bf08bfe-95d9-48a6-a900-876f5dafba5c
+  relationship_type: produces

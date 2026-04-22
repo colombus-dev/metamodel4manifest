@@ -1,0 +1,365 @@
+uid: 7154814c-7561-4693-86cc-6b0a6a747d2b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-8b-code-instruct-4k.json
+  type: SoftwareFile
+  name: ibm-granite_granite-8b-code-instruct-4k.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3d29c751-547c-4429-90db-6ebbc7b9aa30
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-8b-code-instruct-4k.json
+    type: ExternalReference
+  languages: []
+- uid: 2bb1c733-e93f-4e2b-96eb-3389d11ca577
+  type: Data
+  properties:
+    bom-ref: bigcode/commitpackft-7dd931ed-c49b-58fe-b83e-9e9d6c32ee7b
+    name: bigcode/commitpackft
+    content_url: https://huggingface.co/datasets/bigcode/commitpackft
+    pretty_name: CommitPackFT
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/commitpackft-7dd931ed-c49b-58fe-b83e-9e9d6c32ee7b
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: d64bf525-b1dd-408b-bbb0-30ce82a91f34
+  type: Data
+  properties:
+    bom-ref: TIGER-Lab/MathInstruct-9d9c997d-f6c1-5029-96fd-6003c4f0ec06
+    name: TIGER-Lab/MathInstruct
+    content_url: https://huggingface.co/datasets/TIGER-Lab/MathInstruct
+    task_categories: text-generation
+    size_categories: 100K<n<1M
+    pretty_name: MathInstruct
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: TIGER-Lab/MathInstruct-9d9c997d-f6c1-5029-96fd-6003c4f0ec06
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 4b2f1bc4-10ce-4fc8-958c-85202d8b34cd
+  type: Data
+  properties:
+    bom-ref: meta-math/MetaMathQA-c6cf810a-8b06-5552-a876-53681c5fe9a1
+    name: meta-math/MetaMathQA
+    content_url: https://huggingface.co/datasets/meta-math/MetaMathQA
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: meta-math/MetaMathQA-c6cf810a-8b06-5552-a876-53681c5fe9a1
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: a5b6b637-9c91-49a8-9e73-0e4ae84671d8
+  type: Data
+  properties:
+    bom-ref: glaiveai/glaive-code-assistant-v3-dc0b3ece-6570-57fe-97c1-2c2ed2ffa00b
+    name: glaiveai/glaive-code-assistant-v3
+    content_url: https://huggingface.co/datasets/glaiveai/glaive-code-assistant-v3
+    size_categories: 100K<n<1M
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: glaiveai/glaive-code-assistant-v3-dc0b3ece-6570-57fe-97c1-2c2ed2ffa00b
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f116ee54-bcfa-44b4-ae88-e58dfbcb4f7e
+  type: Data
+  properties:
+    bom-ref: glaive-function-calling-v2-cccb9fa5-b073-586d-bdcc-c5d443666d2c
+    name: glaive-function-calling-v2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: glaive-function-calling-v2-cccb9fa5-b073-586d-bdcc-c5d443666d2c
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c5f11fde-1261-4ea2-b9e3-02406fa6edef
+  type: Data
+  properties:
+    bom-ref: bugdaryan/sql-create-context-instruction-1c30e492-175f-5b7d-bf80-c1e311da3f29
+    name: bugdaryan/sql-create-context-instruction
+    content_url: https://huggingface.co/datasets/bugdaryan/sql-create-context-instruction
+    task_categories: text-generation, question-answering, table-question-answering
+    size_categories: 10K<n<100K
+    pretty_name: sql-create-context
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bugdaryan/sql-create-context-instruction-1c30e492-175f-5b7d-bf80-c1e311da3f29
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 9f9ff5f9-2a83-4867-9bb4-0a435f9b69f7
+  type: Data
+  properties:
+    bom-ref: garage-bAInd/Open-Platypus-9908ce92-f46e-5979-aefc-e191a9daa0c8
+    name: garage-bAInd/Open-Platypus
+    content_url: https://huggingface.co/datasets/garage-bAInd/Open-Platypus
+    size_categories: 10K<n<100K
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}'
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: garage-bAInd/Open-Platypus-9908ce92-f46e-5979-aefc-e191a9daa0c8
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 50a40a5e-989c-46c2-a638-c3c25d63e8aa
+  type: Data
+  properties:
+    bom-ref: nvidia/HelpSteer-0eaad2ad-905d-5f61-bfe7-77e9c4369146
+    name: nvidia/HelpSteer
+    content_url: https://huggingface.co/datasets/nvidia/HelpSteer
+    size_categories: 10K<n<100K
+    pretty_name: Helpfulness SteerLM Dataset
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: nvidia/HelpSteer-0eaad2ad-905d-5f61-bfe7-77e9c4369146
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c537ede2-69f9-42da-9faa-65f598e514ba
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2d175fc6-7f5f-4b60-a437-c8133cc52393
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: ibm-granite/granite-8b-code-base-4k
+    type: ExternalReference
+  languages: []
+- uid: 9f74522d-ebe6-4a9a-ab49-80bc7ebfa696
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:11.206190+00:00'
+    bom-ref: ibm-granite/granite-8b-code-instruct-4k-c67be605-a8eb-581f-9110-6dd0b327cd4c
+    name: ibm-granite/granite-8b-code-instruct-4k
+    authors:
+    - name: ibm-granite
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 57.9
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 52.4
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 58.5
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 43.3
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 48.2
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 37.2
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 53
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 42.7
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 52.4
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 36.6
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 43.9
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 16.5
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 39.6
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 40.9
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 48.2
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 41.5
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 39
+      - slice: 'dataset: bigcode/humanevalpack'
+        type: pass@1
+        value: 32.9
+    description: '## Model Summary
+
+      **Granite-8B-Code-Instruct-4K** is a 8B parameter model fine tuned from *Granite-8B-Code-Base-4K* on a combination of **permissively licensed** instruction data to enhance instruction following capabilities including logical reasoning and problem-solving skills.
+
+
+      - **Developers:** IBM Research
+
+      - **GitHub Repository:** [ibm-granite/granite-code-models](https://github.com/ibm-granite/granite-code-models)
+
+      - **Paper:** [Granite Code Models: A Family of Open Foundation Models for Code Intelligence](https://arxiv.org/abs/2405.04324)
+
+      - **Release Date**: May 6th, 2024
+
+      - **License:** [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - code
+    - granite
+    - conversational
+    - dataset:bigcode/commitpackft
+    - dataset:TIGER-Lab/MathInstruct
+    - dataset:meta-math/MetaMathQA
+    - dataset:glaiveai/glaive-code-assistant-v3
+    - dataset:glaive-function-calling-v2
+    - dataset:bugdaryan/sql-create-context-instruction
+    - dataset:garage-bAInd/Open-Platypus
+    - dataset:nvidia/HelpSteer
+    - arxiv:2405.04324
+    - base_model:ibm-granite/granite-8b-code-base-4k
+    - base_model:finetune:ibm-granite/granite-8b-code-base-4k
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ibm-granite/granite-8b-code-instruct-4k
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '### Intended use
+
+      The model is designed to respond to coding related instructions and can be used to build coding assistants.
+
+
+      <!-- TO DO: Check starcoder2 instruct code example that includes the template https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1 -->
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: b6d3a848-e5d1-4aa2-a582-208256b9e75e
+  type: Relationship
+  properties: {}
+  from_: 7154814c-7561-4693-86cc-6b0a6a747d2b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ibm-granite_granite-8b-code-instruct-4k.json
+  relationship_type: annotatedBy
+- uid: 1a751dd3-7fbc-40ed-a992-6ef68f48db2f
+  type: Relationship
+  properties: {}
+  from_: 9f74522d-ebe6-4a9a-ab49-80bc7ebfa696
+  to_:
+  - 2bb1c733-e93f-4e2b-96eb-3389d11ca577
+  - d64bf525-b1dd-408b-bbb0-30ce82a91f34
+  - 4b2f1bc4-10ce-4fc8-958c-85202d8b34cd
+  - a5b6b637-9c91-49a8-9e73-0e4ae84671d8
+  - f116ee54-bcfa-44b4-ae88-e58dfbcb4f7e
+  - c5f11fde-1261-4ea2-b9e3-02406fa6edef
+  - 9f9ff5f9-2a83-4867-9bb4-0a435f9b69f7
+  - 50a40a5e-989c-46c2-a638-c3c25d63e8aa
+  relationship_type: uses
+- uid: c95ca860-55ff-463b-a8f4-e9b9772a3ebc
+  type: Relationship
+  properties: {}
+  from_: 9f74522d-ebe6-4a9a-ab49-80bc7ebfa696
+  to_:
+  - c537ede2-69f9-42da-9faa-65f598e514ba
+  relationship_type: uses
+- uid: c6892730-5327-46eb-8d6f-c19cbcd6d1f9
+  type: Relationship
+  properties: {}
+  from_: 9f74522d-ebe6-4a9a-ab49-80bc7ebfa696
+  to_:
+  - 2d175fc6-7f5f-4b60-a437-c8133cc52393
+  relationship_type: derivedFrom
+- uid: 361754cf-fbb0-419e-9bb3-0c189549258a
+  type: Relationship
+  properties: {}
+  from_: 7154814c-7561-4693-86cc-6b0a6a747d2b
+  to_:
+  - 9f74522d-ebe6-4a9a-ab49-80bc7ebfa696
+  relationship_type: produces

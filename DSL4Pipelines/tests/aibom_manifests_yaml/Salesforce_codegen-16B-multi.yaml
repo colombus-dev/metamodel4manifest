@@ -1,0 +1,88 @@
+uid: 5460f15f-e2cc-48f6-a947-9b0ed6f6d9ff
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_codegen-16B-multi.json
+  type: SoftwareFile
+  name: Salesforce_codegen-16B-multi.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:63d2df30-e1b9-4c64-9ba2-6d87df36de12
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_codegen-16B-multi.json
+    type: ExternalReference
+  languages: []
+- uid: 1d47d61c-109f-4690-b810-4761fc2c59df
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4dcdf1f0-9696-4d58-9d9d-869035f0a3a2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:15.499788+00:00'
+    bom-ref: Salesforce/codegen-16B-multi-36da23de-f666-5d21-b860-16eb68769552
+    name: Salesforce/codegen-16B-multi
+    authors:
+    - name: Salesforce
+    architectureFamily: codegen
+    modelArchitecture: CodeGenForCausalLM
+    description: '## Model description
+
+
+      CodeGen is a family of autoregressive language models for **program synthesis** from the paper: [A Conversational Paradigm for Program Synthesis](https://arxiv.org/abs/2203.13474) by Erik Nijkamp, Bo Pang, Hiroaki Hayashi, Lifu Tu, Huan Wang, Yingbo Zhou, Silvio Savarese, Caiming Xiong. The models are originally released in [this repository](https://github.com/salesforce/CodeGen), under 3 pre-training data variants (`NL`, `Multi`, `Mono`) and 4 model size variants (`350M`, `2B`, `6B`, `16B`).
+
+
+      The checkpoint included in this repository is denoted as **CodeGen-Multi 16B** in the paper, where "Multi" means the model is initialized with *CodeGen-NL 16B* and further pre-trained on a dataset of multiple programming languages, and "16B" refers to the number of trainable parameters.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - codegen
+    - text-generation
+    - arxiv:2203.13474
+    - license:bsd-3-clause
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: BSD-3-Clause
+    url: https://spdx.org/licenses/BSD-3-Clause.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Salesforce/codegen-16B-multi
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 8bebc3aa-1698-4e9d-be5b-24d35640cf00
+  type: Relationship
+  properties: {}
+  from_: 5460f15f-e2cc-48f6-a947-9b0ed6f6d9ff
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_codegen-16B-multi.json
+  relationship_type: annotatedBy
+- uid: 9ab0afd7-8593-4d1b-9d4b-505c83256964
+  type: Relationship
+  properties: {}
+  from_: 4dcdf1f0-9696-4d58-9d9d-869035f0a3a2
+  to_:
+  - 1d47d61c-109f-4690-b810-4761fc2c59df
+  relationship_type: uses
+- uid: d179b57d-96cc-4c71-ae36-e50a31279f43
+  type: Relationship
+  properties: {}
+  from_: 5460f15f-e2cc-48f6-a947-9b0ed6f6d9ff
+  to_:
+  - 4dcdf1f0-9696-4d58-9d9d-869035f0a3a2
+  relationship_type: produces

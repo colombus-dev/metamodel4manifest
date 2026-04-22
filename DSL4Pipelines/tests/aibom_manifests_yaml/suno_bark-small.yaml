@@ -1,0 +1,102 @@
+uid: 1f55afd2-cac1-47ae-a0eb-f2c97cbcdce1
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/suno_bark-small.json
+  type: SoftwareFile
+  name: suno_bark-small.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cbb80a8d-7b05-464b-b5e7-77ebe12c9055
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/suno_bark-small.json
+    type: ExternalReference
+  languages: []
+- uid: 26b527cc-0041-433a-8467-a4aafedf41d0
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4d2e4351-cae8-4602-b0ff-884a1f94b16c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:23.025664+00:00'
+    bom-ref: suno/bark-small-534cd81c-c53c-5082-8f80-36f8c9c6a0b5
+    name: suno/bark-small
+    authors:
+    - name: suno
+    architectureFamily: bark
+    modelArchitecture: BarkModel
+    description: '## Model Details
+
+
+
+      The following is additional information about the models released here.
+
+
+      Bark is a series of three transformer models that turn text into audio.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - bark
+    - text-to-audio
+    - audio
+    - text-to-speech
+    - en
+    - de
+    - es
+    - fr
+    - hi
+    - it
+    - ja
+    - ko
+    - pl
+    - pt
+    - ru
+    - tr
+    - zh
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/suno/bark-small
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-speech
+relations:
+- uid: 8015a12d-ef4f-4dbd-81d5-13fc9abc082e
+  type: Relationship
+  properties: {}
+  from_: 1f55afd2-cac1-47ae-a0eb-f2c97cbcdce1
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/suno_bark-small.json
+  relationship_type: annotatedBy
+- uid: a25213a1-bf2e-4735-b5c2-f1046d0ff867
+  type: Relationship
+  properties: {}
+  from_: 4d2e4351-cae8-4602-b0ff-884a1f94b16c
+  to_:
+  - 26b527cc-0041-433a-8467-a4aafedf41d0
+  relationship_type: uses
+- uid: d71154d4-6621-4b98-af89-366c752519b4
+  type: Relationship
+  properties: {}
+  from_: 1f55afd2-cac1-47ae-a0eb-f2c97cbcdce1
+  to_:
+  - 4d2e4351-cae8-4602-b0ff-884a1f94b16c
+  relationship_type: produces

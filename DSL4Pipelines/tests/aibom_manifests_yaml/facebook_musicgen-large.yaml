@@ -1,0 +1,145 @@
+uid: 8a99989b-cf74-43ba-8f3b-7148e6ee4477
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_musicgen-large.json
+  type: SoftwareFile
+  name: facebook_musicgen-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c4e21192-c3ad-41a1-b884-f84f0df35d61
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_musicgen-large.json
+    type: ExternalReference
+  languages: []
+- uid: 00960e37-0bd9-4ad8-bb69-2eb4f1d279e4
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 15203b51-aff7-45f0-aec4-cea8217bd814
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:12.441903+00:00'
+    bom-ref: facebook/musicgen-large-58c49b74-cfdd-5a5f-bc7b-34c3483288f2
+    name: facebook/musicgen-large
+    authors:
+    - name: facebook
+    architectureFamily: musicgen
+    modelArchitecture: MusicgenForConditionalGeneration
+    description: '## Model details
+
+
+      **Organization developing the model:** The FAIR team of Meta AI.
+
+
+      **Model date:** MusicGen was trained between April 2023 and May 2023.
+
+
+      **Model version:** This is the version 1 of the model.
+
+
+      **Model type:** MusicGen consists of an EnCodec model for audio tokenization, an auto-regressive language model based on the transformer architecture for music modeling. The model comes in different sizes: 300M, 1.5B and 3.3B parameters ; and two variants: a model trained for text-to-music generation task and a model trained for melody-guided music generation.
+
+
+      **Paper or resources for more information:** More information can be found in the paper [Simple and Controllable Music Generation](https://arxiv.org/abs/2306.05284).
+
+
+      **Citation details:**
+
+      ```
+
+      @misc{copet2023simple,
+
+      title={Simple and Controllable Music Generation},
+
+      author={Jade Copet and Felix Kreuk and Itai Gat and Tal Remez and David Kant and Gabriel Synnaeve and Yossi Adi and Alexandre Défossez},
+
+      year={2023},
+
+      eprint={2306.05284},
+
+      archivePrefix={arXiv},
+
+      primaryClass={cs.SD}
+
+      }
+
+      ```
+
+
+      **License:** Code is released under MIT, model weights are released under CC-BY-NC 4.0.
+
+
+      **Where to send questions or comments about the model:** Questions and comments about MusicGen can be sent via the [Github repository](https://github.com/facebookresearch/audiocraft) of the project, or by opening an issue.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - musicgen
+    - text-to-audio
+    - arxiv:2306.05284
+    - license:cc-by-nc-4.0
+    - endpoints_compatible
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/facebook/musicgen-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-audio
+  consideration:
+    use_cases: '## Intended use
+
+      **Primary intended use:** The primary use of MusicGen is research on AI-based music generation, including:
+
+
+      - Research efforts, such as probing and better understanding the limitations of generative models to further improve the state of science
+
+      - Generation of music guided by text or melody to understand current abilities of generative AI models by machine learning amateurs
+
+
+      **Primary intended users:** The primary intended users of the model are researchers in audio, machine learning and artificial intelligence, as well as amateur seeking to better understand those models.
+
+
+      **Out-of-scope use cases:** The model should not be used on downstream applications without further risk evaluation and mitigation. The model should not be used to intentionally create or disseminate music pieces that create hostile or alienating environments for people. This includes generating music that people would foreseeably find disturbing, distressing, or offensive; or content that propagates historical or current stereotypes.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 999b9d84-97a5-4a89-bf02-40c3d5787665
+  type: Relationship
+  properties: {}
+  from_: 8a99989b-cf74-43ba-8f3b-7148e6ee4477
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_musicgen-large.json
+  relationship_type: annotatedBy
+- uid: 42c83957-0cd3-4ccc-b292-e246577f5484
+  type: Relationship
+  properties: {}
+  from_: 15203b51-aff7-45f0-aec4-cea8217bd814
+  to_:
+  - 00960e37-0bd9-4ad8-bb69-2eb4f1d279e4
+  relationship_type: uses
+- uid: 067a57e7-f3fd-43c2-999f-5f2122c3be8f
+  type: Relationship
+  properties: {}
+  from_: 8a99989b-cf74-43ba-8f3b-7148e6ee4477
+  to_:
+  - 15203b51-aff7-45f0-aec4-cea8217bd814
+  relationship_type: produces

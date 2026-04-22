@@ -1,0 +1,107 @@
+uid: 1d0fc8c8-61bb-4076-a76d-61ab961acfa0
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistralai_Mistral-Small-24B-Instruct-2501.json
+  type: SoftwareFile
+  name: mistralai_Mistral-Small-24B-Instruct-2501.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:85122e4e-ae03-4e1d-9545-d5e36a4bb860
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistralai_Mistral-Small-24B-Instruct-2501.json
+    type: ExternalReference
+  languages: []
+- uid: 8dc6fdc6-a1ae-4b45-a399-5add6e1e3bc0
+  type: SoftwareFile
+  name: vllm
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d24c3466-b3c7-495b-9be3-fadaffe7032b
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: mistralai/Mistral-Small-24B-Base-2501
+    type: ExternalReference
+  languages: []
+- uid: 775d1c6a-ae8e-4a5d-b575-e0cd8f9d49f5
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:12.590359+00:00'
+    bom-ref: mistralai/Mistral-Small-24B-Instruct-2501-bb4eab6c-b1db-5a9b-b379-57bbb8b51a68
+    name: mistralai/Mistral-Small-24B-Instruct-2501
+    authors:
+    - name: mistralai
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    tags:
+    - vllm
+    - safetensors
+    - mistral
+    - text-generation
+    - transformers
+    - conversational
+    - en
+    - fr
+    - de
+    - es
+    - it
+    - pt
+    - zh
+    - ja
+    - ru
+    - ko
+    - base_model:mistralai/Mistral-Small-24B-Base-2501
+    - base_model:finetune:mistralai/Mistral-Small-24B-Base-2501
+    - license:apache-2.0
+    - text-generation-inference
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 8c432c38-e38a-4767-ba0e-12e0d498a714
+  type: Relationship
+  properties: {}
+  from_: 1d0fc8c8-61bb-4076-a76d-61ab961acfa0
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistralai_Mistral-Small-24B-Instruct-2501.json
+  relationship_type: annotatedBy
+- uid: 464adbcc-cb09-45e6-aa3a-bac0f95fd2a2
+  type: Relationship
+  properties: {}
+  from_: 775d1c6a-ae8e-4a5d-b575-e0cd8f9d49f5
+  to_:
+  - 8dc6fdc6-a1ae-4b45-a399-5add6e1e3bc0
+  relationship_type: uses
+- uid: 34f237d1-2a4e-4100-9432-438fbc6bc405
+  type: Relationship
+  properties: {}
+  from_: 775d1c6a-ae8e-4a5d-b575-e0cd8f9d49f5
+  to_:
+  - d24c3466-b3c7-495b-9be3-fadaffe7032b
+  relationship_type: derivedFrom
+- uid: 9c1b69d5-c138-481e-8347-7cc1a3b6cc3a
+  type: Relationship
+  properties: {}
+  from_: 1d0fc8c8-61bb-4076-a76d-61ab961acfa0
+  to_:
+  - 775d1c6a-ae8e-4a5d-b575-e0cd8f9d49f5
+  relationship_type: produces

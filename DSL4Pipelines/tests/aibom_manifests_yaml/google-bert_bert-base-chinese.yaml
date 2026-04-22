@@ -1,0 +1,89 @@
+uid: 901dd1e3-08a4-4e0e-877b-8c5ec90e8045
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google-bert_bert-base-chinese.json
+  type: SoftwareFile
+  name: google-bert_bert-base-chinese.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3e97679f-30e2-4625-b8ec-65f697d51e58
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google-bert_bert-base-chinese.json
+    type: ExternalReference
+  languages: []
+- uid: 16427bfe-72ef-4379-a19e-752a8a39d07d
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0b4a993d-2f83-42f5-86b9-6e84ce1e2252
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:18.722860+00:00'
+    bom-ref: google-bert/bert-base-chinese-f7567e79-acde-5a07-907b-e439dd8d23ad
+    name: google-bert/bert-base-chinese
+    authors:
+    - name: google-bert
+    architectureFamily: bert
+    modelArchitecture: BertForMaskedLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - safetensors
+    - bert
+    - fill-mask
+    - zh
+    - arxiv:1810.04805
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google-bert/bert-base-chinese
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: fill-mask
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 265e3b67-a0be-447f-9ed6-aeecf9b65b84
+  type: Relationship
+  properties: {}
+  from_: 901dd1e3-08a4-4e0e-877b-8c5ec90e8045
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google-bert_bert-base-chinese.json
+  relationship_type: annotatedBy
+- uid: 50364734-2164-4d86-b543-3c97f9c07824
+  type: Relationship
+  properties: {}
+  from_: 0b4a993d-2f83-42f5-86b9-6e84ce1e2252
+  to_:
+  - 16427bfe-72ef-4379-a19e-752a8a39d07d
+  relationship_type: uses
+- uid: db2ae732-b9a3-4ae4-8213-e8c8a0880ab4
+  type: Relationship
+  properties: {}
+  from_: 901dd1e3-08a4-4e0e-877b-8c5ec90e8045
+  to_:
+  - 0b4a993d-2f83-42f5-86b9-6e84ce1e2252
+  relationship_type: produces

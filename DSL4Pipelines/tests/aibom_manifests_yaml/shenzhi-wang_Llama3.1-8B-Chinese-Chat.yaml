@@ -1,0 +1,122 @@
+uid: 301416b0-ccf0-4d5b-a821-60132720776c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/shenzhi-wang_Llama3.1-8B-Chinese-Chat.json
+  type: SoftwareFile
+  name: shenzhi-wang_Llama3.1-8B-Chinese-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:35511e4b-3973-45a1-bd09-5434b562f5e4
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/shenzhi-wang_Llama3.1-8B-Chinese-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: 5894b1ad-bb04-47a9-a814-0d09c25734d9
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: afdad006-5c5c-4f0a-bb4a-b815085c5dd8
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Meta-Llama-3.1-8B-Instruct
+    type: ExternalReference
+  languages: []
+- uid: 5f214bb4-0f5d-47d3-9a34-f953f967edec
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:37.510919+00:00'
+    bom-ref: shenzhi-wang/Llama3.1-8B-Chinese-Chat-a666da60-fc0f-52bf-8301-13a09be9fb7d
+    name: shenzhi-wang/Llama3.1-8B-Chinese-Chat
+    authors:
+    - name: shenzhi-wang
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '# Model Summary
+
+
+      llama3.1-8B-Chinese-Chat is an instruction-tuned language model for Chinese & English users with various abilities such as roleplaying & tool-using built upon the Meta-Llama-3.1-8B-Instruct model.
+
+
+      Developers: [Shenzhi Wang](https://shenzhi-wang.netlify.app)\*, [Yaowei Zheng](https://github.com/hiyouga)\*, Guoyin Wang (in.ai), Shiji Song, Gao Huang. (\*: Equal Contribution)
+
+
+      - License: [Llama-3.1 License](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B/blob/main/LICENSE)
+
+      - Base Model: Meta-Llama-3.1-8B-Instruct
+
+      - Model Size: 8.03B
+
+      - Context length: 128K (reported by [Meta-Llama-3.1-8B-Instruct model](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct), untested for our Chinese model)
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - gguf
+    - llama
+    - text-generation
+    - llama-factory
+    - orpo
+    - conversational
+    - en
+    - zh
+    - arxiv:2403.07691
+    - base_model:meta-llama/Llama-3.1-8B-Instruct
+    - base_model:quantized:meta-llama/Llama-3.1-8B-Instruct
+    - doi:10.57967/hf/2779
+    - license:llama3.1
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3.1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/shenzhi-wang/Llama3.1-8B-Chinese-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: f653f124-d1bc-46d2-b817-0988f3c0ab7c
+  type: Relationship
+  properties: {}
+  from_: 301416b0-ccf0-4d5b-a821-60132720776c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/shenzhi-wang_Llama3.1-8B-Chinese-Chat.json
+  relationship_type: annotatedBy
+- uid: 42916925-5acd-46ac-8a4c-694b975662d1
+  type: Relationship
+  properties: {}
+  from_: 5f214bb4-0f5d-47d3-9a34-f953f967edec
+  to_:
+  - 5894b1ad-bb04-47a9-a814-0d09c25734d9
+  relationship_type: uses
+- uid: 965a4800-407a-4818-9cd2-852c375ebc81
+  type: Relationship
+  properties: {}
+  from_: 5f214bb4-0f5d-47d3-9a34-f953f967edec
+  to_:
+  - afdad006-5c5c-4f0a-bb4a-b815085c5dd8
+  relationship_type: derivedFrom
+- uid: 274b60db-4289-4742-b758-9d76b9d89e56
+  type: Relationship
+  properties: {}
+  from_: 301416b0-ccf0-4d5b-a821-60132720776c
+  to_:
+  - 5f214bb4-0f5d-47d3-9a34-f953f967edec
+  relationship_type: produces

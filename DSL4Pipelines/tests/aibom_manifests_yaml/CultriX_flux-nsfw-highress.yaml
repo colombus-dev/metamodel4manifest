@@ -1,0 +1,94 @@
+uid: 0f439bd6-0d82-42e0-a842-9064ff85a8f2
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CultriX_flux-nsfw-highress.json
+  type: SoftwareFile
+  name: CultriX_flux-nsfw-highress.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:7183e8f3-5a84-4b02-8288-5debc955a7bd
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CultriX_flux-nsfw-highress.json
+    type: ExternalReference
+  languages: []
+- uid: eb8b8347-2f00-42b4-b09b-afaaa824c9fd
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7e788f0d-5d71-4e5e-8898-0a5c39ac1b46
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: 1d2db22e-6c0b-43f1-b144-54eb76b69f4a
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:36.096656+00:00'
+    bom-ref: CultriX/flux-nsfw-highress-d6befd47-a704-5d8d-a2c6-d0c587a5852e
+    name: CultriX/flux-nsfw-highress
+    authors:
+    - name: CultriX
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - lora
+    - template:sd-lora
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:adapter:black-forest-labs/FLUX.1-dev
+    - license:apache-2.0
+    - region:us
+    - not-for-all-audiences
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/CultriX/flux-nsfw-highress
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 6a1ba192-1b46-45b4-93d7-aa55b2e17bf7
+  type: Relationship
+  properties: {}
+  from_: 0f439bd6-0d82-42e0-a842-9064ff85a8f2
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CultriX_flux-nsfw-highress.json
+  relationship_type: annotatedBy
+- uid: 1d35b4e0-936e-4643-9244-ba2dc2c5ebae
+  type: Relationship
+  properties: {}
+  from_: 1d2db22e-6c0b-43f1-b144-54eb76b69f4a
+  to_:
+  - eb8b8347-2f00-42b4-b09b-afaaa824c9fd
+  relationship_type: uses
+- uid: 7f14ea0a-510b-406c-8c9e-2d299487b67d
+  type: Relationship
+  properties: {}
+  from_: 1d2db22e-6c0b-43f1-b144-54eb76b69f4a
+  to_:
+  - 7e788f0d-5d71-4e5e-8898-0a5c39ac1b46
+  relationship_type: derivedFrom
+- uid: 4a86716e-72bf-495f-99bd-8226587edbb8
+  type: Relationship
+  properties: {}
+  from_: 0f439bd6-0d82-42e0-a842-9064ff85a8f2
+  to_:
+  - 1d2db22e-6c0b-43f1-b144-54eb76b69f4a
+  relationship_type: produces

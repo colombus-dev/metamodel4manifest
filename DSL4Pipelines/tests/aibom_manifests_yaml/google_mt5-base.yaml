@@ -1,0 +1,218 @@
+uid: 47463984-4fc9-4d33-ba05-7d10796d9dad
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_mt5-base.json
+  type: SoftwareFile
+  name: google_mt5-base.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ca13a398-1499-47da-9354-17fdd64f4e3f
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_mt5-base.json
+    type: ExternalReference
+  languages: []
+- uid: d22d214d-93e1-4849-b6c0-bf0b5dbd1a17
+  type: Data
+  properties:
+    bom-ref: mc4-3aafa06e-ba99-523a-8109-8b1111f0da44
+    name: mc4
+    content_url: https://huggingface.co/datasets/mc4
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: n<1K, 1K<n<10K, 10K<n<100K, 100K<n<1M, 1M<n<10M, 10M<n<100M, 100M<n<1B, 1B<n<10B
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: mC4
+    source_datasets: original
+    paperswithcode_id: mc4
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: mc4-3aafa06e-ba99-523a-8109-8b1111f0da44
+    type: ExternalReference
+  languages:
+  - af, am, ar, az, be, bg, bn, ca, ceb, co, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fil, fr, fy, ga, gd, gl, gu, ha, haw, he, hi, hmn, ht, hu, hy, id, ig, is, it, iw, ja, jv, ka, kk, km, kn, ko, ku, ky, la, lb, lo, lt, lv, mg, mi, mk, ml, mn, mr, ms, mt, my, ne, nl, no, ny, pa, pl, ps, pt, ro, ru, sd, si, sk, sl, sm, sn, so, sq, sr, st, su, sv, sw, ta, te, tg, th, tr, uk, und, ur, uz, vi, xh, yi, yo, zh, zu
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 51db313f-3a07-4332-8e7c-74862436f3e0
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e8fb4f7a-aaa7-4bf5-b122-d3560c224098
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:00.736341+00:00'
+    bom-ref: google/mt5-base-cc11ff68-407f-5cff-87dd-134294c40e45
+    name: google/mt5-base
+    authors:
+    - name: google
+    architectureFamily: mt5
+    modelArchitecture: MT5ForConditionalGeneration
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - mt5
+    - text2text-generation
+    - multilingual
+    - af
+    - am
+    - ar
+    - az
+    - be
+    - bg
+    - bn
+    - ca
+    - ceb
+    - co
+    - cs
+    - cy
+    - da
+    - de
+    - el
+    - en
+    - eo
+    - es
+    - et
+    - eu
+    - fa
+    - fi
+    - fil
+    - fr
+    - fy
+    - ga
+    - gd
+    - gl
+    - gu
+    - ha
+    - haw
+    - hi
+    - hmn
+    - ht
+    - hu
+    - hy
+    - ig
+    - is
+    - it
+    - iw
+    - ja
+    - jv
+    - ka
+    - kk
+    - km
+    - kn
+    - ko
+    - ku
+    - ky
+    - la
+    - lb
+    - lo
+    - lt
+    - lv
+    - mg
+    - mi
+    - mk
+    - ml
+    - mn
+    - mr
+    - ms
+    - mt
+    - my
+    - ne
+    - nl
+    - 'no'
+    - ny
+    - pa
+    - pl
+    - ps
+    - pt
+    - ro
+    - ru
+    - sd
+    - si
+    - sk
+    - sl
+    - sm
+    - sn
+    - so
+    - sq
+    - sr
+    - st
+    - su
+    - sv
+    - sw
+    - ta
+    - te
+    - tg
+    - th
+    - tr
+    - uk
+    - und
+    - ur
+    - uz
+    - vi
+    - xh
+    - yi
+    - yo
+    - zh
+    - zu
+    - dataset:mc4
+    - arxiv:2010.11934
+    - license:apache-2.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google/mt5-base
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text2text-generation
+relations:
+- uid: b30c2642-4adf-4fcf-bd6e-b284433a04e4
+  type: Relationship
+  properties: {}
+  from_: 47463984-4fc9-4d33-ba05-7d10796d9dad
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_mt5-base.json
+  relationship_type: annotatedBy
+- uid: 91d6ca88-c8f5-4a50-8d1a-cf819670db0d
+  type: Relationship
+  properties: {}
+  from_: e8fb4f7a-aaa7-4bf5-b122-d3560c224098
+  to_:
+  - d22d214d-93e1-4849-b6c0-bf0b5dbd1a17
+  relationship_type: uses
+- uid: ef4de3b6-17ef-4fdc-9a2a-e3560a5de121
+  type: Relationship
+  properties: {}
+  from_: e8fb4f7a-aaa7-4bf5-b122-d3560c224098
+  to_:
+  - 51db313f-3a07-4332-8e7c-74862436f3e0
+  relationship_type: uses
+- uid: 1815cc90-3799-4e00-8a4f-6b94f64bf8b7
+  type: Relationship
+  properties: {}
+  from_: 47463984-4fc9-4d33-ba05-7d10796d9dad
+  to_:
+  - e8fb4f7a-aaa7-4bf5-b122-d3560c224098
+  relationship_type: produces

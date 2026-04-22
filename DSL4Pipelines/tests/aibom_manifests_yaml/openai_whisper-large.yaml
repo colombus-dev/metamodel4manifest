@@ -1,0 +1,239 @@
+uid: eea267d6-068f-47bf-9954-8e2796624e9f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_whisper-large.json
+  type: SoftwareFile
+  name: openai_whisper-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c2efc487-1c24-40cc-bd3f-6cbdf49dd1b6
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_whisper-large.json
+    type: ExternalReference
+  languages: []
+- uid: 3b29460d-3db1-4cf5-9ad3-c62a48a6aeae
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 48dc8ec6-05c4-4132-9ac9-2fa47757fb89
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:16.623659+00:00'
+    bom-ref: openai/whisper-large-c916b1d4-d6bf-5d7f-9c2d-991958b8b0f5
+    name: openai/whisper-large
+    authors:
+    - name: openai
+    architectureFamily: whisper
+    modelArchitecture: WhisperForConditionalGeneration
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: librispeech_asr, split: test, config: clean'
+        type: wer
+        value: 3
+      - slice: 'dataset: librispeech_asr, split: test, config: other'
+        type: wer
+        value: 5.4
+      - slice: 'dataset: mozilla-foundation/common_voice_11_0, split: test, config: hi'
+        type: wer
+        value: 54.8
+    description: '## Model details
+
+
+      Whisper is a Transformer based encoder-decoder model, also referred to as a _sequence-to-sequence_ model.
+
+      It was trained on 680k hours of labelled speech data annotated using large-scale weak supervision.
+
+
+      The models were trained on either English-only data or multilingual data. The English-only models were trained
+
+      on the task of speech recognition. The multilingual models were trained on both speech recognition and speech
+
+      translation. For speech recognition, the model predicts transcriptions in the *same* language as the audio.
+
+      For speech translation, the model predicts transcriptions to a *different* language to the audio.
+
+
+      Whisper checkpoints come in five configurations of varying model sizes.
+
+      The smallest four are trained on either English-only or multilingual data.
+
+      The largest checkpoints are multilingual only. All ten of the pre-trained checkpoints
+
+      are available on the [Hugging Face Hub](https://huggingface.co/models?search=openai/whisper). The
+
+      checkpoints are summarised in the following table with links to the models on the Hub:
+
+
+      | Size     | Parameters | English-only                                         | Multilingual                                        |
+
+      |----------|------------|------------------------------------------------------|-----------------------------------------------------|
+
+      | tiny     | 39 M       | [✓](https://huggingface.co/openai/whisper-tiny.en)   | [✓](https://huggingface.co/openai/whisper-tiny)     |
+
+      | base     | 74 M       | [✓](https://huggingface.co/openai/whisper-base.en)   | [✓](https://huggingface.co/openai/whisper-base)     |
+
+      | small    | 244 M      | [✓](https://huggingface.co/openai/whisper-small.en)  | [✓](https://huggingface.co/openai/whisper-small)    |
+
+      | medium   | 769 M      | [✓](https://huggingface.co/openai/whisper-medium.en) | [✓](https://huggingface.co/openai/whisper-medium)   |
+
+      | large    | 1550 M     | x                                                    | [✓](https://huggingface.co/openai/whisper-large)    |
+
+      | large-v2 | 1550 M     | x                                                    | [✓](https://huggingface.co/openai/whisper-large-v2) |
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - safetensors
+    - whisper
+    - automatic-speech-recognition
+    - audio
+    - hf-asr-leaderboard
+    - en
+    - zh
+    - de
+    - es
+    - ru
+    - ko
+    - fr
+    - ja
+    - pt
+    - tr
+    - pl
+    - ca
+    - nl
+    - ar
+    - sv
+    - it
+    - id
+    - hi
+    - fi
+    - vi
+    - he
+    - uk
+    - el
+    - ms
+    - cs
+    - ro
+    - da
+    - hu
+    - ta
+    - 'no'
+    - th
+    - ur
+    - hr
+    - bg
+    - lt
+    - la
+    - mi
+    - ml
+    - cy
+    - sk
+    - te
+    - fa
+    - lv
+    - bn
+    - sr
+    - az
+    - sl
+    - kn
+    - et
+    - mk
+    - br
+    - eu
+    - is
+    - hy
+    - ne
+    - mn
+    - bs
+    - kk
+    - sq
+    - sw
+    - gl
+    - mr
+    - pa
+    - si
+    - km
+    - sn
+    - yo
+    - so
+    - af
+    - oc
+    - ka
+    - be
+    - tg
+    - sd
+    - gu
+    - am
+    - yi
+    - lo
+    - uz
+    - fo
+    - ht
+    - ps
+    - tk
+    - nn
+    - mt
+    - sa
+    - lb
+    - my
+    - bo
+    - tl
+    - mg
+    - as
+    - tt
+    - haw
+    - ln
+    - ha
+    - ba
+    - jw
+    - su
+    - arxiv:2212.04356
+    - license:apache-2.0
+    - model-index
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openai/whisper-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: automatic-speech-recognition
+relations:
+- uid: cfc4cc7d-d9f8-4117-8529-58e33be58407
+  type: Relationship
+  properties: {}
+  from_: eea267d6-068f-47bf-9954-8e2796624e9f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_whisper-large.json
+  relationship_type: annotatedBy
+- uid: 8418b45b-b02e-4e0e-b3be-aeaee8a519b8
+  type: Relationship
+  properties: {}
+  from_: 48dc8ec6-05c4-4132-9ac9-2fa47757fb89
+  to_:
+  - 3b29460d-3db1-4cf5-9ad3-c62a48a6aeae
+  relationship_type: uses
+- uid: 7e170115-7e1a-4749-b2c5-e9f1e1b587c2
+  type: Relationship
+  properties: {}
+  from_: eea267d6-068f-47bf-9954-8e2796624e9f
+  to_:
+  - 48dc8ec6-05c4-4132-9ac9-2fa47757fb89
+  relationship_type: produces

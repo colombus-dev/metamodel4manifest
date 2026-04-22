@@ -1,0 +1,147 @@
+uid: 7eacda00-15a7-4835-bf94-a4765f2e7e42
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aifeifei798_DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored.json
+  type: SoftwareFile
+  name: aifeifei798_DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c2b21158-a35e-4d57-bc1c-b10b2f708db1
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aifeifei798_DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored.json
+    type: ExternalReference
+  languages: []
+- uid: 3e520f94-ca98-4124-993d-c359967d401f
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: fa4367b6-9d17-4366-a93e-993d7a30e254
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:44.400061+00:00'
+    bom-ref: aifeifei798/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-07b691cc-5101-5f52-a2ce-8ae18712e968
+    name: aifeifei798/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored
+    authors:
+    - name: aifeifei798
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Information
+
+      The module combination has been readjusted to better fulfill various roles and has been adapted for mobile phones.
+
+      - Saving money(LLama 3.1;Llama-3.1-8B-Instruct more informtion look at Llama-3.1-8B-Instruct Information)
+
+      - Llama-3.1-8B-Instruct Uncensored
+
+      - Roleplay(roleplay and Dark-roleplay)
+
+      - Writing Prompts
+
+      - writing opus
+
+      - Realignment of Chinese, Japanese, and Korean
+
+      - only test en.
+
+      - Input Models input text only. Output Models generate text and code only.
+
+      - Uncensored
+
+      - Quick response
+
+      - A scholarly response akin to a thesis.(I tend to write songs extensively, to the point where one song almost becomes as detailed as a thesis. :)
+
+      - DarkIdol:Roles that you can imagine and those that you cannot imagine.
+
+      - Specialized in various role-playing scenarios
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - roleplay
+    - llama3
+    - sillytavern
+    - idol
+    - facebook
+    - meta
+    - pytorch
+    - llama-3
+    - conversational
+    - en
+    - de
+    - fr
+    - it
+    - pt
+    - hi
+    - es
+    - th
+    - zh
+    - ko
+    - ja
+    - arxiv:2204.05149
+    - doi:10.57967/hf/3846
+    - license:llama3.1
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama3.1
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/aifeifei798/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+
+      **Intended Use Cases** Llama 3.1 is intended for commercial and research use in multiple languages. Instruction tuned text only models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks. The Llama 3.1 model collection also supports the ability to leverage the outputs of its models to improve other models including synthetic data generation and distillation. The Llama 3.1 Community License allows for these use cases.
+
+
+      **Out-of-scope** Use in any manner that violates applicable laws or regulations (including trade compliance laws). Use in any other way that is prohibited by the Acceptable Use Policy and Llama 3.1 Community License. Use in languages beyond those explicitly referenced as supported in this model card**.
+
+
+      **<span style="text-decoration:underline;">Note</span>: Llama 3.1 has been trained on a broader collection of languages than the 8 supported languages. Developers may fine-tune Llama 3.1 models for languages beyond the 8 supported languages provided they comply with the Llama 3.1 Community License and the Acceptable Use Policy and in such cases are responsible for ensuring that any uses of Llama 3.1 in additional languages is done in a safe and responsible manner.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: edb62c28-adb0-4802-83e2-b3df8c716eda
+  type: Relationship
+  properties: {}
+  from_: 7eacda00-15a7-4835-bf94-a4765f2e7e42
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/aifeifei798_DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored.json
+  relationship_type: annotatedBy
+- uid: dd81be04-88fa-4b0c-a996-34917577dd4f
+  type: Relationship
+  properties: {}
+  from_: fa4367b6-9d17-4366-a93e-993d7a30e254
+  to_:
+  - 3e520f94-ca98-4124-993d-c359967d401f
+  relationship_type: uses
+- uid: d6e4356d-238b-42d3-b0c9-f940993c259c
+  type: Relationship
+  properties: {}
+  from_: 7eacda00-15a7-4835-bf94-a4765f2e7e42
+  to_:
+  - fa4367b6-9d17-4366-a93e-993d7a30e254
+  relationship_type: produces

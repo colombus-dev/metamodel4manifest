@@ -1,0 +1,101 @@
+uid: 99346b6f-8584-441b-8182-474216a3beca
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_gemma-2-27b.json
+  type: SoftwareFile
+  name: google_gemma-2-27b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:bb0d74ca-d8e9-4afa-99c7-b7784f0d2e5e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_gemma-2-27b.json
+    type: ExternalReference
+  languages: []
+- uid: 7a99263f-dfc5-4213-93a1-6dbd98b41c21
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0071f094-c5fd-4ab9-900c-daf9afa5a699
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:55.727097+00:00'
+    bom-ref: google/gemma-2-27b-3f303935-a1b0-5149-9734-0dfb7ca6be2b
+    name: google/gemma-2-27b
+    authors:
+    - name: google
+    architectureFamily: gemma2
+    modelArchitecture: Gemma2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - gemma2
+    - text-generation
+    - arxiv:2009.03300
+    - arxiv:1905.07830
+    - arxiv:1911.11641
+    - arxiv:1904.09728
+    - arxiv:1905.10044
+    - arxiv:1907.10641
+    - arxiv:1811.00937
+    - arxiv:1809.02789
+    - arxiv:1911.01547
+    - arxiv:1705.03551
+    - arxiv:2107.03374
+    - arxiv:2108.07732
+    - arxiv:2110.14168
+    - arxiv:2009.11462
+    - arxiv:2101.11718
+    - arxiv:2110.08193
+    - arxiv:1804.09301
+    - arxiv:2109.07958
+    - arxiv:1804.06876
+    - arxiv:2103.03874
+    - arxiv:2304.06364
+    - arxiv:2206.04615
+    - arxiv:2203.09509
+    - license:gemma
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: gemma
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google/gemma-2-27b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 3a0b98ab-a10d-4f6a-b793-81184d381aa9
+  type: Relationship
+  properties: {}
+  from_: 99346b6f-8584-441b-8182-474216a3beca
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_gemma-2-27b.json
+  relationship_type: annotatedBy
+- uid: 453d3bc2-518e-4693-b430-eece4d42350b
+  type: Relationship
+  properties: {}
+  from_: 0071f094-c5fd-4ab9-900c-daf9afa5a699
+  to_:
+  - 7a99263f-dfc5-4213-93a1-6dbd98b41c21
+  relationship_type: uses
+- uid: 35111a38-5d22-426e-acfb-67384ae09d80
+  type: Relationship
+  properties: {}
+  from_: 99346b6f-8584-441b-8182-474216a3beca
+  to_:
+  - 0071f094-c5fd-4ab9-900c-daf9afa5a699
+  relationship_type: produces

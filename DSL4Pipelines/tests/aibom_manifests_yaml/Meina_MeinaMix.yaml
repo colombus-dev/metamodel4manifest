@@ -1,0 +1,75 @@
+uid: 5464d881-e30a-488e-a9f1-9f798b7dfcd3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Meina_MeinaMix.json
+  type: SoftwareFile
+  name: Meina_MeinaMix.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3496a828-f8e0-4f51-84ca-ff0e3136c133
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Meina_MeinaMix.json
+    type: ExternalReference
+  languages: []
+- uid: 594935fe-4732-483e-9a5a-756ac549ce84
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2a4d18ec-c7b7-4704-a419-54885dde3ee7
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:31.957300+00:00'
+    bom-ref: Meina/MeinaMix-77bf2d24-14b3-5203-8dcd-8c2ec1e63525
+    name: Meina/MeinaMix
+    authors:
+    - name: Meina
+    tags:
+    - diffusers
+    - anime
+    - art
+    - stable diffusion
+    - text-to-image
+    - en
+    - license:creativeml-openrail-m
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Meina/MeinaMix
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: c1575e5c-4fad-4797-a1fd-7ffe72fcb855
+  type: Relationship
+  properties: {}
+  from_: 5464d881-e30a-488e-a9f1-9f798b7dfcd3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Meina_MeinaMix.json
+  relationship_type: annotatedBy
+- uid: 5b34a226-8abe-49a1-a5c7-425e531104fe
+  type: Relationship
+  properties: {}
+  from_: 2a4d18ec-c7b7-4704-a419-54885dde3ee7
+  to_:
+  - 594935fe-4732-483e-9a5a-756ac549ce84
+  relationship_type: uses
+- uid: 0731b906-f8ee-406f-905a-f2bee7554dc4
+  type: Relationship
+  properties: {}
+  from_: 5464d881-e30a-488e-a9f1-9f798b7dfcd3
+  to_:
+  - 2a4d18ec-c7b7-4704-a419-54885dde3ee7
+  relationship_type: produces

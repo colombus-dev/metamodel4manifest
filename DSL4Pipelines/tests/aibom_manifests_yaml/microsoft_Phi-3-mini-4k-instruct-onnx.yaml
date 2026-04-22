@@ -1,0 +1,98 @@
+uid: c2eaa67d-ac3e-4a94-9e05-66c70ddfab84
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_Phi-3-mini-4k-instruct-onnx.json
+  type: SoftwareFile
+  name: microsoft_Phi-3-mini-4k-instruct-onnx.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c1f6644b-41cc-4ee4-85e3-416b0f0060f3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_Phi-3-mini-4k-instruct-onnx.json
+    type: ExternalReference
+  languages: []
+- uid: 278722fd-4227-485c-b837-15e1f0a54226
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e5f6cc0e-a811-4d6e-ab20-b3c469dbecb6
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:30.312562+00:00'
+    bom-ref: microsoft/Phi-3-mini-4k-instruct-onnx-0916a4af-6453-5835-aac8-386d62b02fa8
+    name: microsoft/Phi-3-mini-4k-instruct-onnx
+    authors:
+    - name: microsoft
+    architectureFamily: phi3
+    modelArchitecture: Phi3ForCausalLM
+    description: '### Model Description
+
+
+      - **Developed by:**  Microsoft
+
+      - **Model type:** ONNX
+
+      - **Language(s) (NLP):** Python, C, C++
+
+      - **License:** MIT
+
+      - **Model Description:** This is a conversion of the Phi-3 Mini-4K-Instruct model for ONNX Runtime inference.
+
+      '
+    tags:
+    - transformers
+    - onnx
+    - phi3
+    - text-generation
+    - ONNX
+    - DML
+    - ONNXRuntime
+    - nlp
+    - conversational
+    - custom_code
+    - arxiv:2306.00978
+    - license:mit
+    - autotrain_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: a7f309e4-d669-47db-8bb5-e11d67e98911
+  type: Relationship
+  properties: {}
+  from_: c2eaa67d-ac3e-4a94-9e05-66c70ddfab84
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_Phi-3-mini-4k-instruct-onnx.json
+  relationship_type: annotatedBy
+- uid: 5600e4d0-c66f-44c5-a8ee-aa5b46b9c573
+  type: Relationship
+  properties: {}
+  from_: e5f6cc0e-a811-4d6e-ab20-b3c469dbecb6
+  to_:
+  - 278722fd-4227-485c-b837-15e1f0a54226
+  relationship_type: uses
+- uid: 56292de2-75df-4c9c-b161-99bee4b42312
+  type: Relationship
+  properties: {}
+  from_: c2eaa67d-ac3e-4a94-9e05-66c70ddfab84
+  to_:
+  - e5f6cc0e-a811-4d6e-ab20-b3c469dbecb6
+  relationship_type: produces

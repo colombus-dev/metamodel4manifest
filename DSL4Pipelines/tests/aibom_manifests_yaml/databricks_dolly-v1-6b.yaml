@@ -1,0 +1,157 @@
+uid: d63c5bb9-111c-40f0-b9d4-514d91039551
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/databricks_dolly-v1-6b.json
+  type: SoftwareFile
+  name: databricks_dolly-v1-6b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a4ff0b64-f950-4ff2-8e87-8921bc1dbe28
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/databricks_dolly-v1-6b.json
+    type: ExternalReference
+  languages: []
+- uid: 6286ac0d-d769-4f55-95ee-edabbf62d790
+  type: Data
+  properties:
+    bom-ref: tatsu-lab/alpaca-fe64dd38-6a83-5779-a6ca-a80ee9d1d33a
+    name: tatsu-lab/alpaca
+    content_url: https://huggingface.co/datasets/tatsu-lab/alpaca
+    task_categories: text-generation
+    pretty_name: Alpaca
+    license: cc-by-nc-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: tatsu-lab/alpaca-fe64dd38-6a83-5779-a6ca-a80ee9d1d33a
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 6d663951-6489-4fdd-a8e1-4bc4d9700ff6
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c4d7a7d4-fd97-4cb0-a8e2-9af1b151b092
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:56.107071+00:00'
+    bom-ref: databricks/dolly-v1-6b-082b80f9-c7f0-541b-9db8-00ba3466801f
+    name: databricks/dolly-v1-6b
+    authors:
+    - name: databricks
+    architectureFamily: gptj
+    modelArchitecture: GPTJForCausalLM
+    description: '## Model Overview
+
+      `dolly-v1-6b` is a 6 billion parameter causal language model created by [Databricks](https://databricks.com/) that is derived from
+
+      [EleutherAI’s](https://www.eleuther.ai/) [GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B) (released June 2021) and fine-tuned
+
+      on a ~52K record instruction corpus ([Stanford Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)) (CC-NC-BY-4.0)
+
+      consisting of question/answer pairs generated using the techniques outlined in the [Self-Instruct](https://arxiv.org/abs/2212.10560) paper.
+
+      The [original version](https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html) of was Dolly was trained using [deepspeed](https://github.com/microsoft/DeepSpeed) [ZeRO 3](https://github.com/microsoft/DeepSpeed/blob/master/docs/code-docs/source/zero3.rst)
+
+      on the [Databricks Machine Learning Platform](https://www.databricks.com/product/machine-learning) in just 30 minutes (1 epoch) using a single
+
+      [NDasrA100_v4](https://learn.microsoft.com/en-us/azure/virtual-machines/nda100-v4-series) machine with 8x A100 40GB GPUs.
+
+      The most recent `dolly-v1-6b` checkpoint was trained for 10 epochs on the same hardware.
+
+
+      Like its base model, `dolly-v1-6b` has six billion parameters consisting of 28 transformer layers with 16 attention heads each.
+
+      It employs [Rotary Position Embedding](https://arxiv.org/abs/2104.09864) (RoPE) and shares the same tokenizer as GPT-3.
+
+      GPT-J was trained on [The Pile](https://huggingface.co/datasets/the_pile), a 400B token dataset of diverse documents designed primarily for text generation tasks.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - gptj
+    - text-generation
+    - en
+    - dataset:tatsu-lab/alpaca
+    - arxiv:2212.10560
+    - arxiv:2104.09864
+    - arxiv:2203.02155
+    - license:cc-by-nc-4.0
+    - autotrain_compatible
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/databricks/dolly-v1-6b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Uses
+
+      **`dolly-v1-6b` is intended exclusively for research purposes. We do not recommend using `dolly-v1-6b` in high-risk applications
+
+      (e.g., educational or vocational training, product safety components, or other uses that may impact the well-being of individuals.)**
+
+
+      `dolly-v1-6b` is differentiated from its predecessor, GPT-J, in the extent to which it exhibits coherent responses to natural language
+
+      questions and instruction prompts. `dolly-v1-6b` appears to exhibit reasonable (but categorically not state-of-the-art) behavior across a range
+
+      of capabilities, including many of those outlined in the [InstructGPT](https://arxiv.org/abs/2203.02155) paper.
+
+
+      We include evocative examples below, but invite the reader to observe that they contain factual inaccuracies or semantic misfires that illustrate some of the model’s shortcomings.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 32895e0b-f662-450f-93bb-9e080b7cd7d5
+  type: Relationship
+  properties: {}
+  from_: d63c5bb9-111c-40f0-b9d4-514d91039551
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/databricks_dolly-v1-6b.json
+  relationship_type: annotatedBy
+- uid: 272df97b-fb84-4583-acf8-9dd9b7a7015e
+  type: Relationship
+  properties: {}
+  from_: c4d7a7d4-fd97-4cb0-a8e2-9af1b151b092
+  to_:
+  - 6286ac0d-d769-4f55-95ee-edabbf62d790
+  relationship_type: uses
+- uid: 7391c268-b372-47f4-86f0-fc7e135cc175
+  type: Relationship
+  properties: {}
+  from_: c4d7a7d4-fd97-4cb0-a8e2-9af1b151b092
+  to_:
+  - 6d663951-6489-4fdd-a8e1-4bc4d9700ff6
+  relationship_type: uses
+- uid: 628559cc-bb2e-4c1e-8530-b9ef05fed3c2
+  type: Relationship
+  properties: {}
+  from_: d63c5bb9-111c-40f0-b9d4-514d91039551
+  to_:
+  - c4d7a7d4-fd97-4cb0-a8e2-9af1b151b092
+  relationship_type: produces

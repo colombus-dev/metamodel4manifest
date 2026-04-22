@@ -1,0 +1,106 @@
+uid: 9f7243be-cb54-482f-ba38-0f08e6dd0686
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistral-community_Mixtral-8x22B-v0.1.json
+  type: SoftwareFile
+  name: mistral-community_Mixtral-8x22B-v0.1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2786094d-8b15-47c9-a1ef-9dcc5097fa77
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistral-community_Mixtral-8x22B-v0.1.json
+    type: ExternalReference
+  languages: []
+- uid: 2da9bd02-4fde-48a5-a4c3-46287bf3cf60
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 88d9c1bd-c153-4d41-b80c-0d52d9592c52
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:38.350028+00:00'
+    bom-ref: mistral-community/Mixtral-8x22B-v0.1-1e5d1e9b-8222-5131-8844-bd44d6e848c2
+    name: mistral-community/Mixtral-8x22B-v0.1
+    authors:
+    - name: mistral-community
+    architectureFamily: mixtral
+    modelArchitecture: MixtralForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: ai2_arc, split: test, config: ARC-Challenge'
+        type: acc_norm
+        value: 70.48
+      - slice: 'dataset: hellaswag, split: validation'
+        type: acc_norm
+        value: 88.73
+      - slice: 'dataset: cais/mmlu, split: test, config: all'
+        type: acc
+        value: 77.81
+      - slice: 'dataset: truthful_qa, split: validation, config: multiple_choice'
+        type: mc2
+        value: 51.08
+      - slice: 'dataset: winogrande, split: validation, config: winogrande_xl'
+        type: acc
+        value: 84.53
+      - slice: 'dataset: gsm8k, split: test, config: main'
+        type: acc
+        value: 74.15
+    tags:
+    - transformers
+    - safetensors
+    - mixtral
+    - text-generation
+    - moe
+    - fr
+    - it
+    - de
+    - es
+    - en
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: da9c9979-7d78-4841-aff2-b51b7ea4bc41
+  type: Relationship
+  properties: {}
+  from_: 9f7243be-cb54-482f-ba38-0f08e6dd0686
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mistral-community_Mixtral-8x22B-v0.1.json
+  relationship_type: annotatedBy
+- uid: 1540626b-725c-469d-8637-2239ac39f35f
+  type: Relationship
+  properties: {}
+  from_: 88d9c1bd-c153-4d41-b80c-0d52d9592c52
+  to_:
+  - 2da9bd02-4fde-48a5-a4c3-46287bf3cf60
+  relationship_type: uses
+- uid: 15d41a86-8a1d-4656-bbb4-cef2e6b21459
+  type: Relationship
+  properties: {}
+  from_: 9f7243be-cb54-482f-ba38-0f08e6dd0686
+  to_:
+  - 88d9c1bd-c153-4d41-b80c-0d52d9592c52
+  relationship_type: produces

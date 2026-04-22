@@ -1,0 +1,130 @@
+uid: ce0816a9-28e9-454e-b07f-ae0c95182bc1
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tiiuae_falcon-40b.json
+  type: SoftwareFile
+  name: tiiuae_falcon-40b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:45343596-3f5c-456d-a210-e80179fead9e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tiiuae_falcon-40b.json
+    type: ExternalReference
+  languages: []
+- uid: 23d03c1e-c7fd-4ba1-8c3c-b0e31f2e43bf
+  type: Data
+  properties:
+    bom-ref: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    name: tiiuae/falcon-refinedweb
+    content_url: https://huggingface.co/datasets/tiiuae/falcon-refinedweb
+    task_categories: text-generation
+    size_categories: 100B<n<1T
+    pretty_name: Falcon RefinedWeb
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 87ef2a1f-3043-461a-963f-5eab50d0f4fb
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ac2e8a84-8705-441c-b61f-3049ef7590e2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:27.780624+00:00'
+    bom-ref: tiiuae/falcon-40b-c37748a3-44d5-5604-aa31-f50b8a70224e
+    name: tiiuae/falcon-40b
+    authors:
+    - name: tiiuae
+    architectureFamily: falcon
+    modelArchitecture: FalconForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - falcon
+    - text-generation
+    - custom_code
+    - en
+    - de
+    - es
+    - fr
+    - dataset:tiiuae/falcon-refinedweb
+    - arxiv:2205.14135
+    - arxiv:1911.02150
+    - arxiv:2101.00027
+    - arxiv:2005.14165
+    - arxiv:2104.09864
+    - arxiv:2306.01116
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/tiiuae/falcon-40b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 880e85be-ca39-48ca-a869-dd1fe1f777dc
+  type: Relationship
+  properties: {}
+  from_: ce0816a9-28e9-454e-b07f-ae0c95182bc1
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tiiuae_falcon-40b.json
+  relationship_type: annotatedBy
+- uid: 61e1343d-d3a8-4430-9749-05afb8987e10
+  type: Relationship
+  properties: {}
+  from_: ac2e8a84-8705-441c-b61f-3049ef7590e2
+  to_:
+  - 23d03c1e-c7fd-4ba1-8c3c-b0e31f2e43bf
+  relationship_type: uses
+- uid: 144c3fac-747c-45d9-9c15-89c149ddb9e0
+  type: Relationship
+  properties: {}
+  from_: ac2e8a84-8705-441c-b61f-3049ef7590e2
+  to_:
+  - 87ef2a1f-3043-461a-963f-5eab50d0f4fb
+  relationship_type: uses
+- uid: 12ea02cb-37e9-4969-8d69-92b56938ac6f
+  type: Relationship
+  properties: {}
+  from_: ce0816a9-28e9-454e-b07f-ae0c95182bc1
+  to_:
+  - ac2e8a84-8705-441c-b61f-3049ef7590e2
+  relationship_type: produces

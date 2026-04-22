@@ -1,0 +1,76 @@
+uid: 7aa55c5f-2b2d-47e5-b318-fe1c678efab9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Joeythemonster_anything-midjourney-v-4-1.json
+  type: SoftwareFile
+  name: Joeythemonster_anything-midjourney-v-4-1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:437992a0-6fc2-441e-85fb-d8e1dd023a54
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Joeythemonster_anything-midjourney-v-4-1.json
+    type: ExternalReference
+  languages: []
+- uid: 6f7b1874-8a55-4f01-b18f-a393a42aa271
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b4f3f9e7-842f-4b8c-acc1-be17388f7dec
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:39.999496+00:00'
+    bom-ref: Joeythemonster/anything-midjourney-v-4-1-fa35de91-f458-5eab-9d15-5167be95c523
+    name: Joeythemonster/anything-midjourney-v-4-1
+    authors:
+    - name: Joeythemonster
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - stable-diffusion
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Joeythemonster/anything-midjourney-v-4-1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: d7ffbf86-dc17-4c81-9809-5aca558b7213
+  type: Relationship
+  properties: {}
+  from_: 7aa55c5f-2b2d-47e5-b318-fe1c678efab9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Joeythemonster_anything-midjourney-v-4-1.json
+  relationship_type: annotatedBy
+- uid: 005c4f54-79df-4055-9d27-8b4e74e05756
+  type: Relationship
+  properties: {}
+  from_: b4f3f9e7-842f-4b8c-acc1-be17388f7dec
+  to_:
+  - 6f7b1874-8a55-4f01-b18f-a393a42aa271
+  relationship_type: uses
+- uid: b606fe56-9929-4926-99c9-f625d8a2ddcc
+  type: Relationship
+  properties: {}
+  from_: 7aa55c5f-2b2d-47e5-b318-fe1c678efab9
+  to_:
+  - b4f3f9e7-842f-4b8c-acc1-be17388f7dec
+  relationship_type: produces

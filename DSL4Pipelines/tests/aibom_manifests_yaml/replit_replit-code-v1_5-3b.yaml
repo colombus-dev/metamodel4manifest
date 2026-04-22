@@ -1,0 +1,179 @@
+uid: c04cc01f-e469-4411-bf84-974661f17bb3
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/replit_replit-code-v1_5-3b.json
+  type: SoftwareFile
+  name: replit_replit-code-v1_5-3b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:dee1f597-231a-45e0-bcaf-79deb64e6ab5
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/replit_replit-code-v1_5-3b.json
+    type: ExternalReference
+  languages: []
+- uid: 040dcad1-56b9-4522-9cb5-275f596c45a7
+  type: Data
+  properties:
+    bom-ref: bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd
+    name: bigcode/the-stack-dedup
+    content_url: https://huggingface.co/datasets/bigcode/the-stack-dedup
+    task_categories: text-generation
+    task_ids: ''
+    size_categories: unknown
+    annotations_creators: ''
+    language_creators: crowdsourced, expert-generated
+    pretty_name: The-Stack
+    source_datasets: ''
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f1b75f0d-ab39-46cc-9c5f-f58055322cc4
+  type: Data
+  properties:
+    bom-ref: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    name: togethercomputer/RedPajama-Data-1T
+    content_url: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T
+    task_categories: text-generation
+    pretty_name: Red Pajama 1T
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 975a0da7-e954-4443-b723-4c4df64ca352
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 36be3ac5-6872-452f-a25f-481433c69cd9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:56.167489+00:00'
+    bom-ref: replit/replit-code-v1_5-3b-b7618a9e-7167-528c-a6b3-290d4419a3e7
+    name: replit/replit-code-v1_5-3b
+    authors:
+    - name: replit
+    architectureFamily: mpt
+    modelArchitecture: MPTForCausalLM
+    description: '## Model Description
+
+
+      Replit Code v1.5 is a 3.3B parameter Causal Language Model focused on **Code Completion**.
+
+
+      The model is trained in `bfloat16` on 1T tokens of code (~200B tokens  over 5 epochs, including linear cooldown) for 30 programming languages from a subset of permissively licensed code from Bigcode''s [Stack Dedup dataset](https://huggingface.co/datasets/bigcode/the-stack-dedup), a filtered natural language sample from Markdown and reStructuredText subsets from the same Stack Dedup dataset, and a dev-oriented sample from  [RedPajama''s StackExchange dataset](https://github.com/togethercomputer/RedPajama-Data) sourced from the [Stack Exchange Data Dump by Stack Exchange Inc](https://archive.org/details/stackexchange).
+
+
+      The 30 programming languages are:
+
+      ```
+
+      Java, JavaScript, C, PHP, Python, C++, C#, TypeScript, Go, CSS, HTML, Rust, Ruby, Swift, Scala, Shell, Lua, Perl, Haskell, JSX, Julia, Common Lisp, OCaml, Solidity, Scheme, R, Zig, SQL, Racket, D
+
+      ```
+
+
+      The context size of the model is 4096 tokens. We use the GPTNeoX tokenizer with a custom trained and optimized vocabulary of 32768 tokens. This custom vocabulary led to single-digit % points on compression while maintaining or improving coverage on our training corpus.
+
+
+      The model has been trained on the [MosaicML](https://www.mosaicml.com/) platform on 128  H100-80GB GPUs using their [LLM Foundry](https://github.com/mosaicml/llm-foundry) and [Composer](https://github.com/mosaicml/composer) training library built on top of PyTorch.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - mpt
+    - text-generation
+    - code
+    - Composer
+    - MosaicML
+    - llm-foundry
+    - StreamingDatasets
+    - custom_code
+    - dataset:bigcode/the-stack-dedup
+    - dataset:togethercomputer/RedPajama-Data-1T
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/replit/replit-code-v1_5-3b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+
+      Replit intends this model be used by anyone as a foundational model for application-specific fine-tuning without strict limitations on commercial use.
+
+
+      The model is trained specifically for code completion tasks.
+
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: dcc43201-b109-45af-bbdb-a3d4d1e60d94
+  type: Relationship
+  properties: {}
+  from_: c04cc01f-e469-4411-bf84-974661f17bb3
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/replit_replit-code-v1_5-3b.json
+  relationship_type: annotatedBy
+- uid: 75b0f3ac-c82e-42ac-be3d-5ccd4a8b16bf
+  type: Relationship
+  properties: {}
+  from_: 36be3ac5-6872-452f-a25f-481433c69cd9
+  to_:
+  - 040dcad1-56b9-4522-9cb5-275f596c45a7
+  - f1b75f0d-ab39-46cc-9c5f-f58055322cc4
+  relationship_type: uses
+- uid: a758ec23-70a1-4f08-b380-5d331083d241
+  type: Relationship
+  properties: {}
+  from_: 36be3ac5-6872-452f-a25f-481433c69cd9
+  to_:
+  - 975a0da7-e954-4443-b723-4c4df64ca352
+  relationship_type: uses
+- uid: 79ba8c08-6a07-4d2d-9093-d37d0ea94505
+  type: Relationship
+  properties: {}
+  from_: c04cc01f-e469-4411-bf84-974661f17bb3
+  to_:
+  - 36be3ac5-6872-452f-a25f-481433c69cd9
+  relationship_type: produces

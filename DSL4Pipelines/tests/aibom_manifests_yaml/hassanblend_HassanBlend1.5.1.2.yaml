@@ -1,0 +1,74 @@
+uid: 34bc894b-c727-4927-bd80-1e0f99ca04bc
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/hassanblend_HassanBlend1.5.1.2.json
+  type: SoftwareFile
+  name: hassanblend_HassanBlend1.5.1.2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:06373e5a-9f20-4c26-aade-078fd7186ea4
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/hassanblend_HassanBlend1.5.1.2.json
+    type: ExternalReference
+  languages: []
+- uid: 6b11a1c5-3a65-42d3-9359-8730a97cfcab
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0a232d99-2af9-4625-bede-cc7ec6b75f33
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:37.177550+00:00'
+    bom-ref: hassanblend/HassanBlend1.5.1.2-0b779cec-23ee-5fb2-bebd-56a78559f0c0
+    name: hassanblend/HassanBlend1.5.1.2
+    authors:
+    - name: hassanblend
+    tags:
+    - diffusers
+    - text-to-image
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/hassanblend/HassanBlend1.5.1.2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: d2d31468-3979-4f5b-92f4-9d452b8e9f2b
+  type: Relationship
+  properties: {}
+  from_: 34bc894b-c727-4927-bd80-1e0f99ca04bc
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/hassanblend_HassanBlend1.5.1.2.json
+  relationship_type: annotatedBy
+- uid: bcf154c6-25e1-4b4c-9739-e40bbb52ebe7
+  type: Relationship
+  properties: {}
+  from_: 0a232d99-2af9-4625-bede-cc7ec6b75f33
+  to_:
+  - 6b11a1c5-3a65-42d3-9359-8730a97cfcab
+  relationship_type: uses
+- uid: a707173a-a9f1-4322-9724-d8a755150e8e
+  type: Relationship
+  properties: {}
+  from_: 34bc894b-c727-4927-bd80-1e0f99ca04bc
+  to_:
+  - 0a232d99-2af9-4625-bede-cc7ec6b75f33
+  relationship_type: produces

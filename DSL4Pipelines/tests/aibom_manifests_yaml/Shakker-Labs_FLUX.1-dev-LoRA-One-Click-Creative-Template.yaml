@@ -1,0 +1,96 @@
+uid: 163bee5e-3a26-495e-ae51-3b4e7228f874
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Shakker-Labs_FLUX.1-dev-LoRA-One-Click-Creative-Template.json
+  type: SoftwareFile
+  name: Shakker-Labs_FLUX.1-dev-LoRA-One-Click-Creative-Template.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9c6fb9fe-061f-461b-ada4-28a4dafb97da
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Shakker-Labs_FLUX.1-dev-LoRA-One-Click-Creative-Template.json
+    type: ExternalReference
+  languages: []
+- uid: ac633ec7-2d6f-4a07-898d-e01bbea5184a
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 87a23bd8-a56e-4ff2-b875-306f2eaa0db2
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: 68bf6a44-97f5-470c-b007-dbcb2323b31f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:23.468642+00:00'
+    bom-ref: Shakker-Labs/FLUX.1-dev-LoRA-One-Click-Creative-Template-bdde73d9-e7fb-5b0a-9a7a-166bc0966ccc
+    name: Shakker-Labs/FLUX.1-dev-LoRA-One-Click-Creative-Template
+    authors:
+    - name: Shakker-Labs
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - lora
+    - image-generation
+    - flux
+    - safetensors
+    - en
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:adapter:black-forest-labs/FLUX.1-dev
+    - license:other
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+    url: https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Shakker-Labs/FLUX.1-dev-LoRA-One-Click-Creative-Template
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: b1869b3d-3ce1-41dd-8790-68183494dd87
+  type: Relationship
+  properties: {}
+  from_: 163bee5e-3a26-495e-ae51-3b4e7228f874
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Shakker-Labs_FLUX.1-dev-LoRA-One-Click-Creative-Template.json
+  relationship_type: annotatedBy
+- uid: 048a9e4a-8ff3-469a-8576-42f31b49f329
+  type: Relationship
+  properties: {}
+  from_: 68bf6a44-97f5-470c-b007-dbcb2323b31f
+  to_:
+  - ac633ec7-2d6f-4a07-898d-e01bbea5184a
+  relationship_type: uses
+- uid: 03cd4777-32cc-43d3-8622-ccbff404d7d2
+  type: Relationship
+  properties: {}
+  from_: 68bf6a44-97f5-470c-b007-dbcb2323b31f
+  to_:
+  - 87a23bd8-a56e-4ff2-b875-306f2eaa0db2
+  relationship_type: derivedFrom
+- uid: e3e26e01-b265-4eb4-97a6-fdaecdc4025f
+  type: Relationship
+  properties: {}
+  from_: 163bee5e-3a26-495e-ae51-3b4e7228f874
+  to_:
+  - 68bf6a44-97f5-470c-b007-dbcb2323b31f
+  relationship_type: produces

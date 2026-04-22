@@ -1,0 +1,78 @@
+uid: 50eaadb6-145d-48e6-b7b1-1c7442b5dc15
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_deepseek-vl2-small.json
+  type: SoftwareFile
+  name: deepseek-ai_deepseek-vl2-small.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d8ad0d27-b14a-4937-a101-4bedd8f4816a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_deepseek-vl2-small.json
+    type: ExternalReference
+  languages: []
+- uid: 186dc195-6587-4d1d-b860-1a44dad16351
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 9564b1c8-f807-4519-9241-aff96ef355b3
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:00.506679+00:00'
+    bom-ref: deepseek-ai/deepseek-vl2-small-1035058b-b374-527e-ae05-88bd5a65b77c
+    name: deepseek-ai/deepseek-vl2-small
+    authors:
+    - name: deepseek-ai
+    architectureFamily: deepseek_vl_v2
+    tags:
+    - transformers
+    - safetensors
+    - deepseek_vl_v2
+    - image-text-to-text
+    - conversational
+    - arxiv:2412.10302
+    - license:other
+    - endpoints_compatible
+    - region:us
+  license:
+    name: deepseek
+    url: https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-MODEL
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/deepseek-ai/deepseek-vl2-small
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: 1743fbbb-95b0-4127-8b5d-a07fbaa15971
+  type: Relationship
+  properties: {}
+  from_: 50eaadb6-145d-48e6-b7b1-1c7442b5dc15
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_deepseek-vl2-small.json
+  relationship_type: annotatedBy
+- uid: 9c791fe7-59ba-4cb6-9b73-b3648952f18f
+  type: Relationship
+  properties: {}
+  from_: 9564b1c8-f807-4519-9241-aff96ef355b3
+  to_:
+  - 186dc195-6587-4d1d-b860-1a44dad16351
+  relationship_type: uses
+- uid: 49b91379-0a5e-47b4-8aeb-a5965da687de
+  type: Relationship
+  properties: {}
+  from_: 50eaadb6-145d-48e6-b7b1-1c7442b5dc15
+  to_:
+  - 9564b1c8-f807-4519-9241-aff96ef355b3
+  relationship_type: produces

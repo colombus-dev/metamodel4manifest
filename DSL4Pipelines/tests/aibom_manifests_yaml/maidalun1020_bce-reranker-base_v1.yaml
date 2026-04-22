@@ -1,0 +1,81 @@
+uid: 88085c3d-6666-4107-84ef-9cb2d1b111c4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/maidalun1020_bce-reranker-base_v1.json
+  type: SoftwareFile
+  name: maidalun1020_bce-reranker-base_v1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cfbe59fd-402f-4ce6-8c66-454a76f65322
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/maidalun1020_bce-reranker-base_v1.json
+    type: ExternalReference
+  languages: []
+- uid: 2d4b8fce-70c4-4b5d-a0ac-be116ec922c7
+  type: SoftwareFile
+  name: sentence-transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 678713a6-dc9c-4515-8717-6062f3d44e64
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:20.676790+00:00'
+    bom-ref: maidalun1020/bce-reranker-base_v1-32d9ba33-f0f7-51b4-ac0f-78388f312adf
+    name: maidalun1020/bce-reranker-base_v1
+    authors:
+    - name: maidalun1020
+    architectureFamily: xlm-roberta
+    modelArchitecture: XLMRobertaForSequenceClassification
+    tags:
+    - sentence-transformers
+    - pytorch
+    - xlm-roberta
+    - text-classification
+    - transformers
+    - en
+    - zh
+    - ja
+    - ko
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/maidalun1020/bce-reranker-base_v1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-classification
+relations:
+- uid: b0075757-fa6e-4e26-906d-1a256950937c
+  type: Relationship
+  properties: {}
+  from_: 88085c3d-6666-4107-84ef-9cb2d1b111c4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/maidalun1020_bce-reranker-base_v1.json
+  relationship_type: annotatedBy
+- uid: 39a14f31-fc1c-40f6-bb8a-8dce9547b4c6
+  type: Relationship
+  properties: {}
+  from_: 678713a6-dc9c-4515-8717-6062f3d44e64
+  to_:
+  - 2d4b8fce-70c4-4b5d-a0ac-be116ec922c7
+  relationship_type: uses
+- uid: f8185176-d15f-4b5b-af3f-8e8bf876f0fc
+  type: Relationship
+  properties: {}
+  from_: 88085c3d-6666-4107-84ef-9cb2d1b111c4
+  to_:
+  - 678713a6-dc9c-4515-8717-6062f3d44e64
+  relationship_type: produces

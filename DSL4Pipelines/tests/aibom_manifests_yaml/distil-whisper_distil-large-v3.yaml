@@ -1,0 +1,127 @@
+uid: 512d7b84-7381-4297-825e-f7fb5b297cf9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/distil-whisper_distil-large-v3.json
+  type: SoftwareFile
+  name: distil-whisper_distil-large-v3.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:7e551138-13e1-4d18-b99a-e5baeb1f0a36
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/distil-whisper_distil-large-v3.json
+    type: ExternalReference
+  languages: []
+- uid: 97d48344-721f-4f82-90a5-5f52711e3201
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 97f4db0d-95ac-486f-b956-4d6cad4963ab
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:22.289567+00:00'
+    bom-ref: distil-whisper/distil-large-v3-c2d17057-473c-50ed-b438-36de27b5d45d
+    name: distil-whisper/distil-large-v3
+    authors:
+    - name: distil-whisper
+    architectureFamily: whisper
+    modelArchitecture: WhisperForConditionalGeneration
+    description: '## Model Details
+
+
+      Distil-Whisper inherits the encoder-decoder architecture from Whisper. The encoder maps a sequence of speech vector
+
+      inputs to a sequence of hidden-state vectors. The decoder auto-regressively predicts text tokens, conditional on all
+
+      previous tokens and the encoder hidden-states. Consequently, the encoder is only run forward once, whereas the decoder
+
+      is run as many times as the number of tokens generated. In practice, this means the decoder accounts for over 90% of
+
+      total inference time. Thus, to optimise for latency, the focus is on minimising the inference time of the decoder.
+
+
+      To distill the Whisper model, we reduce the number of decoder layers while keeping the encoder fixed.
+
+      The encoder (shown in green) is entirely copied from the teacher to the student and frozen during training.
+
+      The student''s decoder consists of a subset of the teacher decoder layers, which are intialised from maximally spaced layers.
+
+      The model is then trained on a weighted sum of the KL divergence and pseudo-label loss terms.
+
+
+      <p align="center">
+
+      <img src="https://huggingface.co/datasets/distil-whisper/figures/resolve/main/architecture.png?raw=true" width="600"/>
+
+      </p>
+
+      '
+    tags:
+    - transformers
+    - jax
+    - tensorboard
+    - onnx
+    - safetensors
+    - whisper
+    - automatic-speech-recognition
+    - audio
+    - transformers.js
+    - en
+    - arxiv:2311.00430
+    - arxiv:2210.13352
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/distil-whisper/distil-large-v3
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: automatic-speech-recognition
+  consideration:
+    use_cases: '## Intended Use
+
+
+      Distil-Whisper is intended to be a drop-in replacement for Whisper large-v3 on English speech recognition. In particular, it
+
+      achieves comparable WER results over out-of-distribution (OOD) test data, while being 6x faster on both short and long-form audio.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 31248e96-f101-41a4-89d1-d57087aeaed6
+  type: Relationship
+  properties: {}
+  from_: 512d7b84-7381-4297-825e-f7fb5b297cf9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/distil-whisper_distil-large-v3.json
+  relationship_type: annotatedBy
+- uid: d3c0cfa0-18f8-4e42-a967-952dd2140410
+  type: Relationship
+  properties: {}
+  from_: 97f4db0d-95ac-486f-b956-4d6cad4963ab
+  to_:
+  - 97d48344-721f-4f82-90a5-5f52711e3201
+  relationship_type: uses
+- uid: b7cf0c48-77c0-4435-8824-0d4ebcbc8d35
+  type: Relationship
+  properties: {}
+  from_: 512d7b84-7381-4297-825e-f7fb5b297cf9
+  to_:
+  - 97f4db0d-95ac-486f-b956-4d6cad4963ab
+  relationship_type: produces

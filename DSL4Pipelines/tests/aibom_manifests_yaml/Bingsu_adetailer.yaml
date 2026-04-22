@@ -1,0 +1,136 @@
+uid: 22cd0dbb-07f9-4503-8b2a-a32a6132e3d4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Bingsu_adetailer.json
+  type: SoftwareFile
+  name: Bingsu_adetailer.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:72f498cc-6a6a-45c0-8743-5588fae36d97
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Bingsu_adetailer.json
+    type: ExternalReference
+  languages: []
+- uid: 801f245e-2472-4739-b766-6d03fc97c210
+  type: Data
+  properties:
+    bom-ref: wider_face-5020c7ea-eb77-5164-b80a-684427671cc3
+    name: wider_face
+    content_url: https://huggingface.co/datasets/wider_face
+    task_categories: object-detection
+    task_ids: face-detection
+    size_categories: 10K<n<100K
+    annotations_creators: expert-generated
+    language_creators: found
+    pretty_name: WIDER FACE
+    source_datasets: extended|other-wider
+    paperswithcode_id: wider-face-1
+    license: cc-by-nc-nd-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: wider_face-5020c7ea-eb77-5164-b80a-684427671cc3
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 0a7f24b8-64fc-4851-a34f-3f9efb647309
+  type: Data
+  properties:
+    bom-ref: skytnt/anime-segmentation-ecf1a6ad-107d-5f96-be10-d44c1c54c3ab
+    name: skytnt/anime-segmentation
+    content_url: https://huggingface.co/datasets/skytnt/anime-segmentation
+    task_categories: image-segmentation
+    task_ids: semantic-segmentation
+    size_categories: 10K<n<100K
+    annotations_creators: ''
+    language_creators: ''
+    pretty_name: Anime Segmentation
+    source_datasets: original
+    license: cc0-1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: skytnt/anime-segmentation-ecf1a6ad-107d-5f96-be10-d44c1c54c3ab
+    type: ExternalReference
+  languages:
+  - ''
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ee721233-73cb-43f5-ad2f-8b60ac037b6c
+  type: SoftwareFile
+  name: ultralytics
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 5c3966cb-09f2-4ad3-ba44-d2882847824d
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:31.518064+00:00'
+    bom-ref: Bingsu/adetailer-a154275e-92be-5049-be56-3692a9268d3d
+    name: Bingsu/adetailer
+    authors:
+    - name: Bingsu
+    tags:
+    - ultralytics
+    - pytorch
+    - dataset:wider_face
+    - dataset:skytnt/anime-segmentation
+    - doi:10.57967/hf/3633
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Bingsu/adetailer
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: f9504ee2-3721-437e-be79-8d9e56863f3d
+  type: Relationship
+  properties: {}
+  from_: 22cd0dbb-07f9-4503-8b2a-a32a6132e3d4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Bingsu_adetailer.json
+  relationship_type: annotatedBy
+- uid: 03456f3e-9ad4-4f6a-b5b8-d20c55f989d5
+  type: Relationship
+  properties: {}
+  from_: 5c3966cb-09f2-4ad3-ba44-d2882847824d
+  to_:
+  - 801f245e-2472-4739-b766-6d03fc97c210
+  - 0a7f24b8-64fc-4851-a34f-3f9efb647309
+  relationship_type: uses
+- uid: f8a7564b-9653-425b-9cd8-aa68f2a5146d
+  type: Relationship
+  properties: {}
+  from_: 5c3966cb-09f2-4ad3-ba44-d2882847824d
+  to_:
+  - ee721233-73cb-43f5-ad2f-8b60ac037b6c
+  relationship_type: uses
+- uid: 736a2bab-625d-4b10-9cf1-185e24f1e440
+  type: Relationship
+  properties: {}
+  from_: 22cd0dbb-07f9-4503-8b2a-a32a6132e3d4
+  to_:
+  - 5c3966cb-09f2-4ad3-ba44-d2882847824d
+  relationship_type: produces

@@ -1,0 +1,134 @@
+uid: 5a760ae8-cea3-488b-a500-199e06ab47b5
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Rostlab_prot_bert.json
+  type: SoftwareFile
+  name: Rostlab_prot_bert.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3047a40a-5665-4a28-92de-72ea891be46c
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Rostlab_prot_bert.json
+    type: ExternalReference
+  languages: []
+- uid: fd386484-f80c-4307-8c64-31a4ba9f93f8
+  type: Data
+  properties:
+    bom-ref: Uniref100-c2aef72d-c18d-5f28-b776-217f7993c8ff
+    name: Uniref100
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Uniref100-c2aef72d-c18d-5f28-b776-217f7993c8ff
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 5597c5f4-7907-4a45-a168-7a4d695d4b5c
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 601936f8-0363-4efb-892a-99b3e7d6ea7e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:38.321508+00:00'
+    bom-ref: Rostlab/prot_bert-cffcc8fe-3636-52da-9cd2-8b51457ec215
+    name: Rostlab/prot_bert
+    authors:
+    - name: Rostlab
+    modelArchitecture: BertForMaskedLM
+    description: '## Model description
+
+
+      ProtBert is based on Bert model which pretrained on a large corpus of protein sequences in a self-supervised fashion.
+
+      This means it was pretrained on the raw protein sequences only, with no humans labelling them in any way (which is why it can use lots of
+
+      publicly available data) with an automatic process to generate inputs and labels from those protein sequences.
+
+
+      One important difference between our Bert model and the original Bert version is the way of dealing with sequences as separate documents.
+
+      This means the Next sentence prediction is not used, as each sequence is treated as a complete document.
+
+      The masking follows the original Bert training with randomly masks 15% of the amino acids in the input.
+
+
+      At the end, the feature extracted from this model revealed that the LM-embeddings from unlabeled data (only protein sequences) captured important biophysical properties governing protein
+
+      shape.
+
+      This implied learning some of the grammar of the language of life realized in protein sequences.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - fill-mask
+    - protein language model
+    - protein
+    - dataset:Uniref100
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Rostlab/prot_bert
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: fill-mask
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      The model could be used for protein feature extraction or to be fine-tuned on downstream tasks.
+
+      We have noticed in some tasks you could gain more accuracy by fine-tuning the model rather than using it as a feature extractor.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 64bc64e8-8ee4-4890-900e-a582a9cb28ff
+  type: Relationship
+  properties: {}
+  from_: 5a760ae8-cea3-488b-a500-199e06ab47b5
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Rostlab_prot_bert.json
+  relationship_type: annotatedBy
+- uid: 2a65ab41-3ebd-48aa-b287-df571f444e41
+  type: Relationship
+  properties: {}
+  from_: 601936f8-0363-4efb-892a-99b3e7d6ea7e
+  to_:
+  - fd386484-f80c-4307-8c64-31a4ba9f93f8
+  relationship_type: uses
+- uid: 1b656a46-c015-4177-9d1f-5bd8dc607d60
+  type: Relationship
+  properties: {}
+  from_: 601936f8-0363-4efb-892a-99b3e7d6ea7e
+  to_:
+  - 5597c5f4-7907-4a45-a168-7a4d695d4b5c
+  relationship_type: uses
+- uid: 3ad47fe5-71e6-4639-bdf4-f6ba10395254
+  type: Relationship
+  properties: {}
+  from_: 5a760ae8-cea3-488b-a500-199e06ab47b5
+  to_:
+  - 601936f8-0363-4efb-892a-99b3e7d6ea7e
+  relationship_type: produces

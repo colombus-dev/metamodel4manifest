@@ -1,0 +1,82 @@
+uid: 0eaee358-1d5f-416c-ad81-a37d27925522
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NeuML_pubmedbert-base-embeddings.json
+  type: SoftwareFile
+  name: NeuML_pubmedbert-base-embeddings.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:6b76d41b-a78c-44bd-87b5-24430f784cd4
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NeuML_pubmedbert-base-embeddings.json
+    type: ExternalReference
+  languages: []
+- uid: 699e89f6-5f21-4617-8021-2980f90d1e59
+  type: SoftwareFile
+  name: sentence-transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8bc4034d-403a-47b3-b415-f372b2f7f0ce
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:47.972837+00:00'
+    bom-ref: NeuML/pubmedbert-base-embeddings-cf268815-6be1-5abd-93c0-3a34fb6d0678
+    name: NeuML/pubmedbert-base-embeddings
+    authors:
+    - name: NeuML
+    architectureFamily: bert
+    modelArchitecture: BertModel
+    tags:
+    - sentence-transformers
+    - pytorch
+    - bert
+    - feature-extraction
+    - sentence-similarity
+    - transformers
+    - en
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-embeddings-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NeuML/pubmedbert-base-embeddings
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: sentence-similarity
+relations:
+- uid: fd038ea6-11bc-4b8d-b823-41a01493b93d
+  type: Relationship
+  properties: {}
+  from_: 0eaee358-1d5f-416c-ad81-a37d27925522
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NeuML_pubmedbert-base-embeddings.json
+  relationship_type: annotatedBy
+- uid: 330791a8-ba98-491d-97b0-aca1b875cdf1
+  type: Relationship
+  properties: {}
+  from_: 8bc4034d-403a-47b3-b415-f372b2f7f0ce
+  to_:
+  - 699e89f6-5f21-4617-8021-2980f90d1e59
+  relationship_type: uses
+- uid: 450b0311-d1d2-4908-a157-5b4a282abaaf
+  type: Relationship
+  properties: {}
+  from_: 0eaee358-1d5f-416c-ad81-a37d27925522
+  to_:
+  - 8bc4034d-403a-47b3-b415-f372b2f7f0ce
+  relationship_type: produces

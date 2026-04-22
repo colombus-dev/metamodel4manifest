@@ -1,0 +1,141 @@
+uid: bf7cdf7d-cd8a-4ef0-a398-9156e91324ef
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/01-ai_Yi-6B-200K.json
+  type: SoftwareFile
+  name: 01-ai_Yi-6B-200K.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:543ebe37-c68b-4660-805a-ffbd698453a1
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/01-ai_Yi-6B-200K.json
+    type: ExternalReference
+  languages: []
+- uid: 9ff047cd-dac0-47fd-84bf-fded19721e65
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a0853d51-82d5-428f-930e-810a701bf504
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:59.286820+00:00'
+    bom-ref: 01-ai/Yi-6B-200K-6b93bfc8-189e-5f68-bdb6-87bc611b9af5
+    name: 01-ai/Yi-6B-200K
+    authors:
+    - name: 01-ai
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Introduction
+
+
+      - 🤖 The Yi series models are the next generation of open-source large language models trained from scratch by [01.AI](https://01.ai/).
+
+
+      - 🙌 Targeted as a bilingual language model and trained on 3T multilingual corpus, the Yi series models become one of the strongest LLM worldwide, showing promise in language understanding, commonsense reasoning, reading comprehension, and more. For example,
+
+
+      - Yi-34B-Chat model **landed in second place (following GPT-4 Turbo)**, outperforming other LLMs (such as GPT-4, Mixtral, Claude) on the AlpacaEval Leaderboard (based on data available up to January 2024).
+
+
+      - Yi-34B model **ranked first among all existing open-source models** (such as Falcon-180B, Llama-70B, Claude) in **both English and Chinese** on various benchmarks, including Hugging Face Open LLM Leaderboard (pre-trained) and C-Eval (based on data available up to November 2023).
+
+
+      - 🙏 (Credits to Llama) Thanks to the Transformer and Llama open-source communities, as they reduce the efforts required to build from scratch and enable the utilization of the same tools within the AI ecosystem.
+
+
+      <details style="display: inline;"><summary> If you''re interested in Yi''s adoption of Llama architecture and license usage policy, see  <span style="color:  green;">Yi''s relation with Llama.</span> ⬇️</summary> <ul> <br>
+
+
+
+      > 💡 TL;DR
+
+      >
+
+      > The Yi series models adopt the same model architecture as Llama but are **NOT** derivatives of Llama.
+
+
+      - Both Yi and Llama are based on the Transformer structure, which has been the standard architecture for large language models since 2018.
+
+
+      - Grounded in the Transformer architecture, Llama has become a new cornerstone for the majority of state-of-the-art open-source models due to its excellent stability, reliable convergence, and robust compatibility. This positions Llama as the recognized foundational framework for models including Yi.
+
+
+      - Thanks to the Transformer and Llama architectures, other models can leverage their power, reducing the effort required to build from scratch and enabling the utilization of the same tools within their ecosystems.
+
+
+      - However, the Yi series models are NOT derivatives of Llama, as they do not use Llama''s weights.
+
+
+      - As Llama''s structure is employed by the majority of open-source models, the key factors of determining model performance are training datasets, training pipelines, and training infrastructure.
+
+
+      - Developing in a unique and proprietary way, Yi has independently created its own high-quality training datasets, efficient training pipelines, and robust training infrastructure entirely from the ground up. This effort has led to excellent performance with Yi series models ranking just behind GPT4 and surpassing Llama on the [Alpaca Leaderboard in Dec 2023](https://tatsu-lab.github.io/alpaca_eval/).
+
+      </ul>
+
+      </details>
+
+
+      <p align="right"> [
+
+      <a href="#top">Back to top ⬆️ </a>  ]
+
+      </p>
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - llama
+    - text-generation
+    - arxiv:2403.04652
+    - arxiv:2311.16502
+    - arxiv:2401.11944
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/01-ai/Yi-6B-200K
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: f7e4fa48-a4c6-4c41-aa0b-c589b61a1475
+  type: Relationship
+  properties: {}
+  from_: bf7cdf7d-cd8a-4ef0-a398-9156e91324ef
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/01-ai_Yi-6B-200K.json
+  relationship_type: annotatedBy
+- uid: 2c685149-c461-41b7-a1d5-818d92adb45d
+  type: Relationship
+  properties: {}
+  from_: a0853d51-82d5-428f-930e-810a701bf504
+  to_:
+  - 9ff047cd-dac0-47fd-84bf-fded19721e65
+  relationship_type: uses
+- uid: caf3c979-37ce-4e18-8980-30a762fbb2c6
+  type: Relationship
+  properties: {}
+  from_: bf7cdf7d-cd8a-4ef0-a398-9156e91324ef
+  to_:
+  - a0853d51-82d5-428f-930e-810a701bf504
+  relationship_type: produces

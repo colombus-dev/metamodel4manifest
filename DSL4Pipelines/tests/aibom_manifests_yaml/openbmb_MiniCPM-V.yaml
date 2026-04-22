@@ -1,0 +1,75 @@
+uid: 63654736-dbf7-4155-871c-f667e241b143
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openbmb_MiniCPM-V.json
+  type: SoftwareFile
+  name: openbmb_MiniCPM-V.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:794f8c3c-b7cb-4022-ac0b-702b85cb4712
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openbmb_MiniCPM-V.json
+    type: ExternalReference
+  languages: []
+- uid: e63849fe-f13f-4741-84e9-d1a9a83c6cd1
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: cf636a7d-6e3d-47b7-8827-02d8b7db4d05
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:34.085135+00:00'
+    bom-ref: openbmb/MiniCPM-V-48855f9e-98f9-5e75-b047-869360434a0f
+    name: openbmb/MiniCPM-V
+    authors:
+    - name: openbmb
+    architectureFamily: minicpmv
+    modelArchitecture: MiniCPMV
+    tags:
+    - transformers
+    - safetensors
+    - minicpmv
+    - feature-extraction
+    - visual-question-answering
+    - custom_code
+    - arxiv:2308.12038
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openbmb/MiniCPM-V
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: visual-question-answering
+relations:
+- uid: c17678cf-2627-4cad-954b-c712f71fc89a
+  type: Relationship
+  properties: {}
+  from_: 63654736-dbf7-4155-871c-f667e241b143
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openbmb_MiniCPM-V.json
+  relationship_type: annotatedBy
+- uid: 59e638a6-03df-43f3-a56f-fb64b75619cb
+  type: Relationship
+  properties: {}
+  from_: cf636a7d-6e3d-47b7-8827-02d8b7db4d05
+  to_:
+  - e63849fe-f13f-4741-84e9-d1a9a83c6cd1
+  relationship_type: uses
+- uid: df5de8be-5eea-4986-9fd4-44f89095cfff
+  type: Relationship
+  properties: {}
+  from_: 63654736-dbf7-4155-871c-f667e241b143
+  to_:
+  - cf636a7d-6e3d-47b7-8827-02d8b7db4d05
+  relationship_type: produces

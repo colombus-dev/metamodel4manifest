@@ -1,0 +1,122 @@
+uid: 960df894-d834-4be3-b2d5-e8b2f81d9b9c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starpii.json
+  type: SoftwareFile
+  name: bigcode_starpii.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a73f5116-e8a2-44ce-882e-cf10320eb9f2
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starpii.json
+    type: ExternalReference
+  languages: []
+- uid: 7b3b9534-b3f1-4a34-b73d-722592da8c85
+  type: Data
+  properties:
+    bom-ref: bigcode/pii-annotated-toloka-donwsample-emails-cdd64174-148d-5284-a37c-504412b8f3b4
+    name: bigcode/pii-annotated-toloka-donwsample-emails
+    content_url: https://huggingface.co/datasets/bigcode/pii-annotated-toloka-donwsample-emails
+    task_categories: token-classification
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/pii-annotated-toloka-donwsample-emails-cdd64174-148d-5284-a37c-504412b8f3b4
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 73bbd8cd-7b74-413f-9e1c-11fa5c9f7010
+  type: Data
+  properties:
+    bom-ref: bigcode/pseudo-labeled-python-data-pii-detection-filtered-75f77736-2796-536b-b7c3-7a350d034fe4
+    name: bigcode/pseudo-labeled-python-data-pii-detection-filtered
+    content_url: https://huggingface.co/datasets/bigcode/pseudo-labeled-python-data-pii-detection-filtered
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/pseudo-labeled-python-data-pii-detection-filtered-75f77736-2796-536b-b7c3-7a350d034fe4
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c1efab92-1bad-4411-b6ac-55787ce367b6
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e2e229f9-eb57-439c-a22a-0def59ba6e1f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:58.917074+00:00'
+    bom-ref: bigcode/starpii-4e7675e7-7b30-5eb5-862d-d1fbf9b4ba8f
+    name: bigcode/starpii
+    authors:
+    - name: bigcode
+    architectureFamily: bert
+    modelArchitecture: BertForTokenClassification
+    tags:
+    - transformers
+    - pytorch
+    - bert
+    - token-classification
+    - code
+    - dataset:bigcode/pii-annotated-toloka-donwsample-emails
+    - dataset:bigcode/pseudo-labeled-python-data-pii-detection-filtered
+    - arxiv:2301.03988
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/bigcode/starpii
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: token-classification
+relations:
+- uid: 41a8d43c-f689-4ec7-a28c-a69e66352885
+  type: Relationship
+  properties: {}
+  from_: 960df894-d834-4be3-b2d5-e8b2f81d9b9c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigcode_starpii.json
+  relationship_type: annotatedBy
+- uid: 79c279bb-4814-4e1e-aa77-a06544fb5906
+  type: Relationship
+  properties: {}
+  from_: e2e229f9-eb57-439c-a22a-0def59ba6e1f
+  to_:
+  - 7b3b9534-b3f1-4a34-b73d-722592da8c85
+  - 73bbd8cd-7b74-413f-9e1c-11fa5c9f7010
+  relationship_type: uses
+- uid: e6a27cbb-a083-4103-838a-86bdc379d41c
+  type: Relationship
+  properties: {}
+  from_: e2e229f9-eb57-439c-a22a-0def59ba6e1f
+  to_:
+  - c1efab92-1bad-4411-b6ac-55787ce367b6
+  relationship_type: uses
+- uid: 8d4d8470-43cc-49dd-8be7-709b6520874e
+  type: Relationship
+  properties: {}
+  from_: 960df894-d834-4be3-b2d5-e8b2f81d9b9c
+  to_:
+  - e2e229f9-eb57-439c-a22a-0def59ba6e1f
+  relationship_type: produces

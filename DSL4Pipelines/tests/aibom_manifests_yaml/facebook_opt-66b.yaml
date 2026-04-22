@@ -1,0 +1,126 @@
+uid: d2b5af63-518f-4c5d-90b4-6a63b260e4b8
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_opt-66b.json
+  type: SoftwareFile
+  name: facebook_opt-66b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8921fb2c-c140-4228-a0b3-a3a9d56b9316
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_opt-66b.json
+    type: ExternalReference
+  languages: []
+- uid: 980cd98d-0134-403c-8d66-c0133709b831
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d662d086-05eb-4033-85ce-7636d6996f16
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:45.597468+00:00'
+    bom-ref: facebook/opt-66b-c55e1612-0e6b-5c12-ad2d-2f7a9a6ba898
+    name: facebook/opt-66b
+    authors:
+    - name: facebook
+    architectureFamily: opt
+    modelArchitecture: OPTForCausalLM
+    description: '## Intro
+
+
+      To quote the first two paragraphs of the [official paper](https://arxiv.org/abs/2205.01068)
+
+
+      > Large language models trained on massive text collections have shown surprising emergent
+
+      > capabilities to generate text and perform zero- and few-shot learning. While in some cases the public
+
+      > can interact with these models through paid APIs, full model access is currently limited to only a
+
+      > few highly resourced labs. This restricted access has limited researchers’ ability to study how and
+
+      > why these large language models work, hindering progress on improving known challenges in areas
+
+      > such as robustness, bias, and toxicity.
+
+
+      > We present Open Pretrained Transformers (OPT), a suite of decoder-only pre-trained transformers ranging from 125M
+
+      > to 175B parameters, which we aim to fully and responsibly share with interested researchers. We train the OPT models to roughly match
+
+      > the performance and sizes of the GPT-3 class of models, while also applying the latest best practices in data
+
+      > collection and efficient training. Our aim in developing this suite of OPT models is to enable reproducible and responsible research at scale, and
+
+      > to bring more voices to the table in studying the impact of these LLMs. Definitions of risk, harm, bias, and toxicity, etc., should be articulated by the
+
+      > collective research community as a whole, which is only possible when models are available for study.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - opt
+    - text-generation
+    - en
+    - arxiv:2205.01068
+    - arxiv:2005.14165
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/facebook/opt-66b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      The pretrained-only model can be used for prompting for evaluation of downstream tasks as well as text generation.
+
+      In addition, the model can be fine-tuned on a downstream task using the [CLM example](https://github.com/huggingface/transformers/tree/main/examples/pytorch/language-modeling). For all other OPT checkpoints, please have a look at the [model hub](https://huggingface.co/models?filter=opt).
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: f00ba29c-80d9-4ba5-b39f-c635fa44fef4
+  type: Relationship
+  properties: {}
+  from_: d2b5af63-518f-4c5d-90b4-6a63b260e4b8
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_opt-66b.json
+  relationship_type: annotatedBy
+- uid: 8c06fe98-7947-41d4-a379-483680151d94
+  type: Relationship
+  properties: {}
+  from_: d662d086-05eb-4033-85ce-7636d6996f16
+  to_:
+  - 980cd98d-0134-403c-8d66-c0133709b831
+  relationship_type: uses
+- uid: baf43d1a-5535-4bf0-b51f-526a23898fe8
+  type: Relationship
+  properties: {}
+  from_: d2b5af63-518f-4c5d-90b4-6a63b260e4b8
+  to_:
+  - d662d086-05eb-4033-85ce-7636d6996f16
+  relationship_type: produces

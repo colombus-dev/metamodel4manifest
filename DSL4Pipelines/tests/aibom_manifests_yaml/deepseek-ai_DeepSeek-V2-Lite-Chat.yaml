@@ -1,0 +1,82 @@
+uid: abfbc34c-6aa8-4ba9-a2df-d27d5ac47c8f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2-Lite-Chat.json
+  type: SoftwareFile
+  name: deepseek-ai_DeepSeek-V2-Lite-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:ecdacb58-0708-4253-ac89-149ee50e2fba
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2-Lite-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: a9e8c7ee-e979-426d-af67-2c0e2601adf8
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 01e4c1a3-1ee5-474f-9d3d-787fddd76ce2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:39.128530+00:00'
+    bom-ref: deepseek-ai/DeepSeek-V2-Lite-Chat-c0c40d41-bb01-58ec-a091-8466e1f4358e
+    name: deepseek-ai/DeepSeek-V2-Lite-Chat
+    authors:
+    - name: deepseek-ai
+    architectureFamily: deepseek_v2
+    modelArchitecture: DeepseekV2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - deepseek_v2
+    - text-generation
+    - conversational
+    - custom_code
+    - arxiv:2405.04434
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: deepseek
+    url: https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1acd3bda-6317-412e-924c-e60fdb26c374
+  type: Relationship
+  properties: {}
+  from_: abfbc34c-6aa8-4ba9-a2df-d27d5ac47c8f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-V2-Lite-Chat.json
+  relationship_type: annotatedBy
+- uid: 90be76aa-6bd9-4bb6-8830-6da76a082988
+  type: Relationship
+  properties: {}
+  from_: 01e4c1a3-1ee5-474f-9d3d-787fddd76ce2
+  to_:
+  - a9e8c7ee-e979-426d-af67-2c0e2601adf8
+  relationship_type: uses
+- uid: 1deb15ee-f5d4-4fc3-b265-6d9474f0186a
+  type: Relationship
+  properties: {}
+  from_: abfbc34c-6aa8-4ba9-a2df-d27d5ac47c8f
+  to_:
+  - 01e4c1a3-1ee5-474f-9d3d-787fddd76ce2
+  relationship_type: produces

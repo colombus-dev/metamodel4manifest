@@ -1,0 +1,120 @@
+uid: ae1fb928-511e-47f7-9e45-d7152e77d88a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_git-large-coco.json
+  type: SoftwareFile
+  name: microsoft_git-large-coco.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:29687f91-42c6-4d71-b972-6c67ea6f3f4a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_git-large-coco.json
+    type: ExternalReference
+  languages: []
+- uid: 0473c7e6-0cc3-4cac-869b-806dfe943cf1
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2f44cab7-b92d-461d-812d-2b550d693712
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:39.651585+00:00'
+    bom-ref: microsoft/git-large-coco-008b3c21-d321-555c-a319-d05d0fc02594
+    name: microsoft/git-large-coco
+    authors:
+    - name: microsoft
+    architectureFamily: git
+    modelArchitecture: GitForCausalLM
+    description: '## Model description
+
+
+      GIT is a Transformer decoder conditioned on both CLIP image tokens and text tokens. The model is trained using "teacher forcing" on a lot of (image, text) pairs.
+
+
+      The goal for the model is simply to predict the next text token, giving the image tokens and previous text tokens.
+
+
+      The model has full access to (i.e. a bidirectional attention mask is used for) the image patch tokens, but only has access to the previous text tokens (i.e. a causal attention mask is used for the text tokens) when predicting the next text token.
+
+
+      ![GIT architecture](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/git_architecture.jpg)
+
+
+      This allows the model to be used for tasks like:
+
+
+      - image and video captioning
+
+      - visual question answering (VQA) on images and videos
+
+      - even image classification (by simply conditioning the model on the image and asking it to generate a class for it in text).
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - git
+    - image-text-to-text
+    - vision
+    - image-captioning
+    - image-to-text
+    - en
+    - arxiv:2205.14100
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/git-large-coco
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-text
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      You can use the raw model for image captioning. See the [model hub](https://huggingface.co/models?search=microsoft/git) to look for
+
+      fine-tuned versions on a task that interests you.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 48a505af-115e-47c3-a9a8-adc8735b3658
+  type: Relationship
+  properties: {}
+  from_: ae1fb928-511e-47f7-9e45-d7152e77d88a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_git-large-coco.json
+  relationship_type: annotatedBy
+- uid: 2093fd60-5c78-46be-ae1f-97fea65a7a7a
+  type: Relationship
+  properties: {}
+  from_: 2f44cab7-b92d-461d-812d-2b550d693712
+  to_:
+  - 0473c7e6-0cc3-4cac-869b-806dfe943cf1
+  relationship_type: uses
+- uid: 2068ad91-9997-49d7-b5e3-84aa33747802
+  type: Relationship
+  properties: {}
+  from_: ae1fb928-511e-47f7-9e45-d7152e77d88a
+  to_:
+  - 2f44cab7-b92d-461d-812d-2b550d693712
+  relationship_type: produces

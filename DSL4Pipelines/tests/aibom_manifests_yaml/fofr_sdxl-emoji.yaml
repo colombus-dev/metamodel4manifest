@@ -1,0 +1,91 @@
+uid: 232d2c60-a57c-49d9-bba7-03e220136ee9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fofr_sdxl-emoji.json
+  type: SoftwareFile
+  name: fofr_sdxl-emoji.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:40ccd24c-4773-4866-b7d2-b60c18264f7a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fofr_sdxl-emoji.json
+    type: ExternalReference
+  languages: []
+- uid: 5131b6e1-9f3a-44b5-b76b-375c94d2e237
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c8462d77-58e4-42cc-bac1-bce9128beb03
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: stabilityai/stable-diffusion-xl-base-1.0
+    type: ExternalReference
+  languages: []
+- uid: 26eea67b-41a2-4fbb-b50b-309b6db18bfa
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:41.967035+00:00'
+    bom-ref: fofr/sdxl-emoji-dab3fccf-64e1-55ef-998a-e1fc22db060a
+    name: fofr/sdxl-emoji
+    authors:
+    - name: fofr
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - lora
+    - base_model:stabilityai/stable-diffusion-xl-base-1.0
+    - base_model:adapter:stabilityai/stable-diffusion-xl-base-1.0
+    - license:creativeml-openrail-m
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/fofr/sdxl-emoji
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 2384be10-38eb-4e24-8eda-c507a0b401e7
+  type: Relationship
+  properties: {}
+  from_: 232d2c60-a57c-49d9-bba7-03e220136ee9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fofr_sdxl-emoji.json
+  relationship_type: annotatedBy
+- uid: ad169898-4ae7-4da6-9f35-efe149142006
+  type: Relationship
+  properties: {}
+  from_: 26eea67b-41a2-4fbb-b50b-309b6db18bfa
+  to_:
+  - 5131b6e1-9f3a-44b5-b76b-375c94d2e237
+  relationship_type: uses
+- uid: 75c6da02-9d9b-4bcf-92cf-6542b48d6e3d
+  type: Relationship
+  properties: {}
+  from_: 26eea67b-41a2-4fbb-b50b-309b6db18bfa
+  to_:
+  - c8462d77-58e4-42cc-bac1-bce9128beb03
+  relationship_type: derivedFrom
+- uid: 696924e3-9e5f-4d77-899a-502435dbef84
+  type: Relationship
+  properties: {}
+  from_: 232d2c60-a57c-49d9-bba7-03e220136ee9
+  to_:
+  - 26eea67b-41a2-4fbb-b50b-309b6db18bfa
+  relationship_type: produces

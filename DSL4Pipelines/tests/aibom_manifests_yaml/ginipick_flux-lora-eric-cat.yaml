@@ -1,0 +1,94 @@
+uid: 8333832a-94d6-4c6f-a0b5-8010f8b31a9c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ginipick_flux-lora-eric-cat.json
+  type: SoftwareFile
+  name: ginipick_flux-lora-eric-cat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8fb259c9-7473-490d-9dbe-4a7be78140b4
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ginipick_flux-lora-eric-cat.json
+    type: ExternalReference
+  languages: []
+- uid: 697936f4-1bdc-480d-b5eb-cabc218c84c9
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e70427b7-ce62-4f45-83a7-0d6629416bdc
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: 46de7412-2047-496a-b446-3438b54891d7
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:42.767214+00:00'
+    bom-ref: ginipick/flux-lora-eric-cat-1098dae3-5917-5d95-92ae-c9eb0c37adb9
+    name: ginipick/flux-lora-eric-cat
+    authors:
+    - name: ginipick
+    tags:
+    - diffusers
+    - autotrain
+    - spacerunner
+    - text-to-image
+    - flux
+    - lora
+    - template:sd-lora
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:adapter:black-forest-labs/FLUX.1-dev
+    - license:other
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ginipick/flux-lora-eric-cat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: fb87e3ab-548f-4967-9bab-7b98815be5c9
+  type: Relationship
+  properties: {}
+  from_: 8333832a-94d6-4c6f-a0b5-8010f8b31a9c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ginipick_flux-lora-eric-cat.json
+  relationship_type: annotatedBy
+- uid: 9bb59229-507d-42f4-b892-d3e3f546d9b2
+  type: Relationship
+  properties: {}
+  from_: 46de7412-2047-496a-b446-3438b54891d7
+  to_:
+  - 697936f4-1bdc-480d-b5eb-cabc218c84c9
+  relationship_type: uses
+- uid: 91ea09e2-f3ca-4c75-aa39-12eb9880da3c
+  type: Relationship
+  properties: {}
+  from_: 46de7412-2047-496a-b446-3438b54891d7
+  to_:
+  - e70427b7-ce62-4f45-83a7-0d6629416bdc
+  relationship_type: derivedFrom
+- uid: 980ce03c-a4bb-441d-88c5-55bc30d7c6eb
+  type: Relationship
+  properties: {}
+  from_: 8333832a-94d6-4c6f-a0b5-8010f8b31a9c
+  to_:
+  - 46de7412-2047-496a-b446-3438b54891d7
+  relationship_type: produces

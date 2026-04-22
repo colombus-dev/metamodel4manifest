@@ -1,0 +1,101 @@
+uid: 34a3f88d-6d14-4930-9c75-29f4d5783cf2
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/alvdansen_BandW-Manga.json
+  type: SoftwareFile
+  name: alvdansen_BandW-Manga.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0dbe2c08-bfcb-4a5c-9a54-6ea19e1bfa2b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/alvdansen_BandW-Manga.json
+    type: ExternalReference
+  languages: []
+- uid: 6a856c3d-dfc6-4e38-bc51-28afcc313697
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 14c1f7d1-05e1-471a-8720-c0a4da5e3de1
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: stabilityai/stable-diffusion-xl-base-1.0
+    type: ExternalReference
+  languages: []
+- uid: c405c62f-880a-482b-9421-c7fec939ef4c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:55.089729+00:00'
+    bom-ref: alvdansen/BandW-Manga-470f96ae-503a-5210-bd32-8f15e2a557c1
+    name: alvdansen/BandW-Manga
+    authors:
+    - name: alvdansen
+    description: '## Model description
+
+
+      This model makes super bold line portrait illustrations. Best in monochrome with simple prompts.
+
+
+
+
+      '
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - lora
+    - template:sd-lora
+    - base_model:stabilityai/stable-diffusion-xl-base-1.0
+    - base_model:adapter:stabilityai/stable-diffusion-xl-base-1.0
+    - license:creativeml-openrail-m
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/alvdansen/BandW-Manga
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: d8ec7ada-9f30-4491-8fd4-dc8c12a1ea64
+  type: Relationship
+  properties: {}
+  from_: 34a3f88d-6d14-4930-9c75-29f4d5783cf2
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/alvdansen_BandW-Manga.json
+  relationship_type: annotatedBy
+- uid: 3020b7a5-f7a4-48bd-9deb-3815ae6cfef0
+  type: Relationship
+  properties: {}
+  from_: c405c62f-880a-482b-9421-c7fec939ef4c
+  to_:
+  - 6a856c3d-dfc6-4e38-bc51-28afcc313697
+  relationship_type: uses
+- uid: cd84a9e5-7165-4778-87b2-93451d677502
+  type: Relationship
+  properties: {}
+  from_: c405c62f-880a-482b-9421-c7fec939ef4c
+  to_:
+  - 14c1f7d1-05e1-471a-8720-c0a4da5e3de1
+  relationship_type: derivedFrom
+- uid: 19272d9a-cf92-4dd6-ba78-0e676f1ddc73
+  type: Relationship
+  properties: {}
+  from_: 34a3f88d-6d14-4930-9c75-29f4d5783cf2
+  to_:
+  - c405c62f-880a-482b-9421-c7fec939ef4c
+  relationship_type: produces

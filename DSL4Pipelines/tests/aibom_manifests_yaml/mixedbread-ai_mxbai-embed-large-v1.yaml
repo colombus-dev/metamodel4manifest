@@ -1,0 +1,3060 @@
+uid: 543cf134-8f8f-4096-846d-9c1b9a290c8f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mixedbread-ai_mxbai-embed-large-v1.json
+  type: SoftwareFile
+  name: mixedbread-ai_mxbai-embed-large-v1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fb3a167d-48f7-4d0d-8e30-7ec23ae32456
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mixedbread-ai_mxbai-embed-large-v1.json
+    type: ExternalReference
+  languages: []
+- uid: 7105d0f5-4e73-425b-b6db-487e4c13912d
+  type: SoftwareFile
+  name: sentence-transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 29278ad4-e439-4197-8ee4-5dc9778e8f4a
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:49.272109+00:00'
+    bom-ref: mixedbread-ai/mxbai-embed-large-v1-b3be8ab8-7c6a-548a-ae48-93e0eaf78185
+    name: mixedbread-ai/mxbai-embed-large-v1
+    authors:
+    - name: mixedbread-ai
+    architectureFamily: bert
+    modelArchitecture: BertModel
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: mteb/amazon_counterfactual, split: test, config: en'
+        type: accuracy
+        value: 75.044776119403
+      - slice: 'dataset: mteb/amazon_counterfactual, split: test, config: en'
+        type: ap
+        value: 37.7362433623053
+      - slice: 'dataset: mteb/amazon_counterfactual, split: test, config: en'
+        type: f1
+        value: 68.92736573359774
+      - slice: 'dataset: mteb/amazon_polarity, split: test, config: default'
+        type: accuracy
+        value: 93.84025000000001
+      - slice: 'dataset: mteb/amazon_polarity, split: test, config: default'
+        type: ap
+        value: 90.93190875404055
+      - slice: 'dataset: mteb/amazon_polarity, split: test, config: default'
+        type: f1
+        value: 93.8297833897293
+      - slice: 'dataset: mteb/amazon_reviews_multi, split: test, config: en'
+        type: accuracy
+        value: 49.184
+      - slice: 'dataset: mteb/amazon_reviews_multi, split: test, config: en'
+        type: f1
+        value: 48.74163227751588
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: map_at_1
+        value: 41.252
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: map_at_10
+        value: 57.778
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: map_at_100
+        value: 58.233000000000004
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: map_at_1000
+        value: 58.23700000000001
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: map_at_3
+        value: 53.449999999999996
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: map_at_5
+        value: 56.376000000000005
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: mrr_at_1
+        value: 41.679
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: mrr_at_10
+        value: 57.92699999999999
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: mrr_at_100
+        value: 58.389
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: mrr_at_1000
+        value: 58.391999999999996
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: mrr_at_3
+        value: 53.651
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: mrr_at_5
+        value: 56.521
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: ndcg_at_1
+        value: 41.252
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: ndcg_at_10
+        value: 66.018
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: ndcg_at_100
+        value: 67.774
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: ndcg_at_1000
+        value: 67.84400000000001
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: ndcg_at_3
+        value: 57.372
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: ndcg_at_5
+        value: 62.646
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: precision_at_1
+        value: 41.252
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: precision_at_10
+        value: 9.189
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: precision_at_100
+        value: 0.991
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: precision_at_1000
+        value: 0.1
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: precision_at_3
+        value: 22.902
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: precision_at_5
+        value: 16.302
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: recall_at_1
+        value: 41.252
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: recall_at_10
+        value: 91.892
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: recall_at_100
+        value: 99.14699999999999
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: recall_at_1000
+        value: 99.644
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: recall_at_3
+        value: 68.706
+      - slice: 'dataset: arguana, split: test, config: default'
+        type: recall_at_5
+        value: 81.50800000000001
+      - slice: 'dataset: mteb/arxiv-clustering-p2p, split: test, config: default'
+        type: v_measure
+        value: 48.97294504317859
+      - slice: 'dataset: mteb/arxiv-clustering-s2s, split: test, config: default'
+        type: v_measure
+        value: 42.98071077674629
+      - slice: 'dataset: mteb/askubuntudupquestions-reranking, split: test, config: default'
+        type: map
+        value: 65.16477858490782
+      - slice: 'dataset: mteb/askubuntudupquestions-reranking, split: test, config: default'
+        type: mrr
+        value: 78.23583080508287
+      - slice: 'dataset: mteb/biosses-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 89.6277629421789
+      - slice: 'dataset: mteb/biosses-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 88.4056288400568
+      - slice: 'dataset: mteb/biosses-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 87.94871847578163
+      - slice: 'dataset: mteb/biosses-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 88.4056288400568
+      - slice: 'dataset: mteb/biosses-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 87.73271254229648
+      - slice: 'dataset: mteb/biosses-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 87.91826833762677
+      - slice: 'dataset: mteb/banking77, split: test, config: default'
+        type: accuracy
+        value: 87.81818181818181
+      - slice: 'dataset: mteb/banking77, split: test, config: default'
+        type: f1
+        value: 87.79879337316918
+      - slice: 'dataset: mteb/biorxiv-clustering-p2p, split: test, config: default'
+        type: v_measure
+        value: 39.91773608582761
+      - slice: 'dataset: mteb/biorxiv-clustering-s2s, split: test, config: default'
+        type: v_measure
+        value: 36.73059477462478
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 32.745999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 43.632
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 45.206
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 45.341
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 39.956
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 42.031
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 39.485
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 49.537
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 50.249
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 50.294000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 46.757
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 48.481
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 39.485
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 50.058
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 55.586
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 57.511
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 44.786
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 47.339999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 39.485
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 9.557
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.552
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.202
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 21.412
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 15.479000000000001
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 32.745999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 62.056
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 85.088
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 96.952
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 46.959
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 54.06999999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 31.898
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 42.142
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 43.349
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 43.483
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 39.18
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 40.733000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 39.617999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 47.922
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 48.547000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 48.597
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 45.86
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 46.949000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 39.617999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 47.739
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 51.934999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 54.007000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 43.748
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 45.345
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 39.617999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 8.962
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.436
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.192
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 21.083
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 14.752
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 31.898
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 57.587999999999994
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 75.323
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 88.304
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 45.275
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 49.99
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 40.458
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 52.942
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 53.974
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 54.031
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 49.559999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 51.408
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 46.27
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 56.31699999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 56.95099999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 56.98
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 53.835
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 55.252
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 46.27
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 58.964000000000006
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 62.875
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 63.969
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 53.297000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 55.938
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 46.27
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 9.549000000000001
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.2409999999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.13799999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 23.762
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 16.262999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 40.458
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 73.446
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 90.12400000000001
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 97.795
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 58.123000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 64.68
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 27.443
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 36.081
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 37.163000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 37.232
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 33.308
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 34.724
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 29.492
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 38.138
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 39.065
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 39.119
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 35.593
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 36.785000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 29.492
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 41.134
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 46.300999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 48.106
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 35.77
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 38.032
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 29.492
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 6.249
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 0.9299999999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.11199999999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 15.065999999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 10.373000000000001
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 27.443
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 54.80199999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 78.21900000000001
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 91.751
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 40.211000000000006
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 45.599000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 18.731
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 26.717999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 27.897
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 28.029
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 23.91
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 25.455
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 23.134
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 31.769
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 32.634
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 32.707
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 28.938999999999997
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 30.531000000000002
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 23.134
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 32.249
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 37.678
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 40.589999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 26.985999999999997
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 29.457
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 23.134
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 5.8709999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 0.988
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.13799999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 12.852
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 9.428
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 18.731
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 44.419
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 67.851
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 88.103
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 29.919
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 36.230000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 30.324
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 41.265
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 42.559000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 42.669000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 38.138
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 39.881
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 36.67
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 46.774
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 47.554
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 47.593
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 44.338
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 45.723
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 36.67
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 47.367
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 52.623
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 54.59
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 42.323
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 44.727
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 36.67
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 8.518
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.2890000000000001
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.163
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 19.955000000000002
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 14.11
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 30.324
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 59.845000000000006
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 81.77499999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 94.463
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 46.019
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 52.163000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 24.229
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 35.004000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 36.409000000000006
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 36.521
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 31.793
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 33.432
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 30.365
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 40.502
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 41.372
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 41.435
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 37.804
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 39.226
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 30.365
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 41.305
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 47.028999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 49.375
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 35.85
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 38.12
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 30.365
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 7.808
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.228
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.161
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 17.352
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 12.42
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 24.229
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 54.673
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 78.766
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 94.625
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 39.602
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 45.558
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 26.695
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 36.0895
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 37.309416666666664
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 37.42558333333334
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 33.19616666666666
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 34.78641666666667
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 31.486083333333337
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 40.34774999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 41.17533333333333
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 41.231583333333326
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 37.90075
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 39.266999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 31.486083333333337
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 41.60433333333334
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 46.74525
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 48.96166666666667
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 36.68825
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 38.966499999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 31.486083333333337
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 7.29675
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.1621666666666666
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.1545
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 16.8815
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 11.974583333333333
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 26.695
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 53.651916666666665
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 76.12083333333332
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 91.31191666666668
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 40.03575
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 45.876666666666665
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 25.668000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 32.486
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 33.371
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 33.458
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 30.261
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 31.418000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 28.988000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 35.414
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 36.149
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 36.215
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 33.333
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 34.43
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 28.988000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 36.732
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 41.331
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 43.575
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 32.413
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 34.316
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 28.988000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 5.7059999999999995
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 0.882
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.11299999999999999
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 13.65
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 9.417
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 25.668000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 47.147
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 68.504
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 85.272
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 35.19
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 39.925
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 17.256
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 24.58
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 25.773000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 25.899
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 22.236
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 23.507
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 20.957
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 28.416000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 29.447000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 29.524
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 26.245
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 27.451999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 20.957
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 29.285
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 35.003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 37.881
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 25.063000000000002
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 26.983
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 20.957
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 5.344
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 0.958
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.13799999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 11.918
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 8.596
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 17.256
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 39.644
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 65.279
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 85.693
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 27.825
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 32.792
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 26.700000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 36.205999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 37.316
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 37.425000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 33.166000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 35.032999999999994
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 31.436999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 40.61
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 41.415
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 41.48
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 37.966
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 39.599000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 31.436999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 41.771
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 46.784
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 49.183
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 36.437000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 39.291
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 31.436999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 6.987
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.072
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.13899999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 16.448999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 11.866
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 26.700000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 54.301
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 75.871
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 92.529
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 40.201
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 47.208
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 24.296
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 33.116
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 34.81
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 35.032000000000004
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 30.105999999999998
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 31.839000000000002
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 29.051
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 37.803
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 38.856
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 38.903999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 35.211
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 36.545
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 29.051
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 39.007
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 45.321
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 47.665
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 34.1
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 36.437000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 29.051
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 7.668
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 1.542
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.24
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 16.14
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 11.897
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 24.296
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 49.85
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 78.457
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 92.618
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 36.138999999999996
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 42.223
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1
+        value: 20.591
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_10
+        value: 28.902
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_100
+        value: 29.886000000000003
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_1000
+        value: 29.987000000000002
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_3
+        value: 26.740000000000002
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: map_at_5
+        value: 27.976
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1
+        value: 22.366
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_10
+        value: 30.971
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_100
+        value: 31.865
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_1000
+        value: 31.930999999999997
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_3
+        value: 28.927999999999997
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: mrr_at_5
+        value: 30.231
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1
+        value: 22.366
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_10
+        value: 33.641
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_100
+        value: 38.477
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_1000
+        value: 41.088
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_3
+        value: 29.486
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: ndcg_at_5
+        value: 31.612000000000002
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1
+        value: 22.366
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_10
+        value: 5.3420000000000005
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_100
+        value: 0.828
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_1000
+        value: 0.11800000000000001
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_3
+        value: 12.939
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: precision_at_5
+        value: 9.094
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1
+        value: 20.591
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_10
+        value: 46.052
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_100
+        value: 68.193
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_1000
+        value: 87.638
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_3
+        value: 34.966
+      - slice: 'dataset: BeIR/cqadupstack, split: test, config: default'
+        type: recall_at_5
+        value: 40.082
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: map_at_1
+        value: 15.091
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: map_at_10
+        value: 26.38
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: map_at_100
+        value: 28.421999999999997
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: map_at_1000
+        value: 28.621999999999996
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: map_at_3
+        value: 21.597
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: map_at_5
+        value: 24.12
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: mrr_at_1
+        value: 34.266999999999996
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: mrr_at_10
+        value: 46.864
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: mrr_at_100
+        value: 47.617
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: mrr_at_1000
+        value: 47.644
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: mrr_at_3
+        value: 43.312
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: mrr_at_5
+        value: 45.501000000000005
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: ndcg_at_1
+        value: 34.266999999999996
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: ndcg_at_10
+        value: 36.095
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: ndcg_at_100
+        value: 43.447
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: ndcg_at_1000
+        value: 46.661
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: ndcg_at_3
+        value: 29.337999999999997
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: ndcg_at_5
+        value: 31.824
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: precision_at_1
+        value: 34.266999999999996
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: precision_at_10
+        value: 11.472
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: precision_at_100
+        value: 1.944
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: precision_at_1000
+        value: 0.255
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: precision_at_3
+        value: 21.933
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: precision_at_5
+        value: 17.224999999999998
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: recall_at_1
+        value: 15.091
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: recall_at_10
+        value: 43.022
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: recall_at_100
+        value: 68.075
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: recall_at_1000
+        value: 85.76
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: recall_at_3
+        value: 26.564
+      - slice: 'dataset: climate-fever, split: test, config: default'
+        type: recall_at_5
+        value: 33.594
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: map_at_1
+        value: 9.252
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: map_at_10
+        value: 20.923
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: map_at_100
+        value: 30.741000000000003
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: map_at_1000
+        value: 32.542
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: map_at_3
+        value: 14.442
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: map_at_5
+        value: 17.399
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: mrr_at_1
+        value: 70.25
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: mrr_at_10
+        value: 78.17
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: mrr_at_100
+        value: 78.444
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: mrr_at_1000
+        value: 78.45100000000001
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: mrr_at_3
+        value: 76.958
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: mrr_at_5
+        value: 77.571
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: ndcg_at_1
+        value: 58.375
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: ndcg_at_10
+        value: 44.509
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: ndcg_at_100
+        value: 49.897999999999996
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: ndcg_at_1000
+        value: 57.269999999999996
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: ndcg_at_3
+        value: 48.64
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: ndcg_at_5
+        value: 46.697
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: precision_at_1
+        value: 70.25
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: precision_at_10
+        value: 36.05
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: precision_at_100
+        value: 11.848
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: precision_at_1000
+        value: 2.213
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: precision_at_3
+        value: 52.917
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: precision_at_5
+        value: 45.7
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: recall_at_1
+        value: 9.252
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: recall_at_10
+        value: 27.006999999999998
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: recall_at_100
+        value: 57.008
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: recall_at_1000
+        value: 80.697
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: recall_at_3
+        value: 15.798000000000002
+      - slice: 'dataset: dbpedia-entity, split: test, config: default'
+        type: recall_at_5
+        value: 20.4
+      - slice: 'dataset: mteb/emotion, split: test, config: default'
+        type: accuracy
+        value: 50.88
+      - slice: 'dataset: mteb/emotion, split: test, config: default'
+        type: f1
+        value: 45.545495028653384
+      - slice: 'dataset: fever, split: test, config: default'
+        type: map_at_1
+        value: 75.424
+      - slice: 'dataset: fever, split: test, config: default'
+        type: map_at_10
+        value: 83.435
+      - slice: 'dataset: fever, split: test, config: default'
+        type: map_at_100
+        value: 83.66900000000001
+      - slice: 'dataset: fever, split: test, config: default'
+        type: map_at_1000
+        value: 83.685
+      - slice: 'dataset: fever, split: test, config: default'
+        type: map_at_3
+        value: 82.39800000000001
+      - slice: 'dataset: fever, split: test, config: default'
+        type: map_at_5
+        value: 83.07
+      - slice: 'dataset: fever, split: test, config: default'
+        type: mrr_at_1
+        value: 81.113
+      - slice: 'dataset: fever, split: test, config: default'
+        type: mrr_at_10
+        value: 87.77199999999999
+      - slice: 'dataset: fever, split: test, config: default'
+        type: mrr_at_100
+        value: 87.862
+      - slice: 'dataset: fever, split: test, config: default'
+        type: mrr_at_1000
+        value: 87.86500000000001
+      - slice: 'dataset: fever, split: test, config: default'
+        type: mrr_at_3
+        value: 87.17099999999999
+      - slice: 'dataset: fever, split: test, config: default'
+        type: mrr_at_5
+        value: 87.616
+      - slice: 'dataset: fever, split: test, config: default'
+        type: ndcg_at_1
+        value: 81.113
+      - slice: 'dataset: fever, split: test, config: default'
+        type: ndcg_at_10
+        value: 86.909
+      - slice: 'dataset: fever, split: test, config: default'
+        type: ndcg_at_100
+        value: 87.746
+      - slice: 'dataset: fever, split: test, config: default'
+        type: ndcg_at_1000
+        value: 88.017
+      - slice: 'dataset: fever, split: test, config: default'
+        type: ndcg_at_3
+        value: 85.368
+      - slice: 'dataset: fever, split: test, config: default'
+        type: ndcg_at_5
+        value: 86.28099999999999
+      - slice: 'dataset: fever, split: test, config: default'
+        type: precision_at_1
+        value: 81.113
+      - slice: 'dataset: fever, split: test, config: default'
+        type: precision_at_10
+        value: 10.363
+      - slice: 'dataset: fever, split: test, config: default'
+        type: precision_at_100
+        value: 1.102
+      - slice: 'dataset: fever, split: test, config: default'
+        type: precision_at_1000
+        value: 0.11399999999999999
+      - slice: 'dataset: fever, split: test, config: default'
+        type: precision_at_3
+        value: 32.507999999999996
+      - slice: 'dataset: fever, split: test, config: default'
+        type: precision_at_5
+        value: 20.138
+      - slice: 'dataset: fever, split: test, config: default'
+        type: recall_at_1
+        value: 75.424
+      - slice: 'dataset: fever, split: test, config: default'
+        type: recall_at_10
+        value: 93.258
+      - slice: 'dataset: fever, split: test, config: default'
+        type: recall_at_100
+        value: 96.545
+      - slice: 'dataset: fever, split: test, config: default'
+        type: recall_at_1000
+        value: 98.284
+      - slice: 'dataset: fever, split: test, config: default'
+        type: recall_at_3
+        value: 89.083
+      - slice: 'dataset: fever, split: test, config: default'
+        type: recall_at_5
+        value: 91.445
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: map_at_1
+        value: 22.532
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: map_at_10
+        value: 37.141999999999996
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: map_at_100
+        value: 39.162
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: map_at_1000
+        value: 39.322
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: map_at_3
+        value: 32.885
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: map_at_5
+        value: 35.093999999999994
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: mrr_at_1
+        value: 44.29
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: mrr_at_10
+        value: 53.516
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: mrr_at_100
+        value: 54.24
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: mrr_at_1000
+        value: 54.273
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: mrr_at_3
+        value: 51.286
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: mrr_at_5
+        value: 52.413
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: ndcg_at_1
+        value: 44.29
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: ndcg_at_10
+        value: 45.268
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: ndcg_at_100
+        value: 52.125
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: ndcg_at_1000
+        value: 54.778000000000006
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: ndcg_at_3
+        value: 41.829
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: ndcg_at_5
+        value: 42.525
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: precision_at_1
+        value: 44.29
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: precision_at_10
+        value: 12.5
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: precision_at_100
+        value: 1.9720000000000002
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: precision_at_1000
+        value: 0.245
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: precision_at_3
+        value: 28.035
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: precision_at_5
+        value: 20.093
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: recall_at_1
+        value: 22.532
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: recall_at_10
+        value: 52.419000000000004
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: recall_at_100
+        value: 77.43299999999999
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: recall_at_1000
+        value: 93.379
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: recall_at_3
+        value: 38.629000000000005
+      - slice: 'dataset: fiqa, split: test, config: default'
+        type: recall_at_5
+        value: 43.858000000000004
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: map_at_1
+        value: 39.359
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: map_at_10
+        value: 63.966
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: map_at_100
+        value: 64.87
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: map_at_1000
+        value: 64.92599999999999
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: map_at_3
+        value: 60.409
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: map_at_5
+        value: 62.627
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: mrr_at_1
+        value: 78.717
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: mrr_at_10
+        value: 84.468
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: mrr_at_100
+        value: 84.655
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: mrr_at_1000
+        value: 84.661
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: mrr_at_3
+        value: 83.554
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: mrr_at_5
+        value: 84.133
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: ndcg_at_1
+        value: 78.717
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: ndcg_at_10
+        value: 72.03399999999999
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: ndcg_at_100
+        value: 75.158
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: ndcg_at_1000
+        value: 76.197
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: ndcg_at_3
+        value: 67.049
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: ndcg_at_5
+        value: 69.808
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: precision_at_1
+        value: 78.717
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: precision_at_10
+        value: 15.201
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: precision_at_100
+        value: 1.764
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: precision_at_1000
+        value: 0.19
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: precision_at_3
+        value: 43.313
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: precision_at_5
+        value: 28.165000000000003
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: recall_at_1
+        value: 39.359
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: recall_at_10
+        value: 76.003
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: recall_at_100
+        value: 88.197
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: recall_at_1000
+        value: 95.003
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: recall_at_3
+        value: 64.97
+      - slice: 'dataset: hotpotqa, split: test, config: default'
+        type: recall_at_5
+        value: 70.41199999999999
+      - slice: 'dataset: mteb/imdb, split: test, config: default'
+        type: accuracy
+        value: 92.83200000000001
+      - slice: 'dataset: mteb/imdb, split: test, config: default'
+        type: ap
+        value: 89.33560571859861
+      - slice: 'dataset: mteb/imdb, split: test, config: default'
+        type: f1
+        value: 92.82322915005167
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: map_at_1
+        value: 21.983
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: map_at_10
+        value: 34.259
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: map_at_100
+        value: 35.432
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: map_at_1000
+        value: 35.482
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: map_at_3
+        value: 30.275999999999996
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: map_at_5
+        value: 32.566
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: mrr_at_1
+        value: 22.579
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: mrr_at_10
+        value: 34.882999999999996
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: mrr_at_100
+        value: 35.984
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: mrr_at_1000
+        value: 36.028
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: mrr_at_3
+        value: 30.964999999999996
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: mrr_at_5
+        value: 33.245000000000005
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: ndcg_at_1
+        value: 22.564
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: ndcg_at_10
+        value: 41.258
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: ndcg_at_100
+        value: 46.824
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: ndcg_at_1000
+        value: 48.037
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: ndcg_at_3
+        value: 33.17
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: ndcg_at_5
+        value: 37.263000000000005
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: precision_at_1
+        value: 22.564
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: precision_at_10
+        value: 6.572
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: precision_at_100
+        value: 0.935
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: precision_at_1000
+        value: 0.104
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: precision_at_3
+        value: 14.130999999999998
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: precision_at_5
+        value: 10.544
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: recall_at_1
+        value: 21.983
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: recall_at_10
+        value: 62.775000000000006
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: recall_at_100
+        value: 88.389
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: recall_at_1000
+        value: 97.603
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: recall_at_3
+        value: 40.878
+      - slice: 'dataset: msmarco, split: dev, config: default'
+        type: recall_at_5
+        value: 50.690000000000005
+      - slice: 'dataset: mteb/mtop_domain, split: test, config: en'
+        type: accuracy
+        value: 93.95120839033288
+      - slice: 'dataset: mteb/mtop_domain, split: test, config: en'
+        type: f1
+        value: 93.73824125055208
+      - slice: 'dataset: mteb/mtop_intent, split: test, config: en'
+        type: accuracy
+        value: 76.78978568171455
+      - slice: 'dataset: mteb/mtop_intent, split: test, config: en'
+        type: f1
+        value: 57.50180552858304
+      - slice: 'dataset: mteb/amazon_massive_intent, split: test, config: en'
+        type: accuracy
+        value: 76.24411566913248
+      - slice: 'dataset: mteb/amazon_massive_intent, split: test, config: en'
+        type: f1
+        value: 74.37851403532832
+      - slice: 'dataset: mteb/amazon_massive_scenario, split: test, config: en'
+        type: accuracy
+        value: 79.94620040349699
+      - slice: 'dataset: mteb/amazon_massive_scenario, split: test, config: en'
+        type: f1
+        value: 80.21293397970435
+      - slice: 'dataset: mteb/medrxiv-clustering-p2p, split: test, config: default'
+        type: v_measure
+        value: 33.44403096245675
+      - slice: 'dataset: mteb/medrxiv-clustering-s2s, split: test, config: default'
+        type: v_measure
+        value: 31.659594631336812
+      - slice: 'dataset: mteb/mind_small, split: test, config: default'
+        type: map
+        value: 32.53833075108798
+      - slice: 'dataset: mteb/mind_small, split: test, config: default'
+        type: mrr
+        value: 33.78840823218308
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: map_at_1
+        value: 7.185999999999999
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: map_at_10
+        value: 15.193999999999999
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: map_at_100
+        value: 19.538
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: map_at_1000
+        value: 21.178
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: map_at_3
+        value: 11.208
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: map_at_5
+        value: 12.745999999999999
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: mrr_at_1
+        value: 48.916
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: mrr_at_10
+        value: 58.141
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: mrr_at_100
+        value: 58.656
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: mrr_at_1000
+        value: 58.684999999999995
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: mrr_at_3
+        value: 55.521
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: mrr_at_5
+        value: 57.239
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: ndcg_at_1
+        value: 47.059
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: ndcg_at_10
+        value: 38.644
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: ndcg_at_100
+        value: 36.272999999999996
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: ndcg_at_1000
+        value: 44.996
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: ndcg_at_3
+        value: 43.293
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: ndcg_at_5
+        value: 40.819
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: precision_at_1
+        value: 48.916
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: precision_at_10
+        value: 28.607
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: precision_at_100
+        value: 9.195
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: precision_at_1000
+        value: 2.225
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: precision_at_3
+        value: 40.454
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: precision_at_5
+        value: 34.985
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: recall_at_1
+        value: 7.185999999999999
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: recall_at_10
+        value: 19.654
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: recall_at_100
+        value: 37.224000000000004
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: recall_at_1000
+        value: 68.663
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: recall_at_3
+        value: 12.158
+      - slice: 'dataset: nfcorpus, split: test, config: default'
+        type: recall_at_5
+        value: 14.674999999999999
+      - slice: 'dataset: nq, split: test, config: default'
+        type: map_at_1
+        value: 31.552000000000003
+      - slice: 'dataset: nq, split: test, config: default'
+        type: map_at_10
+        value: 47.75
+      - slice: 'dataset: nq, split: test, config: default'
+        type: map_at_100
+        value: 48.728
+      - slice: 'dataset: nq, split: test, config: default'
+        type: map_at_1000
+        value: 48.754
+      - slice: 'dataset: nq, split: test, config: default'
+        type: map_at_3
+        value: 43.156
+      - slice: 'dataset: nq, split: test, config: default'
+        type: map_at_5
+        value: 45.883
+      - slice: 'dataset: nq, split: test, config: default'
+        type: mrr_at_1
+        value: 35.66
+      - slice: 'dataset: nq, split: test, config: default'
+        type: mrr_at_10
+        value: 50.269
+      - slice: 'dataset: nq, split: test, config: default'
+        type: mrr_at_100
+        value: 50.974
+      - slice: 'dataset: nq, split: test, config: default'
+        type: mrr_at_1000
+        value: 50.991
+      - slice: 'dataset: nq, split: test, config: default'
+        type: mrr_at_3
+        value: 46.519
+      - slice: 'dataset: nq, split: test, config: default'
+        type: mrr_at_5
+        value: 48.764
+      - slice: 'dataset: nq, split: test, config: default'
+        type: ndcg_at_1
+        value: 35.632000000000005
+      - slice: 'dataset: nq, split: test, config: default'
+        type: ndcg_at_10
+        value: 55.786
+      - slice: 'dataset: nq, split: test, config: default'
+        type: ndcg_at_100
+        value: 59.748999999999995
+      - slice: 'dataset: nq, split: test, config: default'
+        type: ndcg_at_1000
+        value: 60.339
+      - slice: 'dataset: nq, split: test, config: default'
+        type: ndcg_at_3
+        value: 47.292
+      - slice: 'dataset: nq, split: test, config: default'
+        type: ndcg_at_5
+        value: 51.766999999999996
+      - slice: 'dataset: nq, split: test, config: default'
+        type: precision_at_1
+        value: 35.632000000000005
+      - slice: 'dataset: nq, split: test, config: default'
+        type: precision_at_10
+        value: 9.267
+      - slice: 'dataset: nq, split: test, config: default'
+        type: precision_at_100
+        value: 1.149
+      - slice: 'dataset: nq, split: test, config: default'
+        type: precision_at_1000
+        value: 0.12
+      - slice: 'dataset: nq, split: test, config: default'
+        type: precision_at_3
+        value: 21.601
+      - slice: 'dataset: nq, split: test, config: default'
+        type: precision_at_5
+        value: 15.539
+      - slice: 'dataset: nq, split: test, config: default'
+        type: recall_at_1
+        value: 31.552000000000003
+      - slice: 'dataset: nq, split: test, config: default'
+        type: recall_at_10
+        value: 77.62400000000001
+      - slice: 'dataset: nq, split: test, config: default'
+        type: recall_at_100
+        value: 94.527
+      - slice: 'dataset: nq, split: test, config: default'
+        type: recall_at_1000
+        value: 98.919
+      - slice: 'dataset: nq, split: test, config: default'
+        type: recall_at_3
+        value: 55.898
+      - slice: 'dataset: nq, split: test, config: default'
+        type: recall_at_5
+        value: 66.121
+      - slice: 'dataset: quora, split: test, config: default'
+        type: map_at_1
+        value: 71.414
+      - slice: 'dataset: quora, split: test, config: default'
+        type: map_at_10
+        value: 85.37400000000001
+      - slice: 'dataset: quora, split: test, config: default'
+        type: map_at_100
+        value: 86.01100000000001
+      - slice: 'dataset: quora, split: test, config: default'
+        type: map_at_1000
+        value: 86.027
+      - slice: 'dataset: quora, split: test, config: default'
+        type: map_at_3
+        value: 82.562
+      - slice: 'dataset: quora, split: test, config: default'
+        type: map_at_5
+        value: 84.284
+      - slice: 'dataset: quora, split: test, config: default'
+        type: mrr_at_1
+        value: 82.24000000000001
+      - slice: 'dataset: quora, split: test, config: default'
+        type: mrr_at_10
+        value: 88.225
+      - slice: 'dataset: quora, split: test, config: default'
+        type: mrr_at_100
+        value: 88.324
+      - slice: 'dataset: quora, split: test, config: default'
+        type: mrr_at_1000
+        value: 88.325
+      - slice: 'dataset: quora, split: test, config: default'
+        type: mrr_at_3
+        value: 87.348
+      - slice: 'dataset: quora, split: test, config: default'
+        type: mrr_at_5
+        value: 87.938
+      - slice: 'dataset: quora, split: test, config: default'
+        type: ndcg_at_1
+        value: 82.24000000000001
+      - slice: 'dataset: quora, split: test, config: default'
+        type: ndcg_at_10
+        value: 88.97699999999999
+      - slice: 'dataset: quora, split: test, config: default'
+        type: ndcg_at_100
+        value: 90.16
+      - slice: 'dataset: quora, split: test, config: default'
+        type: ndcg_at_1000
+        value: 90.236
+      - slice: 'dataset: quora, split: test, config: default'
+        type: ndcg_at_3
+        value: 86.371
+      - slice: 'dataset: quora, split: test, config: default'
+        type: ndcg_at_5
+        value: 87.746
+      - slice: 'dataset: quora, split: test, config: default'
+        type: precision_at_1
+        value: 82.24000000000001
+      - slice: 'dataset: quora, split: test, config: default'
+        type: precision_at_10
+        value: 13.481000000000002
+      - slice: 'dataset: quora, split: test, config: default'
+        type: precision_at_100
+        value: 1.534
+      - slice: 'dataset: quora, split: test, config: default'
+        type: precision_at_1000
+        value: 0.157
+      - slice: 'dataset: quora, split: test, config: default'
+        type: precision_at_3
+        value: 37.86
+      - slice: 'dataset: quora, split: test, config: default'
+        type: precision_at_5
+        value: 24.738
+      - slice: 'dataset: quora, split: test, config: default'
+        type: recall_at_1
+        value: 71.414
+      - slice: 'dataset: quora, split: test, config: default'
+        type: recall_at_10
+        value: 95.735
+      - slice: 'dataset: quora, split: test, config: default'
+        type: recall_at_100
+        value: 99.696
+      - slice: 'dataset: quora, split: test, config: default'
+        type: recall_at_1000
+        value: 99.979
+      - slice: 'dataset: quora, split: test, config: default'
+        type: recall_at_3
+        value: 88.105
+      - slice: 'dataset: quora, split: test, config: default'
+        type: recall_at_5
+        value: 92.17999999999999
+      - slice: 'dataset: mteb/reddit-clustering, split: test, config: default'
+        type: v_measure
+        value: 60.22146692057259
+      - slice: 'dataset: mteb/reddit-clustering-p2p, split: test, config: default'
+        type: v_measure
+        value: 65.29273320614578
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: map_at_1
+        value: 5.023
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: map_at_10
+        value: 14.161000000000001
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: map_at_100
+        value: 16.68
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: map_at_1000
+        value: 17.072000000000003
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: map_at_3
+        value: 9.763
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: map_at_5
+        value: 11.977
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: mrr_at_1
+        value: 24.8
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: mrr_at_10
+        value: 37.602999999999994
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: mrr_at_100
+        value: 38.618
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: mrr_at_1000
+        value: 38.659
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: mrr_at_3
+        value: 34.117
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: mrr_at_5
+        value: 36.082
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: ndcg_at_1
+        value: 24.8
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: ndcg_at_10
+        value: 23.316
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: ndcg_at_100
+        value: 32.613
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: ndcg_at_1000
+        value: 38.609
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: ndcg_at_3
+        value: 21.697
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: ndcg_at_5
+        value: 19.241
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: precision_at_1
+        value: 24.8
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: precision_at_10
+        value: 12.36
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: precision_at_100
+        value: 2.593
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: precision_at_1000
+        value: 0.402
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: precision_at_3
+        value: 20.767
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: precision_at_5
+        value: 17.34
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: recall_at_1
+        value: 5.023
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: recall_at_10
+        value: 25.069999999999997
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: recall_at_100
+        value: 52.563
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: recall_at_1000
+        value: 81.525
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: recall_at_3
+        value: 12.613
+      - slice: 'dataset: scidocs, split: test, config: default'
+        type: recall_at_5
+        value: 17.583
+      - slice: 'dataset: mteb/sickr-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 87.71506247604255
+      - slice: 'dataset: mteb/sickr-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 82.91813463738802
+      - slice: 'dataset: mteb/sickr-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 85.5154616194479
+      - slice: 'dataset: mteb/sickr-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 82.91815254466314
+      - slice: 'dataset: mteb/sickr-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 85.5280917850374
+      - slice: 'dataset: mteb/sickr-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 82.92276537286398
+      - slice: 'dataset: mteb/sts12-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 87.43772054228462
+      - slice: 'dataset: mteb/sts12-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 78.75750601716682
+      - slice: 'dataset: mteb/sts12-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 85.76074482955764
+      - slice: 'dataset: mteb/sts12-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 78.75651057223058
+      - slice: 'dataset: mteb/sts12-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 85.73390291701668
+      - slice: 'dataset: mteb/sts12-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 78.72699385957797
+      - slice: 'dataset: mteb/sts13-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 89.58144067172472
+      - slice: 'dataset: mteb/sts13-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 90.3524512966946
+      - slice: 'dataset: mteb/sts13-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 89.71365391594237
+      - slice: 'dataset: mteb/sts13-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 90.35239632843408
+      - slice: 'dataset: mteb/sts13-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 89.66905421746478
+      - slice: 'dataset: mteb/sts13-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 90.31508211683513
+      - slice: 'dataset: mteb/sts14-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 87.77692637102102
+      - slice: 'dataset: mteb/sts14-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 85.45710562643485
+      - slice: 'dataset: mteb/sts14-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 87.42456979928723
+      - slice: 'dataset: mteb/sts14-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 85.45709386240908
+      - slice: 'dataset: mteb/sts14-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 87.40754529526272
+      - slice: 'dataset: mteb/sts14-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 85.44834854173303
+      - slice: 'dataset: mteb/sts15-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 88.28491331695997
+      - slice: 'dataset: mteb/sts15-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 89.62037029566964
+      - slice: 'dataset: mteb/sts15-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 89.02479391362826
+      - slice: 'dataset: mteb/sts15-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 89.62036733618466
+      - slice: 'dataset: mteb/sts15-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 89.00394756040342
+      - slice: 'dataset: mteb/sts15-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 89.60867744215236
+      - slice: 'dataset: mteb/sts16-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 85.08911381280191
+      - slice: 'dataset: mteb/sts16-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 86.5791780765767
+      - slice: 'dataset: mteb/sts16-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 86.16063473577861
+      - slice: 'dataset: mteb/sts16-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 86.57917745378766
+      - slice: 'dataset: mteb/sts16-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 86.13677924604175
+      - slice: 'dataset: mteb/sts16-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 86.56115615768685
+      - slice: 'dataset: mteb/sts17-crosslingual-sts, split: test, config: en-en'
+        type: cos_sim_pearson
+        value: 89.58029496205235
+      - slice: 'dataset: mteb/sts17-crosslingual-sts, split: test, config: en-en'
+        type: cos_sim_spearman
+        value: 89.49551253826998
+      - slice: 'dataset: mteb/sts17-crosslingual-sts, split: test, config: en-en'
+        type: euclidean_pearson
+        value: 90.13714840963748
+      - slice: 'dataset: mteb/sts17-crosslingual-sts, split: test, config: en-en'
+        type: euclidean_spearman
+        value: 89.49551253826998
+      - slice: 'dataset: mteb/sts17-crosslingual-sts, split: test, config: en-en'
+        type: manhattan_pearson
+        value: 90.13039633601363
+      - slice: 'dataset: mteb/sts17-crosslingual-sts, split: test, config: en-en'
+        type: manhattan_spearman
+        value: 89.4513453745516
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: en'
+        type: cos_sim_pearson
+        value: 69.01546399666435
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: en'
+        type: cos_sim_spearman
+        value: 69.33824484595624
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: en'
+        type: euclidean_pearson
+        value: 70.76511642998874
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: en'
+        type: euclidean_spearman
+        value: 69.33824484595624
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: en'
+        type: manhattan_pearson
+        value: 70.84320785047453
+      - slice: 'dataset: mteb/sts22-crosslingual-sts, split: test, config: en'
+        type: manhattan_spearman
+        value: 69.54233632223537
+      - slice: 'dataset: mteb/stsbenchmark-sts, split: test, config: default'
+        type: cos_sim_pearson
+        value: 87.26389196390119
+      - slice: 'dataset: mteb/stsbenchmark-sts, split: test, config: default'
+        type: cos_sim_spearman
+        value: 89.09721478341385
+      - slice: 'dataset: mteb/stsbenchmark-sts, split: test, config: default'
+        type: euclidean_pearson
+        value: 88.97208685922517
+      - slice: 'dataset: mteb/stsbenchmark-sts, split: test, config: default'
+        type: euclidean_spearman
+        value: 89.09720927308881
+      - slice: 'dataset: mteb/stsbenchmark-sts, split: test, config: default'
+        type: manhattan_pearson
+        value: 88.97513670502573
+      - slice: 'dataset: mteb/stsbenchmark-sts, split: test, config: default'
+        type: manhattan_spearman
+        value: 89.07647853984004
+      - slice: 'dataset: mteb/scidocs-reranking, split: test, config: default'
+        type: map
+        value: 87.53075025771936
+      - slice: 'dataset: mteb/scidocs-reranking, split: test, config: default'
+        type: mrr
+        value: 96.24327651288436
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: map_at_1
+        value: 60.428000000000004
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: map_at_10
+        value: 70.088
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: map_at_100
+        value: 70.589
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: map_at_1000
+        value: 70.614
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: map_at_3
+        value: 67.191
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: map_at_5
+        value: 68.515
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: mrr_at_1
+        value: 63.333
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: mrr_at_10
+        value: 71.13000000000001
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: mrr_at_100
+        value: 71.545
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: mrr_at_1000
+        value: 71.569
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: mrr_at_3
+        value: 68.944
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: mrr_at_5
+        value: 70.078
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: ndcg_at_1
+        value: 63.333
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: ndcg_at_10
+        value: 74.72800000000001
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: ndcg_at_100
+        value: 76.64999999999999
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: ndcg_at_1000
+        value: 77.176
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: ndcg_at_3
+        value: 69.659
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: ndcg_at_5
+        value: 71.626
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: precision_at_1
+        value: 63.333
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: precision_at_10
+        value: 10
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: precision_at_100
+        value: 1.09
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: precision_at_1000
+        value: 0.11299999999999999
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: precision_at_3
+        value: 27.111
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: precision_at_5
+        value: 17.666999999999998
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: recall_at_1
+        value: 60.428000000000004
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: recall_at_10
+        value: 87.98899999999999
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: recall_at_100
+        value: 96.167
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: recall_at_1000
+        value: 100
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: recall_at_3
+        value: 74.006
+      - slice: 'dataset: scifact, split: test, config: default'
+        type: recall_at_5
+        value: 79.05
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: cos_sim_accuracy
+        value: 99.87326732673267
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: cos_sim_ap
+        value: 96.81770773701805
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: cos_sim_f1
+        value: 93.6318407960199
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: cos_sim_precision
+        value: 93.16831683168317
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: cos_sim_recall
+        value: 94.1
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: dot_accuracy
+        value: 99.87326732673267
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: dot_ap
+        value: 96.8174218946665
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: dot_f1
+        value: 93.6318407960199
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: dot_precision
+        value: 93.16831683168317
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: dot_recall
+        value: 94.1
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: euclidean_accuracy
+        value: 99.87326732673267
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: euclidean_ap
+        value: 96.81770773701807
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: euclidean_f1
+        value: 93.6318407960199
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: euclidean_precision
+        value: 93.16831683168317
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: euclidean_recall
+        value: 94.1
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: manhattan_accuracy
+        value: 99.87227722772278
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: manhattan_ap
+        value: 96.83164126821747
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: manhattan_f1
+        value: 93.54677338669335
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: manhattan_precision
+        value: 93.5935935935936
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: manhattan_recall
+        value: 93.5
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: max_accuracy
+        value: 99.87326732673267
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: max_ap
+        value: 96.83164126821747
+      - slice: 'dataset: mteb/sprintduplicatequestions-pairclassification, split: test, config: default'
+        type: max_f1
+        value: 93.6318407960199
+      - slice: 'dataset: mteb/stackexchange-clustering, split: test, config: default'
+        type: v_measure
+        value: 65.6212042420246
+      - slice: 'dataset: mteb/stackexchange-clustering-p2p, split: test, config: default'
+        type: v_measure
+        value: 35.779230635982564
+      - slice: 'dataset: mteb/stackoverflowdupquestions-reranking, split: test, config: default'
+        type: map
+        value: 55.217701909036286
+      - slice: 'dataset: mteb/stackoverflowdupquestions-reranking, split: test, config: default'
+        type: mrr
+        value: 56.17658995416349
+      - slice: 'dataset: mteb/summeval, split: test, config: default'
+        type: cos_sim_pearson
+        value: 30.954206018888453
+      - slice: 'dataset: mteb/summeval, split: test, config: default'
+        type: cos_sim_spearman
+        value: 32.71062599450096
+      - slice: 'dataset: mteb/summeval, split: test, config: default'
+        type: dot_pearson
+        value: 30.95420929056943
+      - slice: 'dataset: mteb/summeval, split: test, config: default'
+        type: dot_spearman
+        value: 32.71062599450096
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: map_at_1
+        value: 0.22699999999999998
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: map_at_10
+        value: 1.924
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: map_at_100
+        value: 10.525
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: map_at_1000
+        value: 24.973
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: map_at_3
+        value: 0.638
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: map_at_5
+        value: 1.0659999999999998
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: mrr_at_1
+        value: 84
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: mrr_at_10
+        value: 91.067
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: mrr_at_100
+        value: 91.067
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: mrr_at_1000
+        value: 91.067
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: mrr_at_3
+        value: 90.667
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: mrr_at_5
+        value: 91.067
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: ndcg_at_1
+        value: 81
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: ndcg_at_10
+        value: 75.566
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: ndcg_at_100
+        value: 56.387
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: ndcg_at_1000
+        value: 49.834
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: ndcg_at_3
+        value: 80.899
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: ndcg_at_5
+        value: 80.75099999999999
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: precision_at_1
+        value: 84
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: precision_at_10
+        value: 79
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: precision_at_100
+        value: 57.56
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: precision_at_1000
+        value: 21.8
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: precision_at_3
+        value: 84.667
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: precision_at_5
+        value: 85.2
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: recall_at_1
+        value: 0.22699999999999998
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: recall_at_10
+        value: 2.136
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: recall_at_100
+        value: 13.861
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: recall_at_1000
+        value: 46.299
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: recall_at_3
+        value: 0.6649999999999999
+      - slice: 'dataset: trec-covid, split: test, config: default'
+        type: recall_at_5
+        value: 1.145
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: map_at_1
+        value: 2.752
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: map_at_10
+        value: 9.951
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: map_at_100
+        value: 16.794999999999998
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: map_at_1000
+        value: 18.251
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: map_at_3
+        value: 5.288
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: map_at_5
+        value: 6.954000000000001
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: mrr_at_1
+        value: 38.775999999999996
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: mrr_at_10
+        value: 50.458000000000006
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: mrr_at_100
+        value: 51.324999999999996
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: mrr_at_1000
+        value: 51.339999999999996
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: mrr_at_3
+        value: 46.939
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: mrr_at_5
+        value: 47.857
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: ndcg_at_1
+        value: 36.735
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: ndcg_at_10
+        value: 25.198999999999998
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: ndcg_at_100
+        value: 37.938
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: ndcg_at_1000
+        value: 49.145
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: ndcg_at_3
+        value: 29.348000000000003
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: ndcg_at_5
+        value: 25.804
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: precision_at_1
+        value: 38.775999999999996
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: precision_at_10
+        value: 22.041
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: precision_at_100
+        value: 7.939
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: precision_at_1000
+        value: 1.555
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: precision_at_3
+        value: 29.932
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: precision_at_5
+        value: 24.490000000000002
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: recall_at_1
+        value: 2.752
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: recall_at_10
+        value: 16.197
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: recall_at_100
+        value: 49.166
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: recall_at_1000
+        value: 84.18900000000001
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: recall_at_3
+        value: 6.438000000000001
+      - slice: 'dataset: webis-touche2020, split: test, config: default'
+        type: recall_at_5
+        value: 9.093
+      - slice: 'dataset: mteb/toxic_conversations_50k, split: test, config: default'
+        type: accuracy
+        value: 71.47980000000001
+      - slice: 'dataset: mteb/toxic_conversations_50k, split: test, config: default'
+        type: ap
+        value: 14.605194452178754
+      - slice: 'dataset: mteb/toxic_conversations_50k, split: test, config: default'
+        type: f1
+        value: 55.07362924988948
+      - slice: 'dataset: mteb/tweet_sentiment_extraction, split: test, config: default'
+        type: accuracy
+        value: 59.708545557441994
+      - slice: 'dataset: mteb/tweet_sentiment_extraction, split: test, config: default'
+        type: f1
+        value: 60.04751270975683
+      - slice: 'dataset: mteb/twentynewsgroups-clustering, split: test, config: default'
+        type: v_measure
+        value: 53.21105960597211
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: cos_sim_accuracy
+        value: 87.58419264469214
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: cos_sim_ap
+        value: 78.55300004517404
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: cos_sim_f1
+        value: 71.49673530889001
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: cos_sim_precision
+        value: 68.20795400095831
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: cos_sim_recall
+        value: 75.11873350923483
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: dot_accuracy
+        value: 87.58419264469214
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: dot_ap
+        value: 78.55297659559511
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: dot_f1
+        value: 71.49673530889001
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: dot_precision
+        value: 68.20795400095831
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: dot_recall
+        value: 75.11873350923483
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: euclidean_accuracy
+        value: 87.58419264469214
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: euclidean_ap
+        value: 78.55300477331477
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: euclidean_f1
+        value: 71.49673530889001
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: euclidean_precision
+        value: 68.20795400095831
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: euclidean_recall
+        value: 75.11873350923483
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: manhattan_accuracy
+        value: 87.5663110210407
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: manhattan_ap
+        value: 78.49982050876562
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: manhattan_f1
+        value: 71.35488740722104
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: manhattan_precision
+        value: 68.18946862226497
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: manhattan_recall
+        value: 74.82849604221636
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: max_accuracy
+        value: 87.58419264469214
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: max_ap
+        value: 78.55300477331477
+      - slice: 'dataset: mteb/twittersemeval2015-pairclassification, split: test, config: default'
+        type: max_f1
+        value: 71.49673530889001
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: cos_sim_accuracy
+        value: 89.09069740365584
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: cos_sim_ap
+        value: 86.22749303724757
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: cos_sim_f1
+        value: 78.36863452005407
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: cos_sim_precision
+        value: 76.49560117302053
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: cos_sim_recall
+        value: 80.33569448721897
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: dot_accuracy
+        value: 89.09069740365584
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: dot_ap
+        value: 86.22750233655673
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: dot_f1
+        value: 78.36863452005407
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: dot_precision
+        value: 76.49560117302053
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: dot_recall
+        value: 80.33569448721897
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: euclidean_accuracy
+        value: 89.09069740365584
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: euclidean_ap
+        value: 86.22749355597347
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: euclidean_f1
+        value: 78.36863452005407
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: euclidean_precision
+        value: 76.49560117302053
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: euclidean_recall
+        value: 80.33569448721897
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: manhattan_accuracy
+        value: 89.08293553770326
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: manhattan_ap
+        value: 86.21913616084771
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: manhattan_f1
+        value: 78.3907031479847
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: manhattan_precision
+        value: 75.0352013517319
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: manhattan_recall
+        value: 82.06036341238065
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: max_accuracy
+        value: 89.09069740365584
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: max_ap
+        value: 86.22750233655673
+      - slice: 'dataset: mteb/twitterurlcorpus-pairclassification, split: test, config: default'
+        type: max_f1
+        value: 78.3907031479847
+    tags:
+    - sentence-transformers
+    - onnx
+    - safetensors
+    - openvino
+    - gguf
+    - bert
+    - feature-extraction
+    - mteb
+    - transformers.js
+    - transformers
+    - en
+    - arxiv:2309.12871
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - text-embeddings-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: feature-extraction
+relations:
+- uid: 71ad7504-e31f-4988-962d-099ff604b060
+  type: Relationship
+  properties: {}
+  from_: 543cf134-8f8f-4096-846d-9c1b9a290c8f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/mixedbread-ai_mxbai-embed-large-v1.json
+  relationship_type: annotatedBy
+- uid: 7eb071a4-c45e-4e44-b54d-c7297ec97f3e
+  type: Relationship
+  properties: {}
+  from_: 29278ad4-e439-4197-8ee4-5dc9778e8f4a
+  to_:
+  - 7105d0f5-4e73-425b-b6db-487e4c13912d
+  relationship_type: uses
+- uid: 4977b1e1-326d-41f2-9dba-958839dd9519
+  type: Relationship
+  properties: {}
+  from_: 543cf134-8f8f-4096-846d-9c1b9a290c8f
+  to_:
+  - 29278ad4-e439-4197-8ee4-5dc9778e8f4a
+  relationship_type: produces

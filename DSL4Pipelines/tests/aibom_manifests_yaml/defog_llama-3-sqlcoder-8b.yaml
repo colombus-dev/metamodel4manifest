@@ -1,0 +1,93 @@
+uid: 9cd1a133-9143-4b63-a106-354b9b5459a0
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/defog_llama-3-sqlcoder-8b.json
+  type: SoftwareFile
+  name: defog_llama-3-sqlcoder-8b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:bbbb0bf3-f020-4113-8eac-fcbf52c325c4
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/defog_llama-3-sqlcoder-8b.json
+    type: ExternalReference
+  languages: []
+- uid: 42c8c4bf-b41d-449b-8ba3-b9b05f9f8bcd
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: bada8fba-cef1-40ab-83bb-089a7ea4feb2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:32.100334+00:00'
+    bom-ref: defog/llama-3-sqlcoder-8b-7b9c5933-7b24-50f1-8877-0c689a6b5f15
+    name: defog/llama-3-sqlcoder-8b
+    authors:
+    - name: defog
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Description
+
+
+      Developed by: Defog, Inc
+
+      Model type: [Text to SQL]
+
+      License: [CC-by-SA-4.0]
+
+      Finetuned from model: [Meta-Llama-3-8B-Instruct]
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - code
+    - conversational
+    - license:cc-by-sa-4.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: CC-BY-SA-4.0
+    url: https://spdx.org/licenses/CC-BY-SA-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/defog/llama-3-sqlcoder-8b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 04f9db13-7223-4e42-82c5-c40b317175c5
+  type: Relationship
+  properties: {}
+  from_: 9cd1a133-9143-4b63-a106-354b9b5459a0
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/defog_llama-3-sqlcoder-8b.json
+  relationship_type: annotatedBy
+- uid: a662809c-0cb0-4ab5-a5b2-c2265b36ddf3
+  type: Relationship
+  properties: {}
+  from_: bada8fba-cef1-40ab-83bb-089a7ea4feb2
+  to_:
+  - 42c8c4bf-b41d-449b-8ba3-b9b05f9f8bcd
+  relationship_type: uses
+- uid: e2292d47-a6f3-4c9b-aa47-547bad6cae46
+  type: Relationship
+  properties: {}
+  from_: 9cd1a133-9143-4b63-a106-354b9b5459a0
+  to_:
+  - bada8fba-cef1-40ab-83bb-089a7ea4feb2
+  relationship_type: produces

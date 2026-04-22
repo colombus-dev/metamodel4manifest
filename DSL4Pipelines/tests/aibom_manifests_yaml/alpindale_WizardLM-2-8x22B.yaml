@@ -1,0 +1,129 @@
+uid: 548d1611-508c-49f3-8c9d-d53769fba7ae
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/alpindale_WizardLM-2-8x22B.json
+  type: SoftwareFile
+  name: alpindale_WizardLM-2-8x22B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0be0f5bd-e663-4da5-829d-e1992d5c5588
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/alpindale_WizardLM-2-8x22B.json
+    type: ExternalReference
+  languages: []
+- uid: 78fbf416-3651-4dae-8bc6-34fb3a0f4203
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f1df618d-f0e3-4169-a2fe-9142f2d6bac9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:37.553466+00:00'
+    bom-ref: alpindale/WizardLM-2-8x22B-093aee50-2ca7-5ae5-9136-aa7a46c3076c
+    name: alpindale/WizardLM-2-8x22B
+    authors:
+    - name: alpindale
+    architectureFamily: mixtral
+    modelArchitecture: MixtralForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: HuggingFaceH4/ifeval'
+        type: inst_level_strict_acc and prompt_level_strict_acc
+        value: 52.72
+      - slice: 'dataset: BBH'
+        type: acc_norm
+        value: 48.58
+      - slice: 'dataset: hendrycks/competition_math'
+        type: exact_match
+        value: 22.28
+      - slice: 'dataset: Idavidrein/gpqa'
+        type: acc_norm
+        value: 17.56
+      - slice: 'dataset: TAUR-Lab/MuSR'
+        type: acc_norm
+        value: 14.54
+      - slice: 'dataset: TIGER-Lab/MMLU-Pro, split: test, config: main'
+        type: acc
+        value: 39.96
+    description: '## Model Details
+
+
+      * **Model name**: WizardLM-2 8x22B
+
+      * **Developed by**: WizardLM@Microsoft AI
+
+      * **Model type**: Mixture of Experts (MoE)
+
+      * **Base model**: [mistral-community/Mixtral-8x22B-v0.1](https://huggingface.co/mistral-community/Mixtral-8x22B-v0.1)
+
+      * **Parameters**: 141B
+
+      * **Language(s)**: Multilingual
+
+      * **Blog**: [Introducing WizardLM-2](https://web.archive.org/web/20240415221214/https://wizardlm.github.io/WizardLM2/)
+
+      * **Repository**: [https://github.com/nlpxucan/WizardLM](https://github.com/nlpxucan/WizardLM)
+
+      * **Paper**: WizardLM-2 (Upcoming)
+
+      * **License**: Apache2.0
+
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - mixtral
+    - text-generation
+    - conversational
+    - arxiv:2304.12244
+    - arxiv:2306.08568
+    - arxiv:2308.09583
+    - license:apache-2.0
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/alpindale/WizardLM-2-8x22B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: ae6958bf-38b4-49f2-bb81-212c2e025889
+  type: Relationship
+  properties: {}
+  from_: 548d1611-508c-49f3-8c9d-d53769fba7ae
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/alpindale_WizardLM-2-8x22B.json
+  relationship_type: annotatedBy
+- uid: ecae9c73-675b-4658-9d6d-463e6c4ce3a9
+  type: Relationship
+  properties: {}
+  from_: f1df618d-f0e3-4169-a2fe-9142f2d6bac9
+  to_:
+  - 78fbf416-3651-4dae-8bc6-34fb3a0f4203
+  relationship_type: uses
+- uid: 5874763a-5126-441b-ba7c-2d7f269bce66
+  type: Relationship
+  properties: {}
+  from_: 548d1611-508c-49f3-8c9d-d53769fba7ae
+  to_:
+  - f1df618d-f0e3-4169-a2fe-9142f2d6bac9
+  relationship_type: produces

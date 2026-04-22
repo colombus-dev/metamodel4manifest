@@ -1,0 +1,90 @@
+uid: 213a7c36-6f04-42cb-b864-f02160a24f4a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_TripoSR.json
+  type: SoftwareFile
+  name: stabilityai_TripoSR.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:591b912d-0f28-4b4c-bd74-8532255c5301
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_TripoSR.json
+    type: ExternalReference
+  languages: []
+- uid: dee778fa-d733-4ed9-957c-cd070de5cb04
+  type: Data
+  properties:
+    bom-ref: allenai/objaverse-4cc2611b-4fbe-56c7-b009-9ca67ac52e46
+    name: allenai/objaverse
+    content_url: https://huggingface.co/datasets/allenai/objaverse
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: allenai/objaverse-4cc2611b-4fbe-56c7-b009-9ca67ac52e46
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 5277d81b-415d-46db-a34c-5395d7713bba
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:26.199570+00:00'
+    bom-ref: stabilityai/TripoSR-56ff3cd6-b10b-53d4-8607-e356ba889b7b
+    name: stabilityai/TripoSR
+    authors:
+    - name: stabilityai
+    description: '## Model Details
+
+      '
+    tags:
+    - 3d
+    - image-to-3d
+    - dataset:allenai/objaverse
+    - arxiv:2311.04400
+    - arxiv:2403.02151
+    - license:mit
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stabilityai/TripoSR
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-3d
+relations:
+- uid: 4f4cf552-d513-465c-b7c0-9cc1130ab9b0
+  type: Relationship
+  properties: {}
+  from_: 213a7c36-6f04-42cb-b864-f02160a24f4a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_TripoSR.json
+  relationship_type: annotatedBy
+- uid: def25cc7-84ab-43c5-b605-c00de12478f8
+  type: Relationship
+  properties: {}
+  from_: 5277d81b-415d-46db-a34c-5395d7713bba
+  to_:
+  - dee778fa-d733-4ed9-957c-cd070de5cb04
+  relationship_type: uses
+- uid: 0cdef600-13b0-4cdb-b9c2-f668d3d3f496
+  type: Relationship
+  properties: {}
+  from_: 213a7c36-6f04-42cb-b864-f02160a24f4a
+  to_:
+  - 5277d81b-415d-46db-a34c-5395d7713bba
+  relationship_type: produces

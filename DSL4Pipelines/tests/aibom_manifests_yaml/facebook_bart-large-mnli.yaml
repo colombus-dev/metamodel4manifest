@@ -1,0 +1,120 @@
+uid: e2838bd5-3038-44ef-958a-4a13be1c2a47
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_bart-large-mnli.json
+  type: SoftwareFile
+  name: facebook_bart-large-mnli.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e182cfe9-01e2-4489-a94f-d12ab5780253
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_bart-large-mnli.json
+    type: ExternalReference
+  languages: []
+- uid: 97cc7631-ad83-41d2-9a9a-0df387ce73e0
+  type: Data
+  properties:
+    bom-ref: multi_nli-3f66ff16-a557-5dab-8458-0d3efcbec3da
+    name: multi_nli
+    content_url: https://huggingface.co/datasets/multi_nli
+    task_categories: text-classification
+    task_ids: natural-language-inference, multi-input-text-classification
+    size_categories: 100K<n<1M
+    annotations_creators: crowdsourced
+    language_creators: crowdsourced, found
+    pretty_name: Multi-Genre Natural Language Inference
+    source_datasets: original
+    paperswithcode_id: multinli
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train-*"}, {"split": "validation_matched", "path": "data/validation_matched-*"}, {"split": "validation_mismatched", "path": "data/validation_mismatched-*"}'
+    license: cc-by-3.0, cc-by-sa-3.0, mit, other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: multi_nli-3f66ff16-a557-5dab-8458-0d3efcbec3da
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: e713c370-4742-4349-a3cd-bc3619ce17d9
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6b948722-09aa-4811-a753-f1a5500568f7
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:20.173290+00:00'
+    bom-ref: facebook/bart-large-mnli-80c6aad2-fad7-549b-a06b-3b412ced13d0
+    name: facebook/bart-large-mnli
+    authors:
+    - name: facebook
+    architectureFamily: bart
+    modelArchitecture: BartForSequenceClassification
+    tags:
+    - transformers
+    - pytorch
+    - jax
+    - rust
+    - safetensors
+    - bart
+    - text-classification
+    - zero-shot-classification
+    - dataset:multi_nli
+    - arxiv:1910.13461
+    - arxiv:1909.00161
+    - license:mit
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/facebook/bart-large-mnli
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: zero-shot-classification
+relations:
+- uid: ceb9300a-9709-4c0b-b781-33bbf4610775
+  type: Relationship
+  properties: {}
+  from_: e2838bd5-3038-44ef-958a-4a13be1c2a47
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/facebook_bart-large-mnli.json
+  relationship_type: annotatedBy
+- uid: 1717a3ce-ae8d-4b97-bc6a-27ebf3c5aba2
+  type: Relationship
+  properties: {}
+  from_: 6b948722-09aa-4811-a753-f1a5500568f7
+  to_:
+  - 97cc7631-ad83-41d2-9a9a-0df387ce73e0
+  relationship_type: uses
+- uid: bb11e464-17ba-4aea-a925-b7ce9cf26ff4
+  type: Relationship
+  properties: {}
+  from_: 6b948722-09aa-4811-a753-f1a5500568f7
+  to_:
+  - e713c370-4742-4349-a3cd-bc3619ce17d9
+  relationship_type: uses
+- uid: 716d8ccd-0874-4038-9586-0949598b5ea1
+  type: Relationship
+  properties: {}
+  from_: e2838bd5-3038-44ef-958a-4a13be1c2a47
+  to_:
+  - 6b948722-09aa-4811-a753-f1a5500568f7
+  relationship_type: produces

@@ -1,0 +1,93 @@
+uid: 8037ebef-4c5a-4e07-8331-c33ce0c18db9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/baichuan-inc_Baichuan-7B.json
+  type: SoftwareFile
+  name: baichuan-inc_Baichuan-7B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:66ae96f1-33ea-474f-9098-1e6adc1ba02b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/baichuan-inc_Baichuan-7B.json
+    type: ExternalReference
+  languages: []
+- uid: 96ee0ff5-bcea-4ec9-8b96-5509c8e286a8
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 431c409c-1c9c-4a21-996d-63902e46f6c9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:33.118917+00:00'
+    bom-ref: baichuan-inc/Baichuan-7B-231f8b66-ef23-54b4-9281-37e1e7f51d40
+    name: baichuan-inc/Baichuan-7B
+    authors:
+    - name: baichuan-inc
+    architectureFamily: baichuan
+    modelArchitecture: BaiChuanForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - baichuan
+    - text-generation
+    - custom_code
+    - zh
+    - en
+    - arxiv:1910.07467
+    - arxiv:2009.03300
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/baichuan-inc/Baichuan-7B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+
+      <!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 8be37cb7-1ac8-4529-814a-949baa0558b5
+  type: Relationship
+  properties: {}
+  from_: 8037ebef-4c5a-4e07-8331-c33ce0c18db9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/baichuan-inc_Baichuan-7B.json
+  relationship_type: annotatedBy
+- uid: b02bed23-c6f7-4710-a08a-2350e94340f4
+  type: Relationship
+  properties: {}
+  from_: 431c409c-1c9c-4a21-996d-63902e46f6c9
+  to_:
+  - 96ee0ff5-bcea-4ec9-8b96-5509c8e286a8
+  relationship_type: uses
+- uid: 763aab17-6782-42de-8c0e-bbad0f17affc
+  type: Relationship
+  properties: {}
+  from_: 8037ebef-4c5a-4e07-8331-c33ce0c18db9
+  to_:
+  - 431c409c-1c9c-4a21-996d-63902e46f6c9
+  relationship_type: produces

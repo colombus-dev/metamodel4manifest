@@ -1,0 +1,124 @@
+uid: 3a236d79-470c-4dd1-af76-1cf43b59212e
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Anashel_rpg.json
+  type: SoftwareFile
+  name: Anashel_rpg.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cb24353d-3c25-41da-bd79-216a9d15bcc5
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Anashel_rpg.json
+    type: ExternalReference
+  languages: []
+- uid: a69a6823-0de3-41c5-b28d-e663b5f48531
+  type: Data
+  properties:
+    bom-ref: custom-dataset-rpg-00063d68-3eee-5859-ab2c-a146d15208b7
+    name: custom-dataset-rpg
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: custom-dataset-rpg-00063d68-3eee-5859-ab2c-a146d15208b7
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: dd6e1b34-d3b2-45ab-9ab8-dc8db8f22e9a
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a19d6305-a12f-4825-9ae4-97a9ed4d074a
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: ae0647dc-0f11-48e5-b0c3-59a0ab2580a4
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:56.698869+00:00'
+    bom-ref: Anashel/rpg-761d8486-7af7-5ef7-8864-71d633ef46d1
+    name: Anashel/rpg
+    authors:
+    - name: Anashel
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: custom'
+        type: accuracy
+        value: 95
+    tags:
+    - diffusers
+    - stable-diffusion
+    - role-playing game
+    - art generation
+    - flux1
+    - text-to-image
+    - en
+    - dataset:custom-dataset-rpg
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:finetune:black-forest-labs/FLUX.1-dev
+    - license:creativeml-openrail-m
+    - model-index
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Anashel/rpg
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: cfccbecc-cf9b-4e97-9a89-656aaec3ae5b
+  type: Relationship
+  properties: {}
+  from_: 3a236d79-470c-4dd1-af76-1cf43b59212e
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Anashel_rpg.json
+  relationship_type: annotatedBy
+- uid: 74446beb-5c57-473b-b130-d92b7a24fbff
+  type: Relationship
+  properties: {}
+  from_: ae0647dc-0f11-48e5-b0c3-59a0ab2580a4
+  to_:
+  - a69a6823-0de3-41c5-b28d-e663b5f48531
+  relationship_type: uses
+- uid: 39d96b3d-66d5-45c3-bc27-d917890aabd9
+  type: Relationship
+  properties: {}
+  from_: ae0647dc-0f11-48e5-b0c3-59a0ab2580a4
+  to_:
+  - dd6e1b34-d3b2-45ab-9ab8-dc8db8f22e9a
+  relationship_type: uses
+- uid: c0cccab9-0d12-44c6-9f2d-b12e49177f35
+  type: Relationship
+  properties: {}
+  from_: ae0647dc-0f11-48e5-b0c3-59a0ab2580a4
+  to_:
+  - a19d6305-a12f-4825-9ae4-97a9ed4d074a
+  relationship_type: derivedFrom
+- uid: 25eb1b40-3959-458d-bdfd-ef1be63badd0
+  type: Relationship
+  properties: {}
+  from_: 3a236d79-470c-4dd1-af76-1cf43b59212e
+  to_:
+  - ae0647dc-0f11-48e5-b0c3-59a0ab2580a4
+  relationship_type: produces

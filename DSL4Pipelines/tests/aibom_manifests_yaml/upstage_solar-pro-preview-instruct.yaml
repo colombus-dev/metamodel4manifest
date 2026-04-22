@@ -1,0 +1,81 @@
+uid: d1b15445-3f7f-454d-944a-faa6d0293204
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/upstage_solar-pro-preview-instruct.json
+  type: SoftwareFile
+  name: upstage_solar-pro-preview-instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8aeab6d0-f55d-434e-b66f-ccd3d0a050df
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/upstage_solar-pro-preview-instruct.json
+    type: ExternalReference
+  languages: []
+- uid: 4609404e-e80c-40d0-b163-83be56f93e83
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: cc8c8d7a-9ffd-46f8-b506-b4629a4855f6
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:06.484205+00:00'
+    bom-ref: upstage/solar-pro-preview-instruct-3fd3fd96-9108-5a6f-9896-907422d0cb63
+    name: upstage/solar-pro-preview-instruct
+    authors:
+    - name: upstage
+    architectureFamily: solar
+    modelArchitecture: SolarForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - solar
+    - text-generation
+    - nlp
+    - conversational
+    - custom_code
+    - en
+    - license:mit
+    - autotrain_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/upstage/solar-pro-preview-instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1bba48f8-6975-405e-b9f1-cd9e12ee775d
+  type: Relationship
+  properties: {}
+  from_: d1b15445-3f7f-454d-944a-faa6d0293204
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/upstage_solar-pro-preview-instruct.json
+  relationship_type: annotatedBy
+- uid: 5facba1d-39e6-439d-b952-73ab96d0f7f2
+  type: Relationship
+  properties: {}
+  from_: cc8c8d7a-9ffd-46f8-b506-b4629a4855f6
+  to_:
+  - 4609404e-e80c-40d0-b163-83be56f93e83
+  relationship_type: uses
+- uid: 90efde3d-6be3-4330-9ebc-3afd95f50eef
+  type: Relationship
+  properties: {}
+  from_: d1b15445-3f7f-454d-944a-faa6d0293204
+  to_:
+  - cc8c8d7a-9ffd-46f8-b506-b4629a4855f6
+  relationship_type: produces

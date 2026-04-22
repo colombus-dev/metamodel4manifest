@@ -1,0 +1,101 @@
+uid: 110b4c8a-d1ec-4346-963d-cf483e0002d1
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_WizardLM-30B-Uncensored.json
+  type: SoftwareFile
+  name: cognitivecomputations_WizardLM-30B-Uncensored.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e592c1dd-17b3-40d6-89d4-770b6610bc94
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_WizardLM-30B-Uncensored.json
+    type: ExternalReference
+  languages: []
+- uid: 245c32b8-0735-4581-90d1-1801207ce039
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 58bac3f2-85dc-41b1-942c-1b3cea3bb8de
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:42.214486+00:00'
+    bom-ref: cognitivecomputations/WizardLM-30B-Uncensored-9755a605-f536-5d61-a44d-fcd27576be99
+    name: cognitivecomputations/WizardLM-30B-Uncensored
+    authors:
+    - name: cognitivecomputations
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: ai2_arc, split: test, config: ARC-Challenge'
+        type: acc_norm
+        value: 60.24
+      - slice: 'dataset: hellaswag, split: validation'
+        type: acc_norm
+        value: 82.93
+      - slice: 'dataset: cais/mmlu, split: test, config: all'
+        type: acc
+        value: 56.8
+      - slice: 'dataset: truthful_qa, split: validation, config: multiple_choice'
+        type: mc2
+        value: 51.57
+      - slice: 'dataset: winogrande, split: validation, config: winogrande_xl'
+        type: acc
+        value: 74.35
+      - slice: 'dataset: gsm8k, split: test, config: main'
+        type: acc
+        value: 12.89
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - uncensored
+    - dataset:ehartford/WizardLM_alpaca_evol_instruct_70k_unfiltered
+    - license:other
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/cognitivecomputations/WizardLM-30B-Uncensored
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 288d3e8e-8778-46f1-b6a3-00f3478f198a
+  type: Relationship
+  properties: {}
+  from_: 110b4c8a-d1ec-4346-963d-cf483e0002d1
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/cognitivecomputations_WizardLM-30B-Uncensored.json
+  relationship_type: annotatedBy
+- uid: e88146f9-8867-462b-80a5-093dcc58ac49
+  type: Relationship
+  properties: {}
+  from_: 58bac3f2-85dc-41b1-942c-1b3cea3bb8de
+  to_:
+  - 245c32b8-0735-4581-90d1-1801207ce039
+  relationship_type: uses
+- uid: c299d703-0e50-4f28-a385-1754c0647fa6
+  type: Relationship
+  properties: {}
+  from_: 110b4c8a-d1ec-4346-963d-cf483e0002d1
+  to_:
+  - 58bac3f2-85dc-41b1-942c-1b3cea3bb8de
+  relationship_type: produces

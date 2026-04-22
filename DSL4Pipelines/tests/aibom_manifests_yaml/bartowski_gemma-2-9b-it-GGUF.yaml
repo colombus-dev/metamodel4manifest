@@ -1,0 +1,92 @@
+uid: 07474317-edf8-4390-9936-f3f213908aac
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bartowski_gemma-2-9b-it-GGUF.json
+  type: SoftwareFile
+  name: bartowski_gemma-2-9b-it-GGUF.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:91c49391-2b96-43f6-a861-9a7b20ace6e3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bartowski_gemma-2-9b-it-GGUF.json
+    type: ExternalReference
+  languages: []
+- uid: 065543cb-0cbd-4119-ad10-da497a056ce8
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7a1d895c-ece0-4a37-960b-39804dd7b601
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: google/gemma-2-9b-it
+    type: ExternalReference
+  languages: []
+- uid: 8f7c590f-6e18-4425-997e-20efaf6c94c1
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:39.917665+00:00'
+    bom-ref: bartowski/gemma-2-9b-it-GGUF-f316b6fd-a5cc-5c4d-88b1-506958728927
+    name: bartowski/gemma-2-9b-it-GGUF
+    authors:
+    - name: bartowski
+    tags:
+    - transformers
+    - gguf
+    - conversational
+    - text-generation
+    - base_model:google/gemma-2-9b-it
+    - base_model:quantized:google/gemma-2-9b-it
+    - license:gemma
+    - endpoints_compatible
+    - region:us
+  license:
+    name: gemma
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/bartowski/gemma-2-9b-it-GGUF
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 618bb4fd-8557-4b1a-95e6-cbb82fa1fdeb
+  type: Relationship
+  properties: {}
+  from_: 07474317-edf8-4390-9936-f3f213908aac
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bartowski_gemma-2-9b-it-GGUF.json
+  relationship_type: annotatedBy
+- uid: 3a6aaeba-f505-4763-aed0-7f4298769b43
+  type: Relationship
+  properties: {}
+  from_: 8f7c590f-6e18-4425-997e-20efaf6c94c1
+  to_:
+  - 065543cb-0cbd-4119-ad10-da497a056ce8
+  relationship_type: uses
+- uid: a6e0b800-5829-4d06-aaa1-2711d35c382c
+  type: Relationship
+  properties: {}
+  from_: 8f7c590f-6e18-4425-997e-20efaf6c94c1
+  to_:
+  - 7a1d895c-ece0-4a37-960b-39804dd7b601
+  relationship_type: derivedFrom
+- uid: 1d38aad1-b14f-4e2e-9452-746f8ef68823
+  type: Relationship
+  properties: {}
+  from_: 07474317-edf8-4390-9936-f3f213908aac
+  to_:
+  - 8f7c590f-6e18-4425-997e-20efaf6c94c1
+  relationship_type: produces

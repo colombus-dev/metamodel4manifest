@@ -1,0 +1,75 @@
+uid: 9f7c42d7-6ce0-427c-b157-05fde42c809c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/timdettmers_guanaco-33b-merged.json
+  type: SoftwareFile
+  name: timdettmers_guanaco-33b-merged.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:8dd14b41-ef76-4633-abdb-3af2c4b8500e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/timdettmers_guanaco-33b-merged.json
+    type: ExternalReference
+  languages: []
+- uid: 3b571e6b-7761-4a93-b448-b330043a6f39
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b305c962-3d9f-4db4-b08e-7614a4dfef5d
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:41.335545+00:00'
+    bom-ref: timdettmers/guanaco-33b-merged-3aaa5636-397a-55ac-9b83-f1b0bc7626f4
+    name: timdettmers/guanaco-33b-merged
+    authors:
+    - name: timdettmers
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/timdettmers/guanaco-33b-merged
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 8dd9da03-9240-44e2-b32f-489e5cafc67d
+  type: Relationship
+  properties: {}
+  from_: 9f7c42d7-6ce0-427c-b157-05fde42c809c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/timdettmers_guanaco-33b-merged.json
+  relationship_type: annotatedBy
+- uid: aec07921-1295-4477-a40e-5e366d06a993
+  type: Relationship
+  properties: {}
+  from_: b305c962-3d9f-4db4-b08e-7614a4dfef5d
+  to_:
+  - 3b571e6b-7761-4a93-b448-b330043a6f39
+  relationship_type: uses
+- uid: bea9a47a-97fb-41b9-88b3-8f4abf3501c8
+  type: Relationship
+  properties: {}
+  from_: 9f7c42d7-6ce0-427c-b157-05fde42c809c
+  to_:
+  - b305c962-3d9f-4db4-b08e-7614a4dfef5d
+  relationship_type: produces

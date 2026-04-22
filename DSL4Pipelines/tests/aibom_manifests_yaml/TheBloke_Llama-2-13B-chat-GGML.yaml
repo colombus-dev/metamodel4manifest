@@ -1,0 +1,118 @@
+uid: 10b8bc09-23e2-41b2-bbb4-72721190e349
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Llama-2-13B-chat-GGML.json
+  type: SoftwareFile
+  name: TheBloke_Llama-2-13B-chat-GGML.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f5b66876-7c8a-4de8-9cce-a5eb99ef7067
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Llama-2-13B-chat-GGML.json
+    type: ExternalReference
+  languages: []
+- uid: 92fea883-29ca-4328-89e2-27bf8e5c7479
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6f8817fe-0e0f-4f9f-a0f0-1820f9e7e21c
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: meta-llama/Llama-2-13b-chat-hf
+    type: ExternalReference
+  languages: []
+- uid: f5a353b8-d814-4947-b299-439d9360a470
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:43.391658+00:00'
+    bom-ref: TheBloke/Llama-2-13B-chat-GGML-402003ef-8ac2-5ecd-839f-234af1987c8f
+    name: TheBloke/Llama-2-13B-chat-GGML
+    authors:
+    - name: TheBloke
+    architectureFamily: llama
+    description: '## Description
+
+
+      This repo contains GGML format model files for [Meta''s Llama 2 13B-chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf).
+
+      '
+    tags:
+    - transformers
+    - llama
+    - facebook
+    - meta
+    - pytorch
+    - llama-2
+    - text-generation
+    - en
+    - arxiv:2307.09288
+    - base_model:meta-llama/Llama-2-13b-chat-hf
+    - base_model:finetune:meta-llama/Llama-2-13b-chat-hf
+    - license:other
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+      **Intended Use Cases** Llama 2 is intended for commercial and research use in English. Tuned models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks.
+
+
+      To get the expected features and performance for the chat versions, a specific formatting needs to be followed, including the `INST` and `<<SYS>>` tags, `BOS` and `EOS` tokens, and the whitespaces and breaklines in between (we recommend calling `strip()` on inputs to avoid double-spaces). See our reference code in github for details: [`chat_completion`](https://github.com/facebookresearch/llama/blob/main/llama/generation.py#L212).
+
+
+      **Out-of-scope Uses** Use in any manner that violates applicable laws or regulations (including trade compliance laws).Use in languages other than English. Use in any other way that is prohibited by the Acceptable Use Policy and Licensing Agreement for Llama 2.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: f6bf4d31-9745-4e00-a52b-4ad533ad14f3
+  type: Relationship
+  properties: {}
+  from_: 10b8bc09-23e2-41b2-bbb4-72721190e349
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TheBloke_Llama-2-13B-chat-GGML.json
+  relationship_type: annotatedBy
+- uid: 764a7930-1ce8-4cad-bea3-f930a59db4b1
+  type: Relationship
+  properties: {}
+  from_: f5a353b8-d814-4947-b299-439d9360a470
+  to_:
+  - 92fea883-29ca-4328-89e2-27bf8e5c7479
+  relationship_type: uses
+- uid: 1b0e1add-8806-4071-9228-a4bd2a1fefd8
+  type: Relationship
+  properties: {}
+  from_: f5a353b8-d814-4947-b299-439d9360a470
+  to_:
+  - 6f8817fe-0e0f-4f9f-a0f0-1820f9e7e21c
+  relationship_type: derivedFrom
+- uid: 0d77c9fd-db77-4996-b6db-4295a90b6f8f
+  type: Relationship
+  properties: {}
+  from_: 10b8bc09-23e2-41b2-bbb4-72721190e349
+  to_:
+  - f5a353b8-d814-4947-b299-439d9360a470
+  relationship_type: produces

@@ -1,0 +1,83 @@
+uid: db79ca54-73c3-42ba-9a42-647cd7c7c200
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nuigurumi_basil_mix.json
+  type: SoftwareFile
+  name: nuigurumi_basil_mix.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0ba8c2b6-b513-4fc5-9dde-8e44b2468d40
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nuigurumi_basil_mix.json
+    type: ExternalReference
+  languages: []
+- uid: 65b19cd2-bceb-4fa7-be64-d271069577e1
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b2085339-7db9-4534-a64a-7fc47524a5c4
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:47.882843+00:00'
+    bom-ref: nuigurumi/basil_mix-c583e8f3-b193-54dd-8d0e-f0f767ee573e
+    name: nuigurumi/basil_mix
+    authors:
+    - name: nuigurumi
+    description: '## Model Description
+
+
+      - merged model.
+
+      - realistic texture and Asian face.
+
+      - designed to maintain a responsive reaction to danbooru based prompts.
+
+      '
+    tags:
+    - diffusers
+    - license:other
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/nuigurumi/basil_mix
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: f91d8bb7-26e5-434c-a4c7-953188792646
+  type: Relationship
+  properties: {}
+  from_: db79ca54-73c3-42ba-9a42-647cd7c7c200
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nuigurumi_basil_mix.json
+  relationship_type: annotatedBy
+- uid: 373e6391-53ab-454a-8b07-b53d6ccfc322
+  type: Relationship
+  properties: {}
+  from_: b2085339-7db9-4534-a64a-7fc47524a5c4
+  to_:
+  - 65b19cd2-bceb-4fa7-be64-d271069577e1
+  relationship_type: uses
+- uid: d6430b0b-eec9-4fee-b98c-bd8379bbb9f0
+  type: Relationship
+  properties: {}
+  from_: db79ca54-73c3-42ba-9a42-647cd7c7c200
+  to_:
+  - b2085339-7db9-4534-a64a-7fc47524a5c4
+  relationship_type: produces

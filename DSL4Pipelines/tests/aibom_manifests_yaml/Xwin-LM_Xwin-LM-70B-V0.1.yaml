@@ -1,0 +1,78 @@
+uid: 0816aabc-7829-491f-a965-2f0539503153
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Xwin-LM_Xwin-LM-70B-V0.1.json
+  type: SoftwareFile
+  name: Xwin-LM_Xwin-LM-70B-V0.1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2869a452-3389-4d16-9dde-be4c9cd1e3cc
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Xwin-LM_Xwin-LM-70B-V0.1.json
+    type: ExternalReference
+  languages: []
+- uid: 52fd3696-b2b6-40c7-a359-b27ef5eca0c2
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 416dab4b-e94f-4c86-826d-a8c5121020d9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:05.558829+00:00'
+    bom-ref: Xwin-LM/Xwin-LM-70B-V0.1-01139a21-ba87-55b7-ae13-9200ef533b1c
+    name: Xwin-LM/Xwin-LM-70B-V0.1
+    authors:
+    - name: Xwin-LM
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - license:llama2
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Xwin-LM/Xwin-LM-70B-V0.1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 941d6980-5dc5-4ac1-93fe-7fae8cbdcd3c
+  type: Relationship
+  properties: {}
+  from_: 0816aabc-7829-491f-a965-2f0539503153
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Xwin-LM_Xwin-LM-70B-V0.1.json
+  relationship_type: annotatedBy
+- uid: 7b5f07b3-c8c8-4d41-ac74-7a6db8880f51
+  type: Relationship
+  properties: {}
+  from_: 416dab4b-e94f-4c86-826d-a8c5121020d9
+  to_:
+  - 52fd3696-b2b6-40c7-a359-b27ef5eca0c2
+  relationship_type: uses
+- uid: 40aae06b-03cb-41a1-af29-b2d86f612a76
+  type: Relationship
+  properties: {}
+  from_: 0816aabc-7829-491f-a965-2f0539503153
+  to_:
+  - 416dab4b-e94f-4c86-826d-a8c5121020d9
+  relationship_type: produces

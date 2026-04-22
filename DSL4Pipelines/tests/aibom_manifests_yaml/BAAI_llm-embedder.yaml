@@ -1,0 +1,81 @@
+uid: fbca7b6d-af6f-413b-b81a-682979297435
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/BAAI_llm-embedder.json
+  type: SoftwareFile
+  name: BAAI_llm-embedder.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:173648a3-b06c-447e-9c01-f983a1d28bae
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/BAAI_llm-embedder.json
+    type: ExternalReference
+  languages: []
+- uid: b8ae8c0f-b7ba-46d4-9534-d17b36253135
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c59926db-1a9f-4179-9763-f3027cf2db36
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:56.490167+00:00'
+    bom-ref: BAAI/llm-embedder-df43e721-db60-5a17-b050-0cb7ff4bb7b7
+    name: BAAI/llm-embedder
+    authors:
+    - name: BAAI
+    architectureFamily: bert
+    modelArchitecture: BertModel
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - bert
+    - feature-extraction
+    - arxiv:2310.07554
+    - arxiv:2309.07597
+    - license:mit
+    - text-embeddings-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/BAAI/llm-embedder
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: feature-extraction
+relations:
+- uid: d48def49-089a-4189-8dee-a5f76dd382d4
+  type: Relationship
+  properties: {}
+  from_: fbca7b6d-af6f-413b-b81a-682979297435
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/BAAI_llm-embedder.json
+  relationship_type: annotatedBy
+- uid: dcfcd787-4c6d-4f6c-88f3-fcedd4a134f5
+  type: Relationship
+  properties: {}
+  from_: c59926db-1a9f-4179-9763-f3027cf2db36
+  to_:
+  - b8ae8c0f-b7ba-46d4-9534-d17b36253135
+  relationship_type: uses
+- uid: d7271ccc-4f3c-4bbe-ba2d-d2545bef1bfb
+  type: Relationship
+  properties: {}
+  from_: fbca7b6d-af6f-413b-b81a-682979297435
+  to_:
+  - c59926db-1a9f-4179-9763-f3027cf2db36
+  relationship_type: produces

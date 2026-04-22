@@ -1,0 +1,158 @@
+uid: a62ddf3e-b875-429f-95e4-692db2ba1cb1
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openlm-research_open_llama_3b_v2.json
+  type: SoftwareFile
+  name: openlm-research_open_llama_3b_v2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d68b64d5-a739-4dfa-b190-e5545ce2b960
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openlm-research_open_llama_3b_v2.json
+    type: ExternalReference
+  languages: []
+- uid: d3c9a628-70bb-45e1-a97e-2f2ec374b52f
+  type: Data
+  properties:
+    bom-ref: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    name: tiiuae/falcon-refinedweb
+    content_url: https://huggingface.co/datasets/tiiuae/falcon-refinedweb
+    task_categories: text-generation
+    size_categories: 100B<n<1T
+    pretty_name: Falcon RefinedWeb
+    license: odc-by
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: ecfdcbd7-3d87-455a-9e8b-f888fd616a69
+  type: Data
+  properties:
+    bom-ref: bigcode/starcoderdata-abfd2d2a-390d-56b4-ad9c-c532362d5827
+    name: bigcode/starcoderdata
+    content_url: https://huggingface.co/datasets/bigcode/starcoderdata
+    task_categories: text-generation
+    size_categories: unknown
+    annotations_creators: ''
+    language_creators: crowdsourced, expert-generated
+    pretty_name: The-Stack
+    source_datasets: ''
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigcode/starcoderdata-abfd2d2a-390d-56b4-ad9c-c532362d5827
+    type: ExternalReference
+  languages:
+  - code
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 8334f6e7-7308-4582-b0b3-9418e16e0bd4
+  type: Data
+  properties:
+    bom-ref: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    name: togethercomputer/RedPajama-Data-1T
+    content_url: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T
+    task_categories: text-generation
+    pretty_name: Red Pajama 1T
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f7abd729-ac43-4215-9129-24cb38cd05d3
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 82195fe7-eec3-46fe-8943-34c4fab3af5f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:41.975284+00:00'
+    bom-ref: openlm-research/open_llama_3b_v2-c2bb592a-0afc-5465-b3f0-a14f348c675e
+    name: openlm-research/open_llama_3b_v2
+    authors:
+    - name: openlm-research
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - dataset:tiiuae/falcon-refinedweb
+    - dataset:bigcode/starcoderdata
+    - dataset:togethercomputer/RedPajama-Data-1T
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openlm-research/open_llama_3b_v2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: c615e367-c7f8-493c-a224-af7dbddc12f2
+  type: Relationship
+  properties: {}
+  from_: a62ddf3e-b875-429f-95e4-692db2ba1cb1
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openlm-research_open_llama_3b_v2.json
+  relationship_type: annotatedBy
+- uid: be961474-2b6d-44b9-aec4-5e4b36614e86
+  type: Relationship
+  properties: {}
+  from_: 82195fe7-eec3-46fe-8943-34c4fab3af5f
+  to_:
+  - d3c9a628-70bb-45e1-a97e-2f2ec374b52f
+  - ecfdcbd7-3d87-455a-9e8b-f888fd616a69
+  - 8334f6e7-7308-4582-b0b3-9418e16e0bd4
+  relationship_type: uses
+- uid: 8a3160e5-193f-4bce-91be-46c7d518509b
+  type: Relationship
+  properties: {}
+  from_: 82195fe7-eec3-46fe-8943-34c4fab3af5f
+  to_:
+  - f7abd729-ac43-4215-9129-24cb38cd05d3
+  relationship_type: uses
+- uid: b7447453-8683-4ca0-b9d4-652586bd89ea
+  type: Relationship
+  properties: {}
+  from_: a62ddf3e-b875-429f-95e4-692db2ba1cb1
+  to_:
+  - 82195fe7-eec3-46fe-8943-34c4fab3af5f
+  relationship_type: produces

@@ -1,0 +1,108 @@
+uid: abed6776-e77e-405c-a344-b64f9f163e24
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ahxt_LiteLlama-460M-1T.json
+  type: SoftwareFile
+  name: ahxt_LiteLlama-460M-1T.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2ae7193b-e5d4-4d98-88e1-8b346fa76f37
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ahxt_LiteLlama-460M-1T.json
+    type: ExternalReference
+  languages: []
+- uid: 19aed57f-abe8-434e-be87-9591b67c812c
+  type: Data
+  properties:
+    bom-ref: Redpajama-bf65900e-936c-5eb6-8459-777bb590e7c5
+    name: Redpajama
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Redpajama-bf65900e-936c-5eb6-8459-777bb590e7c5
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 12cb337d-26f8-4405-ab12-a06ef838fb61
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 1a30bf04-d2d7-493e-9005-69b616f43718
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:52.912570+00:00'
+    bom-ref: ahxt/LiteLlama-460M-1T-7a7ebb60-6888-590b-9003-513b3f5e5459
+    name: ahxt/LiteLlama-460M-1T
+    authors:
+    - name: ahxt
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - llama2
+    - llama-2
+    - llama2 architecture
+    - litellama
+    - en
+    - dataset:Redpajama
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ahxt/LiteLlama-460M-1T
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 5baad518-f009-4030-960f-c11aac259564
+  type: Relationship
+  properties: {}
+  from_: abed6776-e77e-405c-a344-b64f9f163e24
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ahxt_LiteLlama-460M-1T.json
+  relationship_type: annotatedBy
+- uid: 8a254cad-90a7-4627-ba6f-1ee3fd97d828
+  type: Relationship
+  properties: {}
+  from_: 1a30bf04-d2d7-493e-9005-69b616f43718
+  to_:
+  - 19aed57f-abe8-434e-be87-9591b67c812c
+  relationship_type: uses
+- uid: 197419d1-1a98-45f5-a16d-25dfa44938f4
+  type: Relationship
+  properties: {}
+  from_: 1a30bf04-d2d7-493e-9005-69b616f43718
+  to_:
+  - 12cb337d-26f8-4405-ab12-a06ef838fb61
+  relationship_type: uses
+- uid: 0362ea7a-2947-46f3-aa7a-840cb0f9658f
+  type: Relationship
+  properties: {}
+  from_: abed6776-e77e-405c-a344-b64f9f163e24
+  to_:
+  - 1a30bf04-d2d7-493e-9005-69b616f43718
+  relationship_type: produces

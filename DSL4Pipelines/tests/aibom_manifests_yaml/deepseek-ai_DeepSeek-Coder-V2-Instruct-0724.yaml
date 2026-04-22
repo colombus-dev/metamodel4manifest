@@ -1,0 +1,100 @@
+uid: 33eafae7-fee4-4c8d-9e5e-45b04f8beb0d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-Coder-V2-Instruct-0724.json
+  type: SoftwareFile
+  name: deepseek-ai_DeepSeek-Coder-V2-Instruct-0724.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:4df90817-5ad3-41cb-8ca7-fe3a9cd90ff2
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-Coder-V2-Instruct-0724.json
+    type: ExternalReference
+  languages: []
+- uid: 28860ac0-1a49-4b74-b377-9990cf49053d
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e62730fc-f8be-4c3a-83c7-3561f596bc52
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: deepseek-ai/DeepSeek-Coder-V2-Base
+    type: ExternalReference
+  languages: []
+- uid: a19cf7c1-19eb-4cd2-9a6d-3c837459eb81
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:03.326757+00:00'
+    bom-ref: deepseek-ai/DeepSeek-Coder-V2-Instruct-0724-f48f6fab-c6d8-52e7-ba4e-f7039067fc5f
+    name: deepseek-ai/DeepSeek-Coder-V2-Instruct-0724
+    authors:
+    - name: deepseek-ai
+    architectureFamily: deepseek_v2
+    modelArchitecture: DeepseekV2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - deepseek_v2
+    - text-generation
+    - conversational
+    - custom_code
+    - arxiv:2401.06066
+    - base_model:deepseek-ai/DeepSeek-Coder-V2-Base
+    - base_model:finetune:deepseek-ai/DeepSeek-Coder-V2-Base
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: deepseek-license
+    url: LICENSE
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct-0724
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: c426c985-1ad2-4990-92b5-650c36400708
+  type: Relationship
+  properties: {}
+  from_: 33eafae7-fee4-4c8d-9e5e-45b04f8beb0d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/deepseek-ai_DeepSeek-Coder-V2-Instruct-0724.json
+  relationship_type: annotatedBy
+- uid: abf014f6-b8bd-46f5-8f09-078eb8d42931
+  type: Relationship
+  properties: {}
+  from_: a19cf7c1-19eb-4cd2-9a6d-3c837459eb81
+  to_:
+  - 28860ac0-1a49-4b74-b377-9990cf49053d
+  relationship_type: uses
+- uid: e92a0844-8455-4119-b5be-f6f91cf239bb
+  type: Relationship
+  properties: {}
+  from_: a19cf7c1-19eb-4cd2-9a6d-3c837459eb81
+  to_:
+  - e62730fc-f8be-4c3a-83c7-3561f596bc52
+  relationship_type: derivedFrom
+- uid: 7d5688e9-c0f1-4e02-b8fc-9b2e31e7313c
+  type: Relationship
+  properties: {}
+  from_: 33eafae7-fee4-4c8d-9e5e-45b04f8beb0d
+  to_:
+  - a19cf7c1-19eb-4cd2-9a6d-3c837459eb81
+  relationship_type: produces

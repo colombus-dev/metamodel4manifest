@@ -1,0 +1,95 @@
+uid: dd1ab06b-9515-4773-af69-6be025b6e40a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Lightricks_LTX-Video.json
+  type: SoftwareFile
+  name: Lightricks_LTX-Video.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:cc4f2de6-dd96-40e5-9af6-a4cf2e6f0131
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Lightricks_LTX-Video.json
+    type: ExternalReference
+  languages: []
+- uid: 08d0f477-748a-46bf-80fe-bab79d46e311
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a8c6cee3-52d3-4e6b-af80-fd3e6ccfeb5c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:56.971574+00:00'
+    bom-ref: Lightricks/LTX-Video-f913a94a-df23-5d4f-896d-f3d6ccfee6fe
+    name: Lightricks/LTX-Video
+    authors:
+    - name: Lightricks
+    description: '## Model Details
+
+      - **Developed by:** Lightricks
+
+      - **Model type:** Diffusion-based text-to-video and image-to-video generation model
+
+      - **Language(s):** English
+
+
+      '
+    tags:
+    - diffusers
+    - safetensors
+    - ltx-video
+    - text-to-video
+    - image-to-video
+    - en
+    - license:other
+    - diffusers:LTXPipeline
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Lightricks/LTX-Video
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-video
+  consideration:
+    use_cases: '### Direct use
+
+      You can use the model for purposes under the [license](https://huggingface.co/Lightricks/LTX-Video/resolve/main/License.txt)
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 7cb63ce0-00cd-4bdd-887b-19b25da2b773
+  type: Relationship
+  properties: {}
+  from_: dd1ab06b-9515-4773-af69-6be025b6e40a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Lightricks_LTX-Video.json
+  relationship_type: annotatedBy
+- uid: 2d4ddb42-8048-4eb8-842d-6189bb2b0e86
+  type: Relationship
+  properties: {}
+  from_: a8c6cee3-52d3-4e6b-af80-fd3e6ccfeb5c
+  to_:
+  - 08d0f477-748a-46bf-80fe-bab79d46e311
+  relationship_type: uses
+- uid: bf6a063f-79e7-4069-af0c-2945d24fb833
+  type: Relationship
+  properties: {}
+  from_: dd1ab06b-9515-4773-af69-6be025b6e40a
+  to_:
+  - a8c6cee3-52d3-4e6b-af80-fd3e6ccfeb5c
+  relationship_type: produces

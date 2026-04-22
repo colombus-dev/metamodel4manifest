@@ -1,0 +1,208 @@
+uid: 88a19f03-2ffb-40ab-8e05-252940dd322d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pszemraj_led-large-book-summary.json
+  type: SoftwareFile
+  name: pszemraj_led-large-book-summary.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f63fb1d6-9bd2-4ae5-a16c-70a1c4d05572
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pszemraj_led-large-book-summary.json
+    type: ExternalReference
+  languages: []
+- uid: 9af93884-1660-4512-9cca-462dd17db210
+  type: Data
+  properties:
+    bom-ref: kmfoda/booksum-66cc0074-775a-5a84-bb20-eaabf53c51f2
+    name: kmfoda/booksum
+    content_url: https://huggingface.co/datasets/kmfoda/booksum
+    license: bsd-3-clause
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: kmfoda/booksum-66cc0074-775a-5a84-bb20-eaabf53c51f2
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 06f79666-baff-4b46-8d5b-5d1ac6de1023
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0e086a49-e421-4486-bfc0-6a19af1d6969
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:42.975640+00:00'
+    bom-ref: pszemraj/led-large-book-summary-52097af8-51f4-52e2-81a3-29b1fa03ae9d
+    name: pszemraj/led-large-book-summary
+    authors:
+    - name: pszemraj
+    architectureFamily: led
+    modelArchitecture: LEDForConditionalGeneration
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: kmfoda/booksum, split: test, config: kmfoda--booksum'
+        type: rouge
+        value: 31.7308
+      - slice: 'dataset: kmfoda/booksum, split: test, config: kmfoda--booksum'
+        type: rouge
+        value: 5.3311
+      - slice: 'dataset: kmfoda/booksum, split: test, config: kmfoda--booksum'
+        type: rouge
+        value: 16.1465
+      - slice: 'dataset: kmfoda/booksum, split: test, config: kmfoda--booksum'
+        type: rouge
+        value: 29.0883
+      - slice: 'dataset: kmfoda/booksum, split: test, config: kmfoda--booksum'
+        type: loss
+        value: 4.815707206726074
+      - slice: 'dataset: kmfoda/booksum, split: test, config: kmfoda--booksum'
+        type: gen_len
+        value: 154.9036
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 33.4484
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 10.4249
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 24.5802
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: rouge
+        value: 29.8226
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: loss
+        value: 4.176078796386719
+      - slice: 'dataset: samsum, split: test, config: samsum'
+        type: gen_len
+        value: 65.4005
+      - slice: 'dataset: billsum, split: test, config: default'
+        type: rouge
+        value: 40.5843
+      - slice: 'dataset: billsum, split: test, config: default'
+        type: rouge
+        value: 17.3401
+      - slice: 'dataset: billsum, split: test, config: default'
+        type: rouge
+        value: 25.1256
+      - slice: 'dataset: billsum, split: test, config: default'
+        type: rouge
+        value: 34.6619
+      - slice: 'dataset: billsum, split: test, config: default'
+        type: loss
+        value: 4.792657375335693
+      - slice: 'dataset: billsum, split: test, config: default'
+        type: gen_len
+        value: 163.9394
+      - slice: 'dataset: multi_news, split: test, config: default'
+        type: rouge
+        value: 39.0834
+      - slice: 'dataset: multi_news, split: test, config: default'
+        type: rouge
+        value: 11.4043
+      - slice: 'dataset: multi_news, split: test, config: default'
+        type: rouge
+        value: 19.1813
+      - slice: 'dataset: multi_news, split: test, config: default'
+        type: rouge
+        value: 35.1581
+      - slice: 'dataset: multi_news, split: test, config: default'
+        type: loss
+        value: 4.654905319213867
+      - slice: 'dataset: multi_news, split: test, config: default'
+        type: gen_len
+        value: 186.2494
+      - slice: 'dataset: cnn_dailymail, split: test, config: 3.0.0'
+        type: rouge
+        value: 32.8774
+      - slice: 'dataset: cnn_dailymail, split: test, config: 3.0.0'
+        type: rouge
+        value: 13.3706
+      - slice: 'dataset: cnn_dailymail, split: test, config: 3.0.0'
+        type: rouge
+        value: 20.4365
+      - slice: 'dataset: cnn_dailymail, split: test, config: 3.0.0'
+        type: rouge
+        value: 30.4408
+      - slice: 'dataset: cnn_dailymail, split: test, config: 3.0.0'
+        type: loss
+        value: 5.3488945960998535
+      - slice: 'dataset: cnn_dailymail, split: test, config: 3.0.0'
+        type: gen_len
+        value: 181.8326
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - led
+    - text2text-generation
+    - summarization
+    - summary
+    - longformer
+    - booksum
+    - long-document
+    - long-form
+    - en
+    - dataset:kmfoda/booksum
+    - arxiv:2105.08209
+    - doi:10.57967/hf/0101
+    - license:apache-2.0
+    - license:bsd-3-clause
+    - model-index
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/pszemraj/led-large-book-summary
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: summarization
+relations:
+- uid: 1e522012-806d-4aa4-9d58-54c0636920a4
+  type: Relationship
+  properties: {}
+  from_: 88a19f03-2ffb-40ab-8e05-252940dd322d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pszemraj_led-large-book-summary.json
+  relationship_type: annotatedBy
+- uid: 52d3db8f-389d-4ac8-a023-e4ad1194da2b
+  type: Relationship
+  properties: {}
+  from_: 0e086a49-e421-4486-bfc0-6a19af1d6969
+  to_:
+  - 9af93884-1660-4512-9cca-462dd17db210
+  relationship_type: uses
+- uid: c6d12bc6-51d5-49f4-9aa5-442e2b064baf
+  type: Relationship
+  properties: {}
+  from_: 0e086a49-e421-4486-bfc0-6a19af1d6969
+  to_:
+  - 06f79666-baff-4b46-8d5b-5d1ac6de1023
+  relationship_type: uses
+- uid: 4b679c7d-d255-48a4-97bc-b70e320be734
+  type: Relationship
+  properties: {}
+  from_: 88a19f03-2ffb-40ab-8e05-252940dd322d
+  to_:
+  - 0e086a49-e421-4486-bfc0-6a19af1d6969
+  relationship_type: produces

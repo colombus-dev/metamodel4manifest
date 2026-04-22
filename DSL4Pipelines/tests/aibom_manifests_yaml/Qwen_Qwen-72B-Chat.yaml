@@ -1,0 +1,102 @@
+uid: beecabd1-01f8-4ba2-b410-918a6eb4d481
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen-72B-Chat.json
+  type: SoftwareFile
+  name: Qwen_Qwen-72B-Chat.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0da611d8-d2a4-4701-9190-8bbcb90b2127
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen-72B-Chat.json
+    type: ExternalReference
+  languages: []
+- uid: 13e439c7-a036-4d88-86ae-c0cddb0058b0
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8a78bae4-132e-467f-9cf9-66eb2254953a
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: Qwen/Qwen-72B
+    type: ExternalReference
+  languages: []
+- uid: 00c1f96b-69e8-4dc8-988a-bc555b833037
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:28.197412+00:00'
+    bom-ref: Qwen/Qwen-72B-Chat-93e293ac-2034-5b05-8421-d60fcc08a720
+    name: Qwen/Qwen-72B-Chat
+    authors:
+    - name: Qwen
+    architectureFamily: qwen
+    modelArchitecture: QWenLMHeadModel
+    tags:
+    - transformers
+    - safetensors
+    - qwen
+    - text-generation
+    - custom_code
+    - zh
+    - en
+    - arxiv:2309.16609
+    - arxiv:2305.08322
+    - arxiv:2009.03300
+    - arxiv:2307.11088
+    - base_model:Qwen/Qwen-72B
+    - base_model:finetune:Qwen/Qwen-72B
+    - license:other
+    - autotrain_compatible
+    - region:us
+  license:
+    name: tongyi-qianwen
+    url: https://huggingface.co/Qwen/Qwen-72B-Chat/blob/main/LICENSE
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Qwen/Qwen-72B-Chat
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: b3b131f4-803e-4dd3-a27b-ca573a4f1011
+  type: Relationship
+  properties: {}
+  from_: beecabd1-01f8-4ba2-b410-918a6eb4d481
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen-72B-Chat.json
+  relationship_type: annotatedBy
+- uid: e4a750ac-cb80-489d-a141-11af24eb2ec3
+  type: Relationship
+  properties: {}
+  from_: 00c1f96b-69e8-4dc8-988a-bc555b833037
+  to_:
+  - 13e439c7-a036-4d88-86ae-c0cddb0058b0
+  relationship_type: uses
+- uid: 1888b439-c119-47d2-9a4b-1a82b055f949
+  type: Relationship
+  properties: {}
+  from_: 00c1f96b-69e8-4dc8-988a-bc555b833037
+  to_:
+  - 8a78bae4-132e-467f-9cf9-66eb2254953a
+  relationship_type: derivedFrom
+- uid: 948c7ff2-10c0-412c-82ed-098352f246cf
+  type: Relationship
+  properties: {}
+  from_: beecabd1-01f8-4ba2-b410-918a6eb4d481
+  to_:
+  - 00c1f96b-69e8-4dc8-988a-bc555b833037
+  relationship_type: produces

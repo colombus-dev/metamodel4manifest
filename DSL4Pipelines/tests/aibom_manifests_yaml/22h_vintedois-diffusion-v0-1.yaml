@@ -1,0 +1,74 @@
+uid: c6f1d83b-6c10-4388-b4a7-d8d9ca4807c9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/22h_vintedois-diffusion-v0-1.json
+  type: SoftwareFile
+  name: 22h_vintedois-diffusion-v0-1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:9b74d018-5d15-445e-8d31-05509e227b27
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/22h_vintedois-diffusion-v0-1.json
+    type: ExternalReference
+  languages: []
+- uid: 987a84b6-b473-44a9-b107-8e7dfb966a81
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 11c1a7a2-b0fb-434e-81b3-61120792c1e9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:30.729605+00:00'
+    bom-ref: 22h/vintedois-diffusion-v0-1-f31dddad-cd40-5261-96ba-93da6c3a76bd
+    name: 22h/vintedois-diffusion-v0-1
+    authors:
+    - name: 22h
+    tags:
+    - diffusers
+    - text-to-image
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/22h/vintedois-diffusion-v0-1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 90d1c59d-8e52-4524-9fa4-0e0bb2f2843c
+  type: Relationship
+  properties: {}
+  from_: c6f1d83b-6c10-4388-b4a7-d8d9ca4807c9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/22h_vintedois-diffusion-v0-1.json
+  relationship_type: annotatedBy
+- uid: 776000ac-c1e4-4792-bb60-8d89126d4300
+  type: Relationship
+  properties: {}
+  from_: 11c1a7a2-b0fb-434e-81b3-61120792c1e9
+  to_:
+  - 987a84b6-b473-44a9-b107-8e7dfb966a81
+  relationship_type: uses
+- uid: b675bc77-5200-4df2-960c-49be81af3006
+  type: Relationship
+  properties: {}
+  from_: c6f1d83b-6c10-4388-b4a7-d8d9ca4807c9
+  to_:
+  - 11c1a7a2-b0fb-434e-81b3-61120792c1e9
+  relationship_type: produces

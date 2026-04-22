@@ -1,0 +1,188 @@
+uid: fb9574a9-df0f-4144-9cad-ad39e513bd24
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/togethercomputer_LLaMA-2-7B-32K.json
+  type: SoftwareFile
+  name: togethercomputer_LLaMA-2-7B-32K.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:b54449e3-3df7-421f-b7cc-2dcbc8d0b59d
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/togethercomputer_LLaMA-2-7B-32K.json
+    type: ExternalReference
+  languages: []
+- uid: d2bb441a-8745-47e9-be6c-8d4748620933
+  type: Data
+  properties:
+    bom-ref: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    name: togethercomputer/RedPajama-Data-1T
+    content_url: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T
+    task_categories: text-generation
+    pretty_name: Red Pajama 1T
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 74b216f1-5229-4c5d-8d93-03e51cba9836
+  type: Data
+  properties:
+    bom-ref: togethercomputer/RedPajama-Data-Instruct-c739e853-f0ab-5d2c-ba6b-dbbe738b8bc4
+    name: togethercomputer/RedPajama-Data-Instruct
+    content_url: https://huggingface.co/datasets/togethercomputer/RedPajama-Data-Instruct
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: togethercomputer/RedPajama-Data-Instruct-c739e853-f0ab-5d2c-ba6b-dbbe738b8bc4
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 71adea7e-3e2a-41f0-8e3a-2e44402dfe35
+  type: Data
+  properties:
+    bom-ref: EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787
+    name: EleutherAI/pile
+    content_url: https://huggingface.co/datasets/EleutherAI/pile
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: 100B<n<1T
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: the Pile
+    source_datasets: original
+    paperswithcode_id: the-pile
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: cf43e5f5-282d-483e-92bb-b672f2dcb956
+  type: Data
+  properties:
+    bom-ref: togethercomputer/Long-Data-Collections-dd1ac4ec-4502-50bf-9671-412b1e071e3f
+    name: togethercomputer/Long-Data-Collections
+    content_url: https://huggingface.co/datasets/togethercomputer/Long-Data-Collections
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: togethercomputer/Long-Data-Collections-dd1ac4ec-4502-50bf-9671-412b1e071e3f
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 2eb2d13e-1520-49be-8b83-ada7cdec227a
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: aea528b0-1eea-44bf-8d3e-28f793b6ef58
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:49.138401+00:00'
+    bom-ref: togethercomputer/LLaMA-2-7B-32K-42ea7237-35df-5a38-a6e4-be995437dd9c
+    name: togethercomputer/LLaMA-2-7B-32K
+    authors:
+    - name: togethercomputer
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Description
+
+
+      LLaMA-2-7B-32K is an open-source, long context language model developed by Together, fine-tuned from Meta''s original Llama-2 7B model.
+
+      This model represents our efforts to contribute to the rapid progress of the open-source ecosystem for large language models.
+
+      The model has been extended to a context length of 32K with position interpolation,
+
+      allowing applications on multi-document QA, long text summarization, etc.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - en
+    - dataset:togethercomputer/RedPajama-Data-1T
+    - dataset:togethercomputer/RedPajama-Data-Instruct
+    - dataset:EleutherAI/pile
+    - dataset:togethercomputer/Long-Data-Collections
+    - license:llama2
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/togethercomputer/LLaMA-2-7B-32K
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 9d55d16e-3b21-47ad-a5c3-83daf24bd5b9
+  type: Relationship
+  properties: {}
+  from_: fb9574a9-df0f-4144-9cad-ad39e513bd24
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/togethercomputer_LLaMA-2-7B-32K.json
+  relationship_type: annotatedBy
+- uid: 069163d6-1634-45f1-94d4-cda198b84615
+  type: Relationship
+  properties: {}
+  from_: aea528b0-1eea-44bf-8d3e-28f793b6ef58
+  to_:
+  - d2bb441a-8745-47e9-be6c-8d4748620933
+  - 74b216f1-5229-4c5d-8d93-03e51cba9836
+  - 71adea7e-3e2a-41f0-8e3a-2e44402dfe35
+  - cf43e5f5-282d-483e-92bb-b672f2dcb956
+  relationship_type: uses
+- uid: d42be104-a2df-4b6c-85ab-4b91710dd415
+  type: Relationship
+  properties: {}
+  from_: aea528b0-1eea-44bf-8d3e-28f793b6ef58
+  to_:
+  - 2eb2d13e-1520-49be-8b83-ada7cdec227a
+  relationship_type: uses
+- uid: 7fe509a9-bb33-4b22-b754-c454e1f6a2a3
+  type: Relationship
+  properties: {}
+  from_: fb9574a9-df0f-4144-9cad-ad39e513bd24
+  to_:
+  - aea528b0-1eea-44bf-8d3e-28f793b6ef58
+  relationship_type: produces

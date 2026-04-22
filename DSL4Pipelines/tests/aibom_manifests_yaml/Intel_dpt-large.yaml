@@ -1,0 +1,86 @@
+uid: a366ff3c-8ab4-4964-ba01-7f5cd0088bfd
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Intel_dpt-large.json
+  type: SoftwareFile
+  name: Intel_dpt-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:b3baa5ae-97b5-49e3-84f1-d18b8663afab
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Intel_dpt-large.json
+    type: ExternalReference
+  languages: []
+- uid: 4a9514c3-c463-4ec9-8eb9-56338657a1f1
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 3e8575d8-6790-44db-97b0-9e4fa350f657
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:53.500494+00:00'
+    bom-ref: Intel/dpt-large-8d41ca85-dec5-57d6-bf65-4df67b750d07
+    name: Intel/dpt-large
+    authors:
+    - name: Intel
+    architectureFamily: dpt
+    modelArchitecture: DPTForDepthEstimation
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: MIX-6'
+        type: Zero-shot transfer
+        value: 10.82
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - dpt
+    - depth-estimation
+    - vision
+    - arxiv:2103.13413
+    - license:apache-2.0
+    - model-index
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Intel/dpt-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: depth-estimation
+relations:
+- uid: 7c150d36-ac76-470c-8fc7-fcfba2b97003
+  type: Relationship
+  properties: {}
+  from_: a366ff3c-8ab4-4964-ba01-7f5cd0088bfd
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Intel_dpt-large.json
+  relationship_type: annotatedBy
+- uid: b802bf15-f79c-4939-ad3d-e5b508bcb371
+  type: Relationship
+  properties: {}
+  from_: 3e8575d8-6790-44db-97b0-9e4fa350f657
+  to_:
+  - 4a9514c3-c463-4ec9-8eb9-56338657a1f1
+  relationship_type: uses
+- uid: ce281180-501e-4db4-8f3c-04d7d48bc706
+  type: Relationship
+  properties: {}
+  from_: a366ff3c-8ab4-4964-ba01-7f5cd0088bfd
+  to_:
+  - 3e8575d8-6790-44db-97b0-9e4fa350f657
+  relationship_type: produces

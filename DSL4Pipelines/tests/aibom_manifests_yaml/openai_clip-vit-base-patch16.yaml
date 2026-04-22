@@ -1,0 +1,93 @@
+uid: 3575baf4-80dd-4e38-b3b7-36c3de0dcc0e
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_clip-vit-base-patch16.json
+  type: SoftwareFile
+  name: openai_clip-vit-base-patch16.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d54b4fd0-d3ab-4fbf-973b-ab24be19aea3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_clip-vit-base-patch16.json
+    type: ExternalReference
+  languages: []
+- uid: c157b0ad-4494-4bb1-a126-edaec9258343
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 428e8e6e-77b4-4868-bfe9-fa04bac8cb25
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:14.424880+00:00'
+    bom-ref: openai/clip-vit-base-patch16-ab015c0f-4782-5d99-8dd7-0c952efbdf4f
+    name: openai/clip-vit-base-patch16
+    authors:
+    - name: openai
+    architectureFamily: clip
+    modelArchitecture: CLIPModel
+    description: '## Model Details
+
+      The CLIP model was developed by researchers at OpenAI to learn about what contributes to robustness in computer vision tasks. The model was also developed to test the ability of models to generalize to arbitrary image classification tasks in a zero-shot manner. It was not developed for general model deployment - to deploy models like CLIP, researchers will first need to carefully study their capabilities in relation to the specific context they’re being deployed within.
+
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - jax
+    - clip
+    - zero-shot-image-classification
+    - vision
+    - arxiv:2103.00020
+    - arxiv:1908.04913
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openai/clip-vit-base-patch16
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: zero-shot-image-classification
+  consideration:
+    use_cases: '### Intended Use
+
+      The model is intended as a research output for research communities. We hope that this model will enable researchers to better understand and explore zero-shot, arbitrary image classification. We also hope it can be used for interdisciplinary studies of the potential impact of such models - the CLIP paper includes a discussion of potential downstream impacts to provide an example for this sort of analysis.
+
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 48cb2004-875c-468c-a9c5-14adec3c594c
+  type: Relationship
+  properties: {}
+  from_: 3575baf4-80dd-4e38-b3b7-36c3de0dcc0e
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_clip-vit-base-patch16.json
+  relationship_type: annotatedBy
+- uid: eadef335-e4c2-4493-8c5c-32ce74122020
+  type: Relationship
+  properties: {}
+  from_: 428e8e6e-77b4-4868-bfe9-fa04bac8cb25
+  to_:
+  - c157b0ad-4494-4bb1-a126-edaec9258343
+  relationship_type: uses
+- uid: 33fcda8b-1eb2-4ae8-a20f-0f49cff36730
+  type: Relationship
+  properties: {}
+  from_: 3575baf4-80dd-4e38-b3b7-36c3de0dcc0e
+  to_:
+  - 428e8e6e-77b4-4868-bfe9-fa04bac8cb25
+  relationship_type: produces

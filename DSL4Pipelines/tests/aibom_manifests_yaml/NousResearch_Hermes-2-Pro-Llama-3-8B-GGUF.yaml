@@ -1,0 +1,119 @@
+uid: ad34439b-0f2d-4b48-856f-2504b6688aa1
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Hermes-2-Pro-Llama-3-8B-GGUF.json
+  type: SoftwareFile
+  name: NousResearch_Hermes-2-Pro-Llama-3-8B-GGUF.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fd2ca509-2452-45a4-b9d6-6078b234d450
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Hermes-2-Pro-Llama-3-8B-GGUF.json
+    type: ExternalReference
+  languages: []
+- uid: c60df0a6-b879-4fb3-84cb-3aa544d5e834
+  type: Data
+  properties:
+    bom-ref: teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c
+    name: teknium/OpenHermes-2.5
+    content_url: https://huggingface.co/datasets/teknium/OpenHermes-2.5
+    pretty_name: OpenHermes 2.5
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c
+    type: ExternalReference
+  languages:
+  - eng
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: a9713a07-ff1a-47b5-9ed3-c87b9c14bcf0
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: NousResearch/Meta-Llama-3-8B
+    type: ExternalReference
+  languages: []
+- uid: cee64cfb-8279-44d5-a171-8d2da4d65866
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:00.611753+00:00'
+    bom-ref: NousResearch/Hermes-2-Pro-Llama-3-8B-GGUF-220a6f20-57bb-5a98-9ad2-bd9675c81ea5
+    name: NousResearch/Hermes-2-Pro-Llama-3-8B-GGUF
+    authors:
+    - name: NousResearch
+    description: '## Model Description
+
+      '
+    tags:
+    - gguf
+    - Llama-3
+    - instruct
+    - finetune
+    - chatml
+    - DPO
+    - RLHF
+    - gpt4
+    - synthetic data
+    - distillation
+    - function calling
+    - json mode
+    - en
+    - dataset:teknium/OpenHermes-2.5
+    - base_model:NousResearch/Meta-Llama-3-8B
+    - base_model:quantized:NousResearch/Meta-Llama-3-8B
+    - license:apache-2.0
+    - endpoints_compatible
+    - region:us
+    - conversational
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NousResearch/Hermes-2-Pro-Llama-3-8B-GGUF
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 2970ec41-d997-46f3-897a-20aa5821b3b2
+  type: Relationship
+  properties: {}
+  from_: ad34439b-0f2d-4b48-856f-2504b6688aa1
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NousResearch_Hermes-2-Pro-Llama-3-8B-GGUF.json
+  relationship_type: annotatedBy
+- uid: a0578b60-a4d7-478f-a5ed-a5d2d684b401
+  type: Relationship
+  properties: {}
+  from_: cee64cfb-8279-44d5-a171-8d2da4d65866
+  to_:
+  - c60df0a6-b879-4fb3-84cb-3aa544d5e834
+  relationship_type: uses
+- uid: abfe0905-f03e-45be-b16e-3772a8425a50
+  type: Relationship
+  properties: {}
+  from_: cee64cfb-8279-44d5-a171-8d2da4d65866
+  to_:
+  - a9713a07-ff1a-47b5-9ed3-c87b9c14bcf0
+  relationship_type: derivedFrom
+- uid: c15fe88b-02e2-4f46-b6b0-9313010ec833
+  type: Relationship
+  properties: {}
+  from_: ad34439b-0f2d-4b48-856f-2504b6688aa1
+  to_:
+  - cee64cfb-8279-44d5-a171-8d2da4d65866
+  relationship_type: produces

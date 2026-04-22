@@ -1,0 +1,126 @@
+uid: 83e43789-78c0-4fa9-99ed-0374c92ef54c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EleutherAI_gpt-neo-1.3B.json
+  type: SoftwareFile
+  name: EleutherAI_gpt-neo-1.3B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:200ad462-573f-41c5-8327-34050ed98d31
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EleutherAI_gpt-neo-1.3B.json
+    type: ExternalReference
+  languages: []
+- uid: a35447df-0fb4-45a1-b53d-44b7aa878feb
+  type: Data
+  properties:
+    bom-ref: EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787
+    name: EleutherAI/pile
+    content_url: https://huggingface.co/datasets/EleutherAI/pile
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: 100B<n<1T
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: the Pile
+    source_datasets: original
+    paperswithcode_id: the-pile
+    license: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: affa89e2-ea96-46bd-aab6-811258215304
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4a458766-4928-4b67-aab4-6dda4c3d2163
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:12:19.950861+00:00'
+    bom-ref: EleutherAI/gpt-neo-1.3B-2b077af5-ae08-551f-b03b-23fcaf107008
+    name: EleutherAI/gpt-neo-1.3B
+    authors:
+    - name: EleutherAI
+    architectureFamily: gpt_neo
+    modelArchitecture: GPTNeoForCausalLM
+    description: '## Model Description
+
+
+      GPT-Neo 1.3B is a transformer model designed using EleutherAI''s replication of the GPT-3 architecture. GPT-Neo refers to the class of models, while 1.3B represents the number of parameters of this particular pre-trained model.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - jax
+    - rust
+    - safetensors
+    - gpt_neo
+    - text-generation
+    - text generation
+    - causal-lm
+    - en
+    - dataset:EleutherAI/pile
+    - arxiv:2101.00027
+    - license:mit
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/EleutherAI/gpt-neo-1.3B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 5486cc1c-efda-459a-9b93-47d80b5b461e
+  type: Relationship
+  properties: {}
+  from_: 83e43789-78c0-4fa9-99ed-0374c92ef54c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/EleutherAI_gpt-neo-1.3B.json
+  relationship_type: annotatedBy
+- uid: f44ac21d-a214-4ffe-9afb-2eb81959e90d
+  type: Relationship
+  properties: {}
+  from_: 4a458766-4928-4b67-aab4-6dda4c3d2163
+  to_:
+  - a35447df-0fb4-45a1-b53d-44b7aa878feb
+  relationship_type: uses
+- uid: d8ad6bac-b7fd-49ce-b7c6-12737499d54e
+  type: Relationship
+  properties: {}
+  from_: 4a458766-4928-4b67-aab4-6dda4c3d2163
+  to_:
+  - affa89e2-ea96-46bd-aab6-811258215304
+  relationship_type: uses
+- uid: 5450a500-0709-4b8e-b581-23dbd5287e3f
+  type: Relationship
+  properties: {}
+  from_: 83e43789-78c0-4fa9-99ed-0374c92ef54c
+  to_:
+  - 4a458766-4928-4b67-aab4-6dda4c3d2163
+  relationship_type: produces

@@ -1,0 +1,77 @@
+uid: 46b3e86c-1c7e-4b19-920c-4c16d86430fa
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/johnslegers_epic-diffusion.json
+  type: SoftwareFile
+  name: johnslegers_epic-diffusion.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d7aa5b8a-bde3-4875-af25-64ec81a67aa9
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/johnslegers_epic-diffusion.json
+    type: ExternalReference
+  languages: []
+- uid: 189f60cc-c6ca-4111-8da9-9da4af087e81
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ea452ec5-7758-48b4-83d6-260df5fad4be
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:57.958857+00:00'
+    bom-ref: johnslegers/epic-diffusion-8299ded9-9dcf-5988-93d0-b0643c282d29
+    name: johnslegers/epic-diffusion
+    authors:
+    - name: johnslegers
+    tags:
+    - diffusers
+    - safetensors
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-image
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/johnslegers/epic-diffusion
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: e64ca366-d0f3-4ada-b387-b767e3b02e94
+  type: Relationship
+  properties: {}
+  from_: 46b3e86c-1c7e-4b19-920c-4c16d86430fa
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/johnslegers_epic-diffusion.json
+  relationship_type: annotatedBy
+- uid: 51b419fc-6237-485d-889b-c80d06c6c5a6
+  type: Relationship
+  properties: {}
+  from_: ea452ec5-7758-48b4-83d6-260df5fad4be
+  to_:
+  - 189f60cc-c6ca-4111-8da9-9da4af087e81
+  relationship_type: uses
+- uid: 30883112-e028-4446-aa47-b807026eb44a
+  type: Relationship
+  properties: {}
+  from_: 46b3e86c-1c7e-4b19-920c-4c16d86430fa
+  to_:
+  - ea452ec5-7758-48b4-83d6-260df5fad4be
+  relationship_type: produces

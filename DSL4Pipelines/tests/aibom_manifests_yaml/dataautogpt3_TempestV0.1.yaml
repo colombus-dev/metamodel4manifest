@@ -1,0 +1,75 @@
+uid: 36150ae1-f385-4de7-8250-ba2afe997d26
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dataautogpt3_TempestV0.1.json
+  type: SoftwareFile
+  name: dataautogpt3_TempestV0.1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:4ec55fd1-a0ac-48b5-bcf3-b32943fcad0b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dataautogpt3_TempestV0.1.json
+    type: ExternalReference
+  languages: []
+- uid: 720027c8-d452-40a5-b16f-937aea4c93d7
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0bd647c8-6f93-45b1-83f4-387aea8dd081
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:54.785277+00:00'
+    bom-ref: dataautogpt3/TempestV0.1-cd34603a-11ed-54a6-a42c-12de3cd15e7c
+    name: dataautogpt3/TempestV0.1
+    authors:
+    - name: dataautogpt3
+    tags:
+    - diffusers
+    - text-to-image
+    - license:gpl-3.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionXLPipeline
+    - region:us
+  license:
+    id: GPL-3.0
+    url: https://spdx.org/licenses/GPL-3.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/dataautogpt3/TempestV0.1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: bacd797d-a4a4-4fe3-beb5-53faf221701d
+  type: Relationship
+  properties: {}
+  from_: 36150ae1-f385-4de7-8250-ba2afe997d26
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/dataautogpt3_TempestV0.1.json
+  relationship_type: annotatedBy
+- uid: edfcbd52-1148-4dfd-bd37-40ab494979c3
+  type: Relationship
+  properties: {}
+  from_: 0bd647c8-6f93-45b1-83f4-387aea8dd081
+  to_:
+  - 720027c8-d452-40a5-b16f-937aea4c93d7
+  relationship_type: uses
+- uid: 625613cf-3cd1-43f9-a3ad-b1f7136b82d3
+  type: Relationship
+  properties: {}
+  from_: 36150ae1-f385-4de7-8250-ba2afe997d26
+  to_:
+  - 0bd647c8-6f93-45b1-83f4-387aea8dd081
+  relationship_type: produces

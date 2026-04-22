@@ -1,0 +1,90 @@
+uid: a562d77d-af8e-4fe2-ab97-ad2926d69e20
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CohereForAI_c4ai-command-r-08-2024.json
+  type: SoftwareFile
+  name: CohereForAI_c4ai-command-r-08-2024.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e0e08b8e-a280-4f9a-a848-a52613b39886
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CohereForAI_c4ai-command-r-08-2024.json
+    type: ExternalReference
+  languages: []
+- uid: 39bceeaf-bf98-4f7b-aff6-9bbb46ef6b87
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 3c112320-c553-4524-9778-4cb9dca63e7c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:27.979954+00:00'
+    bom-ref: CohereForAI/c4ai-command-r-08-2024-bc2aa182-b507-583e-8b28-9834d0d83696
+    name: CohereForAI/c4ai-command-r-08-2024
+    authors:
+    - name: CohereForAI
+    architectureFamily: cohere
+    modelArchitecture: CohereForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - cohere
+    - text-generation
+    - conversational
+    - en
+    - fr
+    - de
+    - es
+    - it
+    - pt
+    - ja
+    - ko
+    - zh
+    - ar
+    - doi:10.57967/hf/3137
+    - license:cc-by-nc-4.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/CohereForAI/c4ai-command-r-08-2024
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 1ddc95d7-98ae-49e4-b29f-2f50212dcab6
+  type: Relationship
+  properties: {}
+  from_: a562d77d-af8e-4fe2-ab97-ad2926d69e20
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CohereForAI_c4ai-command-r-08-2024.json
+  relationship_type: annotatedBy
+- uid: 5ef1f403-8a09-47a9-a35f-5bf8d58f0e49
+  type: Relationship
+  properties: {}
+  from_: 3c112320-c553-4524-9778-4cb9dca63e7c
+  to_:
+  - 39bceeaf-bf98-4f7b-aff6-9bbb46ef6b87
+  relationship_type: uses
+- uid: 8fb4edf9-841c-4d80-bcf6-f96cdd9cde70
+  type: Relationship
+  properties: {}
+  from_: a562d77d-af8e-4fe2-ab97-ad2926d69e20
+  to_:
+  - 3c112320-c553-4524-9778-4cb9dca63e7c
+  relationship_type: produces

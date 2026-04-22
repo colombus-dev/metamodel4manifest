@@ -1,0 +1,126 @@
+uid: 6ecdf11f-0cf5-4f51-83d6-56972c410c48
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SamLowe_roberta-base-go_emotions.json
+  type: SoftwareFile
+  name: SamLowe_roberta-base-go_emotions.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:338726cb-d48e-4355-b2d0-adc89a918c26
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SamLowe_roberta-base-go_emotions.json
+    type: ExternalReference
+  languages: []
+- uid: 01e83906-a3fe-494c-bab7-2aba39556659
+  type: Data
+  properties:
+    bom-ref: go_emotions-5ef78ddc-fb6d-52fb-a064-a3b330546c87
+    name: go_emotions
+    content_url: https://huggingface.co/datasets/go_emotions
+    task_categories: text-classification
+    task_ids: multi-class-classification, multi-label-classification
+    size_categories: 100K<n<1M, 10K<n<100K
+    annotations_creators: crowdsourced
+    language_creators: found
+    pretty_name: GoEmotions
+    source_datasets: original
+    paperswithcode_id: goemotions
+    configs: 'Name of the dataset subset: simplified {"split": "train", "path": "simplified/train-*"}, {"split": "validation", "path": "simplified/validation-*"}, {"split": "test", "path": "simplified/test-*"}'
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: go_emotions-5ef78ddc-fb6d-52fb-a064-a3b330546c87
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 8e69f7d5-d9fc-4576-ab79-543c5f53b1f5
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d1c03516-3dfa-4c45-b636-470a829d1ee9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:08.267023+00:00'
+    bom-ref: SamLowe/roberta-base-go_emotions-3ad6c5d6-e287-57c2-b96e-a77915e66261
+    name: SamLowe/roberta-base-go_emotions
+    authors:
+    - name: SamLowe
+    architectureFamily: roberta
+    modelArchitecture: RobertaForSequenceClassification
+    description: '#### Overview
+
+
+      Model trained from [roberta-base](https://huggingface.co/roberta-base) on the [go_emotions](https://huggingface.co/datasets/go_emotions) dataset for multi-label classification.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - roberta
+    - text-classification
+    - emotions
+    - multi-class-classification
+    - multi-label-classification
+    - en
+    - dataset:go_emotions
+    - doi:10.57967/hf/3548
+    - license:mit
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/SamLowe/roberta-base-go_emotions
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-classification
+relations:
+- uid: 8a761054-bd43-47ab-855c-a193c03bd11b
+  type: Relationship
+  properties: {}
+  from_: 6ecdf11f-0cf5-4f51-83d6-56972c410c48
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SamLowe_roberta-base-go_emotions.json
+  relationship_type: annotatedBy
+- uid: 956034d1-edcc-4e2e-b548-01d6426c4e5c
+  type: Relationship
+  properties: {}
+  from_: d1c03516-3dfa-4c45-b636-470a829d1ee9
+  to_:
+  - 01e83906-a3fe-494c-bab7-2aba39556659
+  relationship_type: uses
+- uid: afca940c-6346-4d1d-a535-1d91cbdfdd72
+  type: Relationship
+  properties: {}
+  from_: d1c03516-3dfa-4c45-b636-470a829d1ee9
+  to_:
+  - 8e69f7d5-d9fc-4576-ab79-543c5f53b1f5
+  relationship_type: uses
+- uid: d7dee710-ff10-409d-8ed7-8e549c3ebc4f
+  type: Relationship
+  properties: {}
+  from_: 6ecdf11f-0cf5-4f51-83d6-56972c410c48
+  to_:
+  - d1c03516-3dfa-4c45-b636-470a829d1ee9
+  relationship_type: produces

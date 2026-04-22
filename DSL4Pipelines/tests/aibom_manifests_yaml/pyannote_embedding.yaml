@@ -1,0 +1,107 @@
+uid: 2994a527-9e2c-4715-9395-701897e0b048
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pyannote_embedding.json
+  type: SoftwareFile
+  name: pyannote_embedding.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2a50bf45-b545-4830-a6e3-b3b329082122
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pyannote_embedding.json
+    type: ExternalReference
+  languages: []
+- uid: 05d22a0b-50fd-4015-b3bc-62d85f7056ed
+  type: Data
+  properties:
+    bom-ref: voxceleb-9a76933d-07f5-5789-ad60-681177a7daf4
+    name: voxceleb
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: voxceleb-9a76933d-07f5-5789-ad60-681177a7daf4
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c4881f96-8b74-4318-a117-16bf70556984
+  type: SoftwareFile
+  name: pyannote-audio
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 8aad11e5-6563-43ef-b71e-953e7f4e93dc
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:15.493193+00:00'
+    bom-ref: pyannote/embedding-545a1e33-13a6-5e29-a61d-1ec7fa3de51b
+    name: pyannote/embedding
+    authors:
+    - name: pyannote
+    tags:
+    - pyannote-audio
+    - pytorch
+    - tensorboard
+    - pyannote
+    - pyannote-audio-model
+    - audio
+    - voice
+    - speech
+    - speaker
+    - speaker-recognition
+    - speaker-verification
+    - speaker-identification
+    - speaker-embedding
+    - dataset:voxceleb
+    - license:mit
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/pyannote/embedding
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: afde3a77-ba7e-4786-a3f2-e19b033fb705
+  type: Relationship
+  properties: {}
+  from_: 2994a527-9e2c-4715-9395-701897e0b048
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/pyannote_embedding.json
+  relationship_type: annotatedBy
+- uid: 55834fa0-3293-4df0-b34f-005e77ae434d
+  type: Relationship
+  properties: {}
+  from_: 8aad11e5-6563-43ef-b71e-953e7f4e93dc
+  to_:
+  - 05d22a0b-50fd-4015-b3bc-62d85f7056ed
+  relationship_type: uses
+- uid: e22ce605-f791-4d2c-bfe8-3ba4170404ad
+  type: Relationship
+  properties: {}
+  from_: 8aad11e5-6563-43ef-b71e-953e7f4e93dc
+  to_:
+  - c4881f96-8b74-4318-a117-16bf70556984
+  relationship_type: uses
+- uid: af9666c2-7b3f-4bb8-b5a3-e7143987fcf3
+  type: Relationship
+  properties: {}
+  from_: 2994a527-9e2c-4715-9395-701897e0b048
+  to_:
+  - 8aad11e5-6563-43ef-b71e-953e7f4e93dc
+  relationship_type: produces

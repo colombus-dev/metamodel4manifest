@@ -1,0 +1,73 @@
+uid: 3d53ff41-72c8-4008-b906-cb5f4d9ee63b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SG161222_Realistic_Vision_V6.0_B1_noVAE.json
+  type: SoftwareFile
+  name: SG161222_Realistic_Vision_V6.0_B1_noVAE.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d1ba1d0d-813b-41dc-9c52-e17bbcc81ad0
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SG161222_Realistic_Vision_V6.0_B1_noVAE.json
+    type: ExternalReference
+  languages: []
+- uid: d983239f-177a-4743-9944-30bef4ffde9c
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c38e7733-cd7c-4196-b103-0c6bb71ee70f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:29.364969+00:00'
+    bom-ref: SG161222/Realistic_Vision_V6.0_B1_noVAE-ea72988e-a290-5dde-92f4-f78b930234bb
+    name: SG161222/Realistic_Vision_V6.0_B1_noVAE
+    authors:
+    - name: SG161222
+    tags:
+    - diffusers
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/SG161222/Realistic_Vision_V6.0_B1_noVAE
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 086596cf-e688-4612-b91e-27e29703f2db
+  type: Relationship
+  properties: {}
+  from_: 3d53ff41-72c8-4008-b906-cb5f4d9ee63b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/SG161222_Realistic_Vision_V6.0_B1_noVAE.json
+  relationship_type: annotatedBy
+- uid: ebd4a1ad-9cf6-41c9-a529-5cb60c15f7bd
+  type: Relationship
+  properties: {}
+  from_: c38e7733-cd7c-4196-b103-0c6bb71ee70f
+  to_:
+  - d983239f-177a-4743-9944-30bef4ffde9c
+  relationship_type: uses
+- uid: 61fd1d98-ba93-446e-8d07-f7881d1f4acf
+  type: Relationship
+  properties: {}
+  from_: 3d53ff41-72c8-4008-b906-cb5f4d9ee63b
+  to_:
+  - c38e7733-cd7c-4196-b103-0c6bb71ee70f
+  relationship_type: produces

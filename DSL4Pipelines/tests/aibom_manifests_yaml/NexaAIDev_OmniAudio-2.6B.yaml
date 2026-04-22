@@ -1,0 +1,80 @@
+uid: 6df1acb5-b9d4-41e7-825d-8ca3c7635d1f
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NexaAIDev_OmniAudio-2.6B.json
+  type: SoftwareFile
+  name: NexaAIDev_OmniAudio-2.6B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:07285456-cd07-4d8e-92cd-8524da958494
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NexaAIDev_OmniAudio-2.6B.json
+    type: ExternalReference
+  languages: []
+- uid: 209a74de-e11f-44b0-b6f0-8f4f9b88f1a8
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:30.556445+00:00'
+    bom-ref: NexaAIDev/OmniAudio-2.6B-6c444aa5-5d9c-549b-ba0c-4bc6a5b6cf31
+    name: NexaAIDev/OmniAudio-2.6B
+    authors:
+    - name: NexaAIDev
+    tags:
+    - gguf
+    - audio-text-to-text
+    - chat
+    - audio
+    - GGUF
+    - en
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/NexaAIDev/OmniAudio-2.6B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: audio-text-to-text
+  consideration:
+    use_cases: '## Use Cases
+
+      * **Voice QA without Internet**: Process offline voice queries like "I am at camping, how do I start a fire without fire starter?" OmniAudio provides practical guidance even without network connectivity.
+
+      * **Voice-in Conversation**: Have conversations about personal experiences. When you say "I am having a rough day at work," OmniAudio engages in supportive talk and active listening.
+
+      * **Creative Content Generation**: Transform voice prompts into creative pieces. Ask "Write a haiku about autumn leaves" and receive poetic responses inspired by your voice input.
+
+      * **Recording Summary**: Simply ask "Can you summarize this meeting note?" to convert lengthy recordings into concise, actionable summaries.
+
+      * **Voice Tone Modification**: Transform casual voice memos into professional communications. When you request "Can you make this voice memo more professional?" OmniAudio adjusts the tone while preserving the core message.
+
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: a6073491-2867-4b12-a702-9d8fd21c0950
+  type: Relationship
+  properties: {}
+  from_: 6df1acb5-b9d4-41e7-825d-8ca3c7635d1f
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/NexaAIDev_OmniAudio-2.6B.json
+  relationship_type: annotatedBy
+- uid: 90bf1409-8d5e-4690-b338-b9b98b340d12
+  type: Relationship
+  properties: {}
+  from_: 6df1acb5-b9d4-41e7-825d-8ca3c7635d1f
+  to_:
+  - 209a74de-e11f-44b0-b6f0-8f4f9b88f1a8
+  relationship_type: produces

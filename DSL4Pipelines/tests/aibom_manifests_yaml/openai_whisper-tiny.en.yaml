@@ -1,0 +1,138 @@
+uid: a3c55d53-3fdb-4fa5-bb42-2b597581c546
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_whisper-tiny.en.json
+  type: SoftwareFile
+  name: openai_whisper-tiny.en.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:bc8e02cb-c6bb-4911-b8b2-bc652d813730
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_whisper-tiny.en.json
+    type: ExternalReference
+  languages: []
+- uid: b867e784-3e29-4587-bac9-42b85f0969d3
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6265513c-2396-4685-a949-05514e7855e4
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:50.062475+00:00'
+    bom-ref: openai/whisper-tiny.en-eb5b8ac1-8407-59da-9152-c38a08894d04
+    name: openai/whisper-tiny.en
+    authors:
+    - name: openai
+    architectureFamily: whisper
+    modelArchitecture: WhisperForConditionalGeneration
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: librispeech_asr, split: test, config: clean'
+        type: wer
+        value: 8.4372112320138
+      - slice: 'dataset: librispeech_asr, split: test, config: other'
+        type: wer
+        value: 14.857607503498356
+    description: '## Model details
+
+
+      Whisper is a Transformer based encoder-decoder model, also referred to as a _sequence-to-sequence_ model.
+
+      It was trained on 680k hours of labelled speech data annotated using large-scale weak supervision.
+
+
+      The models were trained on either English-only data or multilingual data. The English-only models were trained
+
+      on the task of speech recognition. The multilingual models were trained on both speech recognition and speech
+
+      translation. For speech recognition, the model predicts transcriptions in the *same* language as the audio.
+
+      For speech translation, the model predicts transcriptions to a *different* language to the audio.
+
+
+      Whisper checkpoints come in five configurations of varying model sizes.
+
+      The smallest four are trained on either English-only or multilingual data.
+
+      The largest checkpoints are multilingual only. All ten of the pre-trained checkpoints
+
+      are available on the [Hugging Face Hub](https://huggingface.co/models?search=openai/whisper). The
+
+      checkpoints are summarised in the following table with links to the models on the Hub:
+
+
+      | Size     | Parameters | English-only                                         | Multilingual                                        |
+
+      |----------|------------|------------------------------------------------------|-----------------------------------------------------|
+
+      | tiny     | 39 M       | [✓](https://huggingface.co/openai/whisper-tiny.en)   | [✓](https://huggingface.co/openai/whisper-tiny)     |
+
+      | base     | 74 M       | [✓](https://huggingface.co/openai/whisper-base.en)   | [✓](https://huggingface.co/openai/whisper-base)     |
+
+      | small    | 244 M      | [✓](https://huggingface.co/openai/whisper-small.en)  | [✓](https://huggingface.co/openai/whisper-small)    |
+
+      | medium   | 769 M      | [✓](https://huggingface.co/openai/whisper-medium.en) | [✓](https://huggingface.co/openai/whisper-medium)   |
+
+      | large    | 1550 M     | x                                                    | [✓](https://huggingface.co/openai/whisper-large)    |
+
+      | large-v2 | 1550 M     | x                                                    | [✓](https://huggingface.co/openai/whisper-large-v2) |
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - safetensors
+    - whisper
+    - automatic-speech-recognition
+    - audio
+    - hf-asr-leaderboard
+    - en
+    - arxiv:2212.04356
+    - license:apache-2.0
+    - model-index
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openai/whisper-tiny.en
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: automatic-speech-recognition
+relations:
+- uid: 5d1f57f1-52aa-44bc-9b73-33eeb221a774
+  type: Relationship
+  properties: {}
+  from_: a3c55d53-3fdb-4fa5-bb42-2b597581c546
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openai_whisper-tiny.en.json
+  relationship_type: annotatedBy
+- uid: f2d6bce6-a3cf-435a-a45b-8d3ebe730d98
+  type: Relationship
+  properties: {}
+  from_: 6265513c-2396-4685-a949-05514e7855e4
+  to_:
+  - b867e784-3e29-4587-bac9-42b85f0969d3
+  relationship_type: uses
+- uid: b5b027ea-4067-4e34-8648-230f4174f691
+  type: Relationship
+  properties: {}
+  from_: a3c55d53-3fdb-4fa5-bb42-2b597581c546
+  to_:
+  - 6265513c-2396-4685-a949-05514e7855e4
+  relationship_type: produces

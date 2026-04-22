@@ -1,0 +1,81 @@
+uid: 0a973de3-d40e-4bfe-8595-769ffef02965
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WizardLMTeam_WizardLM-70B-V1.0.json
+  type: SoftwareFile
+  name: WizardLMTeam_WizardLM-70B-V1.0.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:832c78d5-dd96-4aae-9f4d-a70707ccf25b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WizardLMTeam_WizardLM-70B-V1.0.json
+    type: ExternalReference
+  languages: []
+- uid: 13b8c678-a852-4d39-97e7-d3af2acecde6
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 97e24aae-5d22-481f-a763-e51e6a016473
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:13.914969+00:00'
+    bom-ref: WizardLMTeam/WizardLM-70B-V1.0-90389625-a33d-5216-af4c-db2cb9318baf
+    name: WizardLMTeam/WizardLM-70B-V1.0
+    authors:
+    - name: WizardLMTeam
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - arxiv:2304.12244
+    - arxiv:2306.08568
+    - arxiv:2308.09583
+    - license:llama2
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/WizardLMTeam/WizardLM-70B-V1.0
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: dae3a428-464a-4f8b-a891-81c3c53a1232
+  type: Relationship
+  properties: {}
+  from_: 0a973de3-d40e-4bfe-8595-769ffef02965
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/WizardLMTeam_WizardLM-70B-V1.0.json
+  relationship_type: annotatedBy
+- uid: 2df7cda0-eb7a-4185-b67f-bf2c5cd9cae0
+  type: Relationship
+  properties: {}
+  from_: 97e24aae-5d22-481f-a763-e51e6a016473
+  to_:
+  - 13b8c678-a852-4d39-97e7-d3af2acecde6
+  relationship_type: uses
+- uid: d5dd7647-0c4b-4fd0-b371-0fb6b6f138eb
+  type: Relationship
+  properties: {}
+  from_: 0a973de3-d40e-4bfe-8595-769ffef02965
+  to_:
+  - 97e24aae-5d22-481f-a763-e51e6a016473
+  relationship_type: produces

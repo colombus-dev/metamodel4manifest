@@ -1,0 +1,98 @@
+uid: 330e5239-b7ef-49b8-b5c1-42079d33714b
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_mdeberta-v3-base.json
+  type: SoftwareFile
+  name: microsoft_mdeberta-v3-base.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a14bde9c-cb86-4867-9a8a-22b578505fa6
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_mdeberta-v3-base.json
+    type: ExternalReference
+  languages: []
+- uid: 73f385e0-4aa1-4723-ad19-d66480b24a39
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: ccdad87f-9bb4-442d-b693-826da8107377
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:04.510214+00:00'
+    bom-ref: microsoft/mdeberta-v3-base-07e2d91f-d44a-562e-8783-af3fef6bd03e
+    name: microsoft/mdeberta-v3-base
+    authors:
+    - name: microsoft
+    architectureFamily: deberta-v2
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - deberta-v2
+    - deberta
+    - deberta-v3
+    - mdeberta
+    - fill-mask
+    - multilingual
+    - en
+    - ar
+    - bg
+    - de
+    - el
+    - es
+    - fr
+    - hi
+    - ru
+    - sw
+    - th
+    - tr
+    - ur
+    - vi
+    - zh
+    - arxiv:2006.03654
+    - arxiv:2111.09543
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/mdeberta-v3-base
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: fill-mask
+relations:
+- uid: bd06c2af-1990-45ab-91c9-f9053a976ad6
+  type: Relationship
+  properties: {}
+  from_: 330e5239-b7ef-49b8-b5c1-42079d33714b
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_mdeberta-v3-base.json
+  relationship_type: annotatedBy
+- uid: 18bff21c-72e8-4581-818a-e5e6653d1aaf
+  type: Relationship
+  properties: {}
+  from_: ccdad87f-9bb4-442d-b693-826da8107377
+  to_:
+  - 73f385e0-4aa1-4723-ad19-d66480b24a39
+  relationship_type: uses
+- uid: b319535d-1ff2-43a7-95b1-d8ace794c7a7
+  type: Relationship
+  properties: {}
+  from_: 330e5239-b7ef-49b8-b5c1-42079d33714b
+  to_:
+  - ccdad87f-9bb4-442d-b693-826da8107377
+  relationship_type: produces

@@ -1,0 +1,514 @@
+uid: afd791c9-4454-433c-af7a-0e7dfe5d4cdb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloomz-7b1-mt.json
+  type: SoftwareFile
+  name: bigscience_bloomz-7b1-mt.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:fa74454c-86e6-4c58-87c1-e333a6a86dff
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloomz-7b1-mt.json
+    type: ExternalReference
+  languages: []
+- uid: bdc126b7-d2f0-472c-a72b-2e2ba3ed6caf
+  type: Data
+  properties:
+    bom-ref: bigscience/xP3mt-6a3a7d4c-459d-545a-8aef-4a5084c3b941
+    name: bigscience/xP3mt
+    content_url: https://huggingface.co/datasets/bigscience/xP3mt
+    task_categories: other
+    size_categories: 100M<n<1B
+    annotations_creators: expert-generated, crowdsourced
+    pretty_name: xP3
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: bigscience/xP3mt-6a3a7d4c-459d-545a-8aef-4a5084c3b941
+    type: ExternalReference
+  languages:
+  - ak, ar, as, bm, bn, ca, code, en, es, eu, fon, fr, gu, hi, id, ig, ki, kn, lg, ln, ml, mr, ne, nso, ny, or, pa, pt, rn, rw, sn, st, sw, ta, te, tn, ts, tum, tw, ur, vi, wo, xh, yo, zh, zu
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 91f51960-803e-400a-ac1a-5bd2fe55dc27
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e822cdd8-ddf4-48da-b211-11ae04f6e2f2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:03.027050+00:00'
+    bom-ref: bigscience/bloomz-7b1-mt-921c7989-b3ee-5e2c-9f59-97b993ffe7a6
+    name: bigscience/bloomz-7b1-mt
+    authors:
+    - name: bigscience
+    architectureFamily: bloom
+    modelArchitecture: BloomForCausalLM
+    quantitativeAnalysis:
+      performanceMetrics:
+      - slice: 'dataset: winogrande, split: validation, config: xl'
+        type: Accuracy
+        value: 56.51
+      - slice: 'dataset: Muennighoff/xwinograd, split: test, config: en'
+        type: Accuracy
+        value: 65.76
+      - slice: 'dataset: Muennighoff/xwinograd, split: test, config: fr'
+        type: Accuracy
+        value: 57.83
+      - slice: 'dataset: Muennighoff/xwinograd, split: test, config: jp'
+        type: Accuracy
+        value: 51.82
+      - slice: 'dataset: Muennighoff/xwinograd, split: test, config: pt'
+        type: Accuracy
+        value: 57.41
+      - slice: 'dataset: Muennighoff/xwinograd, split: test, config: ru'
+        type: Accuracy
+        value: 55.87
+      - slice: 'dataset: Muennighoff/xwinograd, split: test, config: zh'
+        type: Accuracy
+        value: 62.7
+      - slice: 'dataset: anli, split: validation, config: r1'
+        type: Accuracy
+        value: 42.6
+      - slice: 'dataset: anli, split: validation, config: r2'
+        type: Accuracy
+        value: 39.4
+      - slice: 'dataset: anli, split: validation, config: r3'
+        type: Accuracy
+        value: 42
+      - slice: 'dataset: super_glue, split: validation, config: cb'
+        type: Accuracy
+        value: 83.93
+      - slice: 'dataset: super_glue, split: validation, config: rte'
+        type: Accuracy
+        value: 82.67
+      - slice: 'dataset: xnli, split: validation, config: ar'
+        type: Accuracy
+        value: 55.58
+      - slice: 'dataset: xnli, split: validation, config: bg'
+        type: Accuracy
+        value: 44.9
+      - slice: 'dataset: xnli, split: validation, config: de'
+        type: Accuracy
+        value: 48.92
+      - slice: 'dataset: xnli, split: validation, config: el'
+        type: Accuracy
+        value: 42.89
+      - slice: 'dataset: xnli, split: validation, config: en'
+        type: Accuracy
+        value: 58.92
+      - slice: 'dataset: xnli, split: validation, config: es'
+        type: Accuracy
+        value: 57.35
+      - slice: 'dataset: xnli, split: validation, config: fr'
+        type: Accuracy
+        value: 56.67
+      - slice: 'dataset: xnli, split: validation, config: hi'
+        type: Accuracy
+        value: 53.45
+      - slice: 'dataset: xnli, split: validation, config: ru'
+        type: Accuracy
+        value: 50.24
+      - slice: 'dataset: xnli, split: validation, config: sw'
+        type: Accuracy
+        value: 48.27
+      - slice: 'dataset: xnli, split: validation, config: th'
+        type: Accuracy
+        value: 41.08
+      - slice: 'dataset: xnli, split: validation, config: tr'
+        type: Accuracy
+        value: 38.71
+      - slice: 'dataset: xnli, split: validation, config: ur'
+        type: Accuracy
+        value: 49.48
+      - slice: 'dataset: xnli, split: validation, config: vi'
+        type: Accuracy
+        value: 54.5
+      - slice: 'dataset: xnli, split: validation, config: zh'
+        type: Accuracy
+        value: 54.3
+      - slice: 'dataset: openai_humaneval, split: test, config: None'
+        type: Pass@1
+        value: 7.23
+      - slice: 'dataset: openai_humaneval, split: test, config: None'
+        type: Pass@10
+        value: 14.46
+      - slice: 'dataset: openai_humaneval, split: test, config: None'
+        type: Pass@100
+        value: 25.86
+      - slice: 'dataset: story_cloze, split: validation, config: 2016'
+        type: Accuracy
+        value: 89.58
+      - slice: 'dataset: super_glue, split: validation, config: copa'
+        type: Accuracy
+        value: 84
+      - slice: 'dataset: xcopa, split: validation, config: et'
+        type: Accuracy
+        value: 52
+      - slice: 'dataset: xcopa, split: validation, config: ht'
+        type: Accuracy
+        value: 54
+      - slice: 'dataset: xcopa, split: validation, config: id'
+        type: Accuracy
+        value: 73
+      - slice: 'dataset: xcopa, split: validation, config: it'
+        type: Accuracy
+        value: 62
+      - slice: 'dataset: xcopa, split: validation, config: qu'
+        type: Accuracy
+        value: 61
+      - slice: 'dataset: xcopa, split: validation, config: sw'
+        type: Accuracy
+        value: 61
+      - slice: 'dataset: xcopa, split: validation, config: ta'
+        type: Accuracy
+        value: 62
+      - slice: 'dataset: xcopa, split: validation, config: th'
+        type: Accuracy
+        value: 61
+      - slice: 'dataset: xcopa, split: validation, config: tr'
+        type: Accuracy
+        value: 56
+      - slice: 'dataset: xcopa, split: validation, config: vi'
+        type: Accuracy
+        value: 77
+      - slice: 'dataset: xcopa, split: validation, config: zh'
+        type: Accuracy
+        value: 80
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: ar'
+        type: Accuracy
+        value: 83.85
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: es'
+        type: Accuracy
+        value: 88.82
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: eu'
+        type: Accuracy
+        value: 73.26
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: hi'
+        type: Accuracy
+        value: 80.41
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: id'
+        type: Accuracy
+        value: 84.58
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: my'
+        type: Accuracy
+        value: 51.56
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: ru'
+        type: Accuracy
+        value: 64.26
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: sw'
+        type: Accuracy
+        value: 71.01
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: te'
+        type: Accuracy
+        value: 73.06
+      - slice: 'dataset: Muennighoff/xstory_cloze, split: validation, config: zh'
+        type: Accuracy
+        value: 85.9
+    description: '# Model Summary
+
+
+      > We present BLOOMZ & mT0, a family of models capable of following human instructions in dozens of languages zero-shot. We finetune BLOOM & mT5 pretrained multilingual language models on our crosslingual task mixture (xP3) and find the resulting models capable of crosslingual generalization to unseen tasks & languages.
+
+
+      - **Repository:** [bigscience-workshop/xmtf](https://github.com/bigscience-workshop/xmtf)
+
+      - **Paper:** [Crosslingual Generalization through Multitask Finetuning](https://arxiv.org/abs/2211.01786)
+
+      - **Point of Contact:** [Niklas Muennighoff](mailto:niklas@hf.co)
+
+      - **Languages:** Refer to [bloom](https://huggingface.co/bigscience/bloom) for pretraining & [xP3](https://huggingface.co/datasets/bigscience/xP3) for finetuning language proportions. It understands both pretraining & finetuning languages.
+
+      - **BLOOMZ & mT0 Model Family:**
+
+
+      <div class="max-w-full overflow-auto">
+
+      <table>
+
+      <tr>
+
+      <th colspan="12">Multitask finetuned on <a style="font-weight:bold" href=https://huggingface.co/datasets/bigscience/xP3>xP3</a>. Recommended for prompting in English.
+
+      </tr>
+
+      <tr>
+
+      <td>Parameters</td>
+
+      <td>300M</td>
+
+      <td>580M</td>
+
+      <td>1.2B</td>
+
+      <td>3.7B</td>
+
+      <td>13B</td>
+
+      <td>560M</td>
+
+      <td>1.1B</td>
+
+      <td>1.7B</td>
+
+      <td>3B</td>
+
+      <td>7.1B</td>
+
+      <td>176B</td>
+
+      </tr>
+
+      <tr>
+
+      <td>Finetuned Model</td>
+
+      <td><a href=https://huggingface.co/bigscience/mt0-small>mt0-small</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/mt0-base>mt0-base</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/mt0-large>mt0-large</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/mt0-xl>mt0-xl</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/mt0-xxl>mt0-xxl</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-560m>bloomz-560m</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-1b1>bloomz-1b1</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-1b7>bloomz-1b7</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-3b>bloomz-3b</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-7b1>bloomz-7b1</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz>bloomz</a></td>
+
+      </tr>
+
+      </tr>
+
+      <tr>
+
+      <th colspan="12">Multitask finetuned on <a style="font-weight:bold" href=https://huggingface.co/datasets/bigscience/xP3mt>xP3mt</a>. Recommended for prompting in non-English.</th>
+
+      </tr>
+
+      <tr>
+
+      <td>Finetuned Model</td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td><a href=https://huggingface.co/bigscience/mt0-xxl-mt>mt0-xxl-mt</a></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-7b1-mt>bloomz-7b1-mt</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-mt>bloomz-mt</a></td>
+
+      </tr>
+
+      <th colspan="12">Multitask finetuned on <a style="font-weight:bold" href=https://huggingface.co/datasets/Muennighoff/P3>P3</a>. Released for research purposes only. Strictly inferior to above models!</th>
+
+      </tr>
+
+      <tr>
+
+      <td>Finetuned Model</td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td><a href=https://huggingface.co/bigscience/mt0-xxl-p3>mt0-xxl-p3</a></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-7b1-p3>bloomz-7b1-p3</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloomz-p3>bloomz-p3</a></td>
+
+      </tr>
+
+      <th colspan="12">Original pretrained checkpoints. Not recommended.</th>
+
+      <tr>
+
+      <td>Pretrained Model</td>
+
+      <td><a href=https://huggingface.co/google/mt5-small>mt5-small</a></td>
+
+      <td><a href=https://huggingface.co/google/mt5-base>mt5-base</a></td>
+
+      <td><a href=https://huggingface.co/google/mt5-large>mt5-large</a></td>
+
+      <td><a href=https://huggingface.co/google/mt5-xl>mt5-xl</a></td>
+
+      <td><a href=https://huggingface.co/google/mt5-xxl>mt5-xxl</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloom-560m>bloom-560m</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloom-1b1>bloom-1b1</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloom-1b7>bloom-1b7</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloom-3b>bloom-3b</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloom-7b1>bloom-7b1</a></td>
+
+      <td><a href=https://huggingface.co/bigscience/bloom>bloom</a></td>
+
+      </tr>
+
+      </table>
+
+      </div>
+
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - tensorboard
+    - safetensors
+    - bloom
+    - text-generation
+    - ak
+    - ar
+    - as
+    - bm
+    - bn
+    - ca
+    - code
+    - en
+    - es
+    - eu
+    - fon
+    - fr
+    - gu
+    - hi
+    - id
+    - ig
+    - ki
+    - kn
+    - lg
+    - ln
+    - ml
+    - mr
+    - ne
+    - nso
+    - ny
+    - or
+    - pa
+    - pt
+    - rn
+    - rw
+    - sn
+    - st
+    - sw
+    - ta
+    - te
+    - tn
+    - ts
+    - tum
+    - tw
+    - ur
+    - vi
+    - wo
+    - xh
+    - yo
+    - zh
+    - zu
+    - dataset:bigscience/xP3mt
+    - arxiv:2211.01786
+    - license:bigscience-bloom-rail-1.0
+    - model-index
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: bigscience-bloom-rail-1.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/bigscience/bloomz-7b1-mt
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '# Use
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: a0556c9a-b27c-4347-aef9-a10bd89256c5
+  type: Relationship
+  properties: {}
+  from_: afd791c9-4454-433c-af7a-0e7dfe5d4cdb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/bigscience_bloomz-7b1-mt.json
+  relationship_type: annotatedBy
+- uid: 853c742e-8456-4dbb-8f60-fb29f8b472e7
+  type: Relationship
+  properties: {}
+  from_: e822cdd8-ddf4-48da-b211-11ae04f6e2f2
+  to_:
+  - bdc126b7-d2f0-472c-a72b-2e2ba3ed6caf
+  relationship_type: uses
+- uid: 9bf38365-15c0-4a1e-90e3-26d731cb818b
+  type: Relationship
+  properties: {}
+  from_: e822cdd8-ddf4-48da-b211-11ae04f6e2f2
+  to_:
+  - 91f51960-803e-400a-ac1a-5bd2fe55dc27
+  relationship_type: uses
+- uid: e47956ba-6032-4b4d-b63c-557718713417
+  type: Relationship
+  properties: {}
+  from_: afd791c9-4454-433c-af7a-0e7dfe5d4cdb
+  to_:
+  - e822cdd8-ddf4-48da-b211-11ae04f6e2f2
+  relationship_type: produces

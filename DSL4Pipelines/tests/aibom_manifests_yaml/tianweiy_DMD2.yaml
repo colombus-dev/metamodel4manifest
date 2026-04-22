@@ -1,0 +1,75 @@
+uid: 70510658-99aa-41ca-8565-e58ecbc7b3f0
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tianweiy_DMD2.json
+  type: SoftwareFile
+  name: tianweiy_DMD2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:674f2180-3bdb-4c94-800a-a7f80d845014
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tianweiy_DMD2.json
+    type: ExternalReference
+  languages: []
+- uid: 0d3b4a28-d343-4f1d-96d2-407d9161a179
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d5116403-ba84-4383-a814-ddf85e5b76c9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:39.283047+00:00'
+    bom-ref: tianweiy/DMD2-788fca49-8c0a-5857-88b2-5d153f2789e6
+    name: tianweiy/DMD2
+    authors:
+    - name: tianweiy
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - diffusion distillation
+    - arxiv:2405.14867
+    - license:cc-by-nc-4.0
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/tianweiy/DMD2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 90f51049-4a22-4d52-9559-9783d4387061
+  type: Relationship
+  properties: {}
+  from_: 70510658-99aa-41ca-8565-e58ecbc7b3f0
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/tianweiy_DMD2.json
+  relationship_type: annotatedBy
+- uid: dd0d634c-ce9b-417b-b39d-759e2e01f468
+  type: Relationship
+  properties: {}
+  from_: d5116403-ba84-4383-a814-ddf85e5b76c9
+  to_:
+  - 0d3b4a28-d343-4f1d-96d2-407d9161a179
+  relationship_type: uses
+- uid: 9bb170b5-9d27-445a-97ea-8fa36ef073db
+  type: Relationship
+  properties: {}
+  from_: 70510658-99aa-41ca-8565-e58ecbc7b3f0
+  to_:
+  - d5116403-ba84-4383-a814-ddf85e5b76c9
+  relationship_type: produces

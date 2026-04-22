@@ -1,0 +1,96 @@
+uid: 548d67c0-d3d9-484c-97a6-1bfd0739856d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/huihui-ai_DeepSeek-R1-Distill-Qwen-14B-abliterated-v2.json
+  type: SoftwareFile
+  name: huihui-ai_DeepSeek-R1-Distill-Qwen-14B-abliterated-v2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:b27cd634-fa23-4a11-90f3-3e47cb0e95b3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/huihui-ai_DeepSeek-R1-Distill-Qwen-14B-abliterated-v2.json
+    type: ExternalReference
+  languages: []
+- uid: a208f68b-ab94-4864-bbe8-0b0e26b7a8a7
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 63b9db8c-40c2-4472-acde-13211b5cf402
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+    type: ExternalReference
+  languages: []
+- uid: a231b091-70df-467d-87c3-abf12f54ac7f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:34.483689+00:00'
+    bom-ref: huihui-ai/DeepSeek-R1-Distill-Qwen-14B-abliterated-v2-27fad267-b8da-5296-93cc-91741ccba346
+    name: huihui-ai/DeepSeek-R1-Distill-Qwen-14B-abliterated-v2
+    authors:
+    - name: huihui-ai
+    architectureFamily: qwen2
+    modelArchitecture: Qwen2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - qwen2
+    - text-generation
+    - abliterated
+    - uncensored
+    - conversational
+    - base_model:deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+    - base_model:finetune:deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/huihui-ai/DeepSeek-R1-Distill-Qwen-14B-abliterated-v2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 5de661ce-9ac5-40a8-a72b-b065cad6a170
+  type: Relationship
+  properties: {}
+  from_: 548d67c0-d3d9-484c-97a6-1bfd0739856d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/huihui-ai_DeepSeek-R1-Distill-Qwen-14B-abliterated-v2.json
+  relationship_type: annotatedBy
+- uid: fd4b11a9-47f5-4149-8025-1fb9d6059594
+  type: Relationship
+  properties: {}
+  from_: a231b091-70df-467d-87c3-abf12f54ac7f
+  to_:
+  - a208f68b-ab94-4864-bbe8-0b0e26b7a8a7
+  relationship_type: uses
+- uid: 8bd47b58-0618-485a-a182-62b51d68bb9b
+  type: Relationship
+  properties: {}
+  from_: a231b091-70df-467d-87c3-abf12f54ac7f
+  to_:
+  - 63b9db8c-40c2-4472-acde-13211b5cf402
+  relationship_type: derivedFrom
+- uid: 1f081b7d-b4db-4379-af75-872ff50dfea5
+  type: Relationship
+  properties: {}
+  from_: 548d67c0-d3d9-484c-97a6-1bfd0739856d
+  to_:
+  - a231b091-70df-467d-87c3-abf12f54ac7f
+  relationship_type: produces

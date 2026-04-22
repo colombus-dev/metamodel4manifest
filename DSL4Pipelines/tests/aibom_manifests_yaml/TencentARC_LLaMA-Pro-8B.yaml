@@ -1,0 +1,93 @@
+uid: e5e033f6-6fdb-4f5d-a118-20e71831f6fb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TencentARC_LLaMA-Pro-8B.json
+  type: SoftwareFile
+  name: TencentARC_LLaMA-Pro-8B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c9d626d4-f774-4789-bb6b-56bd1d8cb919
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TencentARC_LLaMA-Pro-8B.json
+    type: ExternalReference
+  languages: []
+- uid: 66666634-bf49-419d-877f-0f125c140296
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2349eed1-22a1-4aba-88c8-158e8317caf3
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:45.154207+00:00'
+    bom-ref: TencentARC/LLaMA-Pro-8B-141c88ec-d050-5887-84d3-1de2d51967c9
+    name: TencentARC/LLaMA-Pro-8B
+    authors:
+    - name: TencentARC
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Description
+
+      LLaMA-Pro is a progressive version of the original LLaMA model, enhanced by the addition of Transformer blocks. It specializes in integrating both general language understanding and domain-specific knowledge, particularly in programming and mathematics.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - llama
+    - text-generation
+    - license:llama2
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: llama2
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/TencentARC/LLaMA-Pro-8B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Intended Use
+
+      This model is designed for a wide range of NLP tasks, with a focus on programming, mathematics, and general language tasks. It suits scenarios requiring integration of natural and programming languages.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 8b86e390-c752-4ef3-89f7-207fcd9e7f15
+  type: Relationship
+  properties: {}
+  from_: e5e033f6-6fdb-4f5d-a118-20e71831f6fb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/TencentARC_LLaMA-Pro-8B.json
+  relationship_type: annotatedBy
+- uid: 7e238e8d-aeab-448c-aaf7-b528eea01dce
+  type: Relationship
+  properties: {}
+  from_: 2349eed1-22a1-4aba-88c8-158e8317caf3
+  to_:
+  - 66666634-bf49-419d-877f-0f125c140296
+  relationship_type: uses
+- uid: 123a7699-06e7-4bd9-a8dd-9fe1290a2b02
+  type: Relationship
+  properties: {}
+  from_: e5e033f6-6fdb-4f5d-a118-20e71831f6fb
+  to_:
+  - 2349eed1-22a1-4aba-88c8-158e8317caf3
+  relationship_type: produces

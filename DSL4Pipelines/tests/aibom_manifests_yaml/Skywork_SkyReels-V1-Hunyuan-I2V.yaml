@@ -1,0 +1,100 @@
+uid: 66d28b3e-08f2-4383-90e0-393c70efc6ff
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Skywork_SkyReels-V1-Hunyuan-I2V.json
+  type: SoftwareFile
+  name: Skywork_SkyReels-V1-Hunyuan-I2V.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0dbe2c85-a7ad-4b25-b5a7-104a0ffd93f2
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Skywork_SkyReels-V1-Hunyuan-I2V.json
+    type: ExternalReference
+  languages: []
+- uid: a60a4012-a7d4-4c1f-a730-009976f55398
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 05633e3b-43cd-4677-86f0-d5a0ad306932
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: tencent/HunyuanVideo
+    type: ExternalReference
+  languages: []
+- uid: eb1c2310-be1a-45d1-beb9-4d696eeacba9
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:21.160880+00:00'
+    bom-ref: Skywork/SkyReels-V1-Hunyuan-I2V-f20998b5-a06c-5cef-89ec-5a60e0c3a6c1
+    name: Skywork/SkyReels-V1-Hunyuan-I2V
+    authors:
+    - name: Skywork
+    description: '## Introduction
+
+      SkyReels V1 is the first and most advanced open-source human-centric video foundation model. By fine-tuning <a href="https://huggingface.co/tencent/HunyuanVideo">HunyuanVideo</a> on O(10M) high-quality film and television clips, Skyreels V1 offers three key advantages:
+
+
+      1. **Open-Source Leadership**: Our Text-to-Video model achieves state-of-the-art (SOTA) performance among open-source models, comparable to proprietary models like Kling and Hailuo.
+
+      2. **Advanced Facial Animation**: Captures 33 distinct facial expressions with over 400 natural movement combinations, accurately reflecting human emotions.
+
+      3. **Cinematic Lighting and Aesthetics**: Trained on high-quality Hollywood-level film and television data, each generated frame exhibits cinematic quality in composition, actor positioning, and camera angles.
+
+      '
+    tags:
+    - diffusers
+    - safetensors
+    - image-to-video
+    - en
+    - base_model:tencent/HunyuanVideo
+    - base_model:finetune:tencent/HunyuanVideo
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Skywork/SkyReels-V1-Hunyuan-I2V
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-video
+relations:
+- uid: c7d7e5c6-2e56-4428-8d53-bced88a74951
+  type: Relationship
+  properties: {}
+  from_: 66d28b3e-08f2-4383-90e0-393c70efc6ff
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Skywork_SkyReels-V1-Hunyuan-I2V.json
+  relationship_type: annotatedBy
+- uid: e60a1a5f-7474-422d-9097-06915dc9d355
+  type: Relationship
+  properties: {}
+  from_: eb1c2310-be1a-45d1-beb9-4d696eeacba9
+  to_:
+  - a60a4012-a7d4-4c1f-a730-009976f55398
+  relationship_type: uses
+- uid: faa199a4-c695-40f2-96ea-87c53b0ca456
+  type: Relationship
+  properties: {}
+  from_: eb1c2310-be1a-45d1-beb9-4d696eeacba9
+  to_:
+  - 05633e3b-43cd-4677-86f0-d5a0ad306932
+  relationship_type: derivedFrom
+- uid: c2c1e6cc-0b23-4e84-a017-f560d81218bb
+  type: Relationship
+  properties: {}
+  from_: 66d28b3e-08f2-4383-90e0-393c70efc6ff
+  to_:
+  - eb1c2310-be1a-45d1-beb9-4d696eeacba9
+  relationship_type: produces

@@ -1,0 +1,105 @@
+uid: 713c7be9-b857-4fa2-aeac-7513373298d4
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/strangerzonehf_Flux-Super-Realism-LoRA.json
+  type: SoftwareFile
+  name: strangerzonehf_Flux-Super-Realism-LoRA.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:dbe6485e-9bf0-4217-ba39-55dcd72b48b3
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/strangerzonehf_Flux-Super-Realism-LoRA.json
+    type: ExternalReference
+  languages: []
+- uid: 388b2ba7-31d3-4ffd-befc-cb98525b3a0b
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 830a5318-125e-44de-9b6d-2385767eb7fe
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: ebaf120a-e962-4686-87fc-dabcc50bb459
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:26.814522+00:00'
+    bom-ref: strangerzonehf/Flux-Super-Realism-LoRA-6b2fd530-c87d-56c6-b4ad-2c38cab46026
+    name: strangerzonehf/Flux-Super-Realism-LoRA
+    authors:
+    - name: strangerzonehf
+    tags:
+    - diffusers
+    - text-to-image
+    - lora
+    - template:diffusion-lora
+    - Super-Realism
+    - Flux.1-Dev
+    - Dynamic-Realism
+    - Realistic
+    - Photorealism
+    - Hi-Res
+    - UltraRealism
+    - Diffusion
+    - Face
+    - safetensors
+    - Realism-Engine
+    - RAW
+    - 4K
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:adapter:black-forest-labs/FLUX.1-dev
+    - license:mit
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/strangerzonehf/Flux-Super-Realism-LoRA
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 2bbe85d0-eabc-4549-9336-d5b2c4fa3b5f
+  type: Relationship
+  properties: {}
+  from_: 713c7be9-b857-4fa2-aeac-7513373298d4
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/strangerzonehf_Flux-Super-Realism-LoRA.json
+  relationship_type: annotatedBy
+- uid: 520bc736-8503-433f-9c6d-3e819e50dc22
+  type: Relationship
+  properties: {}
+  from_: ebaf120a-e962-4686-87fc-dabcc50bb459
+  to_:
+  - 388b2ba7-31d3-4ffd-befc-cb98525b3a0b
+  relationship_type: uses
+- uid: e56d88cd-bef2-4043-910d-1bf2ac0b0caa
+  type: Relationship
+  properties: {}
+  from_: ebaf120a-e962-4686-87fc-dabcc50bb459
+  to_:
+  - 830a5318-125e-44de-9b6d-2385767eb7fe
+  relationship_type: derivedFrom
+- uid: de70a68d-7d16-4096-b59a-4a6a22267263
+  type: Relationship
+  properties: {}
+  from_: 713c7be9-b857-4fa2-aeac-7513373298d4
+  to_:
+  - ebaf120a-e962-4686-87fc-dabcc50bb459
+  relationship_type: produces

@@ -1,0 +1,74 @@
+uid: a0fc15d0-e6f4-4282-a6a8-778fbf05fa70
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ogkalu_Comic-Diffusion.json
+  type: SoftwareFile
+  name: ogkalu_Comic-Diffusion.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:6a982a78-b32b-4637-8b80-d380ab2493d2
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ogkalu_Comic-Diffusion.json
+    type: ExternalReference
+  languages: []
+- uid: a4e0ca8c-b768-4686-9692-a760e76e8b76
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f2f31bae-b9a0-4992-b6a5-f8c0d905f795
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:43.688072+00:00'
+    bom-ref: ogkalu/Comic-Diffusion-1a985789-e646-5211-b834-f8fe722d3b0a
+    name: ogkalu/Comic-Diffusion
+    authors:
+    - name: ogkalu
+    tags:
+    - diffusers
+    - text-to-image
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ogkalu/Comic-Diffusion
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: fdb7a66f-1f79-4d58-ae9b-5572b4df4cbe
+  type: Relationship
+  properties: {}
+  from_: a0fc15d0-e6f4-4282-a6a8-778fbf05fa70
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ogkalu_Comic-Diffusion.json
+  relationship_type: annotatedBy
+- uid: a2016d09-976a-492d-a510-52c4ad17857f
+  type: Relationship
+  properties: {}
+  from_: f2f31bae-b9a0-4992-b6a5-f8c0d905f795
+  to_:
+  - a4e0ca8c-b768-4686-9692-a760e76e8b76
+  relationship_type: uses
+- uid: 61cf53ae-6550-45af-bc06-0ee0a6a38624
+  type: Relationship
+  properties: {}
+  from_: a0fc15d0-e6f4-4282-a6a8-778fbf05fa70
+  to_:
+  - f2f31bae-b9a0-4992-b6a5-f8c0d905f795
+  relationship_type: produces

@@ -1,0 +1,135 @@
+uid: 80363d08-67f4-4c81-8969-276bb6fa94fe
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/utter-project_EuroLLM-9B-Instruct.json
+  type: SoftwareFile
+  name: utter-project_EuroLLM-9B-Instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0c532626-45a7-4228-9405-fc2b60b33b15
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/utter-project_EuroLLM-9B-Instruct.json
+    type: ExternalReference
+  languages: []
+- uid: da688861-1638-4024-9f1b-478a1d7e7439
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e76849c6-c148-43b9-9e81-66ed5d9e885e
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: utter-project/EuroLLM-9B
+    type: ExternalReference
+  languages: []
+- uid: 2aa327d8-5f7f-404a-96e7-a6a8e960b7cf
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:32.525572+00:00'
+    bom-ref: utter-project/EuroLLM-9B-Instruct-36fb61b8-bc0a-5423-8fe7-74e05ae15452
+    name: utter-project/EuroLLM-9B-Instruct
+    authors:
+    - name: utter-project
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - en
+    - de
+    - es
+    - fr
+    - it
+    - pt
+    - pl
+    - nl
+    - tr
+    - sv
+    - cs
+    - el
+    - hu
+    - ro
+    - fi
+    - uk
+    - sl
+    - sk
+    - da
+    - lt
+    - lv
+    - et
+    - bg
+    - 'no'
+    - ca
+    - hr
+    - ga
+    - mt
+    - gl
+    - zh
+    - ru
+    - ko
+    - ja
+    - ar
+    - hi
+    - arxiv:2202.03799
+    - arxiv:2402.17733
+    - base_model:utter-project/EuroLLM-9B
+    - base_model:finetune:utter-project/EuroLLM-9B
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/utter-project/EuroLLM-9B-Instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 9782f2b5-1552-46a8-baad-6e9b090d3653
+  type: Relationship
+  properties: {}
+  from_: 80363d08-67f4-4c81-8969-276bb6fa94fe
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/utter-project_EuroLLM-9B-Instruct.json
+  relationship_type: annotatedBy
+- uid: 93a1d43a-d0b6-4bae-913d-08388c0973e3
+  type: Relationship
+  properties: {}
+  from_: 2aa327d8-5f7f-404a-96e7-a6a8e960b7cf
+  to_:
+  - da688861-1638-4024-9f1b-478a1d7e7439
+  relationship_type: uses
+- uid: f9799b2d-4676-4e13-819f-387980cb07d1
+  type: Relationship
+  properties: {}
+  from_: 2aa327d8-5f7f-404a-96e7-a6a8e960b7cf
+  to_:
+  - e76849c6-c148-43b9-9e81-66ed5d9e885e
+  relationship_type: derivedFrom
+- uid: 2a85b3a4-16a3-45ac-beb8-a68bc61f546b
+  type: Relationship
+  properties: {}
+  from_: 80363d08-67f4-4c81-8969-276bb6fa94fe
+  to_:
+  - 2aa327d8-5f7f-404a-96e7-a6a8e960b7cf
+  relationship_type: produces

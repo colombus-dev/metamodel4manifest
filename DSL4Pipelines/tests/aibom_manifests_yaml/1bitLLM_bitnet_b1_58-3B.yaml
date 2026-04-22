@@ -1,0 +1,80 @@
+uid: 7bb5d907-85f3-4a73-9ce9-18ae287c4496
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/1bitLLM_bitnet_b1_58-3B.json
+  type: SoftwareFile
+  name: 1bitLLM_bitnet_b1_58-3B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:47a90905-e737-471b-8ab0-d65461fbd675
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/1bitLLM_bitnet_b1_58-3B.json
+    type: ExternalReference
+  languages: []
+- uid: 9bd9f2e6-da5d-4a8a-a8f8-79c432932f85
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 86bcea57-b9df-46c2-a02f-438c93cb9b14
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:23.832568+00:00'
+    bom-ref: 1bitLLM/bitnet_b1_58-3B-9f518901-9bea-528e-9efe-15e2ef9373a8
+    name: 1bitLLM/bitnet_b58-3B
+    authors:
+    - name: 1bitLLM
+    architectureFamily: llama
+    modelArchitecture: BitnetForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - arxiv:2402.17764
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/1bitLLM/bitnet_b1_58-3B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: e88ea5a6-15ff-4a08-a50d-6c64b7f5a5d4
+  type: Relationship
+  properties: {}
+  from_: 7bb5d907-85f3-4a73-9ce9-18ae287c4496
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/1bitLLM_bitnet_b1_58-3B.json
+  relationship_type: annotatedBy
+- uid: 0a4b0ff1-b5c4-40e1-90c2-e94539cca6de
+  type: Relationship
+  properties: {}
+  from_: 86bcea57-b9df-46c2-a02f-438c93cb9b14
+  to_:
+  - 9bd9f2e6-da5d-4a8a-a8f8-79c432932f85
+  relationship_type: uses
+- uid: e1dfd57f-ffd2-4c19-8923-b705719764ca
+  type: Relationship
+  properties: {}
+  from_: 7bb5d907-85f3-4a73-9ce9-18ae287c4496
+  to_:
+  - 86bcea57-b9df-46c2-a02f-438c93cb9b14
+  relationship_type: produces

@@ -1,0 +1,141 @@
+uid: 27c3d60e-817c-4134-bfcf-fa8fd7fbdabb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ise-uiuc_Magicoder-S-DS-6.7B.json
+  type: SoftwareFile
+  name: ise-uiuc_Magicoder-S-DS-6.7B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:62669d50-8d7e-4a79-bea0-27bff51fd4c0
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ise-uiuc_Magicoder-S-DS-6.7B.json
+    type: ExternalReference
+  languages: []
+- uid: 498f4b61-7222-4141-9088-710bcef005cd
+  type: Data
+  properties:
+    bom-ref: ise-uiuc/Magicoder-OSS-Instruct-75K-5e69362e-a5cb-55b3-b09e-25d5567b8c28
+    name: ise-uiuc/Magicoder-OSS-Instruct-75K
+    content_url: https://huggingface.co/datasets/ise-uiuc/Magicoder-OSS-Instruct-75K
+    task_categories: text-generation, conversational
+    size_categories: 10K<n<100K
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ise-uiuc/Magicoder-OSS-Instruct-75K-5e69362e-a5cb-55b3-b09e-25d5567b8c28
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: aaae33d1-9e68-40a2-9875-def948d5d802
+  type: Data
+  properties:
+    bom-ref: ise-uiuc/Magicoder-Evol-Instruct-110K-015f56b9-f906-5fab-99ec-a279a098da41
+    name: ise-uiuc/Magicoder-Evol-Instruct-110K
+    content_url: https://huggingface.co/datasets/ise-uiuc/Magicoder-Evol-Instruct-110K
+    task_categories: text-generation, conversational
+    size_categories: 100K<n<1M
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ise-uiuc/Magicoder-Evol-Instruct-110K-015f56b9-f906-5fab-99ec-a279a098da41
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: bece2f91-d9c0-42d4-b6f1-6c18a4a9e053
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: c709152c-81c7-404f-9908-aed0d901b684
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:06:33.628652+00:00'
+    bom-ref: ise-uiuc/Magicoder-S-DS-6.7B-6482baf0-e907-5d21-be9b-098d9c98674f
+    name: ise-uiuc/Magicoder-S-DS-6.7B
+    authors:
+    - name: ise-uiuc
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - llama
+    - text-generation
+    - conversational
+    - dataset:ise-uiuc/Magicoder-OSS-Instruct-75K
+    - dataset:ise-uiuc/Magicoder-Evol-Instruct-110K
+    - arxiv:2312.02120
+    - arxiv:2305.06161
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: deepseek
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ise-uiuc/Magicoder-S-DS-6.7B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: f1df04c6-13f1-4c7c-ab23-7741ef68f9ae
+  type: Relationship
+  properties: {}
+  from_: 27c3d60e-817c-4134-bfcf-fa8fd7fbdabb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ise-uiuc_Magicoder-S-DS-6.7B.json
+  relationship_type: annotatedBy
+- uid: 8df3f36f-2382-42f2-a135-ec68a1ac3b4d
+  type: Relationship
+  properties: {}
+  from_: c709152c-81c7-404f-9908-aed0d901b684
+  to_:
+  - 498f4b61-7222-4141-9088-710bcef005cd
+  - aaae33d1-9e68-40a2-9875-def948d5d802
+  relationship_type: uses
+- uid: 85ad2394-bde8-4559-8bc4-c3c6b781f992
+  type: Relationship
+  properties: {}
+  from_: c709152c-81c7-404f-9908-aed0d901b684
+  to_:
+  - bece2f91-d9c0-42d4-b6f1-6c18a4a9e053
+  relationship_type: uses
+- uid: c392e175-fa2b-4b4c-8ad5-4df7fcaf4afa
+  type: Relationship
+  properties: {}
+  from_: 27c3d60e-817c-4134-bfcf-fa8fd7fbdabb
+  to_:
+  - c709152c-81c7-404f-9908-aed0d901b684
+  relationship_type: produces

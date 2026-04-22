@@ -1,0 +1,97 @@
+uid: fef58bb4-cff9-4d9d-848f-6a60674a842e
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_datagemma-rig-27b-it.json
+  type: SoftwareFile
+  name: google_datagemma-rig-27b-it.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d3f37147-f2ba-448e-b32d-5026333f28cf
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_datagemma-rig-27b-it.json
+    type: ExternalReference
+  languages: []
+- uid: 0fa4b626-4d3d-4a40-b7ca-61d6f27aecea
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: de811950-763c-4865-a6e7-982a58bc8fe6
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: google/gemma-2-27b-it
+    type: ExternalReference
+  languages: []
+- uid: b48a0d5a-6b0f-4196-a6a0-acc2f03e2560
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:47.333953+00:00'
+    bom-ref: google/datagemma-rig-27b-it-f1f7673a-c5b2-569e-babc-a71aca381b72
+    name: google/datagemma-rig-27b-it
+    authors:
+    - name: google
+    architectureFamily: gemma2
+    modelArchitecture: Gemma2ForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - gemma2
+    - text-generation
+    - conversational
+    - base_model:google/gemma-2-27b-it
+    - base_model:finetune:google/gemma-2-27b-it
+    - license:gemma
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: gemma
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/google/datagemma-rig-27b-it
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 2f257190-186e-40ff-bed3-8db2c52da519
+  type: Relationship
+  properties: {}
+  from_: fef58bb4-cff9-4d9d-848f-6a60674a842e
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/google_datagemma-rig-27b-it.json
+  relationship_type: annotatedBy
+- uid: d48c4bf8-5133-480e-a4dc-cde02ef92ef7
+  type: Relationship
+  properties: {}
+  from_: b48a0d5a-6b0f-4196-a6a0-acc2f03e2560
+  to_:
+  - 0fa4b626-4d3d-4a40-b7ca-61d6f27aecea
+  relationship_type: uses
+- uid: 95fc5dc0-f02b-4d86-b6c1-bf2716efe854
+  type: Relationship
+  properties: {}
+  from_: b48a0d5a-6b0f-4196-a6a0-acc2f03e2560
+  to_:
+  - de811950-763c-4865-a6e7-982a58bc8fe6
+  relationship_type: derivedFrom
+- uid: d0459ee9-db76-4ba2-8c51-92030d2ca8da
+  type: Relationship
+  properties: {}
+  from_: fef58bb4-cff9-4d9d-848f-6a60674a842e
+  to_:
+  - b48a0d5a-6b0f-4196-a6a0-acc2f03e2560
+  relationship_type: produces

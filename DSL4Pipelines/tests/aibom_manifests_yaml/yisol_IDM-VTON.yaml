@@ -1,0 +1,94 @@
+uid: 20dad91e-11b4-4ced-aa2e-56a7a3e36990
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/yisol_IDM-VTON.json
+  type: SoftwareFile
+  name: yisol_IDM-VTON.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:5ce98aae-3f04-42f8-b9e3-4c8ff678fa2a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/yisol_IDM-VTON.json
+    type: ExternalReference
+  languages: []
+- uid: dc26f336-0d7e-4987-9426-02215fa34094
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2acf3495-c4ba-434c-a1e4-94fb13b05ecd
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: stable-diffusion-xl-1.0-inpainting-0.1
+    type: ExternalReference
+  languages: []
+- uid: 655e151d-4a70-44ca-b787-f9950ec04ff5
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:36.837933+00:00'
+    bom-ref: yisol/IDM-VTON-fb0deb39-effe-5490-8eb3-df3888c33d2c
+    name: yisol/IDM-VTON
+    authors:
+    - name: yisol
+    tags:
+    - diffusers
+    - onnx
+    - safetensors
+    - stable-diffusion-xl
+    - inpainting
+    - virtual try-on
+    - arxiv:2403.05139
+    - license:cc-by-nc-sa-4.0
+    - diffusers:StableDiffusionXLInpaintPipeline
+    - region:us
+  license:
+    id: CC-BY-NC-SA-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-SA-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/yisol/IDM-VTON
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-image
+relations:
+- uid: 5b76d48c-2794-4c05-be0f-4365b5208af4
+  type: Relationship
+  properties: {}
+  from_: 20dad91e-11b4-4ced-aa2e-56a7a3e36990
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/yisol_IDM-VTON.json
+  relationship_type: annotatedBy
+- uid: 7071943f-f43d-40db-915a-9ae1bdade846
+  type: Relationship
+  properties: {}
+  from_: 655e151d-4a70-44ca-b787-f9950ec04ff5
+  to_:
+  - dc26f336-0d7e-4987-9426-02215fa34094
+  relationship_type: uses
+- uid: 5839fb50-a096-4dff-8236-38c48b2aaa65
+  type: Relationship
+  properties: {}
+  from_: 655e151d-4a70-44ca-b787-f9950ec04ff5
+  to_:
+  - 2acf3495-c4ba-434c-a1e4-94fb13b05ecd
+  relationship_type: derivedFrom
+- uid: d6a36522-d80d-4f68-8101-9cd7b16e7be3
+  type: Relationship
+  properties: {}
+  from_: 20dad91e-11b4-4ced-aa2e-56a7a3e36990
+  to_:
+  - 655e151d-4a70-44ca-b787-f9950ec04ff5
+  relationship_type: produces

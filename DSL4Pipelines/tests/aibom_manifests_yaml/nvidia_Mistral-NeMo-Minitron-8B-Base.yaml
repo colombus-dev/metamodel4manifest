@@ -1,0 +1,95 @@
+uid: d7b58114-9071-4caa-a35f-bb848076e689
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Mistral-NeMo-Minitron-8B-Base.json
+  type: SoftwareFile
+  name: nvidia_Mistral-NeMo-Minitron-8B-Base.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e9a920b2-d54b-4c67-975e-a9a483d6ec72
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Mistral-NeMo-Minitron-8B-Base.json
+    type: ExternalReference
+  languages: []
+- uid: 8e173d79-7f48-49e4-b132-424185be3983
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: dfed20bc-8e68-4885-bf1a-3e88fb475f8c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:44.333861+00:00'
+    bom-ref: nvidia/Mistral-NeMo-Minitron-8B-Base-ae37ab7f-dc7c-5fbc-9c25-d35fd88af952
+    name: nvidia/Mistral-NeMo-Minitron-8B-Base
+    authors:
+    - name: nvidia
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    description: '## Model Overview
+
+
+      Mistral-NeMo-Minitron-8B-Base is a base text-to-text model that can be adopted for a variety of natural language generation tasks. It is a large language model (LLM) obtained by pruning and distilling the Mistral-NeMo 12B; specifically, we prune the embedding dimension and MLP intermediate dimension in the  model. Following pruning, we perform continued training with distillation using 380 billion tokens to arrive at the final model; we use the continuous pre-training data corpus used in Nemotron-4 15B for this purpose. Please refer to our [technical report](https://arxiv.org/abs/2408.11796) for more details.
+
+
+      **Model Developer:** NVIDIA
+
+
+      **Model Dates:** Mistral-NeMo-Minitron-8B-Base was trained between July 24, 2024 and August 10, 2024.
+
+      '
+    tags:
+    - transformers
+    - nemo
+    - safetensors
+    - mistral
+    - text-generation
+    - arxiv:2408.11796
+    - arxiv:2009.03300
+    - arxiv:2407.14679
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: nvidia-open-model-license
+    url: https://developer.download.nvidia.com/licenses/nvidia-open-model-license-agreement-june-2024.pdf
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Base
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 7d40dee7-5904-48ce-9b1e-578baf67c056
+  type: Relationship
+  properties: {}
+  from_: d7b58114-9071-4caa-a35f-bb848076e689
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Mistral-NeMo-Minitron-8B-Base.json
+  relationship_type: annotatedBy
+- uid: a92b2251-379b-4f6e-92bc-3103e228151b
+  type: Relationship
+  properties: {}
+  from_: dfed20bc-8e68-4885-bf1a-3e88fb475f8c
+  to_:
+  - 8e173d79-7f48-49e4-b132-424185be3983
+  relationship_type: uses
+- uid: 0b84dac4-a8c0-4dd6-9961-807aa90787ea
+  type: Relationship
+  properties: {}
+  from_: d7b58114-9071-4caa-a35f-bb848076e689
+  to_:
+  - dfed20bc-8e68-4885-bf1a-3e88fb475f8c
+  relationship_type: produces

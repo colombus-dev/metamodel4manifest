@@ -1,0 +1,81 @@
+uid: 6f397f70-6217-47de-8d4b-db845ae9a928
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jimmycarter_LibreFLUX.json
+  type: SoftwareFile
+  name: jimmycarter_LibreFLUX.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:c3ea5e61-7ab9-4b41-a019-62b0c0ecfd1a
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jimmycarter_LibreFLUX.json
+    type: ExternalReference
+  languages: []
+- uid: 899e9fa4-5919-4b29-ba89-d720dab39bbd
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: f3ba9213-47e0-4290-b5b5-a7ade0323d0e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:08:43.386748+00:00'
+    bom-ref: jimmycarter/LibreFLUX-42a7ef5f-a30a-5d91-98d0-eed85ff99c6f
+    name: jimmycarter/LibreFLUX
+    authors:
+    - name: jimmycarter
+    tags:
+    - diffusers
+    - safetensors
+    - text-to-image
+    - arxiv:2403.12015
+    - arxiv:2309.16588
+    - arxiv:2309.14859
+    - arxiv:2403.17887
+    - arxiv:2211.01324
+    - arxiv:2306.04675
+    - license:apache-2.0
+    - endpoints_compatible
+    - diffusers:FluxPipeline
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/jimmycarter/LibreFLUX
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: b3f59b7a-1a02-4eb5-9d67-e7f06faa00cd
+  type: Relationship
+  properties: {}
+  from_: 6f397f70-6217-47de-8d4b-db845ae9a928
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jimmycarter_LibreFLUX.json
+  relationship_type: annotatedBy
+- uid: f1153f1f-c80f-4df1-a588-f37994f48a49
+  type: Relationship
+  properties: {}
+  from_: f3ba9213-47e0-4290-b5b5-a7ade0323d0e
+  to_:
+  - 899e9fa4-5919-4b29-ba89-d720dab39bbd
+  relationship_type: uses
+- uid: 968ec159-4890-43b6-805b-f21e16c4d2f4
+  type: Relationship
+  properties: {}
+  from_: 6f397f70-6217-47de-8d4b-db845ae9a928
+  to_:
+  - f3ba9213-47e0-4290-b5b5-a7ade0323d0e
+  relationship_type: produces

@@ -1,0 +1,178 @@
+uid: 5305ddd4-dd4c-4eda-9169-5cea08aecb90
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/iiiorg_piiranha-v1-detect-personal-information.json
+  type: SoftwareFile
+  name: iiiorg_piiranha-v1-detect-personal-information.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:45404ded-5198-426a-b401-6c994f94e2ab
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/iiiorg_piiranha-v1-detect-personal-information.json
+    type: ExternalReference
+  languages: []
+- uid: 76324c09-ff9c-4ea7-b3de-d1db9f62e24d
+  type: Data
+  properties:
+    bom-ref: ai4privacy/pii-masking-400k-9dea5d07-4e9d-556b-b0cd-c77348ea1dbd
+    name: ai4privacy/pii-masking-400k
+    content_url: https://huggingface.co/datasets/ai4privacy/pii-masking-400k
+    task_categories: text-classification, token-classification, table-question-answering, question-answering, zero-shot-classification, summarization, feature-extraction, text-generation, text2text-generation, translation, fill-mask, tabular-classification, tabular-to-text, table-to-text, text-retrieval, other
+    size_categories: 100K<n<1M
+    pretty_name: Ai4Privacy PII 300k Dataset
+    source_datasets: original
+    configs: 'Name of the dataset subset: default {"split": "train", "path": "data/train/*.jsonl"}, {"split": "validation", "path": "data/validation/*.jsonl"}'
+    license: other
+    license_name: license.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: ai4privacy/pii-masking-400k-9dea5d07-4e9d-556b-b0cd-c77348ea1dbd
+    type: ExternalReference
+  languages:
+  - en, fr, de, it, es, nl
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 1d707952-9b84-4188-9cd0-2bb7cf57b39b
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 6d5cf28e-617c-4544-9636-5a8b273206e5
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: microsoft/mdeberta-v3-base
+    type: ExternalReference
+  languages: []
+- uid: 82c58727-1ec4-4f6d-ac32-1af7bc68b591
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:03.582485+00:00'
+    bom-ref: iiiorg/piiranha-v1-detect-personal-information-86484ca1-20ec-59cf-8dcc-46e586c1a483
+    name: iiiorg/piiranha-v1-detect-personal-information
+    authors:
+    - name: iiiorg
+    architectureFamily: deberta-v2
+    modelArchitecture: DebertaV2ForTokenClassification
+    description: '## Model Description
+
+      Piiranha is a fine-tuned version of [microsoft/mdeberta-v3-base](https://huggingface.co/microsoft/mdeberta-v3-base).
+
+      The context length is 256 Deberta tokens. If your text is longer than that, just split it up.
+
+
+      Supported languages: English, Spanish, French, German, Italian, Dutch
+
+
+      Supported PII types: Account Number, Building Number, City, Credit Card Number, Date of Birth, Driver''s License, Email, First Name, Last Name, ID Card, Password, Social Security Number, Street Address, Tax Number, Phone Number, Username, Zipcode.
+
+
+      It achieves the following results on a test set of ~73,000 sentences containing PII:
+
+      - Accuracy: 99.44%
+
+      - Loss: 0.0173
+
+      - Precision: 93.16%
+
+      - Recall: 93.08%
+
+      - F1: 93.12%
+
+
+      Note that the above metrics factor in the eighteen possible categories (17 PII and 1 Non PII), so the metrics are lower than the metrics for just PII vs. Non PII (binary classification).
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - deberta-v2
+    - token-classification
+    - generated_from_trainer
+    - pii
+    - privacy
+    - personaldata
+    - redaction
+    - piidetection
+    - en
+    - it
+    - fr
+    - de
+    - nl
+    - es
+    - dataset:ai4privacy/pii-masking-400k
+    - base_model:microsoft/mdeberta-v3-base
+    - base_model:finetune:microsoft/mdeberta-v3-base
+    - license:cc-by-nc-nd-4.0
+    - autotrain_compatible
+    - endpoints_compatible
+    - region:us
+  license:
+    id: CC-BY-NC-ND-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-ND-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/iiiorg/piiranha-v1-detect-personal-information
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: token-classification
+  consideration:
+    use_cases: '## Intended uses & limitations
+
+
+      Piiranha can be used to assist with redacting PII from texts. Use at your own risk. We do not accept responsibility for any incorrect model predictions.'
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: d748ae65-c393-4aec-91fa-e818858439be
+  type: Relationship
+  properties: {}
+  from_: 5305ddd4-dd4c-4eda-9169-5cea08aecb90
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/iiiorg_piiranha-v1-detect-personal-information.json
+  relationship_type: annotatedBy
+- uid: 889e807a-0487-4a55-9b9f-d1e16be842c3
+  type: Relationship
+  properties: {}
+  from_: 82c58727-1ec4-4f6d-ac32-1af7bc68b591
+  to_:
+  - 76324c09-ff9c-4ea7-b3de-d1db9f62e24d
+  relationship_type: uses
+- uid: fe8ece1f-5ab3-424b-a2f5-a38c2905553c
+  type: Relationship
+  properties: {}
+  from_: 82c58727-1ec4-4f6d-ac32-1af7bc68b591
+  to_:
+  - 1d707952-9b84-4188-9cd0-2bb7cf57b39b
+  relationship_type: uses
+- uid: 7ef65492-9ad3-4ab0-870c-d827c5628a0a
+  type: Relationship
+  properties: {}
+  from_: 82c58727-1ec4-4f6d-ac32-1af7bc68b591
+  to_:
+  - 6d5cf28e-617c-4544-9636-5a8b273206e5
+  relationship_type: derivedFrom
+- uid: 7a2db1a9-fbbf-452f-99d2-345e9e661ae0
+  type: Relationship
+  properties: {}
+  from_: 5305ddd4-dd4c-4eda-9169-5cea08aecb90
+  to_:
+  - 82c58727-1ec4-4f6d-ac32-1af7bc68b591
+  relationship_type: produces

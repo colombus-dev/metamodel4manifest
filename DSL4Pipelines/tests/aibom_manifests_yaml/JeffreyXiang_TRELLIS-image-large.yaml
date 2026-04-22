@@ -1,0 +1,74 @@
+uid: 39a0b628-abe8-4749-8948-808242bf8d90
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/JeffreyXiang_TRELLIS-image-large.json
+  type: SoftwareFile
+  name: JeffreyXiang_TRELLIS-image-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:e7f4f70a-91f3-4015-b066-142dd34cc3fe
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/JeffreyXiang_TRELLIS-image-large.json
+    type: ExternalReference
+  languages: []
+- uid: 8bad2336-42f8-4ad9-8c0b-efcb13be153c
+  type: SoftwareFile
+  name: trellis
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7d5e06f1-b487-4ebf-9667-6a76ae607375
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:33.505097+00:00'
+    bom-ref: JeffreyXiang/TRELLIS-image-large-3ff2962a-f2cb-54e1-beb5-6b677466d74e
+    name: JeffreyXiang/TRELLIS-image-large
+    authors:
+    - name: JeffreyXiang
+    tags:
+    - trellis
+    - image-to-3d
+    - en
+    - arxiv:2412.01506
+    - license:mit
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/JeffreyXiang/TRELLIS-image-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-3d
+relations:
+- uid: c28135ee-df11-4507-b17a-d3b6f864f553
+  type: Relationship
+  properties: {}
+  from_: 39a0b628-abe8-4749-8948-808242bf8d90
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/JeffreyXiang_TRELLIS-image-large.json
+  relationship_type: annotatedBy
+- uid: efe2a9d5-54e0-4e25-9ec6-8bbb12e428af
+  type: Relationship
+  properties: {}
+  from_: 7d5e06f1-b487-4ebf-9667-6a76ae607375
+  to_:
+  - 8bad2336-42f8-4ad9-8c0b-efcb13be153c
+  relationship_type: uses
+- uid: 4415e292-16c5-4c45-bb01-058e9c2aee84
+  type: Relationship
+  properties: {}
+  from_: 39a0b628-abe8-4749-8948-808242bf8d90
+  to_:
+  - 7d5e06f1-b487-4ebf-9667-6a76ae607375
+  relationship_type: produces

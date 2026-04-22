@@ -1,0 +1,133 @@
+uid: 0a4aee27-c93d-4496-af5b-62bfebdc8cae
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OuteAI_OuteTTS-0.1-350M.json
+  type: SoftwareFile
+  name: OuteAI_OuteTTS-0.1-350M.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d33a7a85-0191-4322-9eb3-5da8515d0765
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OuteAI_OuteTTS-0.1-350M.json
+    type: ExternalReference
+  languages: []
+- uid: 97e0f0c2-ad7a-4e4b-8976-8d1bf79fa3da
+  type: Data
+  properties:
+    bom-ref: facebook/multilingual_librispeech-d70db1bd-fd05-542c-ab32-3b3b2f62abe0
+    name: facebook/multilingual_librispeech
+    content_url: https://huggingface.co/datasets/facebook/multilingual_librispeech
+    task_categories: automatic-speech-recognition, text-to-speech, text-to-audio
+    size_categories: 100K<n<1M
+    annotations_creators: expert-generated
+    language_creators: crowdsourced, expert-generated
+    pretty_name: MultiLingual LibriSpeech
+    source_datasets: original
+    paperswithcode_id: multilingual-librispeech
+    configs: 'Name of the dataset subset: spanish {"split": "dev", "path": "spanish/dev-*"}, {"split": "test", "path": "spanish/test-*"}, {"split": "train", "path": "spanish/train-*"}, {"split": "9_hours", "path": "spanish/9_hours-*"}, {"split": "1_hours", "path": "spanish/1_hours-*"}'
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: facebook/multilingual_librispeech-d70db1bd-fd05-542c-ab32-3b3b2f62abe0
+    type: ExternalReference
+  languages:
+  - de, nl, fr, it, es, pt, pl, en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 16b9e2ed-cec3-4b24-bfd0-001ec4cca35d
+  type: Data
+  properties:
+    bom-ref: parler-tts/libritts_r_filtered-0af8ce06-fe70-59e0-89c9-fac56f9841fe
+    name: parler-tts/libritts_r_filtered
+    content_url: https://huggingface.co/datasets/parler-tts/libritts_r_filtered
+    task_categories: text-to-speech, automatic-speech-recognition
+    size_categories: 10K<n<100K
+    pretty_name: Filtered LibriTTS-R
+    configs: 'Name of the dataset subset: other {"split": "dev.other", "path": "other/dev.other-*"}, {"split": "test.other", "path": "other/test.other-*"}, {"split": "train.other.500", "path": "other/train.other.500-*"}'
+    license: cc-by-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: parler-tts/libritts_r_filtered-0af8ce06-fe70-59e0-89c9-fac56f9841fe
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 56930032-d5d6-454e-a880-06b795af79f0
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:57.238983+00:00'
+    bom-ref: OuteAI/OuteTTS-0.1-350M-a49e303f-c74d-5267-b33d-cb107be17270
+    name: OuteAI/OuteTTS-0.1-350M
+    authors:
+    - name: OuteAI
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Description
+
+
+      > [!IMPORTANT]
+
+      > A newer version of this model is available: [OuteTTS-0.2-500M](https://huggingface.co/OuteAI/OuteTTS-0.2-500M)
+
+
+      OuteTTS-0.1-350M is a novel text-to-speech synthesis model that leverages pure language modeling without external adapters or complex architectures, built upon the LLaMa architecture using our Oute3-350M-DEV base model, it demonstrates that high-quality speech synthesis is achievable through a straightforward approach using crafted prompts and audio tokens.
+
+      '
+    tags:
+    - safetensors
+    - llama
+    - text-to-speech
+    - en
+    - dataset:facebook/multilingual_librispeech
+    - dataset:parler-tts/libritts_r_filtered
+    - license:cc-by-4.0
+    - region:us
+  license:
+    id: CC-BY-4.0
+    url: https://spdx.org/licenses/CC-BY-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/OuteAI/OuteTTS-0.1-350M
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-speech
+relations:
+- uid: 21b9ad28-b761-4b83-94ff-3a0cb981868d
+  type: Relationship
+  properties: {}
+  from_: 0a4aee27-c93d-4496-af5b-62bfebdc8cae
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OuteAI_OuteTTS-0.1-350M.json
+  relationship_type: annotatedBy
+- uid: 766047e5-5ae9-42c2-a384-d21dbfdcf15e
+  type: Relationship
+  properties: {}
+  from_: 56930032-d5d6-454e-a880-06b795af79f0
+  to_:
+  - 97e0f0c2-ad7a-4e4b-8976-8d1bf79fa3da
+  - 16b9e2ed-cec3-4b24-bfd0-001ec4cca35d
+  relationship_type: uses
+- uid: 428a3661-080f-493d-9a10-51bccece1276
+  type: Relationship
+  properties: {}
+  from_: 0a4aee27-c93d-4496-af5b-62bfebdc8cae
+  to_:
+  - 56930032-d5d6-454e-a880-06b795af79f0
+  relationship_type: produces

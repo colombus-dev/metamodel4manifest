@@ -1,0 +1,103 @@
+uid: 3544bd87-686e-4751-9574-597e39a14d15
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CohereForAI_aya-23-8B.json
+  type: SoftwareFile
+  name: CohereForAI_aya-23-8B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:991f7884-d59b-4550-bdae-aac37ca043bd
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CohereForAI_aya-23-8B.json
+    type: ExternalReference
+  languages: []
+- uid: 806432af-4660-49a6-9b83-720379a97578
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 0e5da039-5290-4442-ba37-0d8a2d2a8497
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:00.509898+00:00'
+    bom-ref: CohereForAI/aya-23-8B-a60e0032-7ad9-5cd1-9cc8-c8928ba8ea40
+    name: CohereForAI/aya-23-8B
+    authors:
+    - name: CohereForAI
+    architectureFamily: cohere
+    modelArchitecture: CohereForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - cohere
+    - text-generation
+    - conversational
+    - en
+    - fr
+    - de
+    - es
+    - it
+    - pt
+    - ja
+    - ko
+    - zh
+    - ar
+    - el
+    - fa
+    - pl
+    - id
+    - cs
+    - he
+    - hi
+    - nl
+    - ro
+    - ru
+    - tr
+    - uk
+    - vi
+    - arxiv:2405.15032
+    - license:cc-by-nc-4.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/CohereForAI/aya-23-8B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 63b908a4-b006-48bb-b55d-66ae33b91308
+  type: Relationship
+  properties: {}
+  from_: 3544bd87-686e-4751-9574-597e39a14d15
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CohereForAI_aya-23-8B.json
+  relationship_type: annotatedBy
+- uid: d8e7837a-dca9-4650-82f3-a4a43f0394a2
+  type: Relationship
+  properties: {}
+  from_: 0e5da039-5290-4442-ba37-0d8a2d2a8497
+  to_:
+  - 806432af-4660-49a6-9b83-720379a97578
+  relationship_type: uses
+- uid: 0d6a45d7-90d4-4dd7-812a-7a8152650931
+  type: Relationship
+  properties: {}
+  from_: 3544bd87-686e-4751-9574-597e39a14d15
+  to_:
+  - 0e5da039-5290-4442-ba37-0d8a2d2a8497
+  relationship_type: produces

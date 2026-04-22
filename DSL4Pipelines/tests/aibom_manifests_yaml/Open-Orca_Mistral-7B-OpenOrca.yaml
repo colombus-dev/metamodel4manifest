@@ -1,0 +1,113 @@
+uid: 4ded7ccc-67cd-4e88-885a-25f4703a8afc
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Open-Orca_Mistral-7B-OpenOrca.json
+  type: SoftwareFile
+  name: Open-Orca_Mistral-7B-OpenOrca.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:28dc50f0-3f82-4d63-b432-1ef87d83a8b8
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Open-Orca_Mistral-7B-OpenOrca.json
+    type: ExternalReference
+  languages: []
+- uid: dfb167c0-7c75-4766-8aaa-7c226dbc5674
+  type: Data
+  properties:
+    bom-ref: Open-Orca/OpenOrca-bd2dde5e-b85b-5436-a786-d44f16da11b9
+    name: Open-Orca/OpenOrca
+    content_url: https://huggingface.co/datasets/Open-Orca/OpenOrca
+    task_categories: conversational, text-classification, token-classification, table-question-answering, question-answering, zero-shot-classification, summarization, feature-extraction, text-generation, text2text-generation
+    size_categories: 10M<n<100M
+    pretty_name: OpenOrca
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: Open-Orca/OpenOrca-bd2dde5e-b85b-5436-a786-d44f16da11b9
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 794b632c-2c41-405f-ae03-e0d10a0836c9
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 62a5bdcc-956c-4672-a500-7130de0157d1
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:51.284990+00:00'
+    bom-ref: Open-Orca/Mistral-7B-OpenOrca-c13390a7-8b7d-512f-89b1-0ea8fc3a8a81
+    name: Open-Orca/Mistral-7B-OpenOrca
+    authors:
+    - name: Open-Orca
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - mistral
+    - text-generation
+    - conversational
+    - en
+    - dataset:Open-Orca/OpenOrca
+    - arxiv:2306.02707
+    - arxiv:2301.13688
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Open-Orca/Mistral-7B-OpenOrca
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 8658d99b-f1dc-4123-9883-1bd11a1c9e70
+  type: Relationship
+  properties: {}
+  from_: 4ded7ccc-67cd-4e88-885a-25f4703a8afc
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Open-Orca_Mistral-7B-OpenOrca.json
+  relationship_type: annotatedBy
+- uid: a8054675-0b21-4629-9dd0-2cc7b5eea617
+  type: Relationship
+  properties: {}
+  from_: 62a5bdcc-956c-4672-a500-7130de0157d1
+  to_:
+  - dfb167c0-7c75-4766-8aaa-7c226dbc5674
+  relationship_type: uses
+- uid: dfce327c-f131-4124-aa69-b1573bc0d205
+  type: Relationship
+  properties: {}
+  from_: 62a5bdcc-956c-4672-a500-7130de0157d1
+  to_:
+  - 794b632c-2c41-405f-ae03-e0d10a0836c9
+  relationship_type: uses
+- uid: 2488aa25-fa64-445d-9fe9-18c2e74cca97
+  type: Relationship
+  properties: {}
+  from_: 4ded7ccc-67cd-4e88-885a-25f4703a8afc
+  to_:
+  - 62a5bdcc-956c-4672-a500-7130de0157d1
+  relationship_type: produces

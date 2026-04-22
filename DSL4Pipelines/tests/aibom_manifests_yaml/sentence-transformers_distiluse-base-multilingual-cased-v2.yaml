@@ -1,0 +1,135 @@
+uid: 3d2a4b5b-c5ff-4d7d-9c39-a66d8049614d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_distiluse-base-multilingual-cased-v2.json
+  type: SoftwareFile
+  name: sentence-transformers_distiluse-base-multilingual-cased-v2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:836342c4-ff03-4293-80b1-b474f4dfaa27
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_distiluse-base-multilingual-cased-v2.json
+    type: ExternalReference
+  languages: []
+- uid: e1b98116-f3b8-4a84-9cff-0ce4cb278a0b
+  type: SoftwareFile
+  name: sentence-transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: cc475588-7d89-413f-949f-1b8154eea3c2
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:30.584830+00:00'
+    bom-ref: sentence-transformers/distiluse-base-multilingual-cased-v2-686ba86a-86bc-5837-bc46-7b1203bfe0f0
+    name: sentence-transformers/distiluse-base-multilingual-cased-v2
+    authors:
+    - name: sentence-transformers
+    architectureFamily: distilbert
+    modelArchitecture: DistilBertModel
+    tags:
+    - sentence-transformers
+    - pytorch
+    - tf
+    - onnx
+    - safetensors
+    - openvino
+    - distilbert
+    - feature-extraction
+    - sentence-similarity
+    - multilingual
+    - ar
+    - bg
+    - ca
+    - cs
+    - da
+    - de
+    - el
+    - en
+    - es
+    - et
+    - fa
+    - fi
+    - fr
+    - gl
+    - gu
+    - he
+    - hi
+    - hr
+    - hu
+    - hy
+    - id
+    - it
+    - ja
+    - ka
+    - ko
+    - ku
+    - lt
+    - lv
+    - mk
+    - mn
+    - mr
+    - ms
+    - my
+    - nb
+    - nl
+    - pl
+    - pt
+    - ro
+    - ru
+    - sk
+    - sl
+    - sq
+    - sr
+    - sv
+    - th
+    - tr
+    - uk
+    - ur
+    - vi
+    - arxiv:1908.10084
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-embeddings-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: sentence-similarity
+relations:
+- uid: 4ea66af9-5e8e-40b0-95d4-536264bb3b86
+  type: Relationship
+  properties: {}
+  from_: 3d2a4b5b-c5ff-4d7d-9c39-a66d8049614d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sentence-transformers_distiluse-base-multilingual-cased-v2.json
+  relationship_type: annotatedBy
+- uid: e2fc543f-b815-4b26-8c1a-a6532a9f6070
+  type: Relationship
+  properties: {}
+  from_: cc475588-7d89-413f-949f-1b8154eea3c2
+  to_:
+  - e1b98116-f3b8-4a84-9cff-0ce4cb278a0b
+  relationship_type: uses
+- uid: 097bf96a-23fc-4a4a-b691-e08412932f0a
+  type: Relationship
+  properties: {}
+  from_: 3d2a4b5b-c5ff-4d7d-9c39-a66d8049614d
+  to_:
+  - cc475588-7d89-413f-949f-1b8154eea3c2
+  relationship_type: produces

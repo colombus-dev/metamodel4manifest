@@ -1,0 +1,140 @@
+uid: 72741a3c-3486-4f5f-a851-9ca40ba82dcc
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CrucibleAI_ControlNetMediaPipeFace.json
+  type: SoftwareFile
+  name: CrucibleAI_ControlNetMediaPipeFace.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:233d5921-371f-49e2-b4ff-85ec83b14e8d
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CrucibleAI_ControlNetMediaPipeFace.json
+    type: ExternalReference
+  languages: []
+- uid: c39fbc2a-9d10-4bd7-9784-ddef3645c1e9
+  type: Data
+  properties:
+    bom-ref: LAION-Face-f04242ab-0303-5b19-a995-e176894a2e50
+    name: LAION-Face
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LAION-Face-f04242ab-0303-5b19-a995-e176894a2e50
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 5920b8c8-561e-4948-9da7-c6f30f19e19b
+  type: Data
+  properties:
+    bom-ref: LAION-e2fd9e0b-ad81-58e8-94c9-4f67d007c49d
+    name: LAION
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: LAION-e2fd9e0b-ad81-58e8-94c9-4f67d007c49d
+    type: ExternalReference
+  languages: []
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 596e74e2-cc1e-432b-b282-f5e61bafdcb9
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: e1a18805-5ab8-4aeb-96f6-fccd291cd7d5
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: stabilityai/stable-diffusion-2-1-base
+    type: ExternalReference
+  languages: []
+- uid: 7b5834e2-f2be-4dc6-bd36-e542da610414
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:47.205994+00:00'
+    bom-ref: CrucibleAI/ControlNetMediaPipeFace-503af4bf-b2bc-5bdc-b351-00971e5b156f
+    name: CrucibleAI/ControlNetMediaPipeFace
+    authors:
+    - name: CrucibleAI
+    tags:
+    - diffusers
+    - safetensors
+    - controlnet
+    - laion
+    - face
+    - mediapipe
+    - image-to-image
+    - en
+    - dataset:LAION-Face
+    - dataset:LAION
+    - arxiv:2302.05543
+    - arxiv:2112.10752
+    - arxiv:2210.08402
+    - base_model:stabilityai/stable-diffusion-2-1-base
+    - base_model:adapter:stabilityai/stable-diffusion-2-1-base
+    - license:openrail
+    - region:us
+  license:
+    name: openrail
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-image
+relations:
+- uid: 4ec17306-e33f-42c2-9dad-f8a082002626
+  type: Relationship
+  properties: {}
+  from_: 72741a3c-3486-4f5f-a851-9ca40ba82dcc
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/CrucibleAI_ControlNetMediaPipeFace.json
+  relationship_type: annotatedBy
+- uid: c9960f75-72cb-4f67-852a-782edc59340f
+  type: Relationship
+  properties: {}
+  from_: 7b5834e2-f2be-4dc6-bd36-e542da610414
+  to_:
+  - c39fbc2a-9d10-4bd7-9784-ddef3645c1e9
+  - 5920b8c8-561e-4948-9da7-c6f30f19e19b
+  relationship_type: uses
+- uid: 01620eed-0a6d-400f-959b-cf1e9e323d37
+  type: Relationship
+  properties: {}
+  from_: 7b5834e2-f2be-4dc6-bd36-e542da610414
+  to_:
+  - 596e74e2-cc1e-432b-b282-f5e61bafdcb9
+  relationship_type: uses
+- uid: 984cfc9d-275f-4a7e-83ab-99f4abf6cbdd
+  type: Relationship
+  properties: {}
+  from_: 7b5834e2-f2be-4dc6-bd36-e542da610414
+  to_:
+  - e1a18805-5ab8-4aeb-96f6-fccd291cd7d5
+  relationship_type: derivedFrom
+- uid: 3aba6423-673d-49e9-be76-d2a51afd8118
+  type: Relationship
+  properties: {}
+  from_: 72741a3c-3486-4f5f-a851-9ca40ba82dcc
+  to_:
+  - 7b5834e2-f2be-4dc6-bd36-e542da610414
+  relationship_type: produces

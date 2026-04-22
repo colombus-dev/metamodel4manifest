@@ -1,0 +1,95 @@
+uid: c757fd3d-4357-4ec5-a9bd-f2ee2ce8cbdf
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sayakpaul_FLUX.1-merged.json
+  type: SoftwareFile
+  name: sayakpaul_FLUX.1-merged.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0d0d0faa-f278-44a9-b533-85a69240e0db
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sayakpaul_FLUX.1-merged.json
+    type: ExternalReference
+  languages: []
+- uid: 0f7e3597-57db-4327-b9a0-04fda1b09bf8
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 1fa37b72-de05-4925-9877-7257141a2204
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev, black-forest-labs/FLUX.1-schnell
+    type: ExternalReference
+  languages: []
+- uid: 0ccdc55c-2eca-4c67-a8c2-5752046fa577
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:12.386402+00:00'
+    bom-ref: sayakpaul/FLUX.1-merged-ec0e6f1b-9974-5013-b933-ed1f9ef817c0
+    name: sayakpaul/FLUX.1-merged
+    authors:
+    - name: sayakpaul
+    tags:
+    - diffusers
+    - safetensors
+    - en
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:merge:black-forest-labs/FLUX.1-dev
+    - base_model:black-forest-labs/FLUX.1-schnell
+    - base_model:merge:black-forest-labs/FLUX.1-schnell
+    - license:other
+    - endpoints_compatible
+    - diffusers:FluxPipeline
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+    url: LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/sayakpaul/FLUX.1-merged
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 79c62297-7531-4a7a-bd79-1feacec60241
+  type: Relationship
+  properties: {}
+  from_: c757fd3d-4357-4ec5-a9bd-f2ee2ce8cbdf
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/sayakpaul_FLUX.1-merged.json
+  relationship_type: annotatedBy
+- uid: 8ae33a3f-1dfd-4ff8-8d5e-7ad2c827e7c9
+  type: Relationship
+  properties: {}
+  from_: 0ccdc55c-2eca-4c67-a8c2-5752046fa577
+  to_:
+  - 0f7e3597-57db-4327-b9a0-04fda1b09bf8
+  relationship_type: uses
+- uid: 3ac94ffc-870c-45f7-ba08-89a9e2a61c8b
+  type: Relationship
+  properties: {}
+  from_: 0ccdc55c-2eca-4c67-a8c2-5752046fa577
+  to_:
+  - 1fa37b72-de05-4925-9877-7257141a2204
+  relationship_type: derivedFrom
+- uid: 23cbedbd-4804-4555-805d-de66e0c2995e
+  type: Relationship
+  properties: {}
+  from_: c757fd3d-4357-4ec5-a9bd-f2ee2ce8cbdf
+  to_:
+  - 0ccdc55c-2eca-4c67-a8c2-5752046fa577
+  relationship_type: produces

@@ -1,0 +1,151 @@
+uid: da5913d2-c784-4129-8ed3-b781affbceb2
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OccamRazor_mpt-7b-storywriter-4bit-128g.json
+  type: SoftwareFile
+  name: OccamRazor_mpt-7b-storywriter-4bit-128g.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:51ae97c0-fa43-4ce2-b049-35a3b938c451
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OccamRazor_mpt-7b-storywriter-4bit-128g.json
+    type: ExternalReference
+  languages: []
+- uid: a93ef8d2-1e18-4a9e-bfcc-4bcd2a93d11c
+  type: Data
+  properties:
+    bom-ref: the_pile_books3-d260b67b-7856-5d3d-a7d3-c382ac1fc422
+    name: the_pile_books3
+    content_url: https://huggingface.co/datasets/the_pile_books3
+    task_categories: text-generation, fill-mask
+    task_ids: language-modeling, masked-language-modeling
+    size_categories: 100K<n<1M
+    annotations_creators: no-annotation
+    language_creators: found
+    pretty_name: Books3
+    source_datasets: original
+    license: mit
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: the_pile_books3-d260b67b-7856-5d3d-a7d3-c382ac1fc422
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c83bd38f-9054-4ade-a225-8a64cff3960f
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 03a03e8e-f16c-4d51-ad18-677232c8cd3c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:38.327202+00:00'
+    bom-ref: OccamRazor/mpt-7b-storywriter-4bit-128g-8c7d5f36-6b33-5c7c-b368-b6ffd2548db9
+    name: OccamRazor/mpt-7b-storywriter-4bit-128g
+    authors:
+    - name: OccamRazor
+    architectureFamily: mpt
+    modelArchitecture: MPTForCausalLM
+    description: '## Model Description
+
+
+      The architecture is a modification of a standard decoder-only transformer.
+
+
+      The model has been modified from a standard transformer in the following ways:
+
+      * It uses [FlashAttention](https://arxiv.org/pdf/2205.14135.pdf)
+
+      * It uses [ALiBi (Attention with Linear Biases)](https://arxiv.org/abs/2108.12409) and does not use positional embeddings
+
+      * It does not use biases
+
+
+
+      | Hyperparameter | Value |
+
+      |----------------|-------|
+
+      |n_parameters | 6.7B |
+
+      |n_layers | 32 |
+
+      | n_heads | 32 |
+
+      | d_model | 4096 |
+
+      | vocab size | 50432 |
+
+      | sequence length | **65536** |
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - mpt
+    - text-generation
+    - Composer
+    - MosaicML
+    - llm-foundry
+    - custom_code
+    - dataset:the_pile_books3
+    - arxiv:2108.12409
+    - arxiv:2205.14135
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/OccamRazor/mpt-7b-storywriter-4bit-128g
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 5ce1d524-c86c-4d71-9b08-4e820910ba66
+  type: Relationship
+  properties: {}
+  from_: da5913d2-c784-4129-8ed3-b781affbceb2
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/OccamRazor_mpt-7b-storywriter-4bit-128g.json
+  relationship_type: annotatedBy
+- uid: a6e590c2-3a12-4d29-92e4-e0491765985f
+  type: Relationship
+  properties: {}
+  from_: 03a03e8e-f16c-4d51-ad18-677232c8cd3c
+  to_:
+  - a93ef8d2-1e18-4a9e-bfcc-4bcd2a93d11c
+  relationship_type: uses
+- uid: 5cf2f93a-ec54-4602-8740-add18a1da5c6
+  type: Relationship
+  properties: {}
+  from_: 03a03e8e-f16c-4d51-ad18-677232c8cd3c
+  to_:
+  - c83bd38f-9054-4ade-a225-8a64cff3960f
+  relationship_type: uses
+- uid: 66da79cb-23ce-44bd-a28c-c958db23065b
+  type: Relationship
+  properties: {}
+  from_: da5913d2-c784-4129-8ed3-b781affbceb2
+  to_:
+  - 03a03e8e-f16c-4d51-ad18-677232c8cd3c
+  relationship_type: produces

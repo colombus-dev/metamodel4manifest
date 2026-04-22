@@ -1,0 +1,115 @@
+uid: 26f83781-464b-4206-bef0-b790f677dd4d
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_blip2-opt-2.7b.json
+  type: SoftwareFile
+  name: Salesforce_blip2-opt-2.7b.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:0425f651-df09-4c97-a9e5-0c82e952cd53
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_blip2-opt-2.7b.json
+    type: ExternalReference
+  languages: []
+- uid: e7e80768-e314-48f6-bffe-89f8f76cd0c2
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 29f2e85f-9711-4d53-a828-30399acac6e4
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:05:51.602767+00:00'
+    bom-ref: Salesforce/blip2-opt-2.7b-9385d361-ac2c-5e78-a58f-4d57dc705e4f
+    name: Salesforce/blip2-opt-2.7b
+    authors:
+    - name: Salesforce
+    architectureFamily: blip-2
+    modelArchitecture: Blip2ForConditionalGeneration
+    description: '## Model description
+
+
+      BLIP-2 consists of 3 models: a CLIP-like image encoder, a Querying Transformer (Q-Former) and a large language model.
+
+
+      The authors initialize the weights of the image encoder and large language model from pre-trained checkpoints and keep them frozen
+
+      while training the Querying Transformer, which is a BERT-like Transformer encoder that maps a set of "query tokens" to query embeddings,
+
+      which bridge the gap between the embedding space of the image encoder and the large language model.
+
+
+      The goal for the model is simply to predict the next text token, giving the query embeddings and the previous text.
+
+
+      <img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/blip2_architecture.jpg"
+
+      alt="drawing" width="600"/>
+
+
+      This allows the model to be used for tasks like:
+
+
+      - image captioning
+
+      - visual question answering (VQA)
+
+      - chat-like conversations by feeding the image and the previous conversation as prompt to the model
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - blip-2
+    - visual-question-answering
+    - vision
+    - image-to-text
+    - image-captioning
+    - image-text-to-text
+    - en
+    - arxiv:2301.12597
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Salesforce/blip2-opt-2.7b
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: c162318c-f699-49a3-a85c-d367e810faa0
+  type: Relationship
+  properties: {}
+  from_: 26f83781-464b-4206-bef0-b790f677dd4d
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Salesforce_blip2-opt-2.7b.json
+  relationship_type: annotatedBy
+- uid: 450b1511-1984-484e-adab-dd8e8b8b32a0
+  type: Relationship
+  properties: {}
+  from_: 29f2e85f-9711-4d53-a828-30399acac6e4
+  to_:
+  - e7e80768-e314-48f6-bffe-89f8f76cd0c2
+  relationship_type: uses
+- uid: 3b743ad0-9734-4bc1-b1e6-7369b4439ce7
+  type: Relationship
+  properties: {}
+  from_: 26f83781-464b-4206-bef0-b790f677dd4d
+  to_:
+  - 29f2e85f-9711-4d53-a828-30399acac6e4
+  relationship_type: produces

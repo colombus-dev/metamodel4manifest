@@ -1,0 +1,112 @@
+uid: f40825b9-18dd-4c46-aef8-5ccd84fbeaaa
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-diffusion-xl-refiner-1.0.json
+  type: SoftwareFile
+  name: stabilityai_stable-diffusion-xl-refiner-1.0.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2e2edee9-0396-4928-8144-80d37e2e244d
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-diffusion-xl-refiner-1.0.json
+    type: ExternalReference
+  languages: []
+- uid: edd6b48e-a5e1-4477-95aa-9c3515ac2c21
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 09d74f41-2927-4017-8487-10d1ff1bbf58
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:05.015355+00:00'
+    bom-ref: stabilityai/stable-diffusion-xl-refiner-1.0-890ec33b-48bd-5717-90bc-a8492a60d298
+    name: stabilityai/stable-diffusion-xl-refiner-1.0
+    authors:
+    - name: stabilityai
+    description: '## Model
+
+
+      ![pipeline](pipeline.png)
+
+
+      [SDXL](https://arxiv.org/abs/2307.01952) consists of an [ensemble of experts](https://arxiv.org/abs/2211.01324) pipeline for latent diffusion:
+
+      In a first step, the base model (available here: https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) is used to generate (noisy) latents,
+
+      which are then further processed with a refinement model specialized for the final denoising steps.
+
+      Note that the base model can be used as a standalone module.
+
+
+      Alternatively, we can use a two-stage pipeline as follows:
+
+      First, the base model is used to generate latents of the desired output size.
+
+      In the second step, we use a specialized high-resolution model and apply a technique called SDEdit (https://arxiv.org/abs/2108.01073, also known as "img2img")
+
+      to the latents generated in the first step, using the same prompt. This technique is slightly slower than the first one, as it requires more function evaluations.
+
+
+      Source code is available at https://github.com/Stability-AI/generative-models .
+
+      '
+    tags:
+    - diffusers
+    - safetensors
+    - stable-diffusion
+    - image-to-image
+    - arxiv:2307.01952
+    - arxiv:2211.01324
+    - arxiv:2108.01073
+    - arxiv:2112.10752
+    - license:openrail++
+    - diffusers:StableDiffusionXLImg2ImgPipeline
+    - region:us
+  license:
+    name: openrail++
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-image
+  consideration:
+    use_cases: '## Uses
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: b9d5eca2-c127-4ece-bc7a-c58bcf46a617
+  type: Relationship
+  properties: {}
+  from_: f40825b9-18dd-4c46-aef8-5ccd84fbeaaa
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/stabilityai_stable-diffusion-xl-refiner-1.0.json
+  relationship_type: annotatedBy
+- uid: 3b018d7e-b274-4a1d-837a-2c72fc2a722c
+  type: Relationship
+  properties: {}
+  from_: 09d74f41-2927-4017-8487-10d1ff1bbf58
+  to_:
+  - edd6b48e-a5e1-4477-95aa-9c3515ac2c21
+  relationship_type: uses
+- uid: cc41adfe-7caf-4982-9fab-eb71bbc5dc44
+  type: Relationship
+  properties: {}
+  from_: f40825b9-18dd-4c46-aef8-5ccd84fbeaaa
+  to_:
+  - 09d74f41-2927-4017-8487-10d1ff1bbf58
+  relationship_type: produces

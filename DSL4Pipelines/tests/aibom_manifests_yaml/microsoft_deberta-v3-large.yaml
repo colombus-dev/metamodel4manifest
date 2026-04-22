@@ -1,0 +1,82 @@
+uid: 8b38770b-f196-4d5e-985a-dd163a16a9bc
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_deberta-v3-large.json
+  type: SoftwareFile
+  name: microsoft_deberta-v3-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:a591030b-aeb6-406d-8e15-5c3c9c1273e6
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_deberta-v3-large.json
+    type: ExternalReference
+  languages: []
+- uid: 0d25faf0-3941-47a2-9f55-d4adb6689eee
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 9bf857f6-a925-4449-9294-215a131174b1
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:58.694202+00:00'
+    bom-ref: microsoft/deberta-v3-large-ab7887fe-67d7-5493-a1f4-fb65eef7e190
+    name: microsoft/deberta-v3-large
+    authors:
+    - name: microsoft
+    architectureFamily: deberta-v2
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - deberta-v2
+    - deberta
+    - deberta-v3
+    - fill-mask
+    - en
+    - arxiv:2006.03654
+    - arxiv:2111.09543
+    - license:mit
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/deberta-v3-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: fill-mask
+relations:
+- uid: 0a44a6a4-e313-4912-9b53-e68ba7aa44b3
+  type: Relationship
+  properties: {}
+  from_: 8b38770b-f196-4d5e-985a-dd163a16a9bc
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_deberta-v3-large.json
+  relationship_type: annotatedBy
+- uid: 153a8c92-6784-4550-8f9a-40445e225df3
+  type: Relationship
+  properties: {}
+  from_: 9bf857f6-a925-4449-9294-215a131174b1
+  to_:
+  - 0d25faf0-3941-47a2-9f55-d4adb6689eee
+  relationship_type: uses
+- uid: 021aedbc-cfc3-48a4-9794-97dd857b1c4b
+  type: Relationship
+  properties: {}
+  from_: 8b38770b-f196-4d5e-985a-dd163a16a9bc
+  to_:
+  - 9bf857f6-a925-4449-9294-215a131174b1
+  relationship_type: produces

@@ -1,0 +1,80 @@
+uid: 553090d9-c74a-4c3e-92f6-8db8e17a08a2
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/defog_sqlcoder2.json
+  type: SoftwareFile
+  name: defog_sqlcoder2.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2c451a74-3c7d-4199-8267-f4fe79eabe5b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/defog_sqlcoder2.json
+    type: ExternalReference
+  languages: []
+- uid: a22e0b62-bdb8-4bd0-89bd-e2a6b854378e
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 35c2dcb2-7160-454c-b494-0c77d988a9a6
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:28.999920+00:00'
+    bom-ref: defog/sqlcoder2-61777fc5-590a-510c-96bf-4b12b68e63be
+    name: defog/sqlcoder2
+    authors:
+    - name: defog
+    architectureFamily: gpt_bigcode
+    modelArchitecture: GPTBigCodeForCausalLM
+    tags:
+    - transformers
+    - pytorch
+    - gpt_bigcode
+    - text-generation
+    - code
+    - en
+    - license:other
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    name: other
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/defog/sqlcoder2
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 5dfafc57-2f07-440a-b5cc-1f06d929f0f0
+  type: Relationship
+  properties: {}
+  from_: 553090d9-c74a-4c3e-92f6-8db8e17a08a2
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/defog_sqlcoder2.json
+  relationship_type: annotatedBy
+- uid: b56a1c78-01f3-4f8a-b7e1-c78b90ea31bc
+  type: Relationship
+  properties: {}
+  from_: 35c2dcb2-7160-454c-b494-0c77d988a9a6
+  to_:
+  - a22e0b62-bdb8-4bd0-89bd-e2a6b854378e
+  relationship_type: uses
+- uid: 79d362b4-d573-48eb-81a2-a9238f1e1509
+  type: Relationship
+  properties: {}
+  from_: 553090d9-c74a-4c3e-92f6-8db8e17a08a2
+  to_:
+  - 35c2dcb2-7160-454c-b494-0c77d988a9a6
+  relationship_type: produces

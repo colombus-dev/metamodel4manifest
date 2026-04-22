@@ -1,0 +1,80 @@
+uid: 21ccd4cc-40be-4c15-9a27-5e09eba1f2e0
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/darkstorm2150_Protogen_v2.2_Official_Release.json
+  type: SoftwareFile
+  name: darkstorm2150_Protogen_v2.2_Official_Release.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:6bdf8b9c-f7bd-485e-be25-7ddfca5f91b1
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/darkstorm2150_Protogen_v2.2_Official_Release.json
+    type: ExternalReference
+  languages: []
+- uid: a24a2680-8834-4f5f-9d56-980a2cbb0714
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4274ca54-1af3-4692-9bf7-e6b6c1e2cd58
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:29.720011+00:00'
+    bom-ref: darkstorm2150/Protogen_v2.2_Official_Release-6be78ca9-2d98-5046-87a8-9788651b445b
+    name: darkstorm2150/Protogen_v2.2_Official_Release
+    authors:
+    - name: darkstorm2150
+    tags:
+    - diffusers
+    - stable-diffusion
+    - stable-diffusion-diffusers
+    - text-to-image
+    - art
+    - artistic
+    - protogen
+    - en
+    - license:creativeml-openrail-m
+    - autotrain_compatible
+    - endpoints_compatible
+    - diffusers:StableDiffusionPipeline
+    - region:us
+  license:
+    name: creativeml-openrail-m
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/darkstorm2150/Protogen_v2.2_Official_Release
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: ccb1338a-213f-46c2-8dfa-8c0704db3f42
+  type: Relationship
+  properties: {}
+  from_: 21ccd4cc-40be-4c15-9a27-5e09eba1f2e0
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/darkstorm2150_Protogen_v2.2_Official_Release.json
+  relationship_type: annotatedBy
+- uid: 55c6a491-2359-42b8-ae94-3326fdaac64f
+  type: Relationship
+  properties: {}
+  from_: 4274ca54-1af3-4692-9bf7-e6b6c1e2cd58
+  to_:
+  - a24a2680-8834-4f5f-9d56-980a2cbb0714
+  relationship_type: uses
+- uid: 641cb2be-7db8-4f23-912e-eb0c6df2c230
+  type: Relationship
+  properties: {}
+  from_: 21ccd4cc-40be-4c15-9a27-5e09eba1f2e0
+  to_:
+  - 4274ca54-1af3-4692-9bf7-e6b6c1e2cd58
+  relationship_type: produces

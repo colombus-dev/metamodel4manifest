@@ -1,0 +1,97 @@
+uid: 22f6f250-9c50-40f8-baac-6d9c0cff40df
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Mistral-NeMo-12B-Instruct.json
+  type: SoftwareFile
+  name: nvidia_Mistral-NeMo-12B-Instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:20eb8b41-655f-45b5-8228-deabfc71b71e
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Mistral-NeMo-12B-Instruct.json
+    type: ExternalReference
+  languages: []
+- uid: d0e8191d-da4a-4f03-abaf-50375d437545
+  type: SoftwareFile
+  name: nemo
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 2c68384b-4d5b-4aaa-b88b-8b800388b835
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:59.895626+00:00'
+    bom-ref: nvidia/Mistral-NeMo-12B-Instruct-a014f646-3857-5111-914e-b5c9a54bdd32
+    name: nvidia/Mistral-NeMo-12B-Instruct
+    authors:
+    - name: nvidia
+    tags:
+    - nemo
+    - nvidia
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/nvidia/Mistral-NeMo-12B-Instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+  consideration:
+    use_cases: '### Intended use
+
+
+      Mistral-NeMo-12B-Instruct is a chat model intended for use for the English language.
+
+
+      The instruct model itself can be further customized using the [NeMo Framework](https://docs.nvidia.com/nemo-framework/index.html) suite of customization tools including Parameter-Efficient Fine-Tuning (P-tuning, Adapters, LoRA, and more), and Model Alignment (SFT, SteerLM, RLHF, and more) using [NeMo-Aligner](https://github.com/NVIDIA/NeMo-Aligner).
+
+
+      **Model Developer:** [NVIDIA](https://www.nvidia.com/en-us/) and [MistralAI](https://mistral.ai/)
+
+
+      **Model Dates:** Mistral-NeMo-12B-Instruct was trained between June 2024 and July 2024.
+
+
+      **Data Freshness:** The pretraining data has a cutoff of April 2024.
+
+
+      **Transformers format:** https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 0db66287-4e8e-4ab5-9fc5-44fdfd9cbdba
+  type: Relationship
+  properties: {}
+  from_: 22f6f250-9c50-40f8-baac-6d9c0cff40df
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/nvidia_Mistral-NeMo-12B-Instruct.json
+  relationship_type: annotatedBy
+- uid: fd72a110-4ab4-4b30-8c40-b678d62905a3
+  type: Relationship
+  properties: {}
+  from_: 2c68384b-4d5b-4aaa-b88b-8b800388b835
+  to_:
+  - d0e8191d-da4a-4f03-abaf-50375d437545
+  relationship_type: uses
+- uid: a5dc8846-adba-4d40-bcb6-09a8ea0af616
+  type: Relationship
+  properties: {}
+  from_: 22f6f250-9c50-40f8-baac-6d9c0cff40df
+  to_:
+  - 2c68384b-4d5b-4aaa-b88b-8b800388b835
+  relationship_type: produces

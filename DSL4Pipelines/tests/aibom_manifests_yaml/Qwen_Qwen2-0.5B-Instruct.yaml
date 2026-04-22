@@ -1,0 +1,114 @@
+uid: 8425ca68-9abd-459c-9588-6bce36c0435a
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2-0.5B-Instruct.json
+  type: SoftwareFile
+  name: Qwen_Qwen2-0.5B-Instruct.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:3849b6a0-af1b-4d0c-ae11-9addc9220f75
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2-0.5B-Instruct.json
+    type: ExternalReference
+  languages: []
+- uid: b8c4c838-8eea-4c6e-ad4f-1ecd3cba4b91
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 28ce86b3-fbf7-4e34-8f57-49ce33fdb0d5
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: Qwen/Qwen2-0.5B
+    type: ExternalReference
+  languages: []
+- uid: 81b0f365-3686-443d-83b1-ec692c1a6e06
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:19.485146+00:00'
+    bom-ref: Qwen/Qwen2-0.5B-Instruct-ad77cc53-3ef3-5729-ba70-3e0c7092bba2
+    name: Qwen/Qwen2-0.5B-Instruct
+    authors:
+    - name: Qwen
+    architectureFamily: qwen2
+    modelArchitecture: Qwen2ForCausalLM
+    description: '## Introduction
+
+
+      Qwen2 is the new series of Qwen large language models. For Qwen2, we release a number of base language models and instruction-tuned language models ranging from 0.5 to 72 billion parameters, including a Mixture-of-Experts model. This repo contains the instruction-tuned 0.5B Qwen2 model.
+
+
+      Compared with the state-of-the-art opensource language models, including the previous released Qwen1.5, Qwen2 has generally surpassed most opensource models and demonstrated competitiveness against proprietary models across a series of benchmarks targeting for language understanding, language generation, multilingual capability, coding, mathematics, reasoning, etc.
+
+
+      For more details, please refer to our [blog](https://qwenlm.github.io/blog/qwen2/), [GitHub](https://github.com/QwenLM/Qwen2), and [Documentation](https://qwen.readthedocs.io/en/latest/).
+
+      <br>
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - qwen2
+    - text-generation
+    - chat
+    - conversational
+    - en
+    - base_model:Qwen/Qwen2-0.5B
+    - base_model:finetune:Qwen/Qwen2-0.5B
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Qwen/Qwen2-0.5B-Instruct
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 3c7431f9-be01-45f8-8637-55472504a912
+  type: Relationship
+  properties: {}
+  from_: 8425ca68-9abd-459c-9588-6bce36c0435a
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Qwen_Qwen2-0.5B-Instruct.json
+  relationship_type: annotatedBy
+- uid: 28418206-eb97-4c2c-ae05-42d301485514
+  type: Relationship
+  properties: {}
+  from_: 81b0f365-3686-443d-83b1-ec692c1a6e06
+  to_:
+  - b8c4c838-8eea-4c6e-ad4f-1ecd3cba4b91
+  relationship_type: uses
+- uid: ec72b9de-f2cc-4b99-853d-d515df8aff71
+  type: Relationship
+  properties: {}
+  from_: 81b0f365-3686-443d-83b1-ec692c1a6e06
+  to_:
+  - 28ce86b3-fbf7-4e34-8f57-49ce33fdb0d5
+  relationship_type: derivedFrom
+- uid: 67d06821-8b59-40e4-aafb-ed3546d27890
+  type: Relationship
+  properties: {}
+  from_: 8425ca68-9abd-459c-9588-6bce36c0435a
+  to_:
+  - 81b0f365-3686-443d-83b1-ec692c1a6e06
+  relationship_type: produces

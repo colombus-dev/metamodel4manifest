@@ -1,0 +1,73 @@
+uid: 68c116e8-c101-4ea8-acec-7a9911ee0743
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ByteDance_SDXL-Lightning.json
+  type: SoftwareFile
+  name: ByteDance_SDXL-Lightning.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:dd36cbf3-c64c-49e5-9dae-ac4edf4b6075
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ByteDance_SDXL-Lightning.json
+    type: ExternalReference
+  languages: []
+- uid: 62ddd86a-e497-4a9e-9d7a-008a6a6222c9
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: b85fabed-282c-4722-a1b3-1399cfd1686c
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:07:20.913208+00:00'
+    bom-ref: ByteDance/SDXL-Lightning-81eea873-aac8-5f66-b0db-3a979bc23198
+    name: ByteDance/SDXL-Lightning
+    authors:
+    - name: ByteDance
+    tags:
+    - diffusers
+    - text-to-image
+    - stable-diffusion
+    - arxiv:2402.13929
+    - license:openrail++
+    - region:us
+  license:
+    name: openrail++
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ByteDance/SDXL-Lightning
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-image
+relations:
+- uid: 80b11a74-4d88-453a-9f40-da86887207de
+  type: Relationship
+  properties: {}
+  from_: 68c116e8-c101-4ea8-acec-7a9911ee0743
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ByteDance_SDXL-Lightning.json
+  relationship_type: annotatedBy
+- uid: 3442dea7-6435-4634-be0d-138c38095f4b
+  type: Relationship
+  properties: {}
+  from_: b85fabed-282c-4722-a1b3-1399cfd1686c
+  to_:
+  - 62ddd86a-e497-4a9e-9d7a-008a6a6222c9
+  relationship_type: uses
+- uid: 9a4d293e-9cde-456b-a14d-85f27c9bd2b0
+  type: Relationship
+  properties: {}
+  from_: 68c116e8-c101-4ea8-acec-7a9911ee0743
+  to_:
+  - b85fabed-282c-4722-a1b3-1399cfd1686c
+  relationship_type: produces

@@ -1,0 +1,83 @@
+uid: db019e42-0055-4a93-812c-c61e234c1c41
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_DialoGPT-large.json
+  type: SoftwareFile
+  name: microsoft_DialoGPT-large.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2720e2cd-1864-492c-9e9b-4219a35fc9e5
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_DialoGPT-large.json
+    type: ExternalReference
+  languages: []
+- uid: bc0081a0-eacb-4de1-ae72-de9145eb0f43
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 3a35595b-ff67-4b0a-ab37-fa5117905a19
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:01.141921+00:00'
+    bom-ref: microsoft/DialoGPT-large-e85f5d46-02ed-5df1-889c-1eb368714325
+    name: microsoft/DialoGPT-large
+    authors:
+    - name: microsoft
+    architectureFamily: gpt2
+    modelArchitecture: GPT2LMHeadModel
+    tags:
+    - transformers
+    - pytorch
+    - tf
+    - jax
+    - gpt2
+    - text-generation
+    - conversational
+    - arxiv:1911.00536
+    - license:mit
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: MIT
+    url: https://spdx.org/licenses/MIT.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/microsoft/DialoGPT-large
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: aecb41bd-994e-491f-91c9-ba84934d63ee
+  type: Relationship
+  properties: {}
+  from_: db019e42-0055-4a93-812c-c61e234c1c41
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/microsoft_DialoGPT-large.json
+  relationship_type: annotatedBy
+- uid: dca2181b-163f-4177-8dcf-fdd8c95ede20
+  type: Relationship
+  properties: {}
+  from_: 3a35595b-ff67-4b0a-ab37-fa5117905a19
+  to_:
+  - bc0081a0-eacb-4de1-ae72-de9145eb0f43
+  relationship_type: uses
+- uid: 1b7729f5-54af-43a9-8f71-68f6d3f61c2f
+  type: Relationship
+  properties: {}
+  from_: db019e42-0055-4a93-812c-c61e234c1c41
+  to_:
+  - 3a35595b-ff67-4b0a-ab37-fa5117905a19
+  relationship_type: produces

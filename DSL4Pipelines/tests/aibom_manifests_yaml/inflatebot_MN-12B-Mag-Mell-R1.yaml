@@ -1,0 +1,110 @@
+uid: 3de8af58-134c-431c-95d2-5c4b60528666
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/inflatebot_MN-12B-Mag-Mell-R1.json
+  type: SoftwareFile
+  name: inflatebot_MN-12B-Mag-Mell-R1.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d76256cf-1c40-4437-9753-e960cf8de9b8
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/inflatebot_MN-12B-Mag-Mell-R1.json
+    type: ExternalReference
+  languages: []
+- uid: 4af60d1c-b5f6-4dd3-a154-72617cad803e
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 7af57262-fdee-4094-8fa4-a3e6c47d4af9
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: IntervitensInc/Mistral-Nemo-Base-2407-chatml, nbeerbower/mistral-nemo-bophades-12B, nbeerbower/mistral-nemo-wissenschaft-12B, elinas/Chronos-Gold-12B-1.0, Fizzarolli/MN-12b-Sunrose, nbeerbower/mistral-nemo-gutenberg-12B-v4, anthracite-org/magnum-12b-v2.5-kto
+    type: ExternalReference
+  languages: []
+- uid: 63e09af1-71a1-4547-9a4c-36933b5bf163
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:28.018406+00:00'
+    bom-ref: inflatebot/MN-12B-Mag-Mell-R1-ded18657-a7bb-5658-a93c-527f39493899
+    name: inflatebot/MN-12B-Mag-Mell-R1
+    authors:
+    - name: inflatebot
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    tags:
+    - transformers
+    - safetensors
+    - mistral
+    - text-generation
+    - mergekit
+    - merge
+    - conversational
+    - arxiv:2311.03099
+    - arxiv:2306.01708
+    - base_model:Fizzarolli/MN-12b-Sunrose
+    - base_model:merge:Fizzarolli/MN-12b-Sunrose
+    - base_model:IntervitensInc/Mistral-Nemo-Base-2407-chatml
+    - base_model:merge:IntervitensInc/Mistral-Nemo-Base-2407-chatml
+    - base_model:anthracite-org/magnum-v2.5-12b-kto
+    - base_model:merge:anthracite-org/magnum-v2.5-12b-kto
+    - base_model:elinas/Chronos-Gold-12B-1.0
+    - base_model:merge:elinas/Chronos-Gold-12B-1.0
+    - base_model:nbeerbower/mistral-nemo-bophades-12B
+    - base_model:merge:nbeerbower/mistral-nemo-bophades-12B
+    - base_model:nbeerbower/mistral-nemo-gutenberg-12B-v4
+    - base_model:merge:nbeerbower/mistral-nemo-gutenberg-12B-v4
+    - base_model:nbeerbower/mistral-nemo-wissenschaft-12B
+    - base_model:merge:nbeerbower/mistral-nemo-wissenschaft-12B
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/inflatebot/MN-12B-Mag-Mell-R1
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 737fd909-533e-4146-ab40-09215e44bdcd
+  type: Relationship
+  properties: {}
+  from_: 3de8af58-134c-431c-95d2-5c4b60528666
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/inflatebot_MN-12B-Mag-Mell-R1.json
+  relationship_type: annotatedBy
+- uid: 2b6f44d1-cc0f-44d1-aaff-eef069badabc
+  type: Relationship
+  properties: {}
+  from_: 63e09af1-71a1-4547-9a4c-36933b5bf163
+  to_:
+  - 4af60d1c-b5f6-4dd3-a154-72617cad803e
+  relationship_type: uses
+- uid: ee01c766-7a41-428d-bcd1-c19738a20b46
+  type: Relationship
+  properties: {}
+  from_: 63e09af1-71a1-4547-9a4c-36933b5bf163
+  to_:
+  - 7af57262-fdee-4094-8fa4-a3e6c47d4af9
+  relationship_type: derivedFrom
+- uid: 43bff478-56c3-4a67-8119-d00069725300
+  type: Relationship
+  properties: {}
+  from_: 3de8af58-134c-431c-95d2-5c4b60528666
+  to_:
+  - 63e09af1-71a1-4547-9a4c-36933b5bf163
+  relationship_type: produces

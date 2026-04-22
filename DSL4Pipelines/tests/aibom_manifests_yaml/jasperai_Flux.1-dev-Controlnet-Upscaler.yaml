@@ -1,0 +1,94 @@
+uid: 08c1e125-2023-4446-ac90-a62203e26421
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jasperai_Flux.1-dev-Controlnet-Upscaler.json
+  type: SoftwareFile
+  name: jasperai_Flux.1-dev-Controlnet-Upscaler.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:03501f3b-e08f-4f69-abfc-a8df6e2e7435
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jasperai_Flux.1-dev-Controlnet-Upscaler.json
+    type: ExternalReference
+  languages: []
+- uid: 91cc12d6-8346-4ec1-a7d2-266224ddd4fb
+  type: SoftwareFile
+  name: diffusers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d16537b9-6b42-4878-a2f8-0cae2e15748b
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: black-forest-labs/FLUX.1-dev
+    type: ExternalReference
+  languages: []
+- uid: 7d720d8c-0ae1-468e-b937-b81df40b51f0
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:53.938727+00:00'
+    bom-ref: jasperai/Flux.1-dev-Controlnet-Upscaler-d09ad99a-5861-54b8-8a72-6c0e9419cddd
+    name: jasperai/Flux.1-dev-Controlnet-Upscaler
+    authors:
+    - name: jasperai
+    tags:
+    - diffusers
+    - safetensors
+    - ControlNet
+    - super-resolution
+    - upscaler
+    - image-to-image
+    - base_model:black-forest-labs/FLUX.1-dev
+    - base_model:finetune:black-forest-labs/FLUX.1-dev
+    - license:other
+    - region:us
+  license:
+    name: flux-1-dev-non-commercial-license
+    url: https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-to-image
+relations:
+- uid: b631cb2c-87d0-4810-8aad-ff327917a5e6
+  type: Relationship
+  properties: {}
+  from_: 08c1e125-2023-4446-ac90-a62203e26421
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/jasperai_Flux.1-dev-Controlnet-Upscaler.json
+  relationship_type: annotatedBy
+- uid: a49e8c15-e2c8-48f1-aacc-1441d3a64c88
+  type: Relationship
+  properties: {}
+  from_: 7d720d8c-0ae1-468e-b937-b81df40b51f0
+  to_:
+  - 91cc12d6-8346-4ec1-a7d2-266224ddd4fb
+  relationship_type: uses
+- uid: b16c4705-19e0-4414-96fc-e165c8c1a97f
+  type: Relationship
+  properties: {}
+  from_: 7d720d8c-0ae1-468e-b937-b81df40b51f0
+  to_:
+  - d16537b9-6b42-4878-a2f8-0cae2e15748b
+  relationship_type: derivedFrom
+- uid: 523c6b20-3e41-4004-a0e6-7264256099b6
+  type: Relationship
+  properties: {}
+  from_: 08c1e125-2023-4446-ac90-a62203e26421
+  to_:
+  - 7d720d8c-0ae1-468e-b937-b81df40b51f0
+  relationship_type: produces

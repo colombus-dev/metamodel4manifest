@@ -1,0 +1,57 @@
+uid: 209e77f4-ebc8-4ffc-ae53-a350aaf094ee
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Mozilla_whisperfile.json
+  type: SoftwareFile
+  name: Mozilla_whisperfile.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:002766d3-3812-4004-acf7-fde0614f5006
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Mozilla_whisperfile.json
+    type: ExternalReference
+  languages: []
+- uid: 84b81eff-453e-4f25-9343-953a339715fe
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:20.642597+00:00'
+    bom-ref: Mozilla/whisperfile-02cf8986-c86c-5b07-8114-5362f865c069
+    name: Mozilla/whisperfile
+    authors:
+    - name: Mozilla
+    tags:
+    - llamafile
+    - license:apache-2.0
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Mozilla/whisperfile
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: ''
+relations:
+- uid: 99fa36d7-a98f-41a4-ba98-f054ca57ee8f
+  type: Relationship
+  properties: {}
+  from_: 209e77f4-ebc8-4ffc-ae53-a350aaf094ee
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Mozilla_whisperfile.json
+  relationship_type: annotatedBy
+- uid: c9cc2894-308c-4999-99c2-eb273c29d938
+  type: Relationship
+  properties: {}
+  from_: 209e77f4-ebc8-4ffc-ae53-a350aaf094ee
+  to_:
+  - 84b81eff-453e-4f25-9343-953a339715fe
+  relationship_type: produces

@@ -1,0 +1,87 @@
+uid: dfe854de-7857-465c-89b7-b3f35566b073
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ali-vilab_modelscope-damo-text-to-video-synthesis.json
+  type: SoftwareFile
+  name: ali-vilab_modelscope-damo-text-to-video-synthesis.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:552bd0f3-9867-479d-a3cb-86d837cdb9eb
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ali-vilab_modelscope-damo-text-to-video-synthesis.json
+    type: ExternalReference
+  languages: []
+- uid: 3f641c7a-6868-4ce0-9be5-bb56d22db6ac
+  type: SoftwareFile
+  name: open_clip
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 35a2966e-84d4-485e-b561-8cbff79c1147
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:02:36.942553+00:00'
+    bom-ref: ali-vilab/modelscope-damo-text-to-video-synthesis-6c146613-c38e-5406-976b-01542d49a89b
+    name: ali-vilab/modelscope-damo-text-to-video-synthesis
+    authors:
+    - name: ali-vilab
+    description: '## Model Description
+
+
+      The text-to-video generation diffusion model consists of three sub-networks: text feature extraction, text feature-to-video latent space diffusion model, and video latent space to video visual space. The overall model parameters are about 1.7 billion. Support English input. The diffusion model adopts the Unet3D structure, and realizes the function of video generation through the iterative denoising process from the pure Gaussian noise video.
+
+
+      **This model is meant for research purposes. Please look at the [model limitations and biases](#model-limitations-and-biases) and [misuse, malicious use and excessive use](#misuse-malicious-use-and-excessive-use) sections.**
+
+
+      **How to expect the model to be used and where it is applicable**
+
+
+      This model has a wide range of applications and can reason and generate videos based on arbitrary English text descriptions.
+
+      '
+    tags:
+    - open_clip
+    - text-to-video
+    - license:cc-by-nc-4.0
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/ali-vilab/modelscope-damo-text-to-video-synthesis
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-video
+relations:
+- uid: 100d845b-e23b-49ad-8d5b-a06202e32e54
+  type: Relationship
+  properties: {}
+  from_: dfe854de-7857-465c-89b7-b3f35566b073
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/ali-vilab_modelscope-damo-text-to-video-synthesis.json
+  relationship_type: annotatedBy
+- uid: b5a289f9-5172-4730-b662-be5cb9bfd735
+  type: Relationship
+  properties: {}
+  from_: 35a2966e-84d4-485e-b561-8cbff79c1147
+  to_:
+  - 3f641c7a-6868-4ce0-9be5-bb56d22db6ac
+  relationship_type: uses
+- uid: 98e232fd-1a9b-4505-ac32-b6aee66e4793
+  type: Relationship
+  properties: {}
+  from_: dfe854de-7857-465c-89b7-b3f35566b073
+  to_:
+  - 35a2966e-84d4-485e-b561-8cbff79c1147
+  relationship_type: produces

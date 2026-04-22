@@ -1,0 +1,73 @@
+uid: b843a0ff-e41f-45ac-8595-91895c0ab305
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/2Noise_ChatTTS.json
+  type: SoftwareFile
+  name: 2Noise_ChatTTS.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:04e80126-9ce6-40aa-a6fb-92b69266c77b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/2Noise_ChatTTS.json
+    type: ExternalReference
+  languages: []
+- uid: 447d0d8c-ca9a-427b-8732-bedcdf8ad4f8
+  type: SoftwareFile
+  name: chat_tts
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: d0d9311d-6b34-4aba-bc92-0f6a9509119f
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:04:22.274509+00:00'
+    bom-ref: 2Noise/ChatTTS-ff1fa729-def8-554c-8bde-1dc469516fc0
+    name: 2Noise/ChatTTS
+    authors:
+    - name: 2Noise
+    tags:
+    - chat_tts
+    - safetensors
+    - text-to-audio
+    - license:cc-by-nc-4.0
+    - region:us
+  license:
+    id: CC-BY-NC-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/2Noise/ChatTTS
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-audio
+relations:
+- uid: 4ddae97e-10b1-4a8b-93a3-24bc381d3a27
+  type: Relationship
+  properties: {}
+  from_: b843a0ff-e41f-45ac-8595-91895c0ab305
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/2Noise_ChatTTS.json
+  relationship_type: annotatedBy
+- uid: 91869fef-5313-429a-a92f-e21daa527d7f
+  type: Relationship
+  properties: {}
+  from_: d0d9311d-6b34-4aba-bc92-0f6a9509119f
+  to_:
+  - 447d0d8c-ca9a-427b-8732-bedcdf8ad4f8
+  relationship_type: uses
+- uid: 7fb16c9b-a9d1-460a-b0b2-307d196e5e40
+  type: Relationship
+  properties: {}
+  from_: b843a0ff-e41f-45ac-8595-91895c0ab305
+  to_:
+  - d0d9311d-6b34-4aba-bc92-0f6a9509119f
+  relationship_type: produces

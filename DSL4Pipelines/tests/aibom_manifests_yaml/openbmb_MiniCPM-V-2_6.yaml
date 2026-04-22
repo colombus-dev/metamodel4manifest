@@ -1,0 +1,112 @@
+uid: 2243ae99-e994-4ab6-932f-231fa4fd29f9
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openbmb_MiniCPM-V-2_6.json
+  type: SoftwareFile
+  name: openbmb_MiniCPM-V-2_6.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:d1f3a90a-d6a4-4638-9321-8a693a488cfd
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openbmb_MiniCPM-V-2_6.json
+    type: ExternalReference
+  languages: []
+- uid: 782d3e8d-fc5a-4656-a1e3-205e83d6461d
+  type: Data
+  properties:
+    bom-ref: openbmb/RLAIF-V-Dataset-d1ff380b-52a0-586f-946e-773a0ef8556f
+    name: openbmb/RLAIF-V-Dataset
+    content_url: https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset
+    task_categories: visual-question-answering
+    size_categories: 10K<n<100K
+    pretty_name: RLAIF-V-Dataset
+    license: cc-by-nc-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: openbmb/RLAIF-V-Dataset-d1ff380b-52a0-586f-946e-773a0ef8556f
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: f244c38b-7205-491d-aaaf-55ee47aaf351
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 76a723fe-d0c3-47b7-a2be-d9758ba761b4
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:30.966665+00:00'
+    bom-ref: openbmb/MiniCPM-V-2_6-e2428f04-3157-5daa-a1dc-324d158420b6
+    name: openbmb/MiniCPM-V-2_6
+    authors:
+    - name: openbmb
+    architectureFamily: minicpmv
+    modelArchitecture: MiniCPMV
+    tags:
+    - transformers
+    - safetensors
+    - minicpmv
+    - feature-extraction
+    - minicpm-v
+    - vision
+    - ocr
+    - multi-image
+    - video
+    - custom_code
+    - image-text-to-text
+    - conversational
+    - multilingual
+    - dataset:openbmb/RLAIF-V-Dataset
+    - arxiv:2408.01800
+    - region:us
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/openbmb/MiniCPM-V-2_6
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: image-text-to-text
+relations:
+- uid: a14396bb-1db1-4362-bd1a-b6314613357a
+  type: Relationship
+  properties: {}
+  from_: 2243ae99-e994-4ab6-932f-231fa4fd29f9
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/openbmb_MiniCPM-V-2_6.json
+  relationship_type: annotatedBy
+- uid: 9eb5b16a-d4ae-4069-b475-7142383bea28
+  type: Relationship
+  properties: {}
+  from_: 76a723fe-d0c3-47b7-a2be-d9758ba761b4
+  to_:
+  - 782d3e8d-fc5a-4656-a1e3-205e83d6461d
+  relationship_type: uses
+- uid: 4f02b290-d4ee-4efa-bc4a-9bee608bfd57
+  type: Relationship
+  properties: {}
+  from_: 76a723fe-d0c3-47b7-a2be-d9758ba761b4
+  to_:
+  - f244c38b-7205-491d-aaaf-55ee47aaf351
+  relationship_type: uses
+- uid: c382f3bc-7034-4e19-9d56-484d23940641
+  type: Relationship
+  properties: {}
+  from_: 2243ae99-e994-4ab6-932f-231fa4fd29f9
+  to_:
+  - 76a723fe-d0c3-47b7-a2be-d9758ba761b4
+  relationship_type: produces

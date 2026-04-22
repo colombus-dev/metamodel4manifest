@@ -1,0 +1,93 @@
+uid: c943850d-e52b-4bad-9ae4-5cd399a825c8
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Deci_DeciLM-7B.json
+  type: SoftwareFile
+  name: Deci_DeciLM-7B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:f5d4e955-673a-4710-87b4-bab42e3aee8b
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Deci_DeciLM-7B.json
+    type: ExternalReference
+  languages: []
+- uid: 2e7f77b9-86a4-4c21-a4f9-f91906be2022
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: a5cea143-5d25-4aeb-8c1a-04ba0543b71e
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:10:37.593808+00:00'
+    bom-ref: Deci/DeciLM-7B-ecd6332f-eabe-508c-8072-69833cfa5045
+    name: Deci/DeciLM-7B
+    authors:
+    - name: Deci
+    architectureFamily: deci
+    modelArchitecture: DeciLMForCausalLM
+    description: '## Model Details
+
+      '
+    tags:
+    - transformers
+    - safetensors
+    - deci
+    - text-generation
+    - conversational
+    - custom_code
+    - en
+    - license:apache-2.0
+    - autotrain_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/Deci/DeciLM-7B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '## Uses
+
+
+      The model is intended for commercial and research use in English and can be fine-tuned for various tasks and languages.
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: e9d804cb-addf-496a-9192-10759dbc2e03
+  type: Relationship
+  properties: {}
+  from_: c943850d-e52b-4bad-9ae4-5cd399a825c8
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/Deci_DeciLM-7B.json
+  relationship_type: annotatedBy
+- uid: 1b6d59cb-d0c1-4c90-acca-87ed13179b44
+  type: Relationship
+  properties: {}
+  from_: a5cea143-5d25-4aeb-8c1a-04ba0543b71e
+  to_:
+  - 2e7f77b9-86a4-4c21-a4f9-f91906be2022
+  relationship_type: uses
+- uid: 533c36e7-5ff5-40ef-b391-da8fb5a3a8bb
+  type: Relationship
+  properties: {}
+  from_: c943850d-e52b-4bad-9ae4-5cd399a825c8
+  to_:
+  - a5cea143-5d25-4aeb-8c1a-04ba0543b71e
+  relationship_type: produces

@@ -1,0 +1,163 @@
+uid: dab5f9e6-960e-4408-8fda-1d1a2fe2fcbb
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/teknium_OpenHermes-2.5-Mistral-7B.json
+  type: SoftwareFile
+  name: teknium_OpenHermes-2.5-Mistral-7B.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:2381ae25-3ed9-423f-86de-8d87ae9f5948
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/teknium_OpenHermes-2.5-Mistral-7B.json
+    type: ExternalReference
+  languages: []
+- uid: cfd4955a-3082-478c-b1d3-588c229f3896
+  type: Data
+  properties:
+    bom-ref: teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c
+    name: teknium/OpenHermes-2.5
+    content_url: https://huggingface.co/datasets/teknium/OpenHermes-2.5
+    pretty_name: OpenHermes 2.5
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c
+    type: ExternalReference
+  languages:
+  - eng
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: e28c2496-0b31-405e-95d2-d2e38a539341
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: 4140b682-002f-4342-abe7-d0ec50f7d236
+  type: MLModel
+  properties: {}
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: mistralai/Mistral-7B-v0.1
+    type: ExternalReference
+  languages: []
+- uid: 8e609e55-3238-4b9d-8e57-ceaff3513f27
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:09:02.600283+00:00'
+    bom-ref: teknium/OpenHermes-2.5-Mistral-7B-9526cc42-33f2-595e-b649-52b47c50b5ac
+    name: teknium/OpenHermes-2.5-Mistral-7B
+    authors:
+    - name: teknium
+    architectureFamily: mistral
+    modelArchitecture: MistralForCausalLM
+    description: '## Model description
+
+
+      OpenHermes 2.5 Mistral 7B is a state of the art Mistral Fine-tune, a continuation of OpenHermes 2 model, which trained on additional code datasets.
+
+
+      Potentially the most interesting finding from training on a good ratio (est. of around 7-14% of the total dataset) of code instruction was that it has boosted several non-code benchmarks, including TruthfulQA, AGIEval, and GPT4All suite. It did however reduce BigBench benchmark score, but the net gain overall is significant.
+
+
+      The code it trained on also improved it''s humaneval score (benchmarking done by Glaive team) from **43% @ Pass 1** with Open Herms 2 to **50.7% @ Pass 1** with Open Hermes 2.5.
+
+
+      OpenHermes was trained on 1,000,000 entries of primarily GPT-4 generated data, as well as other high quality data from open datasets across the AI landscape. [More details soon]
+
+
+      Filtering was extensive of these public datasets, as well as conversion of all formats to ShareGPT, which was then further transformed by axolotl to use ChatML.
+
+
+      Huge thank you to [GlaiveAI](https://twitter.com/glaiveai) and [a16z](https://twitter.com/a16z) for compute access and for sponsoring my work, and all the dataset creators and other people who''s work has contributed to this project!
+
+
+      Follow all my updates in ML and AI on Twitter: https://twitter.com/Teknium1
+
+
+      Support me on Github Sponsors: https://github.com/sponsors/teknium1
+
+
+      **NEW**: Chat with Hermes on LMSys'' Chat Website! https://chat.lmsys.org/?single&model=openhermes-2.5-mistral-7b
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - safetensors
+    - mistral
+    - text-generation
+    - instruct
+    - finetune
+    - chatml
+    - gpt4
+    - synthetic data
+    - distillation
+    - conversational
+    - en
+    - dataset:teknium/OpenHermes-2.5
+    - base_model:mistralai/Mistral-7B-v0.1
+    - base_model:finetune:mistralai/Mistral-7B-v0.1
+    - license:apache-2.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: Apache-2.0
+    url: https://spdx.org/licenses/Apache-2.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/teknium/OpenHermes-2.5-Mistral-7B
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+relations:
+- uid: 245bd872-17a6-41da-bc91-ee9b2a83b31f
+  type: Relationship
+  properties: {}
+  from_: dab5f9e6-960e-4408-8fda-1d1a2fe2fcbb
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/teknium_OpenHermes-2.5-Mistral-7B.json
+  relationship_type: annotatedBy
+- uid: 4c1d04fe-517e-4152-9585-9a14e986fbb7
+  type: Relationship
+  properties: {}
+  from_: 8e609e55-3238-4b9d-8e57-ceaff3513f27
+  to_:
+  - cfd4955a-3082-478c-b1d3-588c229f3896
+  relationship_type: uses
+- uid: bfdd80b5-7af7-40ef-8059-c87eaaf887a0
+  type: Relationship
+  properties: {}
+  from_: 8e609e55-3238-4b9d-8e57-ceaff3513f27
+  to_:
+  - e28c2496-0b31-405e-95d2-d2e38a539341
+  relationship_type: uses
+- uid: b136ee2e-687f-4d60-92eb-4ad0c54e0219
+  type: Relationship
+  properties: {}
+  from_: 8e609e55-3238-4b9d-8e57-ceaff3513f27
+  to_:
+  - 4140b682-002f-4342-abe7-d0ec50f7d236
+  relationship_type: derivedFrom
+- uid: 0ed9b346-7afe-49a4-9f8a-d5eb5693a33e
+  type: Relationship
+  properties: {}
+  from_: dab5f9e6-960e-4408-8fda-1d1a2fe2fcbb
+  to_:
+  - 8e609e55-3238-4b9d-8e57-ceaff3513f27
+  relationship_type: produces

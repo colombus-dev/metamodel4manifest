@@ -1,0 +1,73 @@
+uid: 637b9177-1ca5-41ad-ac3d-8947220f5c3c
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fishaudio_fish-speech-1.5.json
+  type: SoftwareFile
+  name: fishaudio_fish-speech-1.5.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:68542f6f-e69b-49de-af8b-5113128c99b2
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fishaudio_fish-speech-1.5.json
+    type: ExternalReference
+  languages: []
+- uid: 9066cc03-23c3-4bd1-a9ba-e07300b6c1ee
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:03:43.601190+00:00'
+    bom-ref: fishaudio/fish-speech-1.5-0e9267c9-8d7b-5aae-86d8-015d36da3fad
+    name: fishaudio/fish-speech-1.5
+    authors:
+    - name: fishaudio
+    architectureFamily: dual_ar
+    tags:
+    - dual_ar
+    - text-to-speech
+    - zh
+    - en
+    - de
+    - ja
+    - fr
+    - es
+    - ko
+    - ar
+    - nl
+    - ru
+    - it
+    - pl
+    - pt
+    - arxiv:2411.01156
+    - license:cc-by-nc-sa-4.0
+    - region:us
+  license:
+    id: CC-BY-NC-SA-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-SA-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/fishaudio/fish-speech-1.5
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-to-speech
+relations:
+- uid: 79fe1be6-9aad-47c1-a799-c751914037af
+  type: Relationship
+  properties: {}
+  from_: 637b9177-1ca5-41ad-ac3d-8947220f5c3c
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/aiboms/fishaudio_fish-speech-1.5.json
+  relationship_type: annotatedBy
+- uid: 75eed930-1fa5-4a8e-9cc5-16839ff22c99
+  type: Relationship
+  properties: {}
+  from_: 637b9177-1ca5-41ad-ac3d-8947220f5c3c
+  to_:
+  - 9066cc03-23c3-4bd1-a9ba-e07300b6c1ee
+  relationship_type: produces
