@@ -29,6 +29,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import (
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 
 from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import Taxonomy, Category
+from DSL4Pipelines.src.metamodel.artefacts.Consideration import Consideration
 
 
 class YAMLSerializer:
@@ -51,7 +52,8 @@ class YAMLSerializer:
         "Relationship": Relationship,
         "ExternalReference": ExternalReference,
         "Category": Category,
-        "Taxonomy": Taxonomy
+        "Taxonomy": Taxonomy,
+        "Consideration": Consideration,
     }
 
     @staticmethod
@@ -232,6 +234,11 @@ class YAMLSerializer:
             ),
             Category: lambda d: from_dict(
                 data_class=YAMLSerializer._get_real_class(d, Category),
+                data=d,
+                config=config_local,
+            ),
+            Consideration: lambda d: from_dict(
+                data_class=YAMLSerializer._get_real_class(d, Consideration),
                 data=d,
                 config=config_local,
             ),

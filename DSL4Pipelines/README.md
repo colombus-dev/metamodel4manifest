@@ -101,7 +101,7 @@ en utilisant les éléments du métamodèle, pour ensuite le valider et le visua
       - production du rapport de validation
 
 ### Transformation d'un SBOM en un manifeste de pipeline
-pas fait encore, mais on peut imaginer que le SBOM décrit les composants d'un SML et que le manifeste de pipeline décrit les étapes de construction du SML à partir de ces composants.
+Le SBOM décrit un Modèle et que le manifeste de pipeline décrit les étapes de construction du SML à partir de ces composants.
 
    1. Présentation du SBOM qui décrit les composants d'un SML
    2. Présentation du code de construction du manifeste à partir du SBOM
@@ -112,6 +112,9 @@ pas fait encore, mais on peut imaginer que le SBOM décrit les composants d'un S
    5. Modification du SBOM pour résoudre des erreurs de validation
    6. re-génération du manifeste à partir du SBOM après modification
    7. re-vérification de la validité du manifeste après modification
+
+### Filtrages de modèles par des règles personnalisées
+
 
 ### Definitions de règles de validation personnalisées
 

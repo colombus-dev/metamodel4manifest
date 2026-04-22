@@ -10,10 +10,11 @@ Each rule is implemented as a function that takes
     including a label, a success status, a score, and evidence to support the evaluation.
 """
 
-from typing import Iterator
+from typing import Iterator, Any
 
 from DSL4Pipelines.src.tools.queries.manifest_query import ManifestQuery
 from DSL4Pipelines.src.tools.queries.metarules import eval_rule, EvaluationResult
+from DSL4Pipelines.src.metamodel.artefacts.artefacts import Artefact
 
 
 @eval_rule(name="Dataset and Model Presence", weight=1.0)
@@ -49,26 +50,19 @@ def check_french_support(ctx: ManifestQuery) -> Iterator[EvaluationResult]:
     The rule is designed to give a score based on the presence of French in the datasets
     and the performance on French benchmarks, with a penalty for the presence of other languages."""
 
-    # 1. Vérification des données
-    datasets = ctx.get_artifacts(type="Data")
-    # collect all languages from all datasets and check if "french" is among them
-    languages = {lang.strip().lower() for d in datasets for lang in d.languages}
-    has_fr = "french" in languages
+    target_languages = {"french", "fr"}
 
-    score = 0.0
-    if has_fr:
-        score = (
-            1.0 - (len(languages) - 1) * 0.2
-        )  # pénalité de 0.2 pour chaque langue étrangère supplémentaire
+    datasets, has_languages, score = evaluate_language_readiness(ctx, target_languages)
 
     yield EvaluationResult(
         label="Dataset contient du français",
-        success=has_fr,
+        success=has_languages,
         score=score,
         evidence=f"Langues trouvées: {[d.languages for d in datasets]}",
     )
 
     # 2. Vérification des performances
+    #@todo : bizarre
     bench_fr = ctx.get_metrics(kind="accuracy")  # , slice="fr-test")
 
     if bench_fr:
@@ -87,6 +81,41 @@ def check_french_support(ctx: ManifestQuery) -> Iterator[EvaluationResult]:
             evidence="Aucun benchmark de performance en français trouvé",
         )
 
+@eval_rule(name="English Readiness", weight=1.0)
+def check_english_support(ctx: ManifestQuery) -> Iterator[EvaluationResult]:
+    """This rule evaluates the readiness of the project for French language processing.
+    It checks if there are datasets that include French as a language
+    and if there are performance metrics that indicate good performance on French benchmarks.
+    The rule is designed to give a score based on the presence of French in the datasets
+    and the performance on French benchmarks, with a penalty for the presence of other languages."""
+
+    target_languages = {"en", "eng", "english", "eg"}
+
+    datasets, has_languages, score = evaluate_language_readiness(ctx, target_languages)
+
+    yield EvaluationResult(
+        label="Dataset contains English",
+        success=has_languages,
+        score=score,
+        evidence=f"Found languages: {[d.languages for d in datasets]}",
+    )
+
+def evaluate_language_readiness(ctx: ManifestQuery, target_languages: set[str]) -> tuple[
+    set[Any], float, list[Artefact]]:
+    # 1. Vérification des données
+    datasets = ctx.get_artifacts(type="Data")
+    # collect all languages from all datasets and check if "french" is among them
+    languages = {lang.strip().lower() for d in datasets for lang in d.languages}
+    has_languages = languages.intersection(target_languages)
+    # has_fr = "french" in languages or "fr" in languages
+
+    score = 0.0
+    if has_languages:
+        score = (
+                1.0 - (len(languages) - 1) * 0.2
+        )  # pénalité de 0.2 pour chaque langue étrangère supplémentaire
+    return datasets, has_languages, score
+
 
 @eval_rule(name="Pureté Linguistique Globale", weight=2.0)
 def rule_global_french_purity(ctx):
@@ -97,13 +126,46 @@ def rule_global_french_purity(ctx):
     while the presence of other languages reduces the score.
     A project with no French datasets gets a score of 0.0.
     """
-    all_scores = []
 
+
+    target_languages = {"french", "fr"}
+
+    all_scores, final_score = evaluate_purety(ctx, target_languages)
+
+    yield EvaluationResult(
+        label="Pipeline Global",
+        success=final_score > 0.5,
+        score=round(final_score, 2),
+        evidence=f"Analyse sur {len(all_scores)} datasets.",
+    )
+
+@eval_rule(name="Language purity", weight=2.0)
+def rule_global_english_purity(ctx):
+    """This rule evaluates the overall "purity" of the project in terms of english language support.
+    It checks all datasets in the manifest and
+    calculates a score based on the presence of French and the number of other languages.
+    The idea is that a project that has only French datasets gets a score of 1.0,
+    while the presence of other languages reduces the score.
+    A project with no French datasets gets a score of 0.0.
+    """
+    target_languages = {"en","eg", "english","eng"}
+
+    all_scores, final_score = evaluate_purety(ctx, target_languages)
+
+    yield EvaluationResult(
+        label="Pipeline Global",
+        success=final_score > 0.5,
+        score=round(final_score, 2),
+        evidence=f"Analyse on {len(all_scores)} datasets.",
+    )
+
+def evaluate_purety(ctx, target_languages: set[str]) -> tuple[float, list[Any]]:
+    all_scores = []
     datasets = ctx.get_artifacts(type="Data")
     for d in datasets:
         langs = [l.lower() for l in d.languages]
 
-        if "french" in langs:
+        if any(lang in target_languages for lang in langs):
             # Score de pureté : 1.0 si seul, baisse si multilingue
             purity = 1.0 / len(langs)
             all_scores.append(purity)
@@ -112,16 +174,10 @@ def rule_global_french_purity(ctx):
             all_scores.append(0.0)
 
     if not all_scores:
-        return
-
-    final_score = sum(all_scores) / len(all_scores)
-
-    yield EvaluationResult(
-        label="Pipeline Global",
-        success=final_score > 0.5,
-        score=round(final_score, 2),
-        evidence=f"Analyse sur {len(all_scores)} datasets.",
-    )
+        final_score = -1.0  # Indique l'absence totale de datasets
+    else:
+        final_score = sum(all_scores) / len(all_scores)
+    return all_scores, final_score
 
 
 @eval_rule(name="Ratio de Spécialisation", weight=1.0)
@@ -160,6 +216,20 @@ def rule_pollution_ratio(ctx):
     )
 
 
+#@eval_rule(name="Pureté Linguistique Globale", weight=2.0)
+def rule_analyze_modelCard_fields(ctx):
+    mcs = ctx.get_artifacts(type="ModelCard")
+    #get the model name ???
+    model_name = mcs.get("name", "Unknown Model")
+    print(f"--- Analysis Report for: {model_name} ---")
+    # 1. Vérification des "Considerations" (Ethique/Usage)
+    considerations = mcs.get("modelCard", {}).get("considerations", {})
+    use_cases = considerations.get("useCases", "")
+
+    # On vérifie si c'est vide ou si ça contient juste le template par défaut
+    is_documented = bool(use_cases and use_cases.strip() and use_cases.strip() != "Describe the intended use cases for this model here.")
+
+
 # --- Usage Examples ---
 # =====================================================================
 # ---Test bloc and usage example---
@@ -185,3 +255,4 @@ if __name__ == "__main__":
 #    rules = list
 #    report = engine.run_rules(manifest, rules)
 #    print(report)
+

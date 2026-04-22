@@ -24,7 +24,7 @@ def save_in_file(path: str, file_name: str, input: str):
 # Print the current working directory
 def print_cwd():
     cwd = os.getcwd()
-    print(f"\nCurrent working directory: {cwd}")
+    logger.debug(f"\nCurrent working directory: {cwd}")
 
 
 #check if the file or directory exists

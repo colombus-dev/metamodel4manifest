@@ -12,12 +12,15 @@ from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType
 from DSL4Pipelines.src.tools.toFile import print_cwd
 from DSL4Pipelines.src.metamodel.artefacts.ml_artefacts import MLModel, Data
-
+from DSL4Pipelines.src.metamodel.artefacts.Consideration import Consideration
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import FileKind
 
 
 # Dans aibom_translator.py
 import logging
+
+
+
 logging.basicConfig(
     level=logging.INFO, # Niveau par défaut pour TOUT le monde
     format='%(name)s - %(levelname)s - %(message)s'
@@ -148,18 +151,88 @@ class AIBOMTranslator:
         manage_remaining_properties(component, component_treated_properties, mlmodel_properties)
         return mlmodel_properties
 
+# ----------------
+# This method will extract information about the model
+# from the model card section of the AIBOM metadata and
+#set it as properties of the MLModel artefact,
+# then add this model as an artefact of the manifest and
+#create a relation of type "annotatedBy" between the manifest and the model.
+# ------------------
+
     def deal_with_modelCard_in_component(self, modelcard, mlmodel_properties) -> Any:
         "This method will extract information about the model from the model card section of the AIBOM metadata and set it as properties of the MLModel artefact"
         modelcard_treated_properties = set()  # Set to keep track of properties that have been treated in the model card section
-        modelcard_treated_properties.add("task")
+
+        #deal with the model parameters section of the model card, which contains information about the model,
+        # and set it as properties of the MLModel artefact,
+        modelcard_treated_properties.add("modelParameters")
+        self.deal_with_modelParameters_of_modelcard(mlmodel_properties, modelcard)
+
+        #deal with the library used by the model, which is a property of the model card,
+        # we will create a new artefact for the library and create a relation of type "uses" between the model and the library,
+        # and we will add the "library_name" property to the treated properties of the model card
+        modelcard_treated_properties.add("properties")
+        self.deal_with_properties_of_modelcard(mlmodel_properties, modelcard)
+
+        modelcard_treated_properties.add("consideration")
+        self.deal_with_consideration_of_modelcard(mlmodel_properties, modelcard)
+        manage_remaining_properties(modelcard, modelcard_treated_properties, mlmodel_properties)
+
+        return mlmodel_properties
+
+    def deal_with_consideration_of_modelcard(self, mlmodel_properties, modelcard):
+        consideration = modelcard.get("consideration", {})
+        if consideration:
+            self.ml_model.consideration = Consideration(
+                use_cases = consideration.get("useCases",[]),
+                limitations = consideration.get("limitation", []),  # Ce que le modèle ne sait pas faire
+                ethical_risks = consideration.get("ethical_risks",[]),
+                intended_users = [] # The model card does not contain information about the intended users of the model, so we set it to "unknown"
+            )
+
+
+    def deal_with_properties_of_modelcard(self, mlmodel_properties, modelcard):
+        modelCard_properties = modelcard.get("properties", {})
+        prop_treated_properties = set()
+        prop_treated_properties.add("library_name")
+        # PROBLEM
+        # @todo we have to create a new artefact for the model card and link it to the model with a relation of type "annotatedBy", because the model card contains information about the model but is not the model itself, and we want to keep this information in the manifest as well.
+        # self.manifest.artefacts.append(modelcard)
+        # build dependency relation between the model and the library it uses (e.g. diffusers, transformers, etc.) based on the properties of the model card, if they exist and if they contain a property with name "library_name" and value "diffusers"
+        logger.debug(f"Model card : {modelcard}")
+        logger.debug(f"Model card properties : {modelCard_properties}")
+
+        # Deal with the model card properties and set them as properties of the model card
+        # @todo then add the model card as an artefact of the manifest and create a relation of type "annotatedBy" between the model and the model card.
+
+        library = self.extract_library(modelCard_properties)
+        if library:
+            # we create a relation of type "uses" between the model and the library
+            relation = Relationship(from_=self.ml_model,
+                                    to_=[library],
+                                    relationship_type=RelationshipType.USES)
+            self.manifest.relations.append(relation)
+
+        prop_treated_properties.add("base_model")
+# Deal with a base_model property of the model card, which indicates that the model is based on another model, we will create a relation of type "derivedFrom" between the model and the base model
+        baseModel = self.extract_base_model(modelCard_properties)
+        if baseModel:
+            relation = Relationship(from_=self.ml_model,
+                                    to_=[baseModel],
+                                    relationship_type=RelationshipType.DERIVED_FROM)
+            self.manifest.relations.append(relation)
+        #manage_remaining_properties(modelCard_properties, prop_treated_properties, mlmodel_properties)
+
+    def deal_with_modelParameters_of_modelcard(self, mlmodel_properties, modelcard):
+        # deal with the model parameters section of the model card,
+        # which contains information about the model, and set it as properties of the MLModel artefact,
         modelparameters = modelcard.get("modelParameters", {})
 
-        #deal with the pupose
+        # deal with the pupose
         purpose = modelparameters.get("task", "")
         modelParameters_treated_properties = set()
         modelParameters_treated_properties.add("task")
         self.ml_model.purpose = purpose
-
 
         datasets = modelparameters.get("datasets", "")
         modelParameters_treated_properties.add("datasets")
@@ -172,7 +245,8 @@ class AIBOMTranslator:
                 dataset_reference = ExternalReference()
                 dataset_reference.identifier = dataset.get("ref", "")
                 if dataset_reference.identifier:
-                    if dataset_reference.identifier.startswith("http://") or dataset_reference.identifier.startswith("https://"):
+                    if dataset_reference.identifier.startswith("http://") or dataset_reference.identifier.startswith(
+                            "https://"):
                         dataset_reference.external_identifier_type = "urlScheme"
                     else:
                         dataset_reference.external_identifier_type = "other"
@@ -181,39 +255,11 @@ class AIBOMTranslator:
                 datasetsObjects.append(dataset)
 
             relation = Relationship(from_=self.ml_model,
-                                    to_= datasetsObjects,
+                                    to_=datasetsObjects,
                                     relationship_type=RelationshipType.USES)
             self.manifest.relations.append(relation)
 
         manage_remaining_properties(modelparameters, modelParameters_treated_properties, mlmodel_properties)
-
-        #deal with the library used by the model, which is a property of the model card, we will create a new artefact for the library and create a relation of type "uses" between the model and the library, and we will add the "library_name" property to the treated properties of the model card
-        modelCard_properties = modelcard.get("properties", {})
-        # PROBLEM
-        # @todo we have to create a new artefact for the model card and link it to the model with a relation of type "annotatedBy", because the model card contains information about the model but is not the model itself, and we want to keep this information in the manifest as well.
-        # self.manifest.artefacts.append(modelcard)
-        # build dependency relation between the model and the library it uses (e.g. diffusers, transformers, etc.) based on the properties of the model card, if they exist and if they contain a property with name "library_name" and value "diffusers"
-        logger.debug(f"Model card : {modelcard}")
-        logger.debug(f"Model card properties : {modelCard_properties}")
-
-        # Deal with the model card properties and set them as properties of the model card
-        # @todo then add the model card as an artefact of the manifest and create a relation of type "annotatedBy" between the model and the model card.
-        library = self.extract_library(modelCard_properties)
-        if library:
-            # we create a relation of type "uses" between the model and the library
-            relation = Relationship(from_=self.ml_model,
-                                    to_=[library],
-                                    relationship_type=RelationshipType.USES)
-            self.manifest.relations.append(relation)
-
-        # Deal with a base_model property of the model card, which indicates that the model is based on another model, we will create a relation of type "derivedFrom" between the model and the base model
-        baseModel = self.extract_base_model(modelCard_properties)
-        if baseModel:
-            relation = Relationship(from_=self.ml_model,
-                                    to_=[baseModel],
-                                    relationship_type=RelationshipType.DERIVED_FROM)
-            self.manifest.relations.append(relation)
-        return mlmodel_properties
 
     def extract_library(self, properties) -> Optional[SoftwareFile]:
         for prop in properties:

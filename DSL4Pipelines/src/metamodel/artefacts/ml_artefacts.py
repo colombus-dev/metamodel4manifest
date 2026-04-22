@@ -10,13 +10,13 @@ from typing import Optional, List
 from DSL4Pipelines.src.metamodel.artefacts.artefacts import SoftwareFile
 from DSL4Pipelines.src.metamodel.catalogs.artefact_catalog import ArtefactCatalog
 from DSL4Pipelines.src.metamodel.catalogs.MLModelCatalog import MLModelCatalog
+from DSL4Pipelines.src.metamodel.artefacts.Consideration import Consideration
 
 
 #equivalent to a model card?
 @dataclass
 class MLModel(SoftwareFile):
     """MLModel is a specific type of SoftwareFile that represents a machine learning model."""
-
     type: str = (
         "MLModel"  # Override the type to specify that this is an MLModel artifact
     )
@@ -35,6 +35,9 @@ class MLModel(SoftwareFile):
     )
     modelSize: Optional[str] = (
         None  # e.g., "110M parameters", "1.5B parameters", ...
+    )
+    consideration: Optional[Consideration] = (
+        None  # A field to include any ethical, social, or environmental considerations related to the model (e.g., known biases, potential misuse, etc.)
     )
 
     def validate(self, errors: list = None) -> bool:
