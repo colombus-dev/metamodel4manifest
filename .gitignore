@@ -39,4 +39,5 @@ bin/
 __pycache__/
 
 ### PERSO ###
-OLD/*
+PERSO/
+OLD/
