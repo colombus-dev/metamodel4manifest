@@ -1,0 +1,83 @@
+@startuml classes_catalogs
+set namespaceSeparator none
+package "ArtefactCatalog" {
+ 'enum "ACCESS" as ACCESS {
+ '  ALL() : list
+ '  DIRECT_DOWNLOAD
+ '  PRIVATE
+ '  PUBLIC
+ '  RESTRICTED
+ '}
+
+ 'enum "CATEGORIES" as CATEGORIES {
+ '    ALL() : list
+ '    CODE
+ '    CONFIG
+ '    DATA
+ '    MODEL_WEIGHTS
+ '    PERFORMANCE
+ '    VOCABULARY
+ '  }
+ enum "DATASET_KINDS" as DATASET_KINDS {
+   CORPUS
+   DATASET
+ }
+ enum "DATA_FORMAT" as DATA_FORMAT {
+   FORMATS_IMAGES : list
+   FORMATS_TABULAR : list
+ }
+ enum "DATA_TYPE" as DATA_TYPE {
+   IMAGES
+   TABULAR
+   TEXT
+ }
+ enum "DatasetCatalog" as DatasetCatalog.DatasetCatalog {
+ }
+ enum "FAIRNESS" as MetricCatalog.MetricCatalog.FAIRNESS {
+   DEMOGRAPHIC_PARITY
+   EQUALIZED_ODDS
+ }
+ enum "FileKind" as FileKind {
+   name
+ }
+ class "LANGUAGES" as SoftwareCatalog.SoftwareCatalog.LANGUAGES {
+   CODE : list
+   FORMATS : list
+   NATURAL : list
+ }
+ enum "MLModelCatalog" as MLModelCatalog.MLModelCatalog {
+ }
+ enum "ML_MODEL_TYPE" as MLModelCatalog.MLModelCatalog.ML_MODEL_TYPE {
+   ALL() : list
+   CNN
+   RNN
+   TRANSFORMER
+ }
+ enum "MetricCatalog" as MetricCatalog.MetricCatalog {
+   find_category_for_metric(metric_name: str) -> str
+   get_all_types() -> list
+   get_all_types_map() -> dict[str, str]
+   get_categories() -> list[str]
+   get_subtypes_for_category(category_name: str) -> list[str]
+ }
+ enum "PERFORMANCE" as MetricCatalog.MetricCatalog.PERFORMANCE {
+   ACCURACY
+   CONFUSION_MATRIX
+   F1_SCORE
+   LATENCY
+ }
+ enum "ROBUSTNESS" as MetricCatalog.MetricCatalog.ROBUSTNESS {
+   ADVERSARIAL_ACCURACY
+   NOISE_SENSITIVITY
+ }
+ enum "RelationshipType" as vocabulary.RelationshipType {
+   name
+ }
+ class "SUSTAINABILITY" as MetricCatalog.MetricCatalog.SUSTAINABILITY {
+   CARBON_GCO2 : str
+   ENERGY_KWH : str
+ }
+ class "SoftwareCatalog" as SoftwareCatalog.SoftwareCatalog {
+ }
+ }
+@enduml
